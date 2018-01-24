@@ -5,15 +5,11 @@ Works with both *Internet Explorer* 11 and the rest of modern browsers.
 
 > For more information on reusable components, and the rational behind this approach, please check out [Reusable components of websites](https://stash.gto.intranet.db.com:8081/projects/CPORT/repos/angular-mc-common/browse/REUSABLE.md) *- Building UI with less tech burden*.
 
-<br />
-
 Common *CSS* stylesheet and *Angular* components used for *Global Console* apps. This is written in new angular typescript and uses *Autobahn* *ADK* theme as the foundation. 
 
 Continuing from the success of *Angular* 1.x, the idea is to share common elements, such as header, footer, menus, select, grid, calendar and etc., so that they can be plugged into web applications across different business lines with only couple lines of code. 
 
 You can check out a [live demo site](http://cggmiu02.us.db.com:8082/) here.
-
-<br />
 
 ## Install
 
@@ -26,8 +22,6 @@ Install the dependency to your application,
 > In case you have trouble getting this package, you can pull this repo and copy folder `/core/dist` under your project folder `node_modules` and rename it to `@com.db.globalconsole/ngx-gc`.
 
 > Or you can try `npm` link approach, go to folder `/core/dist`, launch `npm link`. Then go to your project folder and launch `npm link @com.db.globalconsole/ngx-gc`.
-
-<br /> 
 
 Then add it to your app module `app.module.ts`,
 
@@ -60,8 +54,6 @@ The global console settings variable `environment` has the following format,
 
 > The `environment` variable can be stored using the angular built-in environment file located at `/src/environments`, but it is optional.
 
-<br />
-
 In order to get style installed, in your `styles.scss`,
 
 ```javascript
@@ -72,8 +64,6 @@ In order to get style installed, in your `styles.scss`,
 ```
 
 > The above example uses `adk` light theme source code inside the app, and officially you can use `wadk-core` [SASS repo](https://stash.gto.intranet.db.com:8081/projects/ADKW/repos/wadk-core/browse) directly. 
-
-<br />
 
 ## Dependency
 
@@ -93,8 +83,6 @@ Wrap your content with `gc-layout` tag. That's it, all the rest of components wi
     <h1>Hello World</h1>    
   </gc-layout>
 ```
-
-<br />
 
 ## Features
 
@@ -136,8 +124,6 @@ Layouts
 Thrid Party used in Demo
 - AgGrid
 - Highcharts
-
-<br />
 
 ## Components
 
@@ -209,8 +195,6 @@ For multiple selection list,
 
 Here, the parameters are similar as single select, except the `values` variable holds an array of keys in the options list.
 
-<br />
-
 ### Datepicker component
 
 To pick a date, 
@@ -241,8 +225,6 @@ For the range picker,
 - `options.clear`, if clear button is supported
 
 
-<br />
-
 ### Dialog Component
 
 ```javascript
@@ -258,8 +240,6 @@ For the range picker,
 }
 
 ```
-
-<br />
 
 ## Third Party
 
@@ -318,8 +298,6 @@ The library provides the style for integration with third party grid components.
 
 ```
 
-<br />
-
 #### Usage
 
 ```html
@@ -345,8 +323,6 @@ To develop, pull the developer branch and you can do one of the following
   npm run e2e     // perform e2e testing in single run
   npm run e2e:watch   // in watch mode
 ```
-
-<br />
 
 ## Author
 
