@@ -2,10 +2,16 @@
 
 ## Repository
 
-- Angular MC Common 2 [raw](https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/angular2-mc-common.md)
+- Angular MC Common 2 [visit](https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/angular2-mc-common.md)
+
+## Finance
+
+- Tree Structure [visit](https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/finance/tree-structure.md)
+
+## Blog
 
 ## Resume
 
-- Performance Feedback [raw](https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/performance-feedback.md)
+- Performance Feedback [visit](https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/performance-feedback.md)
 
 
