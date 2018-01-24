@@ -1,6 +1,6 @@
-![Market Clearing Header](https://mydb.intranet.db.com/servlet/JiveServlet/downloadImage/38-84374-585937/mc-common2-header.PNG)
+# Global Console - Angular 5
+![Market Clearing Header](https://s3.amazonaws.com/qp-photo/mc-common2-header.PNG)
 
-# Global Console Angular (^5.0.0) with Autobahn(ADK) theme
 Works with both *Internet Explorer* 11 and the rest of modern browsers.
 
 > For more information on reusable components, and the rational behind this approach, please check out [Reusable components of websites](https://stash.gto.intranet.db.com:8081/projects/CPORT/repos/angular-mc-common/browse/REUSABLE.md) *- Building UI with less tech burden*.
