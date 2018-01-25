@@ -134,20 +134,20 @@ Helped DataRecoveryMan.com build an application for managing inventories of hard
 
 ![Multiscale Modeling of Cancel](https://spark.adobe.com/image_assets/slate/0031A3F3-948C-4ECC-B4A8-BF48B9C5FEEA/images/0E04F1BA-B087-4800-BC2A-5D1F120D791C.jpg?asset_id=2CD46074-6B56-42EF-8A8D-E7D89BE9A7EB&size=3650)
 
-**Sep 2014 - Oct 2014**    
-**RecoveryHub**    
+### RecoveryHub
+#### Sep 2014 - Oct 2014
 Volunteer for disaster and humanitarian relief
 
-**Nov 2010**    
-**Cambridge University Press**    
+### Cambridge University Press
+#### Nov 2010
 Book "Multiscale Modeling of Cancer" front cover design
 
-**Sep 2010**    
-**Journal of Nonlinearity**    
+### Journal of Nonlinearity
+#### Sep 2010
 Front cover picture design
 
-**Sep 2007 - Dec 2008**    
-**University of California Irvine**    
+### University of California Irvine
+#### Sep 2007 - Dec 2008
 College math class teacher for two semesters
 
 
