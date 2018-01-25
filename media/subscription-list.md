@@ -1,6 +1,8 @@
-# Subscription 
+# Purchase List
+Collection of subscribed online services and purchased applications. 
 
 ## Subscription
+Current online service subscribed, such as for trading, training, accounting,  hosting and magazine etc.
 
 Item                  | Amount   | Year
 --------------------  | -------- | -----
@@ -19,7 +21,7 @@ Morningstar           | $200  /y | 2017
 Dropbox               | $100  /y | 2013
 Egghead               | $140  /y | 2017
 
-## Purchase
+## Application
 
 ## Free
 
