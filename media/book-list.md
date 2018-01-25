@@ -114,9 +114,74 @@ James Rickards
 The Sale of a Lifetime: How the Great Bubble Burst of 2017-2019 Can Make You Rich
 Harry S. Dent
 
-### Jan
+### January
 
 Leviathan Wakes (The Expanse Book 1)
 James S. A. Corey
 
+## 2016
 
+## 2015
+
+Irrational Exuberance: Revised and Expanded Third Edition
+Robert J. Shiller
+$10.55
+
+How to Fail at Almost Everything and Still Win Big: Kind of the Story of My Life
+Scott Adams
+$8.53
+
+## 2014
+
+## 2013
+
+How to Make Money in Stocks: A Winning System in Good Times and Bad, Fourth Edition
+William J. O'Neil
+$9.90
+
+The Sales Magnet: How to Get More Customers Without Cold Calling
+Kendra Lee, Jill Konrath
+$9.99
+
+## 2012
+
+Selling to the Government: What It Takes to Compete and Win in the World's Largest Market
+Mark Amtower
+
+What To Say When You Talk To Your Self
+Dr. Shad Helmstetter
+
+
+Catching Fire (Hunger Games Trilogy, Book 2)
+Suzanne Collins
+
+The Hunger Games (Hunger Games Trilogy, Book 1)
+Suzanne Collins
+
+Guerrilla Marketing, 4th edition: Easy and Inexpensive Strategies for Making Big Profits from Your SmallBusiness
+Jay Conrad Levinson, Jeannie Levinson, Amy Levinson
+
+The Power Formula for LinkedIn Success: Kick-start Your Business, Brand, and Job Search
+Wayne Breitbarth
+
+## 2011
+
+Blunder: Why Smart People Make Bad Decisions
+Zachary Shore
+
+Startup@Cloud [Booklet]: 33 tips for running your company using cloud-based software
+Paul M. Duvall
+
+The Five Rules for Successful Stock Investing: Morningstar's Guide to Building Wealth and Winning in the Market
+Pat Dorsey, Joe Mansueto
+
+Mastering the VC Game: A Venture Capital Insider Reveals How to Get from Start-up to IPO on Your Terms
+Jeffrey Bussgang
+
+## 2010
+
+Rich Dad's Advisors®: The ABC's of Writing Winning Business Plans: How to Prepare a Business Plan That Others Will Want to Read -- and Invest In
+Garrett Sutton, Robert T. Kiyosaki
+
+The E-Myth Manager: Leading Your Business Through Turbulent
+Michael E. Gerber
