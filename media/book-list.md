@@ -5,8 +5,8 @@
 ### January
 
 Five Rules for Successful Stock Investing: Morningstar's Guide to Building Wealth and Winning in the Market
-Pat Dorsey
-384 pages
+> Pat Dorsey
+> 384 pages
 
 ## 2017
 
@@ -33,155 +33,154 @@ The Big Short: Inside the Doomsday Machine
 > $9.23     
 
 Exile on Wall Street: One Analyst's Fight to Save the Big Banks from Themselves
-Mike Mayo
-$17.15    
+> Mike Mayo
+> $17.15    
 
 How to Become a Nurse: The Exact Roadmap That Will Lead You to a Fulfilling Career in Nursing!
-Chase Hassen
-$0.00    
+> Chase Hassen
+> $0.00    
 
 The Next Economic Disaster: Why It's Coming and How to Avoid It
 Richard Vague
-$10.71    
+> $10.71    
 
 ### August
 
 Havana, Cuba Travel Guide - Sightseeing, Hotel, Restaurant & Shopping Highlights (Illustrated)
-Shawn Middleton
-$4.28    
+> Shawn Middleton
+> $4.28    
 
 The Silver Manifesto
-David Morgan, Chris Marchese, Eric Sprott
-$7.50
+> David Morgan, Chris Marchese, Eric Sprott
+> $7.50
 
 Second Chance: How to Make and Keep Big Money from the Coming Gold and Silver Shock - Wave
-David H. Smith, David Morgan
-$8.10    
+> David H. Smith, David Morgan
+> $8.10    
 
 Rethinking the Economics of Land and Housing
-Josh Ryan-Collins, Toby Lloyd, Laurie Macfarlane, John Muellbauer
-$15.79    
+> Josh Ryan-Collins, Toby Lloyd, Laurie Macfarlane, John Muellbauer
+> $15.79    
 
 This Time is Different: Eight Centuries of Financial Folly
-Carmen M. Reinhart, Kenneth S. Rogoff
-$9.85    
+> Carmen M. Reinhart, Kenneth S. Rogoff
+> $9.85    
 
 The Aftershock Investor: A Crash Course in Staying Afloat in a Sinking Economy
-David Wiedemer, Robert A. Wiedemer, Cindy S. Spitzer
-$17.15    
+> David Wiedemer, Robert A. Wiedemer, Cindy S. Spitzer
+> $17.15    
 
 ### July
 
 The Breaking Point: Profit from the Coming Money Cataclysm
-James Dale Davidson, Bill Bonner
-$17.70    
+> James Dale Davidson, Bill Bonner
+> $17.70    
 
 The Worst President in History: The Legacy of Barack Obama
-Matt Margolis, Mark Noonan
-$4.28    
+> Matt Margolis, Mark Noonan
+> $4.28    
 
 ### June
 
 America's War for the Greater Middle East: A Military History
-Andrew J. Bacevich
+> Andrew J. Bacevich
 
 The Future for Investors: Why the Tried and the True Triumphs Over the Bold and the New
-Jeremy J. Siegel
+> Jeremy J. Siegel
 
 From Boom to Bust and Beyond
-Jerry Tuma
+> Jerry Tuma
 
 ### May
 
 Trumped! A Nation on the Brink of Ruin... And How to Bring It Back
-David Stockman
+> David Stockman
 
 Big Shifts Ahead: Demographic Clarity For Business
-John Burns, Chris Porter
-268 pages
+> John Burns, Chris Porter
+> 268 pages
 
 ### April
 
 Upside: Profiting from the Profound Demographic Shifts Ahead
-Kenneth W. GRONBACH, John Zogby, M.J. Moye
+> Kenneth W. GRONBACH, John Zogby, M.J. Moye
 
 The Road to Ruin: The Global Elites' Secret Plan for the Next Financial Crisis
-James Rickards
+> James Rickards
 
 The Death of Money: The Coming Collapse of the International Monetary System
-James Rickards
+> James Rickards
 
 The Sale of a Lifetime: How the Great Bubble Burst of 2017-2019 Can Make You Rich
-Harry S. Dent
+> Harry S. Dent
 
 ### January
 
 Leviathan Wakes (The Expanse Book 1)
-James S. A. Corey
+> James S. A. Corey
 
 ## 2016
 
 ## 2015
 
 Irrational Exuberance: Revised and Expanded Third Edition
-Robert J. Shiller
-$10.55
+> Robert J. Shiller
+> $10.55
 
 How to Fail at Almost Everything and Still Win Big: Kind of the Story of My Life
-Scott Adams
-$8.53
+> Scott Adams
+> $8.53
 
 ## 2014
 
 ## 2013
 
 How to Make Money in Stocks: A Winning System in Good Times and Bad, Fourth Edition
-William J. O'Neil
-$9.90
+> William J. O'Neil
+> $9.90
 
 The Sales Magnet: How to Get More Customers Without Cold Calling
-Kendra Lee, Jill Konrath
-$9.99
+> Kendra Lee, Jill Konrath
+> $9.99
 
 ## 2012
 
 Selling to the Government: What It Takes to Compete and Win in the World's Largest Market
-Mark Amtower
+> Mark Amtower
 
 What To Say When You Talk To Your Self
-Dr. Shad Helmstetter
-
+> Dr. Shad Helmstetter
 
 Catching Fire (Hunger Games Trilogy, Book 2)
-Suzanne Collins
+> Suzanne Collins
 
 The Hunger Games (Hunger Games Trilogy, Book 1)
-Suzanne Collins
+> Suzanne Collins
 
 Guerrilla Marketing, 4th edition: Easy and Inexpensive Strategies for Making Big Profits from Your SmallBusiness
-Jay Conrad Levinson, Jeannie Levinson, Amy Levinson
+> Jay Conrad Levinson, Jeannie Levinson, Amy Levinson
 
 The Power Formula for LinkedIn Success: Kick-start Your Business, Brand, and Job Search
-Wayne Breitbarth
+> Wayne Breitbarth
 
 ## 2011
 
 Blunder: Why Smart People Make Bad Decisions
-Zachary Shore
+> Zachary Shore
 
 Startup@Cloud [Booklet]: 33 tips for running your company using cloud-based software
-Paul M. Duvall
+> Paul M. Duvall
 
 The Five Rules for Successful Stock Investing: Morningstar's Guide to Building Wealth and Winning in the Market
-Pat Dorsey, Joe Mansueto
+> Pat Dorsey, Joe Mansueto
 
 Mastering the VC Game: A Venture Capital Insider Reveals How to Get from Start-up to IPO on Your Terms
-Jeffrey Bussgang
+> Jeffrey Bussgang
 
 ## 2010
 
 Rich Dad's Advisors®: The ABC's of Writing Winning Business Plans: How to Prepare a Business Plan That Others Will Want to Read -- and Invest In
-Garrett Sutton, Robert T. Kiyosaki
+> Garrett Sutton, Robert T. Kiyosaki
 
 The E-Myth Manager: Leading Your Business Through Turbulent
-Michael E. Gerber
+> Michael E. Gerber
