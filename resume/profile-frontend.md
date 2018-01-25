@@ -26,8 +26,8 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 ## Award
 
 ### Recognition Award
-**Deutsche Bank**
-**Nov 2017**
+**Deutsche Bank**    
+**Nov 2017**    
 For the exceptional UI framework build
 
 ## Experience
