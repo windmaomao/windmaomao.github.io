@@ -2,7 +2,7 @@
 
 # Frontend Architect
 
-I build websites in general domain such as healthcare, banking, real estate and university. I use Modular design and Reusable components when architecting websites and designing UI/UX elements.
+I build websites in general domain such as healthcare, banking, real estate and university. I use Modular design and Reusable components when architecting websites and designing _UI/UX_ elements.
 
 Overall my past projects have 11 million users in production. Since 2016, my success rate of products being launched and used in the market has reached 90%.
 
@@ -10,25 +10,25 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 
 **Skillset** highlights are,
 
-- 7 Years Prototyping with Bootstrap and Sass
-- 4 Years AngularJS and Angular (2/4/5)
-- 4 Years IA, Mockup sketch and UI Design
+- 7 Years Prototyping with _Bootstrap_ and _Sass_
+- 4 Years _AngularJS_ and _Angular_ (2/4/5)
+- 4 Years IA, Mockup sketch and _UI_ Design
 - 4 Years Project management with Agile workflow
-- 3 Years Async programming with promise observables
+- 3 Years Async programming with promise/observables
 - 3 Years API and technical documentation
-- 2 Year Java/Oracle windows enterprise environment
+- 2 Year _Java/Oracle_ windows enterprise environment
 
 **Past education** also taught me,
 
 - 15 years Strong analytics skills in math, modeling, calculation and simulation
-- 8 Years Reporting, charting, and visualization: D3.js, HighCharts, Matlab, Maya, Unity
+- 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, Unity_
 
 ## Award
 
 ### Recognition Award
 **Deutsche Bank**    
 **Nov 2017**    
-For the exceptional UI framework build
+For the exceptional _UI_ framework build
 
 ## Experience
 
@@ -36,7 +36,7 @@ For the exceptional UI framework build
 **UI AngularJS Architect**    
 **Sep 2015 - Current**    
 
-Serves as UI and AngularJS architect in Market Clearing domain for 45+ banking applications.
+Serves as _UI_ and _AngularJS_ architect in Market Clearing domain for 45+ banking applications.
 
 ![enter image description here](https://spark.adobe.com/image_assets/slate/0031A3F3-948C-4ECC-B4A8-BF48B9C5FEEA/images/1924447b-654e-4d67-978b-f64d890bc5ee.png?asset_id=b3d1ab8d-e77a-4d17-bda2-f75af5464d78&img_etag=056195f63effbfc2e2b3129f4e0dd0fe&size=2560)
 
@@ -46,7 +46,7 @@ I created branding header, menu, fly-in menu, and form etc. that supports light/
 
 **Highlights** includes,
 
-- Framework: Use AngularJS and Bootstrap for fast development
+- Framework: Use _AngularJS_ and _Bootstrap_ for fast development
 - Re-usability: Design reusable branding header, footer, menu as well as pluggable generic services
 - Style Guide: Standardized style sheet for consistent look and feel across browsers and applications
 - Authorization: Integration with authentication and authorization service for application security
@@ -70,10 +70,7 @@ I created branding header, menu, fly-in menu, and form etc. that supports light/
 ![enter image description here](https://spark.adobe.com/image_assets/slate/0031A3F3-948C-4ECC-B4A8-BF48B9C5FEEA/images/1ed8a729-d4d7-4eaf-beab-a3c3cfd3b749.png?asset_id=feb2562a-6bd3-4be1-8620-1f4acd884c39&img_etag=f489c501c591cd4989f4af0f72d6d313&size=2560)
 
 ### People Designs
-
-**Oct 2014 - Aug 2015**
-
-**Lead AngularJS / Laravel Developer**
+**Oct 2014 - Aug 2015**    **Lead AngularJS / Laravel Developer**    
 
 Served as lead AngularJS and Laravel developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program to help people prepare the end of their life. Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under HIPPA server with consideration of Section 508 for people with disability. Customers include 200 doctors and 50,000 users around the globe. 
 
