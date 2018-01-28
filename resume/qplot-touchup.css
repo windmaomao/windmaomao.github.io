@@ -46,3 +46,15 @@
 .markdown-body h4 {
   margin: 0em;
 }
+
+.mardown-body ul li:before, .cv-item ul.fill-circle li:before {
+  font-family: 'FontAwesome';
+  color: #fdb020;
+  content: "\F00C";
+  font-size: 10px;
+  position: relative;
+  top: -2px;
+  width: auto;
+  height: auto;
+  margin-right: 8px; 
+}
