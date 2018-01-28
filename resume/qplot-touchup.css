@@ -25,7 +25,7 @@
 .markdown-body blockquote p {
   font-family: Georgia, serif;
   font-style: italic; 
-  line-height: 1.75;
+  line-height: 1.45;
 }
 .markdown-body blockquote:before {
   display: block;
