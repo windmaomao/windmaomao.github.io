@@ -1,0 +1,42 @@
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
+}
+
+.markdown-body blockquote {
+  font-family: Georgia, serif;
+  font-style: italic;
+  margin: 2em;
+  padding: 0.25em 0px 0 30px;
+  position: relative;
+  color: #383838;
+  border: none;
+  text-align: justify;
+}
+.markdown-body blockquote p {
+  font-family: Georgia, serif;
+  font-style: italic; 
+  line-height: 1.75;
+}
+.markdown-body blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a; 
+}
+
+.markdown-body h2 {
+  margin-top: 2em;
+}
