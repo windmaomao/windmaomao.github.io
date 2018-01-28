@@ -2,7 +2,7 @@
 
 # Frontend Architect
 
-I build websites in general domain such as healthcare, banking, real estate and university. I use Modular design and Reusable components when architecting websites and designing _UI/UX_ elements.
+I build websites in general domains such as healthcare, banking, real estate and university. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
 
 Overall my past projects have 11 million users in production. Since 2016, my success rate of products being launched and used in the market has reached 90%.
 
@@ -21,7 +21,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 **Past education** also taught me,
 
 - 15 years Strong analytics skills in math, modeling, calculation and simulation
-- 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, Unity_
+- 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
 
 ## Award
 
