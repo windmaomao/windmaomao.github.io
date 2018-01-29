@@ -1,14 +1,15 @@
 # Protection from big loss, sell yourself an insurance plan 
 
-Published on November 11, 2017
+_Published on November 11, 2017 at LinkedIN_
 
-An insurance plan prevents you from getting burned to the ground when an unanticipated thing happens.
+> An insurance plan prevents you from getting burned to the ground when an unanticipated thing happens.
 
 Before I get into this topic, there's something I want to share with you first. Next time before you try to tell the truth, don't just go out telling everyone in the public. It doesn't work out like that. Since the human nature is that nobody likes to hear the truth. Especially they don't want to hear it from you.
 
 If you really have an idea that you believe in, I suggest you do it quietly. You can experiment with the idea as much as you want. If you really believe in yourselves, you have to take the risk. The risk is that you might be wrong about your idea and everyone else is still right about it. Confronting with the people directly about it is only going to increase your risk to a much higher level. It doesn't do good to anyone.
 
 ## Risk Up
+
 There's a couple of ways to risk yourself at the birth of an idea, mostly it has something to do with putting yourself on the frontline naked. I know it doesn't translate well into the reality. Under multiple contexts, being at the frontline naked can mean different things. With some common sense and personal experience, it shouldn't be too difficult to imagine some worst scenarios.
 
 For these worst scenarios, you can just tell yourself not to do. Not only you know that you can't afford to make these mistakes, but also they are basically suicide missions. You are only looking for lessons to learn or tuition to pay if you insist being on the frontline naked.
@@ -16,19 +17,23 @@ For these worst scenarios, you can just tell yourself not to do. Not only you kn
 In general, don't be on the frontline, and if you do, don't be naked at the same time. You need to be covered at least.
 
 ## Risk Down
+
 "No pain no gain", only if the pain is set for the future gain. If you had pain already, you shouldn't keep staying there. Instead, you should move on to have some fun without hurting yourself again. For instance, you can look for some insurance plan.
 
 ### Direction
+
 If you are betting things go up big time, why not think again and bet a little less this time. Or even better, change direction, this time bet it will not go down instead. It does sound strange but instead betting up, we go from yesterday and bet it won't go down.
 
 Even better sometime, bet go down first and let the nature correction kicks in along the way. As long as you still get what you want. You get the point, you try not to go head-on. I believe this is actually some ancient wisdom here, easy or hard to do, it serves as an insurance strategy.
 
 ### Time
+
 Another one of these strategies is time. If you bet on things go up tomorrow, why not you bet up for the next year? Why next year, isn't that too far in the future? Yes, it is. But that's the point since nobody has patience. If you have patience, you might be ahead of the game.
 
 Within a year, anything can happen. Things can go up, fall down, go up, fall down. You can be right in the end while being wrong multiple times in the middle. You'll see lots of things anyway, first prepare yourself with both results. Time will come in and relax your option a bit, and things might just work out given enough time. Anything can happen, please make friends with time.
 
 ### Amount
+
 To seller, any insurance plan won't save him from the real disaster. The plan gives a better edge by offering more space and time dealing with incoming or false incoming disasters. But the disaster still hurts.
 
 Therefore lowering the bet amount, decreasing risk exposure is the ultimate guideline. If you don't bet big, at least you won't lose big. And if you can still be alive after the disaster, you might still have a chance to get back to the game. But if you lost everything, your chance can get very slim.
@@ -42,6 +47,6 @@ Simply betting to win is not good enough to make it happen. It never is, and it 
 
 You need to learn more about some human nature, especially yourself, ex. your physical limit, your tolerance, your patience, everything truth about yourself so that you can design your own insurance plan to be alive. If you are set to win, you need to look for some insurance, the protection from the big loss, from the very beginning.
 
-Lastly, if nobody sells you the insurance you want, you just have to create one. Because without it, you won't go too far.
+Lastly, if nobody sells you the insurance you want, you just have to create one. **Because without it, you won't go too far.**
 
 
