@@ -1,6 +1,6 @@
 # Reusable Components - Building UI with less tech burden
 
-<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAArfAAAAJGNlZTg1YThhLWQ1YzQtNDE4MC05Y2NjLTc0OGY0OTY4NWRhMQ.jpg" class="img-fluid">
+![Town City](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAArfAAAAJGNlZTg1YThhLWQ1YzQtNDE4MC05Y2NjLTc0OGY0OTY4NWRhMQ.jpg)
 
 > Reusable components, when designed properly, can save us lot of trouble as well as money. This is especially true for established business model, which itself tends to be sustainable over decades. Therefore for banking industry, this topic could be worth some study.
 
