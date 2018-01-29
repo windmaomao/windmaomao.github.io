@@ -46,8 +46,15 @@
 .markdown-body h4 {
   margin: 0em;
 }
+.markdown-body em {
+  background-color: rgba(253, 176, 32, 0.08);
+  padding: 1px 4px;
+  border-bottom: 2px dotted #fdb020;
+  /* font-size: 13px; */
+  /* font-weight: bold; */
+}
 
-.mardown-body ul li:before, .cv-item ul.fill-circle li:before {
+/* .mardown-body ul li:before, .cv-item ul.fill-circle li:before {
   font-family: 'FontAwesome';
   color: #fdb020;
   content: "\F00C";
@@ -57,4 +64,5 @@
   width: auto;
   height: auto;
   margin-right: 8px; 
-}
+} */
+
