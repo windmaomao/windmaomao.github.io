@@ -1,10 +1,10 @@
 # Active Management, via Source Version Control
 
-_Written at Apr 2015 and published at Qplot_
+_Written at Apr 29th 2015 and published at Qplot_
 
 Most of the shareholders are not developers, but in order for them to manage the developer team effectively, he needs to learn how to cop with the team's routine.  
 
-##Things you want to do
+## Things you want to do
 
 The thing is that even if you don't know programming, you might still want to do some work (business wise) like: 
 
@@ -16,7 +16,7 @@ The thing is that even if you don't know programming, you might still want to do
 
 They are not things requiring years and years of programming training, as long as you know how to use a text editor and a bit of pattern matching skills, you'll be just fine. Not only nerds will like you better, but also they'd appreciate your contribution, especially from the higher level. Besides, developer does not like a constant typo change request, trust me. 
 
-##New things to learn
+## New things to learn
 
 So you might ask where to get started. Simple.
 
@@ -28,7 +28,7 @@ Why don't you just get a copy of what they have? No worries, just ask one of you
 
 Working with a code repository like `Git` is as easy as using a text editor, since majority of the code is written in sort of text format. so open your favorite text editor, and start editing. So if you don't know which file to start, go ask, you are part of team now. Don't be afraid that you'll slow the team down, the worst is that you don't make any changes after you find it it's too much for you. 
 
-##What do I get out of this
+## What do I get out of this
 
 So you might ask, why bother spent 30 mins doing things that a tech person can do in a minute. Actually it's a lot more than what you think in this case. Other than the typos that you can correct, you can also   
 
