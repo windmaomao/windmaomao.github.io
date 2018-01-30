@@ -2,6 +2,8 @@
 
 ![Town City](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAArfAAAAJGNlZTg1YThhLWQ1YzQtNDE4MC05Y2NjLTc0OGY0OTY4NWRhMQ.jpg)
 
+_Written at Feb 2017 and published at LinkedIN_
+
 > Reusable components, when designed properly, can save us lot of trouble as well as money. This is especially true for established business model, which itself tends to be sustainable over decades. Therefore for banking industry, this topic could be worth some study.
 
 ## Idea
