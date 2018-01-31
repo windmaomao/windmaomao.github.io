@@ -18,8 +18,8 @@ Let's say you designed a site and use HTML to code the look and feel of the web 
 
 Taking blog pages as an example, with the following template
 
-```
-    ...html
+```html
+    ...
     <h1>How to gain weight?</h1>
     <p>Eat can be a very effective way</p>
     ...
