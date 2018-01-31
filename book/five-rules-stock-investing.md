@@ -82,6 +82,74 @@ By the time competitors such as Yahoo! and Amazon.com tried to get into the auct
 
 ## The Language of Investing
 
+Right now, you’re probably wondering why we need an income statement and a cash flow statement—after all, if a company makes money, it makes money, right? The difference lies in a confusing concept called accrual accounting. Here’s how it works. Companies record sales (or revenue) when a service or a good is provided to the buyer, regardless of when the buyer pays. As long as the company is reasonably certain that the buyer will eventually pay the bill, the company can post the sale to its income statement. The cash flow statement, on the other hand, is concerned only with when cash is received and when it goes out the door. I’ll go over the cash flow statement in detail later in this chapter, but here’s a quick example.
+
+The key takeaway here is that the income statement and cash flow statement can tell different stories about a business because they’re constructed using different sets of rules. The income statement strives to match revenues and expenses as closely as possible—that’s why we had to deduct the $1 in depreciation from Mike’s profits, and that’s why Mike gets to record the $7 in sales that he made on credit. But the cash flow statement cares only about the dollar bills that go in and out the door, regardless of the timing of the actions that generated those dollar bills.
+
+> This simple concept—the difference between accounting profits and cash profits—is the key to understanding almost everything there is to know about how a business works, as well as how to separate great businesses from poor ones.
+
+## Financial Statements Explained
+
+Retained earnings is a cumulative account; therefore, each year that the company makes a profit and doesn’t pay it all out as dividends, retained earnings increase. Likewise, if a company has lost money over time, retained earnings can turn negative and is often renamed “accumulated deficit” on the balance sheet. Think of this account as a company’s long-term track record at generating profits.
+
+Firms that grant their employees a ton of options and then spend corporate cash on repurchases are essentially selling shares to their employees at low prices and buying it back on the open market at much higher prices, which is not the best use of capital.
+
+## Analyzing a Company - The Basics
+
+Paying less taxes and buying back shares are good things for shareholders, no question, but they’re short-term fixes rather than long-term sources of earnings growth.
+
+In general, any nonfinancial firm that can generate consistent ROEs above 10 percent without excessive leverage is at least worth investigatin. **And if you can find a company with the potential for consistent ROEs over 20 percent, there’s a good chance you’re really on to something.**
+
+I think it’s reasonable to say that any firm that’s able to **convert more than 5 percent of sales to free cash flow**—just divide free cash flow by sales to get this percentage—is doing a solid job at generating excess cash.
+
+## Analyzing a Company - Management
+
+First, look at the raw level of cash compensation to see if it’s reasonable. There’s not necessarily a strict limit here, though I personally think an $8 million cash bonus is silly no matter how well the company has done. (For reference, the average CEO of a large U.S. firm currently earns about 500 times as much as the average employee. Twenty years ago, this multiple was just 40.)
+
+Rewarding management for consummating an acquisition is an absolutely terrible idea—paying big bonuses just for getting a deal done simply encourages executives to go out and do more dubious deals. A better idea, though not one I’ve ever seen implemented, would be to wait a couple of years and pay a bonus only if an acquisition has provided an adequate—and predetermined—return on the investment.
+
+
+
+## Avoiding Financial Fakery
+
+### Six Red Flags
+
+#### Declining Cash Flow
+
+Even if accounting gobbledygook makes your head spin, there is one very simple thing you can do: Watch cash flow. Over time, increases in a company’s cash flow from operations should roughly track increases in net income. If you see cash from operations decline even as net income keeps marching upward—or if cash from operations increases much more slowly than net income—watch out. This usually means that the company is generating sales without necessarily collecting the cash, and that’s a very good recipe for a blowup down the road.
+
+- Lucent was extending credit to anyone who could spell photon, which meant it was booking many sales without receiving the cash. (Think back to our hot dog stand example in Chapter 4—as long as a firm ships a product and has reasonable certainty that it will eventually collect the cash, it can post the sale.)
+- Lucent kept building more gear than it could ship, which sent inventories upward.
+- Lucent’s pension plan was pumping up net income with noncash gains.
+
+#### Serial Chargers
+
+#### Serial Acquiers
+
+#### CFO or Auditors Leave the Company
+
+#### The Bills Aren't Being Paid
+
+#### Changes in Credit Terms and Accounts Receivable
+
+### Seven Other Pitfalls to Watch Out For
+
+- Gains From Investments
+- Pension Pitfalls
+- Pension Padding
+- Vanishing Cash Flow
+- Overstuffed Warehouses
+- Change is Bad
+
+ 
+
+
+
+
+
+
+
+
 
 
 
