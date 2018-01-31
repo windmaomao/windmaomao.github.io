@@ -1,6 +1,12 @@
-# Floating Pot
+---
+title: Floating Pot
+subtitle: no string attached
+date: 2017-03-27
+published: false
+tags:  
+---
 
-_Written in 3/27/17, not published_
+# Floating Pot, no string attached
 
 This is probably the bizarre thing ever happened to me. I'm actually thinking about writing a book about things happening around me. 
 
@@ -12,7 +18,7 @@ I'm an immigrant and currently at the last stage of committing myself as an Amer
 
 The main topic is that I found this company, and they accepted me very quickly. I was shocked that this company is so big considering all the company that I worked before has less than 5 people including CEO. I appreciated for a while that the company accepted me after a couple of interviews. The only one which I still remember was a conversation with my two bosses. Actually, they turned out to be the few of humans that I got along the way. They really liked me, and in return, I did well to them in next five years. Well, that's funny, if you ask me, maybe that's the reason I did my contribution. We normally do good to people that respect or play fair with us, don't we?
 
- 
+
 #### Chapter 1
 As far as I remember, the company is pretty big, they had their up and downs in the previous decade, mostly down, but it is still pretty big. The building I'm in has open kitchen styles, you are supposed to see everyone, facebook style. In reality, I found it comfortable, you actually can't see anyone in next row due to two monitors in front of you, and most of the time, nobody pays attention to you. Did I mention it's a big company? "I am just a tech." 
 

@@ -2,7 +2,7 @@
 
 _Written at Apr 29th 2015 and published at Qplot_
 
-Most of the shareholders are not developers, but in order for them to manage the developer team effectively, he needs to learn how to cop with the team's routine.  
+> Most of the shareholders are not developers, but in order for them to manage the developer team effectively, he needs to learn how to cop with the team's routine.  
 
 ## Things you want to do
 

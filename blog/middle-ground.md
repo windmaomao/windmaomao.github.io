@@ -1,4 +1,13 @@
-# Middle Ground
+---
+title: Middle Ground
+subtitl: old dog gets new tricks
+date: 2017-03-12
+published: QPLOT
+tags:  
+---
+
+# Middle Ground, old dog gets new tricks
+
 > In this article, the author suggest a pattern recognition of revelation of middle grounds between origin and destination. Once identified, we need to claim the middle ground to promote effective usage, therefore speed up the transition into new territory.
 
 ## Routine

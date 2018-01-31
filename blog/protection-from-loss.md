@@ -1,6 +1,12 @@
-# Protection from big loss, sell yourself an insurance plan 
+---
+title: Protect from a big loss
+subtitl: Sell yourself an insurance plan
+date: 2017-11-11
+published: LinkedIN
+tags:  
+---
 
-_Published on November 11, 2017 at LinkedIN_
+# Protect from a big loss, sell yourself an insurance plan 
 
 > An insurance plan prevents you from getting burned to the ground when an unanticipated thing happens.
 

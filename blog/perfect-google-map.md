@@ -1,6 +1,12 @@
-# "Perfect" Google map algorithm under emergency conditions
+---
+title: "Perfect" Google map algorithm under emergency conditions
+subtitl: 
+date: 2017-09-23
+published: LinkedIN
+tags:  
+---
 
-*Published on September 23, 2017 at LinkedIN*
+# "Perfect" Google map algorithm under emergency conditions
 
 I took a vacation to Cuba lately, and on the way there we'd been told the Irma is coming our way so we should head back ahead of schedule.
 
