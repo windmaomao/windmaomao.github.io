@@ -44,6 +44,10 @@ h2 {
 	font-weight: normal;
 }
 
+h2 {
+	font-size:2em;
+}
+
 h3 {
 	font-weight: normal;
 	font-style: italic;
@@ -71,7 +75,7 @@ h1+h2, h2+h3 {
 
 p,
 .mathjax-block {
-	margin-top: 0;
+	margin-top: 1em;
 	-webkit-hypens: auto;
 	-moz-hypens: auto;
 	hyphens: auto;

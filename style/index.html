@@ -6,12 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-  <link rel="stylesheet" href="han.css">  
-  <!-- <link rel="stylesheet" href="whitey.css">   -->
+  <!-- <link rel="stylesheet" href="han.css">   -->
+  <link rel="stylesheet" href="whitey.css">  
 </head>
 
-<body class="pin-outline">
-
+<body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
@@ -20,8 +19,8 @@
       </div>
     </nav>  
     <div class="level" style="align-items: baseline">
-      <section class="section">
-        <div class="container is-fluid markdown-body" id="write">
+      <section class="section" style="padding-top: 0">
+        <div class="container" id="write">
           <vue-markdown :source="source"></vue-markdown>
         </div>
       </section>
@@ -93,8 +92,8 @@
           this.books = ['index', 'art-of-war', 'big-shifts-ahead', 'five-rules-stock-investing', 'slash-retirement-risk'];
           // this.load('blog/active-management');
           this.styles = ['https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css', 'https://raw.githubusercontent.com/typora/typora-theme-gallery/gh-pages/media/theme/han/han.css', 'https://markdowncss.github.io/retro/'];
-          this.load('blog/index');
-          this.loadCss(this.styles[1]);
+          this.load('blog/power-of-loss');
+          // this.loadCss(this.styles[1]);
         } 
       });
 
