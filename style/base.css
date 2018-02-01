@@ -1,0 +1,15 @@
+section.main {
+  padding-right: 270px;
+}
+
+div.level-right {
+  position: fixed;
+  width: 270px;
+  top: 80px;
+  right: 0;
+  padding-left: 40px;
+  border-left: 1px solid #ddd;
+}
+
+
+
