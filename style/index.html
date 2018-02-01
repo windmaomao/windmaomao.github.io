@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css"> -->
   <link rel="stylesheet" href="base.css">  
+  <link rel="stylesheet" href="base-control.css">  
   <!-- <link rel="stylesheet" href="han.css">   -->
   <!-- <link rel="stylesheet" href="whitey.css">   -->
   <!-- <link rel="stylesheet" href="pixyll.css">   -->
@@ -23,23 +24,31 @@
     </nav>   -->
     <div class="level">
       <div class="level-right">
-        <aside class="menu">
-          <p class="menu-label">
-            Books
-          </p>
-          <ul class="menu-list">
-            <li v-for="book in books">
-              <a v-on:click="load('book/'+book)">{{ book }}</a>
-            </li>
-          </ul>
-          <p class="menu-label">
-            Blogs
-          </p>
-          <ul class="menu-list">
-            <li v-for="blog in blogs">
-              <a v-on:click="load('blog/'+blog)">{{ blog }}</a>
-            </li>
-          </ul>
+        <aside class="outline-content">
+          <li class="outline-h1 outline-item-open">
+            <div class="outline-item">
+              <span class="outline-label">Books</span>
+            </div>
+            <ul class="outline-children">
+              <li v-for="book in books" class="outline-h2 outline-item-single">
+                <div class="outline-item">
+                  <span class="outline-label" v-on:click="load('book/'+book)">{{ book }}</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="outline-h1 outline-item-open">
+            <div class="outline-item">
+              <span class="outline-label">Blogs</span>
+            </div>
+            <ul class="outline-children">
+              <li v-for="blog in blogs" class="outline-h2 outline-item-single">
+                <div class="outline-item">
+                  <span class="outline-label" v-on:click="load('blog/'+blog)">{{ blog }}</span>
+                </div>
+              </li>
+            </ul>
+          </li>
         </aside>      
       </div>
       <section class="section main">
@@ -54,6 +63,7 @@
 
     <script src="https://miaolz123.github.io/vue-markdown/dist/js/vue.js"></script>
     <script src="https://miaolz123.github.io/vue-markdown/dist/vue-markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script>
 
       Vue.use(VueMarkdown);
