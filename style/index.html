@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Markdown Preview</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link rel="stylesheet" href="han.css">  
+  <!-- <link rel="stylesheet" href="whitey.css">   -->
+</head>
+
+<body class="pin-outline">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+        </a>
+      </div>
+    </nav>  
+    <div class="level" style="align-items: baseline">
+      <section class="section">
+        <div class="container is-fluid markdown-body" id="write">
+          <vue-markdown :source="source"></vue-markdown>
+        </div>
+      </section>
+      <div class="level-right">
+        <aside class="menu">
+          <p class="menu-label">
+            Books
+          </p>
+          <ul class="menu-list">
+            <li v-for="book in books">
+              <a v-on:click="load('book/'+book)">{{ book }}</a>
+            </li>
+          </ul>
+          <p class="menu-label">
+            Blogs
+          </p>
+          <ul class="menu-list">
+            <li v-for="blog in blogs">
+              <a v-on:click="load('blog/'+blog)">{{ blog }}</a>
+            </li>
+          </ul>
+        </aside>      
+      </div>
+    </div>
+    
+    <footer class="footer">@Copyright 2018 - Fang Jin</footer>  
+    
+
+    <script src="https://miaolz123.github.io/vue-markdown/dist/js/vue.js"></script>
+    <script src="https://miaolz123.github.io/vue-markdown/dist/vue-markdown.min.js"></script>
+    <script>
+
+      Vue.use(VueMarkdown);
+      new Vue({
+        el: 'body',
+        data: {
+          books: [],
+          blogs: [],
+          source: "",
+        },
+        methods: {
+          load(name) {
+            // const root = "https://windmaomao.github.io/";
+            const root = "https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/";
+            var fn = root + name + ".md";
+            fetch(fn)
+              .then((res) => res.text())
+              .then((res) => { this.source = res; })
+            ;    
+          },
+          loadCss(url) {
+            var found = document.getElementById('style');
+            if (found) {
+              found.href = url;
+            } else {
+              var head = document.getElementsByTagName('head')[0];
+              var link = document.createElement('link');
+              link.id = 'style';
+              link.rel = 'stylesheet';
+              link.type = 'text/css';
+              link.href = url;
+              link.media = 'all';
+              head.appendChild(link);
+            }
+          }
+        },
+        created() {
+          this.blogs = ['index', 'power-of-loss', 'identity-debt', 'sustainable-prototyping', 'protection-from-loss', 'perfect-google-map', 'middle-ground', 'reusable-form', 'helping-others', 'law-of-winning', 'reusable-components', 'angular-on-windows', 'tiny-upscaling', 'build-new-system', 'dynamic-static-approach', 'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot'];
+          this.books = ['index', 'art-of-war', 'big-shifts-ahead', 'five-rules-stock-investing', 'slash-retirement-risk'];
+          // this.load('blog/active-management');
+          this.styles = ['https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css', 'https://raw.githubusercontent.com/typora/typora-theme-gallery/gh-pages/media/theme/han/han.css', 'https://markdowncss.github.io/retro/'];
+          this.load('blog/index');
+          this.loadCss(this.styles[1]);
+        } 
+      });
+
+    </script>
+  </body>
