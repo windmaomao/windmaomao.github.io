@@ -28,6 +28,14 @@ ul.outline-content li {
   list-style: none;
 }
 
+ul.outline-content .outline-label {
+  cursor: pointer;
+}
+
+ul.outline-content .outline-label:hover {
+  background-color: #f5f5f5;
+}
+
 ul.outline-content > li {
   padding: 10px;
 }
