@@ -11,6 +11,10 @@ section.main {
   margin: 0 auto;
 }
 
+#logo {
+  margin: 20px 0 0 25px;
+}
+
 div.level-right {
   position: fixed;
   width: 270px;
