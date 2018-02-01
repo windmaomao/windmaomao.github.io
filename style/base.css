@@ -4,14 +4,39 @@
 }
 
 section.main {
-  margin-right: 270px;
+  padding-right: 270px;
+}
+
+#write {
+  margin: 0 auto;
 }
 
 div.level-right {
   position: fixed;
   width: 270px;
-  top: 150px;
+  top: 0;
   right: 0;
-  padding-left: 20px;
+  height: 100%;
   border-left: 1px solid #ddd;
 }
+
+ul.outline-content {
+  padding: 20px;
+}
+
+ul.outline-content li {
+  list-style: none;
+}
+
+ul.outline-content > li {
+  padding: 10px;
+}
+
+ul.outline-content > li.outline-h1 > .outline-item .outline-label {
+  font-weight: bold;
+}
+
+ul.outline-content ul {
+  padding-left: 10px;
+}
+
