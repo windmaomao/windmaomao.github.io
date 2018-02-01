@@ -37,8 +37,8 @@ But you realized that keeping typing `<h1>` and `<p>` tag and other common eleme
 This way we can just throw these variables into the template by
 
 ```
-    <h1>{% title %}</h1>
-    <p>{% body %}</p>
+    <h1>{ title }</h1>
+    <p>{ body }</p>
 ```
 
 This is a very typical step that we normally take to convert a static page into a dynamic page and you might find the above code in any PHP or AngularJS application. 
