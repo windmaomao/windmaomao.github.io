@@ -2,11 +2,11 @@
 
 ## Content
 
-- blog (10+)
-- book (5+)
-- finance (3)
-- purchase
-- repository (2)
-- resume
+- Blog (10+)
+- Book (5+)
+- Finance (3)
+- Purchase
+- Repository (2)
+- Resume
     - Profile frontend
     - Project list
