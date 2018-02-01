@@ -26,31 +26,19 @@
       <div class="level-right">
         <img src="tree.png" id="logo">
         <ul class="outline-content">
-          <li class="outline-h1 outline-item-open">
+          <li v-for="res in resources" class="outline-h1 outline-item-open" >
             <div class="outline-item">
-              <span class="outline-label">Books</span>
+              <span class="outline-label">{{ res.title }}</span>
             </div>
             <ul class="outline-children">
-              <li v-for="book in books" class="outline-h2 outline-item-single">
+              <li v-for="item in res.items" class="outline-h2 outline-item-single">
                 <div class="outline-item">
-                  <span class="outline-label" v-on:click="load('book/'+book)">{{ book }}</span>
+                  <span class="outline-label" v-on:click="load(res.type+'/'+item)">{{ item }}</span>
                 </div>
               </li>
             </ul>
           </li>
-          <li class="outline-h1 outline-item-open">
-            <div class="outline-item">
-              <span class="outline-label">Blogs</span>
-            </div>
-            <ul class="outline-children">
-              <li v-for="blog in blogs" class="outline-h2 outline-item-single">
-                <div class="outline-item">
-                  <span class="outline-label" v-on:click="load('blog/'+blog)">{{ blog }}</span>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>      
+        </ul>
       </div>
       <section class="section main">
         <div class="container" id="write">
@@ -58,27 +46,24 @@
         </div>
       </section>
     </div>
-    
     <footer class="footer">@Copyright 2018 - Fang Jin</footer>  
     
-
     <script src="https://miaolz123.github.io/vue-markdown/dist/js/vue.js"></script>
     <script src="https://miaolz123.github.io/vue-markdown/dist/vue-markdown.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script>
-
       Vue.use(VueMarkdown);
       new Vue({
         el: 'body',
         data: {
           books: [],
           blogs: [],
+          resources: [],
           source: "",
         },
         methods: {
           load(name) {
-            // const root = "https://windmaomao.github.io/";
-            const root = "https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/";
+            const root = "https://windmaomao.github.io/";
+            // const root = "https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/";
             var fn = root + name + ".md";
             fetch(fn)
               .then((res) => res.text())
@@ -104,12 +89,17 @@
         created() {
           this.blogs = ['index', 'power-of-loss', 'identity-debt', 'sustainable-prototyping', 'protection-from-loss', 'perfect-google-map', 'middle-ground', 'reusable-form', 'helping-others', 'law-of-winning', 'reusable-components', 'angular-on-windows', 'tiny-upscaling', 'build-new-system', 'dynamic-static-approach', 'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot'];
           this.books = ['index', 'art-of-war', 'big-shifts-ahead', 'five-rules-stock-investing', 'slash-retirement-risk'];
+          this.financials = ['tree-structure', 'balace-sheet', 'income-statement'];
+          this.resources = [
+            { type: 'book', title: 'Books', items: this.books },
+            { type: 'blog', title: 'Blogs', items: this.blogs },
+            { type: 'finance', title: 'Financials', items: this.financials }
+          ];
           // this.load('blog/active-management');
           this.styles = ['https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css', 'https://raw.githubusercontent.com/typora/typora-theme-gallery/gh-pages/media/theme/han/han.css', 'https://markdowncss.github.io/retro/'];
           this.load('blog/power-of-loss');
           // this.loadCss(this.styles[1]);
         } 
       });
-
     </script>
   </body>
