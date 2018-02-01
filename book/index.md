@@ -1,5 +1,17 @@
 # Book List
 
+| Title                           | Year | Category |
+| ------------------------------- | ---- | -------- |
+| **2018**                        |      |          |
+| Slash Your Retirement Risk      |      |          |
+| Five Rules for Successful Stock |      |          |
+| Art of War - Wisdom             |      |          |
+| Art of War                      |      |          |
+| **2017**                        |      |          |
+| Trade Like an O'Neil Disciple   |      |          |
+| Expert Angular                  |      |          |
+
+
 ## 2018
 
 ### January
@@ -57,7 +69,7 @@ The Complete Guide to Option Strategies: Advanced and Basic Strategies on Stocks
 Fooling Some of the People All of the Time
 > David Einhorn, Joel Greenblatt
 > $10.71    
- 
+
 ### October 
 
 Hot Commodities: How Anyone Can Invest Profitably in the World's Best Market
@@ -117,7 +129,7 @@ The Aftershock Investor: A Crash Course in Staying Afloat in a Sinking Economy
 
 The New Gold Standard: Rediscovering the Power of Gold to Protect and Grow Wealth
 > Paul Nathan
-Released: June 2011
+> Released: June 2011
 
 ### July
 

@@ -3,8 +3,9 @@
 | Title                        | Date  | Published |
 | ---------------------------- | ----- | --------- |
 | **2018**                     |       |           |
-| Identity Debt                |       |           |
-| Sustainable Prototyping      |       |           |
+| Power of Loss                | 01/31 |           |
+| Identity Debt                | 01/30 |           |
+| Sustainable Prototyping      | 01/29 |           |
 | **2017** *(7)*               |       |           |
 | Protect from a Big Loss      | 11/11 | LinkedIN  |
 | Perfect Google Map           | 09/23 | LinkedIN  |
