@@ -17,6 +17,7 @@ body {
 	margin: 0 auto;
 	margin-bottom: 2em;
 	line-height: 1.53;
+	padding-right: 60px;
 }
 
 #write>h2:first-child,

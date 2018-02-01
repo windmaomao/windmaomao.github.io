@@ -5,13 +5,12 @@
 
 section.main {
   margin-right: 270px;
-  padding: 0 40px 0 60px;
 }
 
 div.level-right {
   position: fixed;
-  width: 230px;
-  top: 80px;
+  width: 270px;
+  top: 150px;
   right: 0;
   padding-left: 20px;
   border-left: 1px solid #ddd;
