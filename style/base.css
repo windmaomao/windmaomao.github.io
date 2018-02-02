@@ -56,6 +56,7 @@ ul.table-of-contents li {
   list-style: none;
 }
 ul.table-of-contents a {
+  color: inherit;
   text-align: left;
 }
 ul.table-of-contents > li > a {
