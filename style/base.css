@@ -21,11 +21,14 @@
 .sidebar {
   position: fixed;
   right: 0;
-  bottom: 200px;
+  top: 100px;
+  bottom: 100px;
+  width: 200px;
   margin: 0;
   padding: 20px 20px 0 20px;
   font-size: 12px;
   border-left: 1px solid #eee;
+  overflow-y: auto;
 }
 
 .footer {
@@ -36,14 +39,25 @@
   z-index: 1000;
 }
 
-table.table {
-  width: 100%;
-}
-
 ul.table-of-contents {
   padding: 0;
 }
 ul.table-of-contents ul {
   padding-left: 10px;
   margin: 0 0 5px;
+}
+
+#write table {
+  width: 100%;
+}
+#write p {
+  margin: 1rem 0;
+}
+#write blockquote {
+  margin: 1em 0;
+}
+#write img {
+  max-width: 100%;
+  vertical-align: middle;
+  margin: 0 auto;
 }

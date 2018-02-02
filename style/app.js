@@ -6,7 +6,7 @@ new Vue({
     resources: [],
     source: "",
     style: "github",
-    toc: true,
+    toc: false,
   },
   filters: {
     formatId: function(value) {

@@ -14,20 +14,6 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: auto;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  font-size: 1rem;
-  line-height: 1.42857143;
-  overflow-x: hidden;
-  background: inherit;
-}
-
 a:active,
 a:hover {
   outline: 0;
