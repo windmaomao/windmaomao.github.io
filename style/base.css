@@ -23,6 +23,7 @@ div.level-right {
   right: 0;
   height: 100%;
   border-left: 1px solid #ddd;
+  overflow-y: auto;
 }
 
 ul.outline-content {
