@@ -5,7 +5,7 @@ new Vue({
     root: "https://windmaomao.github.io/",
     resources: [],
     source: "",
-    style: "github",
+    style: "whitey",
     md: "resume/profile-frontend",
     toc: true,
     single: false,
