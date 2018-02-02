@@ -6,6 +6,7 @@ new Vue({
     resources: [],
     source: "",
     style: "github",
+    md: "README",
     toc: true,
   },
   filters: {
@@ -36,6 +37,11 @@ new Vue({
     },
     toggleToc() {
       this.toc = !this.toc;
+    },
+    getParams() {
+      var params = new URLSearchParams(window.location.search);
+      this.style = params.get('s') || this.style;
+      this.md = params.get('md') || this.md;
     }
   },
   created() {
@@ -52,10 +58,12 @@ new Vue({
       { type: 'purchase', title: 'Purchases', items: this.purchases }
     ];
     this.styles = ['academic', 'ash', 'github', 'han', 'newsprint', 'pixyll', 'whitey'];
+    
+    this.getParams();
+    this.changeStyle();
     // this.load('blog/active-management');
     // this.load('repository/angular2-mc-common');
-    this.load('resume/profile-frontend');
-    this.changeStyle();
     // this.load('blog/index');
+    this.load(this.md);
   } 
 });
