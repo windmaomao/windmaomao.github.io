@@ -1,3 +1,6 @@
+[v-cloak] {
+  display: none;
+}
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,6 +49,9 @@ ul.table-of-contents {
 ul.table-of-contents ul {
   padding-left: 10px;
   margin: 0 0 5px;
+}
+ul.table-of-contents > li > a {
+  font-weight: bold;
 }
 
 #write table {

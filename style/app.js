@@ -6,8 +6,10 @@ new Vue({
     resources: [],
     source: "",
     style: "github",
-    md: "README",
+    md: "resume/profile-frontend",
     toc: true,
+    single: false,
+    admin: false,
   },
   filters: {
     formatId: function(value) {
@@ -40,8 +42,10 @@ new Vue({
     },
     getParams() {
       var params = new URLSearchParams(window.location.search);
-      this.style = params.get('s') || this.style;
+      this.style = params.get('st') || this.style;
       this.md = params.get('md') || this.md;
+      this.single = params.get('single') || this.single;
+      this.admin = params.get('ad') || false;
     }
   },
   created() {

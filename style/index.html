@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="" id="style">  
 </head>
 
-<body class="pin-outline">
+<body class="pin-outline" v-cloak>
     <!-- Header  -->
     <div class="header">
       <nav class="navbar is-light">
@@ -27,7 +27,7 @@
         </div>
   
         <div id="navbar" class="navbar-menu">
-          <div class="navbar-start">
+          <div class="navbar-start" v-if="admin">
             <a class="navbar-item" v-on:click="reset()">
               Home
             </a>
