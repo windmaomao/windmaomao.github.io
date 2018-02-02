@@ -53,7 +53,8 @@ new Vue({
     ];
     this.styles = ['academic', 'ash', 'github', 'han', 'newsprint', 'pixyll', 'whitey'];
     // this.load('blog/active-management');
-    this.load('repository/angular2-mc-common');
+    // this.load('repository/angular2-mc-common');
+    this.load('resume/profile-frontend');
     this.changeStyle();
     // this.load('blog/index');
   } 

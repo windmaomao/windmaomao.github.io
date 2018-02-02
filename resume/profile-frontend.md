@@ -38,7 +38,7 @@ Serves as UI and _AngularJS_ architect in Market Clearing domain for 45+ banking
 
 I created branding header, menu, fly-in menu, and form etc. that supports light/dark themes and can be plugged in with no more than 10 lines of code. All UI elements are also domain-aware with swappable authorization services maintaining user permissions and preferences.
 
-> The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
+The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
 **Highlights** includes,
 

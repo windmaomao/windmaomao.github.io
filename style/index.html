@@ -70,7 +70,7 @@
     </div>
     <!-- Content  -->
     <div class="main">
-        <div id="toc" class="sidebar"></div>
+        <div id="toc" class="sidebar" v-show="toc"></div>
         <section class="section">
           <div class="container" id="write">
             <vue-markdown :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown>
