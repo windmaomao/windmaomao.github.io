@@ -44,10 +44,18 @@ h2 {
 	font-weight: normal;
 }
 
+h2 {
+	font-size:1.8em;
+}
+
 h3 {
 	font-weight: normal;
 	font-style: italic;
 	margin-top: 3em;
+}
+
+h3 {
+	font-size: 1.6em;
 }
 
 h1, 
@@ -67,6 +75,10 @@ h2:after{
 
 h1+h2, h2+h3 {
 	margin-top: 0.83em;
+}
+
+h1,h2,h3,h4,h5 {
+	margin-bottom: 1em;
 }
 
 p,
