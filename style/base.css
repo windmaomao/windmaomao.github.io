@@ -2,66 +2,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-section.main {
-  padding-right: 270px;
-  margin-bottom: 100px;
+.capitalize {
+  text-transform: capitalize;
 }
 
-#write {
-  margin: 0 auto;
+.header {
+  border-bottom: 1px solid #ddd;
 }
 
-#logo {
-  margin: 20px 0 0 25px;
-  text-align: center;
-}
-#logo p {
-  font-size: 14px;
-  font-style: italic;
-  margin-top: 0;
-}
-
-div.level-right {
+.sidebar {
   position: fixed;
-  width: 270px;
-  top: 0;
   right: 0;
-  height: 100%;
+  font-size: 12px;
   border-left: 1px solid #ddd;
-  overflow-y: auto;
 }
 
-ul.outline-content {
-  padding: 20px;
-}
-
-ul.outline-content li {
-  list-style: none;
-}
-
-ul.outline-content .outline-label {
-  cursor: pointer;
-}
-
-ul.outline-content .outline-label:hover {
-  background-color: #f5f5f5;
-}
-
-ul.outline-content > li {
-  padding: 10px;
-}
-
-ul.outline-content > li.outline-h1 > .outline-item .outline-label {
-  font-weight: bold;
-}
-
-ul.outline-content ul {
-  padding-left: 10px;
+.footer {
+  font-size: 90%;
+  font-style: italic;
+  text-align: center;  
 }
 
 table.table {
   width: 100%;
 }
-
-
