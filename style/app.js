@@ -10,6 +10,7 @@ new Vue({
     toc: true,
     single: false,
     admin: false,
+    sidebar: true,
   },
   filters: {
     formatId: function(value) {
@@ -37,8 +38,8 @@ new Vue({
         found.href = root + this.style + ".css";
       }
     },
-    toggleToc() {
-      this.toc = !this.toc;
+    toggleSidebar() {
+      this.sidebar = !this.sidebar;
     },
     getParams() {
       var params = new URLSearchParams(window.location.search);
@@ -46,6 +47,7 @@ new Vue({
       this.md = params.get('md') || this.md;
       this.single = params.get('single') || this.single;
       this.admin = params.get('ad') || false;
+      this.sidebar = params.get('nt') ? false : this.sidebar;
     }
   },
   created() {

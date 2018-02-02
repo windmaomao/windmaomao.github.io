@@ -19,6 +19,8 @@
 
 .main {
   padding-top: 30px;
+}
+.main.with-sidebar {
   padding-right: 60px;
 }
 
@@ -49,6 +51,12 @@ ul.table-of-contents {
 ul.table-of-contents ul {
   padding-left: 10px;
   margin: 0 0 5px;
+}
+ul.table-of-contents li {
+  list-style: none;
+}
+ul.table-of-contents a {
+  text-align: left;
 }
 ul.table-of-contents > li > a {
   font-weight: bold;

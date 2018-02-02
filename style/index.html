@@ -45,7 +45,7 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <a class="button" v-on:click="toggleToc">
+                  <a class="button" v-on:click="toggleSidebar">
                     <span class="icon">
                       <i class="fa fa-align-justify"></i>
                     </span>
@@ -69,8 +69,8 @@
       </nav>  
     </div>
     <!-- Content  -->
-    <div class="main">
-        <div id="toc" class="sidebar" v-show="toc"></div>
+    <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
+        <div id="toc" class="sidebar" v-show="sidebar"></div>
         <section class="section">
           <div class="container" id="write">
             <vue-markdown :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown>
