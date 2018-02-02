@@ -68,12 +68,14 @@
       </nav>  
     </div>
     <!-- Content  -->
-    <div id="toc" class="sidebar"></div>
-    <section class="section">
-      <div class="container" id="write">
-        <vue-markdown :source="source" :toc="toc" toc-id="toc"></vue-markdown>
-      </div>
-    </section>
+    <div class="main">
+        <div id="toc" class="sidebar"></div>
+        <section class="section">
+          <div class="container" id="write">
+            <vue-markdown :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown>
+          </div>
+        </section>
+    </div>
     
     <!-- Sidebar layout, obsolete  -->
     <div class="level" style="align-items: baseline; display: none;">

@@ -8,13 +8,26 @@
 
 .header {
   border-bottom: 1px solid #ddd;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.main {
+  padding-top: 30px;
+  /* position: relative; */
 }
 
 .sidebar {
   position: fixed;
   right: 0;
+  bottom: 60px;
+  margin: 0;
+  padding: 20px;
   font-size: 12px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #eee;
+  /* background-color: #fefefe; */
 }
 
 .footer {
@@ -25,4 +38,12 @@
 
 table.table {
   width: 100%;
+}
+
+ul.table-of-contents {
+  padding: 0;
+}
+ul.table-of-contents ul {
+  padding-left: 10px;
+  margin: 0 0 5px;
 }
