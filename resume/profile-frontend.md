@@ -40,6 +40,12 @@ I created branding header, menu, fly-in menu, and form etc. that supports light/
 
 The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
+```html
+  <div mc-body class="content-mc">
+    <h1>Hello World</h1>
+  </div>
+```
+
 **Highlights** includes,
 
 - Framework: Use _AngularJS_ and _Bootstrap_ for fast development
