@@ -10,10 +10,10 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css"> -->
   <link rel="stylesheet" href="base.css">  
+  <link rel="stylesheet" href="github.css" id="style">  
   <!-- <link rel="stylesheet" href="han.css">   -->
   <!-- <link rel="stylesheet" href="whitey.css">   -->
   <!-- <link rel="stylesheet" href="pixyll.css">   -->
-  <link rel="stylesheet" href="github.css">  
 </head>
 
 <body class="pin-outline">
@@ -29,6 +29,9 @@
         <div id="logo">
           <img src="tree.png">
           <p>Stay ahead and focused.</p>
+          <select v-model="style" v-on:change="changeStyle">
+            <option v-for="s in styles">{{ s }}</option>
+          </select>
         </div>
         <ul class="outline-content">
           <li v-for="res in resources" class="outline-h1 outline-item-open" >
@@ -60,34 +63,23 @@
       new Vue({
         el: 'body',
         data: {
-          books: [],
-          blogs: [],
           resources: [],
           source: "",
+          style: "github",
         },
         methods: {
           load(name) {
             const root = "https://windmaomao.github.io/";
-            // const root = "https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/";
             var fn = root + name + ".md";
             fetch(fn)
               .then((res) => res.text())
               .then((res) => { this.source = res; })
             ;    
           },
-          loadCss(url) {
+          changeStyle() {
             var found = document.getElementById('style');
             if (found) {
-              found.href = url;
-            } else {
-              var head = document.getElementsByTagName('head')[0];
-              var link = document.createElement('link');
-              link.id = 'style';
-              link.rel = 'stylesheet';
-              link.type = 'text/css';
-              link.href = url;
-              link.media = 'all';
-              head.appendChild(link);
+              found.href = this.style + ".css";
             }
           }
         },
@@ -100,10 +92,8 @@
             { type: 'blog', title: 'Blogs', items: this.blogs },
             { type: 'finance', title: 'Financials', items: this.financials }
           ];
-          // this.load('blog/active-management');
-          this.styles = ['https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css', 'https://raw.githubusercontent.com/typora/typora-theme-gallery/gh-pages/media/theme/han/han.css', 'https://markdowncss.github.io/retro/'];
+          this.styles = ['github', 'han', 'whitey', 'pixyll'];
           this.load('blog/power-of-loss');
-          // this.loadCss(this.styles[1]);
         } 
       });
     </script>
