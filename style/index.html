@@ -9,6 +9,7 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css"> -->
+  <link rel="stylesheet" href="reset.css">  
   <link rel="stylesheet" href="base.css">  
   <link rel="stylesheet" href="github.css" id="style">  
   <!-- <link rel="stylesheet" href="han.css">   -->
@@ -29,9 +30,11 @@
         <div id="logo">
           <img src="tree.png">
           <p>Stay ahead and focused.</p>
-          <select v-model="style" v-on:change="changeStyle">
-            <option v-for="s in styles">{{ s }}</option>
-          </select>
+          <div>
+            <select v-model="style" v-on:change="changeStyle">
+              <option v-for="s in styles">{{ s }}</option>
+            </select>
+          </div>
         </div>
         <ul class="outline-content">
           <li v-for="res in resources" class="outline-h1 outline-item-open" >
@@ -92,7 +95,7 @@
             { type: 'blog', title: 'Blogs', items: this.blogs },
             { type: 'finance', title: 'Financials', items: this.financials }
           ];
-          this.styles = ['github', 'han', 'whitey', 'pixyll'];
+          this.styles = ['academic', 'ash', 'github', 'han', 'newsprint', 'pixyll', 'whitey'];
           this.load('blog/power-of-loss');
         } 
       });
