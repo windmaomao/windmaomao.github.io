@@ -48,6 +48,9 @@ new Vue({
       this.single = params.get('single') || this.single;
       this.admin = params.get('ad') || false;
       this.sidebar = params.get('nt') ? false : this.sidebar;
+    },
+    highlight() {
+      Prism.highlightAll();
     }
   },
   created() {

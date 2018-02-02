@@ -5,6 +5,7 @@
   <title>Fang Jin</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
   <link rel="stylesheet" href="base.css">  
   <link rel="stylesheet" href="" id="style">  
@@ -72,7 +73,7 @@
         <div id="toc" class="sidebar" v-show="sidebar"></div>
         <section class="section">
           <div class="container" id="write">
-            <vue-markdown :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown>
+            <vue-markdown v-on:rendered="highlight" :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown>
           </div>
         </section>
     </div>
@@ -104,6 +105,7 @@
     </footer>  
     
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
     <script src="markdown.min.js"></script>
