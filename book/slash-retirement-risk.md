@@ -1,6 +1,6 @@
 # Slash Your Retirement Risk
 
-## Part I - Why Traditiona lInvestment Strategies No Longer Work
+## Part I - Why Traditional Investment Strategies No Longer Work
 
 ### The Failures of Traditional Investment Strategies
 

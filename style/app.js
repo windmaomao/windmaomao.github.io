@@ -26,9 +26,10 @@ new Vue({
     },
     load(name) {
       var fn = this.root + name + ".md";
+      var that = this;
       fetch(fn)
-        .then((res) => res.text())
-        .then((res) => { this.source = res; })
+        .then(function(res) { return res.text(); })
+        .then(function(res) { that.source = res; })
       ;    
     },
     changeStyle() {
@@ -70,6 +71,7 @@ new Vue({
     
     this.getParams();
     this.changeStyle();
+
     // this.load('blog/active-management');
     // this.load('repository/angular2-mc-common');
     // this.load('blog/index');
