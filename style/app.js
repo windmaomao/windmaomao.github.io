@@ -28,8 +28,8 @@ new Vue({
       var fn = this.root + name + ".md";
       var that = this;
       fetch(fn)
-        .then(function(res) { return res.text(); })
-        .then(function(res) { that.source = res; })
+        .then((res) => res.text())
+        .then((res) => { that.source = res; })
       ;    
     },
     changeStyle() {

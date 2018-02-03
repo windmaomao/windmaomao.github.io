@@ -11,63 +11,62 @@
   <link rel="stylesheet" href="" id="style">  
 </head>
 
-<body class="pin-outline" v-cloak>
+<body class="pin-outline has-navbar-fixed-top" v-cloak>
     <!-- Header  -->
-    <div class="header">
-      <nav class="navbar is-light">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="">
-            <img src="logo.png">
+    <nav class="navbar is-light is-fixed-top">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <img src="logo.png">
+        </a>
+        <div class="navbar-burger burger" data-target="navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-start" v-if="admin">
+          <a class="navbar-item" v-on:click="reset()">
+            Home
           </a>
-          <div class="navbar-burger burger" data-target="navbar">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="navbar-item has-dropdown is-hoverable" v-for="res in resources">
+            <a class="navbar-link" href="">{{ res.title }}</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item capitalize" v-for="item in res.items" v-on:click="load(res.type+'/'+item)">
+                {{ item | formatId }}
+              </a>
+            </div>          
           </div>
         </div>
-  
-        <div id="navbar" class="navbar-menu">
-          <div class="navbar-start" v-if="admin">
-            <a class="navbar-item" v-on:click="reset()">
-              Home
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable" v-for="res in resources">
-              <a class="navbar-link" href="">{{ res.title }}</a>
-              <div class="navbar-dropdown">
-                <a class="navbar-item capitalize" v-for="item in res.items" v-on:click="load(res.type+'/'+item)">
-                  {{ item | formatId }}
-                </a>
-              </div>          
-            </div>
-          </div>
-  
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <a class="button" v-on:click="toggleSidebar">
-                    <span class="icon">
-                      <i class="fa fa-align-justify"></i>
-                    </span>
-                    <!-- <span>Table Content</span> -->
-                  </a>
-                </p>
-                <p class="control has-icons-left">
-                  <a class="select">
-                    <select v-model="style" v-on:change="changeStyle">
-                      <option v-bind:value="s" v-for="s in styles">{{ s | capitalize }}</option>
-                    </select>              
-                  </a>
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-adjust"></i>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="button" v-on:click="toggleSidebar">
+                  <span class="icon">
+                    <i class="fa fa-align-justify"></i>
                   </span>
-                </p>
-              </div>
+                  <!-- <span>Table Content</span> -->
+                </a>
+              </p>
+              <p class="control has-icons-left">
+                <a class="select">
+                  <select v-model="style" v-on:change="changeStyle">
+                    <option v-bind:value="s" v-for="s in styles">{{ s | capitalize }}</option>
+                  </select>              
+                </a>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-adjust"></i>
+                </span>
+              </p>
             </div>
           </div>
         </div>
-      </nav>  
-    </div>
+      </div>
+    </nav>  
+
     <!-- Content  -->
     <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
         <div id="toc" class="sidebar" v-show="sidebar"></div>

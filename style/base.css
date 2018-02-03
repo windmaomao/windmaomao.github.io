@@ -9,17 +9,6 @@
   text-transform: capitalize;
 }
 
-.header {
-  border-bottom: 1px solid #ddd;
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.main {
-  padding-top: 30px;
-}
 .main.with-sidebar {
   padding-right: 60px;
 }
