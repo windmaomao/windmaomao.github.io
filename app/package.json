@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "babel src -d dist --presets=env -ws",
+    "watch": "babel src -d ../style --presets=env -ws",
     "build": "rm -rf dist && babel src -d dist --presets=env",
     "serve": "http-server"
   },
