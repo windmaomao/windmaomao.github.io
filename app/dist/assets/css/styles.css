@@ -1,0 +1,94 @@
+[v-cloak] {
+  display: none;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+.main.with-sidebar {
+  padding-right: 60px;
+}
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  bottom: 100px;
+  width: 200px;
+  margin: 0;
+  padding: 20px 20px 0 20px;
+  font-size: 12px;
+  border-left: 1px solid #eee;
+  overflow-y: auto;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  .main.with-sidebar {
+    padding: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+  #toc-button {
+    display: none;
+  }
+}
+
+
+.footer {
+  position: relative;
+  font-size: 90%;
+  font-style: italic;
+  text-align: center;  
+  z-index: 1000;
+}
+
+ul.table-of-contents {
+  padding: 0;
+}
+ul.table-of-contents ul {
+  padding-left: 10px;
+  margin: 0 0 5px;
+}
+ul.table-of-contents li {
+  list-style: none;
+}
+ul.table-of-contents a {
+  color: inherit;
+  text-align: left;
+}
+ul.table-of-contents > li > a {
+  font-weight: bold;
+}
+
+#write table {
+  width: 100%;
+}
+#write p {
+  margin: 1rem 0;
+}
+#write blockquote {
+  margin: 1em 0;
+}
+#write img {
+  max-width: 100%;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+/* Fix conflict between prism and bulma */
+.token.tag {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+}
