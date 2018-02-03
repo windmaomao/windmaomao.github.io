@@ -16,9 +16,7 @@ new Vue({
   },
   filters: {
     formatId: function formatId(value) {
-      if (!value) return '';
-      segs = value.split("-");
-      return segs.join(' ');
+      return !value ? value.split("-").join(' ') : '';
     }
   },
   methods: {
