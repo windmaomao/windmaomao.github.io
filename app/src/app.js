@@ -22,13 +22,9 @@ new Vue({
       this.style = 'github';
       this.changeStyle();
     },
-    load(name) {
-      var fn = this.root + name + ".md";
-      var that = this;
-      fetch(fn)
-        .then(function(res) { return res.text(); })
-        .then(function(res) { that.source = res; })
-      ;    
+    loadMd(name) {
+      const fn = this.root + name + ".md";
+      $.get(fn, (data) => { this.source  = data; });
     },
     changeStyle() {
       const root = this.root + "style/";
@@ -41,12 +37,15 @@ new Vue({
       this.sidebar = !this.sidebar;
     },
     getParams() {
-      var params = new URLSearchParams(window.location.search);
-      this.style = params.get('st') || this.style;
-      this.md = params.get('md') || this.md;
-      this.single = params.get('single') || this.single;
-      this.admin = params.get('ad') || false;
-      this.sidebar = params.get('nt') ? false : this.sidebar;
+      var params={};
+      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+        params[key] = value;
+      });
+      this.style = params['st'] || this.style;
+      this.md = params['md'] || this.md;
+      this.single = params['single'] || this.single;
+      this.admin = params['ad'] || false;
+      this.sidebar = params['nt'] ? false : this.sidebar;
     },
     highlight() {
       Prism.highlightAll();
@@ -69,10 +68,6 @@ new Vue({
     
     this.getParams();
     this.changeStyle();
-
-    // this.load('blog/active-management');
-    // this.load('repository/angular2-mc-common');
-    // this.load('blog/index');
-    this.load(this.md);
+    this.loadMd(this.md);
   } 
 });

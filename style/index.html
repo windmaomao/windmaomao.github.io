@@ -33,7 +33,7 @@
           <div class="navbar-item has-dropdown is-hoverable" v-for="res in resources">
             <a class="navbar-link" href="javascript:;">{{ res.title }}</a>
             <div class="navbar-dropdown">
-              <a class="navbar-item capitalize" v-for="item in res.items" v-on:click="load(res.type+'/'+item)">
+              <a class="navbar-item capitalize" v-for="item in res.items" v-on:click="loadMd(res.type+'/'+item)">
                 {{ item | formatId }}
               </a>
             </div>          
@@ -89,7 +89,7 @@
             </p>
             <ul class="menu-list">
               <li v-for="item in res.items">
-                <a v-on:click="load(res.type+'/'+item)">{{ item }}</a>
+                <a v-on:click="loadMd(res.type+'/'+item)">{{ item }}</a>
               </li>
             </ul>
           </div>
@@ -100,15 +100,15 @@
     <!-- Footer  -->
     <footer class="footer">
       <p>Stay ahead and be focused.</p>
-      <p>&copy; Copyright 2018 - <a v-on:click="load('resume/profile-frontend')">Fang Jin</a></p>
+      <p>&copy; Copyright 2018 - <a v-on:click="loadMd('resume/profile-frontend')">Fang Jin</a></p>
     </footer>  
     
-    
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
     <script src="markdown.min.js"></script>
-    <script src="url-search-params.js"></script>
-    <script src="fetch.js"></script>
     <script src="app.js"></script>
   </body>
