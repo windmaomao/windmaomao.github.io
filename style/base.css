@@ -10,9 +10,10 @@
 }
 
 .main.with-sidebar {
-  padding-right: 60px;
+  padding: 0;
 }
 .sidebar {
+  display: none;
   position: fixed;
   right: 0;
   top: 100px;
@@ -24,7 +25,7 @@
   border-left: 1px solid #eee;
   overflow-y: auto;
 }
-@media only screen 
+/* @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
   .main.with-sidebar {
@@ -36,7 +37,7 @@ and (max-device-width : 1024px) {
   #toc-button {
     display: none;
   }
-}
+} */
 
 
 .footer {
