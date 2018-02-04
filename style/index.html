@@ -5,8 +5,9 @@
   <title>Fang Jin</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism.min.css" />
   <link rel="stylesheet" href="base.css">  
   <link rel="stylesheet" href="" id="style">  
 </head>
@@ -71,8 +72,8 @@
     <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
         <div id="toc" class="sidebar" v-show="sidebar"></div>
         <section class="section">
-          <div class="container" id="write">
-            <vue-markdown v-on:rendered="highlight" :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown>
+          <div class="container" id="write" v-html="compiledMd">
+            <!-- <vue-markdown v-on:rendered="highlight" :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown> -->
           </div>
         </section>
     </div>
@@ -103,12 +104,10 @@
       <p>&copy; Copyright 2018 - <a v-on:click="loadMd('resume/profile-frontend')">Fang Jin</a></p>
     </footer>  
     
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/marked@0.3.12/marked.min.js"></script>
+    <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
-    <script src="markdown.min.js"></script>
+    <!-- <script src="markdown.min.js"></script> -->
     <script src="app.js"></script>
   </body>

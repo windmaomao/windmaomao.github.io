@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 function setup() {
-  Vue.use(VueMarkdown);
+  // Vue.use(VueMarkdown);
   new Vue({
     el: 'body',
     data: {
@@ -22,6 +22,11 @@ function setup() {
     filters: {
       formatId: function formatId(value) {
         return !value ? value.split("-").join(' ') : '';
+      }
+    },
+    computed: {
+      compiledMd: function compiledMd() {
+        return marked(this.source, { sanitize: true });
       }
     },
     methods: {
