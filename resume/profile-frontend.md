@@ -126,12 +126,13 @@ Helped DataRecoveryMan.com build an application for managing inventories of hard
 
 ### Johns Hopkins University, Ph.D.
 **Sep 2000 - Sep 2006**    
-**Bio-molecular chemical engineering**    
+
+Bio-molecular chemical engineering
 
 ## Others
 
 ### RecoveryHub
-#### Sep 2014 - Oct 2014
+**Sep 2014 - Oct 2014**    
 Volunteer for disaster and humanitarian relief
 
 ### Cambridge University Press
