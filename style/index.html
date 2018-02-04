@@ -60,10 +60,12 @@
 
     <!-- Content  -->
     <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
-      <ul id="toc" class="sidebar" v-show="sidebar"></ul>
-      <section class="section">
-        <div class="container" id="write" v-html="compiled"></div>
-      </section>
+      <template v-if="source">
+        <ul id="toc" class="sidebar" v-show="sidebar"></ul>
+        <section class="section">
+          <div class="container" id="write" v-html="compiled"></div>
+        </section>
+      </template>
     </div>
         
     <!-- Footer  -->

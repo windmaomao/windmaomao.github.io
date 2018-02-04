@@ -9,9 +9,20 @@
   text-transform: capitalize;
 }
 
+.navbar {
+  font-size: 16px;
+}
+.navbar p {
+  margin: 1em 0;
+}
+
+.main {
+  min-height: 800px;
+}
 .main.with-sidebar {
   padding: 0;
 }
+
 .sidebar {
   display: none;
   position: fixed;
@@ -38,13 +49,14 @@ and (min-width : 1200px) {
   }
 }
 
-
 .footer {
   position: relative;
   font-size: 90%;
   font-style: italic;
-  text-align: center;  
   z-index: 1000;
+}
+.footer p {
+  text-align: center;  
 }
 
 ul.sidebar ul {
@@ -55,10 +67,13 @@ ul.sidebar li {
   list-style: none;
   text-align: initial;
   margin-top: 2px;
+  line-height: 22px;
 }
 ul.sidebar a {
   color: inherit;
   text-align: left;
+  font-size: 12px;
+  text-decoration: none;
 }
 ul.sidebar > li > a {
   font-weight: bold;
