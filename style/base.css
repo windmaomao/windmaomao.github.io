@@ -25,19 +25,18 @@
   border-left: 1px solid #eee;
   overflow-y: auto;
 }
-/* @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
+#toc-button {
+  display: none;
+}
+@media only screen 
+and (min-width : 1200px) {
   .main.with-sidebar {
-    padding: 0;
+    padding-right: 60px;
   }
-  .sidebar {
-    display: none;
+  .sidebar, #toc-button {
+    display: block;
   }
-  #toc-button {
-    display: none;
-  }
-} */
+}
 
 
 .footer {
