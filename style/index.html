@@ -15,9 +15,7 @@
     <!-- Header  -->
     <nav class="navbar is-light is-fixed-top">
       <div class="navbar-brand">
-        <a class="navbar-item" href="">
-          <img src="logo.png">
-        </a>
+        <a class="navbar-item" href=""><img src="logo.png"></a>
         <div class="navbar-burger burger" data-target="navbar">
           <span></span>
           <span></span>
@@ -27,9 +25,7 @@
 
       <div id="navbar" class="navbar-menu">
         <div class="navbar-start" v-if="admin">
-          <a class="navbar-item" v-on:click="reset()">
-            Home
-          </a>
+          <a class="navbar-item" v-on:click="reset()">Home</a>
           <div class="navbar-item has-dropdown is-hoverable" v-for="res in resources">
             <a class="navbar-link" href="javascript:;">{{ res.title }}</a>
             <div class="navbar-dropdown">
@@ -45,9 +41,6 @@
             <div class="field is-grouped">
               <p class="control" id="toc-button">
                 <a class="button" v-on:click="toggleSidebar">
-                  <!-- <span class="icon">
-                    <i class="fa fa-align-justify"></i>
-                  </span> -->
                   <span>Toc &rarrb;</span>
                 </a>
               </p>
@@ -57,10 +50,7 @@
                     <option v-bind:value="s" v-for="s in styles">{{ s | capitalize }}</option>
                   </select>              
                 </a>
-                <span class="icon is-small is-left">
-                  <!-- <i class="fa fa-adjust"></i> -->
-                  &Tstrok;
-                </span>
+                <span class="icon is-small is-left">&Tstrok;</span>
               </p>
             </div>
           </div>
@@ -70,34 +60,12 @@
 
     <!-- Content  -->
     <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
-        <ul id="toc" class="sidebar" v-show="sidebar"></ul>
-        <section class="section">
-          <div class="container" id="write" v-html="compiled">
-            <!-- <vue-markdown v-on:rendered="highlight" :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown> -->
-          </div>
-        </section>
-    </div>
-    
-    <!-- Sidebar layout, obsolete  -->
-    <div class="level" style="align-items: baseline; display: none;">
+      <ul id="toc" class="sidebar" v-show="sidebar"></ul>
       <section class="section">
+        <div class="container" id="write" v-html="compiled"></div>
       </section>
-      <div class="level-right">
-        <aside class="menu">
-          <div v-for="res in resources">
-            <p class="menu-label">
-              {{ res.title }}
-            </p>
-            <ul class="menu-list">
-              <li v-for="item in res.items">
-                <a v-on:click="loadMd(res.type+'/'+item)">{{ item }}</a>
-              </li>
-            </ul>
-          </div>
-        </aside>      
-      </div>
     </div>
-    
+        
     <!-- Footer  -->
     <footer class="footer">
       <p>Stay ahead and be focused.</p>
@@ -107,7 +75,6 @@
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/marked@0.3.12/marked.min.js"></script>
     <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
-    <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
     <script src="jquery.toc.js"></script>
     <script src="app.js"></script>
