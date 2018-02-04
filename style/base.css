@@ -47,21 +47,18 @@ and (max-device-width : 1024px) {
   z-index: 1000;
 }
 
-ul.table-of-contents {
-  padding: 0;
-}
-ul.table-of-contents ul {
+ul.sidebar ul {
   padding-left: 10px;
   margin: 0 0 5px;
 }
-ul.table-of-contents li {
+ul.sidebar li {
   list-style: none;
 }
-ul.table-of-contents a {
+ul.sidebar a {
   color: inherit;
   text-align: left;
 }
-ul.table-of-contents > li > a {
+ul.sidebar > li > a {
   font-weight: bold;
 }
 

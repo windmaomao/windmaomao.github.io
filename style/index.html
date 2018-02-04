@@ -70,7 +70,7 @@
 
     <!-- Content  -->
     <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
-        <div id="toc" class="sidebar" v-show="sidebar"></div>
+        <ul id="toc" class="sidebar" v-show="sidebar"></ul>
         <section class="section">
           <div class="container" id="write" v-html="compiled">
             <!-- <vue-markdown v-on:rendered="highlight" :source="source" :toc="toc" toc-id="toc" toc-anchor-link="0"></vue-markdown> -->
@@ -109,6 +109,6 @@
     <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
     <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
-    <!-- <script src="markdown.min.js"></script> -->
+    <script src="jquery.toc.js"></script>
     <script src="app.js"></script>
   </body>
