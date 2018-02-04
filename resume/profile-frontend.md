@@ -126,7 +126,6 @@ Helped DataRecoveryMan.com build an application for managing inventories of hard
 
 ### Johns Hopkins University, Ph.D.
 **Sep 2000 - Sep 2006**    
-
 Bio-molecular chemical engineering
 
 ## Others
@@ -136,15 +135,15 @@ Bio-molecular chemical engineering
 Volunteer for disaster and humanitarian relief
 
 ### Cambridge University Press
-#### Nov 2010
+**Nov 2010**    
 Book "Multiscale Modeling of Cancer" front cover design
 
 ### Journal of Nonlinearity
-#### Sep 2010
+**Sep 2010**    
 Front cover picture design
 
 ### University of California Irvine
-#### Sep 2007 - Dec 2008
+**Sep 2007 - Dec 2008**    
 College math class teacher for two semesters
 
 
