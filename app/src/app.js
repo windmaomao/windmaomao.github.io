@@ -1,5 +1,11 @@
 $(document).ready(() => {
   setup();
+
+  // toggle burger button
+  $('.navbar-burger').click(() => {
+    $('#burger').toggleClass('is-active');
+    $('#navbar').toggleClass('is-active');
+  });
 });
 
 function setup() {
@@ -28,6 +34,8 @@ function setup() {
         this.$nextTick(function() {
           Prism.highlightAll();
           $("#toc").empty().toc({ content: '#write', headings: "h2, h3" });
+          $('#burger').removeClass('is-active');
+          $('#navbar').removeClass('is-active');
         });
       }
     },
