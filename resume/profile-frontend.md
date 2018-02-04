@@ -14,7 +14,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 - 4 Years Project management with *Agile* workflow
 - 3 Years Async programming with promise/*observables*
 - 3 Years *API* and technical documentation
-- 2 Year _Java_/Oracle windows enterprise environment
+- 2 Years _Java_/Oracle windows enterprise environment
 
 **Past education** also taught me,
 
@@ -48,7 +48,7 @@ The product provides a single UI for operations, container for apps in one place
 
 **Highlights** includes,
 
-- Framework: Use _AngularJS_ and _Bootstrap_ for fast development
+- Framework -- Use _AngularJS_ and _Bootstrap_ for fast development
 - Re-usability: Design reusable branding header, footer, menu as well as pluggable generic services
 - Style Guide: Standardized style sheet for consistent look and feel across browsers and applications
 - Authorization: Integration with authentication and authorization service for application security
