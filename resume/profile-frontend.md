@@ -130,19 +130,19 @@ Bio-molecular chemical engineering
 
 ## Others
 
-### RecoveryHub
+**RecoveryHub**    
 **Sep 2014 - Oct 2014**    
 Volunteer for disaster and humanitarian relief
 
-### Cambridge University Press
+**Cambridge University Press**    
 **Nov 2010**    
 Book "Multiscale Modeling of Cancer" front cover design
 
-### Journal of Nonlinearity
+**Journal of Nonlinearity**    
 **Sep 2010**    
 Front cover picture design
 
-### University of California Irvine
+**University of California Irvine**    
 **Sep 2007 - Dec 2008**    
 College math class teacher for two semesters
 
