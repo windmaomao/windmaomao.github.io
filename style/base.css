@@ -16,6 +16,19 @@
   margin: 1em 0;
 }
 
+#switcher {
+  position: fixed;
+  top: 6px;
+  right: 60px;
+  z-index: 2000;
+}
+@media only screen 
+and (min-width : 1024px) {
+  #switcher {
+    display: none;
+  }
+}
+
 .main {
   min-height: 800px;
 }

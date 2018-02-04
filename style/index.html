@@ -58,6 +58,16 @@
       </div>
     </nav>  
 
+    <!-- Switcher -->
+    <div class="control has-icons-left" id="switcher">
+      <a class="select">
+        <select v-model="style" v-on:change="changeStyle">
+          <option v-bind:value="s" v-for="s in styles">{{ s | capitalize }}</option>
+        </select>              
+      </a>
+      <span class="icon is-small is-left">&Tstrok;</span>
+    </div>
+
     <!-- Content  -->
     <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
       <template v-if="source">
