@@ -53,6 +53,8 @@ ul.sidebar ul {
 }
 ul.sidebar li {
   list-style: none;
+  text-align: initial;
+  margin-top: 2px;
 }
 ul.sidebar a {
   color: inherit;
