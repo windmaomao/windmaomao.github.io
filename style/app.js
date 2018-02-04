@@ -18,7 +18,8 @@ function setup() {
       single: false,
       admin: false,
       sidebar: true,
-      compiled: ""
+      compiled: "",
+      headings: []
     },
     filters: {
       formatId: function formatId(value) {
@@ -27,10 +28,12 @@ function setup() {
     },
     watch: {
       source: function source(oldSource, newSource) {
+        this.headings = [];
         this.compiled = marked(this.source, { sanitize: true });
         this.$nextTick(function () {
           Prism.highlightAll();
         });
+        console.log(this.headings);
       }
     },
     methods: {
@@ -66,6 +69,22 @@ function setup() {
         this.single = params['single'] || this.single;
         this.admin = params['ad'] || false;
         this.sidebar = params['nt'] ? false : this.sidebar;
+      },
+      setupMd: function setupMd() {
+        var that = this;
+        var renderer = new marked.Renderer();
+        renderer.heading = function (text, level, raw) {
+          var anchor = this.options.headerPrefix + raw.toLowerCase().replace(/[^\w]+/g, '-');
+          that.headings.push({
+            anchor: anchor,
+            level: level,
+            text: text
+          });
+          return '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>\n';
+        };
+        marked.setOptions({
+          renderer: renderer
+        });
       }
     },
     created: function created() {
@@ -79,6 +98,7 @@ function setup() {
 
       this.getParams();
       this.changeStyle();
+      this.setupMd();
       this.loadMd(this.md);
     }
   });
