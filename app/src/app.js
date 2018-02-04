@@ -54,6 +54,7 @@ function setup() {
         if (found) {
           found.href = root + this.style + ".css";
         }
+        localStorage.setItem('qp-style', this.style);
       },
       toggleSidebar() {
         this.sidebar = !this.sidebar;
@@ -84,7 +85,8 @@ function setup() {
         { type: 'purchase', title: 'Purchases', items: this.purchases }
       ];
       this.styles = ['academic', 'ash', 'github', 'han', 'newsprint', 'pixyll', 'whitey'];
-      
+      this.style = localStorage.getItem('qp-style') || this.style;
+
       this.getParams();
       this.changeStyle();
       this.loadMd(this.md);
