@@ -17,16 +17,20 @@ function setup() {
       toc: true,
       single: false,
       admin: false,
-      sidebar: true
+      sidebar: true,
+      compiled: ""
     },
     filters: {
       formatId: function formatId(value) {
         return !value ? value.split("-").join(' ') : '';
       }
     },
-    computed: {
-      compiledMd: function compiledMd() {
-        return marked(this.source, { sanitize: true });
+    watch: {
+      source: function source(oldSource, newSource) {
+        this.compiled = marked(this.source, { sanitize: true });
+        this.$nextTick(function () {
+          Prism.highlightAll();
+        });
       }
     },
     methods: {
@@ -62,9 +66,6 @@ function setup() {
         this.single = params['single'] || this.single;
         this.admin = params['ad'] || false;
         this.sidebar = params['nt'] ? false : this.sidebar;
-      },
-      highlight: function highlight() {
-        Prism.highlightAll();
       }
     },
     created: function created() {
