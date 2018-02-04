@@ -21,7 +21,7 @@ function setup() {
     },
     filters: {
       formatId: function formatId(value) {
-        return !value ? value.split("-").join(' ') : '';
+        return value ? value.split("-").join(' ') : '';
       }
     },
     watch: {

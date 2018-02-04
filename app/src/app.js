@@ -19,7 +19,7 @@ function setup() {
     },
     filters: {
       formatId: function(value) {
-        return !value ? value.split("-").join(' ') : '';
+        return value ? value.split("-").join(' ') : '';
       }
     },
     watch: {
