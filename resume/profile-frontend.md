@@ -49,21 +49,21 @@ The product provides a single UI for operations, container for apps in one place
 **Highlights** includes,
 
 - Framework -- Use _AngularJS_ and _Bootstrap_ for fast development
-- Re-usability: Design reusable branding header, footer, menu as well as pluggable generic services
-- Style Guide: Standardized style sheet for consistent look and feel across browsers and applications
-- Authorization: Integration with authentication and authorization service for application security
-- Color: Extract color from design spec to form three background, three front text and border color
-- Theme: Support light and dark themes and dynamic toggle in-between on-the-run
-- Icon: SVG icon design and packaging for common UI and business actions
-- Animation: Custom animation keyframe design with fallback to no-animation
-- Spinner: Custom servive built supporting both *Http* enabled spinning notification and manual developer toggle
-- Dialog: Custom service built to support both generic user prompt and custom popup handling
-- Selection: Custom directives for single and multiple select form input with consistent look and feel
-- Date picker: Custom directives for regular and multiple range picker with consistent look and feel
-- Data Grid: Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
-- Charts: Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
-- Layout: Support customizable Dashboard layout with *Responsible* and *Flex* design
-- Compatibility: Support both *IE* 10/11 and *Chrome* browser
+- Re-usability -- Design reusable branding header, footer, menu as well as pluggable generic services
+- Style Guide -- Standardized style sheet for consistent look and feel across browsers and applications
+- Authorization -- Integration with authentication and authorization service for application security
+- Layout -- Support customizable Dashboard layout with *Responsible* and *Flex* design
+- Color -- Extract color from design spec to form three background, three front text and border color
+- Theme -- Support light and dark themes and dynamic toggle in-between on-the-run
+- Icon -- SVG icon design and packaging for common UI and business actions
+- Animation -- Custom animation keyframe design with fallback to no-animation
+- Spinner -- Custom servive built supporting both *Http* enabled spinning notification and manual developer toggle
+- Dialog -- Custom service built to support both generic user prompt and custom popup handling
+- Selec -- Custom directives for single and multiple select form input with consistent look and feel
+- Datepicker -- Custom directives for regular and multiple range picker with consistent look and feel
+- Data Grid -- Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
+- Chart -- Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
+- Compatibility -- Support both *IE* 10/11 and *Chrome* browser
 
 ## Past Experience
 
@@ -77,20 +77,20 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
 
 **Highlights** are,
 
-- HIPPA Server: *HIPPA* server host and deployment plan protecting health care privacy
-- Authentication: Two-factor *SMS* enabled authentication for better security protection
-- Password Recovery: Recovery based on either username or 3 out of 6 question answers
-- Reusable Component: Modular design for both Sass and Javascript in developing UI components
-- Form Generation: Auto generate hundreds single or multiple questions with generic UI and submission handling
-- Video Player: Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
-- 508 section: Disability compliance with video, and narration support with high contrast
-- Multilingual Support: Three language translations made for pages, snippets, and graphics
-- Multi-tenant: Theme and content changes entirely based on access domain
-- Responsive Design: *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
-- Template Design: Allow manager to modify each page content stored in file storage
-- File Management: Administer language files through web interface with easy switch
-- PDF Creation: Automatic fill out custom *PDF* design with user fill out from website
-- Browser Compatibility: Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
+- HIPPA -- *HIPPA* server host and deployment plan protecting health care privacy
+- Authentication -- Two-factor *SMS* enabled authentication for better security protection
+- Password -- Password recovery based on either username or 3 out of 6 question answers
+- Reusable -- Modular design for both Sass and Javascript in developing UI components
+- Form -- Auto generate hundreds single or multiple questions with generic UI and submission handling
+- Video -- Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
+- 508 section -- Disability compliance with video, and narration support with high contrast
+- Multilingual -- Three language translations made for pages, snippets, and graphics
+- Multi-tenant -- Theme and content changes entirely based on access domain
+- Responsive -- *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
+- Template -- Allow manager to modify each page content stored in file storage
+- File Management -- Administer language files through web interface with easy switch
+- PDF -- Automatic fill out custom *PDF* design with user fill out from website
+- Compatibility -- Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
 
 ### RxAnte
 **Sep 2014 - Mar 2015**    
