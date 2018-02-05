@@ -124,9 +124,9 @@ Helped DataRecoveryMan.com build an application for managing inventories of hard
 
 ## Education
 
-### Johns Hopkins University, Ph.D.
+### Johns Hopkins University
 **Sep 2000 - Sep 2006**    
-Bio-molecular chemical engineering
+Bio-molecular chemical engineering, Ph.D.
 
 ## Others
 
