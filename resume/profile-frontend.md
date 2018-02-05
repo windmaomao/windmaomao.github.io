@@ -8,7 +8,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 
 **Skillset** highlights are,
 
-- 7 Years **Prototyping** with _Bootstrap_ and _Sass_
+- 7 Years Prototyping with _Bootstrap_ and _Sass_
 - 4 Years _AngularJS_ and _Angular_ (2/4/5)
 - 4 Years IA, Mockup sketch and UI Design
 - 4 Years Project management with *Agile* workflow
@@ -18,7 +18,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 
 **Past education** also taught me,
 
-- 15 years Strong analytics skills in math, modeling, calculation and simulation
+- 15 Years Strong analytics skills in math, modeling, calculation and simulation
 - 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
 
 ## Award
@@ -48,22 +48,38 @@ The product provides a single UI for operations, container for apps in one place
 
 **Highlights** includes,
 
-- Framework -- Use _AngularJS_ and _Bootstrap_ for fast development
-- Re-usability -- Design reusable branding header, footer, menu as well as pluggable generic services
-- Style Guide -- Standardized style sheet for consistent look and feel across browsers and applications
-- Authorization -- Integration with authentication and authorization service for application security
-- Layout -- Support customizable Dashboard layout with *Responsible* and *Flex* design
-- Color -- Extract color from design spec to form three background, three front text and border color
-- Theme -- Support light and dark themes and dynamic toggle in-between on-the-run
-- Icon -- SVG icon design and packaging for common UI and business actions
-- Animation -- Custom animation keyframe design with fallback to no-animation
-- Spinner -- Custom servive built supporting both *Http* enabled spinning notification and manual developer toggle
-- Dialog -- Custom service built to support both generic user prompt and custom popup handling
-- Selec -- Custom directives for single and multiple select form input with consistent look and feel
-- Datepicker -- Custom directives for regular and multiple range picker with consistent look and feel
-- Data Grid -- Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
-- Chart -- Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
-- Compatibility -- Support both *IE* 10/11 and *Chrome* browser
+- Framework  
+  Use _AngularJS_ and _Bootstrap_ for fast development
+- Re-usability  
+  Reusable branding header, footer, menu as well as pluggable generic services
+- Style Guide  
+  Standardized style sheet for consistent look and feel across browsers and applications
+- Authorization  
+  Integration with authentication and authorization service for permission control
+- Layout  
+  Support dashboard layout with *Responsible* and *Flex* design
+- Color  
+Extract color from design spec to form theme color base
+- Theme  
+Support light and dark themes and dynamic toggle in-between
+- Icon  
+SVG icon design and packaging for common UI and business actions
+- Animation  
+Custom animation keyframe design with fallback to no-animation
+- Spinner  
+Service supporting both *Http* enabled spinning notification and manual toggle
+- Dialog  
+Service supporting both generic user prompt and custom popup dialogs
+- Select  
+Directives for single and multiple select form input with consistent look and feel
+- Datepicker  
+Directives for regular and multiple range picker with consistent look and feel
+- Data Grid  
+Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
+- Chart  
+Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
+- Compatibility  
+Support both *IE* 10/11 and *Chrome* browser
 
 ## Past Experience
 
