@@ -128,6 +128,9 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+code {
+  border: none !important;
+}
 
 #write {
   max-width: 960px;
