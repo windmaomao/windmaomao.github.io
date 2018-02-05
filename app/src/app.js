@@ -84,7 +84,7 @@ function setup() {
         { type: 'finance', title: 'Financials', items: this.financials },
         { type: 'purchase', title: 'Purchases', items: this.purchases }
       ];
-      this.styles = ['academic', 'github', 'gothic', 'han', 'newsprint', 'pixyll', 'whitey'];
+      this.styles = ['academic', 'dropbox', 'github', 'gothic', 'engwrite', 'han', 'newsprint', 'pixyll', 'whitey'];
       this.style = localStorage.getItem('qp-style') || this.style;
 
       this.getParams();
