@@ -48,38 +48,38 @@ The product provides a single UI for operations, container for apps in one place
 
 **Highlights** includes,
 
-- Framework  
-  Use _AngularJS_ and _Bootstrap_ for fast development
+- Framework
+  - Use _AngularJS_ and _Bootstrap_ for fast development
 - Re-usability  
-  Reusable branding header, footer, menu as well as pluggable generic services
-- Style Guide  
-  Standardized style sheet for consistent look and feel across browsers and applications
+  - Reusable branding header, footer, menu as well as pluggable generic services
+- Style Guide
+  - Standardized style sheet for consistent look and feel across browsers and applications
 - Authorization  
-  Integration with authentication and authorization service for permission control
+  - Integration with authentication and authorization service for permission control
 - Layout  
-  Support dashboard layout with *Responsible* and *Flex* design
+  - Support dashboard layout with *Responsible* and *Flex* design
 - Color  
-Extract color from design spec to form theme color base
+  - Extract color from design spec to form theme color base
 - Theme  
-Support light and dark themes and dynamic toggle in-between
+  - Support light and dark themes and dynamic toggle in-between
 - Icon  
-SVG icon design and packaging for common UI and business actions
+  - SVG icon design and packaging for common UI and business actions
 - Animation  
-Custom animation keyframe design with fallback to no-animation
+  - Custom animation keyframe design with fallback to no-animation
 - Spinner  
-Service supporting both *Http* enabled spinning notification and manual toggle
+  - Service supporting both *Http* enabled spinning notification and manual toggle
 - Dialog  
-Service supporting both generic user prompt and custom popup dialogs
+  - Service supporting both generic user prompt and custom popup dialogs
 - Select  
-Directives for single and multiple select form input with consistent look and feel
+  - Directives for single and multiple select form input with consistent look and feel
 - Datepicker  
-Directives for regular and multiple range picker with consistent look and feel
+  - Directives for regular and multiple range picker with consistent look and feel
 - Data Grid  
-Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
+  - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
 - Chart  
-Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
+  - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
 - Compatibility  
-Support both *IE* 10/11 and *Chrome* browser
+  - Support both *IE* 10/11 and *Chrome* browser
 
 ## Past Experience
 
