@@ -6,7 +6,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
-My main skillsets are,
+**Skills**
 
 - 7 Years Prototyping with _Bootstrap_ and _Sass_
 - 4 Years _AngularJS_ and _Angular_ (2/4/5)
@@ -16,7 +16,7 @@ My main skillsets are,
 - 3 Years *API* and technical documentation
 - 2 Years _Java_/Oracle windows enterprise environment
 
-My education also taught me,
+*Bonus*
 
 - 15 Years Strong analytics skills in math, modeling, calculation and simulation
 - 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
@@ -46,27 +46,27 @@ The product provides a single UI for operations, container for apps in one place
   </div>
 ```
 
-Highlights are,
+**Architect & Design**  
 
-- Architect & Design
-  - Support both *IE* 10/11 and *Chrome* browser
-  - Use *Angular* and *Bootstrap* for fast development
-  - Standardized style sheet for consistent look and feel
-  - Extract color from design spec to form theme color base
-  - Support light and dark themes and dynamic toggle in-between
-  - Support dashboard layout with *Responsible* and *Flex* design
-  - SVG icon design and packaging for common UI and business actions
-  - Custom animation keyframe design with fallback to no-animation
+- Support both *IE* 10/11 and *Chrome* browser
+- Use *Angular* and *Bootstrap* for fast development
+- Standardized style sheet for consistent look and feel
+- Extract color from design spec to form theme color base
+- Support light and dark themes and dynamic toggle in-between
+- Support dashboard layout with *Responsible* and *Flex* design
+- SVG icon design and packaging for common UI and business actions
+- Custom animation keyframe design with fallback to no-animation
 
-- Reusable Component
-  - Reusable branding header, footer, menu as well as pluggable generic services
-  - Directives for single and multiple select form input with consistent look and feel
-  - Directives for regular and multiple range picker with consistent look and feel
-  - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
-  - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
-  - Integration with authentication and authorization service for permission control
-  - Service supporting both *Http* enabled spinning notification and manual toggle
-  - Service supporting both generic user prompt and custom popup dialogs
+**Reusable Component**  
+
+- Reusable branding header, footer, menu as well as pluggable generic services
+- Directives for single and multiple select form input with consistent look and feel
+- Directives for regular and multiple range picker with consistent look and feel
+- Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
+- Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
+- Integration with authentication and authorization service for permission control
+- Service supporting both *Http* enabled spinning notification and manual toggle
+- Service supporting both generic user prompt and custom popup dialogs
 
 ## Past Experience
 
@@ -78,25 +78,25 @@ Highlights are,
 
 Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program to help people prepare the end of their life. Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe. 
 
-**Highlights** are,
+**Architect & Design**  
 
-- Architect & Design
-  - *HIPPA* server host and deployment plan protecting health care privacy
-  - Disability compliance with video, and narration support with high contrast
-  - Language support translations made for pages, snippets, and graphics
-  - Theme and content changes entirely based on access domain
-  - *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
-  - Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
+- *HIPPA* server host and deployment plan protecting health care privacy
+- Disability compliance with video, and narration support with high contrast
+- Language support translations made for pages, snippets, and graphics
+- Theme and content changes entirely based on access domain
+- *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
+- Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
 
-- Reusable Component
-  - Modular design for both *Sass* and *Javascript* in developing UI components
-  - Two-factor *SMS* enabled authentication for better security protection
-  - Password recovery based on either username or 3 out of 6 question answers
-  - Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
-  - Auto generate hundreds of forms with generic *UI* and submission handling
-  - Allow manager to modify each page content stored in file storage
-  - Administer language files through web interface with easy switch
-  - Automatic fill out custom *PDF* tempalte with user filled-out
+**Reusable Component**  
+
+- Modular design for both *Sass* and *Javascript* in developing UI components
+- Two-factor *SMS* enabled authentication for better security protection
+- Password recovery based on either username or 3 out of 6 question answers
+- Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
+- Auto generate hundreds of forms with generic *UI* and submission handling
+- Allow manager to modify each page content stored in file storage
+- Administer language files through web interface with easy switch
+- Automatic fill out custom *PDF* tempalte with user filled-out
 
 ### RxAnte
 **Sep 2014 - Mar 2015**    
