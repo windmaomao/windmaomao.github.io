@@ -87,6 +87,7 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
   - Theme and content changes entirely based on access domain
   - *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
   - Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
+
 - Reusable Component
   - Modular design for both *Sass* and *Javascript* in developing UI components
   - Two-factor *SMS* enabled authentication for better security protection
