@@ -119,3 +119,8 @@ ul.sidebar > li > a {
   font-weight: inherit;
   white-space: inherit;
 }
+
+blockquote p::first-letter {
+  font-size: 120%;
+  font-weight: bold;
+}

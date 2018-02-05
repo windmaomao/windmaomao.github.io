@@ -6,7 +6,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
-**Skillset** highlights are,
+My main skillsets are,
 
 - 7 Years Prototyping with _Bootstrap_ and _Sass_
 - 4 Years _AngularJS_ and _Angular_ (2/4/5)
@@ -16,7 +16,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 - 3 Years *API* and technical documentation
 - 2 Years _Java_/Oracle windows enterprise environment
 
-**Past education** also taught me,
+My education also taught me,
 
 - 15 Years Strong analytics skills in math, modeling, calculation and simulation
 - 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
@@ -46,7 +46,7 @@ The product provides a single UI for operations, container for apps in one place
   </div>
 ```
 
-**Highlights** includes,
+Highlights are,
 
 - Architect & Design
   - Support both *IE* 10/11 and *Chrome* browser
