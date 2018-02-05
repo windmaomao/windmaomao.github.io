@@ -128,6 +128,15 @@ h6 {
   font-size: 1rem;
 }
 
+
+#write {
+  max-width: 960px;
+  padding-top: 2em;
+  padding-left: 60px;
+  padding-right: 60px;
+  min-height: calc(100vh - 6em);
+  -webkit-font-smoothing: antialiased;
+}
 #write > p:first-child,
 #write > ul:first-child,
 #write > ol:first-child,
