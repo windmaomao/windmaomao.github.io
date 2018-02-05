@@ -48,7 +48,7 @@ The product provides a single UI for operations, container for apps in one place
 
 **Highlights** includes,
 
-- Design
+- Architect & Design
   - Support both *IE* 10/11 and *Chrome* browser
   - Use *Angular* and *Bootstrap* for fast development
   - Standardized style sheet for consistent look and feel
@@ -58,7 +58,7 @@ The product provides a single UI for operations, container for apps in one place
   - SVG icon design and packaging for common UI and business actions
   - Custom animation keyframe design with fallback to no-animation
 
-- Component
+- Reusable Component
   - Reusable branding header, footer, menu as well as pluggable generic services
   - Directives for single and multiple select form input with consistent look and feel
   - Directives for regular and multiple range picker with consistent look and feel
@@ -66,7 +66,7 @@ The product provides a single UI for operations, container for apps in one place
   - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
   - Integration with authentication and authorization service for permission control
   - Service supporting both *Http* enabled spinning notification and manual toggle
-  - Service supporting both generic user prompt and custom popup dialogs​
+  - Service supporting both generic user prompt and custom popup dialogs
 
 ## Past Experience
 
@@ -80,20 +80,22 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
 
 **Highlights** are,
 
-- HIPPA -- *HIPPA* server host and deployment plan protecting health care privacy
-- Authentication -- Two-factor *SMS* enabled authentication for better security protection
-- Password -- Password recovery based on either username or 3 out of 6 question answers
-- Reusable -- Modular design for both Sass and Javascript in developing UI components
-- Form -- Auto generate hundreds single or multiple questions with generic UI and submission handling
-- Video -- Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
-- 508 section -- Disability compliance with video, and narration support with high contrast
-- Multilingual -- Three language translations made for pages, snippets, and graphics
-- Multi-tenant -- Theme and content changes entirely based on access domain
-- Responsive -- *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
-- Template -- Allow manager to modify each page content stored in file storage
-- File Management -- Administer language files through web interface with easy switch
-- PDF -- Automatic fill out custom *PDF* design with user fill out from website
-- Compatibility -- Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
+- Architect & Design
+  - *HIPPA* server host and deployment plan protecting health care privacy
+  - Disability compliance with video, and narration support with high contrast
+  - Language support translations made for pages, snippets, and graphics
+  - Theme and content changes entirely based on access domain
+  - *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
+  - Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
+- Reusable Component
+  - Modular design for both *Sass* and *Javascript* in developing UI components
+  - Two-factor *SMS* enabled authentication for better security protection
+  - Password recovery based on either username or 3 out of 6 question answers
+  - Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
+  - Auto generate hundreds of forms with generic *UI* and submission handling
+  - Allow manager to modify each page content stored in file storage
+  - Administer language files through web interface with easy switch
+  - Automatic fill out custom *PDF* tempalte with user filled-out
 
 ### RxAnte
 **Sep 2014 - Mar 2015**    
