@@ -92,19 +92,25 @@ ul.sidebar > li > a {
   font-weight: bold;
 }
 
-#write table {
+table {
   width: 100%;
 }
-#write p {
+p {
   margin: 1rem 0;
 }
-#write blockquote {
-  margin: 1em 0;
+blockquote {
+  margin: 1rem 0;
 }
-#write img {
+blockquote p::first-letter {
+  font-size: 110%;
+}
+img {
   max-width: 100%;
   vertical-align: middle;
   margin: 0 auto;
+}
+strong {
+  font-weight: bold;
 }
 
 /* Fix conflict between prism and bulma */
@@ -120,7 +126,3 @@ ul.sidebar > li > a {
   white-space: inherit;
 }
 
-blockquote p::first-letter {
-  font-size: 120%;
-  font-weight: bold;
-}

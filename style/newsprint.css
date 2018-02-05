@@ -8,27 +8,27 @@
     font-family: 'PT Serif';
     font-style: normal;
     font-weight: normal;
-    src: local('PT Serif'), local('PTSerif-Regular'), url(./newsprint/PT_Serif-Web-Regular.ttf);
+    src: local('PT Serif'), local('PTSerif-Regular'), url(./newsprint/PT_Serif-Web-Regular.ttf) format('truetype')
 }
 @font-face {
     font-family: 'PT Serif';
     font-style: italic;
     font-weight: normal;
-    src: local('PT Serif'), local('PTSerif-Italic'), url('./newsprint/PT_Serif-Web-Italic.ttf')
+    src: local('PT Serif'), local('PTSerif-Italic'), url('./newsprint/PT_Serif-Web-Italic.ttf') format('truetype')
 }
 
 @font-face {
     font-family: 'PT Serif';
     font-style: normal;
     font-weight: bold;
-    src: local('PT Serif'), local('PTSerif-Bold'), url('./newsprint/PT_Serif-Web-Bold.ttf')
+    src: local('PT Serif'), local('PTSerif-Bold'), url('./newsprint/PT_Serif-Web-Bold.ttf') format('truetype')
 }
 
 @font-face {
     font-family: 'PT Serif';
     font-style: italic;
     font-weight: bold;
-    src: local('PT Serif'), local('PTSerif-BoldItalic'), url('./newsprint/PT_Serif-Web-BoldItalic.ttf')
+    src: local('PT Serif'), local('PTSerif-BoldItalic'), url('./newsprint/PT_Serif-Web-BoldItalic.ttf') format('truetype')
 }
 
 :root {
