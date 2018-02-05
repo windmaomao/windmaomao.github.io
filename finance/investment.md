@@ -7,8 +7,7 @@
 
 | Symbol       | Industry  |    Cost | Type  | Notes         |
 | ------------ | --------- | ------: | :---: | ------------- |
-| **Fidelity** |           | $ 8,140 |       |               |
-| DBC          | Commodity | $ 3,230 | long  |               |
+| **Fidelity** |           | $ 4,910 |       |               |
 | AKZOY        | Paint     | $ 3,079 | short | 4/26 dividend |
 | TSLA         | Tech      |   $ 614 | short |               |
 | BLUE         | Health    |   $ 353 | short |               |
@@ -21,6 +20,9 @@
 | EDZ          | Emerging  |   $  20 | short |               |
 | XNET P2.5    | Bitcoin   |   $  20 | short | 6/15 expire   |
 | TECS         | Tech      |   $  11 | short |               |
+| **Vanguard** |           | $ 3,230 |       |               |
+| DBC          | Commodity | $ 3,230 | long  |               |
+
 
 #### Cash
 
