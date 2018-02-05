@@ -16,6 +16,8 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 - 3 Years *API* and technical documentation
 - 2 Years _Java_/Oracle windows enterprise environment
 
+
+
 *Bonus*
 
 - 15 Years Strong analytics skills in math, modeling, calculation and simulation
@@ -46,6 +48,8 @@ The product provides a single UI for operations, container for apps in one place
   </div>
 ```
 
+
+
 **Architect & Design**  
 
 - Support both *IE* 10/11 and *Chrome* browser
@@ -56,6 +60,8 @@ The product provides a single UI for operations, container for apps in one place
 - Support dashboard layout with *Responsible* and *Flex* design
 - SVG icon design and packaging for common UI and business actions
 - Custom animation keyframe design with fallback to no-animation
+
+
 
 **Reusable Component**  
 
@@ -78,6 +84,8 @@ The product provides a single UI for operations, container for apps in one place
 
 Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program to help people prepare the end of their life. Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe. 
 
+
+
 **Architect & Design**  
 
 - *HIPPA* server host and deployment plan protecting health care privacy
@@ -86,6 +94,8 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
 - Theme and content changes entirely based on access domain
 - *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
 - Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
+
+
 
 **Reusable Component**  
 
