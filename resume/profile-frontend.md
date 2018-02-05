@@ -4,7 +4,7 @@ I build websites in general domains such as healthcare, banking, real estate and
 
 Overall my past projects have 11 million users in production. Since 2016, my success rate of products being launched and used in the market has reached 90%.
 
-> " My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code. "
+> "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
 **Skillset** highlights are,
 
@@ -70,7 +70,7 @@ The product provides a single UI for operations, container for apps in one place
 
 ## Past Experience
 
-> " Fang is one of the most talented software developer / architecture individual I have ever met. His ability to take vague customer requirements and turn them into a fantastic software solution never ceased to amaze me ... " -- David Pfeiffenberger, President / COO of PlusDelta Technologies
+> "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to take vague customer requirements and turn them into a fantastic software solution never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies
 
 ### People Designs
 **Oct 2014 - Aug 2015**    
