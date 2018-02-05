@@ -1,4 +1,7 @@
-### Account balance
+
+# Finance Tree Structure
+
+## Account balance
 
 * Debt
     * River Pine
@@ -24,7 +27,7 @@
     * Estate
     * Other
 
-### Cash flow
+## Cash flow
 
 * Earning
     * Income
