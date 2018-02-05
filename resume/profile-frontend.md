@@ -6,7 +6,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
-**Skills**
+###### Skills
 
 - 7 Years Prototyping with _Bootstrap_ and _Sass_
 - 4 Years _AngularJS_ and _Angular_ (2/4/5)
@@ -16,9 +16,7 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 - 3 Years *API* and technical documentation
 - 2 Years _Java_/Oracle windows enterprise environment
 
-
-
-*Bonus*
+###### Bonus
 
 - 15 Years Strong analytics skills in math, modeling, calculation and simulation
 - 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
@@ -48,9 +46,7 @@ The product provides a single UI for operations, container for apps in one place
   </div>
 ```
 
-
-
-**Architect & Design**  
+###### Architect & Design
 
 - Support both *IE* 10/11 and *Chrome* browser
 - Use *Angular* and *Bootstrap* for fast development
@@ -61,9 +57,7 @@ The product provides a single UI for operations, container for apps in one place
 - SVG icon design and packaging for common UI and business actions
 - Custom animation keyframe design with fallback to no-animation
 
-
-
-**Reusable Component**  
+###### Reusable Component
 
 - Reusable branding header, footer, menu as well as pluggable generic services
 - Directives for single and multiple select form input with consistent look and feel
@@ -84,9 +78,7 @@ The product provides a single UI for operations, container for apps in one place
 
 Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program to help people prepare the end of their life. Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe. 
 
-
-
-**Architect & Design**  
+###### Architect & Design
 
 - *HIPPA* server host and deployment plan protecting health care privacy
 - Disability compliance with video, and narration support with high contrast
@@ -95,9 +87,7 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
 - *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
 - Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
 
-
-
-**Reusable Component**  
+###### Reusable Component
 
 - Modular design for both *Sass* and *Javascript* in developing UI components
 - Two-factor *SMS* enabled authentication for better security protection
