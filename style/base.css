@@ -92,6 +92,8 @@ ul.sidebar > li > a {
   font-weight: bold;
 }
 
+/* Base theme */
+
 table {
   width: 100%;
 }
@@ -104,18 +106,69 @@ blockquote {
 blockquote p::first-letter {
   font-size: 110%;
 }
-img {
-  max-width: 100%;
-  vertical-align: middle;
-  margin: 0 auto;
-}
 strong {
   font-weight: bold;
 }
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
 h6 {
   font-size: 1rem;
-  font-weight: bold;
-  margin: 2.33em 0;
+}
+
+#write > p:first-child,
+#write > ul:first-child,
+#write > ol:first-child,
+#write > pre:first-child,
+#write > blockquote:first-child,
+#write > div:first-child,
+#write > table:first-child {
+    margin-top: 30px;
+}
+#write li > table:first-child {
+    margin-top: -20px;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+#write > figure:first-child {
+  margin-top: 16px;
+}
+figure {
+  overflow-x: auto;
+  margin: 0;
+  max-width: calc(100% + 16px);
+  padding: 8px;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto
+}
+thead {
+  display: table-header-group
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  overflow: auto;
+  page-break-inside: auto;
+  text-align: left;
 }
 
 /* Fix conflict between prism and bulma */
