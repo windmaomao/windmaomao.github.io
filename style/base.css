@@ -112,6 +112,11 @@ img {
 strong {
   font-weight: bold;
 }
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 2.33em 0;
+}
 
 /* Fix conflict between prism and bulma */
 .token.tag {
