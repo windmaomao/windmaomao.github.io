@@ -12,7 +12,7 @@ UNG       | Gas        | $    245 | long  | |
 DRV       | REIT       | $    244 | short | |
 SRTY      | Russell    | $    155 | short | |
 REDU      | Edu        | $     93 | long  | |
-GE P17    | Industry   | $     67 | short | 3/6 expire     |
+GE P17    | Industry   | $     67 | short | 2/23 dividend     |
 RIOT      | Bitcoin    | $     53 | long  | |
 EDZ       | Emerging   | $     20 | short | |
 XNET P2.5 | Bitcoin    | $     20 | short | 6/15 expire |
