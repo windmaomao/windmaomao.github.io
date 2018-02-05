@@ -106,8 +106,9 @@ blockquote {
 blockquote p::first-letter {
   font-size: 110%;
 }
-strong {
+h1,h2,h3,h4,h5,h6,strong {
   font-weight: bold;
+  margin: 2.33em 0;
 }
 h1 {
   font-size: 2rem;
