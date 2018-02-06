@@ -2,6 +2,35 @@
 
 ## 2018
 
+### Feb
+
+#### Realized
+
+| Symbol | Cost |  Net | Notes |
+| ------ | ---: | ---: | ----- |
+| UNG    | $245 | -$20 |       |
+
+#### Owned
+
+| Symbol       | Industry  |     Cost | Type  | Notes         |
+| ------------ | --------- | -------: | :---: | ------------- |
+| **Fidelity** |           |  $ 4,665 |       |               |
+| AKZOY        | Paint     |  $ 3,079 | short | 4/26 dividend |
+| TSLA         | Tech      |    $ 614 | short |               |
+| BLUE         | Health    |    $ 353 | short |               |
+| DRV          | REIT      |    $ 244 | short |               |
+| SRTY         | Russell   |    $ 155 | short |               |
+| REDU         | Edu       |    $  93 | long  |               |
+| GE P17       | Industry  |    $  67 | short | 2/23 dividend |
+| RIOT         | Bitcoin   |    $  53 | long  |               |
+| EDZ          | Emerging  |    $  20 | short |               |
+| XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 expire   |
+| TECS         | Tech      |    $  11 | short |               |
+| **Vanguard** |           | $ 13,230 |       |               |
+| BOC          | CD        | $ 10,000 | long  |               |
+| DBC          | Commodity |  $ 3,230 | long  |               |
+
+
 ### Jan
 #### Owned
 
