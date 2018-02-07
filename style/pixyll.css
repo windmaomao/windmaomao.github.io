@@ -119,7 +119,7 @@ body {
 }
 
 #write {
-	max-width: 914px;
+	/* max-width: 914px; */
 	color: #333;
 }
 
@@ -314,7 +314,7 @@ a {
 }
 
 #write {
-	padding-top: 2rem;
+	/* padding-top: 2rem; */
 }
 
 #write pre.md-meta-block {
