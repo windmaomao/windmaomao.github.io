@@ -15,7 +15,7 @@
     <!-- Header  -->
     <nav class="navbar is-light is-fixed-top" role="navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href=""><img src="logo.png"></a>
+        <a class="navbar-item" v-on:click="loadIndex"><img src="logo.png"></a>
         <div class="navbar-burger burger" data-target="navbar" id="burger">
           <span></span>
           <span></span>
@@ -25,7 +25,7 @@
 
       <div id="navbar" class="navbar-menu">
         <div class="navbar-start" v-if="admin">
-          <a class="navbar-item" v-on:click="reset()">Home</a>
+          <!-- <a class="navbar-item" v-on:click="loadIndex">Home</a> -->
           <div class="navbar-item has-dropdown is-hoverable" v-for="res in resources">
             <a class="navbar-link" href="javascript:;">{{ res.title }}</a>
             <div class="navbar-dropdown">
@@ -81,7 +81,7 @@
     <!-- Footer  -->
     <footer class="footer">
       <p>Stay ahead and be focused.</p>
-      <p>&copy; Copyright 2018 - <a v-on:click="loadMd('resume/profile-frontend')">Fang Jin</a></p>
+      <p>&copy; Copyright 2018 - <a v-on:click="loadIndex">Fang Jin</a></p>
     </footer>  
     
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>

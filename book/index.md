@@ -3,6 +3,9 @@
 | Title                           | Year | Category |
 | ------------------------------- | ---- | -------- |
 | **2018**                        |      |          |
+| Javascript by Example      |      |          |
+| Vue.js 2 Web Development      |      |          |
+| Bonds: The unbeaten path (**2**) |      |          |
 | Slash Your Retirement Risk      |      |          |
 | Five Rules for Successful Stock |      |          |
 | Art of War - Wisdom             |      |          |

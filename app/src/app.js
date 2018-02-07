@@ -16,7 +16,8 @@ function setup() {
       resources: [],
       source: "",
       style: "whitey",
-      md: "resume/profile-frontend",
+      index: "resume/profile-frontend", 
+      md: "",
       toc: true,
       single: false,
       admin: false,
@@ -48,6 +49,9 @@ function setup() {
         const fn = this.root + name + ".md";
         $.get(fn, (data) => { this.source  = data; });
       },
+      loadIndex() {
+        this.loadMd(this.index);
+      },
       changeStyle() {
         const root = this.root + "style/";
         var found = document.getElementById('style');
@@ -73,7 +77,7 @@ function setup() {
     },
     created() {
       this.blogs = ['index', 'power-of-loss', 'identity-debt', 'sustainable-prototyping', 'protection-from-loss', 'perfect-google-map', 'middle-ground', 'reusable-form', 'helping-others', 'law-of-winning', 'reusable-components', 'angular-on-windows', 'tiny-upscaling', 'build-new-system', 'dynamic-static-approach', 'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot'];
-      this.books = ['index', 'art-of-war', 'big-shifts-ahead', 'five-rules-stock-investing', 'slash-retirement-risk'];
+      this.books = ['index', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead', 'five-rules-stock-investing', 'slash-retirement-risk'];
       this.repos = ['angular-mc-common', 'angular2-mc-common'];
       this.financials = ['tree-structure', 'balace-sheet', 'income-statement', 'investment'];
       this.purchases = ['index'];
@@ -89,7 +93,7 @@ function setup() {
 
       this.getParams();
       this.changeStyle();
-      this.loadMd(this.md);
+      this.loadIndex();
     },
   });
 }
