@@ -100,6 +100,9 @@ table {
 p {
   margin: 1rem 0;
 }
+ul {
+  margin: 1em 0 1em 40px;
+}
 blockquote {
   margin: 1rem 0;
 }
@@ -133,7 +136,8 @@ code {
 }
 
 #write {
-  max-width: 960px;
+  max-width: 40em;
+	margin: 0 auto;
   padding-top: 2em 60px;
   min-height: calc(100vh - 6em);
   -webkit-font-smoothing: antialiased;
