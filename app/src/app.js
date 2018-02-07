@@ -77,7 +77,7 @@ function setup() {
     },
     created() {
       this.blogs = ['index', 'power-of-loss', 'identity-debt', 'sustainable-prototyping', 'protection-from-loss', 'perfect-google-map', 'middle-ground', 'reusable-form', 'helping-others', 'law-of-winning', 'reusable-components', 'angular-on-windows', 'tiny-upscaling', 'build-new-system', 'dynamic-static-approach', 'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot'];
-      this.books = ['index', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead', 'five-rules-stock-investing', 'slash-retirement-risk'];
+      this.books = ['index', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead', 'bonds-unbeaten-path', 'five-rules-stock-investing', 'slash-retirement-risk'];
       this.repos = ['angular-mc-common', 'angular2-mc-common'];
       this.financials = ['tree-structure', 'balace-sheet', 'income-statement', 'investment'];
       this.purchases = ['index'];
