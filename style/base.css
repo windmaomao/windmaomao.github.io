@@ -99,6 +99,7 @@ table {
 }
 p {
   margin: 1rem 0;
+	text-align: left;
 }
 ul {
   margin: 1em 0 1em 40px;

@@ -120,6 +120,7 @@ body {
 
 #write {
 	/* max-width: 914px; */
+	max-width: 30em;
 	color: #333;
 }
 
