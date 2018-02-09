@@ -432,7 +432,7 @@ We review a variety of techniques and strategies that will help you determine wh
 
 We endorse a buy-and-hold strategy because you only need to make one right decision: when to buy. The variations in a bond's price while you hold it are not a serious concern because you will be paid both your scheduled interest and the face value of the bond at its due date. Therefore, unless you hold long-term bonds, the ups and downs of a bond's price should not matter to you if you can hold the bond until it comes due at face value. When you trade bonds, however, you must make two right decisions to be successful: when to buy and when to sell. We recommend to our clients that they avoid market timing and leave this activity to traders who move big positions and watch the trading action all day every day. Making one right decision of this nature is hard enough; making two is a risky choice.
 
-#### The Yield Curve
+##### The Yield Curve
 
 A yield curve is the name given to a chart that plots the interest rates being paid by bonds of the same *credit quality* but different maturities. In the chart, the interest rate is found on the vertical axis and the maturity on the horizontal axis. Short-term rates are controlled by the Federal Reserve (the Fed) by changing the federal funds rate, the rate at which banks borrow and lend to each other. That, in turn, affects the rates banks pay depositors and charge for loans. These rates affect all short-term rates, which, in turn, affect economic activity and inflation. Investors' expectations control long-term rates. The yield curve is a graphic description of borrowers' and lenders' actions in response to the changes in the costs of doing business.
 
@@ -485,4 +485,114 @@ We do not recommend market timing, but there are many times when it's appropriat
 #### Strategies for When Interest Rates are High or Rising
 
 When interest rates go up, there is a hue and cry that bond investors will take serious losses. But we always love it when interest rates are rising because it creates wonderful opportunities for investing money at higher rates and increasing our income. For example, if interest rates go up from 4 percent to 6 percent per year over a period of time, an investor can increase cash flow by 50 percent. Remember, when the commentators say it is a bad time for bonds because rates are rising and prices are falling, you can say, let the bad times roll.
+
+**Quickly invest your cash**. If you hold cash or cash equivalents, you can now invest the cash in intermediate-term bonds at a more favorable rate of return than when rates were lower. This can only be good news. Intermediate Treasury bond investments should be in the two- to ten-year range if the yield curve is fairly flat. Intermediate municipal bonds should be in the seven- to fifteen-year range if they have a steeper yield curve.
+
+**Consider cashing in your bank CDs**. This strategy holds true only for a bank CD purchased from a bank and not for a CD purchased from a broker, a so-called brokered CD. If you hold a CD purchased directly from a bank, take advantage of the fact that the principal of the CD never goes down. If interest rates have risen significantly, you might cash in your bank CD, pay the penalty, and then reinvest your cash in a higher-yielding and equally safe investment, such as an intermediate-term Treasury, agency bond, or even another 5-year CD. To discourage this strategy, some banks charge one year's interest or more. The penalty might be higher than the interest that you earned and, thus, will reduce your principal. Other banks charge between a three-month and six-month interest penalty. Check with your bank on the withdrawal penalties before you invest. On the other hand, if interest rates are low, you can use bank CDs as a place to keep your principal safe until rates move up.
+
+**Cash in U.S. savings bonds that have been held for twelve months or more**. If you hold EE or I savings bonds, you can cash them in after you hold them for twelve months or more. If you hold them for less than five years, you will pay a penalty equal to three months' interest, but if you hold them for more than five years, there is no penalty. The key point here is that you never lose any of the amount you invested or the accrued interest with a savings bond (except possibly the three-month interest penalty). If interest rates have risen significantly, you can cash in your savings bonds and earn even more income by reinvesting in safe but higher-yielding bonds. Keep in mind that if you cash in your EE or I bonds, you must pay federal income tax on the accrued interest.
+
+**Buy premium bonds**. If you might sell bonds before maturity, premium bonds will hold their value longer in a rising interest-rate market. But keep in mind that if you spend all your interest income, you will be spending some of your principal as well.
+
+**Buy new issues**. When rates are rising, you might consider buying new issues because new issues are price leaders. The brokers are hoping they will not have to take a loss on their existing inventory and do not mark down their prices quickly. New issues are priced at the current market value.
+
+**Hold on to inflation-protected bonds**. Inflation-protected bonds such as TIPS and I savings bonds are a good hedge if interest rates are rising as a result of inflation. In that case, the principal of your TIPS and I savings bonds will increase in value if you hold them until their due date.
+
+**Swap your bonds**. There are many opportunities to swap your bonds, although it's better to sell twenty-five bonds or more to get a better price. Three kinds of swaps are suggested:
+
+1. **Swap short-term bonds for intermediate- or long-term bonds**. A swap will allow you to lock in higher returns if longer-term bonds are yielding significantly more than short-term bonds. In this case, you may either take a gain or sell at a small loss. While selling at a loss might not initially seem like a great idea, keep in mind that your loss will be small if the bonds that you are selling will come due within two years, because in this case they should be priced close to their face value.
+2. **Do a tax swap and take a tax loss**. This is a trading strategy that one-ups the tax collector. It involves selling any low-interest coupon bonds you own that are selling below their purchase price. This generates a tax loss. Simultaneously, you buy new bonds to lock in the same or a higher return. In the 1970s, when interest rates were constantly rising, tax swaps were considered every year. The last quarter of the year was called the tax-swapping season.
+3. **Upgrade your credit quality**. Swaps can be done to upgrade the credit quality of your portfolio by swapping a weaker credit for a stronger one at a time when the spread between better credits and weaker credits has narrowed.
+
+#### Strategies for When Interest Rates are Low or Falling
+
+**Don't stay in cash**. When interest rates are low, you may believe that it will be best to keep your money in a low-yielding money market fund and wait for interest rates to rise. Although this strategy may work out well, many other times staying in cash may prove costly because the longer you wait for rates to go up, the higher the rates must go to compensate you for waiting and earning lower returns. For example, if money market rates are 2 percent and 5-year bond rates are 4 percent, if rates stay the same, you have lost 2 percent per year for the period involved. Even if rates do move up later, they must move up enough not only to make up for the lost interest but also to make up for the risk that the rates may not rise. Staying in cash is a type of market timing and is unlikely to work out favorably over the long term.
+
+**Buy EE bonds**. EE savings bonds allow you to lock in the current return being paid by the Treasury for at least twenty years without losing any principal or accrued interest. If interest rates kick up in the future, you can redeem your EE bonds, take your gain, and then buy higher-yielding bonds.
+
+**Take a capital gain**. When interest rates are low or falling, consider selling some of your bonds to take a capital gain. However, this strategy makes sense only if you intend to invest the proceeds in another asset class, such as equities or real estate, or have a need for cash for a personal expenditure, such as buying or improving your home. There is little or no advantage in taking a capital gain and then investing in similar bonds once you pay transaction costs related to selling and buying and taxes on the gain.
+
+**Consider the secondary market**. Investigate the secondary bond market for previously owned bonds. When interest rates are falling, you might consider buying bonds in the secondary market rather than new issues. New issues, being price leaders, may have lower yields at these times.
+
+**Consider constructing a barbell portfolio**. When interest rates are low, investors flock to intermediate-term bonds, pushing the yields of these bonds down. In this situation, you might increase the yield of your bond portfolio by using a barbell structure. In this structure, you split your portfolio between long- and short-term bonds (each constituting one part of the barbell). In doing so, you capture the higher returns of 20− to 30-year long-term bonds and their gains if interest rates decline, while having ready access to the cash in short-term bonds that have maturities of two years or less. The combination of long-term and short-term bonds provides an intermediate-term average maturity and portfolio duration, which may be higher than the return on the intermediate-term bonds.
+
+**Buy bond funds with longer-term maturities**. When interest rates are falling, longer-term bond funds will give you the highest total return. If you're adventurous, consider target maturity funds and long-term corporate bond funds. If you're more conservative, consider long-term Treasury or municipal bond funds.
+
+#### Investing for Tax Advantages
+
+Always view purchases of bonds and other investments in terms of their after-tax returns. To do so, you must first determine your highest federal income tax bracket. You then compare the return you would get on an investment that's taxable with the return on one that's not. The result is called the taxable equivalent yield.
+
+Taxable bond rate X ( 1 - Your top marginal tax bracket) = Tax-free bond rate
+
+For example, assume that the taxable bond rate is 7 percent and your top federal income tax bracket is 28 percent. The computation would be made as follows: .07 × (1 - .28) = (.07 × 0.72) = .0504 or 5.04 percent. In this example, a taxable yield of 7 percent is equivalent to a tax-free yield of 5.04 percent if you're in the 28 percent federal marginal tax bracket. Thus, if you can get more than 5.04 percent on a tax-free bond, the tax-free bond would give you a higher after-tax return than a 7 percent taxable bond. This computation doesn't take into account state income taxes.
+
+##### A Reminder About Taxes
+
+- **Income exempt from federal income tax**. Interest from tax-exempt municipal bonds and dividends from tax-exempt municipal bond funds, but not interest from taxable municipal bonds and taxable municipal bond funds. For some taxpayers, interest from AMT municipal bonds are subject to the AMT.
+- **income exempt from state income tax but not federal income tax**. Interest from Treasury bonds, notes, bills, STRIPS, TIPS, savings bonds, and certain agency bonds as well as dividends from certain taxable municipal bonds and bond funds that hold these securities.
+- **Income deferred from current federal and state income tax but ultimately subject to tax**. Interest from EE and I savings bonds until you redeem them. Even when you redeem them, they are not subject to state income tax. In addition, interest from EE and I savings bonds may be tax-free if used for education expenses by qualifying taxpayers (see [chapter 7](https://www.safaribooksonline.com/library/view/bonds-the-unbeaten/9781576602430/ch07.html)). Fixed deferred annuities are tax deferred until payout begins and then fully taxable. All interest from any bonds in a tax-sheltered retirement account is tax deferred until it is distributed and then the income is subject to federal income tax at ordinary income tax rates no matter what the source of the interest income. State taxation of these distributions varies from state to state.
+- **Income subject to federal income tax immediately**. Unless in a tax-sheltered retirement account, income from all taxable zero-coupon bonds, taxable municipal bonds, and AMT bond income for some taxpayers.
+
+##### Strategies for Placing Bonds in Tax-Effective Accounts
+
+- **Always place all tax-exempt municipal bonds in taxable accounts**. These bonds should never be placed in tax-sheltered retirement accounts (unless the yield on tax-exempt municipal bonds is higher than taxable bonds) because distributions from these accounts are always treated as ordinary income for federal income tax purposes even if they result from tax-exempt municipal bonds.
+- **Place EE and I savings bonds in taxable accounts**. The tax deferral is wasted in a tax-sheltered retirement account, even assuming you can get a trustee to hold them.
+- **Hold taxable STRIPS and TIPS in tax-sheltered retirement accounts**. Some of the interest from these securities results in imputed or phantom income that is currently subject to tax if held in taxable accounts but creates no current tax liability if the securities are held in tax-sheltered retirement accounts.
+- **If you place taxable bonds and bond funds in tax-sheltered retirement accounts, the advantage is that the taxable interest and capital gains are deferred and not subject to current tax**. The disadvantage is that long-term capital gains generated in these accounts are treated as ordinary income when they are distributed. Thus, if a bond is held for more than one year, you have converted long-term capital gains, which are lightly taxed, into ordinary income, which may be heavily taxed. In addition, there is no tax benefit for losses realized in a tax-sheltered retirement account. Note that there is a 10 percent tax penalty on an early withdrawal before age 59½ from a tax-sheltered retirement account.
+- **If you place bonds that are infrequently traded in taxable accounts, any long-term capital gains are lightly taxed in 2007 at a 15 percent federal income tax rate**.
+
+##### Strategies for Individuals in High Tax Brackets
+
+Tax-exempt municipal bonds are the best and last great tax shelter for individual investors. Individuals who are in high tax brackets benefit most from an investment in tax-exempt municipal bonds. However, even taxpayers in the 25 percent tax bracket generally can benefit from an investment in these bonds because the interest income is not subject to federal income tax. In 2007, a single taxpayer reached the 25 percent federal income tax bracket when the taxpayer's taxable income exceeded $31,850; married taxpayers reached the 25 percent federal tax bracket when their taxable income exceeded $63,700.
+
+However, there are two other categories of municipal bonds to watch out for: one category is municipal bonds subject to the AMT. They're called AMT bonds because their interest income is subject to the federal AMT for certain individuals. The AMT keeps changing, and it is unclear who will be hit by this tax in any year.
+
+The other bond category is called taxable municipal bonds. The interest income from these bonds is subject to federal income tax but not subject to the AMT. Taxable municipal bonds provide a higher interest rate than tax-exempt municipal bonds, and many are insured; some are zero-coupon bonds. Highly rated taxable municipal bonds are excellent investments for your tax-sheltered retirement accounts.
+
+##### STRATEGIES FOR TAX-SHELTERED RETIREMENT ACCOUNTS AND INDIVIDUALS IN LOW TAX BRACKETS
+
+For tax-sheltered retirement accounts and low-tax-bracket individuals:
+
+- **Consider STRIPS, TIPS, Treasuries, agencies, taxable muni bonds, and highly rated corporate bonds**. They are safe. The adverse tax consequences of STRIPS and TIPS (because they generate phantom income) will not result in a significant amount of tax if the low-bracket taxpayer has little or no other taxable income.
+- **Check out AMT bonds**. If it's clear that you will not be subject to the AMT currently or in the future, buying AMT bonds may be an opportunity for you. They often provide 20 to 30 basis points more yield than non-AMT bonds, frequently without any sacrifice of credit quality. However, keep in mind that AMT bonds may be difficult to sell at a good price. In addition, even if you are not subject to the AMT today, you might be subject to it in the future. Some muni funds may hold a high proportion of these bonds to boost their yield. Always investigate what percent of a bond fund is held in AMT bonds to maximize your return after tax. The fund company can give you this information.
+- **Consider selling your tax-free municipal bonds**. If you are no longer in a high-enough tax bracket to benefit from the tax exemption, you may do better on an after-tax basis by selling your municipal bonds and buying higher-yielding taxable securities including taxable municipal bonds and AMT bonds. This may also be the time to buy a fixed immediate annuity.
+- **Redeem your EE and I savings bonds and buy safe plain-vanilla bonds, such as Treasury bonds, to generate current cash flow**. However, the redemption will be a taxable event unless the income from such bonds can be used for educational purposes by qualifying taxpayers.
+- **Buy TIPS and I savings bonds for safety and to provide protection against inflation**.
+
+#### Investing and Risk Tolerance
+##### PRACTICAL CONSIDERATIONS FOR ASSESSING RISK TOLERANCE
+
+If you've read this far, you've probably already assessed your need for income, the level of risk you're willing to assume with your bond investments, and your capacity to actually sustain losses. Now consider the following questions:
+
+- **If your bond portfolio declined in value would you panic and sell your bonds?** If so, you probably have a low risk tolerance and failed to keep in mind that your bonds will come due at their face value. To be at peace with your bond investments, you should consider buying only short- and intermediate-term bonds that you can hold until they come due. If you can hold bonds until they come due, you will have no reason to panic or sell your bonds prematurely.
+- **Would you engage in an interest-rate play by buying 30-year bonds with an eye toward selling for a significant gain if interest rates decline? Would you buy a bond with a 12 percent yield and take the risk of losing a significant amount of your capital?** If so, you are a speculator and should have a high capacity for loss.
+- **Is your portfolio heavily weighted in equities and illiquid investments such as real estate?** If so, a conservative bond portfolio will provide a safe foundation enabling you to take on more risk with other investments and business ventures.
+
+##### STRATEGIES FOR REDUCING THE RISK OF DEFAULT
+
+
+#### Stragies for Safe Investing
+##### Strategies for Reducing Market Risk
+##### Strategies for Reducing Liquidity Risk
+##### Strategie sfor Reducing Call Risk
+
+#### Investing for Income Needs and Financial Goals
+##### Strategies for Short Term Goals
+##### Strategies for Long Term Goals
+##### Strategies for Increasing Income
+
+#### Starting Out with Less than $25,000 to Invest
+
+If you have less than $25,000 to invest, buy short-term or intermediate-term bonds. Don't buy long-term bonds, because you can't afford the market risk if you need your funds. You might not need credit diversification, but you might need maturity diversification. How would you deal with that? Buy the following short- or intermediate-term bonds:
+
+- Treasury bonds
+- TIPS
+- Agency bonds
+- CDs
+- EE and I savings bonds
+- Highly rated muni bonds (if you are in a high tax bracket)
+
+
+
+
 
