@@ -1,4 +1,4 @@
-# Performance Feedback
+# Performance
 ## 2018
 ### Global Console UI framework
 Renovation of the Market Clearing applications through integration with the Global Console UI framework.
@@ -11,7 +11,7 @@ Renovation of the Market Clearing applications through integration with the Glob
 - Support the transformation of Reports Center app
 - Outreach and train more groups to adopt the framework
 
-## Adopting UI frameworks through collaboration
+### Adopting UI frameworks through collaboration
 Provide best practice for adopting UI frameworks and technologies and outreach more groups for collaborations work.
 
 - Provide architect to AutoBahn web styles framework
