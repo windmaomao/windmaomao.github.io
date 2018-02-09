@@ -1,6 +1,8 @@
 # Todo
 
-## 2/9 
+## 2018
+
+### 2/9 
 
 - [ ] Book chinese trip tickets
 
@@ -13,11 +15,11 @@
 - [x] Support mobile display
 - [x] Add babel support
 
-## 1/31
+### 1/31
 
 - [ ] Adjust 401 contribution 
 
-## 1/30
+### 1/30
 
 - [x] Balance and flow
 - [ ] Find out Net magazine issue
