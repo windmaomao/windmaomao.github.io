@@ -4,6 +4,15 @@
 
 - [ ] Book chinese trip tickets
 
+### 2/4
+
+- [x] Add investment finance log
+
+### 2/3
+
+- [x] Support mobile display
+- [x] Add babel support
+
 ## 1/31
 
 - [ ] Adjust 401 contribution 
