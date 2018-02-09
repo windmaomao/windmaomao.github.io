@@ -6,9 +6,10 @@
 
 #### Realized
 
-| Symbol | Cost |  Net | Notes |
-| ------ | ---: | ---: | ----- |
-| UNG    | $245 | -$20 |       |
+| Symbol | Industry | Cost |  Net | Type |  Notes |
+| ------ | -------- | ---: | ---: | ---- | ----- |
+| UNG    | Gas | $245 | -$20 |  long |     |
+| RIOT    | Bitcoin | $27  | -$25 |  long |     |
 
 #### Owned
 
@@ -20,9 +21,9 @@
 | BLUE         | Health    |    $ 353 | short |               |
 | DRV          | REIT      |    $ 244 | short |               |
 | SRTY         | Russell   |    $ 155 | short |               |
+| LABD         | Health   |    $ 108 | short |               |
 | REDU         | Edu       |    $  93 | long  |               |
 | GE P17       | Industry  |    $  67 | short | 2/23 dividend |
-| RIOT         | Bitcoin   |    $  53 | long  |               |
 | EDZ          | Emerging  |    $  20 | short |               |
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 expire   |
 | TECS         | Tech      |    $  11 | short |               |
