@@ -72,24 +72,32 @@ and (min-width : 1200px) {
   text-align: center;  
 }
 
-ul.sidebar ul {
+#toc {
+  padding: 0;
+  margin: 0;
+}
+#toc ul {
   padding-left: 10px;
   margin: 0 0 5px;
 }
-ul.sidebar li {
+#toc li {
   list-style: none;
   text-align: initial;
   margin-top: 2px;
   line-height: 22px;
 }
-ul.sidebar a {
+#toc a {
   color: inherit;
   text-align: left;
   font-size: 12px;
   text-decoration: none;
 }
-ul.sidebar > li > a {
+#toc > li > a {
   font-weight: bold;
+}
+
+#back-top {
+  margin-top: 20px;
 }
 
 /* Base theme */

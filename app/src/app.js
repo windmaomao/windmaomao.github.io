@@ -41,6 +41,9 @@ function setup() {
       }
     },
     methods: {
+      scrollTop() {
+        $('html, body').animate({ scrollTop: 0}, "slow");
+      },
       reset() {
         this.style = 'github';
         this.changeStyle();

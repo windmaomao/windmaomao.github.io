@@ -72,7 +72,12 @@
     <!-- Content  -->
     <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
       <template v-if="source">
-        <ul id="toc" class="sidebar" v-show="sidebar"></ul>
+        <div class="sidebar" v-show="sidebar">
+          <ul id="toc"></ul>
+          <div id="back-top">
+              <a v-on:click="scrollTop">Back to top</a>
+          </div>
+        </div>
         <section class="section">
           <div class="container" id="write" v-html="compiled"></div>
         </section>
