@@ -41,8 +41,8 @@ and (min-width : 1024px) {
   position: fixed;
   right: 0;
   top: 100px;
-  bottom: 100px;
-  width: 200px;
+  bottom: 5px;
+  width: 240px;
   margin: 0;
   padding: 20px 20px 0 20px;
   font-size: 12px;

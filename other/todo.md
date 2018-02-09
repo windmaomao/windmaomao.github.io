@@ -5,6 +5,7 @@
 ### 2/9 
 
 - [ ] Book chinese trip tickets
+- [ ] Improve markdown syntax
 
 ### 2/4
 
