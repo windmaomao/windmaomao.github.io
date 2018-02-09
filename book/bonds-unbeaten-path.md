@@ -126,7 +126,7 @@ It is important to note that in the present day as well, repudiation of debt is 
 
 During World War II, interest rates remained low for Treasury bonds, with fixed rates ranging from 2 percent to 2.5 percent for the 25− to 30-year bonds. Despite the low returns, when the highest federal income tax rate hit 94 percent between 1944 and 1945, the tax-exempt appeal of municipal bonds became magnetic. With 1945 came the end of the war and a suspension of long-term Treasury bond issuance for eight years. The so-called long bonds were eagerly bought in 1945 and again in 1999, when the government announced that it was going to pay down the government debt and reduce the supply of these 30-year bonds. Traders expected to see rapid price appreciation as their supply diminished.
 
-### The life of a Bond
+### The Life of a Bond
 
 However, the idea of a coupon lingers in bond terminology because a bond's interest rate is referred to as its **coupon rate**, or just plain **coupon**. The coupon rate is set as a percentage of the face value when the bond is issued. Thus, a $10,000 10-year bond with a coupon rate of 5 percent will annually pay $500, which is 5 percent of $10,000.
 
@@ -364,10 +364,125 @@ In short, high-yield municipal bond funds are every bit as risky as corporate hi
 
 ### Financial Planning with Bonds
 
+Case Studies
+
+Let's put these theories to the test now and see how they pan out when the rubber meets the road. For most people, that happens when they realize they must plan for a life transition or when they suddenly find themselves faced with one. These events require decisions about how to proceed.
+
+#### Changing Course
+
+Earl was single and living in New York, a high-tax jurisdiction, we suggested that he use New York State tax-free municipal bonds as his savings vehicle. These bonds would be free of federal, New York State, and New York City taxes, a huge plus for a New York resident.
+
+1. Earl must sell his co-op, which would net him $125,000 after he paid off his mortgage, taxes, and closing costs. We would invest the $125,000 in a ladder of New York State tax-free municipal bonds. The bonds would have a minimum life of ten years, be noncallable, and return 4 percent interest tax free. These bonds would be worth about $185,000 at the end of the ten-year period if all the income was reinvested in additional New York State municipal bonds yielding 4 percent.
+2. Earl would save $25,000 each year for ten years, and we would purchase additional New York State tax-free municipal bonds at 4 percent interest. If Earl made these lifestyle changes, he would be living well below his means. Thus, he should be able to save $25,000 per year. These savings each year would enable him to accumulate about $312,000. The $312,000 plus the $185,000 would get him to his $500,000 goal.
+3. We made sure that Earl had sufficient disability insurance, medical insurance, auto insurance, and an umbrella policy sufficient to protect him against as many risks as possible.
+
+To carry out his plan, we helped Earl create a custom bond ladder composed of tax-free municipal bonds from only New York State issuers, which came due between five and fifteen years. If Earl is serious about his planned transition, he will save his money; this will enable him to escape from the "golden handcuffs" of corporate America and begin his new life. His financial plan is sound and attainable.
+
+#### Meeting a Need for Safty
+
+Sean left a large corporate employer to become an independent consultant. At the time he was setting up his new business, his investment portfolio was completely in stocks, with most in the high-tech sector. When Sean came to us for financial advice, we advised him to sell all of them. When he asked whether we were making a market call that stocks were going to decline substantially in value we said we were not. The reason for our advising him to sell was that his finances could not sustain the downside risk of a stock decline. He was creating a new business and it was not clear how long it would take to launch it and make it profitable. It was also uncertain how much cash Sean would need to fund his new venture. If his new venture needed cash, it could not financially survive a serious stock market decline.
+
+After eighteen months, however, Sean's business became profitable, and it's now sustaining itself. Although his economic situation is better, Sean's income is still somewhat unpredictable. He needs to build up his cash flow. He has added municipal bonds to his mix to reduce his taxes as well as to provide for a good current income. Because Sean lives in Texas, which has no state income tax, he can buy municipal bond issues from any state, which will also increase his portfolio's diversity. He decided to keep some of his funds in cash equivalents, and with the rest he created a five-year bond ladder to increase his return and still provide for liquidity.
+
+#### Planning for College Expenses
+
+Mr. and Mrs. Suburban, a young couple living in California, earn enough money to be in at least the 25 percent federal income tax bracket and a 9 percent California income tax bracket. The Suburbans have a newborn daughter named Maya. One of their financial objectives is to begin to save enough to finance at least part of Maya's college education.
+
+1. The Suburbans could set up a custodial account for Maya with a lump-sum contribution of $25,000. With these funds, they could buy noncallable Treasury bonds yielding 5 percent or $1,250 (25,000 × .05). Since the $1,250 of interest earned on the Treasury bonds is less than $1,700 for 2006, the interest income would be very lightly taxed because it would be taxed under Maya's Social Security number. In other words, because the $1,250 of interest income is below the dollar amount specified by the IRS ($1,700 for 2006), the so-called kiddie tax would not apply. If the kiddie tax did apply, some of Maya's taxable income would be taxed to Mr. and Mrs. Suburban in their federal income tax return. However, putting money into a custodial account has disadvantages. The money in the account may be used only for Maya's needs and expenses and may not be used for the Suburbans' personal use. Also, colleges may provide less financial aid to students who have money in their own names.
+2. The Suburbans could buy EE or I U.S. savings bonds in their own name. If the Suburbans earned less than a certain amount of income in the year they cash in the savings bonds and use the money for Maya's college tuition, then some or all of the interest income earned on the savings bonds might be tax free. The Suburbans were distressed about the many qualifications required for this tax break. Because of the many uncertainties, the Suburbans decided not to buy savings bonds to fund Maya's education.
+3. We did not recommend a Section 529 plan to save for college because the money in these plans is locked up in mutual fund-type investments with annual fees. In addition, these funds are exclusively for college expenses. Unless they paid a penalty, the Suburbans would not be allowed to access this money if they had unanticipated emergencies or transitions. This is another reason to keep the money in their name rather than in Maya's name.
+4. The Suburbans decided to purchase zero-coupon tax-free California municipal bonds yielding about 4 percent and coming due when Maya starts college at eighteen. If they are successful in investing $5,000 per year for fifteen years and can earn an average of 4 percent on their bonds, they will have about $100,000 in their college fund. In their tax bracket, a 4 percent tax-free rate is equivalent to a taxable return of more than 6 percent so the municipal bonds are a better deal for them from every perspective. All the earnings on these California municipal bonds will be free of federal and California state income tax. If they need the money themselves, they could sell one or more of the bonds to raise cash.
+
+#### An Unanticipated Transition
+
+Barbara and her husband, Jim, lived in New York. They worked long hours, she as an investment banker and Jim as a writer. They loved their work so much that they gave it priority in their lives. The result was an unanticipated transition, a divorce. Barbara won custody of Bobby, their only child, who was twelve years old. In the property settlement, Barbara thought she did well because she received assets worth $2 million consisting of their Manhattan co-op residence ($1 million after paying off the mortgage); their beach house, which she loved, ($500,000); and her IRA, which was fully invested in stock ($500,000). It is not unusual in a divorce for women to take the house or houses and let their ex-husbands take much of the financial assets. Although Barbara received more than half of the assets, she didn't do as well as she thought because she didn't take into account the taxes that would be payable on the sale of the real estate.
+
+After the divorce, Barbara discovered that her financial world had changed drastically because she was going into debt even though she made a handsome living. Barbara could not continue her predivorce lifestyle in Manhattan and at the beach. Without both her income and Jim's, she could not cover all of her coop and other living expenses including Bobby's private school expenses.
+
+1. Find a rental apartment in New Jersey that has access to a train to Manhattan and a good public school system for Bobby.
+2. Sell her Manhattan co-op and the beach house. Take the after-tax proceeds from the sales and use the money to fund a custom bond ladder composed of tax-free New Jersey municipal bonds since Barbara was now a New Jersey resident. We recommended that Barbara have a plan to accumulate $2 million in her custom bond ladder. At a 4 percent tax-free return, this $2 million fund would provide $80,000 in tax-free income. Once Barbara had a cash flow of $80,000 per year of tax-free income, she could consider taking a less-stressful but lower-paying job because her tax-free income would be enough to supplement her earned income.
+3. Sell the stock in her IRA and buy short-term agency bonds and longer-term TIPS bonds to protect against inflation and to have a secure retirement account.
+4. Have some bonds come due in six to nine years to fund Bobby's college tuition, beginning at age eighteen. Though Barbara was told that it's likely it will take Bobby five or six years to graduate, she is hoping she will have the financial resources at that time to move back to Manhattan or buy a house in New Jersey.
+
+#### Socially Conscious Investing
+
+Mikala discovered that if she purchased individual bonds, she would have very low expenses on her investments and there was a huge selection.
+
+Mikala decided that she generally did not want to put her funds at risk. She anticipated having little earned income so she would be in a low tax bracket. She had a need for some cash income and for ongoing income. However, she did not have any specific milestones that had to be met.
+
+We advised her to purchase some taxable bonds to boost her marginal income tax rate into the 25 percent bracket. Taxable bonds she could consider included U.S. Treasury bonds, corporate bonds, agency bonds, and CDs. Mikala considered investing some of her funds in bonds of corporations that supported her beliefs. After investigating the possibilities, she realized that no corporation would exactly meet her criteria. Dig deep enough and you can always find problems. Mikala knew that leaving the money in the bank was not an alternative because the bank could turn around and lend the money for things she might find objectionable. Mikala realized she would have to compromise both to protect her assets and to be paid for the risk she was taking. As a result, Mikala decided to purchase agency bonds because she was willing to support the mortgage market and help people achieve their goal of home ownership. Some of the agency bonds were also exempt from state income taxes.
+
+Once her federal marginal tax bracket was high enough, the majority of Mikala's funds should be invested in tax-free municipal bonds. Within that category, bonds are issued for all kinds of purposes. There are certain bonds that require voter approval (GO bonds). Voter approval means that the voters support the project and are willing to pay for it. All GO bonds would fit Mikala's criteria. Investing responsibly would not mean that she had to accept less return than other investors receive.
+
+GO bonds are frequently issued for the support of schools. Since education was an essential value in her life, Mikala decided that she would use her money to invest in schools by purchasing school bonds, in effect, lending money to communities to help them build and equip schools.
+
+Mikala also decided to purchase state-issued housing bonds since they provide below-market-rate mortgages to low-income families. These mortgages can be quite risky if they do not have strong financial guarantees. However, the ratings on Mikala's bonds were AA to AAA, depending on the strength of the guarantees.
+
+Mikala also liked water and sewer bonds, which are also GO bonds, because they provide fresh water and maintain good hygiene for a community. Wastewater treatment plants were not her favorite investment, but she saw the need for those services. In this way, she was voting with her money for the establishment of services that provide for the health and well-being of the people around her.
+
+All these bonds pay interest every six months. There is also no state or federal tax on the interest from the municipal bonds because she purchased them in her home state of Pennsylvania. Mikala made sure that all her bonds were insured to give her belt-and-suspenders protection. The default rate on the kinds of bonds she selected was very low. Because of the insurance, Mikala's portfolio had bonds with AAA ratings.
+
+Mikala laddered her portfolio to minimize both the inflation risk and the reinvestment risk. Although there is no perfect investment that will protect against inflation, Mikala knew that she would always have some funds to reinvest in the event of higher rates, thus, mitigating to some extent the impact of inflation. Also, she knew that she could sell some of the bonds with short maturities to purchase bonds selling at higher rates. She could also choose to purchase inflation-protected bonds, but they would reduce her cash flow since they have low current-interest payments, and she would have to pay taxes on the imputed annual income.
+
 ### Maximizing Profits
 
+We review a variety of techniques and strategies that will help you determine when to buy and sell bonds, how to take advantage of tax benefits, how to minimize the risks to your capital, and how to increase your returns.
 
+#### Knowing When to Buy and Sell
 
+We endorse a buy-and-hold strategy because you only need to make one right decision: when to buy. The variations in a bond's price while you hold it are not a serious concern because you will be paid both your scheduled interest and the face value of the bond at its due date. Therefore, unless you hold long-term bonds, the ups and downs of a bond's price should not matter to you if you can hold the bond until it comes due at face value. When you trade bonds, however, you must make two right decisions to be successful: when to buy and when to sell. We recommend to our clients that they avoid market timing and leave this activity to traders who move big positions and watch the trading action all day every day. Making one right decision of this nature is hard enough; making two is a risky choice.
 
+#### The Yield Curve
 
+A yield curve is the name given to a chart that plots the interest rates being paid by bonds of the same *credit quality* but different maturities. In the chart, the interest rate is found on the vertical axis and the maturity on the horizontal axis. Short-term rates are controlled by the Federal Reserve (the Fed) by changing the federal funds rate, the rate at which banks borrow and lend to each other. That, in turn, affects the rates banks pay depositors and charge for loans. These rates affect all short-term rates, which, in turn, affect economic activity and inflation. Investors' expectations control long-term rates. The yield curve is a graphic description of borrowers' and lenders' actions in response to the changes in the costs of doing business.
+
+Experts invariably disagree on which way interest rates will go next or on what the shape of the yield curve means for interest rates in the future. Although this is disappointing, you will still get significant information from studying the yield curve because it can tell you when to be careful and when an advantage may appear. The yield curve will help you decide how to maximize your return within the context of your own personal investment plan.
+
+The yield curve has three classic shapes: ascending, flat, and inverted. Each, as depicted in the examples that follow, tells a different story.
+
+**Ascending yield curve**. It's not unusual for there to be an ascending yield curve for, say, the first ten years of the period plotted on the curve and then a flatter curve from year ten to year thirty. A spread of about 3 percent between the 3-month Treasury bill and the 30-year Treasury bond would not be unusual in an ascending yield curve. At times when the yield curve is ascending, consider buying longer-term bonds to capture the additional yield while staying within the parameters of your bond ladder.
+
+**Flat yield curve**. When the yield curve is flat, you receive more or less the same interest rate whether you buy a short-, intermediate-, or long-term bond. At these times, we generally advise our clients, within the context of their financial plan, to stay in the intermediate range because of greater market uncertainty about long-term bonds and the possibility of declining short-term rates. In that case, it usually makes sense to buy bonds with maturities only as far out on the yield curve as is comfortable until it flattens. This is called the "peak" of the yield curve. For the longer-term bonds, with maturities after that point, you may not be paid enough for the risk.
+
+**Inverted yield curve**. If there is an inverted yield curve, bonds with a short maturity have a higher yield than long-term bonds. An inverted yield curve is infrequent and sometimes indicates that a significant economic change is coming, such as a recession. In 2006, many pundits argued that the inverted curve did not indicate a recession because the demand of foreign buyers and hedge funds exceeded the supply of bonds, thus, driving long-term interest rates down.
+
+The threat that you will have to average down (get a lower interest rate) when your bonds come due is what's called reinvestment risk. In the early 1980s, for example, all interest rates were sky high and the yield curve was steeply inverted. During this period, many very conservative CD buyers bought six-month CDs and kept rolling them over every six months as they came due at lower and lower rates as the years went by. Unfortunately for them, they missed a huge buying opportunity to lock in long-term Treasury bonds yielding 15 percent in the early 1980s. In the early 2000s, the yield curve flattened and then inverted with the same result: high short-term CD rates attracted the individual investor, while professional investors scrambled to lock in longer-term rates in anticipation of the decline in rates overall.
+
+#### Strategies for Deciding When to Sell
+
+We do not recommend market timing, but there are many times when it's appropriate to restructure your bond portfolio and sell bonds before they come due.
+
+**Monitor the changes that may occur in your federal tax bracket**. A substantial increase or decrease in your federal income tax bracket might lead you to a decision to sell municipal bonds and purchase taxable bonds, or vice versa. For example, your federal tax bracket might decrease as a result of your retirement, large business losses, substantial charitable contributions, or other deductions, or increase due to a big promotion, a great business opportunity, or an inheritance.
+
+**Check state tax rates if you move from one state to another**. A change in your residence from one high-tax state to another high-tax state or from a low-tax state to a high-tax state can trigger a need for portfolio change to minimize your taxes. In each of these cases, you might sell the municipal bonds issued by one state and buy municipal bonds issued by the other state. For example, if you move from New York to California, you might want to sell your New York municipal bonds and buy California municipal bonds to take advantage of the California state tax exemption for in-state bonds. California would tax your New York municipal bond interest.
+
+**Follow changes in the federal tax code**. Some tax-free municipal bonds, for example, are subject to the AMT. They're called AMT bonds. Discussion continues in Congress about modifying or abolishing the AMT; any tinkering with it could affect the desirability of owning or selling AMT bonds.
+
+**Profit from price gains**. Consider selling if you have a substantial gain on your bonds and you have a noninvestment use for the money or wish to invest in another asset class.
+
+#### Strategies for Finding Bargain Bonds
+
+**Study the Treasury bond yield curve**. Determine the most desirable maturity range based on your needs. Suppose you were considering the purchase of a bond with a five-year maturity. You might find that purchasing a bond in a longer or shorter maturity might provide a better return as well as support your particular situation. Also, compare the yields on outstanding Treasury bills, notes, and bonds in the same maturity. The off-the-run securities might yield a little extra because there is less demand for them. Maybe you wanted to purchase a longer-term bond. The large projected federal government surplus and the government buyback of 30-year Treasuries in the 1990s resulted in a sharp decrease in the yield of long-term Treasuries in 2000. However, when the projected surplus significantly diminished in 2001, the yield increased because the potential supply of Treasuries going forward seemed ready to increase.
+
+**Compare the Treasury yields to tax-exempt municipal bond yields**. Even if you're in a lower tax bracket, municipal bonds might make sense for you if their yields approach those of Treasuries. There's a lot of historical data supporting the premise that on average the yields on highly rated, tax-free municipal bonds are normally 80 percent to 90 percent of Treasury bonds for similarly dated maturities. If yields on tax-free municipal bonds are greater than 90 percent of Treasuries, as they were for a time in 2000 and 2003, the municipals would be a good buy because they yield almost as much as Treasuries, and the income is tax free. In this situation, even the taxpayers in the lowest tax bracket benefit from munis.
+
+**When buying corporate bonds, compare the returns of subsectors in the same maturities**. All corporate bonds do not move in unison. By comparing the yields of automobile companies to rail companies, for example, you will understand that there is a yield differential for similarly rated bonds in different market sectors. Junk bonds became relatively cheap in 1989, 1990, and 2001 because of the large number of defaults and the threat of more of the same caused by the recessions in those years. Thirty percent of the junk bonds defaulted in the early 1990s, although they became a buy after the yields had increased significantly and the threat of default had diminished. In 2007, junk bonds were very expensive; consequently, they should be avoided.
+
+**Consider investing in bonds that have had many rating downgrades but may appear promising to you because you believe there will be an upgrade**. In 2006, for example, New York City bond ratings were upgraded, signaling that these bonds were becoming safer. This perception of safety was a consequence of New York's improved fiscal health, a credit rating upgrade, and investors' growing confidence in Mayor Michael Bloomberg. It helps if the bonds are insured, just in case your best guess turns out to be wrong.
+
+#### Strategies for Staying Away from Overvalued Bonds
+
+**Compare the Treasury yield curve to the yield curve of other taxable market sectors**. Professional bond traders always speak of the yield above Treasuries as a way to describe how a bond is priced. If you're not getting a satisfactory risk premium above the Treasury yield, don't take the risk. Buy the Treasury.
+
+**Watch out for junk bonds**. When the yield spread between Treasuries and junk bonds moves to within 200 basis points (2 percent), as it did in 2007, it's an indication that junk bonds are comparatively expensive.
+
+**Compare maturities**. If the yield curve is relatively flat, there is little or no risk premium being offered for buying longer-term bonds. As a general rule, you want to be in short- or medium-term maturities if you are not getting enough interest to warrant longer-term bonds.
+
+**Compare asset classes among corporate bonds**. Some sectors are often cheaper as a result of market news, but they may not have been repriced yet to reflect the increased risk. When a sector is being flailed by the media, prices drop substantially.
+
+**Ask questions about corporate bond yield spreads over Treasuries**. The yield spreads indicate the market's perception of corporate strength, and they fluctuate based on rumor and market news. If a yield looks too good to be true, it probably is.
+
+#### Strategies for When Interest Rates are High or Rising
+
+When interest rates go up, there is a hue and cry that bond investors will take serious losses. But we always love it when interest rates are rising because it creates wonderful opportunities for investing money at higher rates and increasing our income. For example, if interest rates go up from 4 percent to 6 percent per year over a period of time, an investor can increase cash flow by 50 percent. Remember, when the commentators say it is a bad time for bonds because rates are rising and prices are falling, you can say, let the bad times roll.
 
