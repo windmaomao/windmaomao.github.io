@@ -48,6 +48,7 @@ function setup() {
       loadMd(name) {
         const fn = this.root + name + ".md";
         $.get(fn, (data) => { this.source  = data; });
+        $('html, body').animate({ scrollTop: 0}, "slow");
       },
       loadIndex() {
         this.loadMd(this.index);
