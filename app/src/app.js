@@ -80,7 +80,7 @@ function setup() {
       this.books = ['index', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead', 'bonds-unbeaten-path', 'five-rules-stock-investing', 'slash-retirement-risk'];
       this.repos = ['angular2-mc-common', 'angular-mc-common', 'aof-form', 'kingslanding', 'ng-admin-restify', 'mongoose-restify', 'event-services', 'dbvals-audit'];
       this.financials = ['tree-structure', 'balace-sheet', 'income-statement', 'investment'];
-      this.others = ['fang', 'purchase', 'project', 'performance', 'recommendation'];
+      this.others = ['fang', 'purchase', 'project', 'publication', 'performance', 'recommendation'];
       this.resources = [
         { type: 'book', title: 'Books', items: this.books },
         { type: 'repository', title: 'Repos', items: this.repos },
