@@ -80,13 +80,13 @@ function setup() {
       this.books = ['index', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead', 'bonds-unbeaten-path', 'five-rules-stock-investing', 'slash-retirement-risk'];
       this.repos = ['angular-mc-common', 'angular2-mc-common'];
       this.financials = ['tree-structure', 'balace-sheet', 'income-statement', 'investment'];
-      this.purchases = ['index'];
+      this.others = ['fang', 'purchase'];
       this.resources = [
         { type: 'book', title: 'Books', items: this.books },
         { type: 'repository', title: 'Repos', items: this.repos },
         { type: 'blog', title: 'Blogs', items: this.blogs },
         { type: 'finance', title: 'Financials', items: this.financials },
-        { type: 'purchase', title: 'Purchases', items: this.purchases }
+        { type: 'other', title: 'Others', items: this.others }
       ];
       this.styles = ['academic', 'dropbox', 'github', 'gothic', 'han', 'newsprint', 'pixyll', 'whitey'];
       this.style = localStorage.getItem('qp-style') || this.style;
