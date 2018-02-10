@@ -12,6 +12,16 @@
     <div id="navbar" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable"
+          v-for="t in types" v-bind:key="t.type"
+        >
+          <a class="navbar-link" href="javascript:;">{{ t.title }}</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item capitalize"
+              v-for="item in t.items" v-bind:key="item"
+            >{{ item | formatId }}</a>
+          </div>
+        </div>
       </div>
 
       <div class="navbar-end">
@@ -24,7 +34,42 @@
 
 export default {
   name: 'Header',
-  components: {}
+  components: {},
+  filters: {
+    formatId: function(value) {
+      return value ? value.split('-').join(' ') : ''
+    }
+  },
+  data() {
+    return {
+      items: []
+    }
+  },
+  created() {
+    const blogs = ['index', 'power-of-loss', 'identity-debt', 'sustainable-prototyping',
+      'protection-from-loss', 'perfect-google-map', 'middle-ground', 'reusable-form',
+      'helping-others', 'law-of-winning', 'reusable-components', 'angular-on-windows',
+      'tiny-upscaling', 'build-new-system', 'dynamic-static-approach',
+      'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot'
+    ]
+    const books = ['index', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead',
+      'bonds-unbeaten-path', 'five-rules-stock-investing', 'slash-retirement-risk'
+    ]
+    const repos = ['angular2-mc-common', 'angular-mc-common', 'aof-form', 'kingslanding',
+      'ng-admin-restify', 'mongoose-restify', 'event-services', 'dbvals-audit'
+    ]
+    const financials = ['tree-structure', 'balace-sheet', 'income-statement', 'investment']
+    const others = ['todo', 'purchase', 'project', 'publication', 'performance',
+      'company', 'recommendation'
+    ]
+    this.types = [
+      { type: 'book', title: 'Books', items: books },
+      { type: 'blog', title: 'Blogs', items: blogs },
+      { type: 'finance', title: 'Financials', items: financials },
+      { type: 'repository', title: 'Repos', items: repos },
+      { type: 'other', title: 'Others', items: others }
+    ]
+  }
 }
 </script>
 
