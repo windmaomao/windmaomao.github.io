@@ -2,6 +2,11 @@
 
 ## 2018
 
+### 2/10
+
+- [ ] Add FeiFei $200
+
+
 ### 2/9 
 
 - [ ] Book chinese trip tickets
