@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header @select="menuSelected" />
     <Main :source="source" />
     <Footer/>
   </div>
@@ -20,15 +20,25 @@ export default {
   },
   data () {
     return {
+      domain: 'https://windmaomao.github.io/',
+      default: 'resume/profile-frontend',
       source: ''
     }
   },
+  methods: {
+    menuSelected: function(url) {
+      this.fetchUrl(url)
+    },
+    fetchUrl: function(url) {
+      url = url || this.default
+      const fn = this.domain + url + '.md'
+      this.$http.get(fn).then(res => {
+        this.source = res.body
+      })
+    }
+  },
   created() {
-    this.url = 'https://windmaomao.github.io/resume/profile-frontend.md'
-    this.url = 'https://windmaomao.github.io/book/bonds-unbeaten-path.md'
-    this.$http.get(this.url).then(res => {
-      this.source = res.body
-    })
+    this.fetchUrl()
   }
 }
 </script>
