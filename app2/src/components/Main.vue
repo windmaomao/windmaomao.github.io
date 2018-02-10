@@ -1,20 +1,22 @@
 <template>
   <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
-    <div class="sidebar" v-show="sidebar">
-      <div id="toc" data-toc="h2,h3"></div>
-      <div id="back-top">
-          <a>Back to top</a>
+    <template v-show="source">
+      <div class="sidebar" v-show="sidebar">
+        <div id="toc" data-toc="h2,h3"></div>
+        <div id="back-top">
+            <a>Back to top</a>
+        </div>
       </div>
-    </div>
-    <section class="section">
-      <div id="write" class="container" v-html="compiled"></div>
-    </section>
+      <section class="section">
+        <div id="write" class="container" v-html="compiled"></div>
+      </section>
+    </template>
   </div>
 </template>
 
 <script>
 var md = require('markdown-it')()
-// var toc = require('../../static/js/toc.js')
+var toc = require('../../static/js/toc.js')
 
 export default {
   name: 'Main',
@@ -31,15 +33,13 @@ export default {
   },
   watch: {
     compiled: function() {
-      console.log('compiled')
+      this.$nextTick(() => {
+        toc()
+      })
     }
   },
-  created: function() {
-    // console.log(document.getElementById("toc"))
-  },
-  mounted: function() {
-    console.log(document.getElementById('toc'))
-  }
+  created: function() {},
+  mounted: function() {}
 }
 </script>
 
@@ -60,5 +60,38 @@ export default {
   font-size: 12px;
   border-left: 1px solid #eee;
   overflow-y: auto;
+}
+#back-top {
+  margin: 10px 30px;
+}
+#toc > ul {
+  padding: 20px;
+  margin: 0;
+}
+#toc li {
+  list-style: none;
+  text-align: initial;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 18px;
+}
+#toc a {
+  color: inherit;
+  text-align: left;
+  font-size: 12px;
+  text-decoration: none;
+}
+#toc li.toc-active {
+  /* background: #ebf2f9; */
+  border-right: 2px dotted #e04221;
+}
+#toc li.toc-h2 {
+  padding-left: 10px;
+}
+#toc li.toc-h2 a {
+  font-weight: bold;
+}
+#toc li.toc-h3 {
+  padding-left: 20px;
 }
 </style>
