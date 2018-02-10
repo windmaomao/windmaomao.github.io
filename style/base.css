@@ -95,7 +95,7 @@ and (min-width : 1200px) {
 }
 #toc li.toc-active {
   /* background: #ebf2f9; */
-  border-left: 2px solid #e04221;
+  border-right: 2px dotted #e04221;
 }
 #toc li.toc-h2 {
   padding-left: 10px;
