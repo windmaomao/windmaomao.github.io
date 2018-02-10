@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Main/>
+    <Main :source="source" />
     <Footer/>
   </div>
 </template>
@@ -17,6 +17,17 @@ export default {
     Header,
     Main,
     Footer
+  },
+  data () {
+    return {
+      source: ''
+    }
+  },
+  created() {
+    this.url = 'https://windmaomao.github.io/resume/profile-frontend.md'
+    this.$http.get(this.url).then(res => {
+      this.source = res.body
+    })
   }
 }
 </script>

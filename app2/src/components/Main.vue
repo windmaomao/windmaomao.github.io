@@ -21,10 +21,11 @@ export default {
   name: 'Main',
   data () {
     return {
-      sidebar: true,
-      source: '# Hello World'
+      sidebar: true
+      // source: '# Hello World'
     }
   },
+  props: ['source'],
   computed: {
     compiled: function() {
       return md.render(this.source)
