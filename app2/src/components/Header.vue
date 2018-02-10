@@ -15,18 +15,6 @@
       </div>
 
       <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="field is-grouped">
-            <p class="control" id="toc-button">
-              <a class="button">
-                <span>Table of Content &rarrb;</span>
-              </a>
-            </p>
-            <p class="control has-icons-left">
-              <span class="icon is-small is-left">&Tstrok;</span>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </nav>
