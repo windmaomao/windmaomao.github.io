@@ -34,7 +34,9 @@ function setup() {
         this.compiled = marked(this.source, { sanitize: true, smartypants: true });
         this.$nextTick(function() {
           Prism.highlightAll();
-          $("#toc").empty().toc({ content: '#write', headings: "h2, h3" });
+          $("#toc").empty().toc({ 
+            content: '#write', headings: "h2, h3",
+          });
           $('#burger').removeClass('is-active');
           $('#navbar').removeClass('is-active');
         });

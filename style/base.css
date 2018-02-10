@@ -83,8 +83,12 @@ and (min-width : 1200px) {
 #toc li {
   list-style: none;
   text-align: initial;
-  margin-top: 2px;
-  line-height: 22px;
+  margin-top: 5px;
+  line-height: 19px;
+
+  /* white-space: nowrap; */
+  /* text-overflow: ellipsis; */
+  /* overflow: hidden; */
 }
 #toc a {
   color: inherit;
