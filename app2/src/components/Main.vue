@@ -65,7 +65,7 @@ export default {
   margin: 10px 30px;
 }
 #toc > ul {
-  padding: 20px;
+  padding: 0 8px;
   margin: 0;
 }
 #toc li {
@@ -82,16 +82,17 @@ export default {
   text-decoration: none;
 }
 #toc li.toc-visible {
-  /* background: #ebf2f9; */
-  border-right: 2px dotted #e04221;
+  /* border-right: 2px dotted #e04221; */
+  font-weight: bold;
 }
 #toc li.toc-h2 {
   padding-left: 10px;
 }
 #toc li.toc-h2 a {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-size: 110%;
 }
 #toc li.toc-h3 {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 </style>

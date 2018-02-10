@@ -25,6 +25,7 @@ export default {
   },
   created() {
     this.url = 'https://windmaomao.github.io/resume/profile-frontend.md'
+    this.url = 'https://windmaomao.github.io/book/bonds-unbeaten-path.md'
     this.$http.get(this.url).then(res => {
       this.source = res.body
     })
