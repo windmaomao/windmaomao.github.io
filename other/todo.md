@@ -5,7 +5,7 @@
 ### 2/9 
 
 - [ ] Book chinese trip tickets
-- [ ] Improve markdown syntax
+- [ ] Study toc.js and marked.js
 
 ### 2/4
 
