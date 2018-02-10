@@ -2,7 +2,7 @@
   <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
     <template v-show="source">
       <div class="sidebar" v-show="sidebar">
-        <div id="toc" data-toc="h2,h3"></div>
+        <div id="toc" data-toc="h2,h3" data-toc-offset="-100"></div>
         <div id="back-top">
             <a>Back to top</a>
         </div>
@@ -81,7 +81,7 @@ export default {
   font-size: 12px;
   text-decoration: none;
 }
-#toc li.toc-active {
+#toc li.toc-visible {
   /* background: #ebf2f9; */
   border-right: 2px dotted #e04221;
 }

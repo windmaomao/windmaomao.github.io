@@ -814,9 +814,10 @@ function init(el) {
   }
 
   var container = el.dataset.tocContainer ? findOne(el.dataset.tocContainer) | document.body : document.body;
-  var selectors = el.dataset.toc.split(',').map(function (s) {
-    return s.trim();
-  });
+  // var selectors = el.dataset.toc.split(',').map(function (s) {
+  //   return s.trim();
+  // });
+  var selectors = [el.dataset.toc];
   var tocItems = [];
   var offset = el.dataset.tocOffset ? parseInt(el.dataset.tocOffset, 10) : 1;
   var i = 1;
@@ -829,8 +830,10 @@ function init(el) {
       // Keep the id if already there
       var index = item.id || 'toc-' + i++;
       var text = item.dataset.tocTitle ? item.dataset.tocTitle.trim() : item.textContent.trim();
-      var sanitizedClassName = selector.replace(/((:+[\w-\d]*)|[^A-z0-9-\s])/g, ' ').replace(/\s{2,}/g, ' ').trim();
-      var className = 'toc-' + sanitizedClassName;
+      // var sanitizedClassName = selector.replace(/((:+[\w-\d]*)|[^A-z0-9-\s])/g, ' ').replace(/\s{2,}/g, ' ').trim();
+      var name = item.tagName.toLowerCase();
+      var className = 'toc-' + name;
+      // var className = 'toc-' + sanitizedClassName;
 
       // Set it if none
       if (item.id !== index) {
