@@ -424,7 +424,7 @@ All these bonds pay interest every six months. There is also no state or federal
 
 Mikala laddered her portfolio to minimize both the inflation risk and the reinvestment risk. Although there is no perfect investment that will protect against inflation, Mikala knew that she would always have some funds to reinvest in the event of higher rates, thus, mitigating to some extent the impact of inflation. Also, she knew that she could sell some of the bonds with short maturities to purchase bonds selling at higher rates. She could also choose to purchase inflation-protected bonds, but they would reduce her cash flow since they have low current-interest payments, and she would have to pay taxes on the imputed annual income.
 
-## Maximizing Profits
+## Maximizing Profits Strategies
 
 We review a variety of techniques and strategies that will help you determine when to buy and sell bonds, how to take advantage of tax benefits, how to minimize the risks to your capital, and how to increase your returns.
 
@@ -450,7 +450,7 @@ The yield curve has three classic shapes: ascending, flat, and inverted. Each, a
 
 The threat that you will have to average down (get a lower interest rate) when your bonds come due is what's called reinvestment risk. In the early 1980s, for example, all interest rates were sky high and the yield curve was steeply inverted. During this period, many very conservative CD buyers bought six-month CDs and kept rolling them over every six months as they came due at lower and lower rates as the years went by. Unfortunately for them, they missed a huge buying opportunity to lock in long-term Treasury bonds yielding 15 percent in the early 1980s. In the early 2000s, the yield curve flattened and then inverted with the same result: high short-term CD rates attracted the individual investor, while professional investors scrambled to lock in longer-term rates in anticipation of the decline in rates overall.
 
-### Strategies for Deciding When to Sell
+### Deciding When to Sell
 
 We do not recommend market timing, but there are many times when it's appropriate to restructure your bond portfolio and sell bonds before they come due.
 
@@ -459,14 +459,14 @@ We do not recommend market timing, but there are many times when it's appropriat
 - **Follow changes in the federal tax code**. Some tax-free municipal bonds, for example, are subject to the AMT. They're called AMT bonds. Discussion continues in Congress about modifying or abolishing the AMT; any tinkering with it could affect the desirability of owning or selling AMT bonds.
 - **Profit from price gains**. Consider selling if you have a substantial gain on your bonds and you have a noninvestment use for the money or wish to invest in another asset class.
 
-### Strategies for Finding Bargain Bonds
+### Finding Bargain Bonds
 
 - **Study the Treasury bond yield curve**. Determine the most desirable maturity range based on your needs. Suppose you were considering the purchase of a bond with a five-year maturity. You might find that purchasing a bond in a longer or shorter maturity might provide a better return as well as support your particular situation. Also, compare the yields on outstanding Treasury bills, notes, and bonds in the same maturity. The off-the-run securities might yield a little extra because there is less demand for them. Maybe you wanted to purchase a longer-term bond. The large projected federal government surplus and the government buyback of 30-year Treasuries in the 1990s resulted in a sharp decrease in the yield of long-term Treasuries in 2000. However, when the projected surplus significantly diminished in 2001, the yield increased because the potential supply of Treasuries going forward seemed ready to increase.
 - **Compare the Treasury yields to tax-exempt municipal bond yields**. Even if you're in a lower tax bracket, municipal bonds might make sense for you if their yields approach those of Treasuries. There's a lot of historical data supporting the premise that on average the yields on highly rated, tax-free municipal bonds are normally 80 percent to 90 percent of Treasury bonds for similarly dated maturities. If yields on tax-free municipal bonds are greater than 90 percent of Treasuries, as they were for a time in 2000 and 2003, the municipals would be a good buy because they yield almost as much as Treasuries, and the income is tax free. In this situation, even the taxpayers in the lowest tax bracket benefit from munis.
 - **When buying corporate bonds, compare the returns of subsectors in the same maturities**. All corporate bonds do not move in unison. By comparing the yields of automobile companies to rail companies, for example, you will understand that there is a yield differential for similarly rated bonds in different market sectors. Junk bonds became relatively cheap in 1989, 1990, and 2001 because of the large number of defaults and the threat of more of the same caused by the recessions in those years. Thirty percent of the junk bonds defaulted in the early 1990s, although they became a buy after the yields had increased significantly and the threat of default had diminished. In 2007, junk bonds were very expensive; consequently, they should be avoided.
 - **Consider investing in bonds that have had many rating downgrades but may appear promising to you because you believe there will be an upgrade**. In 2006, for example, New York City bond ratings were upgraded, signaling that these bonds were becoming safer. This perception of safety was a consequence of New York's improved fiscal health, a credit rating upgrade, and investors' growing confidence in Mayor Michael Bloomberg. It helps if the bonds are insured, just in case your best guess turns out to be wrong.
 
-### Strategies for Staying Away from Overvalued Bonds
+### Staying Away from Overvalued Bonds
 
 - **Compare the Treasury yield curve to the yield curve of other taxable market sectors**. Professional bond traders always speak of the yield above Treasuries as a way to describe how a bond is priced. If you're not getting a satisfactory risk premium above the Treasury yield, don't take the risk. Buy the Treasury.
 - **Watch out for junk bonds**. When the yield spread between Treasuries and junk bonds moves to within 200 basis points (2 percent), as it did in 2007, it's an indication that junk bonds are comparatively expensive.
@@ -474,7 +474,7 @@ We do not recommend market timing, but there are many times when it's appropriat
 - **Compare asset classes among corporate bonds**. Some sectors are often cheaper as a result of market news, but they may not have been repriced yet to reflect the increased risk. When a sector is being flailed by the media, prices drop substantially.
 - **Ask questions about corporate bond yield spreads over Treasuries**. The yield spreads indicate the market's perception of corporate strength, and they fluctuate based on rumor and market news. If a yield looks too good to be true, it probably is.
 
-### Strategies for When Interest Rates are High or Rising
+### When Interest Rates are High or Rising
 
 When interest rates go up, there is a hue and cry that bond investors will take serious losses. But we always love it when interest rates are rising because it creates wonderful opportunities for investing money at higher rates and increasing our income. For example, if interest rates go up from 4 percent to 6 percent per year over a period of time, an investor can increase cash flow by 50 percent. 
 
@@ -491,7 +491,7 @@ When interest rates go up, there is a hue and cry that bond investors will take 
   - **Do a tax swap and take a tax loss**. This is a trading strategy that one-ups the tax collector. It involves selling any low-interest coupon bonds you own that are selling below their purchase price. This generates a tax loss. Simultaneously, you buy new bonds to lock in the same or a higher return. In the 1970s, when interest rates were constantly rising, tax swaps were considered every year. The last quarter of the year was called the tax-swapping season.
   - **Upgrade your credit quality**. Swaps can be done to upgrade the credit quality of your portfolio by swapping a weaker credit for a stronger one at a time when the spread between better credits and weaker credits has narrowed.
 
-### Strategies for When Interest Rates are Low or Falling
+### When Interest Rates are Low or Falling
 
 - **Don't stay in cash**. When interest rates are low, you may believe that it will be best to keep your money in a low-yielding money market fund and wait for interest rates to rise. Although this strategy may work out well, many other times staying in cash may prove costly because the longer you wait for rates to go up, the higher the rates must go to compensate you for waiting and earning lower returns. For example, if money market rates are 2 percent and 5-year bond rates are 4 percent, if rates stay the same, you have lost 2 percent per year for the period involved. Even if rates do move up later, they must move up enough not only to make up for the lost interest but also to make up for the risk that the rates may not rise. Staying in cash is a type of market timing and is unlikely to work out favorably over the long term.
 - **Buy EE bonds**. EE savings bonds allow you to lock in the current return being paid by the Treasury for at least twenty years without losing any principal or accrued interest. If interest rates kick up in the future, you can redeem your EE bonds, take your gain, and then buy higher-yielding bonds.
@@ -558,12 +558,12 @@ If you've read this far, you've probably already assessed your need for income, 
 #### Strategies for Reducing Liquidity Risk
 #### Strategie sfor Reducing Call Risk
 
-### Investing for Income Needs and Financial Goals
+### Income Needs and Financial Goals
 #### Strategies for Short Term Goals
 #### Strategies for Long Term Goals
 #### Strategies for Increasing Income
 
-### Starting Out with Less than $25,000 to Invest
+### Starting Out with Less than $25,000
 
 If you have less than $25,000 to invest, buy short-term or intermediate-term bonds. Don't buy long-term bonds, because you can't afford the market risk if you need your funds. You might not need credit diversification, but you might need maturity diversification. How would you deal with that? Buy the following short- or intermediate-term bonds:
 
