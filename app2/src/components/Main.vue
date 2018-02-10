@@ -15,19 +15,24 @@
 </template>
 
 <script>
+var md = require('markdown-it')()
+
 export default {
   name: 'Main',
   data () {
     return {
       sidebar: true,
-      source: 'Welcome to Your Vue.js App',
-      compiled: 'Welcome to Your Vue.js App'
+      source: '# Hello World'
+    }
+  },
+  computed: {
+    compiled: function() {
+      return md.render(this.source)
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>
