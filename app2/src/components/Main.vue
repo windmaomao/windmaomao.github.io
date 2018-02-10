@@ -8,7 +8,7 @@
         </div>
       </div>
       <section class="section">
-        <div class="container" id="write" v-html="compiled"></div>
+        <div id="write" class="container" v-html="compiled"></div>
       </section>
     </template>
   </div>
@@ -22,7 +22,6 @@ export default {
   data () {
     return {
       sidebar: true
-      // source: '# Hello World'
     }
   },
   props: ['source'],
@@ -34,6 +33,11 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+#write {
+  max-width: 40em;
+  margin: 0 auto;
+  padding-top: 2em 60px;
+  min-height: calc(100vh - 6em);
+}
 </style>
