@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-bind:class="{ 'spinning': spinning }">
     <vue-simple-spinner id="spinner"
-      v-show="spinning" :size="'medium'"
+      v-show="spinning" :size="'small'"
       :line-bg-color="'#154da1'" :line-fg-color="'#e14321'"
     />
     <Header @select="menuSelected" />
@@ -30,8 +30,10 @@ export default {
   data () {
     return {
       spinning: true,
-      domain: 'https://windmaomao.github.io/',
-      domain2: 'https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/',
+      domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
+      domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
+      // domain: 'https://windmaomao.github.io/',
+      // domain2: 'https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/',
       default: 'resume/frontend',
       theme: 'whitey',
       source: ''
@@ -100,7 +102,7 @@ Architect & Design
 #spinner {
   position: fixed;
   z-index: 1000;
-  top: 15px;
+  top: 20px;
   right: 16px;
 }
 #themer {

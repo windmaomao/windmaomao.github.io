@@ -28,10 +28,12 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item         | Year | Type         |
 | ------------ | ---- | ------------ |
+| Netlifty        | 2018 | Hosting      |
 | Libib        | 2018 | Library      |
 | Adobe Spark  | 2017 | Presentation |
 | Stackedit.io | 2017 | Notes        |
 | Wunderlist   | 2017 | Todos        |
+| Forge.io     | 2017 | Hosting        |
 | Kindle Read  | 2010 | Books        |
 | Bitbucket    | 2014 | Repository   |
 | Github       | 2012 | Repository   |
