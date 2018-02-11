@@ -62,10 +62,19 @@ export default {
       this.source = `
 # Hello World
 ## Test Def List
-### A Project
-Single operation UI framework
-: Date: Oct 2017 -
-: Keyword: *Angular, Sass, Highcharts, Ag-grid*
+
+People Designs
+
+: Oct 2014 - Aug 2015
+: Lead AngularJS / Laravel Developer
+
+Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program to help people prepare the end of their life. Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe.
+
+Architect & Design
+
+: - *HIPPA* server host and deployment plan protecting health care privacy
+  - Disability compliance with video, and narration support with high contrast
+  - Language support translations made for pages, snippets, and graphics
     `
     }
   },
