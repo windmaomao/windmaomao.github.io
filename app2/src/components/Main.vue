@@ -4,7 +4,7 @@
       <div class="sidebar" v-show="sidebar">
         <div id="toc" data-toc="h2,h3" data-toc-offset="-100"></div>
         <div id="back-top">
-            <a>Back to top</a>
+            <a href="#app">Back to top</a>
         </div>
       </div>
       <section class="section">
@@ -62,7 +62,7 @@ export default {
   overflow-y: auto;
 }
 #back-top {
-  margin: 10px 30px;
+  margin: 10px 18px;
 }
 #toc > ul {
   padding: 0 8px;

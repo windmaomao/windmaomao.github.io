@@ -35,6 +35,7 @@ export default {
       this.$http.get(fn).then(res => {
         this.source = res.body
       })
+      window.location = '#'
     }
   },
   created() {
