@@ -18,6 +18,7 @@
 var md = require('markdown-it')()
 var toc = require('../../static/js/toc.js')
 
+md.use(require('markdown-it-highlightjs'))
 md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji/light'))
 md.use(require('markdown-it-abbr'))
