@@ -40,3 +40,15 @@ h6 {
 code {
   border: none !important;
 }
+dl {
+	margin: 1rem 0;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  font-size: 90%;
+}
+dd p {
+  margin: 0;
+}
