@@ -32,7 +32,7 @@ export default {
       spinning: true,
       domain: 'https://windmaomao.github.io/',
       domain2: 'https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/',
-      default: 'resume/profile-frontend',
+      default: 'resume/frontend',
       theme: 'whitey',
       source: ''
     }
