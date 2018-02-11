@@ -23,11 +23,11 @@ Bonus
 
 ## Award
 
-Recognition Award
+Recognition Award [^recognition]
 
 : Deutsche Bank
-: Nov 2017
-: For the exceptional UI framework build
+: Jan 2017
+: Recognised for outstanding performance, for the exceptional UI framework build
 
 ## Experience
 
@@ -158,7 +158,7 @@ Cambridge University Press
 Journal of Nonlinearity
 
 : Sep 2010
-: Front cover picture design
+: Journal front cover picture design [^nonlinearity]
 
 University of California Irvine
 
@@ -171,4 +171,7 @@ University of California Irvine
 
 
 
+[^recognition]: Deutsche Bank Recognition Awards, [2016](https://www.db.com/newsroom_news/2017/ghp/message-from-all-members-of-the-management-board-on-variable-compensation-for-2016-en-11452.htm)
+
 [^book]: Multiscale Modeling of Cancer,  [Amazon Book](https://www.amazon.com/Multiscale-Modeling-Cancer-Experimental-Mathematical/dp/052188442X/ref=sr_1_1?ie=UTF8&qid=1488753865&sr=8-1&keywords=multiscale+modeling+of+cancer)
+[^nonlinearity]: Nonlinear modelling of cancer: bridging the gap between cells and tumours, [Journal](http://iopscience.iop.org/article/10.1088/0951-7715/23/1/R01/meta)
