@@ -64,7 +64,8 @@ export default {
 }
 #spinner {
   position: fixed;
-  top: 100px;
-  left: 20px;
+  z-index: 1000;
+  top: 15px;
+  right: 15px;
 }
 </style>

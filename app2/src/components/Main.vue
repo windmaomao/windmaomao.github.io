@@ -51,6 +51,7 @@ export default {
   min-height: calc(100vh - 6em);
 }
 .sidebar {
+  display: none;
   position: fixed;
   right: 0;
   top: 100px;
@@ -60,6 +61,15 @@ export default {
   font-size: 12px;
   border-left: 1px solid #eee;
   overflow-y: auto;
+}
+@media only screen
+and (min-width : 1200px) {
+  .main.with-sidebar {
+    padding-right: 60px;
+  }
+  .sidebar, #toc-button {
+    display: block;
+  }
 }
 #back-top {
   margin: 10px 18px;
