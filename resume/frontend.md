@@ -166,3 +166,5 @@ University of California Irvine
 : College math class teacher for two semesters
 
 
+
+*[AngularJS]: JavaScript-based open-source front-end web application framework mainly maintained by Google
