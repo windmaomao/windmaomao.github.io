@@ -1,10 +1,11 @@
 <template>
   <div id="app" v-bind:class="{ 'spinning': spinning }">
-    <vue-simple-spinner id="spinner" v-show="spinning"
-      :size="'medium'"
+    <vue-simple-spinner id="spinner"
+      v-show="spinning" :size="'medium'"
       :line-bg-color="'#154da1'" :line-fg-color="'#e14321'"
     />
     <Header @select="menuSelected" />
+    <Themer @theme="themeSwitched" />
     <Main :source="source" />
     <Footer/>
   </div>
@@ -12,6 +13,7 @@
 
 <script>
 import Header from './components/Header'
+import Themer from './components/Themer'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import VueSimpleSpinner from 'vue-simple-spinner'
@@ -19,16 +21,18 @@ import VueSimpleSpinner from 'vue-simple-spinner'
 export default {
   name: 'App',
   components: {
+    VueSimpleSpinner,
     Header,
+    Themer,
     Main,
-    Footer,
-    VueSimpleSpinner
+    Footer
   },
   data () {
     return {
       spinning: true,
       domain: 'https://windmaomao.github.io/',
       default: 'resume/profile-frontend',
+      theme: 'whitey',
       source: ''
     }
   },
@@ -45,10 +49,20 @@ export default {
         this.spinning = false
       })
       window.location = '#'
+    },
+    themeSwitched(theme) {
+      const root = this.domain + 'style/'
+      var found = document.getElementById('style')
+      if (found) {
+        found.href = root + theme + '.css'
+      }
+      localStorage.setItem('qp-theme', theme)
     }
   },
   created() {
-    this.fetchUrl()
+    this.theme = localStorage.getItem('qp-theme') || this.theme
+    this.themeSwitched(this.theme)
+    this.menuSelected(this.default)
   }
 }
 </script>
