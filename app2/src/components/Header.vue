@@ -12,11 +12,11 @@
     <div id="navbar" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" v-on:click="goto()">Home</a>
-        <div class="navbar-item has-dropdown is-hoverable"
+        <div class="navbar-item has-dropdown"
           v-for="t in types" v-bind:key="t.type"
         >
-          <a class="navbar-link" href="javascript:;">{{ t.title }}</a>
-          <div class="navbar-dropdown">
+          <a class="navbar-link" v-on:click="select(t.type)">{{ t.title }}</a>
+          <div class="navbar-dropdown" v-show="selected === t.type">
             <a class="navbar-item capitalize"
               v-for="name in t.items" v-bind:key="name"
               v-on:click="goto(t.type, name)"
@@ -43,7 +43,8 @@ export default {
   },
   data() {
     return {
-      items: []
+      items: [],
+      selected: ''
     }
   },
   methods: {
@@ -53,6 +54,10 @@ export default {
       } else {
         this.$emit('select', '')
       }
+      this.selected = ''
+    },
+    select: function(type) {
+      this.selected = (this.selected === type) ? '' : type
     }
   },
   created() {
@@ -92,5 +97,8 @@ export default {
 }
 .navbar p {
   margin: 1em 0;
+}
+.navbar .navbar-dropdown {
+  display: initial;
 }
 </style>
