@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fang Jin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism.min.css" />
+  <link rel="stylesheet" href="style/base.css">  
+  <link rel="stylesheet" href="" id="style">  
+  <link rel="icon" type="image/png" href="style/logo.png" />
+</head>
+
+<body class="pin-outline has-navbar-fixed-top" v-cloak>
+    <!-- Header  -->
+    <nav class="navbar is-light is-fixed-top" role="navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" v-on:click="loadIndex"><img src="style/logo.png"></a>
+        <div class="navbar-burger burger" data-target="navbar" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-start" v-if="admin">
+          <!-- <a class="navbar-item" v-on:click="loadIndex">Home</a> -->
+          <div class="navbar-item has-dropdown is-hoverable" v-for="res in resources">
+            <a class="navbar-link" href="javascript:;">{{ res.title }}</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item capitalize" v-for="item in res.items" v-on:click="loadMd(res.type+'/'+item)">
+                {{ item | formatId }}
+              </a>
+            </div>          
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control" id="toc-button">
+                <a class="button" v-on:click="toggleSidebar">
+                  <span>Table of Content &rarrb;</span>
+                </a>
+              </p>
+              <p class="control has-icons-left">
+                <a class="select">
+                  <select v-model="style" v-on:change="changeStyle">
+                    <option v-bind:value="s" v-for="s in styles">{{ s | capitalize }}</option>
+                  </select>              
+                </a>
+                <span class="icon is-small is-left">&Tstrok;</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>  
+
+    <!-- Switcher -->
+    <div class="control has-icons-left" id="switcher">
+      <a class="select">
+        <select v-model="style" v-on:change="changeStyle">
+          <option v-bind:value="s" v-for="s in styles">{{ s | capitalize }}</option>
+        </select>              
+      </a>
+      <span class="icon is-small is-left">&Tstrok;</span>
+    </div>
+
+    <!-- Content  -->
+    <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
+      <template v-if="source">
+        <div class="sidebar" v-show="sidebar">
+          <div id="toc"></div>
+          <div id="back-top">
+              <a v-on:click="scrollTop">Back to top</a>
+          </div>
+        </div>
+        <section class="section">
+          <div class="container" id="write" v-html="compiled"></div>
+        </section>
+      </template>
+    </div>
+        
+    <!-- Footer  -->
+    <footer class="footer">
+      <p>Stay ahead and be focused.</p>
+      <p>&copy; Copyright 2018 - <a v-on:click="loadIndex">Fang Jin</a></p>
+    </footer>  
+    
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/marked@0.3.12/marked.min.js"></script>
+    <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
+    <!-- <script src="style/jquery.toc.js"></script> -->
+    <script src="style/toc.min.js"></script>
+    <script src="style/app.js"></script>
+  </body>
