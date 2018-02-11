@@ -17,7 +17,6 @@ Prototype the website for dashboard and performance summary page
 Single operation UI framework
 
 : Date: Oct 2017 -
-
 : Keyword: *Angular, Sass, Highcharts, Ag-grid*
 
 #### Highlights
@@ -28,9 +27,10 @@ Single operation UI framework
 * Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
 
 ### Global Console
-**Large scale reusable UI framework**   
-**Date: Jan 2017 - **  
-**Keyword: *AngularJS, Bootstrap, Webpack, Sass, HTML5* **  
+Large scale reusable UI framework   
+
+: Date: Jan 2017 -   
+: Keyword: *AngularJS, Bootstrap, Webpack, Sass, HTML5*   
 
 Served as AngularJS architect for designing reusable framework for more than 35+ banking applications in Market Clearing product sector. The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
