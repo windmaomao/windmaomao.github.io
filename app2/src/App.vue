@@ -31,7 +31,7 @@ export default {
     return {
       spinning: true,
       domain: 'https://windmaomao.github.io/',
-      default: 'resume/frontend',
+      default: 'resume/profile-frontend',
       theme: 'whitey',
       source: ''
     }
