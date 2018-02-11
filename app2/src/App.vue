@@ -80,8 +80,8 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    // this.menuSelected(this.default)
-    this.testSource()
+    this.menuSelected(this.default)
+    // this.testSource()
   }
 }
 </script>

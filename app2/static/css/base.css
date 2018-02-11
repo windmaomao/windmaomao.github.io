@@ -53,6 +53,12 @@ dd {
 dd p {
   margin: 0;
 }
+abbr {
+  text-decoration: none;
+  font-style: italic;
+  font-family: serif;
+  cursor: help;
+}
 input[type=checkbox] {
   margin-right: 8px;
 }
