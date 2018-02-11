@@ -153,7 +153,7 @@ RecoveryHub
 Cambridge University Press
 
 : Nov 2010
-: Book "Multiscale Modeling of Cancer" front cover design
+: Book "Multiscale Modeling of Cancer" [^book] front cover design
 
 Journal of Nonlinearity
 
@@ -168,3 +168,7 @@ University of California Irvine
 
 
 *[AngularJS]: JavaScript-based open-source front-end web application framework mainly maintained by Google
+
+
+
+[^book]: Multiscale Modeling of Cancer,  [Amazon Book](https://www.amazon.com/Multiscale-Modeling-Cancer-Experimental-Mathematical/dp/052188442X/ref=sr_1_1?ie=UTF8&qid=1488753865&sr=8-1&keywords=multiscale+modeling+of+cancer)
