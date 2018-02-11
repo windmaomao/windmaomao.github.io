@@ -2,10 +2,10 @@
   <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
     <template v-show="source">
       <div class="sidebar" v-show="sidebar">
-        <div id="toc" data-toc="h2,h3" data-toc-offset="-100"></div>
-        <div id="back-top">
+        <div id="toc" data-toc="h1,h2,h3" data-toc-offset="-100"></div>
+        <!-- <div id="back-top">
             <a href="#app">Back to top</a>
-        </div>
+        </div> -->
       </div>
       <section class="section">
         <div id="write" class="container" v-html="compiled"></div>
@@ -78,19 +78,28 @@ export default {
 #toc a {
   color: inherit;
   text-align: left;
-  font-size: 12px;
   text-decoration: none;
+  font-size: 12px;
 }
 #toc li.toc-visible {
-  /* border-right: 2px dotted #e04221; */
   font-weight: bold;
+}
+#toc li.toc-h1 {
+  opacity: .6;
+  margin: 10px;
+}
+#toc li.toc-h1.toc-visible {
+  font-weight: normal;
+  opacity: 1;
+}
+#toc li.toc-h1 a {
+  font-size: 16px;
 }
 #toc li.toc-h2 {
   padding-left: 10px;
 }
 #toc li.toc-h2 a {
-  /* font-weight: bold; */
-  font-size: 110%;
+  font-size: 14px;
 }
 #toc li.toc-h3 {
   padding-left: 25px;
