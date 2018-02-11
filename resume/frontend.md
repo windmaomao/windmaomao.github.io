@@ -72,7 +72,7 @@ Reusable Component
 
 ## Past Experience
 
-> "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to ==take vague customer requirements and turn them into a fantastic software solution== never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies
+> "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to ==take vague customer requirements and turn them into a fantastic software solution== never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies [^linkedIn]
 
 People Designs
 
@@ -158,7 +158,7 @@ Cambridge University Press
 Journal of Nonlinearity
 
 : Sep 2010
-: Journal front cover picture design [^nonlinearity]
+: Nonlinearity 23(2010)[^nonlinearity] front cover picture design
 
 University of California Irvine
 
@@ -170,8 +170,8 @@ University of California Irvine
 *[AngularJS]: JavaScript-based open-source front-end web application framework mainly maintained by Google
 
 
-
 [^recognition]: Deutsche Bank Recognition Awards, [2016](https://www.db.com/newsroom_news/2017/ghp/message-from-all-members-of-the-management-board-on-variable-compensation-for-2016-en-11452.htm)
 
 [^book]: Multiscale Modeling of Cancer,  [Amazon Book](https://www.amazon.com/Multiscale-Modeling-Cancer-Experimental-Mathematical/dp/052188442X/ref=sr_1_1?ie=UTF8&qid=1488753865&sr=8-1&keywords=multiscale+modeling+of+cancer)
-[^nonlinearity]: Nonlinear modelling of cancer: bridging the gap between cells and tumours, [Journal](http://iopscience.iop.org/article/10.1088/0951-7715/23/1/R01/meta)
+[^nonlinearity]: Nonlinear modelling of cancer: bridging the gap between cells and tumours, [Gallery](http://iopscience.iop.org/journal/0951-7715/page/Cover%20gallery)
+[^linkedIn]: 12 people have recommended Fang Jin, [LinkedIn](https://www.linkedin.com/in/windmaomao)
