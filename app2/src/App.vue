@@ -84,8 +84,8 @@ In this article, the author suggest a pattern recognition of revelation of middl
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    // this.menuSelected(this.default)
-    this.testSource()
+    this.menuSelected(this.default)
+    // this.testSource()
   }
 }
 </script>

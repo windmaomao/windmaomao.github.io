@@ -72,7 +72,7 @@ Reusable Component
 
 ## Past Experience
 
-> "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to take vague customer requirements and turn them into a fantastic software solution never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies
+> "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to ==take vague customer requirements and turn them into a fantastic software solution== never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies
 
 People Designs
 
