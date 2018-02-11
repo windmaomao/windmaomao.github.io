@@ -57,25 +57,23 @@ export default {
         found.href = root + theme + '.css'
       }
       localStorage.setItem('qp-theme', theme)
+    },
+    testSource() {
+      this.source = `
+# Hello World
+## Test Def List
+### A Project
+Single operation UI framework
+: Date: Oct 2017 -
+: Keyword: *Angular, Sass, Highcharts, Ag-grid*
+    `
     }
   },
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
     // this.menuSelected(this.default)
-    this.source = `
-# Hello World
-## Test Def List
-### A Project
-Project
-: Single operation UI framework
-
-Date
-: Oct 2017 -
-
-Keyword
-: *Angular, Sass, Highcharts, Ag-grid*
-    `
+    this.testSource()
   }
 }
 </script>

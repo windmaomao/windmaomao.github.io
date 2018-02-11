@@ -14,16 +14,13 @@ Prototype the website for dashboard and performance summary page
 ### Web ADK Core
 
 ### Global Console - Angular 5
-Project
-: Single operation UI framework
+Single operation UI framework
 
-Date
-: Oct 2017 -
+: Date: Oct 2017 -
 
-Keyword
-: *Angular, Sass, Highcharts, Ag-grid*
+: Keyword: *Angular, Sass, Highcharts, Ag-grid*
 
-Highlights:
+#### Highlights
 
 * Charts: Theme pie, column, stack charts with consistent look and feel using *Highcharts*
 * Documentation: Support Bootstrap documentation page layout with quick navigation list
