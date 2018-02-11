@@ -120,7 +120,7 @@ body {
 
 #write {
 	/* max-width: 914px; */
-	max-width: 30em;
+	max-width: 30em !important;
 	color: #333;
 }
 
@@ -456,7 +456,7 @@ a {
 .outline-expander:before {
  	content: "+";
 	font-family: inherit;
-	color: rgb(108, 108, 108); 
+	color: rgb(108, 108, 108);
   	font-size: 1.5rem;
  	top: 0.1rem;
 }
@@ -479,7 +479,7 @@ a {
 	font-family: inherit;
 }
 
-.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-header,
 .cm-s-typora-default .cm-property,
 .CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
 	color: #428bca;

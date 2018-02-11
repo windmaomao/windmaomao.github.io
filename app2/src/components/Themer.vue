@@ -2,7 +2,9 @@
   <div class="control has-icons-left" id="themer">
     <a class="select">
       <select v-model="theme" v-on:change="switchTheme">
-        <option v-bind:key="s" v-for="s in themes">{{ s }}</option>
+        <option v-bind:value="s"
+          v-bind:key="s" v-for="s in themes">{{ s | capitalize }}
+        </option>
       </select>
     </a>
     <span class="icon is-small is-left">&Tstrok;</span>
@@ -12,6 +14,13 @@
 <script>
 export default {
   name: 'Themer',
+  filters: {
+    capitalize: function(value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  },
   data() {
     return {
       themes: [],
