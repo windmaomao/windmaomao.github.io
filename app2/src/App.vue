@@ -63,20 +63,19 @@ export default {
     },
     testSource() {
       this.source = `
-*[AngularJS]: Hyper Text Markup Language
-# Hello World
-## Test Def List
+Tags
+
+: Title: Middle Ground
+: Subtitle: old dog gets new tricks
+: Date: 2017-03-12
+: Published: QPLOT
+: Tags:
+
+# Middle Ground, old dog gets new tricks
 
 ::: abstract Abstract
 In this article, the author suggest a pattern recognition of revelation of middle grounds between origin and destination. Once identified, we need to claim the middle ground to promote effective usage, therefore speed up the transition into new territory.
 :::
-
-People Designs
-
-: Oct 2014 - Aug 2015
-: Lead AngularJS / Laravel Developer
-
-Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program to help people prepare the end of their life. Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe.
 
     `
     }
@@ -84,8 +83,8 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    // this.menuSelected(this.default)
-    this.testSource()
+    this.menuSelected(this.default)
+    // this.testSource()
   }
 }
 </script>
