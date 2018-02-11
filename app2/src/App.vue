@@ -31,7 +31,7 @@ export default {
     return {
       spinning: true,
       domain: 'https://windmaomao.github.io/',
-      default: 'resume/profile-frontend',
+      default: 'resume/frontend',
       theme: 'whitey',
       source: ''
     }
@@ -81,8 +81,8 @@ Architect & Design
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    // this.menuSelected(this.default)
-    this.testSource()
+    this.menuSelected(this.default)
+    // this.testSource()
   }
 }
 </script>
