@@ -21,6 +21,7 @@ var toc = require('../../static/js/toc.js')
 md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji/light'))
 md.use(require('markdown-it-abbr'))
+md.use(require('markdown-it-mark'))
 // md.use(require('markdown-it-checkbox'))
 md.use(require('markdown-it-container'), 'abstract', {
   validate: function(params) {

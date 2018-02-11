@@ -22,7 +22,7 @@ Fang is fairly new to the organization, joining us in August. He has been a stro
 Co Founder and CTO at ndustrial.io
 07/26/2015
 
-We had Fang come in and help us get an admin portal up and running so we could more easily manage our system. He immediately started contributing and he obviously knew what he was doing when it came to *AngularJs*. He also helped us **improve our existing libraries** and wasn't afraid to give us pointers on how they could be improved -- a very good quality in a programmer. He has given us a very good foundation to build our application on going forward and we appreciate his hard work.
+We had Fang come in and help us get an admin portal up and running so we could more easily manage our system. He immediately started contributing and he obviously knew what he was doing when it came to *AngularJs*. He also helped us ==improve our existing libraries== and wasn't afraid to give us pointers on how they could be improved -- a very good quality in a programmer. He has given us a very good foundation to build our application on going forward and we appreciate his hard work.
 
 ## Steve Doyle
 President and CEO of NewStone Realty, LLC & Finder411

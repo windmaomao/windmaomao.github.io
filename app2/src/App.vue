@@ -77,14 +77,15 @@ Tags
 In this article, the author suggest a pattern recognition of revelation of middle grounds between origin and destination. Once identified, we need to claim the middle ground to promote effective usage, therefore speed up the transition into new territory.
 :::
 
+==Haha==
     `
     }
   },
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    this.menuSelected(this.default)
-    // this.testSource()
+    // this.menuSelected(this.default)
+    this.testSource()
   }
 }
 </script>
