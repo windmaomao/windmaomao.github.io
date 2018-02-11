@@ -18,10 +18,25 @@
 var md = require('markdown-it')()
 var toc = require('../../static/js/toc.js')
 
-md.use(require('markdown-it-emoji/light'))
 md.use(require('markdown-it-deflist'))
+md.use(require('markdown-it-emoji/light'))
 md.use(require('markdown-it-abbr'))
 // md.use(require('markdown-it-checkbox'))
+md.use(require('markdown-it-container'), 'abstract', {
+  validate: function(params) {
+    return params.trim().match(/^abstract\s+(.*)$/)
+  },
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^abstract\s+(.*)$/)
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<details><summary>' + md.utils.escapeHtml(m[1]) + '</summary>\n'
+    } else {
+      // closing tag
+      return '</details>\n'
+    }
+  }
+})
 
 export default {
   name: 'Main',

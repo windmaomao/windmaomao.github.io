@@ -8,7 +8,9 @@ tags:
 
 # Middle Ground, old dog gets new tricks
 
-> In this article, the author suggest a pattern recognition of revelation of middle grounds between origin and destination. Once identified, we need to claim the middle ground to promote effective usage, therefore speed up the transition into new territory.
+::: abstract
+In this article, the author suggest a pattern recognition of revelation of middle grounds between origin and destination. Once identified, we need to claim the middle ground to promote effective usage, therefore speed up the transition into new territory.
+:::
 
 ## Routine
 

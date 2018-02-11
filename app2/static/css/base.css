@@ -59,6 +59,10 @@ abbr {
   font-family: serif;
   cursor: help;
 }
+summary {
+  outline: 0;
+  cursor: pointer;
+}
 input[type=checkbox] {
   margin-right: 8px;
 }
