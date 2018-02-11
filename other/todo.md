@@ -5,6 +5,8 @@
 ### 2/11
 
 - Passport process :sweat:
+- Sparkline for markdown
+- MyDatepicker for angular1
 
 
 ### 2/10

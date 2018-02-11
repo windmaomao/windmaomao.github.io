@@ -44,6 +44,7 @@ dl {
 	margin: 1rem 0;
 }
 dt {
+  margin-top: 1rem;
   font-weight: bold;
 }
 dd {
@@ -51,4 +52,17 @@ dd {
 }
 dd p {
   margin: 0;
+}
+abbr {
+  text-decoration: none;
+  font-style: italic;
+  font-family: serif;
+  cursor: help;
+}
+summary {
+  outline: 0;
+  cursor: pointer;
+}
+input[type=checkbox] {
+  margin-right: 8px;
 }
