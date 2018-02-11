@@ -16,10 +16,10 @@
 
 <script>
 var md = require('markdown-it')()
-var emoji = require('markdown-it-emoji/light')
 var toc = require('../../static/js/toc.js')
 
-md.use(emoji)
+md.use(require('markdown-it-emoji/light'))
+md.use(require('markdown-it-deflist'))
 
 export default {
   name: 'Main',
