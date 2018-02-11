@@ -15,7 +15,7 @@
     <div id="navbar" class="navbar-menu"
       v-bind:class="{ 'is-active': toggled }"
     >
-      <div class="navbar-start">
+      <div class="navbar-start" v-if="admin">
         <a class="navbar-item" v-on:click="goto()">Home</a>
         <div class="navbar-item has-dropdown"
           v-bind:class="{ 'is-active': selected === t.type }"
@@ -48,9 +48,10 @@ export default {
   },
   data() {
     return {
+      admin: false,
       items: [],
       selected: '',
-      toggled: false,
+      toggled: false
     }
   },
   methods: {
@@ -66,7 +67,14 @@ export default {
       this.selected = (this.selected === type) ? '' : type
     },
     toggle: function() {
-      this.toggled = !this.toggled;
+      this.toggled = !this.toggled
+    },
+    getParams() {
+      var params = {}
+      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+        params[key] = value
+      })
+      this.admin = params['ad'] || false
     }
   },
   created() {
@@ -93,6 +101,7 @@ export default {
       { type: 'repository', title: 'Repos', items: repos },
       { type: 'other', title: 'Others', items: others }
     ]
+    this.getParams()
   }
 }
 </script>
