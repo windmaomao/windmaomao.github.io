@@ -41,10 +41,4 @@ export default {
 </script>
 
 <style>
-#themer {
-  position: fixed;
-  top: 8px;
-  right: 40px;
-  z-index: 2000;
-}
 </style>
