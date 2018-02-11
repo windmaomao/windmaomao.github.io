@@ -44,7 +44,7 @@ export default {
 #themer {
   position: fixed;
   top: 8px;
-  right: 10px;
+  right: 40px;
   z-index: 2000;
 }
 </style>

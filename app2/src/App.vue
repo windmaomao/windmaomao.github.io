@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-bind:class="{ 'spinning': spinning }">
     <vue-simple-spinner id="spinner"
-      v-show="spinning" :size="'medium'"
+      v-show="spinning" :size="'small'"
       :line-bg-color="'#154da1'" :line-fg-color="'#e14321'"
     />
     <Header @select="menuSelected" />
@@ -79,7 +79,7 @@ export default {
 #spinner {
   position: fixed;
   z-index: 1000;
-  top: 15px;
+  top: 18px;
   right: 15px;
 }
 </style>
