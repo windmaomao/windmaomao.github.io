@@ -44,6 +44,7 @@ dl {
 	margin: 1rem 0;
 }
 dt {
+  margin-top: 1rem;
   font-weight: bold;
 }
 dd {
@@ -51,4 +52,7 @@ dd {
 }
 dd p {
   margin: 0;
+}
+input[type=checkbox] {
+  margin-right: 8px;
 }

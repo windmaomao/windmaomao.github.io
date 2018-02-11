@@ -20,6 +20,7 @@ var toc = require('../../static/js/toc.js')
 
 md.use(require('markdown-it-emoji/light'))
 md.use(require('markdown-it-deflist'))
+// md.use(require('markdown-it-checkbox'))
 
 export default {
   name: 'Main',
