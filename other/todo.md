@@ -5,6 +5,7 @@
 ### 2/10
 
 - [ ] Add FeiFei $200
+- [ ] Purchase bonds
 
 
 ### 2/9 

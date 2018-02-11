@@ -79,22 +79,18 @@ export default {
 #spinner {
   position: fixed;
   z-index: 1000;
-  top: 14px;
-  right: 248px;
+  top: 15px;
+  right: 16px;
 }
 #themer {
   position: fixed;
   top: 8px;
-  right: 50px;
+  right: 46px;
   z-index: 2000;
 }
 @media only screen
 and (min-width : 1024px) {
-  #themer {
-    right: 16px;
-  }
-  #spinner {
-    right: 220px;
-  }
+  #themer {}
+  #spinner {}
 }
 </style>

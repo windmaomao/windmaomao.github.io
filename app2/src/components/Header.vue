@@ -2,21 +2,27 @@
   <nav class="navbar is-light is-fixed-top" role="navigation">
     <div class="navbar-brand">
       <a class="navbar-item"><img src="../assets/logo.png"></a>
-      <div class="navbar-burger burger" data-target="navbar" id="burger">
+      <div class="navbar-burger burger" data-target="navbar"
+        v-bind:class="{ 'is-active': toggled }"
+        v-on:click="toggle"
+      >
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
 
-    <div id="navbar" class="navbar-menu">
+    <div id="navbar" class="navbar-menu"
+      v-bind:class="{ 'is-active': toggled }"
+    >
       <div class="navbar-start">
         <a class="navbar-item" v-on:click="goto()">Home</a>
         <div class="navbar-item has-dropdown"
+          v-bind:class="{ 'is-active': selected === t.type }"
           v-for="t in types" v-bind:key="t.type"
         >
           <a class="navbar-link" v-on:click="select(t.type)">{{ t.title }}</a>
-          <div class="navbar-dropdown" v-show="selected === t.type">
+          <div class="navbar-dropdown">
             <a class="navbar-item capitalize"
               v-for="name in t.items" v-bind:key="name"
               v-on:click="goto(t.type, name)"
@@ -43,7 +49,8 @@ export default {
   data() {
     return {
       items: [],
-      selected: ''
+      selected: '',
+      toggled: false,
     }
   },
   methods: {
@@ -57,6 +64,9 @@ export default {
     },
     select: function(type) {
       this.selected = (this.selected === type) ? '' : type
+    },
+    toggle: function() {
+      this.toggled = !this.toggled;
     }
   },
   created() {
@@ -96,8 +106,5 @@ export default {
 }
 .navbar p {
   margin: 1em 0;
-}
-.navbar .navbar-dropdown {
-  display: initial;
 }
 </style>
