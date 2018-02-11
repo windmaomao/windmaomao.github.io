@@ -31,6 +31,7 @@ export default {
     return {
       spinning: true,
       domain: 'https://windmaomao.github.io/',
+      domain2: 'https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/',
       default: 'resume/profile-frontend',
       theme: 'whitey',
       source: ''
@@ -43,7 +44,7 @@ export default {
     fetchUrl: function(url) {
       this.spinning = true
       url = url || this.default
-      const fn = this.domain + url + '.md'
+      const fn = this.domain2 + url + '.md'
       this.$http.get(fn).then(res => {
         this.source = res.body
         this.spinning = false

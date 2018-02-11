@@ -6,27 +6,28 @@ Overall my past projects have 11 million users in production. Since 2016, my suc
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
-###### Skills
+Skills
 
-- 7 Years Prototyping with _Bootstrap_ and _Sass_
-- 4 Years _AngularJS_ and _Angular_ (2/4/5)
-- 4 Years IA, Mockup sketch and UI Design
-- 4 Years Project management with *Agile* workflow
-- 3 Years Async programming with promise/*observables*
-- 3 Years *API* and technical documentation
-- 2 Years _Java_/Oracle windows enterprise environment
+: - 7 Years Prototyping with _Bootstrap_ and _Sass_
+  - 4 Years _AngularJS_ and _Angular_ (2/4/5)
+  - 4 Years IA, Mockup sketch and UI Design
+  - 4 Years Project management with *Agile* workflow
+  - 3 Years Async programming with promise/*observables*
+  - 3 Years *API* and technical documentation
+  - 2 Years _Java_/Oracle windows enterprise environment
 
-###### Bonus
+Bonus
 
-- 15 Years Strong analytics skills in math, modeling, calculation and simulation
-- 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
+: - 15 Years Strong analytics skills in math, modeling, calculation and simulation
+  - 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
 
 ## Award
 
-### Recognition Award
-**Deutsche Bank**    
-**Nov 2017**    
-For the exceptional UI framework build
+Recognition Award
+
+: Deutsche Bank
+: Nov 2017
+: For the exceptional UI framework build
 
 ## Experience
 
@@ -47,27 +48,27 @@ The product provides a single UI for operations, container for apps in one place
   </div>
 ```
 
-###### Architect & Design
+Architect & Design
 
-- Support both *IE* 10/11 and *Chrome* browser
-- Use *Angular* and *Bootstrap* for fast development
-- Standardized style sheet for consistent look and feel
-- Extract color from design spec to form theme color base
-- Support light and dark themes and dynamic toggle in-between
-- Support dashboard layout with *Responsible* and *Flex* design
-- SVG icon design and packaging for common UI and business actions
-- Custom animation keyframe design with fallback to no-animation
+: - Support both *IE* 10/11 and *Chrome* browser
+  - Use *Angular* and *Bootstrap* for fast development
+  - Standardized style sheet for consistent look and feel
+  - Extract color from design spec to form theme color base
+  - Support light and dark themes and dynamic toggle in-between
+  - Support dashboard layout with *Responsible* and *Flex* design
+  - SVG icon design and packaging for common UI and business actions
+  - Custom animation keyframe design with fallback to no-animation
 
-###### Reusable Component
+Reusable Component
 
-- Reusable branding header, footer, menu as well as pluggable generic services
-- Directives for single and multiple select form input with consistent look and feel
-- Directives for regular and multiple range picker with consistent look and feel
-- Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
-- Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
-- Integration with authentication and authorization service for permission control
-- Service supporting both *Http* enabled spinning notification and manual toggle
-- Service supporting both generic user prompt and custom popup dialogs
+: - Reusable branding header, footer, menu as well as pluggable generic services
+  - Directives for single and multiple select form input with consistent look and feel
+  - Directives for regular and multiple range picker with consistent look and feel
+  - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
+  - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
+  - Integration with authentication and authorization service for permission control
+  - Service supporting both *Http* enabled spinning notification and manual toggle
+  - Service supporting both generic user prompt and custom popup dialogs
 
 ## Past Experience
 
