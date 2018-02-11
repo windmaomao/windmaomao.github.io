@@ -20,12 +20,12 @@
 
 ### 2/4
 
-- [x] Add investment finance log
+- [x] ~~Add investment finance log~~
 
 ### 2/3
 
-- [x] Support mobile display
-- [x] Add babel support
+- [x] ~~Support mobile display~~
+- [x] ~~Add babel support~~
 
 ### 1/31
 
@@ -33,5 +33,5 @@
 
 ### 1/30
 
-- [x] Balance and flow
+- [x] ~~Balance and flow~~
 - [ ] Find out Net magazine issue
