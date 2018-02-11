@@ -62,23 +62,20 @@ export default {
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    this.menuSelected(this.default)
-//     this.source = `
-// # Hello World
-// ## Test Def List
-// ### A Project
-// Term 1
+    // this.menuSelected(this.default)
+    this.source = `
+# Hello World
+## Test Def List
+### A Project
+Project
+: Single operation UI framework
 
-// : Definition 1
+Date
+: Oct 2017 -
 
-// Term 2 with *inline markup*
-
-// : Definition 2
-
-//       { some code, part of Definition 2 }
-
-//   Third paragraph of definition 2.
-//     `
+Keyword
+: *Angular, Sass, Highcharts, Ag-grid*
+    `
   }
 }
 </script>
