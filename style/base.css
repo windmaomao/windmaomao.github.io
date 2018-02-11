@@ -22,7 +22,7 @@
   right: 80px;
   z-index: 2000;
 }
-@media only screen 
+@media only screen
 and (min-width : 1024px) {
   #switcher {
     display: none;
@@ -52,7 +52,7 @@ and (min-width : 1024px) {
 #toc-button {
   display: none;
 }
-@media only screen 
+@media only screen
 and (min-width : 1200px) {
   .main.with-sidebar {
     padding-right: 60px;
@@ -69,7 +69,7 @@ and (min-width : 1200px) {
   z-index: 1000;
 }
 .footer p {
-  text-align: center;  
+  text-align: center;
 }
 
 #back-top {
@@ -84,7 +84,7 @@ and (min-width : 1200px) {
   list-style: none;
   text-align: initial;
   margin-top: 5px;
-  margin-bottom: 5px;  
+  margin-bottom: 5px;
   line-height: 18px;
 }
 #toc a {

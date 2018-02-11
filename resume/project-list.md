@@ -10,10 +10,15 @@ Prototype the website for dashboard and performance summary page
 ### Global Console - Angular 5
 
 Project
+
 :  Single operation UI framework
+
 Date
+
 :  Oct 2017 - 
+
 Keyword
+
 :  Angular, Sass, Highcharts, Ag-grid
 
 Highlights:
