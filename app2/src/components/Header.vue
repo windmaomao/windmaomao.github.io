@@ -84,13 +84,14 @@ export default {
       'tiny-upscaling', 'build-new-system', 'dynamic-static-approach',
       'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot'
     ]
-    const books = ['index', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead',
+    const books = ['index', 'pay-zero-taxes', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead',
       'bonds-unbeaten-path', 'five-rules-stock-investing', 'slash-retirement-risk'
     ]
+    const articles = ['fiscal-policy-adding-demand']
     const repos = ['angular2-mc-common', 'angular-mc-common', 'aof-form', 'kingslanding',
       'ng-admin-restify', 'mongoose-restify', 'event-services', 'dbvals-audit'
     ]
-    const financials = ['tree-structure', 'balace-sheet', 'income-statement', 'investment']
+    const financials = ['investment', 'balace-sheet', 'income-statement', 'tree-structure', 'pay-stub']
     const others = ['todo', 'purchase', 'project', 'publication', 'performance',
       'company', 'recommendation'
     ]
@@ -98,6 +99,7 @@ export default {
       { type: 'book', title: 'Books', items: books },
       { type: 'blog', title: 'Blogs', items: blogs },
       { type: 'finance', title: 'Financials', items: financials },
+      { type: 'article', title: 'Articles', items: articles },
       { type: 'repository', title: 'Repos', items: repos },
       { type: 'other', title: 'Others', items: others }
     ]
