@@ -4,20 +4,19 @@
 
 ### 2/11
 
-- Passport process :sweat:
-- Sparkline for markdown
-- MyDatepicker for angular1
+- Passport process :sweat: **2/15**
+- Sparkline for markdown :sunglasses:
 
 
 ### 2/10
 
 - Add FeiFei $200
-- Purchase bonds
+- Purchase bonds 
 
 
 ### 2/9 
 
-- Book chinese trip tickets
+- Book chinese trip tickets :worried: **3/15**
 - Study toc.js and marked.js
 
 ### 2/4
