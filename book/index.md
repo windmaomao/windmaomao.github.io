@@ -3,16 +3,17 @@
 | Title                           | Year | Category |
 | ------------------------------- | ---- | -------- |
 | **2018**                        |      |          |
-| Javascript by Example      |      |          |
-| Vue.js 2 Web Development      |      |          |
-| Bonds: The unbeaten path (**2**) |      |          |
-| Slash Your Retirement Risk      |      |          |
-| Five Rules for Successful Stock |      |          |
+| Pay Zero Taxes      | 2018 | Finance |
+| Javascript by Example      |      | Software |
+| Vue.js 2 Web Development      |      | Software |
+| Bonds: The unbeaten path (**2**) |      | Finance |
+| Slash Your Retirement Risk      |      | Finance |
+| Five Rules for Successful Stock |      | Finance |
 | Art of War - Wisdom             |      |          |
 | Art of War                      |      |          |
 | **2017**                        |      |          |
-| Trade Like an O'Neil Disciple   |      |          |
-| Expert Angular                  |      |          |
+| Trade Like an O'Neil Disciple   |      | Finance |
+| Expert Angular                  |      | Software |
 
 
 ## 2018
