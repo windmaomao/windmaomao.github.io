@@ -193,6 +193,44 @@ The Mother of All Tax Shelters!
 
 Want to invest in a tax shelter that puts a roof over your head? ==There are more tax advantages and exclusions with respect to your home than any other investment. It’s the American way—Mom, apple pie, and owning your own home.== Let’s look at all the deductions and benefits you get when you pay homage to the mortgage gods and go into more debt than your parents earned in their lifetimes.
 
+#### Tax
+
+First, you get to deduct all the real property taxes you pay. That includes all state or local taxes for the general welfare. It does not count any trash or garbage collection fees, or homeowner association charges specifically stated and billed.
+
+==There is no limit on the number of properties on which you can deduct taxes paid. If you have 10 homes, you can deduct the taxes on all 10.==
+
+#### Interest
+
+==Interest paid on the purchase of your principal residence is deductible.== You can even finance the buy of additional land adjacent to your home and deduct the interest as qualified residence interest. You can also deduct the interest you pay to buy a second residence or vacation home.
+
+There is a cap of one million dollars of acquisition indebtedness on which you can take a personal interest deduction. If you plan on spending more than $1 million for your house, call me and we will work something out.
+
+You can also deduct the interest on as much as $100,000 worth of home equity debt. As long as the house has the equity and the debt is secured by that equity, the IRS does not care what you do with the borrowed money. You can use it for whatever you want, including vacations, or a party to celebrate your newfound deductions.
+
+If you are in the 25 percent bracket, that means that $100 in interest paid only takes $75 out of your pocket. Uncle Sam pays the other $25 in income taxes foregone. Not a bad deal!
+
+#### Gain Exclusion
+
+If you qualify under the 2 out of 5 rule, you normally sign an affidavit at settlement. If the house sold for less than $250,000/$500,000, the sale amount is not even reported to the IRS because you have no tax liability on that sale.
+
+The Housing and Economic Recovery Act of 2008 changed the rules again. Prior to the Act, if a second home became a principal residence, after 2 years the owner could sell it and exclude up to $250,000 in gain from income—or up to $500,000 for couples filing jointly. Now, gain from the sale of a principal residence home will no longer be excluded from gross income for periods that the home was not used as the principal residence (“nonqualifying use”). This new income inclusion rule applies to home sales after December 31, 2008, and is based only on nonqualified use periods that begin on or after January 1, 2009. ==A period of absence (for example, vacations) generally counts as qualifying use if it occurs after the home was used as the principal residence.==
+
+The rental period (2010–2011) is nonqualifying use. All use post-December 31, 2011, qualifies, including 2014 when you moved out. You owned the property a total of 5 years (2010, 2011, 2012, 2013, 2014). Forty percent of the gain (2 years out of 5 owned) or $128,000 is taxable. The $20,000 gain attributable to depreciation is recaptured at rates as high as 25 percent. Up to $192,000 in gain can still be excluded.
+
+#### Home Offices
+
+Let’s assume you use 20 percent of your house as a home office. In the past, when you sold your house, 20 percent of the gain wouldn’t qualify for the exclusion because that 20 percent wasn’t used as a “residence.” It was used exclusively as your office.
+
+**New Rule**—The IRS doesn’t care! ==Even if you used your home 90 percent for business, as a home office, you can now exclude as much as 100 percent of your gain==, up to the $250,000/$500,000 limit!
+
+### 34 Unemployment Benefits
+
+For 2009 only, The American Recovery and Reinvestment Act of 2009 made the first $2,400 in unemployment benefits received, per recipient, tax-free.
+
+### 43 ABLE Accounts
+
+The Achieving a Better Life Experience (ABLE) Act of 2014 created a tax-favored savings account for people under the age of 26 who are blind or disabled.  
+
 ## Credits
 Dollar-for-Dollar Tax Reductions
 
