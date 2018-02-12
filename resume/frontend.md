@@ -23,7 +23,7 @@ Bonus
 
 ## Award
 
-:boom: Recognition Award [^recognition]
+Recognition Award [^recognition] :boom:
 
 : Deutsche Bank
 : Jan 2017
@@ -48,7 +48,7 @@ The product provides a single UI for operations, container for apps in one place
   </div>
 ```
 
-:blue_heart: Architect & Design
+Architect & Design
 
 : - Support both *IE* 10/11 and *Chrome* browser
   - Use *Angular* and *Bootstrap* for fast development
