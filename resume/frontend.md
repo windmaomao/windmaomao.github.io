@@ -167,7 +167,9 @@ University of California Irvine
 
 
 
-*[AngularJS]: JavaScript-based open-source front-end web application framework mainly maintained by Google
+*[AngularJS]: Javascript based open-source front-end web application framework mainly maintained by Google
+
+*[Drupal]: A free and open source content-management framework written in PHP
 
 
 [^recognition]: Deutsche Bank Recognition Awards, [2016](https://www.db.com/newsroom_news/2017/ghp/message-from-all-members-of-the-management-board-on-variable-compensation-for-2016-en-11452.htm)
