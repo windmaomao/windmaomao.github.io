@@ -1,6 +1,9 @@
 # Souped up growth
-: America’s extraordinary economic gamble
+
+America’s extraordinary economic gamble
+
 : Fiscal policy is adding to demand even as the economy is running hot
+: [Online](https://www.economist.com/news/leaders/21736513-fiscal-policy-adding-demand-even-economy-running-hot-americas-extraordinary)
 
 **VOLATILITY is back.** A long spell of calm, in which America’s stock market rose steadily without a big sell-off, ended abruptly this week. The catalyst was a report released on February 2nd showing that wage growth in America had accelerated. The S&P 500 fell by a bit that day, and by a lot on the next trading day. The Vix, an index that reflects how changeable investors expect equity markets to be, spiked from a sleepy 14 at the start of the month to an alarmed 37. In other parts of the world nerves frayed.
 

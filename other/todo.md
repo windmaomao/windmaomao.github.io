@@ -2,6 +2,10 @@
 
 ## 2018
 
+### 2/10
+
+- Load menu from json
+
 ### 2/11
 
 - Passport process :date: **2/15**
