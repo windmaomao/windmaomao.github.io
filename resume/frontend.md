@@ -171,6 +171,8 @@ University of California Irvine
 
 *[Drupal]: A free and open source content-management framework written in PHP
 
+*[Laravel]: A free, open-source PHP web framework following MVC architectural pattern
+
 
 [^recognition]: Deutsche Bank Recognition Awards, [2016](https://www.db.com/newsroom_news/2017/ghp/message-from-all-members-of-the-management-board-on-variable-compensation-for-2016-en-11452.htm)
 
