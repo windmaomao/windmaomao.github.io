@@ -4,7 +4,7 @@
 
 ### 2/11
 
-- Passport process :sweat: **2/15**
+- Passport process :date: **2/15**
 - Sparkline for markdown :sunglasses:
 
 
@@ -16,7 +16,7 @@
 
 ### 2/9 
 
-- Book chinese trip tickets :worried: **3/15**
+- Book chinese trip tickets :date: **3/15**
 - Study toc.js and marked.js
 
 ### 2/4
