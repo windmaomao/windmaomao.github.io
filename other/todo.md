@@ -5,7 +5,8 @@
 ### 2/13
 
 - :date: `2/16` Sync db project 
-
+- Update db project description from repo
+- Add open source project section
 
 ### 2/11
 
