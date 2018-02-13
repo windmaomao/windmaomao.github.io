@@ -15,12 +15,22 @@
 </template>
 
 <script>
-var md = require('markdown-it')()
 var toc = require('../../static/js/toc.js')
 
+var md = require('markdown-it')({
+  html: true,
+  highlight: function(str, lang) {
+    if (lang && window.hljs.getLanguage(lang)) {
+      try {
+        return window.hljs.highlight(lang, str).value
+      } catch (__) {}
+    }
+
+    return ''
+  }
+})
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
-// md.use(require('markdown-it-highlightjs'))
 md.use(require('markdown-it-emoji'))
 md.use(require('markdown-it-abbr'))
 md.use(require('markdown-it-mark'))
