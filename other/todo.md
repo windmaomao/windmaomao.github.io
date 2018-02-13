@@ -4,12 +4,12 @@
 
 ### 2/13
 
-- Sync db project :date: **2/16**
+- :date: `2/16` Sync db project 
 
 
 ### 2/11
 
-- Passport process :date: **2/15**
+- :date: `2/15` Passport process 
 - Sparkline for markdown :sunglasses:
 
 ### 2/10
@@ -19,7 +19,7 @@
 
 ### 2/9 
 
-- Book chinese trip tickets :date: **3/15**
+- :date:`3/15` Book chinese trip tickets 
 - Study toc.js and marked.js
 
 ### 2/4
@@ -32,5 +32,5 @@
 
 ### 1/30
 
-- ~~Balance and flow~~
+- :date:`1/31` ~~Balance and flow ~~
 - Find out Net magazine issue
