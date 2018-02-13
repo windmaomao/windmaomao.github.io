@@ -4,7 +4,7 @@
       v-show="spinning" :size="'small'"
       :line-bg-color="'#154da1'" :line-fg-color="'#e14321'"
     />
-    <Header @select="menuSelected" />
+    <Header :menu="menu" @select="menuSelected" />
     <Themer @theme="themeSwitched" />
     <Main :source="source" />
     <Footer/>
@@ -36,10 +36,18 @@ export default {
       // domain2: 'https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/',
       default: 'resume/frontend',
       theme: 'whitey',
-      source: ''
+      source: '',
+      menu: []
     }
   },
   methods: {
+    fetchMenu: function() {
+      this.spinning = true;
+      const fn = this.domain2 + 'static/json/menu.json'
+      this.$http.get(fn).then(res => {
+        console.log(res)
+      })
+    },
     menuSelected: function(url) {
       this.fetchUrl(url)
     },
@@ -75,6 +83,7 @@ belong to the previous footnote.
     }
   },
   created() {
+    this.fetchMenu()
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
     let md = this.paramsFromUrl()['md'] || this.default
