@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       spinning: true,
-      domain: 'https://windmaomao.github.io/',
+      domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
       // domain: 'https://windmaomao.github.io/',
       // domain2: 'https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/',
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     fetchMenu: function() {
-      const fn = this.domain + 'menu.json'
+      const fn = this.domain2 + 'menu.json'
       this.$http.get(fn).then(res => {
         this.menu = res.body
       })
