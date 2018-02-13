@@ -1,8 +1,29 @@
-# app2
+# QP KB
 
-> A Vue.js project
+## Contribute
 
-## Build Setup
+All files are in `markdown` format and can be checked in directly. 
+
+- Write an article in [Stackedit](https://stackedit.io/app) 
+- Sync it to [Github](https://github.com/windmaomao/windmaomao.github.io) folder
+- Update new menu entry to `menus.json` under `/static/json`
+- Check [Online](https://windmaomao.github.io)
+
+`markdown` format is easy to learn. Currently it supports
+
+- Basic markdown
+- Code highlight
+- GFM Tables
+- GFM Strikethrough
+- Footnote
+- Definition list
+- Abbreviation
+- Emoji
+- Container, abstract
+
+## Develop
+
+This is build via Vue.js 2.x, to develop
 
 ``` bash
 # install dependencies
@@ -18,4 +39,14 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Deploy
+
+After you build. 
+
+- Copy dist folder to root folder
+- Push to github
+- (Automatic) github -> git pages
+- (Automatic) github -> netlifty
+- Visit [Online](https://windmaomao.github.io)
+
+
