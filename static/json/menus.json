@@ -11,8 +11,10 @@
     "title": "Financial", "type": "finance",
     "items": ["investment", "balace-sheet", "income-statement", "tree-structure", "pay-stub"]
   },
+  {
     "title": "Articles", "type": "article",
     "items": ["fiscal-policy-adding-demand"]
+  },
   {
     "title": "Repos", "type": "repository",
     "items": ["angular2-mc-common", "angular-mc-common", "aof-form", "kingslanding", "ng-admin-restify", "mongoose-restify", "event-services", "dbvals-audit"]
