@@ -10,7 +10,7 @@
 ### 2/11
 
 - :date: `2/15` Passport process 
-- Sparkline for markdown :sunglasses:
+- :sunglasses: Sparkline for markdown
 
 ### 2/10
 
@@ -32,5 +32,5 @@
 
 ### 1/30
 
-- :date:`1/31` ~~Balance and flow ~~
+- :date:`1/31` ~~Balance and flow~~
 - Find out Net magazine issue
