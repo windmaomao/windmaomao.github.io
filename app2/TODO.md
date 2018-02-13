@@ -3,6 +3,8 @@
 ## 2/14
 - ~~bundle size too big with highlightjs~~
 - handle failure of loading md
+- handle spinning for multiple http
+- setup params as global resources
 
 ## 2/13
 - ~~Tag `br`, either support or remove~~
@@ -11,7 +13,7 @@
 - Error `#toc-15` doesn't match any element
 
 ## 2/10
-- Load menu from `json`
+- ~~Load menu from `json`~~
 
 ## 2/3
 - ~~Support mobile display~~

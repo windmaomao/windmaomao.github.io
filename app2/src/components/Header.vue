@@ -15,11 +15,11 @@
     <div id="navbar" class="navbar-menu"
       v-bind:class="{ 'is-active': toggled }"
     >
-      <div class="navbar-start" v-if="admin">
+      <div class="navbar-start" v-if="menu">
         <a class="navbar-item" v-on:click="goto()">Home</a>
         <div class="navbar-item has-dropdown"
           v-bind:class="{ 'is-active': selected === t.type }"
-          v-for="t in types" v-bind:key="t.type"
+          v-for="t in menu" v-bind:key="t.type"
         >
           <a class="navbar-link" v-on:click="select(t.type)">{{ t.title }}</a>
           <div class="navbar-dropdown">
@@ -46,9 +46,9 @@ export default {
       return value ? value.split('-').join(' ') : ''
     }
   },
+  props: ['menu'],
   data() {
     return {
-      admin: false,
       items: [],
       selected: '',
       toggled: false
@@ -70,34 +70,7 @@ export default {
       this.toggled = !this.toggled
     }
   },
-  created() {
-    const blogs = ['index', 'power-of-loss', 'identity-debt', 'sustainable-prototyping',
-      'protection-from-loss', 'perfect-google-map', 'middle-ground', 'reusable-form',
-      'helping-others', 'law-of-winning', 'reusable-components', 'angular-on-windows',
-      'tiny-upscaling', 'build-new-system', 'dynamic-static-approach',
-      'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot'
-    ]
-    const books = ['index', 'pay-zero-taxes', 'art-of-war', 'art-of-war-wisdom', 'big-shifts-ahead',
-      'bonds-unbeaten-path', 'five-rules-stock-investing', 'slash-retirement-risk'
-    ]
-    const articles = ['fiscal-policy-adding-demand']
-    const repos = ['angular2-mc-common', 'angular-mc-common', 'aof-form', 'kingslanding',
-      'ng-admin-restify', 'mongoose-restify', 'event-services', 'dbvals-audit'
-    ]
-    const financials = ['investment', 'balace-sheet', 'income-statement', 'tree-structure', 'pay-stub']
-    const others = ['todo', 'purchase', 'project', 'publication', 'performance',
-      'company', 'recommendation'
-    ]
-    this.types = [
-      { type: 'book', title: 'Books', items: books },
-      { type: 'blog', title: 'Blogs', items: blogs },
-      { type: 'finance', title: 'Financials', items: financials },
-      { type: 'article', title: 'Articles', items: articles },
-      { type: 'repository', title: 'Repos', items: repos },
-      { type: 'other', title: 'Others', items: others }
-    ]
-    this.admin = this.paramsFromUrl()['ad'] || false
-  }
+  created() {}
 }
 </script>
 

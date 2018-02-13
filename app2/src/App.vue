@@ -42,10 +42,9 @@ export default {
   },
   methods: {
     fetchMenu: function() {
-      this.spinning = true;
-      const fn = this.domain + 'static/json/menu.json'
+      const fn = this.domain + 'menu.json'
       this.$http.get(fn).then(res => {
-        console.log(res)
+        this.menu = res.body
       })
     },
     menuSelected: function(url) {
@@ -69,6 +68,13 @@ export default {
       }
       localStorage.setItem('qp-theme', theme)
     },
+    paramsFromUrl: function() {
+      let params = {}
+      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+        params[key] = value
+      })
+      return params
+    },
     testSource() {
       this.source = `
 Here is a footnote reference,[^1] and another.[^longnote]
@@ -83,11 +89,18 @@ belong to the previous footnote.
     }
   },
   created() {
-    this.fetchMenu()
+    let params = this.paramsFromUrl()
+
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    let md = this.paramsFromUrl()['md'] || this.default
+
+    let md = params['md'] || this.default
     this.menuSelected(md)
+
+    if (params['ad']) {
+      this.fetchMenu()
+    }
+
     // this.testSource()
   }
 }
