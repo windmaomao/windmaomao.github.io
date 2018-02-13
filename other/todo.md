@@ -2,21 +2,20 @@
 
 ## 2018
 
-### 2/10
+### 2/13
 
-- Load menu from json
+- Sync db project :date: **2/16**
+
 
 ### 2/11
 
 - Passport process :date: **2/15**
 - Sparkline for markdown :sunglasses:
 
-
 ### 2/10
 
 - Add FeiFei $200
 - Purchase bonds 
-
 
 ### 2/9 
 
@@ -26,11 +25,6 @@
 ### 2/4
 
 - ~~Add investment finance log~~
-
-### 2/3
-
-- ~~Support mobile display~~
-- ~~Add babel support~~
 
 ### 1/31
 
