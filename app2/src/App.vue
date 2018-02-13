@@ -77,7 +77,8 @@ belong to the previous footnote.
   created() {
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
-    this.menuSelected(this.default)
+    let md = this.paramsFromUrl()['md'] || this.default
+    this.menuSelected(md)
     // this.testSource()
   }
 }
