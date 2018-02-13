@@ -9,6 +9,8 @@
 - Add open source project section
 - Add repository / showcase section
 - :date: `2/14` Valentines day gift
+- :sunglasses: Add widget section, spec & snapshot
+- :date: `2/13` Cancel lucas plan
 
 ### 2/11
 
