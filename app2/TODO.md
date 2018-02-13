@@ -1,5 +1,8 @@
 # Todo
 
+## 2/14
+- bundle size too big with highlightjs
+
 ## 2/13
 - Tag `br`, either support or remove
 - Tag `pre` has white border
