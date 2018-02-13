@@ -1,0 +1,24 @@
+[
+  {
+    title: 'Books', type: 'book',
+    items: ['index', 'pay-zero-taxes', 'bonds-unbeaten-path', 'slash-retirement-risk', 'five-rules-stock-investing', 'art-of-war-wisdom', 'art-of-war', 'big-shifts-ahead']
+  },
+  {
+    title: 'Blogs', type: 'blog',
+	items: ['index', 'power-of-loss', 'identity-debt', 'sustainable-prototyping', 'protection-from-loss', 'perfect-google-map', 'middle-ground', 'reusable-form', 'helping-others', 'law-of-winning', 'reusable-components', 'angular-on-windows', 'tiny-upscaling', 'build-new-system', 'dynamic-static-approach', 'container-to-rescue', 'being-dependent', 'active-management', 'floating-pot']    
+  },
+  {
+    title: 'Financial', type: 'finance',
+    items: ['investment', 'balace-sheet', 'income-statement', 'tree-structure', 'pay-stub']
+  },
+    title: 'Articles', type: 'article',
+    items: ['fiscal-policy-adding-demand']
+  {
+    title: 'Repos', type: 'repository',
+    items: ['angular2-mc-common', 'angular-mc-common', 'aof-form', 'kingslanding', 'ng-admin-restify', 'mongoose-restify', 'event-services', 'dbvals-audit']
+  },
+  {
+    title: 'Others', type: 'other',
+    items: ['todo', 'purchase', 'project', 'publication', 'performance', 'company', 'recommendation']
+  }
+]
