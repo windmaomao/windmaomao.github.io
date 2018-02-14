@@ -2,15 +2,16 @@
 
 ## 2018
 
+### 2/14
+
+- ~~Add todo section~~
+
 ### 2/13
 
 - :date: `2/16` Sync db project 
-- Update db project description from repo
-- Add open source project section
-- Add repository / showcase section
-- :date: `2/14` Valentines day gift
-- :sunglasses: Add widget section, spec & snapshot
-- :date: `2/13` Cancel lucas plan
+- Update db project desc/photo
+- :date: `2/14` ~~Valentines day gift~~
+- :fire: :date: `2/13` Cancel lucas plan
 
 ### 2/11
 
