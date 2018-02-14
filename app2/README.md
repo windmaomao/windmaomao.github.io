@@ -11,15 +11,14 @@ All files are in `markdown` format and can be checked in directly.
 
 `markdown` format is easy to learn. Currently it supports
 
-- Basic markdown
-- Code highlight
-- GFM Tables
-- GFM Strikethrough
-- Footnote
-- Definition list
-- Abbreviation
-- Emoji
-- Container, abstract
+- GFM markdown [doc](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- Footnote [doc](https://github.com/markdown-it/markdown-it-footnote)
+- Definition list [doc](https://github.com/markdown-it/markdown-it-deflist)
+- Abbreviation [doc](https://github.com/markdown-it/markdown-it-abbr)
+- Emoji [doc](https://gist.github.com/rxaviers/7360908)
+- Container, abstract [doc](https://github.com/markdown-it/markdown-it-container)
+- Mark [doc](https://github.com/markdown-it/markdown-it-mark)
+- Image resize [doc](https://github.com/tatsy/markdown-it-imsize)
 
 ## Develop
 

@@ -83,9 +83,10 @@ Keywords: NodeJS, AngularJS
 Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
 
 ### DBVals Statement Audit
-4-eyes-check statement audit
-09/16/2015
-Keywords: AngularJS, Grunt
+Four-eyes-check statement audit
+
+: Date: 09/16/2015
+: Keywords: AngularJS, Grunt
 
 Served as a lead front-end architect of *AngularJS* and UI/UX for an enterprise statement 4-eyes-check solution for 25, 000 customers worldwide. I also **served as the sprint master for 8 people team (FA, QA, Dev and Owner etc.) in daily basis**. I drafted the migration plan and collected the preliminary analysis on-boarding 25,000 users to the company banking entitlement system. I also drafted the service layer for communicating with *Auth/WebSSO* entitlement service, which had been used by five other application since.
 
@@ -93,19 +94,19 @@ Served as a lead front-end architect of *AngularJS* and UI/UX for an enterprise 
 
 Highlights: 
 
-- Work with *Windows* environment
-- Design page layout with *Sketch*
-- Design front-end framework with custom *Grunt* build
-- Develop recipient email list directive
-- Unit test controller, directive and services
-- Generate code coverage 80% above
-- Perform parallel tasks on page load
-- Design multiple entity selector workflow
-- Add *CSRF* token protection for security
-- Add command line tool via flatiron
-- Work with *MongoDB* (monk) for bookkeeping
-- Work with *Oracle* database query and dump
-- Use request to issue service call to on-board user
+: - Work with *Windows* environment
+  - Design page layout with *Sketch*
+  - Design front-end framework with custom *Grunt* build
+  - Develop recipient email list directive
+  - Unit test controller, directive and services
+  - Generate code coverage 80% above
+  - Perform parallel tasks on page load
+  - Design multiple entity selector workflow
+  - Add *CSRF* token protection for security
+  - Add command line tool via flatiron
+  - Work with *MongoDB* (monk) for bookkeeping
+  - Work with *Oracle* database query and dump
+  - Use request to issue service call to on-board user
 
 ## People Designs
 ### Prepare for Your Care
