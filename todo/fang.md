@@ -7,7 +7,7 @@
 - :date: `2/16` Sync db project 
 - Update db project repo/desc/photo
 - :date: `2/14` ~~Valentines day gift~~
-- :fire: :date: `2/13` Cancel lucas plan
+- :date: `2/13` :fire: Cancel lucas plan  
 
 ### 2/11
 
