@@ -9,7 +9,7 @@
   },
   {
     "title": "Financial", "type": "finance",
-    "items": ["investment", "balace-sheet", "income-statement", "tree-structure", "pay-stub"]
+    "items": ["investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure"]
   },
   {
     "title": "Articles", "type": "article",
@@ -20,7 +20,11 @@
     "items": ["qp-knowledgebase", "angular2-mc-common", "angular-mc-common", "aof-form", "kingslanding", "ng-admin-restify", "mongoose-restify", "event-services", "dbvals-audit"]
   },
   {
+    "title": "Todo", "type": "todo",
+    "items": ["fang", "qp-knowledgebase", "angular2-mc-common"]
+  },
+  {
     "title": "Others", "type": "other",
-    "items": ["todo", "purchase", "project", "publication", "performance", "company", "recommendation"]
+    "items": ["conference", "purchase", "project", "publication", "performance", "company", "recommendation"]
   }
 ]
