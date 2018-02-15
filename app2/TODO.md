@@ -5,11 +5,11 @@
 - ~~Add todo section :sunglasses:~~
 - ~~bundle size too big with highlightjs~~
 - ~~remove `Home` link~~
+- ~~relocate `themer` to left and opaque~~
+- remember last visited link
 - handle failure of loading md
 - handle spinning for multiple http
 - setup params as global resources
-- remember last visited link
-- relocate `themer` to left and opaque
 
 ### 2/13
 - ~~Tag `br`, either support or remove~~
