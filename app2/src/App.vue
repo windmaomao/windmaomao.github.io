@@ -29,6 +29,7 @@ export default {
   },
   data () {
     return {
+      debug: false,
       spinning: true,
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
@@ -82,12 +83,9 @@ export default {
 ## Books
 ## Blogs
 
-[^1]: Here is the footnote.
+- [ ] apple
+- [x] orange
 
-[^longnote]: Here's one with multiple blocks.
-
-    Subsequent paragraphs are indented to show that they
-belong to the previous footnote.
       `
     }
   },
@@ -97,14 +95,17 @@ belong to the previous footnote.
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
 
-    let md = params['md'] || this.default
-    this.menuSelected(md)
-
     if (params['ad']) {
       this.fetchMenu()
     }
 
-    // this.testSource()
+    if (this.debug) {
+      this.testSource()
+      return
+    }
+
+    let md = params['md'] || this.default
+    this.menuSelected(md)
   }
 }
 </script>

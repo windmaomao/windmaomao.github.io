@@ -5,6 +5,10 @@
 
 ### 2/15
 
+- :date: `2/16` Chinese new year
+- Invest more `DRV`
+- Add checkbox
+
 ### 2/13
 
 - :date: `2/16` ~~Sync db project~~
@@ -32,13 +36,13 @@
 
 ### 2/4
 
-- ~~Add investment finance log~~
+- [x] ~~Add investment finance log~~
 
 ### 1/31
 
-- Adjust 401 contribution 
+- :mute: ~~Adjust 401 contribution~~ 
 
 ### 1/30
 
 - :date:`1/31` ~~Balance and flow~~
-- Find out Net magazine issue
+- :mute: Find out Net magazine issue
