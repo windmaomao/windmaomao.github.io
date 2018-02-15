@@ -111,7 +111,6 @@ belong to the previous footnote.
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 1;
-  padding-top: 60px;
 }
 #app.spinning {
   opacity: 0.6;

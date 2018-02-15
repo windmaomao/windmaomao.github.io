@@ -32,6 +32,8 @@ var md = require('markdown-it')({
 md.use(require('markdown-it-toc-and-anchor').default, {
   tocLastLevel: 3,
   anchorLink: false,
+  // anchorLinkBefore: false,
+  // anchorClassName: 'anchor'
 })
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
@@ -71,16 +73,7 @@ export default {
         that.compiledToc = html
       }})
     }
-  },
-  watch: {
-    // compiled: function() {
-    //   this.$nextTick(() => {
-    //     toc()
-    //   })
-    // }
-  },
-  created: function() {},
-  mounted: function() {}
+  }
 }
 </script>
 
