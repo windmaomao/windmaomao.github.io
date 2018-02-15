@@ -17,15 +17,14 @@
 
 ### 2/11
 
-- :date: `2/15` Passport process 
+- :date: `2/15` Passport process
 - :sunglasses: Sparkline for markdown
-
 [peity](https://github.com/vue-bulma/peity)
 [awesome](https://github.com/vuejs/awesome-vue#components--libraries)
 
 ### 2/10
 
-- Add FeiFei $200
+- ~~Add FeiFei $200~~
 - ~~Purchase bonds~~
 
 ### 2/9 
@@ -39,9 +38,9 @@
 
 ### 1/31
 
-- :x: Adjust 401 contribution {title=Deposit more for now}
+- :x: Adjust 401 contribution {title="Deposit more for now"}
 
 ### 1/30
 
 - :date: `1/31` ~~Balance and flow~~
-- :x: Find out Net magazine issue {title=Cannot reach them}
+- :x: Find out Net magazine issue {title="Cannot reach them"}

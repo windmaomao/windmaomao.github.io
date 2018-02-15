@@ -87,7 +87,7 @@ export default {
 
 - :x: Find out Net magazine issue {title=abc}
 - :white_check_mark: pieapple
-- :x: Cancelled
+- :x: Cancelled {.red}
 
       `
     }

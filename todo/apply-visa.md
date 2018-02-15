@@ -1,16 +1,16 @@
 # Apply Visa
 
-- Cover page for the agency 
-- Check for agency
-- One photo
-- Invitation letter
+- Cover page for the agency {.red}
+- Check for agency, agency name?
+- One photo {.red}
+- Invitation letter {.red}
 - Application form
-- Copy of passport
+- Copy of passport {.red}
 - Passport
-- Copy of past chinese visa
+- Copy of past chinese visa {.red}
 - Save a passport photo at home
 - Sponsor's ID copy
 
-- Parent's Driver licenses
+- Parent's Driver licenses {.red}
 - Feifei's birth certificate
 
