@@ -7,9 +7,6 @@
     <Header :menu="menu" @select="menuSelected" />
     <Themer @theme="themeSwitched" />
     <Main :source="source" />
-<div class="column">
-  <button class="button is-primary tooltip" data-tooltip="Tooltip Text">Tooltip</button>
-</div>
     <Footer/>
   </div>
 </template>
