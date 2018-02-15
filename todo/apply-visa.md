@@ -4,7 +4,7 @@
 - Check for agency, agency name?
 - One photo {.red}
 - Invitation letter {.red}
-- Application form
+- Application form {.red}
 - Copy of passport {.red}
 - Passport
 - Copy of past chinese visa {.red}
