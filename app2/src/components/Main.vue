@@ -15,7 +15,6 @@
 </template>
 
 <script>
-// var toc = require('../../static/js/toc.js')
 
 var md = require('markdown-it')({
   html: true,
@@ -31,7 +30,7 @@ var md = require('markdown-it')({
 })
 md.use(require('markdown-it-toc-and-anchor').default, {
   tocLastLevel: 3,
-  anchorLink: false,
+  anchorLink: false
   // anchorLinkBefore: false,
   // anchorClassName: 'anchor'
 })
@@ -78,6 +77,13 @@ export default {
 </script>
 
 <style>
+h1[id]:before, h2[id]:before, h3[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -110px;
+  height: 110px;
+  visibility: hidden;
+}
 .main {
   padding: 1rem 1.5rem;
 }
