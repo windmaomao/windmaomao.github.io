@@ -1,6 +1,6 @@
 <template>
   <div class="control has-icons-left" id="themer">
-    <a class="select">
+    <a class="select is-small">
       <select v-model="theme" v-on:change="switchTheme">
         <option v-bind:value="s"
           v-bind:key="s" v-for="s in themes">{{ s | capitalize }}
@@ -40,5 +40,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+#themer {
+  opacity: 0.2;
+  position: fixed;
+  top: 75px;
+  right: 80px;
+}
+#themer:hover {
+  opacity: 0.6;
+}
 </style>

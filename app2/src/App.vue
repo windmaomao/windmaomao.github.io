@@ -111,6 +111,7 @@ belong to the previous footnote.
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 1;
+  padding-top: 60px;
 }
 #app.spinning {
   opacity: 0.6;
@@ -120,16 +121,5 @@ belong to the previous footnote.
   z-index: 1000;
   top: 20px;
   right: 16px;
-}
-#themer {
-  position: fixed;
-  top: 8px;
-  right: 46px;
-  z-index: 2000;
-}
-@media only screen
-and (min-width : 1024px) {
-  #themer {}
-  #spinner {}
 }
 </style>

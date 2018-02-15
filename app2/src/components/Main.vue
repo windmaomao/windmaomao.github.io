@@ -7,7 +7,7 @@
             <a href="#app">Back to top</a>
         </div> -->
       </div>
-      <section class="section">
+      <section class="main">
         <div id="write" class="container" v-html="compiled"></div>
       </section>
     </template>
@@ -77,6 +77,9 @@ export default {
 </script>
 
 <style>
+.main {
+  padding: 1rem 1.5rem;
+}
 #write {
   max-width: 40em;
   margin: 0 auto;
@@ -87,7 +90,7 @@ export default {
   display: none;
   position: fixed;
   right: 0;
-  top: 100px;
+  top: 120px;
   bottom: 5px;
   width: 240px;
   margin: 0;
@@ -128,7 +131,6 @@ and (min-width : 1200px) {
   font-weight: bold;
 }
 #toc li.toc-h1 {
-  opacity: .6;
   margin: 10px;
 }
 #toc li.toc-h1.toc-visible {
@@ -136,7 +138,7 @@ and (min-width : 1200px) {
   opacity: 1;
 }
 #toc li.toc-h1 a {
-  font-size: 16px;
+  font-size: 18px;
 }
 #toc li.toc-h2 {
   padding-left: 10px;
