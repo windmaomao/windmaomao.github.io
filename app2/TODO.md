@@ -4,6 +4,7 @@
 
 ### 2/15
 - :x: Support checkbox and style it
+- use typescript class version
 
 ### 2/14
 - ~~Add todo section :sunglasses:~~
