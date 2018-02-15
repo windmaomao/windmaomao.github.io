@@ -1,12 +1,16 @@
 # QPlot Knowledgebase
 
 ## 2018
+
+### 2/15
+- :x: Support checkbox and style it
+
 ### 2/14
 - ~~Add todo section :sunglasses:~~
 - ~~bundle size too big with highlightjs~~
 - ~~remove `Home` link~~
 - ~~relocate `themer` to left and opaque~~
-- remember last visited link
+- ~~remember last visited link~~
 - handle failure of loading md
 - handle spinning for multiple http
 - setup params as global resources

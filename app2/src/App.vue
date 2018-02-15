@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      debug: true,
+      debug: false,
       spinning: true,
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
@@ -58,6 +58,7 @@ export default {
       this.$http.get(fn).then(res => {
         this.source = '[[toc]]\n' + res.body
         this.spinning = false
+        localStorage.setItem('qp-md', url)
       })
       window.location = '#'
     },
@@ -107,7 +108,8 @@ export default {
       return
     }
 
-    let md = params['md'] || this.default
+    let saved = localStorage.getItem('qp-md') || this.default
+    let md = params['md'] || saved
     this.menuSelected(md)
   }
 }
