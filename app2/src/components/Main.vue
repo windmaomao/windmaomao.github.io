@@ -2,7 +2,7 @@
   <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
     <template v-show="source">
       <div class="sidebar" v-show="sidebar">
-        <div id="toc" data-toc="h1,h2,h3" data-toc-offset="-100"></div>
+        <div id="toc" v-html="compiledToc"></div>
         <!-- <div id="back-top">
             <a href="#app">Back to top</a>
         </div> -->
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-var toc = require('../../static/js/toc.js')
+// var toc = require('../../static/js/toc.js')
 
 var md = require('markdown-it')({
   html: true,
@@ -28,6 +28,10 @@ var md = require('markdown-it')({
 
     return ''
   }
+})
+md.use(require('markdown-it-toc-and-anchor').default, {
+  tocLastLevel: 3,
+  anchorLink: false,
 })
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
@@ -55,21 +59,25 @@ export default {
   name: 'Main',
   data () {
     return {
-      sidebar: true
+      sidebar: true,
+      compiledToc: ''
     }
   },
   props: ['source'],
   computed: {
     compiled: function() {
-      return md.render(this.source)
+      let that = this
+      return md.render(this.source, { tocCallback: function(md, arr, html) {
+        that.compiledToc = html
+      }})
     }
   },
   watch: {
-    compiled: function() {
-      this.$nextTick(() => {
-        toc()
-      })
-    }
+    // compiled: function() {
+    //   this.$nextTick(() => {
+    //     toc()
+    //   })
+    // }
   },
   created: function() {},
   mounted: function() {}
@@ -110,15 +118,15 @@ and (min-width : 1200px) {
 #back-top {
   margin: 10px 18px;
 }
-#toc > ul {
-  padding: 0 8px;
+#toc ul {
+  padding: 0 8px 0 20px;
   margin: 0;
 }
 #toc li {
   list-style: none;
   text-align: initial;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   line-height: 18px;
 }
 #toc a {
@@ -127,26 +135,28 @@ and (min-width : 1200px) {
   text-decoration: none;
   font-size: 12px;
 }
-#toc li.toc-visible {
-  font-weight: bold;
+#toc > ul ul {
+  padding-left: 0px;
 }
-#toc li.toc-h1 {
-  margin: 10px;
+#toc > ul ul ul {
+  padding-left: 15px;
+}
+#toc > ul > li > a {
+  font-size: 16px;
+  opacity: 0.6;
+}
+#toc > ul ul a {
+  font-size: 14px;
+}
+#toc > ul ul ul a {
+  font-size: 12px;
+}
+
+/* #toc li.toc-visible {
+  font-weight: bold;
 }
 #toc li.toc-h1.toc-visible {
   font-weight: normal;
   opacity: 1;
-}
-#toc li.toc-h1 a {
-  font-size: 18px;
-}
-#toc li.toc-h2 {
-  padding-left: 10px;
-}
-#toc li.toc-h2 a {
-  font-size: 14px;
-}
-#toc li.toc-h3 {
-  padding-left: 25px;
-}
+} */
 </style>
