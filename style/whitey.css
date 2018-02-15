@@ -174,7 +174,6 @@ table tbody+tbody {
 
 .task-list-item {
 	padding-left: 1.6rem;
-	list-style: none;
 }
 
 .task-list-item input:before {

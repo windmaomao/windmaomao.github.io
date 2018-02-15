@@ -7,7 +7,7 @@
 
 - :date: `2/16` Chinese new year
 - Invest more `DRV`
-- [x] Add checkbox
+- :x: Support checkbox and style it
 
 ### 2/13
 
@@ -31,18 +31,18 @@
 
 ### 2/9 
 
-- :date:`3/15` Book china trip tickets 
+- :date: `3/15` Book china trip tickets 
 - ~~Study markdown-it process~~
 
 ### 2/4
 
-- [x] ~~Add investment finance log~~
+- ~~Add investment finance log~~
 
 ### 1/31
 
-- :mute: ~~Adjust 401 contribution~~ 
+- :x: Adjust 401 contribution
 
 ### 1/30
 
-- :date:`1/31` ~~Balance and flow~~
-- :mute: Find out Net magazine issue
+- :date: `1/31` ~~Balance and flow~~
+- :x: Find out Net magazine issue

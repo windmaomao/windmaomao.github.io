@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      debug: false,
+      debug: true,
       spinning: true,
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
@@ -85,6 +85,9 @@ export default {
 
 - [ ] apple
 - [x] orange
+
+- :white_check_mark: pieapple
+- :x: Cancelled
 
       `
     }
