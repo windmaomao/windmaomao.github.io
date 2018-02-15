@@ -21,7 +21,7 @@
   },
   {
     "title": "Todo", "type": "todo",
-    "items": ["fang", "qp-knowledgebase", "angular2-mc-common"]
+    "items": ["fang", "apply-visa", "qp-knowledgebase", "angular2-mc-common", "angular-mc-common"]
   },
   {
     "title": "Others", "type": "other",
