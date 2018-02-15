@@ -1,12 +1,12 @@
 <template>
   <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
     <template v-show="source">
-      <div class="sidebar" v-show="sidebar">
+      <!-- <div class="sidebar" v-show="sidebar">
         <div id="toc" v-html="compiledToc"></div>
-        <!-- <div id="back-top">
+        <div id="back-top">
             <a href="#app">Back to top</a>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
       <section class="main">
         <div id="write" class="container" v-html="compiled"></div>
       </section>
@@ -28,11 +28,9 @@ var md = require('markdown-it')({
     return ''
   }
 })
-md.use(require('markdown-it-toc-and-anchor').default, {
-  tocLastLevel: 3,
-  anchorLink: false
-  // anchorLinkBefore: false,
-  // anchorClassName: 'anchor'
+md.use(require('markdown-it-table-of-contents'), {
+  containerClass: 'sidebar toc',
+  includeLevel: [1, 2, 3]
 })
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
@@ -117,37 +115,37 @@ and (min-width : 1200px) {
 #back-top {
   margin: 10px 18px;
 }
-#toc ul {
+.toc ul {
   padding: 0 8px 0 20px;
   margin: 0;
 }
-#toc li {
+.toc li {
   list-style: none;
   text-align: initial;
   margin-top: 6px;
   margin-bottom: 6px;
   line-height: 18px;
 }
-#toc a {
+.toc a {
   color: inherit;
   text-align: left;
   text-decoration: none;
   font-size: 12px;
 }
-#toc > ul ul {
+.toc > ul ul {
   padding-left: 0px;
 }
-#toc > ul ul ul {
+.toc > ul ul ul {
   padding-left: 15px;
 }
-#toc > ul > li > a {
+.toc > ul > li > a {
   font-size: 16px;
   opacity: 0.6;
 }
-#toc > ul ul a {
+.toc > ul ul a {
   font-size: 14px;
 }
-#toc > ul ul ul a {
+.toc > ul ul ul a {
   font-size: 12px;
 }
 

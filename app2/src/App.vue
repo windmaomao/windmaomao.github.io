@@ -55,7 +55,7 @@ export default {
       url = url || this.default
       const fn = this.domain2 + url + '.md'
       this.$http.get(fn).then(res => {
-        this.source = res.body
+        this.source = '[[toc]]\n' + res.body
         this.spinning = false
       })
       window.location = '#'
@@ -77,7 +77,10 @@ export default {
     },
     testSource() {
       this.source = `
-Here is a footnote reference,[^1] and another.[^longnote]
+[[toc]]
+# Resume
+## Books
+## Blogs
 
 [^1]: Here is the footnote.
 
