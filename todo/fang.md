@@ -7,7 +7,7 @@
 
 - :date: `2/16` Chinese new year
 - Invest more `DRV`
-- Add checkbox
+- [x] Add checkbox
 
 ### 2/13
 

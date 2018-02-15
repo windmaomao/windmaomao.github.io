@@ -33,12 +33,12 @@ md.use(require('markdown-it-table-of-contents'), {
   includeLevel: [1, 2, 3]
 })
 md.use(require('markdown-it-anchor'), {})
+md.use(require('markdown-it-task-checkbox'))
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji'))
 md.use(require('markdown-it-abbr'))
 md.use(require('markdown-it-mark'))
-md.use(require('markdown-it-checkbox'))
 md.use(require('markdown-it-container'), 'abstract', {
   validate: function(params) {
     return params.trim().match(/^abstract\s+(.*)$/)
