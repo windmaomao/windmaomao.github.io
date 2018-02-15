@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar is-light is-fixed-top" role="navigation">
     <div class="navbar-brand">
-      <a class="navbar-item"><img src="../assets/logo.png"></a>
+      <a class="navbar-item" v-on:click="goto()"><img src="../assets/logo.png"></a>
       <div class="navbar-burger burger" data-target="navbar"
         v-bind:class="{ 'is-active': toggled }"
         v-on:click="toggle"
@@ -16,7 +16,6 @@
       v-bind:class="{ 'is-active': toggled }"
     >
       <div class="navbar-start" v-if="menu">
-        <a class="navbar-item" v-on:click="goto()">Home</a>
         <div class="navbar-item has-dropdown"
           v-bind:class="{ 'is-active': selected === t.type }"
           v-for="t in menu" v-bind:key="t.type"
