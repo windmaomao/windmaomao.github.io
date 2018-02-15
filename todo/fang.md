@@ -7,6 +7,7 @@
 
 - :date: `2/16` Chinese new year
 - Invest more `DRV`
+- :date: `2/25` Check investment tax
 
 ### 2/13
 
@@ -17,7 +18,7 @@
 
 ### 2/11
 
-- :date: `2/17` Passport {.red} [todo](https://windmaomao.github.io/?md=todo/apply-visa)
+- :date: `2/17` Passport [todo](https://windmaomao.github.io/?md=todo/apply-visa) {.red}
 - :sunglasses: Sparkline for markdown
 [peity](https://github.com/vue-bulma/peity)
 [awesome](https://github.com/vuejs/awesome-vue#components--libraries)
@@ -43,4 +44,4 @@
 ### 1/30
 
 - :date: `1/31` ~~Balance and flow~~
-- :x: Find out Net magazine issue {title="Cannot reach them"}
+- ~~Find out Net magazine issue~~

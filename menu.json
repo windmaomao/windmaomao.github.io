@@ -1,7 +1,7 @@
 [
   {
     "title": "Books", "type": "book",
-    "items": ["index", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "big-shifts-ahead"]
+    "items": ["index", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "big-shifts-ahead", "mu-ai-ning-xiang"]
   },
   {
     "title": "Blogs", "type": "blog",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Financial", "type": "finance",
-    "items": ["investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure"]
+    "items": ["investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment"]
   },
   {
     "title": "Articles", "type": "article",
