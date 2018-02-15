@@ -39,9 +39,9 @@
 
 ### 1/31
 
-- :x: Adjust 401 contribution
+- :x: Adjust 401 contribution {title=Deposit more for now}
 
 ### 1/30
 
 - :date: `1/31` ~~Balance and flow~~
-- :x: Find out Net magazine issue
+- :x: Find out Net magazine issue {title=Cannot reach them}

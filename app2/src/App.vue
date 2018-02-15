@@ -29,6 +29,7 @@ export default {
   },
   data () {
     return {
+      // debug: true,
       debug: false,
       spinning: true,
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
@@ -84,9 +85,7 @@ export default {
 ## Books
 ## Blogs
 
-- [ ] apple
-- [x] orange
-
+- :x: Find out Net magazine issue {title=abc}
 - :white_check_mark: pieapple
 - :x: Cancelled
 

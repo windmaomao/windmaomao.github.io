@@ -53,6 +53,7 @@ md.use(require('markdown-it-container'), 'abstract', {
     }
   }
 })
+md.use(require('markdown-it-attrs'))
 
 export default {
   name: 'Main',
