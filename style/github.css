@@ -195,7 +195,7 @@ li p.first {
 }
 ul,
 ol {
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
 ul:first-child,
 ol:first-child {
@@ -349,7 +349,7 @@ tt {
 	color: inherit;
 }
 
-.md-toc { 
+.md-toc {
     margin-top:20px;
     padding-bottom:20px;
 }
