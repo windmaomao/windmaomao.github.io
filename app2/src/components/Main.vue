@@ -32,6 +32,7 @@ md.use(require('markdown-it-table-of-contents'), {
   containerClass: 'sidebar toc',
   includeLevel: [1, 2, 3]
 })
+md.use(require('markdown-it-anchor'), {})
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji'))
