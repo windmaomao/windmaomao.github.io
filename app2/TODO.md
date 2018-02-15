@@ -6,6 +6,7 @@
 - :x: Support checkbox and style it
 - use typescript class version
 - add hover note capability
+- add sass to the build
 
 ### 2/14
 - ~~Add todo section :sunglasses:~~

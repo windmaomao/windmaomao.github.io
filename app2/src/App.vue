@@ -7,11 +7,15 @@
     <Header :menu="menu" @select="menuSelected" />
     <Themer @theme="themeSwitched" />
     <Main :source="source" />
+<div class="column">
+  <button class="button is-primary tooltip" data-tooltip="Tooltip Text">Tooltip</button>
+</div>
     <Footer/>
   </div>
 </template>
 
 <script>
+import './assets/styles.scss'
 import Header from './components/Header'
 import Themer from './components/Themer'
 import Main from './components/Main'
@@ -85,7 +89,7 @@ export default {
 ## Books
 ## Blogs
 
-- :x: Find out Net magazine issue {title=abc}
+- :x: *Find out Net magazine issue*{data-tooltip="Cannot reach them"}{.tooltip}
 - :white_check_mark: pieapple
 - :x: Cancelled {.red}
 
