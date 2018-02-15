@@ -63,7 +63,7 @@ Reusable Component
 
 : - Reusable branding header, footer, menu as well as pluggable generic services
   - Directives for single and multiple select form input with consistent look and feel
-  - Directives for regular and multiple range picker with consistent look and feel
+  - Directives for date picker and date range picker with consistent look and feel
   - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
   - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
   - Integration with authentication and authorization service for permission control
