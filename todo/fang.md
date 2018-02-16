@@ -1,7 +1,10 @@
-
 # Fang
 
 ## 2018
+
+### 2/16
+
+- Setup `Vue` project
 
 ### 2/15
 
