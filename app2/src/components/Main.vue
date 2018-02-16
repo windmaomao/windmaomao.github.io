@@ -28,9 +28,7 @@ var md = require('markdown-it')({
     return ''
   }
 })
-md.use(require('markdown-it-front-matter'), function(fm) {
-  console.log(fm)
-})
+// md.use(require('markdown-it-front-matter'), function(fm) {})
 md.use(require('markdown-it-table-of-contents'), {
   containerClass: 'sidebar toc',
   includeLevel: [1, 2, 3]
