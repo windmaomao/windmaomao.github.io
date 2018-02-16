@@ -173,9 +173,6 @@ The implementation of `shouldComponentUpdate()` is pretty simple. And it’s not
 
 ## Excel: A Fancy Table
 
-### Data First
-
-
 Given 
 
 ```javascript
@@ -261,18 +258,13 @@ Imagine someone encounters a bug while using your app—she can click a button t
 
 ## JSX
 
-### Spread Attributes
+One inconvenience with that many function calls is that it’s a little hard to keep up with all the parentheses and curly braces you need to close. There’s an easier way: `JSX`.
 
-```javascript
-var attr = {
-  href: 'http://example.org',
-  target: '_blank',
-};
+Babel (formerly known as 6to5) is an open source transpiler that supports the latest JavaScript features and also includes `JSX` support. It’s a prerequisite to using `JSX`.
 
-return <a {...attr}>Hello</a>;
+ the JSX transform is lightweight and simple: the JSX source of “Hello World” becomes a series of calls to React.createElement(), using the same functional syntax you’re already familiar with. It’s just JavaScript, so it’s easy to read and understand.
 
-```
-## Setup
+## Setup Development
 
 ### Modules
 
