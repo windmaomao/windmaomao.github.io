@@ -32,7 +32,7 @@ md.use(require('markdown-it-table-of-contents'), {
   containerClass: 'sidebar toc',
   includeLevel: [1, 2, 3]
 })
-// md.use(require('markdown-it-anchor'), {})
+md.use(require('markdown-it-anchor/lib'), {})
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji'))
@@ -54,6 +54,7 @@ md.use(require('markdown-it-container'), 'abstract', {
   }
 })
 // md.use(require('markdown-it-attrs'))
+md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'))
 
 export default {
   name: 'Main',
