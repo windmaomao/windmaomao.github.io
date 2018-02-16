@@ -18,6 +18,7 @@ import Themer from './components/Themer'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import VueSimpleSpinner from 'vue-simple-spinner'
+import Test from './components/Test'
 
 export default {
   name: 'App',
@@ -26,7 +27,8 @@ export default {
     Header,
     Themer,
     Main,
-    Footer
+    Footer,
+    Test
   },
   data () {
     return {
