@@ -82,7 +82,7 @@ export default {
       return params
     },
     testSource() {
-      this.source = `
+      this.source = `---\ntitle: This is the Title\n---\n# Heading\n----\nsome text
 [[toc]]
 # Resume
 ## Books
