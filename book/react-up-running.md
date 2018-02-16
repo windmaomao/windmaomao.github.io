@@ -171,4 +171,211 @@ The implementation of `shouldComponentUpdate()` is pretty simple. And it’s not
   }
 ```
 
+## Excel: A Fancy Table
+
+### Data First
+
+
+Given 
+
+```javascript
+var headers = [
+  "Book", "Author", "Language", "Published", "Sales"
+];
+
+var data = [
+  ["The Lord of the Rings", "J. R. R. Tolkien",
+    "English", "1954–1955", "150 million"],
+  ["Le Petit Prince (The Little Prince)", "Antoine de Saint-Exupéry",
+    "French", "1943", "140 million"],
+  ["Harry Potter and the Philosopher's Stone", "J. K. Rowling",
+    "English", "1997", "107 million"],
+  ["And Then There Were None", "Agatha Christie",
+    "English", "1939", "100 million"],
+  ["Dream of the Red Chamber", "Cao Xueqin",
+    "Chinese", "1754–1791", "100 million"],
+  ["The Hobbit", "J. R. R. Tolkien",
+    "English", "1937", "100 million"],
+  ["She: A History of Adventure", "H. Rider Haggard",
+    "English", "1887", "100 million"],
+];
+```
+
+Render
+
+```javascript
+getInitialState: function() {
+  return {data: this.props.initialData};
+},
+
+render: function() {
+  return (
+    React.DOM.table(null,
+      React.DOM.thead(null,
+        React.DOM.tr(null,
+          this.props.headers.map(function(title, idx) {
+            return React.DOM.th({key: idx}, title);
+          })
+        )
+      ),
+      React.DOM.tbody(null,
+        this.state.data.map(function(row, idx) {
+          return (
+            React.DOM.tr({key: idx},
+              row.map(function(cell, idx) {
+                return React.DOM.td({key: idx}, cell);
+              })
+            )
+          );
+        })
+      )
+    )
+  );
+}
+```
+
+and for multiple parts 
+
+```javascript
+render: function() {
+  return (
+    React.DOM.div(null,
+      this._renderToolbar(),
+      this._renderTable()
+    )
+  );
+},
+
+_renderToolbar: function() {
+  // TODO
+},
+
+_renderTable: function() {
+  // same as the function formerly known as `render()`
+},
+```
+
+> As you know now, your components worry about their state and let React render and rerender whenever appropriate. This means that given the same data (state and properties), the application will look exactly the same, no matter what changed before or after this particular data state. This gives you a great debugging-in-the-wild opportunity.
+
+Imagine someone encounters a bug while using your app—she can click a button to report the bug without needing to explain what happened. ==The bug report can just send you back a copy of `this.state` and `this.props`, and you should be able to re-create the exact application state and see the visual result.==
+
+## JSX
+
+### Spread Attributes
+
+```javascript
+var attr = {
+  href: 'http://example.org',
+  target: '_blank',
+};
+
+return <a {...attr}>Hello</a>;
+
+```
+## Setup
+
+### Modules
+
+> The JavaScript community came up with several ideas for JavaScript modules and one of the ideas that was widely adopted is `CommonJS`. In `CommonJS`, you have code in a file that, once done, exports one or more symbols.
+
+```javascript
+var React = require('react');
+var Logo = React.createClass({/* ... */});
+module.exports = Logo;
+``` 
+
+### ECMAScript Modules
+
+ECMAScript specifications propose to take this idea even further and introduce new syntax. You can benefit from the new syntax because `Babel` has your back when it comes to transpiling the new syntax down to something browsers can stomach.
+
+When declaring dependencies on other modules, instead of `require` you do `import`.
+
+```javascript
+import React from 'react';
+
+export default Logo
+```
+
+### Classes
+
+ECMAScript now has classes, so let’s benefit from the new syntax.
+
+```javascript
+class Logo extends React.Component {
+  someMethod() {}
+  another() {}
+  render() {
+    return <div className="Logo" />;
+  }
+}
+```
+
+### Altogether
+
+Here's the final version of `app.js`
+
+```javascript
+'use strict'; // always a good idea
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Logo from './components/Logo';
+
+ReactDOM.render(
+  <h1>
+    <Logo /> Welcome to The App!
+  </h1>,
+  document.getElementById('app')
+);
+```
+
+and `Logo.js`
+
+```javascript
+import React from 'react';
+
+class Logo extends React.Component {
+  render() {
+    return <div className="Logo" />;
+  }
+}
+
+export default Logo
+```
+
+### Build
+
+First, transpile JavaScript with Babel:
+
+```bash
+babel --presets react,es2015 js/source -d js/build
+```
+
+Next comes packaging:
+
+```bash
+browserify js/build/app.js -o bundle.js
+```
+
+Package `CSS`
+
+```bash
+cat css/*/* css/*.css | sed 's/..\/..\/images/images/g' > bundle.css
+```
+
+Watch changes
+
+```bash
+watch "sh scripts/build.sh" js/source css
+```
+
+### Deploy
+
+Deploying your app is now not a big deal, because you’re already building as you go, so there shouldn’t be any surprises. Before your app hits live users, you may need to do some extra processing, though, such as minification and image optimization.
+
+```bash
+uglify -s bundle.js -o __deployme/bundle.js
+cssshrink bundle.css > __deployme/bundle.css
+```
+
 
