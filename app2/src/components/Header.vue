@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar is-light is-fixed-top" role="navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" v-on:click="goto()"><img src="../assets/logo.png"></a>
+      <a class="navbar-item" v-on:click="goto()">
+        <img src="../assets/logo.png" class="logo" />
+      </a>
       <div class="navbar-burger burger" data-target="navbar"
         v-bind:class="{ 'is-active': toggled }"
         v-on:click="toggle"
@@ -83,4 +85,13 @@ export default {
 .navbar p {
   margin: 1em 0;
 }
+.logo {
+  animation: logo-spin infinite 20s linear;
+  height: 80px;
+}
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 </style>
