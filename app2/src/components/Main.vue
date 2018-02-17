@@ -1,5 +1,6 @@
 <template>
   <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
+    <Headful :title="title" />
     <template v-show="source">
       <!-- <div class="sidebar" v-show="sidebar">
         <div id="toc" v-html="compiledToc"></div>
@@ -67,16 +68,43 @@ export default {
   data () {
     return {
       sidebar: true,
-      compiledToc: ''
+      compiledToc: '',
+      title: 'Fang Jin'
     }
   },
   props: ['source'],
   computed: {
     compiled: function() {
       let that = this
-      return md.render(this.source, { tocCallback: function(md, arr, html) {
-        that.compiledToc = html
-      }})
+      let env = {
+        tocCallback: function(md, arr, html) {
+          that.compiledToc = html
+        },
+        title: ''
+      }
+      const rendered = md.render(this.source, env)
+      that.title = env.title
+      return rendered
+    }
+  },
+  created: function() {
+    const originalHeadingOpen = md.renderer.rules.heading_open
+    const level = 1
+
+    md.renderer.rules.heading_open = function (...args) {
+      const [ tokens, idx, , env, self ] = args
+
+      if (!env.title && (level < 1 || tokens[idx].tag === `h${level}`)) {
+        env.title = tokens[idx + 1].children
+          .reduce((acc, t) => acc + t.content, '')
+      }
+
+      // Execute original rule.
+      if (originalHeadingOpen) {
+        return originalHeadingOpen.apply(this, args)
+      } else {
+        return self.renderToken(...args)
+      }
     }
   }
 }
@@ -91,7 +119,13 @@ h1[id]:before, h2[id]:before, h3[id]:before {
   visibility: hidden;
 }
 .main {
-  padding: 1rem 1.5rem;
+  padding: 1rem 0.5rem;
+}
+@media only screen
+and (min-width: 768px) {
+  .main {
+    padding: 1rem 1.5rem;
+  }
 }
 #write {
   max-width: 40em;

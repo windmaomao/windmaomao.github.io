@@ -7,6 +7,7 @@
 - ~~make url to open to new tab~~
 - add option object to hold second footer
 - change page title as doc title
+- fix style for iphone
 
 ### 2/15
 - :x: Support checkbox and style it

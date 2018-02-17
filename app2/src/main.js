@@ -2,15 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueResource from 'vue-resource'
+import vueHeadful from 'vue-headful'
 import App from './App'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
+Vue.component('Headful', vueHeadful)
 
 // Global mixins
 let paramsMixin = {
-  methods: {
-  }
+  methods: {}
 }
 Vue.mixin(paramsMixin)
 
