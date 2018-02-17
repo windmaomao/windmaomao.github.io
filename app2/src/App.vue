@@ -1,9 +1,5 @@
 <template>
   <div id="app" v-bind:class="{ 'spinning': spinning }">
-    <vue-simple-spinner id="spinner"
-      v-show="spinning" :size="'small'"
-      :line-bg-color="'#154da1'" :line-fg-color="'#e14321'"
-    />
     <Header :menu="menu" @select="menuSelected" />
     <Themer @theme="themeSwitched" />
     <Main :source="source" />
@@ -17,13 +13,11 @@ import Header from './components/Header'
 import Themer from './components/Themer'
 import Main from './components/Main'
 import Footer from './components/Footer'
-import VueSimpleSpinner from 'vue-simple-spinner'
 import Test from './components/Test'
 
 export default {
   name: 'App',
   components: {
-    VueSimpleSpinner,
     Header,
     Themer,
     Main,
@@ -124,12 +118,6 @@ export default {
   opacity: 1;
 }
 #app.spinning {
-  opacity: 0.6;
-}
-#spinner {
-  position: fixed;
-  z-index: 1000;
-  top: 20px;
-  right: 16px;
+  opacity: 0.4;
 }
 </style>

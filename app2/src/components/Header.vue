@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar is-light is-fixed-top" role="navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" v-on:click="goto()">
+      <a class="navbar-item logo-wrapper" v-on:click="goto()">
         <img src="../assets/logo.png" class="logo" />
       </a>
       <div class="navbar-burger burger" data-target="navbar"
@@ -87,11 +87,36 @@ export default {
 }
 .logo {
   animation: logo-spin infinite 20s linear;
-  height: 80px;
+}
+.spinning .logo-wrapper {
+  -webkit-animation: flickerAnimation 1s infinite;
+  -moz-animation: flickerAnimation 1s infinite;
+  -o-animation: flickerAnimation 1s infinite;
+  animation: flickerAnimation 1s infinite;
 }
 @keyframes logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
 }
 
 </style>
