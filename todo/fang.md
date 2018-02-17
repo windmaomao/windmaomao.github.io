@@ -5,6 +5,7 @@
 ### 2/16
 
 - :date: `2/23` Learn `React`
+- Study yellow fever vaccine
 
 ### 2/15
 

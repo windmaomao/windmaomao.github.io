@@ -4,7 +4,19 @@
 
 ## Book Ticket
 
-- Book tickets [online](https://www.justfly.com)
+Book tickets [online](https://www.justfly.com)
+
+: Dates: 06/22 - 07/06 ? {.red}
+
+: From: RDU
+
+: To: Shanghai, which one ? {.red}
+
+: Layover: Toronto
+
+: Airline: Air Canada
+
+: Price: around $1,200 each
 
 ## Apply Visa
 
@@ -72,5 +84,14 @@ Checklist
 - Copy of the Invoice/Receipt (please go to [our website](www.visamailservice.com) to complete a free online registration, you will get the invoice/receipt at the end.)
 - You can either pay online with your credit card or include a check in your package, with the total amount shown one the invoice/receipt, payable to VisaMailService.COM.
 
+
+### Duration
+
+- Standard: 8-10 days, Express: 4-5 days
+
+### Expense
+
+- $210.00 for each person
+- $30 for each photo
 
 [^visa]: China Embassy Visa Type [online](http://www.china-embassy.org/eng/visas/hrsq/)
