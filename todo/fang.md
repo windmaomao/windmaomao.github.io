@@ -21,10 +21,8 @@
 
 ### 2/11
 
-- :date: `2/17` Passport [todo](https://windmaomao.github.io/?md=todo/apply-visa) {.red}
-- :sunglasses: Sparkline for markdown
-[peity](https://github.com/vue-bulma/peity)
-[awesome](https://github.com/vuejs/awesome-vue#components--libraries)
+- :date: `2/23` Passport [todo](https://windmaomao.github.io/?md=todo/apply-visa) {.red}
+- :sunglasses: :x: ~~Sparkline for markdown~~
 
 ### 2/10
 
@@ -33,7 +31,7 @@
 
 ### 2/9 
 
-- :date: `3/15` Book china trip tickets {.red}
+- :date: `2/18` :fire: Book china trip tickets {.red}
 - ~~Study markdown-it process~~
 
 ### 2/4
@@ -42,7 +40,7 @@
 
 ### 1/31
 
-- :x: Adjust 401 contribution {title="Deposit more for now"}
+- :x: ~~Adjust 401 contribution~~
 
 ### 1/30
 
