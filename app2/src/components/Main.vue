@@ -18,6 +18,7 @@
 
 var md = require('markdown-it')({
   html: true,
+  linkify: true,
   highlight: function(str, lang) {
     if (lang && window.hljs.getLanguage(lang)) {
       try {
@@ -33,6 +34,7 @@ md.use(require('markdown-it-table-of-contents'), {
   containerClass: 'sidebar toc',
   includeLevel: [1, 2, 3]
 })
+md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'))
 md.use(require('markdown-it-named-headers'))
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
@@ -54,8 +56,11 @@ md.use(require('markdown-it-container'), 'abstract', {
     }
   }
 })
-// md.use(require('markdown-it-attrs'))
-md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'))
+md.use(require('markdown-it-for-inline'),
+  'url_blank', 'link_open', function(tokens, idx) {
+    tokens[idx].attrPush(['target', '_blank'])
+  }
+)
 
 export default {
   name: 'Main',
