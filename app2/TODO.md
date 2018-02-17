@@ -3,9 +3,10 @@
 ## 2018
 
 ### 2/16
-- add option object to hold second footer
 - ~~take themer to footer location~~
-- make url to open to new tab
+- ~~make url to open to new tab~~
+- add option object to hold second footer
+- change page title as doc title
 
 ### 2/15
 - :x: Support checkbox and style it
