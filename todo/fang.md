@@ -4,7 +4,7 @@
 
 ### 2/16
 
-- Setup `Vue` project
+- :date: `2/23` Learn `React`
 
 ### 2/15
 
@@ -21,7 +21,7 @@
 
 ### 2/11
 
-- :date: `2/23` Passport [todo](https://windmaomao.github.io/?md=todo/apply-visa) {.red}
+- :date: `2/23` Plan china trip
 - :sunglasses: :x: ~~Sparkline for markdown~~
 
 ### 2/10
