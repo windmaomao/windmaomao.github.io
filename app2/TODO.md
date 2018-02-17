@@ -2,11 +2,14 @@
 
 ## 2018
 
+### 2/16
+- add option object to hold second footer
+
 ### 2/15
 - :x: Support checkbox and style it
 - use typescript class version
-- add hover note capability
-- add sass to the build
+- ~~add hover note capability~~
+- ~~add sass to the build~~
 
 ### 2/14
 - ~~Add todo section :sunglasses:~~
