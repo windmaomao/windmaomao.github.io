@@ -1,10 +1,10 @@
-# Javascript Developer
+# Fang Jin
 
-I build reusable web components (or framework) for websites in general domains such as healthcare, banking, real estate and university. Components are designed that they can be injected onto existing websites with small footprints. 
+I build reusable web components (or framework) for websites in general domains such as healthcare and banking. Components are designed that they can be individually injected onto existing websites with small footprints. 
 
 Skills
 
-: - 8 Years _Bootstrap_ and _Sass_
+: - 7 Years _Bootstrap_ and _Sass_
   - 5 Years _AngularJS_ 
   - 2 Year *React*, *Vue* and *jQuery*
 
