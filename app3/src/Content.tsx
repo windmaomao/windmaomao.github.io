@@ -1,18 +1,34 @@
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
+import axios from 'axios';
 // import './Content.css';
 
 export interface ContentProp {}
 
-export interface Props {}
+interface Props {}
+interface States {
+  source: string;
+}
 
-const input = '# Hello World';
+class Content extends React.Component<Props, States> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      source: ''
+    };
+  }
 
-class Content extends React.Component<Props, object> {
+  componentDidMount() {
+    axios.get(`https://windmaomao.github.io/todo/fang.md`).then(res => {
+      const source = res.data;
+      this.setState({ source });
+    });
+  }
+
   render() {
     return (
       <div className="main">
-        <ReactMarkdown source={input} />
+        <ReactMarkdown source={this.state.source} />
       </div>
     );
   }
