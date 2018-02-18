@@ -1,3 +1,16 @@
+/* Content */
+.main {
+  padding-top: 50px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+@media only screen
+and (min-width: 768px) {
+  .main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 /* Footer */
 .footer {
   position: relative;

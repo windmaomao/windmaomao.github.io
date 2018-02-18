@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Header, { MenuProp } from './Header';
+import Content from './Content';
 import './App.css';
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header menus={this.menus} />
+        <Content />
       </div>
     );
   }
