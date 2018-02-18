@@ -1,3 +1,8 @@
+/* Html */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 /* Content */
 .main {
   padding-top: 50px;

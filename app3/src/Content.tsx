@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 import axios from 'axios';
-// import './Content.css';
+import './Content.css';
 
 export interface ContentProp {}
 
@@ -19,7 +19,8 @@ class Content extends React.Component<Props, States> {
   }
 
   componentDidMount() {
-    axios.get(`https://windmaomao.github.io/todo/fang.md`).then(res => {
+    const md = 'blog/power-of-loss';
+    axios.get(`https://windmaomao.github.io/${md}.md`).then(res => {
       const source = res.data;
       this.setState({ source });
     });
@@ -28,7 +29,9 @@ class Content extends React.Component<Props, States> {
   render() {
     return (
       <div className="main">
-        <ReactMarkdown source={this.state.source} />
+        <div className="write container">
+          <ReactMarkdown source={this.state.source} />
+        </div>
       </div>
     );
   }
