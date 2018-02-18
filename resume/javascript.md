@@ -5,15 +5,13 @@ I build reusable web components (or framework) for websites in general domains s
 Skills
 
 : - 8 Years _Bootstrap_ and _Sass_
-
-- 5 Years _AngularJS_ 
-- 2 Year *React*, *Vue* and *jQuery*
+  - 5 Years _AngularJS_ 
+  - 2 Year *React*, *Vue* and *jQuery*
 
 Bonus
 
 : - 15 Years Analytics skills in math and modeling
-
-- 8 Years Visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
+  - 8 Years Visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
 
 ## Award
 
