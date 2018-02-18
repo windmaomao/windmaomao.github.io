@@ -1,3 +1,3 @@
 # Todo
 
-- use footer as example to learn component
+- use header as example to learn component
