@@ -3,18 +3,15 @@ import './Header.css';
 
 const logo = require('./logo.png');
 
-interface HeaderState {
-  menus: string[];
+export interface MenuProp {
+  title: string;
 }
 
-class Header extends React.Component<any, HeaderState> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      menus: []
-    };
-  }
+export interface Props {
+  menus?: MenuProp[];
+}
 
+class Header extends React.Component<Props, object> {
   renderBrand() {
     return (
       <div className="navbar-brand">
@@ -38,7 +35,7 @@ class Header extends React.Component<any, HeaderState> {
     );
   }
   renderMenu() {
-    if (!this.state.menus) {
+    if (!this.props.menus) {
       return null;
     }
     return (

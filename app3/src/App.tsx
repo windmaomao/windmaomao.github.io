@@ -1,12 +1,16 @@
 import * as React from 'react';
-import Header from './Header';
+import Header, { MenuProp } from './Header';
 import './App.css';
 
 class App extends React.Component {
+  menus: MenuProp[] = [
+    { title: 'Home' }
+  ];
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header menus={this.menus} />
       </div>
     );
   }
