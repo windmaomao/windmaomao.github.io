@@ -2,9 +2,13 @@
 
 ## 2018
 
+### 2/18
+
+- :fire: Build reusable header
+
 ### 2/16
 
-- :date: `2/23` Learn `React`
+- :date: `2/23` ~~Learn `React`~~
 - Study yellow fever vaccine
 
 ### 2/15
