@@ -2,6 +2,10 @@
 
 ## 2018
 
+### 2/18
+- Design comment style
+- Design injectable header
+
 ### 2/16
 - ~~take themer to footer location~~
 - ~~make url to open to new tab~~
