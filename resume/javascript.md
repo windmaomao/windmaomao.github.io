@@ -11,9 +11,9 @@ Skills
 
 Bonus
 
-: - 15 Years Strong analytics skills in math, modeling, calculation and simulation
+: - 15 Years Analytics skills in math and modeling
 
-- 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
+- 8 Years Visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
 
 ## Award
 
