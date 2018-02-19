@@ -16,15 +16,15 @@ Back couple of years back, when we need to add some functionalities to the page,
 
 For example, it allows you to adds some attribute to the tag `h1` so that the behavior of the tag can be changed on the fly. The source code is written in another file. That makes the coding neat and the process intact as much as possible. 
 
-This idea isn't new, and `Angular` takes this approach to a whole new level that every piece of `HTML` **should be** written and organized via those attributes if new behaviors need to be introduced. 
+This idea isn't new, and `Angular` takes this approach to a whole new level that every piece of `HTML` **should be** written and organized via those attributes for new behaviors to be introduced. 
 
-The job of `Google` engineers can be then more productive in providing web content.
+The job of `Google` engineers can then be more productive in providing web content.
 
 ## React
 
-In back days if you want to add couple of new lines of `HTML` to the page after the page load, you can rely on `Javascript` or `jQuery` library, which allow you to operate on the `DOM`  node directly. It's not difficult but this brutal force only carries you some far. 
+Once again, in back days if you want to add couple of new lines of `HTML` to the page after the page load, you rely on `Javascript` or `jQuery` library, which allows you to operate on the new `DOM`  node directly. It's a bit difficult since you don't see the `HTML` that you are adding. 
 
-`React` takes this approach and solves the problem of generating `HTML` (or element) without the need to have a `HTML` file as the base. For instance, the `HTML` can be written inside the function and rendered as part of your code,
+`React` trys to improve this process in solves the problem of generating `HTML` (or element) without the need to have a `HTML` file as the base. For instance, the `HTML` can be written inside the function and rendered as part of your code simply as,
 
 ```jsx
     render() {
@@ -32,25 +32,23 @@ In back days if you want to add couple of new lines of `HTML` to the page after 
     }
 ```
 
-This is strange to the `HTML` camp, and is still the most debatable topic over the web framework community. Fundamentally `React` is trying to solve one problem and it proposes that `UI` **should be** written and organized via code so that everything can sit and be tested. Apparently it takes this concept to a whole new level. 
+This is strange to the `HTML` camp since it does create conflicts of interest, and is still the most debatable topic over the web framework community. Fundamentally `React` is trying to solve one problem and proposes that `UI` **should be** written and organized via code so that everything can sit and be tested together. Apparently it takes this concept to a whole new level. 
 
-The job of `Facebook` engineers can be then very efficient in creating more and more widgets. 
+Thus, the job of `Facebook` engineers can be very efficient in creating more and more widgets. 
 
-## Vue
+## Middle
 
-The world is never black and white. Even the black has some shades inside. Fighting with another camp is useless in the sense that each camp is not trying to solve all the problems. They just found one possible way to resolve one particular problem in most cost-effective way. But of course they have to ignore the rest of the problem, simply because they are not trying to re-invent the world. They are simply software engineers. 
+The world is never black and white. Even the black has some shades inside. Fighting with another camp is useless in the sense that each camp is not trying to solve all the problems. They just found one possible way to solve one particular problem in most cost-effective way. But of course they have to ignore the rest of other problems, simply because they are not trying to re-invent the world. They are software engineers. 
 
 Therefore not judging which way is better and just taking what's best, `Vue` created some what they believe the best practice in terms of writing web component, which essentially combines  the above two concepts together, at least makes possible to use both ways. 
 
 ## Commons
 
-Without looking deeper inside each framework, and not get into the fights about choosing which one to use, I can show you some common ground they all shares from the higher level.  
+Without looking deeper inside each framework, and of course not the fights about choosing which one to use, I can assure you some common ground from the higher level.  
 
-**Component **. They all want you to work your `UI` in a compartment setup so to get more opportunities to be reused for other projects. This saves cost in general, especially for the sustainable environment. 
-
-**HTML**. `HTML` is still not going anywhere, if you want to learn something about the web today, picking up a `HTML` book is never too late, and continue to be a good investment for next couple of years. The only interesting thing is that `HTML` is getting smaller, since it has been chopped into pieces unto different locations and shapes, so that it doesn't look like `HTML` any more, at least not in a traditional book-like way.
-
-**Javascript**.  Of course, `Javascript` is not going anywhere, actually it probably will dominate the entire web very soon. This is the best time to invest time in `Javascript`. The industry is trying to regulate it and making it a better language. It's still hard to believe after twenty years, the one `language` stands out  (or survives) besides `HTML` is `Javascript`.
+- **HTML**. `HTML` is still not going anywhere, if you want to learn something about the web today, picking up a `HTML` book is never too late, and continue to be a good investment for next couple of years. The only interesting thing is that `HTML` is getting smaller, since it has been chopped into pieces unto different locations and shapes, so that it doesn't look like `HTML` any more, at least not in a traditional book-like way.
+- **Javascript**.  Of course, `Javascript` is not going anywhere, actually it probably will dominate the entire web very soon. This is the best time to invest time in `Javascript`. The industry is trying to regulate it and making it a better language. It's still hard to believe after twenty years, the one `language` stands out  (or survives) besides `HTML` is `Javascript`.
+- **Component**. Last but not least, they all want you to work your `UI` in a compartment setup so to get more opportunities to be reused for other projects. This saves cost in general, especially for the sustainable environment. And this is probably is one of the most important web concept in recent years.
 
 All in all, when you try to think about the future, maybe we should just look at the history. 4-5 years is too short, 20 years maybe a good start, and if we can extend it to  100 years, maybe that'll give you a clearer picture, though the result might not matter to you that much.
 
