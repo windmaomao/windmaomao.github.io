@@ -6,17 +6,17 @@
 
 Book tickets [online](https://www.justfly.com)
 
-: Dates: 06/22 - 07/06 ? {.red}
+: Dates: 07/04 - 07/18
 
 : From: RDU
 
-: To: Shanghai, which one ? {.red}
+: To: PVG 
 
-: Layover: Toronto
+: Layover: Chicago
 
-: Airline: Air Canada
+: Airline: United
 
-: Price: around $1,200 each
+: Price: around $1,154+75=$1230 each
 
 ## Apply Visa
 

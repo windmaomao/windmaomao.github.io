@@ -14,19 +14,40 @@ React is a great library for UIs, and it should be part of your front-end web to
 
 It’s crucial for understanding React concepts such as elements and components. **In a nutshell, *elements* are instances of *components* (also called *component classes*).**
 
+
+
+Include `react` and `react-dom` library,
+
+```html
+<script src="//fb.me/react-0.14.3.js"></script>
+<script src="//fb.me/react-dom-0.14.3.js"></script>
+<body>
+    <div id="content"></div>
+</body>
+```
+
 ### Nesting Elements
+
+In order to insert `Hello World`, you can render a new element into a `DOM` element,
 
 ```jsx
 let h1 = React.createElement('h1', null, 'Hello world!')
-ReactDOM.render(
-  h1,
-  document.getElementById('content')
-)
+ReactDOM.render(h1,document.getElementById('content'))
 ```
 
 ### Creating Component Classes
 
-```jsx
+Or you can create a component class and insert an instance of it into the `DOM` element.
 
+```jsx
+class HelloWorld extends React.Component {
+    render() {
+        return React.createElement('h1', null, 'Hello world!')
+    }
+}
+
+let welcome = React.createElement(HelloWorld, null)
+ReactDOM.render(welcome, document.getElementById('content'))
 ```
 
+Here `HelloWorld` is a component with similar functionality as the regular `h1` tag. 

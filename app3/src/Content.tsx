@@ -19,7 +19,7 @@ class Content extends React.Component<Props, States> {
   }
 
   componentDidMount() {
-    const md = 'blog/power-of-loss';
+    const md = 'resume/fangjin';
     axios.get(`https://windmaomao.github.io/${md}.md`).then(res => {
       const source = res.data;
       this.setState({ source });
