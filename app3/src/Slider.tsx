@@ -12,6 +12,7 @@ export interface Props {
 export interface States {
   enabled: boolean;
   open: boolean;
+  api: string;
   menus: Menu[];
 }
 
@@ -22,6 +23,7 @@ export default class Slider extends React.Component<Props, States> {
     this.state = {
       enabled: params.ad || false,
       open: false,
+      api: 'https://sleepy-kalam-ff10a0.netlify.com/menu.json',
       menus: []
     };
     this.handleToggle = this.handleToggle.bind(this);
@@ -62,7 +64,7 @@ export default class Slider extends React.Component<Props, States> {
 
   componentDidMount() {
     if (this.state.enabled) {
-      axios.get(`https://sleepy-kalam-ff10a0.netlify.com/menu.json`).then(res => {
+      axios.get(this.state.api).then(res => {
         const menus = res.data;
         this.setState({ menus });
       });
