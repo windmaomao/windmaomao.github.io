@@ -6,7 +6,7 @@
 
 Book tickets [online](https://www.justfly.com)
 
-: Dates: 07/04 - 07/18
+: Dates: 06/22 - 07/6
 
 : From: RDU
 

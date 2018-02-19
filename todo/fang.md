@@ -10,13 +10,11 @@
 ### 2/16
 
 - ~~Learn `React`~~
-- Study yellow fever vaccine
 
 ### 2/15
 
 - ~~Chinese new year~~
-- Invest more `DRV`
-- Check investment tax
+- ~~Check investment tax~~
 
 ### 2/13
 
@@ -27,7 +25,7 @@
 
 ### 2/11
 
-- :date: `2/23` Plan china trip
+- :date: `2/23` ~~Plan china trip~~
 - :sunglasses: :x: ~~Sparkline for markdown~~
 
 ### 2/10
