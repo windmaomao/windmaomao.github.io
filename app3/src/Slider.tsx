@@ -10,6 +10,7 @@ export interface Props {
   // isOpen: boolean;
 }
 export interface States {
+  enabled: boolean;
   open: boolean;
   menus: Menu[];
 }
@@ -17,13 +18,18 @@ export interface States {
 export default class Slider extends React.Component<Props, States> {
   constructor(props: Props) {
     super(props);
+    const params: any = this.paramsFromUrl();
     this.state = {
+      enabled: params.ad || false,
       open: false,
       menus: []
     };
     this.handleToggle = this.handleToggle.bind(this);
   }
   render() {
+    if (!this.state.enabled) {
+      return null;
+    }
     if (this.state.open) {
       return (
         <div className="slider">
@@ -55,10 +61,12 @@ export default class Slider extends React.Component<Props, States> {
   }
 
   componentDidMount() {
-    axios.get(`https://sleepy-kalam-ff10a0.netlify.com/menu.json`).then(res => {
-      const menus = res.data;
-      this.setState({ menus });
-    });
+    if (this.state.enabled) {
+      axios.get(`https://sleepy-kalam-ff10a0.netlify.com/menu.json`).then(res => {
+        const menus = res.data;
+        this.setState({ menus });
+      });
+    }
   }
 
   handleToggle() {
@@ -66,4 +74,15 @@ export default class Slider extends React.Component<Props, States> {
       open: !prev.open
     }));
   }
+
+  paramsFromUrl() {
+    let params = {};
+    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str: string, ...strs: string[]): string {
+      const key = strs[0], value = strs[1];
+      params[key] = value;
+      return '';
+    });
+    return params;
+  }
+
 }
