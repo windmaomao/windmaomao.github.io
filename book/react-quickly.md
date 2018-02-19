@@ -15,7 +15,6 @@ React is a great library for UIs, and it should be part of your front-end web to
 It’s crucial for understanding React concepts such as elements and components. **In a nutshell, *elements* are instances of *components* (also called *component classes*).**
 
 
-
 Include `react` and `react-dom` library,
 
 ```html
@@ -48,7 +47,7 @@ let welcome = React.createElement(HelloWorld, null)
 ReactDOM.render(welcome, document.getElementById('content'))
 ```
 
-By convention, the names of variables containing React components are capitalized. This isn’t required in regular JS (you can use the lowercase variable name helloWorld); but because it’s necessary in JSX, you apply this convention here. (In JSX, React uses uppercase and lowercase to differentiate a custom component like <HelloWorld/> from a regular HTML element such as <h1/>. But in regular JS, it’s differentiated by passing either a variable such as HelloWorld or a string such as 'h1'. It’s a good idea to start using capitalization convention for custom components now.)
+By convention, the names of variables containing React components are capitalized. This isn’t required in regular `JS` (you can use the lowercase variable name `helloWorld`); but because it’s necessary in `JSX`, you apply this convention here. (In `JSX`, React uses uppercase and lowercase to differentiate a custom component like `<HelloWorld/>` from a regular HTML element such as `<h1/>`. But in regular JS, it’s differentiated by passing either a variable such as `HelloWorld` or a string such as 'h1'. It’s a good idea to start using capitalization convention for custom components now.)
 
 ### Working with Properties
 
@@ -71,7 +70,7 @@ In other words, ==you can use the same component—but provided with different p
 
 ## Introduction to JSX
 
-#### Creating elements with JSX
+### Creating elements with JSX
 
 Creating ReactElement objects with JSX is straightforward.
 
@@ -95,7 +94,7 @@ you can write this JSX:
 </name>
 ```
 
-#### Working with JSX in components
+### Working with JSX in components
 
 ```jsx
 class HelloWorld extends React.Component {
@@ -114,7 +113,7 @@ ReactDOM.render(
 )
 ```
 
-#### Outputting variables in JSX
+### Outputting variables in JSX
 
 ```jsx
 class DateTimeNow extends React.Component {
@@ -126,7 +125,7 @@ class DateTimeNow extends React.Component {
 }
 ```
 
-#### Working with properties in JSX
+### Working with properties in JSX
 
 ```jsx
 class ProfileLink extends React.Component {
@@ -139,8 +138,6 @@ class ProfileLink extends React.Component {
 }
 ```
 
-
-
 ## Making React interactive with states
 
 So far, you’ve worked with properties, and you’ve learned that by changing properties, you can get different views. But ==properties can’t change in the context of the current component, because they’re passed on this component’s creation==.
@@ -151,7 +148,7 @@ To put it another way, properties are immutable in the current component, meanin
 
 Here’s a metaphor: if you think of a component as a function that has properties and state as its input, then the result of this function is the UI description (view). Or, as React teams phrase it, “Components are state machines.” Properties and state both augment views, but they’re used for different purposes.
 
-#### Setting the initial state
+### Setting the initial state
 
 ```jsx
 class MyFancyComponent extends React.Component {
@@ -167,7 +164,7 @@ class MyFancyComponent extends React.Component {
 
 The constructor() method is called just once, when a React element is created from this class. This way, you can set state directly by using this.state just once, in the constructor() method. ==Avoid setting and updating state directly with this.state = ... anywhere else, because doing so may lead to unintended consequences==.
 
-#### Updating states
+### Updating states
 
 ```jsx
 constructor(props) {
@@ -185,7 +182,7 @@ updateValues() {
 
 Keep in mind that setState() triggers render(). It works in most cases. In some edge-case scenarios where the code depends on external data, you can trigger a rerender with this.forceUpdate(). But this approach should be avoided as a bad practice, because relying on external data and not state makes components more fragile and depends on external factors (tight coupling).
 
-##### Binding this in Javascript
+#### Binding this in Javascript
 
 In JavaScript, ***this*** mutates (changes) its value depending on the place from which a function is called. To ensure that *this* refers to your component class, you need to bind the function to the proper context (this value: your component class).
 
@@ -220,7 +217,7 @@ setInterval(function(){
 }, 1000)
 ```
 
-#### States and Properties
+### States and Properties
 
 States and properties are both attributes of a class, meaning they’re this.state and this.props. That’s the only similarity! One of the primary differences between states and properties is that the former are mutable, whereas the latter are immutable.
 
@@ -228,7 +225,7 @@ Another difference between properties and states is that you pass properties fro
 
 **Not all components need to have state.**
 
-#### Stateless Components
+### Stateless Components
 
 A *stateless* component has no states or components or any other React lifecycle events/methods. The purpose of a stateless component is just to render the view. The only thing it can do is take properties and do something with them—it’s a simple function with the input (properties) and the output (UI element).
 
@@ -252,7 +249,7 @@ Link.defaultProps = {...}
 
 In a stateless component, you can’t have a state, but you can have two properties: propTypes and defaultProps. You set them on the object. And, by the way, it’s okay to *not* have an opening parenthesis after return as long as you start an element on the same line.
 
-#### Stateful vs Stateless Components
+### Stateful vs Stateless Components
 
 Why use stateless components? They’re more declarative and work better when all you need to do is render some HTML without creating a backing instance or lifecycle components. Basically, stateless components reduce duplication and provide better syntax and more simplicity when all you need to do is mesh together some properties and elements into HTML.
 
