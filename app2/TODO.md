@@ -2,20 +2,22 @@
 
 ## 2018
 
+### 2/19
+- integrate with react component
+
 ### 2/18
-- Design comment style
-- Design injectable header
+- design comment style
 
 ### 2/16
 - ~~take themer to footer location~~
 - ~~make url to open to new tab~~
 - add option object to hold second footer
 - ~~change page title as doc title~~
-- fix style for iphone
+- ~~fix style for iphone~~
 
 ### 2/15
 - :x: ~~Support checkbox and style it~~
-- use typescript class version
+- ~~use typescript class version~~
 - ~~add hover note capability~~
 - ~~add sass to the build~~
 
