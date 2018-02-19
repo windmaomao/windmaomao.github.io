@@ -1,20 +1,20 @@
 # Angular, React and Commons
 
-I got this question a lot, web frameworks are marketing words to me these days. Everyone knows something about them. But trust me, even developers are not clear about what they are and what they will do. World is moving too fast. It's definitely been harder after `HTML` and `Javascript` were invented. 
+I got this question a lot, web frameworks are marketing words to me these days. Everyone knows something about them. But trust me, even developers are not clear about what they are and what they will do. The world is moving too fast. It's definitely been harder after `HTML` and `Javascript` were invented. 
 
-I still personally believe `HTML` is the king, even I'm a 100% `Javascript` developer now. `HTML` becomes the web media so that anyone who understand this language can provide content directly to the web. I would say directly, because actually most of us don't use `HTML` at all tweeting. But if you want to work on the core part of the web, you won't be able to skip `HTML`. 
+I still personally believe `HTML` is the king, even I'm a 100% `Javascript` developer now. `HTML` becomes the web media so that anyone who understands this language can provide content directly to the web. I would say "directly" because actually most of us don't use `HTML` at all tweeting. But if you want to work on the core part of the web, you won't be able to skip `HTML`. 
 
 ## Angular
 
 Back couple of years back, when we need to add some functionalities to the page, we need to add a few lines of `Javascript`. If you add too many, the page gets messy, you tend to use some library ex. `jQuery` to facilitate the work. 
 
-`Angular` is not exception when it comes to solve this problem in terms of organizing code while keeping your typical way of working with `HTML`.  
+`Angular` is not an exception when it comes to solving this problem in terms of organizing code while keeping your typical way of working with `HTML`.  
 
 ```html
 	<h1 ng-show="">Hello World</h1>
 ```
 
-For example, it allows you to adds some attribute to the tag `h1` so that the behavior of the tag can be changed on the fly. The source code is written in another file. That makes the coding neat and the process intact as much as possible. 
+For example, it allows you to add some attribute to the tag `h1` so that the behavior of the tag can be changed on the fly. The source code is written in another file. That makes the coding neat and the process intact as much as possible. 
 
 This idea isn't new, and `Angular` takes this approach to a whole new level that every piece of `HTML` **should be** written and organized via those attributes for new behaviors to be introduced. 
 
@@ -22,9 +22,9 @@ The job of `Google` engineers can then be more productive in providing web conte
 
 ## React
 
-Once again, in back days if you want to add couple of new lines of `HTML` to the page after the page load, you rely on `Javascript` or `jQuery` library, which allows you to operate on the new `DOM`  node directly. It's a bit difficult since you don't see the `HTML` that you are adding. 
+Once again, in back days if you want to add a couple of new lines of `HTML` to the page after the page load, you rely on `Javascript` or `jQuery` library, which allows you to operate on the new `DOM`  node directly. It's a bit difficult since you don't see the `HTML` that you are adding. 
 
-`React` trys to improve this process in solves the problem of generating `HTML` (or element) without the need to have a `HTML` file as the base. For instance, the `HTML` can be written inside the function and rendered as part of your code simply as,
+`React` trys to improve this process in solves the problem of generating `HTML` (or element) without the need to have an `HTML` file as the base. For instance, the `HTML` can be written inside the function and rendered as part of your code simply as,
 
 ```jsx
     render() {
@@ -32,9 +32,9 @@ Once again, in back days if you want to add couple of new lines of `HTML` to the
     }
 ```
 
-This is strange to the `HTML` camp since it does create conflicts of interest, and is still the most debatable topic over the web framework community. Fundamentally `React` is trying to solve one problem and proposes that `UI` **should be** written and organized via code so that everything can sit and be tested together. Apparently it takes this concept to a whole new level. 
+This is strange to the `HTML` camp since it does create conflicts of interest, and is still the most debatable topic over the web framework community. Fundamentally `React` is trying to solve one problem and proposes that `UI` **should be** written and organized via code so that everything can sit and be tested together. Apparently, it takes this concept to a whole new level. 
 
-Thus, the job of `Facebook` engineers can be very efficient in creating more and more widgets. 
+Thus, the job of `Facebook` engineers can be efficient in creating more and more widgets. 
 
 ## Commons
 

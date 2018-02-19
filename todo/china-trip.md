@@ -28,24 +28,34 @@ Applying China Visiting Visa -Q2 Visa [^visa]
 
 Apply via agency [Visa Mail Service](http://www.visamailservice.com/q2-visiting-visa/)
 
-
-Not sure yet
-
-: - Cover page for the agency
-  - Save a passport photo at home
-  - Parent's Driver licenses {.red}
-  - Feifei's birth certificate
-
 Checklist
 
-: - Payment and Reciept
-  - Copy of last chinese passport
-  - Copy of passport
-  - One photo
-  - Application form
-  - Invitation letter
+: - Fang
+  - ~~Application form~~
+  - ~~Invitation letter~~
+  - ~~One photo~~
   - Inviting Individual's ID photocopy
+  - Copy of passport page
+  - Copy of last chinese passport
+  - Photocopy of chinese passport visa page
+  - Copy of the Invoice/Receipt
 
+
+: - Lucas
+
+- ~~Application form~~
+- ~~One photo~~
+- ~~Copy of passport page~~
+- ~~Lucas's birth certificate~~
+- Passport page of father
+- ~~Passport page of mother~~
+
+: - Form missing fields
+
+- Fang's Passport number, issue date and place
+- Deutsche Bank phone number
+- Lucas' Passport number, issue date and place
+- Itinerary in China and two home address
 
 ### Visa Application Form
 
@@ -53,13 +63,6 @@ Checklist
 - ==This form has to be completed on computer, handwriting form is not accepted by Chinese Embassy==.
 - The applicant must sign and date on page 4. If the applicant is under the age of 18, one of the parents must complete and sign sections 4 and 5 on page 4.  
 - On section 1.17 of the application form, please state the type of the business of your employer (for example, Information Technology, Medical Device, etc)
-- Need Local ID/Citizenship number, SSN? 
-- Passport number, issue date and place 
-- Deutsche Bank phone number 
-- Spouse's Occupation
-- Intended number of entries
-- Itinerary in China and two home address
-- Inviter name, address, phone and relationship
 
 ### Photo
 
@@ -85,6 +88,10 @@ Checklist
 
 - ==Original and photocopy of the last Chinese passport== or previous Chinese visas (applicable to foreign citizens who were Chinese citizens and have obtained foreign citizenship)
 - If you are applying for a Chinese visa for the first time, you should provide your previous Chinese passport held and a photocopy of its data page.
+
+### Child
+
+- For people under 18, please provide ==a copy of birth certificate== regardless of whether he/she obtained visa before. Also, please provide ==a copy of ID (passport photo page) of a parent who signs the application form==. If the parent doesn’t hold a US passport, please provide a copy of Green card. 
 
 ### Payment
 
