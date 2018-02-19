@@ -2,16 +2,21 @@
 
 ## 2018
 
+### 2/19
+
+- :fire: make pane slider menu component
+- :date: `2/19` take passport photo
+
 ### 2/16
 
-- :date: `2/23` ~~Learn `React`~~
+- ~~Learn `React`~~
 - Study yellow fever vaccine
 
 ### 2/15
 
-- :date: `2/16` Chinese new year
+- ~~Chinese new year~~
 - Invest more `DRV`
-- :date: `2/25` Check investment tax
+- Check investment tax
 
 ### 2/13
 
@@ -32,7 +37,7 @@
 
 ### 2/9 
 
-- :date: `2/18` :fire: Book china trip tickets {.red}
+- :date: `2/19` :fire: Book china trip tickets {.red}
 - ~~Study markdown-it process~~
 
 ### 2/4
