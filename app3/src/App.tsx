@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Slider isOpen={true} />
+        <Slider />
         <Header menus={this.menus} />
         <Content />
       </div>

@@ -1,17 +1,32 @@
 .slider {
   position: fixed;
-  background: #efefef;
-  width: 200px;
+  background: #fafafa;
+  width: 250px;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 99999;
   padding: 10px;
+  overflow-y: auto;
+}
+.slider .close {
+  float: right;
+  cursor: pointer;
 }
 .slider ul {
   list-style: none;
+  margin: .25em;
+  padding: 0;
 }
 .slider a {
   padding: 0;
   text-transform: capitalize;
+  font-size: 12px;
+  line-height: 18px;
+}
+.slider-toggle {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  z-index: 99999;
 }
