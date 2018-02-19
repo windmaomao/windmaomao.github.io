@@ -36,13 +36,11 @@ This is strange to the `HTML` camp since it does create conflicts of interest, a
 
 Thus, the job of `Facebook` engineers can be very efficient in creating more and more widgets. 
 
-## Middle
+## Commons
 
 The world is never black and white. Even the black has some shades inside. Fighting with another camp is useless in the sense that each camp is not trying to solve all the problems. They just found one possible way to solve one particular problem in most cost-effective way. But of course they have to ignore the rest of other problems, simply because they are not trying to re-invent the world. They are software engineers. 
 
 Therefore not judging which way is better and just taking what's best, `Vue` created some what they believe the best practice in terms of writing web component, which essentially combines  the above two concepts together, at least makes possible to use both ways. 
-
-## Commons
 
 Without looking deeper inside each framework, and of course not the fights about choosing which one to use, I can assure you some common ground from the higher level.  
 
