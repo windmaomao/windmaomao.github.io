@@ -1,5 +1,4 @@
-# Web framework
-Angular, React, Vue and Commons
+# Angular, React and Commons
 
 I got this question a lot, web frameworks are marketing words to me these days. Everyone knows something about them. But trust me, even developers are not clear about what they are and what they will do. World is moving too fast. It's definitely been harder after `HTML` and `Javascript` were invented. 
 
