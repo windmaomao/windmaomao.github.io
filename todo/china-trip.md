@@ -40,22 +40,19 @@ Checklist
   - Photocopy of chinese passport visa page
   - Copy of the Invoice/Receipt
 
-
 : - Lucas
-
-- ~~Application form~~
-- ~~One photo~~
-- ~~Copy of passport page~~
-- ~~Lucas's birth certificate~~
-- Passport page of father
-- ~~Passport page of mother~~
+  - ~~Application form~~
+  - ~~One photo~~
+  - ~~Copy of passport page~~
+  - ~~Lucas's birth certificate~~
+  - Passport page of father
+  - ~~Passport page of mother~~
 
 : - Form missing fields
-
-- Fang's Passport number, issue date and place
-- Deutsche Bank phone number
-- Lucas' Passport number, issue date and place
-- Itinerary in China and two home address
+  - Fang's Passport number, issue date and place
+  - Deutsche Bank phone number
+  - Lucas' Passport number, issue date and place
+  - Itinerary in China and two home address
 
 ### Visa Application Form
 
