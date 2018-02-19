@@ -66,3 +66,11 @@
 | **Vanguard**  | $ 82,816 |       |
 | Individual    |  $ 3,196 |       |
 | IRA           | $ 79,347 |       |
+
+## 2017
+
+#### Realized
+
+| Symbol | Proceeds | Cost |  Realized |
+| ------ | -------- | ---: | ---: |
+| Fidelity X83    | $50,118 | $50,089 | -$1,970 |

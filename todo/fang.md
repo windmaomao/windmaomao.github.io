@@ -5,8 +5,7 @@
 ### 2/19
 
 - :fire: make pane slider menu component
-- :date: `2/19` take passport photo
-- publish angular-react-common
+- ~~publish angular-react-common~~
 
 ### 2/16
 
