@@ -61,7 +61,7 @@
 /******/
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fc86c81a406244239320"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e7732ed12a3423d96af4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -36920,7 +36920,7 @@
   //   document.getElementById('root') as HTMLElement
   // );
 
-  __WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_3__Slider__["a" /* default */], null), document.getElementById('root'));
+  __WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_3__Slider__["a" /* default */], null), document.getElementById('slider'));
   Object(__WEBPACK_IMPORTED_MODULE_2__registerServiceWorker__["a" /* default */])();
 
 

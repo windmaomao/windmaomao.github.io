@@ -12,7 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 import Slider from './Slider';
 ReactDOM.render(
   <Slider />,
-  document.getElementById('root') as HTMLElement
+  document.getElementById('slider') as HTMLElement
 );
 
 registerServiceWorker();
