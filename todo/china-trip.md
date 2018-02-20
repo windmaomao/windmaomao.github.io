@@ -35,11 +35,10 @@ Fang
   - ~~Invitation letter~~
   - ~~One photo~~
   - ~~Copy of the Invoice/Receipt~~
-  - Inviting Individual's ID photocopy
-  - Copy of passport page
-  - Copy of last chinese passport
-  - Photocopy of chinese passport visa page
-  - Payment check
+  - ~~Inviting Individual's ID photocopy~~
+  - ~~Copy of passport page~~
+  - ~~Copy of last chinese passport~~
+  - Payment check {.red}
 
 Lucas
 : - ~~Application form~~
@@ -47,13 +46,10 @@ Lucas
   - ~~Copy of passport page~~
   - ~~Lucas's birth certificate~~
   - ~~Passport page of mother~~
-  - Passport page of father
+  - ~~Passport page of father~~
 
 Form missing fields
-: - Fang's Passport number, issue date and place
-  - Lucas' Passport number, issue date and place
-  - Itinerary in China and two home address
-
+: - Itinerary in China and two home address {.red}
 ### Visa Application Form
 
 - The application [Form V.2013](https://www.visamailservice.com/forms/) must be completed on a computer and be printed single-sided.
