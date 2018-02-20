@@ -1,6 +1,6 @@
 // var React = require('react');
 // var ReactDom = require('react-dom');
-
+import './index.css';
 module.exports = function Slider() {
   let menus = [
     { title: 'Blogs', items: [] }
