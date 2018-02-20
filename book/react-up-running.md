@@ -280,6 +280,17 @@ var Logo = React.createClass({/* ... */});
 module.exports = Logo;
 ```
 
+or in a simple function
+
+```javascript
+var React = require('react');
+module.exports = function Foo() {
+  return React.createElement('h1', null, 'Hello');
+}
+```
+
+Commenting out the first line `React` will skip including of the `React` library if you intend to include it in a separate file or link.
+
 ### ECMAScript Modules
 
 ECMAScript specifications propose to take this idea even further and introduce new syntax. You can benefit from the new syntax because `Babel` has your back when it comes to transpiling the new syntax down to something browsers can stomach.
