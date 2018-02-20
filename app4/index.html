@@ -7,16 +7,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 </head>
 <body>
-  <div id="root"></div>
+  <div id="slider"></div>
   <script src="//fb.me/react-0.14.3.js"></script>
   <script src="//fb.me/react-dom-0.14.3.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="dist/main.js"></script>
   <script>
     var h1 = React.createElement('h1', null, 'Hello World');
     ReactDOM.render(
       React.createElement(QkbSlider, null),
       // h1,
-      document.getElementById('root')
+      document.getElementById('slider')
     );
   </script>
 </body>

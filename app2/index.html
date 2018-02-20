@@ -10,9 +10,17 @@
     <link rel="icon" type="image/png" href="static/img/logo.png" />
   </head>
   <body>
-    <!-- <div id="slider"></div> -->
+    <div id="slider"></div>
     <div id="app"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <!-- <script src="https://sleepy-kalam-ff10a0.netlify.com/slider.js"></script> -->
+
+    <script src="//fb.me/react-0.14.3.js"></script>
+    <script src="//fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="static/js/slider.js"></script>
+
+    <script>
+      ReactDOM.render(React.createElement(QkbSlider, null),document.getElementById('slider'));
+    </script>
   </body>
 </html>
