@@ -2,6 +2,10 @@
 
 ## 2018
 
+### 2/20
+
+- Deal with npm two-factor auth
+
 ### 2/19
 
 - :fire: make pane slider menu component

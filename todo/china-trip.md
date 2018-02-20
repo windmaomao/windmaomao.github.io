@@ -28,10 +28,6 @@ Applying China Visiting Visa -Q2 Visa [^visa]
 
 Apply via agency [Visa Mail Service](http://www.visamailservice.com/q2-visiting-visa/)
 
-Checklist
-
-Get develop and glue {.red}
-
 Fang
 : - ~~Application form~~
   - ~~Invitation letter~~
