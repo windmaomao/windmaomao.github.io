@@ -1,16 +1,25 @@
-
 # QPlot Knowledgebase
 
 ## 2018
 
+### 2/19
+- integrate with react component
+
+### 2/18
+- design comment style
+
 ### 2/16
-- relocate the themer to fixed footer
+- ~~take themer to footer location~~
+- ~~make url to open to new tab~~
+- add option object to hold second footer
+- ~~change page title as doc title~~
+- ~~fix style for iphone~~
 
 ### 2/15
-- :x: Support checkbox and style it
-- use typescript class version
-- add hover note capability
-- add sass to the build
+- :x: ~~Support checkbox and style it~~
+- ~~use typescript class version~~
+- ~~add hover note capability~~
+- ~~add sass to the build~~
 
 ### 2/14
 - ~~Add todo section :sunglasses:~~
