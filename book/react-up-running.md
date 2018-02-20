@@ -2,7 +2,7 @@
 
 ## Preface
 
-Comments: The uniqueness of `React` is that it trys to ONLY solve one problem when making web application, that is how to simply write a line that injects some `HTML` (or kinda) into existing `HTML` tag. Many library approaches this problem with more or less similar way but some difference in the detail. 
+Notes: The uniqueness of `React` is that it trys to ONLY solve one problem when making web application, that is how to simply write a line that injects some `HTML` (or kinda) into existing `HTML` tag. Many library approaches this problem with more or less similar way but some difference in the detail. {.notification}
 
 IMO, `React` approaches this problem with the brutal force by writting a line connecting its own element and injecting into the native `DOM` element. The idea is that as long as the `React` element can make UI elements easy or quickly enough, this syntax will holds perfectly while keeping the `DOM` injection footprint small, ex. most of time just once for entire page.
 
