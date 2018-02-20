@@ -34,23 +34,23 @@ Fang
 : - ~~Application form~~
   - ~~Invitation letter~~
   - ~~One photo~~
+  - ~~Copy of the Invoice/Receipt~~
   - Inviting Individual's ID photocopy
   - Copy of passport page
   - Copy of last chinese passport
   - Photocopy of chinese passport visa page
-  - Copy of the Invoice/Receipt
+  - Payment check
 
 Lucas
 : - ~~Application form~~
   - ~~One photo~~
   - ~~Copy of passport page~~
   - ~~Lucas's birth certificate~~
-  - Passport page of father
   - ~~Passport page of mother~~
+  - Passport page of father
 
 Form missing fields
 : - Fang's Passport number, issue date and place
-  - Deutsche Bank phone number
   - Lucas' Passport number, issue date and place
   - Itinerary in China and two home address
 
@@ -90,19 +90,14 @@ Form missing fields
 
 - For people under 18, please provide ==a copy of birth certificate== regardless of whether he/she obtained visa before. Also, please provide ==a copy of ID (passport photo page) of a parent who signs the application form==. If the parent doesn’t hold a US passport, please provide a copy of Green card. 
 
-### Payment
+### Processing
 
 - Copy of the Invoice/Receipt (please go to [our website](www.visamailservice.com) to complete a free online registration, you will get the invoice/receipt at the end.)
 - You can either pay online with your credit card or include a check in your package, with the total amount shown one the invoice/receipt, payable to VisaMailService.COM.
+- Make sure the amount is $448.00 and payable to LUC CONSULTING INC.
+- Please goto [Status Tracking](http://www.visamailservice.com/status-tracking) page to update your shipping carrier, tracking number (if any), and estimated delivery time so we know your package is coming.
+- We recommend you to use FedEx to ship the package to us.
+- DO NOT require signature on delivery of your package. That may cause delays on your applications.
 
-
-### Duration
-
-- Standard: 8-10 days, Express: 4-5 days
-
-### Expense
-
-- $210.00 for each person
-- $30 for each photo
 
 [^visa]: China Embassy Visa Type [online](http://www.china-embassy.org/eng/visas/hrsq/)
