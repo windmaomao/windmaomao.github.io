@@ -357,7 +357,7 @@ export default Logo
 First, transpile JavaScript with Babel:
 
 ```bash
-babel --presets react,es2015 js/source -d js/build
+babel --presets react,env js/source -d js/build
 ```
 
 Next comes packaging:
@@ -377,6 +377,32 @@ Watch changes
 ```bash
 watch "sh scripts/build.sh" js/source css
 ```
+
+You can also use `webpack` via `webpack.config.js`
+
+```javascript
+const path = require('path');
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: ['Foo']
+  },
+  module: {
+    loaders: [
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+    ]
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDom"
+  }
+}
+```
+
+Here, `output.library` will add the `Foo` to the window and the last `externals` will make sure `react` is loaded as external variables.
 
 ### Deploy
 
