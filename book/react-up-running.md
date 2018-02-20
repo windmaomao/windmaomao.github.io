@@ -354,6 +354,8 @@ export default Logo
 
 ### Build
 
+#### Browserify
+
 First, transpile JavaScript with Babel:
 
 ```bash
@@ -377,6 +379,8 @@ Watch changes
 ```bash
 watch "sh scripts/build.sh" js/source css
 ```
+
+#### Webpack
 
 You can also use `webpack` via `webpack.config.js`
 
