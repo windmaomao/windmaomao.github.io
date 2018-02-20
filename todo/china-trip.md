@@ -30,6 +30,8 @@ Apply via agency [Visa Mail Service](http://www.visamailservice.com/q2-visiting-
 
 Checklist
 
+Get develop and glue {.red}
+
 Fang
 : - ~~Application form~~
   - ~~Invitation letter~~
@@ -38,7 +40,7 @@ Fang
   - ~~Inviting Individual's ID photocopy~~
   - ~~Copy of passport page~~
   - ~~Copy of last chinese passport~~
-  - Payment check {.red}
+  - ~~Payment check~~
 
 Lucas
 : - ~~Application form~~
@@ -48,8 +50,6 @@ Lucas
   - ~~Passport page of mother~~
   - ~~Passport page of father~~
 
-Form missing fields
-: - Itinerary in China and two home address {.red}
 ### Visa Application Form
 
 - The application [Form V.2013](https://www.visamailservice.com/forms/) must be completed on a computer and be printed single-sided.
