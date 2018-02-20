@@ -1,15 +1,12 @@
 # React: Up & Running
 
-## Preface
-
 ::: notification
-Notes: The uniqueness of `React` is that it trys to ONLY solve one problem when making web application, that is how to simply write a line that injects some `HTML` (or kinda) into existing `HTML` tag. Many library approaches this problem with more or less similar way but some difference in the detail. 
+**Comment:** The uniqueness of `React` is that it trys to ONLY solve one problem when making web application, that is how to simply write a line that injects some `HTML` (or kinda) into existing `HTML` tag. Many library approaches this problem with more or less similar way but some difference in the detail. 
 
 IMO, `React` approaches this problem with the brutal force by writting a line connecting its own element and injecting into the native `DOM` element. The idea is that as long as the `React` element can make UI elements easy or quickly enough, this syntax will holds perfectly while keeping the `DOM` injection footprint small, ex. most of time just once for entire page.
 
 This idea isn't new. For instance, one aspect of `jQuery`  is to manipulate `DOM` elements, including add and remove operation. What is really astonishing here is that `React` want to solely reply on this render approach in generating all elements on the fly, again and again, especially when there's change to the component. Therefore the controlling mechanism of the element returns to the input of the element, ex. data or configuration. This is a concept shift.
 
-However I do not think this approach is a one for all solution for all websites, especially not all websites over the internet is web app yet. There're still millions or trillions of web pages. Designer or content provider will be still comfortable with native internet language, such as HTML. Turning things into elements isn't going to be the main stream. Media can change, but the format of the content rarely do. When you get older, book feels more special to you. Words you type on the computer doesn't mean much if it's not written in a book like language. 
 :::
 
 ## Hello World

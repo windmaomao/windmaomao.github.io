@@ -42,7 +42,10 @@ md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji'))
 md.use(require('markdown-it-abbr'))
 md.use(require('markdown-it-mark'))
-md.use(require('markdown-it-container'), 'abstract', {
+
+var container = require('markdown-it-container')
+md.use(container, 'notification')
+md.use(container, 'abstract', {
   validate: function(params) {
     return params.trim().match(/^abstract\s+(.*)$/)
   },
