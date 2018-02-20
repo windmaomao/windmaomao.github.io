@@ -303,7 +303,9 @@ import React from 'react';
 export default Logo
 ```
 
-### Classes
+> ==`export default` rolled back in latest `Babel`,  use `module.exports` instead==.
+
+#### Classes
 
 ECMAScript now has classes, so let’s benefit from the new syntax.
 
@@ -317,7 +319,7 @@ class Logo extends React.Component {
 }
 ```
 
-### Altogether
+#### Altogether
 
 Here's the final version of `app.js`
 
