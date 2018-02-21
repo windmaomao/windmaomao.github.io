@@ -15,9 +15,9 @@ export default {
       return (
         <div class="slider">
           <button class="close" onClick={this.onToggle}>X</button>
-          <aside className="menu">
-            <p className="menu-label">Menu</p>
-            <ul className="menu-list">{
+          <aside class="menu">
+            <p class="menu-label">Menu</p>
+            <ul class="menu-list">{
               this.menu.map((menu) =>
                 <li>
                   <a>{menu.title}</a>
