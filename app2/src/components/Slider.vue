@@ -53,7 +53,7 @@ export default {
       } else {
         this.$emit('select', '')
       }
-      this.onToggle('');
+      this.onToggle('')
     }
   }
 }
