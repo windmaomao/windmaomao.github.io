@@ -213,6 +213,212 @@ Functions are pretty neat. They allow us to take a piece of logic and store it i
 
 ==**In a method, this refers to the component that the method is attached to. You can access properties on the data object and other methods using this.**==
 
+### Computed properties
+
+Computed properties sit halfway between properties of the data object and methods: you can access them as if they were properties of the data object, but they are specified as functions.
+
+```html
+<div id="app">
+  <p>Sum of numbers: {{ numberTotal }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      numbers: [5, 8, 3]
+    },
+    computed: {
+      numberTotal() {
+        return numbers.reduce((sum, val) => sum + val);
+      }
+    }
+  });
+</script>
+```
+
+### Watchers
+
+Watchers allow us to watch a property of the data object or a computed property for changes.
+
+```javascript
+  new Vue({
+    el: '#app',
+    data: {
+      count: 0
+    },
+    watchers: {
+      count() {
+        // this.count has been changed!
+      }
+    }
+  });
+```
+
+#### Getting the old value 
+
+```javascript
+watch: {
+  inputValue(val, oldVal) {
+    console.log(val, oldVal);
+  }
+}
+```
+
+#### Deep watching
+
+```javascript
+watch: {
+  formData: {
+    handler() {
+      console.log(val, oldVal);
+    },
+    deep: true
+  }
+}
+```
+
+### Filters
+
+Filters, also often seen in other templating languages, are a convenient way of manipulating data in your templates. I find them great for making simple display changes to strings and numbers: for example, changing a string to the correct case or displaying a number in a human-readable format.
+
+```html
+<div id="app">
+  <p>Product one cost: {{ productOneCost | formatCost }}</p>
+  <p>Product two cost: {{ productTwoCost | formatCost }}</p>
+  <p>Product three cost: {{ productThreeCost | formatCost }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      productOneCost: 998,
+      productTwoCost: 2399,
+      productThreeCost: 5300
+    },
+    filters: {
+      formatCost(value) {
+        return '$' + (value / 100).toFixed(2);
+      }
+    }
+  });
+</script>
+```
+
+### Ref Accessing elements
+
+Sometimes you might find yourself needing to access an element directly in the DOM—maybe you’re using a third party library that isn’t written to work with Vue, or maybe you want to do something that Vue just can’t quite handle itself. You can use ref to access the element directly without having to use querySelector or one of the other native ways to select an element from the DOM.
+
+```html
+<canvas ref="myCanvas"></canvas>
+```
+
+Then in your JavaScript, it will be stored on the this.$refs object as whatever you set the ref attribute as. In this case, **you can access it using `this.$refs.myCanvas`**.
+
+### Inputs and events
+
+To bind an event listener to an element, you can use the v-on directive. It takes the name of the event as the argument, and the event listener as the passed value.
+
+```html
+<div id="app">
+  <button v-on:click="increase">Click to increase counter</button>
+  <p>You've clicked the button {{ counter }}</p> times.
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      increase(e) {
+        this.counter++;
+      }
+    }
+  });
+</script>
+```
+
+Similarly to the `v-bind` directive, the v-on also has a shorter way of writing it. Instead of writing `v-on:click`, you can write just `@click`.
+
+```html
+<button @click="increase">Click to increase counter</button>
+```
+
+#### Event modifiers
+
+To prevent the default action of the event from happening—for example, to stop a page navigation happening when a link is clicked—you can use the .prevent modifier:
+
+```html
+<a @click.prevent="handleClick">...</a>
+<button @click.stop="handleClick">...</button>
+<button @click.once="handleFirstClick">...</button>
+<div @click.capture="handleCapturedClick">...</div>
+<div @click.self="handleSelfClick">...</div>
+<div @click.stop.capture.once></div>
+```
+
+In addition to those event modifiers, there are also “key” modifiers - these are used on keyboard events so that you can only fire the event when a certain key is pressed. 
+
+```html
+<div id="app">
+  <form @keyup="handleKeyup">...</form>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      handleKeyup(e) {
+        if (e.keyCode === 27) {
+          // do something
+        }
+      }
+    }
+  });
+</script>
+```
+
+The code inside the if statement will only run when the key with keyCode 27—the escape key—is pressed. However, Vue has a way to do this built in as a modifier. You can just specify the key code as the modifier.
+
+```html
+<form @keyup.27="handleEscape">...</form>
+<form @keyup.shift-left="handleShiftLeft">...</form>
+<input @keydown.enter.exact="handleEnter">
+```
+
+### Lifecycle hooks
+
+Vue has eight lifecycle hooks, but they're pretty eash to remember because four of  them are just "before" hooks that are fired before the other ones. 
+
+- `beforeCreate` is fired before the instance is initialised.
+- `created` is fired after the instance has been initialised but before it is added to the `DOM`.
+- `beforeMount` is fired once the element is ready to be added to the `DOM` but before it has been.
+- `mounted` is fired once the element has been created (but not necessarily added to the DOM: use `nextTick` for that).
+- `beforeUpdate` is fired when there are changes to be made to the `DOM` output.
+- `updated` is fired after changes have been written to the `DOM`.
+- `beforeDestroy` is fired when the component is about to be destroyed and removed from the `DOM`.
+- `destroyed` is fired once the component has been destroyed.
+
+### Custom directives
+
+In addition to the built in directives such as v-if, v-model and v-html, it’s possible to create your own custom directives. ==**Directives are great for when you want to do something directly with the `DOM`—if you find that you’re not accessing the `DOM`, you’d probably be better off with a component instead.**==
+
+```html
+<p v-blink>This content will blink</p>
+
+<script>
+Vue.directive('blink', {
+  bind(el) {
+    let isVisible = true;
+    setInterval(() => {
+      isVisible = !isVisible;
+      el.style.visibility = isVisible ? 'visible' : 'hidden';
+    }, 1000);
+  }
+});
+</script>
+```
 
 ## State management with Vuex
 
