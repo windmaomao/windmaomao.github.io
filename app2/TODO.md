@@ -2,8 +2,11 @@
 
 ## 2018
 
+### 2/21
+- design slider component
+
 ### 2/19
-- integrate with react component
+- ~~integrate with react component~~
 
 ### 2/18
 - ~~design comment style~~
