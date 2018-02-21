@@ -494,6 +494,62 @@ Using JavaScript animations we can create much more complicated animations than 
 
 ## Components in Vue.js
 
+A component is a self-contained piece of code that represents a part of the page. Components have their own data, their own JavaScript, and often their own styling. They can contain other components, and they can communicate with each other. A component could be something as small as a button or an icon, or it could be something bigger like a form you reuse a lot throughout your site or an entire page.
+
+The main advantage of separating your code into components is that it means that the code responsible for each bit of the page is close to the rest of the code for that component - no more having to search for a selector in a tonne of different JavaScript files to see what is adding that event listener, the JavaScript is right there next to the HTML! It also means that ==as they’re self-contained, you can make sure that none of the code inside a component will affect any other components or have any side effects==.
+
+### Component basics
+
+Let’s dive right in and demonstrate a simple component.
+
+```html
+<div id="app">
+  <custom-button></custom-button>
+</div>
+<script>
+  const CustomButton = {
+    template: '<button>Custom button</button>'
+  };
+
+  new Vue({
+    el: '#app',
+    components: {
+      CustomButton
+    }
+  });
+</script>
+```
+
+You can also register components globally using the Vue.component() method, as follows:
+
+```javascript
+Vue.component('custom-button', {
+  template: '<button>Custom button</button>'
+});
+```
+You can then use it the same way it was used in the previous example in the template, but you don’t need to specify it in the components object anymore - it’s available everywhere.
+
+#### Prop validation
+
+To specify the type of a prop, pass it a native constructor such as Number, String or Object, or a custom constructor function which will be checked with instanceof.
+
+```javascript
+Vue.component('price-display', {
+  props: {
+    price: Number,
+    price: {
+      type: Number,
+      required: true
+    },
+    unit: {
+      type: String,
+      default: '$'
+    }
+  }
+});
+```
+
+
 ## Styling with Vue
  
 ## Render functions and JSX
