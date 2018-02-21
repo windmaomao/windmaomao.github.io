@@ -1,16 +1,14 @@
 <script>
 export default {
   name: 'Slider',
+  props: {
+    menu: Array
+  },
   data: () => ({
-    enabled: true,
     open: false
   }),
   render() {
-    let menus = [
-      { title: 'Blogs', items: [] },
-      { title: 'Books', items: ['index', 'vue-up'] }
-    ]
-    if (!this.enabled) {
+    if (!this.menu.length) {
       return null
     }
     if (this.open) {
@@ -20,7 +18,7 @@ export default {
           <aside className="menu">
             <p className="menu-label">Menu</p>
             <ul className="menu-list">{
-              menus.map((menu) =>
+              this.menu.map((menu) =>
                 <li>
                   <a>{menu.title}</a>
                   <ul>{
