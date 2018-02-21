@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-bind:class="{ 'spinning': spinning }">
-    <Slider :menu="menu" />
+    <Slider :menu="menu" @select="menuSelected" />
     <Header :menu="menu" @select="menuSelected" />
     <Themer @theme="themeSwitched" />
     <Main :source="source" />

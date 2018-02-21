@@ -23,7 +23,12 @@ export default {
                   <a>{menu.title}</a>
                   <ul>{
                     menu.items.map((name) =>
-                      <li><a>{name}</a></li>
+                      <li>
+                        <a onClick={event => {
+                          event.preventDefault()
+                          this.onSelect(menu.type, name)
+                        }}>{name}</a>
+                      </li>
                     )
                   }</ul>
                 </li>
@@ -41,6 +46,14 @@ export default {
   methods: {
     onToggle(e) {
       this.open = !this.open
+    },
+    onSelect(type, name) {
+      if (type) {
+        this.$emit('select', type + '/' + name)
+      } else {
+        this.$emit('select', '')
+      }
+      this.onToggle('');
     }
   }
 }
