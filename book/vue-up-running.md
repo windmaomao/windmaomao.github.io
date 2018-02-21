@@ -420,5 +420,87 @@ Vue.directive('blink', {
 </script>
 ```
 
+#### Hook arguments
+
+We’ve seen before that directives accept arguments (v-bind:class), modifiers (v-on.once) and values (v-if="expression"). It’s possible to access all of these using the second argument passed to the hook function, binding.
+
+```javascript
+Vue.directive('blink', {
+  bind(el, binding) {
+    let isVisible = true;
+    setInterval(() => {
+      isVisible = !isVisible;
+      el.style.visibility = isVisible ? 'visible' : 'hidden';
+    }, binding.value || 1000);
+  }
+});
+```
+
+### Transitions and animations
+
+Let’s say we want to add a simple transition to it: we just want it to fade in and out when the visibility is toggled. To do that, we can wrap the div in a transition component, like so:
+
+```html
+<transition name="fade">
+  <div v-if="divVisible">This content is sometimes hidden</div>
+</transition>
+```
+
+That by itself won’t do anything (it will behave exactly the way it did before we added the <transition> element), but if we add the following CSS, we’ll get our fade transition:
+
+```css
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+```
+
+#### Javascript animations
+
+In addition to CSS animations, the <transition> component also provides hooks that you can use to power JavaScript animations.
+
+```html
+<transition
+  v-on:before-enter="handleBeforeEnter"
+  v-on:enter="handleEnter"
+  v-on:leave="handleLeave>
+  <div v-if="divVisible">...</div>
+</transition>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    divVisible: false
+  },
+  methods: {
+    handleBeforeEnter(el) {
+      el.style.opacity = 0;
+    },
+    handleEnter(el, done) {
+      TweenLite.to(el, 0.6, { opacity: 1, onComplete: done });
+    },
+    handleLeave(el, done) {
+      TweenLite.to(el, 0.6, { opacity: 0, onComplete: done });
+    }
+  }
+});
+</script>
+```
+
+Using JavaScript animations we can create much more complicated animations than we can with `CSS` transitions, including multiple steps, or a different transition every time. `CSS` transitions are generally more performant though, so stick with them unless you actually need some functionality you can’t get with just `CSS` transitions.
+
+
+## Components in Vue.js
+
+## Styling with Vue
+ 
+## Render functions and JSX
+
+## Client-side routing with vue-router 
+
 ## State management with Vuex
+
+## Testing Vue components
 
