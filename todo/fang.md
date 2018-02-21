@@ -2,13 +2,16 @@
 
 ## 2018
 
+### 2/21
+- :fire: ship visa form and update [shipping status](https://www.visamailservice.com/status-tracking/)
+
 ### 2/20
 
 - Deal with npm two-factor auth
 
 ### 2/19
 
-- :fire: make pane slider menu component
+- make pane slider menu component
 - ~~publish angular-react-common~~
 
 ### 2/16
