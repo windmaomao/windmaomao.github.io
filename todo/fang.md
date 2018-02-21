@@ -3,7 +3,8 @@
 ## 2018
 
 ### 2/21
-- :fire: Ship visa form and update [shipping status](https://www.visamailservice.com/status-tracking/)
+- ~~Ship visa form~~
+- ~~update [shipping status](https://www.visamailservice.com/status-tracking/)~~
 
 ### 2/20
 
@@ -42,7 +43,7 @@
 
 ### 2/9 
 
-- :date: `2/19` :fire: Book china trip tickets {.red}
+- :date: `2/23` :fire: Book china trip tickets {.red}
 - ~~Study markdown-it process~~
 
 ### 2/4
