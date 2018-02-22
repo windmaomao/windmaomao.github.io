@@ -2,16 +2,19 @@
 
 ## 2018
 
+### 2/21
+- ~~design slider component~~
+- :fire: add sliding effect on mobile
+
 ### 2/19
-- integrate with react component
+- ~~integrate with react component~~
 
 ### 2/18
-- design comment style
+- ~~design comment style~~
 
 ### 2/16
 - ~~take themer to footer location~~
 - ~~make url to open to new tab~~
-- add option object to hold second footer
 - ~~change page title as doc title~~
 - ~~fix style for iphone~~
 

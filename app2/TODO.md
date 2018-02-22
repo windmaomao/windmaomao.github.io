@@ -1,9 +1,13 @@
 # QPlot Knowledgebase
 
+[Awesome Vue](https://github.com/vuejs/awesome-vue)
+
 ## 2018
 
 ### 2/21
-- design slider component
+- ~~design slider component~~
+- :fire: add sliding effect on mobile
+- add notification to the site
 
 ### 2/19
 - ~~integrate with react component~~
