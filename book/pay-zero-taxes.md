@@ -15,7 +15,7 @@
 
 ## How Our Tax System Works
 
-## Exclusions
+## Exclusions — Tax Free Money
 Tax-Free Money
 
 The most important thing that you as a taxpayer can do to reduce your taxes to zero is to convert fully taxable income into excludable income. An exclusion is something that is not included in gross income. It is the best kind of revenue to receive. If you are in the 25 percent tax bracket (single, taxable income over $37,950), each dollar you convert to excludable income is the equivalent of getting a raise of 25 percent! Therefore, in negotiating compensation, you as an employee-taxpayer should ==examine the following forms of nontaxable remuneration for services rendered as **alternatives to fully taxable cash income**==.
@@ -385,9 +385,52 @@ For example, if you have a modified adjusted gross income of $45,000 and $5,475 
 
 One of my own favorite medical deductions is the cost of an overseas trip for medical or dental work. For example, it has been established that the cost of extensive dental work is far less expensive in Europe than in the United States. Therefore, even adding the transportation costs to go to an overseas dentist, your total cash outlay is lower than having such work performed locally. On this basis, such transportation costs have been allowed as deductible medical expenses. One woman consulted three different dermatologists in the United States, but none was able to improve her skin condition. Finally, she was treated successfully as an outpatient in a foreign country. The IRS agreed that her expenses were deductible (Letter Ruling 812-6044).
 
-### Income Taxes
-
-### Real Property Tax
 
 
+## Traditional Tax Shelters
 
+**The art of sophisticated tax planning requires you to understand the elements of tax-sheltered investments.** These investments allow you to offset certain “artificial losses”—noneconomic losses, but losses that are available as deductions under the present tax laws, and not only against the income from those investments but also against your other income from your regular business or professional activity.
+
+There normally are three elements that make up the typical tax shelter arrangement. One or more of these elements will be found in almost all tax shelters. 
+
+- The first is the *deferral concept,* in which deductions are accelerated in order to reduce the tax liability of an individual in the early years of the transaction instead of matching those deductions against the income that is eventually generated from the investment. This deferral of tax liability from the earlier years to the future years results, in effect, in an interest-free loan by the federal government, repayable when the investment either produces net taxable income, is sold, or is otherwise disposed of.
+- The other element of a typical tax shelter is *leverage,* in which borrowed funds are used in a taxpayer’s investments to pay the expenses for which accelerated deductions are received. Your position is enhanced when the borrowing is on a nonrecourse basis, which means that you are not *personally* liable to repay loans and your personal investment risk is limited to your equity investment. Unfortunately, recent tax laws and Internal Revenue Service rulings have limited the availability of tax shelter investments with a nonrecourse-loan basis.
+- A third tax shelter element for many investments is the *conversion* of ordinary income to capital gains at the time of the sale or other disposition of the investment. Long-term capital gains are taxed at a *maximum* 20 percent rate (23.8 percent in 2013 and after with the 3.8 percent surcharge on unearned income). For those in the 35 percent or lower brackets, the rate is not more than 15 percent. Conversion occurs when the portion of the gain reflecting the accelerated deductions taken against ordinary income is taxed as a capital gain. If you are in a lower income tax bracket in the later years, you effectively convert the tax rate as well.
+
+### 117 Real Estate
+
+*“It’d take a genius to invest in real estate and pay taxes”:* House Ways and Means Committee member Fortney H. (Pete) Stark, D-Calif., on the committee’s decisions regarding the taxation of real estate, 1986. Of the various forms of investments available to you that involve possible tax incentives, the most widely used is real estate. Historically, real estate has been sold as an investment for income and long-term gain, as well as a hedge against inflation. Real estate can be purchased in the form of shopping centers, warehouse net leases, apartment buildings, residential housing, and even raw land.
+
+Leverage
+
+: Leverage is the use of borrowed funds with the anticipation that the property will increase in value at a rate greater than the cost of borrowing, so that a profit will be realized not only on the investor’s own money but also on the use of someone else’s money. For example, if you make an investment of $100, putting up $10 in cash and borrowing $90 at an interest rate of 10 percent, at the end of the first year you will have a net cash outflow of $19 (your $10 initial investment plus $9 interest on the $90 borrowed). Assume your property increases in value 20 percent during that same period and then you sell it, paying off your $90 debt. You receive a total of $120; subtract the $99 ($90 in principal plus $9 in interest), and you have a net gain of $21. On your initial cash investment of $10, this represents a 210 percent return. You can often use borrowed capital in a real estate purchase to finance as much as 80 percent of the total cost of the property.
+
+Inflation Hedge
+
+: The supply of real estate is clearly limited. For this reason, many people believe that investments in well-selected real estate can be expected to at least keep up with inflation, and perhaps even increase in value faster than inflation.
+
+Cash Flow
+
+: In many cases, good income-producing real property will generate a favorable cash flow. This cash flow can be augmented by increased income tax savings due to the shelter aspects of real estate investments.
+
+Equity Buildup
+
+: Income-producing real estate may create increased liquidity. Debt reduction plus inflation may create equity that can be the source of new or additional financing. This is the amount of the mortgage principal that you are paying off each year. Even if the property value merely remains flat with no appreciation, your equity interest in that property will increase each year by the principal payoff.
+
+Ability to Pool Capital
+
+: Syndicates or partnerships enable investors to pool their capital in order to acquire large, select properties they would not be able to buy individually.
+
+Deductible Expenses
+
+: -  *Mortgage interest,* that portion of debt service payments represented by deductible interest costs.
+  - *Depreciation,* an accounting adjustment that reflects the theoretical wear and tear and economic obsolescence of the property. It is the deduction for the investment you made—both borrowed and out of pocket. Because of this, a portion of the income you receive is considered a return of your capital investment and not subject to tax.
+  - *Operating expenses,* which include property management, maintenance, insurance, garbage removal, real estate taxes, common area utilities, etc.
+  - *Construction period expenses,* deductible expenses incurred before the building is occupied, such as real estate taxes, interest on the construction loan, etc. These costs are not deductible when incurred, but must be amortized over a period of years.
+  - *Fees,* a portion of the purchase price that, frequently, the seller of the property agrees to take as payment for services, resulting in an immediate deduction—for instance, guarantees for “rent up,” completion, financing, etc.
+
+Before investing in a shelter you must recognize that real estate projects fall into three major categories:
+
+- Commercial
+- Residential
+- Government-supported housing
