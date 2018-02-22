@@ -17,7 +17,7 @@
   },
   {
     "title": "Repos", "type": "repository",
-    "items": ["qp-knowledgebase", "angular2-mc-common", "angular-mc-common", "aof-form", "kingslanding", "ng-admin-restify", "mongoose-restify", "event-services", "dbvals-audit"]
+    "items": ["markdown-it", "qp-knowledgebase", "angular2-mc-common", "angular-mc-common", "aof-form", "kingslanding", "ng-admin-restify", "mongoose-restify", "event-services", "dbvals-audit"]
   },
   {
     "title": "Todo", "type": "todo",
