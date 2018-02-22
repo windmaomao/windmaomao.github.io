@@ -551,7 +551,94 @@ Vue.component('price-display', {
 
 
 ## Styling with Vue
- 
+
+### Class binding
+
+```html
+<div id="app">
+  <div v-bind:class="[firstClass, secondClass]">
+    ...
+  </div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      firstClass: 'foo'
+    },
+    computed: {
+      secondClass() {
+        return 'bar';
+      }
+    }
+  });
+</script>
+```
+
+It’s also possible to mix both arrays and objects by using the objects inside an array for when you want to add classes from both variables and conditionally add classes.
+
+```html
+<div v-bind:class="[
+    'my-class',
+    classFromVariable,
+    { 'conditional-class': hasClass }
+  ]"></div>
+```
+
+### Inline style binding
+
+Similar to v-bind:class, covered in the previous section, Vue also has a special helper for the style attribute. Instead of you having to concatenate strings to specify inline styles, you can specify them as an object instead:
+
+```html
+<div v-bind:style="{ fontWeight: 'bold', color: 'red' }"></div>
+```
+
+### Scoped CSS with vue-loader
+
+Let’s take a look at how it works. If we add the scoped attribute to the previous style tag (so that it is now `<style scoped>`), the following HTML is output:
+
+```html
+<p data-v-e0e8ddca>The number is <span data-v-e0e8ddca class="number">10</span></p>
+
+<style>
+.number[data-v-e0e8ddca] {
+  font-weight: bold;
+}
+</style>
+```
+
+
+### CSS modules with vue-loader
+
+As an alternative to scoped CSS, you can also use CSS modules with vue-loader.
+
+```html
+<template>
+  <p>The number is <span :class="$style.number">{{ number }}</span></p>
+</template>
+
+<style module>
+  .number {
+    font-weight: bold;
+  }
+</style>
+```
+
+### Preprocessors
+
+You can configure vue-loader to run your CSS, JavaScript and HTML through preprocessors. Say you want to write SCSS instead of CSS to take advantage of features like nesting and variables. You can do that in two step: first, install `sass-loader` and `node-sass` using npm, and then add `lang="scss"` to your style tag:
+
+```html
+<style lang="scss" scoped>
+  $color: red;
+
+  .number {
+    font-weight: bold;
+    color: $color;
+  }
+</style>
+``` 
+
 ## Render functions and JSX
 
 ## Client-side routing with vue-router 
