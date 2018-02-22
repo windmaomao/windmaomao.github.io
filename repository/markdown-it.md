@@ -38,21 +38,28 @@ Here are some maps of token supported in the system.
 
 ### Block state
 
-- code
-  - `'code_block', 'code', 0` 
-- heading
-  - `'heading_open' , 'h1', 1`
+Code
+
+: - `'code_block', 'code', 0` 
+
+Heading
+
+: - `'heading_open' , 'h1', 1`
   - `'inline', '', 0`
   - `'heading_close', 'h1', -1`
-- list
-  - `'order_list_open', 'ol', 1`
+
+List
+
+: - `'order_list_open', 'ol', 1`
   - `'bullet_list_open', 'ul', 1`
   - `'list_item_open', 'li', 1`
   - `'list_item_close', 'li', -1`
   - `'order_list_close', 'ol', -1`
   - `'bullet_list_close', 'ul', -1`
-- paragraph
-  - `'paragraph_open', 'p', 1`
+
+Paragraph
+
+: - `'paragraph_open', 'p', 1`
   - `'inline', '', 0`
   - `'paragraph_close', 'p', -1`
 
