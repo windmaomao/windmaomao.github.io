@@ -1,24 +1,21 @@
 ul.toc {
   list-style: none;
-  margin: 10px .6em;
-  padding: 0;
+  margin-top: 0;
+  padding-left: 0;
   a {
-    font-size: 12px;
-    text-transform: capitalize;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 18px;
   }
   li {
-    // display: none;
-    margin: 0;
-    &.h1 {
-      display: block;
-      a {
-        font-size: 14px;
-        font-weight: bold;
-      }
-    }
+    display: none;
+    margin-top: 0;
     &.h2 {
       display: block;
+      font-weight: bold;
+    }
+    &.h3 {
+      display: inline-block;
+      padding-left: 5px;
     }
   }
 }

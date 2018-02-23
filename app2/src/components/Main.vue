@@ -1,18 +1,12 @@
 <template>
   <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
     <Headful :title="title" />
+    <Toc :toc="toc" />
     <template v-show="source">
-      <!-- <div class="sidebar" v-show="sidebar">
-        <div id="toc" v-html="compiledToc"></div>
-        <div id="back-top">
-            <a href="#app">Back to top</a>
-        </div>
-      </div> -->
       <section class="main">
         <div id="write" class="container" v-html="compiled"></div>
       </section>
     </template>
-    <Toc :toc="toc" />
     <Footer/>
   </div>
 </template>
