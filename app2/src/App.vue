@@ -4,6 +4,7 @@
     <Header :menu="menu" @select="menuSelected" />
     <Themer @theme="themeSwitched" />
     <Main :source="source" />
+    <Bottom/>
     <Footer/>
   </div>
 </template>
@@ -14,18 +15,18 @@ import Slider from './components/Slider'
 import Header from './components/Header'
 import Themer from './components/Themer'
 import Main from './components/Main'
+import Bottom from './components/Bottom'
 import Footer from './components/Footer'
-import Test from './components/Test'
 
 export default {
   name: 'App',
   components: {
     Slider,
     Header,
-    Themer,
     Main,
+    Bottom,
     Footer,
-    Test
+    Themer
   },
   data () {
     return {
