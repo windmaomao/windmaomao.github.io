@@ -12,10 +12,14 @@
         <div id="write" class="container" v-html="compiled"></div>
       </section>
     </template>
+    <Toc :toc="toc" />
+    <Footer/>
   </div>
 </template>
 
 <script>
+import Toc from './Toc'
+import Footer from './Footer'
 
 var md = require('markdown-it')({
   html: true,
@@ -68,11 +72,16 @@ md.use(require('markdown-it-for-inline'),
 
 export default {
   name: 'Main',
+  components: {
+    Toc,
+    Footer
+  },
   data () {
     return {
-      sidebar: true,
+      sidebar: false,
       compiledToc: '',
-      title: 'Fang Jin'
+      title: 'Fang Jin',
+      toc: []
     }
   },
   props: ['source'],
@@ -83,10 +92,12 @@ export default {
         tocCallback: function(md, arr, html) {
           that.compiledToc = html
         },
-        title: ''
+        title: '',
+        toc: []
       }
       const rendered = md.render(this.source, env)
       that.title = env.title
+      that.toc = env.toc
       return rendered
     }
   },
@@ -101,6 +112,11 @@ export default {
         env.title = tokens[idx + 1].children
           .reduce((acc, t) => acc + t.content, '')
       }
+
+      env.toc.push({
+        level: tokens[idx].markup.length,
+        title: tokens[idx + 1].content
+      })
 
       // Execute original rule.
       if (originalHeadingOpen) {

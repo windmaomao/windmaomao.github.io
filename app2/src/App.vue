@@ -1,31 +1,23 @@
 <template>
   <div id="app" v-bind:class="{ 'spinning': spinning }">
     <Slider :menu="menu" @select="menuSelected" />
-    <Header :menu="menu" @select="menuSelected" />
-    <Themer @theme="themeSwitched" />
     <Main :source="source" />
-    <Bottom/>
-    <Footer/>
+    <Themer @theme="themeSwitched" />
   </div>
 </template>
 
 <script>
 import './assets/styles.scss'
 import Slider from './components/Slider'
-import Header from './components/Header'
 import Themer from './components/Themer'
 import Main from './components/Main'
-import Bottom from './components/Bottom'
-import Footer from './components/Footer'
 
 export default {
   name: 'App',
   components: {
     Slider,
-    Header,
+    // Header,
     Main,
-    Bottom,
-    Footer,
     Themer
   },
   data () {
@@ -58,7 +50,8 @@ export default {
       url = url || this.default
       const fn = this.domain2 + url + '.md'
       this.$http.get(fn).then(res => {
-        this.source = '[[toc]]\n' + res.body
+        // this.source = '[[toc]]\n' + res.body
+        this.source = res.body
         this.spinning = false
         localStorage.setItem('qp-md', url)
       })
