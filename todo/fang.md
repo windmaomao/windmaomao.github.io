@@ -43,7 +43,7 @@
 
 ### 2/9 
 
-- :date: `2/23` :fire: Book china trip tickets {.red}
+- :date: `2/23` ~~Book china trip tickets~~
 - ~~Study markdown-it process~~
 
 ### 2/4
