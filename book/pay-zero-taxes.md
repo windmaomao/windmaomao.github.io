@@ -434,3 +434,92 @@ Before investing in a shelter you must recognize that real estate projects fall 
 - Commercial
 - Residential
 - Government-supported housing
+
+### 120 Equipment Leasing
+
+Leasing, as a method of financing capital assets for industry, has grown tremendously in recent years and can be a good tax shelter. According to the National Association of Securities Dealers, **equipment leasing deals have been the fastest growing category of direct placement programs (tax shelters)**. Capital assets frequently financed by leasing include computers, airplanes, railroad rolling stock, ships, pollution control equipment, and industrial machinery.
+
+### 121 Single-Premium Life Insurance
+
+Single-premium policies may still be viable and desirable for other reasons. They provide a mechanism to pass assets to others without subjecting them to the costs, delays, and uncertainties of probate. Attacks on or elections against an insured’s will are avoided, as are any claims of potential creditors. Such policies also provide a way to fully prefund future debts or pledges with discounted tax-advantaged dollars. Moreover, at death they are still income tax-free and can be arranged to be both estate and inheritance tax-free.
+
+
+
+### 124 Tax Straddles
+
+To offset the short-term capital gain, you straddle a very volatile commodity (such as copper, silver, or pork bellies) near year-end, hoping for significant price movement—up *or* down—before December 31. If prices rise, you cover your short position at a loss; if prices fall, you liquidate the long position. Either way, the short-term capital loss from commodities offsets your short-term capital gain from other sources. After year-end you liquidate the profitable position. This moves your short-term gain into the next year or (depending on how you hold the contract) converts it to a long-term capital gain. According to former IRS Commissioner Jerome Kurtz, the worst that can happen is that you “receive the equivalent of an interest-free loan from the government for the period of deferral.” But if the price does not move, or if it turns around before you can liquidate the profitable position, you will have a loss.
+
+Straddles can be used not only with commodities but with government securities, such as treasury bills, bonds, or “Ginnie Maes,” or with options on those securities as well. The objective is the same—to create a loss that will reduce your taxable income for one year while you also set the stage to cover that loss with a capital gain in the next year. If the year works out right, you get a current tax benefit and come close to breaking even on the transaction itself.
+
+Treasury bills were a favorite vehicle for straddles because, unlike most securities, they are not classified as capital assets. Under tax rules, any gain or loss from the sale of Treasury bills was treated as ordinary income. These bills are sold at a discount of face value and appreciate to *par* (face value) at maturity. Because the bills are such safe collateral, margin requirements on these straddles are low, as little as 3 percent of the bills’ face value. The following example shows you how a Treasury bill straddle might have worked.
+
+Assume that on December 17 you sell short $1 million in Treasury bills due December 26, and you buy $1 million in Treasury bills due the following March 26, which you intend to sell on January 2. The March maturity date allows for what is generally considered a reasonable period of market risk. But for purposes of this example, assume that between December 26 and January 2 interest rates are high. The result is that you don’t receive the full $1 million face value because the bills due December 26 have 9 days to go until maturity. Assuming a discount of 16.83 percent, the purchase price is $995,793. On the maturity date, you have to cover the sale of borrowed securities. This will cost $1 million, giving you a loss on the transaction of $4,027 for the year.
+
+The $1 million in bills due March 26 that you buy after making the short sale have 99 days to maturity. Assuming a discount of 16.30 percent, the purchase price is $955,175. When you sell those bills on January 2, you collect $962,419, for a gain of $7,244.
+
+After commission costs of approximately $1,200, the net economic gain on the two transactions is $1,837. This gain is reduced by any interest charges on a margin account. In terms of the tax deduction, the straddles saved an investor in the 50 percent bracket (including state, federal, and local taxes) $2,103.50 in taxes for the first year ($4,027 × .50).
+
+Such commodity straddles appear to be no-lose situations. In fact, though, they may turn out to be no-win situations. The Internal Revenue Service views these transactions as “wholly tax motivated and without any real economic substance.” Internal Revenue Service staff members who screen and classify returns are being trained to recognize “straddle” returns and are targeting them for audit. According to the IRS, “taxpayers claiming tax benefits from these transactions will face a substantial likelihood of having their return selected for audit and their claims of artificial losses disallowed on examination.”
+
+
+
+## Super Tax Shelters
+
+The first rule of income taxation is that a tax liability for personal service income may not be avoided by the earner of that income by assignment or other transfer before the income is realized. If you perform services that earn monetary reward, that income will be taxed to you. The second law of income taxation, however, is that income earned from *property* belongs to the owner of that property. Therefore, **the first key to reducing your taxes is to transfer income-producing property to a family member in a lower bracket.** If you make a bona fide transfer of income-producing property that you own, you have effectively shifted all future income from that property. After the transfer, the future income and all income tax due on that income will belong to the new owner in the lower tax bracket.
+
+Part of your solution to the problem of reducing your tax, therefore, is to get your current income taxed to lower-bracketed family members. This strategy is based on the premise that a family is an economic and social unit and that it is immaterial to the welfare of the family as a whole which member derives income or owns property. From a tax perspective, however, it is extremely material.
+
+The standard deduction now permits the tax-free transfer of $1,050 of investment income to a child or other member of your family who has no other income. Alternatively, if the child is of sufficient age to work, that child can earn up to $11,850 ($6,350 standard deduction plus $5,500 IRA[*](https://www.safaribooksonline.com/library/view/how-to-pay/9781260115819/ch09.xhtml#ch09fn_s)) a year in income and still pay zero taxes. Remember, however, that the objective is not necessarily that the family member pay zero taxes, but rather that the taxes paid be less than what you would pay if the income were taxed directly to you. For example, even if that family member is in the 10 percent bracket, a shift of $1,000 in income from you in the 28 percent bracket would result in a net savings of $180.
+
+The intent of the law is to create three stages:
+
+**1.**  There will be no tax on the first $1,050 of unearned income because of the child’s standard deduction. The standard deduction for a dependent in 2017 is the greater of $1,050 in *unearned* income or the sum of $350 plus any *earned* income, with a total of $6,350.
+
+**2.**  The next $1,050 of unearned income will be taxed to the child at the child’s bracket.
+
+**3.**  Unearned income in excess of the first $2,100 will be taxed to the child at the appropriate parent’s rate.
+
+
+
+It may appear that the advantage of shifting income was eliminated by the reduction in bracket spreads (until 1987 the spread from the top bracket of 50 percent to the bottom bracket of 11 percent was 39 percentage points, but now the spread is from 39.6 percent to 10 percent, a 29.6 percentage point difference). But this is an oversimplification. Once a child becomes 19, all earned and unearned income is potentially taxed at the child’s rate. So dropping $10,000 a year of income from the 39.6 percent bracket to the 10 percent bracket will save 29.6 percent per year of the amount of income shifted. In 10 years that amounts to $29,600 in tax savings!
+
+If a child can be claimed as a dependent on a parent’s return, the child may not take a personal exemption. Furthermore, the child’s standard deduction is limited to the greater of (a) $1,050, or (b) the sum of $350 and the child’s earned income (limited to a maximum of that year’s standard deduction). This has forced more parents than ever to file tax returns for their children (children with more than $1,050 of unearned income will have to file income tax returns), those returns are more complicated than ever (and therefore the cost of filing the returns will be increased), and the taxes payable by children have risen precipitously.
+
+
+
+### Outright Gifts
+
+A gift of income-producing property to members of your family is perhaps the most common method of splitting income to gain a tax advantage. The simplest way to transfer money, tax-free, is by gifts in relatively small lumps. You can give an annual gift of $14,000 per person to any number of family members—$28,000 if the gift is made jointly with a spouse—without incurring any gift liability. In order to qualify for the $14,000 or the $28,000 exclusion in the year the gift is made, it must be a gift of a *present interest* (current benefit). A gift tax return is required for any gifts in excess of these amounts to any recipient in any year if the gift is one of a present interest. A gift tax return is required for a gift of any amount if it is of a future interest. A gift is a completed transfer of the entire legal and beneficial interest in the property given. There is no gift *tax paid* until you use up your annual $14,000 exclusion plus your $5.49 million lifetime exclusion.
+
+
+
+### 136 The Schnepper Deep Shelter
+
+Another alternative for shifting income to a lower-bracketed family member is to transfer rental property, excluding the building, to a trust for your children and rent the land back from the trust. The donor parent would still get all of the depreciation on the building, and the trust beneficiary children would be taxed on the lease rental income received. That lease rental income, however, would be a deductible investment expense by the parent. In effect, the parent would be paying lease rental income to the children, deducting that rent expense in the higher bracket and having it taxed to the children at the lower bracket. Moreover, this transfer of family wealth could take place without any gift tax consequences. In *Stanley J. Wolfe,* T.C. Memo 1984-446, this arrangement was validated with a sale leaseback of land to an irrevocable 10-year trust. The leaseback had a bona fide business purpose, and the lease payments were determined to be reasonable rent. Here again, the Tax Reform Act of 1986 would require the use of an irrevocable trust if this technique were to be used effectively.
+
+
+
+### 140 Employing Members of the Family
+
+If you are an individual business owner, a simple and effective method of splitting your income with a family member is to employ that family member in your business and pay compensation. The employment must be bona fide and the salary paid must be reasonable in relation to the services rendered. Even a young child can be compensated for the reasonable value of such services as cleaning your office, mailing your letters, or opening your mail. A 1982 tax court decision allowed a $1,200 deduction for a 7-year-old child who performed a variety of services—maintenance and office work—for a mobile-home-park operator.[29](https://www.safaribooksonline.com/library/view/how-to-pay/9781260115819/ch09.xhtml#ch09fn_29) Be aware, however, that wages actually used by your children for their own support can affect your claim for their dependency exemptions. When in doubt, have your children bank their wages, thereby saving the exemption and teaching them the virtue of thrift as well.
+
+
+
+### 142 Your Home
+
+### 143 Your Car
+
+### 144 Meals and Entertainment
+
+### 145 Travel and Vacation
+
+### 151 Borrowing from Your Company
+
+
+
+## Investment Planning to Save Taxes
+
+The first key to investment planning for 2017 tax purposes is finding out the ever-changing status of the capital gains tax on sales of capital assets. Capital assets include such things as stock, securities, real estate held as an investment, and most properties held for personal purposes.
+
+### Short Sales
+
