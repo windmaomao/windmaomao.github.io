@@ -83,7 +83,7 @@ export default {
     }
   },
   template: `
-    <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
+    <div :class="{ 'with-sidebar': sidebar }">
       <Headful :title="title" />
       <Toc :toc="toc" />
       <template v-show="source">
