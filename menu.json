@@ -25,7 +25,7 @@
   },
   {
     "title": "Todo", "type": "todo",
-    "items": ["fang", "contact", "qp-knowledgebase", "angular2-mc-common", "angular-mc-common", "china-trip"]
+    "items": ["fang", "contact", "qp-knowledgebase", "digital-renovation", "angular2-mc-common", "angular-mc-common", "china-trip"]
   },
   {
     "title": "Others", "type": "other",

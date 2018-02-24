@@ -2,7 +2,14 @@
 
 ## 2018
 
+### 2/24
+
+- Fix garage bulb
+- Write recommendation letter for Dave
+- Start digital renovation
+
 ### 2/21
+
 - ~~Ship visa form~~
 - ~~update [shipping status](https://www.visamailservice.com/status-tracking/)~~
 

@@ -4,10 +4,14 @@
 
 ## 2018
 
+### 2/24
+- add click outside
+
 ### 2/21
 - ~~design slider component~~
-- :fire: add sliding effect on mobile
+- add sliding effect on mobile
 - add notification to the site
+- ~~refine site layout, ex. toc~~
 
 ### 2/19
 - ~~integrate with react component~~
