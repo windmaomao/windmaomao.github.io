@@ -1,11 +1,3 @@
-<template>
-  <div id="app" v-bind:class="{ 'spinning': spinning }">
-    <Slider :menu="menu" @select="menuSelected" />
-    <Main :source="source" />
-    <Themer @theme="themeSwitched" />
-  </div>
-</template>
-
 <script>
 import './assets/styles.scss'
 import Slider from './components/Slider'
@@ -34,6 +26,13 @@ export default {
       menu: []
     }
   },
+  template: `
+    <div id="app" v-bind:class="{ 'spinning': spinning }">
+      <Slider :menu="menu" @select="menuSelected" />
+      <Main :source="source" />
+      <Themer @theme="themeSwitched" />
+    </div>
+  `,
   methods: {
     fetchMenu: function() {
       const fn = this.domain2 + 'menu.json'
@@ -106,14 +105,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  opacity: 1;
-}
-#app.spinning {
-  opacity: 0.4;
-}
-</style>
