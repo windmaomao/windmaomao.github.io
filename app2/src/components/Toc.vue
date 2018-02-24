@@ -4,7 +4,8 @@ export default {
   props: ['toc'],
   data() {
     return {
-      toggled: false
+      toggled: false,
+      activated: false
     }
   },
   computed: {
@@ -35,8 +36,8 @@ export default {
           </div>
           <div class={this.toggled ? 'navbar-menu is-active' : 'navbar-menu'} id="navbar" >
             <div class="navbar-end">
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">{this.title}</a>
+              <div class={{ 'navbar-item': 1, 'has-dropdown': 1, 'is-active': this.activated }}>
+                <a class="navbar-link" onClick={this.onActivate}>{this.title}</a>
                 <div class="navbar-dropdown">
                   <aside class="menu">
                     <ul class="toc menu-list">{
@@ -56,8 +57,12 @@ export default {
     )
   },
   methods: {
-    onToggle: function(e) {
+    onToggle(e) {
       this.toggled = !this.toggled
+      this.activated = !this.activated
+    },
+    onActivate(e) {
+      this.activated = !this.activated
     }
   }
 }
