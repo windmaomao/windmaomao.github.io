@@ -16,10 +16,10 @@ var md = require('markdown-it')({
   }
 })
 // md.use(require('markdown-it-front-matter'), function(fm) {})
-md.use(require('markdown-it-table-of-contents'), {
-  containerClass: 'sidebar toc',
-  includeLevel: [1, 2, 3]
-})
+// md.use(require('markdown-it-table-of-contents'), {
+//   containerClass: 'sidebar toc',
+//   includeLevel: [1, 2, 3]
+// })
 md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'))
 md.use(require('markdown-it-named-headers'))
 md.use(require('markdown-it-footnote'))
@@ -27,6 +27,9 @@ md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji'))
 md.use(require('markdown-it-abbr'))
 md.use(require('markdown-it-mark'))
+md.use(require('markdown-it-toc-and-anchor').default, {
+  anchorLink: false
+})
 
 var container = require('markdown-it-container')
 md.use(container, 'notification')
@@ -60,31 +63,23 @@ export default {
   data () {
     return {
       sidebar: false,
-      compiledToc: '',
-      title: 'Fang Jin',
       toc: []
     }
   },
   props: ['source'],
   computed: {
     compiled: function() {
-      let that = this
-      let env = {
+      const that = this
+      const env = {
         tocCallback: function(md, arr, html) {
-          that.compiledToc = html
-        },
-        title: '',
-        toc: []
+          that.toc = arr
+        }
       }
-      const rendered = md.render(this.source, env)
-      that.title = env.title
-      that.toc = env.toc
-      return rendered
+      return md.render(this.source, env)
     }
   },
   template: `
     <div :class="{ 'with-sidebar': sidebar }">
-      <Headful :title="title" />
       <Toc :toc="toc" />
       <template v-show="source">
         <section class="main">
@@ -94,30 +89,6 @@ export default {
       <Footer/>
     </div>
   `,
-  created: function() {
-    const originalHeadingOpen = md.renderer.rules.heading_open
-    const level = 1
-
-    md.renderer.rules.heading_open = function (...args) {
-      const [ tokens, idx, , env, self ] = args
-
-      if (!env.title && (level < 1 || tokens[idx].tag === `h${level}`)) {
-        env.title = tokens[idx + 1].children
-          .reduce((acc, t) => acc + t.content, '')
-      }
-
-      env.toc.push({
-        level: tokens[idx].markup.length,
-        title: tokens[idx + 1].content
-      })
-
-      // Execute original rule.
-      if (originalHeadingOpen) {
-        return originalHeadingOpen.apply(this, args)
-      } else {
-        return self.renderToken(...args)
-      }
-    }
-  }
+  created: function() {}
 }
 </script>

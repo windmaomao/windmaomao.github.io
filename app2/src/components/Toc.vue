@@ -10,7 +10,7 @@ export default {
   computed: {
     title() {
       if (this.toc.length) {
-        return this.toc[0].title
+        return this.toc[0].content
       } else {
         return ''
       }
@@ -42,7 +42,7 @@ export default {
                     <ul class="toc menu-list">{
                       this.toc.map((menu) =>
                         <li class={'h' + menu.level}>
-                          <a>{menu.title}</a>
+                          <a href={'#' + menu.anchor} onClick={this.onToggle}>{menu.content}</a>
                         </li>
                       )
                     }</ul>
