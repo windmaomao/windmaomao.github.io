@@ -2,39 +2,4 @@
 @import "app";
 @import "slider";
 @import "toc";
-
-summary {
-  outline: 0;
-  cursor: pointer;
-}
-input[type=checkbox] {
-  margin-right: 8px;
-}
-.red {
-  color: red;
-}
-[title] {
-  position: relative;
-  display: inline;
-  &:after {
-    content: attr(title);
-    color: #fff;
-    background: #333;
-    background: rgba(51,51,51,0.9);
-    padding: 5px 10px;
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-    bottom: 100%;
-    width: 350px;
-    -webkit-transition: 0.25s linear opacity;
-    // white-space: nowrap;
-  }
-  &:hover:after {
-    left: 5px;
-    opacity:1;
-  }
-}
-.notification {
-  background-color: #f5f5f5;
-}
+@import "main";

@@ -1,16 +1,3 @@
-<template>
-  <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
-    <Headful :title="title" />
-    <Toc :toc="toc" />
-    <template v-show="source">
-      <section class="main">
-        <div id="write" class="container" v-html="compiled"></div>
-      </section>
-    </template>
-    <Footer/>
-  </div>
-</template>
-
 <script>
 import Toc from './Toc'
 import Footer from './Footer'
@@ -95,6 +82,18 @@ export default {
       return rendered
     }
   },
+  template: `
+    <div class="main" v-bind:class="{ 'with-sidebar': sidebar }">
+      <Headful :title="title" />
+      <Toc :toc="toc" />
+      <template v-show="source">
+        <section class="main">
+          <div id="write" class="container" v-html="compiled"></div>
+        </section>
+      </template>
+      <Footer/>
+    </div>
+  `,
   created: function() {
     const originalHeadingOpen = md.renderer.rules.heading_open
     const level = 1
@@ -122,93 +121,3 @@ export default {
   }
 }
 </script>
-
-<style>
-h1[id]:before, h2[id]:before, h3[id]:before {
-  display: block;
-  content: " ";
-  margin-top: -110px;
-  height: 110px;
-  visibility: hidden;
-}
-.main {
-  padding: 1rem 0.5rem;
-}
-@media only screen
-and (min-width: 768px) {
-  .main {
-    padding: 1rem 1.5rem;
-  }
-}
-#write {
-  max-width: 40em;
-  margin: 0 auto;
-  padding-top: 2em 60px;
-  min-height: calc(100vh - 6em);
-}
-.sidebar {
-  display: none;
-  position: fixed;
-  right: 0;
-  top: 120px;
-  bottom: 5px;
-  width: 240px;
-  margin: 0;
-  font-size: 12px;
-  border-left: 1px solid #eee;
-  overflow-y: auto;
-}
-@media only screen
-and (min-width : 1200px) {
-  .main.with-sidebar {
-    padding-right: 60px;
-  }
-  .sidebar, #toc-button {
-    display: block;
-  }
-}
-#back-top {
-  margin: 10px 18px;
-}
-.toc ul {
-  padding: 0 8px 0 20px;
-  margin: 0;
-}
-.toc li {
-  list-style: none;
-  text-align: initial;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  line-height: 18px;
-}
-.toc a {
-  color: inherit;
-  text-align: left;
-  text-decoration: none;
-  font-size: 12px;
-}
-.toc > ul ul {
-  padding-left: 0px;
-}
-.toc > ul ul ul {
-  padding-left: 15px;
-}
-.toc > ul > li > a {
-  font-size: 16px;
-  opacity: 0.6;
-}
-.toc > ul ul a {
-  font-size: 14px;
-}
-.toc > ul ul ul a {
-  font-size: 12px;
-}
-
-/* #toc li.toc-visible {
-  font-weight: bold;
-}
-#toc li.toc-h1.toc-visible {
-  font-weight: normal;
-  opacity: 1;
-} */
-</style>
