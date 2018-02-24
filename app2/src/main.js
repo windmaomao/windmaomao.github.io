@@ -9,12 +9,6 @@ Vue.config.productionTip = false
 Vue.use(VueResource)
 Vue.component('Headful', vueHeadful)
 
-// Global mixins
-let paramsMixin = {
-  methods: {}
-}
-Vue.mixin(paramsMixin)
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

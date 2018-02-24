@@ -15,11 +15,6 @@ var md = require('markdown-it')({
     return ''
   }
 })
-// md.use(require('markdown-it-front-matter'), function(fm) {})
-// md.use(require('markdown-it-table-of-contents'), {
-//   containerClass: 'sidebar toc',
-//   includeLevel: [1, 2, 3]
-// })
 md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'))
 md.use(require('markdown-it-named-headers'))
 md.use(require('markdown-it-footnote'))
@@ -27,10 +22,10 @@ md.use(require('markdown-it-deflist'))
 md.use(require('markdown-it-emoji'))
 md.use(require('markdown-it-abbr'))
 md.use(require('markdown-it-mark'))
+
 md.use(require('markdown-it-toc-and-anchor').default, {
   anchorLink: false
 })
-
 var container = require('markdown-it-container')
 md.use(container, 'notification')
 md.use(container, 'abstract', {
@@ -63,7 +58,8 @@ export default {
   data () {
     return {
       sidebar: false,
-      toc: []
+      toc: [],
+      title: ''
     }
   },
   props: ['source'],
@@ -73,19 +69,21 @@ export default {
       const env = {
         tocCallback: function(md, arr, html) {
           that.toc = arr
+          if (arr.length) {
+            that.title = arr[0].content
+          }
         }
       }
       return md.render(this.source, env)
     }
   },
   template: `
-    <div :class="{ 'with-sidebar': sidebar }">
+    <div>
+      <Headful :title="title" />
       <Toc :toc="toc" />
-      <template v-show="source">
-        <section class="main">
-          <div id="write" class="container" v-html="compiled"></div>
-        </section>
-      </template>
+      <section class="main" v-if="source">
+        <div id="write" class="container" v-html="compiled"></div>
+      </section>
       <Footer/>
     </div>
   `,
