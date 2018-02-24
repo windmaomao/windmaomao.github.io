@@ -1,6 +1,7 @@
 <script>
 import Toc from './Toc'
 import Footer from './Footer'
+import Anchor from '../assets/markdown-it-anchor'
 
 var md = require('markdown-it')({
   html: true,
@@ -23,9 +24,18 @@ md.use(require('markdown-it-emoji'))
 md.use(require('markdown-it-abbr'))
 md.use(require('markdown-it-mark'))
 
-md.use(require('markdown-it-toc-and-anchor').default, {
-  anchorLink: false
+var anchors = []
+md.use(Anchor, {
+  callback: function(token, values) {
+    const lvl = {
+      tag: token.tag,
+      title: values.title,
+      anchor: values.slug
+    }
+    anchors.push(lvl)
+  }
 })
+
 var container = require('markdown-it-container')
 md.use(container, 'notification')
 md.use(container, 'abstract', {
@@ -65,16 +75,8 @@ export default {
   props: ['source'],
   computed: {
     compiled: function() {
-      const that = this
-      const env = {
-        tocCallback: function(md, arr, html) {
-          that.toc = arr
-          if (arr.length) {
-            that.title = arr[0].content
-          }
-        }
-      }
-      return md.render(this.source, env)
+      anchors.length = 0
+      return md.render(this.source)
     }
   },
   template: `
@@ -87,6 +89,8 @@ export default {
       <Footer/>
     </div>
   `,
-  created: function() {}
+  created: function() {
+    this.toc = anchors
+  }
 }
 </script>
