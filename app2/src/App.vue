@@ -16,7 +16,6 @@ export default {
   name: 'App',
   components: {
     Slider,
-    // Header,
     Main,
     Themer
   },

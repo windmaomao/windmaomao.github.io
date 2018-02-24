@@ -15,15 +15,16 @@ export default {
             <a class="navbar-item logo-wrapper">
               <img src="static/img/logo.png" class="logo" />
             </a>
-            <div class="navbar-burger burger is-active" onClick={this.onToggle}
-              data-target="bottombar"
+            <div data-target="navbar"
+              class={{ 'navbar-burger': 1, 'burger': 1, 'is-active': this.toggled }}
+              onClick={this.onToggle}
             >
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
-          <div class={this.toggled ? 'navbar-menu is-active' : 'navbar-menu'} id="bottombar" >
+          <div class={this.toggled ? 'navbar-menu is-active' : 'navbar-menu'} id="navbar" >
             <div class="navbar-end">
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Table of Content</a>
@@ -32,7 +33,7 @@ export default {
                     <ul class="toc menu-list">{
                       this.toc.map((menu) =>
                         <li class={'h' + menu.level}>
-                          <a>{menu.title}</a>
+                          <a onClick={this.onToggle}>{menu.title}</a>
                         </li>
                       )
                     }</ul>
