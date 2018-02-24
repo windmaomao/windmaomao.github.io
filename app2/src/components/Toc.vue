@@ -7,6 +7,15 @@ export default {
       toggled: false
     }
   },
+  computed: {
+    title() {
+      if (this.toc.length) {
+        return this.toc[0].title
+      } else {
+        return ''
+      }
+    }
+  },
   render() {
     return (
       <div class="bottom">
@@ -27,13 +36,13 @@ export default {
           <div class={this.toggled ? 'navbar-menu is-active' : 'navbar-menu'} id="navbar" >
             <div class="navbar-end">
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Table of Content</a>
+                <a class="navbar-link">{this.title}</a>
                 <div class="navbar-dropdown">
                   <aside class="menu">
                     <ul class="toc menu-list">{
                       this.toc.map((menu) =>
                         <li class={'h' + menu.level}>
-                          <a onClick={this.onToggle}>{menu.title}</a>
+                          <a>{menu.title}</a>
                         </li>
                       )
                     }</ul>
