@@ -12,15 +12,3 @@ export default {
   name: 'Footer'
 }
 </script>
-
-<style scoped>
-.footer {
-  position: relative;
-  font-size: 90%;
-  font-style: italic;
-  z-index: 1000;
-}
-.footer p {
-  text-align: center;
-}
-</style>

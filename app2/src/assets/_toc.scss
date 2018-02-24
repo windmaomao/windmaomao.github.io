@@ -1,3 +1,8 @@
+.toc {
+  .navbar.is-fixed-top .navbar-menu {
+    max-height: calc(100vh - 5.8rem);
+  }
+}
 ul.toc {
   background-color: #fefefe;
   margin: 0;
@@ -5,22 +10,36 @@ ul.toc {
   li {
     display: none;
     margin: 0;
-
+    &.h1 {
+      font-size: 1rem;
+    }
     &.h2 {
       display: block;
       font-weight: bold;
+      font-size: 1rem;
     }
     &.h3 {
       display: inline-block;
+      font-size: 1rem;
       padding-left: 10px;
+      font-weight: normal;
+      // font-size: 80%;
     }
-    @media only screen and (min-width: 1024px) {
-      &.h2 {
-        font-weight: normal;
-      }
-      &.h3 {
-        display: none;
-      }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .toc {
+    .navbar-dropdown {
+      max-height: calc(100vh - 5.8rem);
+      overflow: auto;
+    }
+  }
+  ul.toc li {
+    &.h2 {
+      font-weight: normal;
+    }
+    &.h3 {
+      display: block;
     }
   }
 }

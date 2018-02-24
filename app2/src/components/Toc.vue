@@ -19,7 +19,7 @@ export default {
   },
   render() {
     return (
-      <div class="bottom">
+      <div class="toc">
         <nav class="navbar is-light is-fixed-top">
           <div class="navbar-brand">
             <a class="navbar-item logo-wrapper">
