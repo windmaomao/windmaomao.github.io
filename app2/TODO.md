@@ -4,6 +4,9 @@
 
 ## 2018
 
+### 2/25
+- add search to slider
+
 ### 2/24
 - ~~add click outside~~
 - ~~toc title needs to be certain length~~

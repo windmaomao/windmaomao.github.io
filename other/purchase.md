@@ -4,6 +4,8 @@ Collection of subscribedpt online services and purchased applications.
 ## Subscription
 Current online service subscribed, such as for trading, training, accounting,  hosting and magazine etc.
 
+### Active
+
 | Item          | Amount   | Year | Type       |
 | ------------- | -------- | ---- | ---------- |
 | Safari Books  | $210  /y | 2016 | Book       |
@@ -21,16 +23,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Speedee       | $3    /m | 2017 | Booking    |
 | Amazon AWS    | $2    /m | 2015 | Hosting    |
 
-
-## Application
-
-## Paid
-
-| Item         | Amount   | Year | Type         |
-| ------------ | -------- | ---- | ------------ |
-| Divvy        |   $ 14   | 2011 | Utility      |
-
-## Free
+### Free
 
 | Item         | Year | Type         |
 | ------------ | ---- | ------------ |
@@ -44,7 +37,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Bitbucket    | 2014 | Repository   |
 | Github       | 2012 | Repository   |
 
-## Inactive
+### Inactive
 
 | Item          | Amount   | Since | End  |
 | ------------- | -------- | ----- | ---- |
@@ -54,5 +47,20 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Office 360    | $11   /m | 2017  | 2017 |
 | DrupalizeMe   | $40   /m | 2014  | 2015 |
 | LinkedIn      | $20   /m | 2015  | 2016 |
+
+## Application
+
+### Paid
+
+| Item         | Amount   | Year | Type         |
+| ------------ | -------- | ---- | ------------ |
+| Path Finder  |   $ 9?   | 2013 | Utility      |
+| Divvy        |   $ 14   | 2011 | Utility      |
+
+### Free
+
+| Item         | Year | Type         |
+| ------------ | ---- | ------------ |
+| Typora       | 2018 | Office       |
 
 
