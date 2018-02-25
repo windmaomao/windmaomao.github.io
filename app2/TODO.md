@@ -5,7 +5,7 @@
 ## 2018
 
 ### 2/24
-- add click outside
+- ~~add click outside~~
 - ~~toc title needs to be certain length~~
 
 ### 2/21
