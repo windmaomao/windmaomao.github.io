@@ -13,7 +13,7 @@ export default {
     }
     if (this.open) {
       return (
-        <div class="slider">
+        <div class="slider" v-click-outside={this.close}>
           <button class="close" onClick={this.onToggle}>X</button>
           <aside class="menu">
             <p class="menu-label">Menu</p>
@@ -54,6 +54,9 @@ export default {
         this.$emit('select', '')
       }
       this.onToggle('')
+    },
+    close() {
+      this.open = false
     }
   }
 }
