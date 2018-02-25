@@ -8,19 +8,20 @@ export default {
       activated: false
     }
   },
-  computed: {
-    title() {
-      if (this.toc.length) {
-        return this.toc[0].title
-      } else {
-        return ''
-      }
-    }
-  },
+  // computed: {
+  //   title() {
+  //     return 'Table of Content'
+  //     if (this.toc.length) {
+  //       return this.toc[0].title
+  //     } else {
+  //       return ''
+  //     }
+  //   }
+  // },
   render() {
     return (
       <div class="toc">
-        <nav class="navbar is-light is-fixed-top">
+        <nav class="navbar is-light is-fixed-top" v-click-outside={this.deActivate}>
           <div class="navbar-brand">
             <a class="navbar-item logo-wrapper">
               <img src="static/img/logo.png" class="logo" />
@@ -37,7 +38,7 @@ export default {
           <div class={this.toggled ? 'navbar-menu is-active' : 'navbar-menu'} id="navbar" >
             <div class="navbar-end">
               <div class={{ 'navbar-item': 1, 'has-dropdown': 1, 'is-active': this.activated }}>
-                <a class="navbar-link" onClick={this.onActivate}>{this.title}</a>
+                <a class="navbar-link" onClick={this.onActivate}>Table of Content</a>
                 <div class="navbar-dropdown">
                   <aside class="menu">
                     <ul class="toc menu-list">{
@@ -63,6 +64,9 @@ export default {
     },
     onActivate(e) {
       this.activated = !this.activated
+    },
+    deActivate() {
+      this.activated = false
     }
   }
 }

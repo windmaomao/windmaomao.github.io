@@ -3,11 +3,13 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import vueHeadful from 'vue-headful'
+import ClickOutside from 'vue-click-outside'
 import App from './App'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
 Vue.component('Headful', vueHeadful)
+Vue.directive('click-outside', ClickOutside)
 
 /* eslint-disable no-new */
 new Vue({

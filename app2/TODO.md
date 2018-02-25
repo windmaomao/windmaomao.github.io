@@ -6,6 +6,7 @@
 
 ### 2/24
 - add click outside
+- ~~toc title needs to be certain length~~
 
 ### 2/21
 - ~~design slider component~~

@@ -1,6 +1,10 @@
 .toc {
   .navbar.is-fixed-top .navbar-menu {
     max-height: calc(100vh - 5.8rem);
+
+    a.navbar-link {
+      // min-width: 250px;
+    }
   }
 }
 ul.toc {
