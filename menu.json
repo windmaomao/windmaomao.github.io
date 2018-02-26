@@ -1,7 +1,7 @@
 [
   {
     "title": "Resume", "type": "resume",
-    "items": ["frontend", "fangjin"]
+    "items": ["frontend", "fangjin", "project"]
   },
   {
     "title": "Todo", "type": "todo",
@@ -29,6 +29,6 @@
   },
   {
     "title": "Others", "type": "other",
-    "items": ["conference", "purchase", "project", "publication", "performance", "company", "recommendation"]
+    "items": ["conference", "purchase", "publication", "performance", "company", "recommendation"]
   }
 ]
