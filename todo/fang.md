@@ -2,6 +2,10 @@
 
 ## 2018
 
+### 2/26
+
+- Add favorite section 
+
 ### 2/25
 
 - Update dropbox email
