@@ -62,5 +62,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Item         | Year | Type         |
 | ------------ | ---- | ------------ |
 | Typora       | 2018 | Office       |
+| Visual Studio Code       | 2017 | Programming       |
+| Disk Inventory    | 2006 | Utility      |
+
 
 

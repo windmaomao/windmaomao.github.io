@@ -133,7 +133,7 @@ Highlights:
 - File Management: administer language files through web interface with easy switch
 - Browser Compatibility: Support *Chrome*, *Safari*, *Firefox* and *IE* 8, 9 and 10
 
-## Others
+## QPlot
 ### JQF Management
 Apartment rental that you can trust
 06/11/2012
@@ -164,11 +164,27 @@ Simcard plans
 
 ![](https://lh3.googleusercontent.com/cX2wpV8wcPDH7_S3iS1xDv-Yvpg8b51qC8Vgg9ct0nLYWAE2DpN3b-2qD2yonlMfrPEjJgrdjyEJZ3XWNJOzI6R6jH7tv19EBQ7a86bkjLzvA3dnP0mDtzofz2OHkVPpWz9OWg)
 
-### FJLib Bubble
-Numerical library for bubble simulations
-06/12/2003
-https://github.com/windmaomao/fjlib
+## UC Irvine
+
+FJVis
+
+: Matlab visualization package for simulation data
 
 
+## Johns Hopkins University
+
+Software
+
+: Extract data from published graph
+
+: 02/16/2009
+
+![Qplot Software Demo](https://www.dropbox.com/s/gg70k3lvdyabi6k/qplot_software_demo.png?raw=1)
+
+FJLib Bubble
+
+: Numerical library for bubble simulations
+: 06/12/2003
+: https://github.com/windmaomao/fjlib
 
 
