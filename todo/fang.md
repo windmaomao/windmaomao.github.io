@@ -4,7 +4,8 @@
 
 ### 2/26
 
-- Add favorite section 
+- Add favorite section
+- Support figcaption and max-width
 
 ### 2/25
 
@@ -13,9 +14,8 @@
 ### 2/24
 
 - ~~Fix garage bulb~~
-- Write recommendation letter for Dave
+- Contact Dave
 - Start digital renovation
-- Prepare showcase widget pictures
 
 ### 2/21
 
