@@ -14,6 +14,8 @@ Prototype the website for dashboard and performance summary page
 ### Web ADK Core
 
 ### Global Console - Angular 5
+![Global Console](https://s3.amazonaws.com/qp-photo/mc-common2-header.PNG)
+
 Single operation UI framework
 
 : Date: Oct 2017 -
@@ -166,20 +168,41 @@ Simcard plans
 
 ## UC Irvine
 
+![Battleship](https://s3.amazonaws.com/qp-photo/battleship_demo.jpg)
+
+Battleship
+
+: ??
+
+: 06/09/2009
+
+
+
+![FJGol Base](https://s3.amazonaws.com/qp-photo/FJGOL_base.png)
+
+FJGol
+
+: ??
+
+: 05/16/2009
+
+
+
 FJVis
 
 : Matlab visualization package for simulation data
 
-
 ## Johns Hopkins University
 
-Software
+![QPlot Windows Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG)
 
-: Extract data from published graph
+QPlot Windows Software
 
-: 02/16/2009
+: Windows sotware which serves two purposes. A) Visualize scatter data from your notpad, supporting line point series and tabular column field data. B) Allow to extract data value from published graph tilt graph and irregular shape graphs is supported.
 
-![Qplot Software Demo](https://www.dropbox.com/s/gg70k3lvdyabi6k/qplot_software_demo.png?raw=1)
+: 09/28/2006
+
+
 
 FJLib Bubble
 

@@ -6,6 +6,7 @@
 
 ### 2/25
 - add search to slider
+- add timestamp to all md file
 
 ### 2/24
 - ~~add click outside~~
