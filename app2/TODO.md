@@ -6,10 +6,11 @@
 
 ### 2/27
 - Add analytics
-- Swiper plugin for pictures
 - Page title is broken
+- Swiper conflicts with attrs plugin
 
 ### 2/25
+- ~~Swiper plugin for pictures~~
 - add search to slider
 - add timestamp to all md file
 

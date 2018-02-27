@@ -73,6 +73,14 @@ export default {
     testSource() {
       this.source = `
 # Projects
+
+::: swiper
+
+- ![QPlot Windows Application](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
+- ![Trinity Major Minor Website](http://qplot.com/assets/images/portfolio/trinity_major.png) {.swiper-slide}
+{.swiper-wrapper}
+
+:::
       `
     }
   },

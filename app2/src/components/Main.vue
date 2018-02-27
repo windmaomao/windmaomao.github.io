@@ -3,6 +3,7 @@ import Toc from './Toc'
 import Footer from './Footer'
 import Anchor from '../assets/markdown-it-anchor'
 
+// Markdown core and highlighter
 var md = require('markdown-it')({
   html: true,
   linkify: true,
@@ -16,6 +17,11 @@ var md = require('markdown-it')({
     return ''
   }
 })
+
+md.use(require('markdown-it-implicit-figures'), {
+  figcaption: true
+})
+
 md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'))
 md.use(require('markdown-it-named-headers'))
 md.use(require('markdown-it-footnote'))
@@ -34,10 +40,6 @@ md.use(Anchor, {
     }
     anchors.push(lvl)
   }
-})
-
-md.use(require('markdown-it-implicit-figures'), {
-  figcaption: true
 })
 
 var container = require('markdown-it-container')
