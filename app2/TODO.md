@@ -6,7 +6,7 @@
 
 ### 2/27
 - Add analytics
-- Page title is broken
+- ~~Page title is broken~~
 - Swiper conflicts with attrs plugin
 
 ### 2/25
