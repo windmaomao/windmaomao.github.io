@@ -46,7 +46,7 @@ export default {
     fetchUrl: function(url) {
       this.spinning = true
       url = url || this.default
-      const fn = this.domain2 + url + '.md'
+      const fn = this.domain2 + url + '.md?v=' + Date.now()
       this.$http.get(fn).then(res => {
         // this.source = '[[toc]]\n' + res.body
         this.source = res.body
