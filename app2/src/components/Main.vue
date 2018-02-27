@@ -86,7 +86,7 @@ export default {
     return {
       sidebar: false,
       toc: [],
-      title: '',
+      // title: '',
       swiper: null
     }
   },
@@ -98,6 +98,12 @@ export default {
         this.renderSwiper()
       })
       return md.render(this.source)
+    },
+    title: function() {
+      if (this.toc.length) {
+        return this.toc[0].title
+      }
+      return ''
     }
   },
   template: `
