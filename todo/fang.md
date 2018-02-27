@@ -4,8 +4,9 @@
 
 ### 2/27
 
-- Build google form to collect feedback
-- :date: `2/29` Balance and flow
+- Form to collect feedback
+- :date: `2/28` Balance and flow
+- ~~Relocate files for `Prepare`~~
 
 ### 2/26
 
@@ -14,13 +15,13 @@
 
 ### 2/25
 
-- Update dropbox email
+- ~~Update dropbox email~~
 
 ### 2/24
 
 - ~~Fix garage bulb~~
-- Contact Dave
-- Start digital renovation
+- ~~Contact Dave~~
+- ~~Start digital renovation~~
 
 ### 2/21
 
@@ -62,7 +63,7 @@
 - ~~Add FeiFei $200~~
 - ~~Purchase bonds~~
 
-### 2/9 
+### 2/9
 
 - :date: `2/23` ~~Book china trip tickets~~
 - ~~Study markdown-it process~~
