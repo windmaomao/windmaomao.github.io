@@ -7,6 +7,7 @@
 - Add analytics
 - Build google form to collect feedback
 - Swiper plugin for pictures
+- :date: `2/29` Balance and flow
 
 ### 2/26
 
@@ -26,7 +27,7 @@
 ### 2/21
 
 - ~~Ship visa form~~
-- ~~update [shipping status](https://www.visamailservice.com/status-tracking/)~~
+- ~~update BHKXHYKL [shipping status](https://www.visamailservice.com/status-tracking/)~~
 
 ### 2/20
 
