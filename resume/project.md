@@ -37,26 +37,28 @@ Large scale reusable UI framework
 
 Served as AngularJS architect for designing reusable framework for more than 35+ banking applications in Market Clearing product sector. The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
-![MC Common Colors](https://s3.amazonaws.com/qp-photo/mc-common-colors.PNG)
+![Light Dark Theme Colors](https://s3.amazonaws.com/qp-photo/mc-common-colors.PNG)
+
 Highlights
-* Prototype: Use AngularJS and Bootstrap for fast development
-* Re-usability: Design reusable branding, header, footer, menu as well as * pluggable generic services
-* Style Guide: Standardized style sheet for consistent look and feel across browser and applications
-* Authorization: Integration with authentication and authorization service for application security
-* Color Design: Extract color from design spec to form three background, three front text and border color
-* Theme: Support light and dark theme and dynamic toggle in-between
-* Icon: SVG icon design and packaging for common UI and business actions
-* Animation: Custom animation keyframe design with fallback to no-animation
-* Selection: Custom directive for single and multiple selection form input with consistent look and feel
-* Layout: Support customizable dashboard UI layout with responsible design
-* Compatibility: Support both IE 10/11 and Chrome browser
-*  Component: Design fly-in menu for switching between angular applications
-*  CSS: Modular layout and component design
-*  Testing: Work with a test team to facilliate UI automation
 
-![MC Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
+: * Prototype: Use AngularJS and Bootstrap for fast development
+  * Re-usability: Design reusable branding, header, footer, menu as well as * pluggable generic services
+  * Style Guide: Standardized style sheet for consistent look and feel across browser and applications
+  * Authorization: Integration with authentication and authorization service for application security
+  * Color Design: Extract color from design spec to form three background, three front text and border color
+  * Theme: Support light and dark theme and dynamic toggle in-between
+  * Icon: SVG icon design and packaging for common UI and business actions
+  * Animation: Custom animation keyframe design with fallback to no-animation
+  * Selection: Custom directive for single and multiple selection form input with consistent look and feel
+  * Layout: Support customizable dashboard UI layout with responsible design
+  * Compatibility: Support both IE 10/11 and Chrome browser
+  *  Component: Design fly-in menu for switching between angular applications
+  *  CSS: Modular layout and component design
+  *  Testing: Work with a test team to facilliate UI automation
 
-![MC Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
+![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
+
+![Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
 
 ### AOF Account Opening
 Bank account opening form
