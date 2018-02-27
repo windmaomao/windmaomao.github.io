@@ -1,13 +1,17 @@
 # Conference
 
-## Dharmagya Dikshit
-United States +1 973 631 2000 / +1 201 593 3794: VMR: 880884633799| Participant Pin: 797628#
+Shirish Sahu
+: United States +1 973 631 2000 / +1 201 593 3794
+: VMR: 880-884-633-799 | Participant Pin: 797- 628#
 
-### Munib
-United States +1 973 631 2000 +1 201 593 3794 
-VMR number  880884633610 
-Participant PIN 063569
-Host PIN 525631 
+Dharmagya Dikshit
+: United States +1 973 631 2000 / +1 201 593 3794 
+: VMR: 880884633799 | Participant Pin: 797628#
+
+Munib
+: United States +1 973 631 2000 +1 201 593 3794 
+: VMR number  880884633610 | Participant PIN 063569
+: Host PIN 525631 
 
 ### Rishi
 Conf ID 880-88-481-8007 Pin: 973607
