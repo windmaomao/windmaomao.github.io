@@ -36,6 +36,10 @@ md.use(Anchor, {
   }
 })
 
+md.use(require('markdown-it-implicit-figures'), {
+  figcaption: true
+})
+
 var container = require('markdown-it-container')
 md.use(container, 'notification')
 md.use(container, 'abstract', {
