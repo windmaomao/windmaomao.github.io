@@ -4,14 +4,25 @@
 
 ## 2018
 
-### 2/23
-- add table of content as main header
-- add discover/search index page
+### 2/27
+- Add analytics
+- ~~Page title is broken~~
+- Swiper conflicts with attrs plugin
+
+### 2/25
+- ~~Swiper plugin for pictures~~
+- add search to slider
+- ~~add timestamp to all md file~~
+
+### 2/24
+- ~~add click outside~~
+- ~~toc title needs to be certain length~~
 
 ### 2/21
 - ~~design slider component~~
 - add sliding effect on mobile
 - add notification to the site
+- ~~refine site layout, ex. toc~~
 
 ### 2/19
 - ~~integrate with react component~~

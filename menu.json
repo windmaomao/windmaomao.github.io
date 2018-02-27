@@ -5,7 +5,11 @@
   },
   {
     "title": "Todo", "type": "todo",
-    "items": ["fang", "contact", "qp-knowledgebase", "digital-renovation", "angular2-mc-common", "angular-mc-common", "china-trip"]
+    "items": ["fang", "conference", "contact", "qp-knowledgebase", "digital-renovation", "angular2-mc-common", "angular-mc-common", "china-trip"]
+  },
+  {
+    "title": "Financial", "type": "finance",
+    "items": ["purchase", "investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment"]
   },
   {
     "title": "Books", "type": "book",
@@ -14,10 +18,6 @@
   {
     "title": "Blogs", "type": "blog",
 	  "items": ["index", "angular-react-vue", "power-of-loss", "identity-debt", "sustainable-prototyping", "protection-from-loss", "perfect-google-map", "middle-ground", "reusable-form", "helping-others", "law-of-winning", "reusable-components", "angular-on-windows", "tiny-upscaling", "build-new-system", "dynamic-static-approach", "container-to-rescue", "being-dependent", "active-management", "floating-pot"]
-  },
-  {
-    "title": "Financial", "type": "finance",
-    "items": ["investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment"]
   },
   {
     "title": "Articles", "type": "article",
@@ -29,6 +29,6 @@
   },
   {
     "title": "Others", "type": "other",
-    "items": ["conference", "purchase", "publication", "performance", "company", "recommendation"]
+    "items": ["publication", "performance", "company", "recommendation"]
   }
 ]
