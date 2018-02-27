@@ -8,11 +8,6 @@ Skills
   - 5 Years _AngularJS_ 
   - 2 Year *React*, *Vue* and *jQuery*
 
-Bonus
-
-: - 15 Years Analytics skills in math and modeling
-  - 8 Years Visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
-
 ## Award
 
 Recognition Award [^recognition] 💥
@@ -20,6 +15,16 @@ Recognition Award [^recognition] 💥
 : Deutsche Bank
 : Jan 2017
 : Recognised for outstanding performance, for the exceptional UI framework build
+
+## Projects
+
+::: swiper
+
+- ![QPlot Windows Application](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
+- ![Trinity Major Minor Website](http://qplot.com/assets/images/portfolio/trinity_major.png) {.swiper-slide}
+{.swiper-wrapper}
+
+:::
 
 ## Experience
 

@@ -71,16 +71,8 @@ export default {
       return params
     },
     testSource() {
-      this.source = `---\ntitle: This is the Title\n---\n# Heading\n----\nsome text
-[[toc]]
-# Resume
-## Books
-## Blogs
-
-- :x: *Find out Net magazine issue*{data-tooltip="Cannot reach them"}{.tooltip}
-- :white_check_mark: pieapple
-- :x: Cancelled {.red}
-
+      this.source = `
+# Projects
       `
     }
   },
@@ -95,6 +87,7 @@ export default {
     }
 
     if (this.debug) {
+      this.spinning = false
       this.testSource()
       return
     }

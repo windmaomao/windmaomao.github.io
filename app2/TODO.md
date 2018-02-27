@@ -4,6 +4,11 @@
 
 ## 2018
 
+### 2/27
+- Add analytics
+- Swiper plugin for pictures
+- Page title is broken
+
 ### 2/25
 - add search to slider
 - add timestamp to all md file

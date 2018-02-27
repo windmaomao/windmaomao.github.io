@@ -49,11 +49,22 @@ md.use(container, 'abstract', {
   render: function (tokens, idx) {
     var m = tokens[idx].info.trim().match(/^abstract\s+(.*)$/)
     if (tokens[idx].nesting === 1) {
-      // opening tag
       return '<details><summary>' + md.utils.escapeHtml(m[1]) + '</summary>\n'
     } else {
-      // closing tag
       return '</details>\n'
+    }
+  }
+})
+md.use(container, 'swiper', {
+  validate: function(params) {
+    return params.trim().match(/^swiper$/)
+  },
+  render: function (tokens, idx) {
+    if (tokens[idx].nesting === 1) {
+      return '<div class="swiper-container" style="height: 250px">\n'
+    } else {
+      var nav = '<div class="swiper-pagination">\n</div>\n<div class="swiper-button-prev">\n</div>\n<div class="swiper-button-next">\n</div>\n</div>\n'
+      return nav
     }
   }
 })
@@ -73,13 +84,17 @@ export default {
     return {
       sidebar: false,
       toc: [],
-      title: ''
+      title: '',
+      swiper: null
     }
   },
   props: ['source'],
   computed: {
     compiled: function() {
       anchors.length = 0
+      this.$nextTick(() => {
+        this.renderSwiper()
+      })
       return md.render(this.source)
     }
   },
@@ -95,6 +110,19 @@ export default {
   `,
   created: function() {
     this.toc = anchors
+  },
+  methods: {
+    renderSwiper() {
+      this.swiper = new window.Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination'
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      })
+    }
   }
 }
 </script>

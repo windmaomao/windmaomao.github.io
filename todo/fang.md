@@ -4,15 +4,13 @@
 
 ### 2/27
 
-- Add analytics
 - Build google form to collect feedback
-- Swiper plugin for pictures
 - :date: `2/29` Balance and flow
 
 ### 2/26
 
 - ~~Add favorite section~~
-- Support figcaption and max-width
+- ~~Support figcaption and max-width~~
 
 ### 2/25
 
