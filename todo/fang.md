@@ -2,9 +2,15 @@
 
 ## 2018
 
+### 2/27
+
+- Add analytics
+- Build google form to collect feedback
+- Swiper plugin for pictures
+
 ### 2/26
 
-- Add favorite section
+- ~~Add favorite section~~
 - Support figcaption and max-width
 
 ### 2/25
