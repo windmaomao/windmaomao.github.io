@@ -12,6 +12,10 @@
     "items": ["purchase", "investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment"]
   },
   {
+    "title": "Repos", "type": "repository",
+    "items": ["figure-caption", "markdown-it", "qp-knowledgebase", "angular2-mc-common", "angular-mc-common", "aof-form", "kingslanding", "ng-admin-restify", "mongoose-restify", "event-services", "dbvals-audit"]
+  },
+  {
     "title": "Books", "type": "book",
     "items": ["index", "vue-up-running", "react-quickly", "react-up-running", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "big-shifts-ahead", "mu-ai-ning-xiang"]
   },
@@ -22,10 +26,6 @@
   {
     "title": "Articles", "type": "article",
     "items": ["fiscal-policy-adding-demand"]
-  },
-  {
-    "title": "Repos", "type": "repository",
-    "items": ["markdown-it", "qp-knowledgebase", "angular2-mc-common", "angular-mc-common", "aof-form", "kingslanding", "ng-admin-restify", "mongoose-restify", "event-services", "dbvals-audit"]
   },
   {
     "title": "Others", "type": "other",

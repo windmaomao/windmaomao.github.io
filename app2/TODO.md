@@ -7,7 +7,7 @@
 ### 2/27
 - Add analytics
 - ~~Page title is broken~~
-- Swiper conflicts with attrs plugin
+- ~~Resolve figure caption module bug~~
 
 ### 2/25
 - ~~Swiper plugin for pictures~~
