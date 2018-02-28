@@ -60,7 +60,7 @@ md.use(container, 'swiper', {
   },
   render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) {
-      return '<div class="swiper-container" style="height: 400px">\n'
+      return '<div class="swiper-container">\n'
     } else {
       var nav = '<div class="swiper-pagination">\n</div>\n<div class="swiper-button-prev">\n</div>\n<div class="swiper-button-next">\n</div>\n</div>\n'
       return nav

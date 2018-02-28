@@ -1,15 +1,18 @@
-.swiper-wrapper {
-  margin: 0;
-  .swiper-slide {
-    list-style: none;
-    text-align: center;
-    img {
-      border: 4px solid #eee;
-      // max-width: 300px;
-      max-height: 250px;
-      margin-top: 20px;
+.swiper-container {
+  height: 400px;
+  .swiper-wrapper {
+    margin: 0;
+    .swiper-slide {
+      list-style: none;
+      text-align: center;
+      img {
+        border: 4px solid #eee;
+        // max-width: 300px;
+        max-height: 250px;
+        margin-top: 20px;
+      }
     }
-  }
 
+  }
 }
 
