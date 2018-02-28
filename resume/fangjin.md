@@ -20,7 +20,10 @@ Recognition Award [^recognition] 💥
 
 ::: swiper
 
-- ![Trinity Major Minor Website](http://qplot.com/assets/images/portfolio/trinity_major.png) {.swiper-slide}
+- ![fig. 2011 - Website: Simcard Sale](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) {.swiper-slide}
+- ![fig. 2011 - Widget: Portfolio Demo Widget](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
+- ![fig. 2011 - Website: Saycret Social Network](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG) {.swiper-slide}
+- ![fig. 2010 - Design: QPer Handheld Model](https://s3.amazonaws.com/qp-photo/qper01_hardware_draft7.JPG) {.swiper-slide}
 - ![fig. 2007 - App: Tumor Blood Vessel Simulation](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
 - ![fig. 2006 - App: Windows Plot Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
 - ![fig. 2004 - App: NASA Low Gravitation Thread](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
@@ -32,6 +35,7 @@ Recognition Award [^recognition] 💥
 
 ::: swiper
 
+- ![fig. High Def Tumor Rendering](https://s3.amazonaws.com/qp-photo/test1painting_HiRes_small.png) {.swiper-slide}
 - ![fig. Duet](https://s3.amazonaws.com/qp-photo/duet_test_051810b.PNG) {.swiper-slide}
 - ![fig. My Desk](https://s3.amazonaws.com/qp-photo/room_050810a.jpg) {.swiper-slide}
 - ![fig. Submarine](https://s3.amazonaws.com/qp-photo/sub_render_sign.jpg) {.swiper-slide}
@@ -46,7 +50,7 @@ Recognition Award [^recognition] 💥
 - ![fig. South Park](https://s3.amazonaws.com/qp-photo/south_park_090709.png) {.swiper-slide}
 - ![fig. Tumor Angiogenesis](https://s3.amazonaws.com/qp-photo/vessel_tumor_render.png) {.swiper-slide}
 - ![fig. Blood Vessel](https://s3.amazonaws.com/qp-photo/blood_vessel_demo.png) {.swiper-slide}
-
+{.swiper-wrapper}
 
 :::
 
