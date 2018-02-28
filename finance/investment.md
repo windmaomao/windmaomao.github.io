@@ -23,7 +23,7 @@
 | SRTY         | Russell   |    $ 155 | short |               |
 | LABD         | Health   |    $ 108 | short |               |
 | REDU         | Edu       |    $  93 | long  |               |
-| GE P17       | Industry  |    $  67 | short | 2/23 dividend |
+| GE P17       | Industry  |    $  67 | short | 2/23D 3/16E   |
 | EDZ          | Emerging  |    $  20 | short |               |
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 expire   |
 | TECS         | Tech      |    $  11 | short |               |
