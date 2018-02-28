@@ -6,7 +6,7 @@
 - ~~Submit `npm` `figure-caption` module~~
 - Update pay stub info
 - Get pdf build from database
-- :fire: Study put option offset
+- :fire: Study put option exit
 
 ### 2/27
 
