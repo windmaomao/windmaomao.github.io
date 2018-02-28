@@ -2,6 +2,9 @@
 
 ## 2018
 
+### 2/28
+- Submit `npm` `figure-caption` module
+
 ### 2/27
 
 - Form to collect feedback
