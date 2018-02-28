@@ -20,9 +20,33 @@ Recognition Award [^recognition] 💥
 
 ::: swiper
 
-- ![QPlot Windows Application](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
 - ![Trinity Major Minor Website](http://qplot.com/assets/images/portfolio/trinity_major.png) {.swiper-slide}
+- ![fig. 2007 - App: Tumor Blood Vessel Simulation](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
+- ![fig. 2006 - App: Windows Plot Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
+- ![fig. 2004 - App: NASA Low Gravitation Thread](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
 {.swiper-wrapper}
+
+:::
+
+## Renders (2009)
+
+::: swiper
+
+- ![fig. Duet](https://s3.amazonaws.com/qp-photo/duet_test_051810b.PNG) {.swiper-slide}
+- ![fig. My Desk](https://s3.amazonaws.com/qp-photo/room_050810a.jpg) {.swiper-slide}
+- ![fig. Submarine](https://s3.amazonaws.com/qp-photo/sub_render_sign.jpg) {.swiper-slide}
+- ![fig. My Room](https://s3.amazonaws.com/qp-photo/room_050110b.jpg) {.swiper-slide}
+- ![fig. Square Sphere Maze](https://s3.amazonaws.com/qp-photo/square_sphere_sign.JPG) {.swiper-slide}
+- ![fig. Chilly Bronze](https://s3.amazonaws.com/qp-photo/chilly_bronze.jpg) {.swiper-slide}
+- ![fig. Qing Dynasty](https://s3.amazonaws.com/qp-photo/daomu_hk_draft.jpg) {.swiper-slide}
+- ![fig. Machine Gun](https://s3.amazonaws.com/qp-photo/machine_gun_draft.JPG) {.swiper-slide}
+- ![fig. Majoon Batiao](https://s3.amazonaws.com/qp-photo/batiao_bar.JPG) {.swiper-slide}
+- ![fig. Deep Blue](https://s3.amazonaws.com/qp-photo/small_blue_lzn.jpg) {.swiper-slide}
+- ![fig. Ocean Floor](https://s3.amazonaws.com/qp-photo/ocean_light_mushroom2.jpg) {.swiper-slide}
+- ![fig. South Park](https://s3.amazonaws.com/qp-photo/south_park_090709.png) {.swiper-slide}
+- ![fig. Tumor Angiogenesis](https://s3.amazonaws.com/qp-photo/vessel_tumor_render.png) {.swiper-slide}
+- ![fig. Blood Vessel](https://s3.amazonaws.com/qp-photo/blood_vessel_demo.png) {.swiper-slide}
+
 
 :::
 
