@@ -16,6 +16,13 @@ Recognition Award [^recognition] 💥
 : Jan 2017
 : Recognised for outstanding performance, for the exceptional UI framework build
 
+Front Cover Design
+
+: Book "Multiscale Modeling of Cancer" [^book] 
+: Nonlinearity 23(2010)[^nonlinearity]
+: Sep 2010
+
+
 ## Projects
 
 ::: swiper
