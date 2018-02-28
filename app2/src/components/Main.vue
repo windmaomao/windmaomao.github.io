@@ -18,11 +18,8 @@ var md = require('markdown-it')({
   }
 })
 
-md.use(require('markdown-it-implicit-figures'), {
-  figcaption: true
-})
-
 md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'))
+md.use(require('markdown-it-figure-caption'))
 md.use(require('markdown-it-named-headers'))
 md.use(require('markdown-it-footnote'))
 md.use(require('markdown-it-deflist'))
@@ -63,7 +60,7 @@ md.use(container, 'swiper', {
   },
   render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) {
-      return '<div class="swiper-container" style="height: 250px">\n'
+      return '<div class="swiper-container" style="height: 320px">\n'
     } else {
       var nav = '<div class="swiper-pagination">\n</div>\n<div class="swiper-button-prev">\n</div>\n<div class="swiper-button-next">\n</div>\n</div>\n'
       return nav

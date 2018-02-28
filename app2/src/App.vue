@@ -74,8 +74,6 @@ export default {
       this.source = `
 # Projects
 
-![ABC](fig.png){.abc}
-
 ::: swiper
 
 - ![QPlot Windows Application](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
