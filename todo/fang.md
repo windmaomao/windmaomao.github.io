@@ -4,9 +4,9 @@
 
 ### 2/28
 - ~~Submit `npm` `figure-caption` module~~
-- Update pay stub info
+- ~~Update pay stub info~~
 - Get pdf build from database
-- :fire: Study put option exit
+- :date: `3/16` Put option expire
 
 ### 2/27
 
