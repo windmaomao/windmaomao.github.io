@@ -3,7 +3,10 @@
 ## 2018
 
 ### 2/28
-- Submit `npm` `figure-caption` module
+- ~~Submit `npm` `figure-caption` module~~
+- Update pay stub info
+- Get pdf build from database
+- :fire: Study put option offset
 
 ### 2/27
 
