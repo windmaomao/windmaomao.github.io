@@ -19,8 +19,9 @@ Recognition Award [^recognition] 💥
 Front Cover Design
 
 : Book "Multiscale Modeling of Cancer" [^book] 
-: Nonlinearity 23(2010)[^nonlinearity]
+: Nonlinearity 23(2010) [^nonlinearity]
 : Sep 2010
+: Accepted for front cover design of book and magazine
 
 
 ## Experience
@@ -45,26 +46,24 @@ The product provides a single UI for operations, container for apps in one place
 Architect & Design
 
 : - Support both *IE* 10/11 and *Chrome* browser
-
-- Use *Angular* and *Bootstrap* for fast development
-- Standardized style sheet for consistent look and feel
-- Extract color from design spec to form theme color base
-- Support light and dark themes and dynamic toggle in-between
-- Support dashboard layout with *Responsible* and *Flex* design
-- SVG icon design and packaging for common UI and business actions
-- Custom animation keyframe design with fallback to no-animation
+  - Use *Angular* and *Bootstrap* for fast development
+  - Standardized style sheet for consistent look and feel
+  - Extract color from design spec to form theme color base
+  - Support light and dark themes and dynamic toggle in-between
+  - Support dashboard layout with *Responsible* and *Flex* design
+  - SVG icon design and packaging for common UI and business actions
+  - Custom animation keyframe design with fallback to no-animation
 
 Reusable Component
 
 : - Reusable branding header, footer, menu as well as pluggable generic services
-
-- Directives for single and multiple select form input with consistent look and feel
-- Directives for date picker and date range picker with consistent look and feel
-- Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
-- Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
-- Integration with authentication and authorization service for permission control
-- Service supporting both *Http* enabled spinning notification and manual toggle
-- Service supporting both generic user prompt and custom popup dialogs
+  - Directives for single and multiple select form input with consistent look and feel
+  - Directives for date picker and date range picker with consistent look and feel
+  - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
+  - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
+  - Integration with authentication and authorization service for permission control
+  - Service supporting both *Http* enabled spinning notification and manual toggle
+  - Service supporting both generic user prompt and custom popup dialogs
 
 ## Projects
 
