@@ -14,14 +14,14 @@ Recognition Award [^recognition] 💥
 
 : Deutsche Bank
 : Jan 2017
-: Recognised for outstanding performance, for the exceptional UI framework build
+: Recognised for outstanding performance, for the exceptional UI framework build.
 
 Front Cover Design
 
 : Book "Multiscale Modeling of Cancer" [^book] 
 : Nonlinearity 23(2010) [^nonlinearity]
 : Sep 2010
-: Accepted for front cover design of book and magazine
+: Accepted front cover design for book and magazine.
 
 
 ## Experience
@@ -69,12 +69,12 @@ Reusable Component
 
 ::: swiper
 
-- ![2011 - Website: Simcard Sale](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) {.swiper-slide}
-- ![2011 - Portfolio Demo Website](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
-- ![2011 - Website: Saycret Social Network](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG) {.swiper-slide}
-- ![2007 - App: Tumor Blood Vessel Simulation](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
-- ![2006 - App: Windows Plot Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
-- ![2004 - App: NASA Low Gravitation Thread](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
+- ![PHP: Simcard Selection Website (2011)](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) {.swiper-slide}
+- ![Flash: Portfolio Demo Website (2011)](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
+- ![PHP: Saycret Social Network (2011)](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG) {.swiper-slide}
+- ![Fortran: Tumor Blood Vessel Simulation (2007)](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
+- ![Delphi: Windows Plotting Software (2006)](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
+- ![C++: NASA Low Gravitation Thread (2004)](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
 {.swiper-wrapper}
 
 :::
@@ -94,24 +94,22 @@ Served as lead *AngularJS* and *Laravel* developer for educational applications,
 Architect & Design
 
 : - *HIPPA* server host and deployment plan protecting health care privacy
-
-- Disability compliance with video, and narration support with high contrast
-- Language support translations made for pages, snippets, and graphics
-- Theme and content changes entirely based on access domain
-- *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
-- Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
+  - Disability compliance with video, and narration support with high contrast
+  - Language support translations made for pages, snippets, and graphics
+  - Theme and content changes entirely based on access domain
+  - *Bootstrap* is used for fast prototype for desktop, *iPad* and other devices
+  - Support *Chrome, Safari, Firefox and IE* 8, 9 and 10
 
 Reusable Component
 
 : - Modular design for both *Sass* and *Javascript* in developing UI components
-
-- Two-factor *SMS* enabled authentication for better security protection
-- Password recovery based on either username or 3 out of 6 question answers
-- Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
-- Auto generate hundreds of forms with generic *UI* and submission handling
-- Allow manager to modify each page content stored in file storage
-- Administer language files through web interface with easy switch
-- Automatic fill out custom *PDF* tempalte with user filled-out
+  - Two-factor *SMS* enabled authentication for better security protection
+  - Password recovery based on either username or 3 out of 6 question answers
+  - Support video play with *Vimeo* and *JWPlayer* engine and custom subtitle toggle
+  - Auto generate hundreds of forms with generic *UI* and submission handling
+  - Allow manager to modify each page content stored in file storage
+  - Administer language files through web interface with easy switch
+  - Automatic fill out custom *PDF* tempalte with user filled-out
 
 RxAnte
 
