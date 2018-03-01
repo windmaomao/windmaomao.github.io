@@ -30,11 +30,20 @@ The method `push` takes three parameters
 
 A tag with properties representing a state in the stream. Common properties include,
 
+- `attrs`, attributes array
  - `map`, source map info, `[ line_begin, line_end ]` 
  - `markup`, fence string for fence, `* or _`
  - `content`, contends of this tag
 
 Here are some maps of token supported in the system.
+
+### Attrs
+
+In order to add a class to the token, you can do 
+
+```javascript
+  token.attrPush([ 'class', name]);
+```
 
 ### Block state
 
