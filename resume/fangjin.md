@@ -23,43 +23,6 @@ Front Cover Design
 : Sep 2010
 
 
-## Projects
-
-::: swiper
-
-- ![2011 - Website: Simcard Sale](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) {.swiper-slide}
-- ![2011 - Portfolio Demo Website](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
-- ![2011 - Website: Saycret Social Network](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG) {.swiper-slide}
-- ![2007 - App: Tumor Blood Vessel Simulation](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
-- ![2006 - App: Windows Plot Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
-- ![2004 - App: NASA Low Gravitation Thread](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
-{.swiper-wrapper}
-
-:::
-
-## Visualization
-
-::: swiper
-
-- ![High Def Tumor Rendering](https://s3.amazonaws.com/qp-photo/test1painting_HiRes_small.png) {.swiper-slide}
-- ![Duet](https://s3.amazonaws.com/qp-photo/duet_test_051810b.PNG) {.swiper-slide}
-- ![My Desk](https://s3.amazonaws.com/qp-photo/room_050810a.jpg) {.swiper-slide}
-- ![Submarine](https://s3.amazonaws.com/qp-photo/sub_render_sign.jpg) {.swiper-slide}
-- ![My Room](https://s3.amazonaws.com/qp-photo/room_050110b.jpg) {.swiper-slide}
-- ![Square Sphere Maze](https://s3.amazonaws.com/qp-photo/square_sphere_sign.JPG) {.swiper-slide}
-- ![Chilly Bronze](https://s3.amazonaws.com/qp-photo/chilly_bronze.jpg) {.swiper-slide}
-- ![Qing Dynasty](https://s3.amazonaws.com/qp-photo/daomu_hk_draft.jpg) {.swiper-slide}
-- ![Machine Gun](https://s3.amazonaws.com/qp-photo/machine_gun_draft.JPG) {.swiper-slide}
-- ![Majoon Batiao](https://s3.amazonaws.com/qp-photo/batiao_bar.JPG) {.swiper-slide}
-- ![Deep Blue](https://s3.amazonaws.com/qp-photo/small_blue_lzn.jpg) {.swiper-slide}
-- ![Ocean Floor](https://s3.amazonaws.com/qp-photo/ocean_light_mushroom2.jpg) {.swiper-slide}
-- ![South Park](https://s3.amazonaws.com/qp-photo/south_park_090709.png) {.swiper-slide}
-- ![Tumor Angiogenesis](https://s3.amazonaws.com/qp-photo/vessel_tumor_render.png) {.swiper-slide}
-- ![Blood Vessel](https://s3.amazonaws.com/qp-photo/blood_vessel_demo.png) {.swiper-slide}
-{.swiper-wrapper}
-
-:::
-
 ## Experience
 
 Deutsche Bank
@@ -102,6 +65,21 @@ Reusable Component
 - Integration with authentication and authorization service for permission control
 - Service supporting both *Http* enabled spinning notification and manual toggle
 - Service supporting both generic user prompt and custom popup dialogs
+
+## Projects
+
+::: swiper
+
+- ![2011 - Website: Simcard Sale](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) {.swiper-slide}
+- ![2011 - Portfolio Demo Website](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
+- ![2011 - Website: Saycret Social Network](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG) {.swiper-slide}
+- ![2007 - App: Tumor Blood Vessel Simulation](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
+- ![2006 - App: Windows Plot Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
+- ![2004 - App: NASA Low Gravitation Thread](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
+{.swiper-wrapper}
+
+:::
+
 
 ## Past Experience
 
@@ -180,26 +158,38 @@ Johns Hopkins University
 
 ## Others
 
+Hobby 3D Rendering
+
+::: swiper
+
+- ![High Def Tumor Rendering](https://s3.amazonaws.com/qp-photo/test1painting_HiRes_small.png) {.swiper-slide}
+- ![Duet](https://s3.amazonaws.com/qp-photo/duet_test_051810b.PNG) {.swiper-slide}
+- ![My Desk](https://s3.amazonaws.com/qp-photo/room_050810a.jpg) {.swiper-slide}
+- ![Submarine](https://s3.amazonaws.com/qp-photo/sub_render_sign.jpg) {.swiper-slide}
+- ![My Room](https://s3.amazonaws.com/qp-photo/room_050110b.jpg) {.swiper-slide}
+- ![Square Sphere Maze](https://s3.amazonaws.com/qp-photo/square_sphere_sign.JPG) {.swiper-slide}
+- ![Chilly Bronze](https://s3.amazonaws.com/qp-photo/chilly_bronze.jpg) {.swiper-slide}
+- ![Qing Dynasty](https://s3.amazonaws.com/qp-photo/daomu_hk_draft.jpg) {.swiper-slide}
+- ![Machine Gun](https://s3.amazonaws.com/qp-photo/machine_gun_draft.JPG) {.swiper-slide}
+- ![Majoon Batiao](https://s3.amazonaws.com/qp-photo/batiao_bar.JPG) {.swiper-slide}
+- ![Deep Blue](https://s3.amazonaws.com/qp-photo/small_blue_lzn.jpg) {.swiper-slide}
+- ![Ocean Floor](https://s3.amazonaws.com/qp-photo/ocean_light_mushroom2.jpg) {.swiper-slide}
+- ![South Park](https://s3.amazonaws.com/qp-photo/south_park_090709.png) {.swiper-slide}
+- ![Tumor Angiogenesis](https://s3.amazonaws.com/qp-photo/vessel_tumor_render.png) {.swiper-slide}
+- ![Blood Vessel](https://s3.amazonaws.com/qp-photo/blood_vessel_demo.png) {.swiper-slide}
+{.swiper-wrapper}
+
+:::
+
 RecoveryHub
 
 : Sep 2014 - Oct 2014
 : Volunteer for disaster and humanitarian relief
 
-Cambridge University Press
-
-: Nov 2010
-: Book "Multiscale Modeling of Cancer" [^book] front cover design
-
-Journal of Nonlinearity
-
-: Sep 2010
-: Nonlinearity 23(2010)[^nonlinearity] front cover picture design
-
 University of California Irvine
 
 : Sep 2007 - Dec 2008
 : College math class teacher for two semesters
-
 
 
 *[AngularJS]: Javascript based open-source front-end web application framework mainly maintained by Google
