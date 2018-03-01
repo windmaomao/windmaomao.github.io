@@ -7,7 +7,8 @@
 - ~~Add open source section~~
 - ~~Sync investment and plan~~
 - Move md to private hosting
-- Look for swiper alternatives
+- Look for swiper alternatives, [slick](http://kenwheeler.github.io/slick/)
+- :date: `5/1` Migrate Diigo out
 
 ### 2/28
 - ~~Submit `npm` `figure-caption` module~~
