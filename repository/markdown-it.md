@@ -14,10 +14,6 @@ Parsing any string triggers the creation of a `state` variable, `process` functi
 
 ### Parser
 
-For each parser, it starts with creating a `state`. 
-
-### States
-
 Each parser initializes the `state` by setting some initial attributes for later use. 
 
 #### Core
@@ -49,27 +45,6 @@ function StateCore(src, md, env) {
   this.level = 0;  
 ```
 
-### Rules
-
-When it tries to go through each `rule`,  it changes the `state` variable. And it can also ask another `parser` for parsing additional rules. So this is a chain action between `rule` and `parser`.
-
-```javascript
-var _rules = [
-  [ 'normalize', ... ],
-  [ 'block', ... ],
-  ...
-];
-```
-
-#### `normalize` 
-
-`normalize` rule clean the `src` code of the `state`.
-
-#### `block`
-
-use `block` parser to parse the `state`.
-
-
 ### Tokenize
 
 For `block` parser, it'll go through lines via command and conquer way `[line, endLine]`, and try rules to this section until first rule gets it. **So only one rule can apply to one chunk of `src`.**
@@ -90,9 +65,26 @@ On success of the `rule`, it'll proceed `state.line` to next one and at the same
     }
 ```
 
-### States
+### Rules
+When it tries to go through each `rule`,  it changes the `state` variable. And it can also ask another `parser` for parsing additional rules. So this is a chain action between `rule` and `parser`.
 
-#### `hr` Rule
+```javascript
+var _rules = [
+  [ 'normalize', ... ],
+  [ 'block', ... ],
+  ...
+];
+```
+
+#### Core: `normalize`  Rule
+
+`normalize` rule clean the `src` code of the `state`.
+
+#### Core: `block` Rule
+
+use `block` parser to parse the `state`.
+
+#### Block: `hr` Rule
 
 ```javascript
   state.line = startLine +  1;
@@ -102,7 +94,7 @@ On success of the `rule`, it'll proceed `state.line` to next one and at the same
   token.markup = Array(cnt + 1).join(String.fromCharCode(marker));
 ```
 
-#### `heading` Rule
+#### Block: `heading` Rule
 
 ```javascript
   state.line = startLine + 1;
@@ -120,7 +112,7 @@ On success of the `rule`, it'll proceed `state.line` to next one and at the same
   token.markup = '########'.slice(0, level);
 ```
 
-#### `code` Rule
+#### Block: `code` Rule
 
 ```javascript
   state.line = last;
@@ -130,7 +122,7 @@ On success of the `rule`, it'll proceed `state.line` to next one and at the same
   token.map     = [ startLine, state.line ];
 ```
 
-#### `fence` Rule
+#### Block: `fence` Rule
 
 ```javascript
   state.line = nextLine + (haveEndMarker ? 1 : 0);
@@ -142,7 +134,23 @@ On success of the `rule`, it'll proceed `state.line` to next one and at the same
   token.map     = [ startLine, state.line ];
 ```
 
+#### Block: `paragraph` Rule
 
+```javascript
+  state.line = nextLine;
+
+  token          = state.push('paragraph_open', 'p', 1);
+  token.map      = [ startLine, state.line ];
+
+  token          = state.push('inline', '', 0);
+  token.content  = content;
+  token.map      = [ startLine, state.line ];
+  token.children = [];
+
+  token          = state.push('paragraph_close', 'p', -1);
+
+  state.parentType = oldParentType;
+```
 
 ## Renderer
 
