@@ -5,6 +5,7 @@
 ### 3/1 
 - Learn `Markdown-It` API
 - Add open source section
+- Sync investment and plan
 
 ### 2/28
 - ~~Submit `npm` `figure-caption` module~~
@@ -15,7 +16,7 @@
 
 ### 2/27
 
-- :date: `2/28` Balance and flow
+- :date: `3/2` Balance and flow
 - ~~Relocate files for `Prepare`~~
 
 ### 2/26
