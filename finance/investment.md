@@ -2,7 +2,47 @@
 
 ## 2018
 
-### Feb
+### Summary
+
+#### Realized
+
+| Symbol | Industry  |  Cost |  Net | Type | Notes |
+| ------ | --------- | ----: | ---: | ---- | ----- |
+| DBC    | Commodity | $3230 |  $81 | long |       |
+| UNG    | Gas | $245 | -$20 |  long |     |
+| RIOT    | Bitcoin | $27  | -$25 |  long |     |
+
+### March
+
+#### Realized
+
+| Symbol | Industry | Cost |  Net | Type |  Notes |
+| ------ | -------- | ---: | ---: | ---- | ----- |
+| DBC    | Commodity | $3230 | $81 |  long |     |
+
+#### Owned
+
+| Symbol       | Industry  |     Cost | Type  | Notes         |
+| ------------ | --------- | -------: | :---: | ------------- |
+| **Fidelity** |           |  $ 4,999 |       |               |
+| AKZOY        | Paint     |  $ 3,079 | short | 4/26 dividend |
+| TSLA         | Tech      | $ 943 | short |  |
+| BLUE         | Health    |    $ 353 | short |               |
+| DRV          | REIT      |    $ 244 | short |               |
+| SRTY         | Russell   |    $ 155 | short |               |
+| ALNY         | Health    |    $ 124 | short |               |
+| LABD         | Health   |    $ 108 | short |               |
+| REDU         | Edu       |    $  93 | long  |               |
+| GE P17       | Industry  |    $  67 | short | 3/16 `expire` |
+| EDZ          | Emerging  |    $  20 | short |               |
+| XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
+| TECS         | Tech      |    $  11 | short |               |
+| **Vanguard** |           | $ 20,000 |       |               |
+| BOC 4/23     | CD        | $ 10,000 | long  |               |
+| BOC 3/15     | CD        | $ 10,000 | long  |               |
+
+
+### Feberary
 
 #### Realized
 
@@ -15,24 +55,26 @@
 
 | Symbol       | Industry  |     Cost | Type  | Notes         |
 | ------------ | --------- | -------: | :---: | ------------- |
-| **Fidelity** |           |  $ 4,665 |       |               |
+| **Fidelity** |           | $ 4,789 |       |               |
 | AKZOY        | Paint     |  $ 3,079 | short | 4/26 dividend |
 | TSLA         | Tech      |    $ 614 | short |               |
 | BLUE         | Health    |    $ 353 | short |               |
 | DRV          | REIT      |    $ 244 | short |               |
 | SRTY         | Russell   |    $ 155 | short |               |
+| ALNY         | Health    |    $ 124 | short |               |
 | LABD         | Health   |    $ 108 | short |               |
 | REDU         | Edu       |    $  93 | long  |               |
-| GE P17       | Industry  |    $  67 | short | 2/23D 3/16E   |
+| GE P17       | Industry  |    $  67 | short | 2/23 dividend |
 | EDZ          | Emerging  |    $  20 | short |               |
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 expire   |
 | TECS         | Tech      |    $  11 | short |               |
-| **Vanguard** |           | $ 13,230 |       |               |
-| BOC          | CD        | $ 10,000 | long  |               |
+| **Vanguard** |           | $ 23,230 |       |               |
+| BOC 4/23     | CD        | $ 10,000 | long  |               |
+| BOC 3/15     | CD        | $ 10,000 | long  |               |
 | DBC          | Commodity |  $ 3,230 | long  |               |
 
 
-### Jan
+### January
 #### Owned
 
 | Symbol       | Industry  |    Cost | Type  | Notes         |
