@@ -91,7 +91,16 @@ Parsing any string triggers the creation of a `state` variable, `process` functi
 
 ### Parser
 
-For each parser, it starts with creating a `state`. For `core` parser, it basically sets an empty `token` array and entire `src`.
+For each parser, it starts with creating a `state`. And then registers all `rule` and then apply them one by one to the `state`.
+
+```javascript
+  for (var i = 0; i < _rules.length; i++) {
+    this.ruler.push(_rules[i][0], _rules[i][1]);
+  }
+  for (i = 0, l = rules.length; i < l; i++) {
+    rules[i](state);
+  }
+```
 
 ### States
 
