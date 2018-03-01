@@ -7,6 +7,7 @@
 - ~~Update pay stub info~~
 - Get pdf build from database
 - :date: `3/16` Put option expire
+- Apply chinese school for Sophia
 
 ### 2/27
 

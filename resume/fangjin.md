@@ -28,9 +28,8 @@ Front Cover Design
 ::: swiper
 
 - ![2011 - Website: Simcard Sale](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) {.swiper-slide}
-- ![2011 - Widget: Portfolio Demo Widget](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
+- ![2011 - Portfolio Demo Website](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
 - ![2011 - Website: Saycret Social Network](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG) {.swiper-slide}
-- ![2010 - Design: QPer Handheld Model](https://s3.amazonaws.com/qp-photo/qper01_hardware_draft7.JPG) {.swiper-slide}
 - ![2007 - App: Tumor Blood Vessel Simulation](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
 - ![2006 - App: Windows Plot Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
 - ![2004 - App: NASA Low Gravitation Thread](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
