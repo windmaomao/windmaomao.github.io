@@ -2,16 +2,19 @@
 
 ## 2018
 
+### 3/1 
+- Learn `Markdown-It` API
+- Add open source section
+
 ### 2/28
 - ~~Submit `npm` `figure-caption` module~~
 - ~~Update pay stub info~~
 - Get pdf build from database
 - :date: `3/16` Put option expire
-- Apply chinese school for Sophia
+- Apply Chinese school for Sophia
 
 ### 2/27
 
-- Form to collect feedback
 - :date: `2/28` Balance and flow
 - ~~Relocate files for `Prepare`~~
 
@@ -46,7 +49,7 @@
 
 ### 2/16
 
-- ~~Learn `React`~~
+- ~~Learn `Vue`~~
 
 ### 2/15
 
