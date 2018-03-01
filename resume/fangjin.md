@@ -158,7 +158,7 @@ Johns Hopkins University
 
 ## Others
 
-Hobby 3D Rendering
+**Hobby 3D Rendering**
 
 ::: swiper
 
