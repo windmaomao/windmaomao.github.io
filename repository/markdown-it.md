@@ -3,6 +3,166 @@
 For API documentation, please visit [here](https://markdown-it.github.io/markdown-it)
 
 
+## Parse
+
+Parsing any string triggers the creation of a `state` variable, `process` function goes through all registered `rules` and apply each `rule` to the `state`.
+
+```javascript
+  var state = new this.core.State(src, this, env);
+  this.core.process(state);
+```  
+
+### Parser
+
+For each parser, it starts with creating a `state`. 
+
+### States
+
+Each parser initializes the `state` by setting some initial attributes for later use. 
+
+#### Core
+
+```javascript
+function StateCore(src, md, env) {
+  this.src = src;
+  this.env = env;
+  this.tokens = [];
+  this.inlineMode = false;
+  this.md = md; // link to parser instance
+}
+```
+
+#### Block
+
+```javascript
+  this.bMarks = [];  // line begin offsets for fast jumps
+  this.eMarks = [];  // line end offsets for fast jumps
+  this.tShift = [];  // offsets of the first non-space characters 
+  this.sCount = [];  // indents for each line (tabs expanded)
+  this.bsCount = [];
+  this.blkIndent  = 0; // required block content indent
+  this.line       = 0; // line index in src
+  this.lineMax    = 0; // lines count
+  this.tight      = false;  // loose/tight mode for lists
+  this.ddIndent   = -1; // indent of the current dd block (-1 if there isn't any)
+  this.parentType = 'root';
+  this.level = 0;  
+```
+
+### Rules
+
+When it tries to go through each `rule`,  it changes the `state` variable. And it can also ask another `parser` for parsing additional rules. So this is a chain action between `rule` and `parser`.
+
+```javascript
+var _rules = [
+  [ 'normalize', ... ],
+  [ 'block', ... ],
+  ...
+];
+```
+
+#### `normalize` 
+
+`normalize` rule clean the `src` code of the `state`.
+
+#### `block`
+
+use `block` parser to parse the `state`.
+
+
+### Tokenize
+
+For `block` parser, it'll go through lines via command and conquer way `[line, endLine]`, and try rules to this section until first rule gets it. **So only one rule can apply to one chunk of `src`.**
+
+On success of the `rule`, it'll proceed `state.line` to next one and at the same time appends more into `state.tokens`.
+
+```javascript
+    // Try all possible rules.
+    // On success, rule should:
+    //
+    // - update `state.line`
+    // - update `state.tokens`
+    // - return true
+
+    for (i = 0; i < len; i++) {
+      ok = rules[i](state, line, endLine, false);
+      if (ok) { break; }
+    }
+```
+
+### States
+
+#### `hr` Rule
+
+```javascript
+  state.line = startLine +  1;
+  
+  token        = state.push('hr', 'hr', 0);
+  token.map    = [ startLine, state.line ];
+  token.markup = Array(cnt + 1).join(String.fromCharCode(marker));
+```
+
+#### `heading` Rule
+
+```javascript
+  state.line = startLine + 1;
+  
+  token        = state.push('heading_open', 'h' + String(level), 1);
+  token.markup = '########'.slice(0, level);
+  token.map    = [ startLine, state.line ];
+
+  token          = state.push('inline', '', 0);
+  token.content  = state.src.slice(pos, max).trim();
+  token.map      = [ startLine, state.line ];
+  token.children = [];
+
+  token        = state.push('heading_close', 'h' + String(level), -1);
+  token.markup = '########'.slice(0, level);
+```
+
+#### `code` Rule
+
+```javascript
+  state.line = last;
+
+  token         = state.push('code_block', 'code', 0);
+  token.content = state.getLines(startLine, last, 4 + state.blkIndent, true);
+  token.map     = [ startLine, state.line ];
+```
+
+#### `fence` Rule
+
+```javascript
+  state.line = nextLine + (haveEndMarker ? 1 : 0);
+
+  token         = state.push('fence', 'code', 0);
+  token.info    = params;
+  token.content = state.getLines(startLine + 1, nextLine, len, true);
+  token.markup  = markup;
+  token.map     = [ startLine, state.line ];
+```
+
+
+
+## Renderer
+
+When you call `render`, it'll parse the string and then render each  `token` type.
+
+```javascript
+  var rules = this.rules;
+  for (i = 0, len = tokens.length; i < len; i++) {
+    type = tokens[i].type;
+    if (type === 'inline') {
+      result += this.renderInline(tokens[i].children, options, env);
+    } else if (typeof rules[type] !== 'undefined') {
+      result += rules[tokens[i].type](tokens, i, options, env, this);
+    } else {
+      result += this.renderToken(tokens, i, options, env);
+    }
+  }
+```
+
+
 ## State
 
 ```javascript
@@ -51,129 +211,4 @@ Or to get the `html` version of it,
 ```javascript
   self.renderAttrs(token.attrs)
 ```
-
-### Block state
-
-Code
-
-: - `'code_block', 'code', 0` 
-
-Heading
-
-: - `'heading_open' , 'h1', 1`
-  - `'inline', '', 0`
-  - `'heading_close', 'h1', -1`
-
-List
-
-: - `'order_list_open', 'ol', 1`
-  - `'bullet_list_open', 'ul', 1`
-  - `'list_item_open', 'li', 1`
-  - `'list_item_close', 'li', -1`
-  - `'order_list_close', 'ol', -1`
-  - `'bullet_list_close', 'ul', -1`
-
-Paragraph
-
-: - `'paragraph_open', 'p', 1`
-  - `'inline', '', 0`
-  - `'paragraph_close', 'p', -1`
-
-
-## Parse
-
-Parsing any string triggers the creation of a `state` variable, `process` function goes through all registered `rules` and apply each `rule` to the `state`.
-
-```javascript
-  var state = new this.core.State(src, this, env);
-  this.core.process(state);
-```  
-
-### Parser
-
-For each parser, it starts with creating a `state`. And then registers all `rule` and then apply them one by one to the `state`.
-
-```javascript
-  for (var i = 0; i < _rules.length; i++) {
-    this.ruler.push(_rules[i][0], _rules[i][1]);
-  }
-  for (i = 0, l = rules.length; i < l; i++) {
-    rules[i](state);
-  }
-```
-
-### States
-
-Each parser initializes the `state` by setting some initial attributes for later use. 
-
-#### Core
-
-```javascript
-function StateCore(src, md, env) {
-  this.src = src;
-  this.env = env;
-  this.tokens = [];
-  this.inlineMode = false;
-  this.md = md; // link to parser instance
-}
-```
-
-#### Block
-
-```javascript
-  this.bMarks = [];  // line begin offsets for fast jumps
-  this.eMarks = [];  // line end offsets for fast jumps
-  this.tShift = [];  // offsets of the first non-space characters 
-  this.sCount = [];  // indents for each line (tabs expanded)
-  this.bsCount = [];
-  this.blkIndent  = 0; // required block content indent
-  this.line       = 0; // line index in src
-  this.lineMax    = 0; // lines count
-  this.tight      = false;  // loose/tight mode for lists
-  this.ddIndent   = -1; // indent of the current dd block (-1 if there isn't any)
-  this.parentType = 'root';
-  this.level = 0;  
-```
-
-
-### Rules
-
-When it tries to go through each `rule`,  it changes the `state` variable. And it can also ask another `parser` for parsing additional rules. So this is a chain action between `rule` and `parser`.
-
-```javascript
-var _rules = [
-  [ 'normalize', ... ],
-  [ 'block', ... ],
-  ...
-];
-```
-
-#### `normalize` 
-
-`normalize` rule clean the `src` code of the `state`.
-
-#### `block`
-
-use `block` parser to parse the `state`.
-
-
-
-## Renderer
-
-When you call `render`, it'll parse the string and then render each  `token` type.
-
-```javascript
-  var rules = this.rules;
-  for (i = 0, len = tokens.length; i < len; i++) {
-    type = tokens[i].type;
-    if (type === 'inline') {
-      result += this.renderInline(tokens[i].children, options, env);
-    } else if (typeof rules[type] !== 'undefined') {
-      result += rules[tokens[i].type](tokens, i, options, env, this);
-    } else {
-      result += this.renderToken(tokens, i, options, env);
-    }
-  }
-```
-
 
