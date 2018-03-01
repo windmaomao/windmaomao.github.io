@@ -3,16 +3,18 @@
 ## 2018
 
 ### 3/1 
-- Learn `Markdown-It` API
-- Add open source section
-- Sync investment and plan
+- ~~Learn `Markdown-It` API~~
+- ~~Add open source section~~
+- ~~Sync investment and plan~~
+- Move md to private hosting
+- Look for swiper alternatives
 
 ### 2/28
 - ~~Submit `npm` `figure-caption` module~~
 - ~~Update pay stub info~~
-- Get pdf build from database
+- ~~Get pdf build from database~~
 - :date: `3/16` Put option expire
-- Apply Chinese school for Sophia
+- ~~Apply Chinese school for Sophia~~
 
 ### 2/27
 
