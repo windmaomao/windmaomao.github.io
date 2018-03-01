@@ -72,9 +72,15 @@ When it tries to go through each `rule`,  it changes the `state` variable. And i
 var _rules = [
   [ 'normalize', ... ],
   [ 'block', ... ],
+  [ 'inline', ... ],
+  [ 'linkify', ... ],
+  [ 'replacements', ...],
+  [ 'smartquotes', ...]
   ...
 ];
 ```
+
+**The order of the `rule` matters**, as listed in the `core`, it starts with `normalize`, and then to structural rules `block` and `inline`, and then onto `linkify`, `replacements` and `smartquotes`. By the time it gets past  `inline`, most of the structural `token` has been generated.
 
 #### Core: `normalize`  Rule
 
