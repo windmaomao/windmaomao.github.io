@@ -1,24 +1,11 @@
 # Book List
 
-| Title                           | Year | Category |
-| ------------------------------- | ---- | -------- |
-| **2018**                        |      |          |
-| Pay Zero Taxes      | 2018 | Finance |
-| Javascript by Example      |      | Software |
-| Vue.js 2 Web Development      |      | Software |
-| Bonds: The unbeaten path (**2**) |      | Finance |
-| Slash Your Retirement Risk      |      | Finance |
-| Five Rules for Successful Stock |      | Finance |
-| Art of War - Wisdom             |      |          |
-| Art of War                      |      |          |
-| **2017**                        |      |          |
-| Trade Like an O'Neil Disciple   |      | Finance |
-| Expert Angular                  |      | Software |
-
-
 ## 2018
 
 ### January
+
+-- dd
+- abc -- add
 
 Slash Your Retirement Risk
 > Chris Cook
@@ -73,7 +60,7 @@ The Complete Guide to Option Strategies: Advanced and Basic Strategies on Stocks
 Fooling Some of the People All of the Time
 > David Einhorn, Joel Greenblatt
 > $10.71    
-
+ 
 ### October 
 
 Hot Commodities: How Anyone Can Invest Profitably in the World's Best Market
@@ -133,7 +120,7 @@ The Aftershock Investor: A Crash Course in Staying Afloat in a Sinking Economy
 
 The New Gold Standard: Rediscovering the Power of Gold to Protect and Grow Wealth
 > Paul Nathan
-> Released: June 2011
+Released: June 2011
 
 ### July
 
@@ -166,6 +153,9 @@ From Boom to Bust and Beyond
 > Jerry Tuma
 
 ### May
+
+Spending waves
+> Dent Research
 
 Strategic Fixed Income Investing: An Insider's Perspective on Bond Markets, Analysis, and Portfolio Management
 > Sean P. Simko
