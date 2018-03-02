@@ -27,8 +27,15 @@ The simultaneous effort by so many countries to save for retirement, combined wi
 
 Moreover, at some point, an ageing population starts to use up the savings it has accumulated. Charles Goodhart and Philipp Erfurth of Morgan Stanley note that the ratio of workers to retirees is now plunging in most developed countries and soon will in many emerging markets. **Japan is already liquidating the foreign assets its people acquired during their high-saving years; China and South Korea are starting to do so and Germany will soon.** This, they predict, will ==drag real interest rates, which are now negative, back to the historical equilibrium of 2.5-3% by 2025==.
 
+## Reference
 
+[Demography and economics: Look past the past](https://voxeu.org/article/demography-and-economics-look-past-past)
 
+: Most of the world is now at the point where the support ratio is becoming adverse, and the growth of the global workforce is slowing. This column argues that these changes will have profound and negative effects on economic growth. This implies that negative real interest rates are not the new normal, but rather an extreme artefact of a series of trends, several of which are coming to an end. By 2025, real interest rates should have returned to their historical equilibrium value of around 2.5–3%.
+
+[U.S. Birthrate Falls -- Again](https://www.forbes.com/sites/neilhowe/2015/01/28/u-s-birthrate-falls-again/#284535303bfe)
+
+: "The birth rate among U.S.-born women [fell by 6 percent](http://inamerica.blogs.cnn.com/2012/11/29/immigrants-lead-plunge-in-u-s-birth-rate/) in the first years of the recession — but among immigrants it fell by 14 percent. What's more, birth rates in immigrants' origin countries, particularly Mexico, have also been falling for years. Teen pregnancies have also been trending sharply down for years; falling by [roughly two-thirds](http://www.hhs.gov/ash/oah/adolescent-health-topics/reproductive-health/teen-pregnancy/trends.html) among all racial groups since 1990."
 
 
 
