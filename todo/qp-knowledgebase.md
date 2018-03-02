@@ -4,13 +4,17 @@
 
 ## 2018
 
+### 3/2
+- fix github emoji missing
+- look for another slicker
+- add style to subtitle
+
 ### 2/27
-- Add analytics
-- ~~Page title is broken~~
-- ~~Resolve figure caption module bug~~
+- ~~page title is broken~~
+- ~~resolve figure caption module bug~~
 
 ### 2/25
-- ~~Swiper plugin for pictures~~
+- ~~swiper plugin for pictures~~
 - add search to slider
 - ~~add timestamp to all md file~~
 
