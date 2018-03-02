@@ -7,7 +7,7 @@
 ### 2/27
 - Add analytics
 - ~~Page title is broken~~
-- Swiper conflicts with attrs plugin
+- ~~Resolve figure caption module bug~~
 
 ### 2/25
 - ~~Swiper plugin for pictures~~
@@ -49,8 +49,7 @@
 - ~~relocate `themer` to left and opaque~~
 - ~~remember last visited link~~
 - handle failure of loading md
-- handle spinning for multiple http
-- setup params as global resources
+- ~~setup params as global resources~~
 
 ### 2/13
 - ~~Tag `br`, either support or remove~~
