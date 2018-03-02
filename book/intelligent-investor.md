@@ -35,6 +35,16 @@ We are thus led to the following logical if disconcerting conclusion: To enjoy a
 
 In this book we shall point out numerous examples of (past) discrepancies between price and value. Thus it seems that any intelligent person, with a good head for figures, should have a veritable picnic on Wall Street, battening off other people’s foolishness. So it seems, but somehow it doesn’t work out that simply. Buying a neglected and therefore undervalued issue for profit generally proves a protracted and patience-trying experience. **And selling short a too popular and therefore overvalued issue is apt to be a test not only of one’s courage and stamina but also of the depth of one’s pocketbook**. The principle is sound, its successful application is not impossible, but it is distinctly not an easy art to master.
 
+All this reinforces Graham’s warning that you must treat speculation as veteran gamblers treat their trips to the casino:
+
+-   You must never delude yourself into thinking that you’re investing when you’re speculating.
+-   **Speculating becomes mortally dangerous the moment you begin to take it seriously.**
+-   You must put strict limits on the amount you are willing to wager.
+
+Just as sensible gamblers take, say, $100 down to the casino floor and leave the rest of their money locked in the safe in their hotel room, the intelligent investor designates a tiny portion of her total portfolio as a “mad money” account. For most of us, 10% of our overall wealth is the maximum permissible amount to put at speculative risk. Never mingle the money in your speculative account with what’s in your investment accounts;never allow your speculative thinking to spill over into your investing activities; and ==never put more than 10% of your assets into your mad money account, no matter what happens==.
+
+
+## The Investor and Inflation
 
 
 
