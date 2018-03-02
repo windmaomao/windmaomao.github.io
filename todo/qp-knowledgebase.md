@@ -8,6 +8,7 @@
 - fix github emoji missing
 - look for another slicker
 - add style to subtitle
+- add title to the page header
 
 ### 2/27
 - ~~page title is broken~~
