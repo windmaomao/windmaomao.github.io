@@ -3,10 +3,10 @@
 ## 2018
 
 ### 3/2
-- Add `codepen` section
+- ~~Add `codepen` section~~
 
 ### 3/1 
-- Learn `Markdown-It` API
+- ~~Learn `Markdown-It` API~~
 - ~~Add open source section~~
 - Sync investment and plan
 
