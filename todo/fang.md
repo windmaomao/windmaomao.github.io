@@ -2,20 +2,20 @@
 
 ## 2018
 
-### 3/1 
-- ~~Learn `Markdown-It` API~~
-- ~~Add open source section~~
-- ~~Sync investment and plan~~
-- Move md to private hosting
-- Look for swiper alternatives, [slick](http://kenwheeler.github.io/slick/)
-- :date: `5/1` Migrate Diigo out
+### 3/2
+- Add `codepen` section
 
-### 2/28
+### 3/1 
+- Learn `Markdown-It` API
+- ~~Add open source section~~
+- Sync investment and plan
+
+### 2/281
 - ~~Submit `npm` `figure-caption` module~~
 - ~~Update pay stub info~~
-- ~~Get pdf build from database~~
+- Get pdf build from database
 - :date: `3/16` Put option expire
-- ~~Apply Chinese school for Sophia~~
+- Apply Chinese school for Sophia
 
 ### 2/27
 
@@ -40,7 +40,7 @@
 ### 2/21
 
 - ~~Ship visa form~~
-- ~~update BHKXHYKL [shipping status](https://www.visamailservice.com/status-tracking/)~~
+- ~~update BHKXHYKL:fire: Ship visa form and update [shipping status](https://www.visamailservice.com/status-tracking/)~~
 
 ### 2/20
 
@@ -53,7 +53,7 @@
 
 ### 2/16
 
-- ~~Learn `Vue`~~
+- ~~Learn `VueReact`~~
 
 ### 2/15
 
@@ -77,9 +77,9 @@
 - ~~Add FeiFei $200~~
 - ~~Purchase bonds~~
 
-### 2/9
+### 2/9 
 
-- :date: `2/23` ~~Book china trip tickets~~
+- :date: `2/23` ~~19` :fire: Book china trip tickets~~ {.red}
 - ~~Study markdown-it process~~
 
 ### 2/4
@@ -92,5 +92,5 @@
 
 ### 1/30
 
-- :date: `1/31` ~~Balance and flow~~
-- ~~Find out Net magazine issue~~
+- :date: `1/31` alance and flow~~
+- ind out Ne magazine issue~~
