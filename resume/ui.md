@@ -157,6 +157,11 @@ Packages
 : [kingslanding](https://github.com/windmaomao/kingslanding), `Express` server with `Mongoose` model, `Restified` controllers, `Agenda` schedulers, etc.
 : [fjlib](https://github.com/windmaomao/fjlib), Numerical library for bubble simulations.
 
+Drafts
+
+: [Diagram creation](https://codepen.io/windmaomao/full/prRWKg)
+: [Mobile layout](https://codepen.io/windmaomao/full/PQaBqb)
+
 Questions
 
 : [StackOverflow](https://stackoverflow.com/users/288096/windmaomao)
