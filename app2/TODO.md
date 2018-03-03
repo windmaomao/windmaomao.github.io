@@ -4,20 +4,23 @@
 
 ## 2018
 
+### 3/3
+- ~~refine `md` and `ad` flag~~
+- update existin md, `Github`
+
 ### 3/2
 - fix github emoji missing
-- look for another slicker
+- look for another slider, `Lory`
 - ~~add style to subtitle~~
-- add title to the page header
+- add title to the page header, `Flex`
 - deflist line height narrow
-- ~~refine `md` and `ad` flag~~
 
 ### 2/27
 - ~~page title is broken~~
 - ~~resolve figure caption module bug~~
 
 ### 2/25
-- ~~Swiper plugin for pictures~~
+- ~~swiper plugin for pictures~~
 - add search to slider
 - ~~add timestamp to all md file~~
 
@@ -27,7 +30,7 @@
 
 ### 2/21
 - ~~design slider component~~
-- add sliding effect on mobile
+- add sliding effect on mobile, `Hammer`
 - ~~add notification to the site~~
 - ~~refine site layout, ex. toc~~
 
@@ -44,13 +47,12 @@
 - ~~fix style for iphone~~
 
 ### 2/15
-- :x: ~~Support checkbox and style it~~
 - ~~use typescript class version~~
 - ~~add hover note capability~~
 - ~~add sass to the build~~
 
 ### 2/14
-- ~~Add todo section :sunglasses:~~
+- ~~add todo section :sunglasses:~~
 - ~~bundle size too big with highlightjs~~
 - ~~remove `Home` link~~
 - ~~relocate `themer` to left and opaque~~
@@ -59,16 +61,16 @@
 - ~~setup params as global resources~~
 
 ### 2/13
-- ~~Tag `br`, either support or remove~~
-- ~~Tag `pre` has white border~~
-- ~~Add `md` option to load individual article~~
+- ~~tag `br`, either support or remove~~
+- ~~tag `pre` has white border~~
+- ~~add `md` option to load individual article~~
 - ~~:fire: Bug `#toc-15` doesn't match any element~~
 
 ### 2/10
-- ~~Load menu from `json` :sunglasses:~~
+- ~~load menu from `json` :sunglasses:~~
 
 ### 2/3
-- ~~Support mobile display~~
-- ~~Add babel support~~
+- ~~support mobile display~~
+- ~~add babel support~~
 
 
