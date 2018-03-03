@@ -4,10 +4,15 @@
 
 ## 2018
 
+### 3/2
+- fix github emoji missing
+- look for another slicker
+- add style to subtitle
+- add title to the page header
+
 ### 2/27
-- Add analytics
-- ~~Page title is broken~~
-- ~~Resolve figure caption module bug~~
+- ~~page title is broken~~
+- ~~resolve figure caption module bug~~
 
 ### 2/25
 - ~~Swiper plugin for pictures~~
@@ -21,7 +26,7 @@
 ### 2/21
 - ~~design slider component~~
 - add sliding effect on mobile
-- add notification to the site
+- ~~add notification to the site~~
 - ~~refine site layout, ex. toc~~
 
 ### 2/19
@@ -48,9 +53,8 @@
 - ~~remove `Home` link~~
 - ~~relocate `themer` to left and opaque~~
 - ~~remember last visited link~~
-- handle failure of loading md
-- handle spinning for multiple http
-- setup params as global resources
+- ~~handle failure of loading md~~
+- ~~setup params as global resources~~
 
 ### 2/13
 - ~~Tag `br`, either support or remove~~
