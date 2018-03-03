@@ -5,38 +5,44 @@ export default {
     menu: Array
   },
   data: () => ({
-    open: false
+    open: false,
+    search: ''
   }),
   render() {
-    if (!this.menu.length) {
-      return null
+    var renderItem = (type, name) => {
+      return (
+        <li>
+          <a onClick={event => {
+            event.preventDefault()
+            this.onSelect(type, name)
+          }}>{name}</a>
+        </li>
+      )
     }
     return (
       <div id="slider">
-        { !this.open ? (
-          <i class="slider-toggle" onClick={this.onToggle} />
-        ) : (
-          <div class="slider" v-click-outside={this.close}>
-            <button class="close" onClick={this.onToggle}>X</button>
-            <aside class="menu">{
+        <i class="slider-toggle" />
+        <div class={{ 'slider': 1, 'open': this.open }}>
+          <button class="close" onClick={this.onToggle}>X</button>
+          <br />
+          <aside class="menu">
+            <input class="input is-small"
+              type="text" placeholder="Search ..."
+              value={this.search}
+              onChange={this.onSearch}
+            />
+            {
               this.menu.map((menu) =>
                 <div>
                   <p class="menu-label">{menu.title}</p>
                   <ul class="menu-list">{
-                    menu.items.map((name) =>
-                      <li>
-                        <a onClick={event => {
-                          event.preventDefault()
-                          this.onSelect(menu.type, name)
-                        }}>{name}</a>
-                      </li>
-                    )
+                    menu.items.map((name) => renderItem(menu.type, name))
                   }</ul>
                 </div>
               )
-            }</aside>
-          </div>
-        )}
+            }
+          </aside>
+        </div>
       </div>
     )
   },
@@ -54,15 +60,19 @@ export default {
     },
     close() {
       this.open = false
+    },
+    onSearch(e) {
+      this.search = event.target.value
+      console.warn(this.search)
     }
   },
   mounted() {
-    // const that = this
-    // const el = window.document.getElementById('slider')
-    // const mc = window.Hammer(el)
-    // mc.on('pan tap', (ev) => {
-    //   that.open = true
-    // })
+    const that = this
+    const el = window.document.getElementById('slider')
+    const mc = window.Hammer(el)
+    mc.on('pan tap', (ev) => {
+      that.open = true
+    })
   }
 }
 </script>

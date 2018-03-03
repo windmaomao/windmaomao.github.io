@@ -1,13 +1,18 @@
 .slider {
+  transition: all 0.5s ease;
+
   position: fixed;
   background: #fafafa;
   width: 250px;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -250px;
   z-index: 99999;
   padding: 10px;
   overflow-y: auto;
+  &.open {
+    left: 0;
+  }
   .close {
     float: right;
     cursor: pointer;
@@ -26,8 +31,10 @@
 }
 .slider-toggle {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
   z-index: 99999;
   cursor: pointer;
 }

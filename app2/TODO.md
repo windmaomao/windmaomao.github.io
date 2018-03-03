@@ -30,7 +30,7 @@
 
 ### 2/21
 - ~~design slider component~~
-- add sliding effect on mobile, `Hammer`
+- ~~add sliding effect on mobile, `Hammer`~~
 - ~~add notification to the site~~
 - ~~refine site layout, ex. toc~~
 
