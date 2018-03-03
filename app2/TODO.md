@@ -10,6 +10,7 @@
 - ~~add style to subtitle~~
 - add title to the page header
 - deflist line height narrow
+- ~~refine `md` and `ad` flag~~
 
 ### 2/27
 - ~~page title is broken~~

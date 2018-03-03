@@ -96,17 +96,27 @@ Demograph may explain secular stagnation {.subtitle}
     this.theme = localStorage.getItem('qp-theme') || this.theme
     this.themeSwitched(this.theme)
 
-    if (params['ad']) {
-      this.fetchMenu()
-    }
-
+    // Debug mode
     if (this.debug) {
+      this.fetchMenu()
       this.testSource()
       return
     }
 
-    let saved = localStorage.getItem('qp-md') || this.default
-    let md = params['md'] || saved
+    // Fetch menu
+    if (params['ad']) {
+      this.fetchMenu()
+    }
+
+    // Fetch url
+    let md = this.default
+    if (params['md']) {
+      md = params['md']
+    } else {
+      if (params['ad']) {
+        md = localStorage.getItem('qp-md') || md;
+      }
+    }
     this.menuSelected(md)
   }
 }
