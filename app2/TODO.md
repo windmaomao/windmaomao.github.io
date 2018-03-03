@@ -21,7 +21,7 @@
 
 ### 2/25
 - ~~swiper plugin for pictures~~
-- add search to slider
+- ~~add search to slider~~
 - ~~add timestamp to all md file~~
 
 ### 2/24
