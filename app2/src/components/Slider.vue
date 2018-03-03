@@ -15,26 +15,23 @@ export default {
       return (
         <div class="slider" v-click-outside={this.close}>
           <button class="close" onClick={this.onToggle}>X</button>
-          <aside class="menu">
-            <p class="menu-label">Menu</p>
-            <ul class="menu-list">{
-              this.menu.map((menu) =>
-                <li>
-                  <a>{menu.title}</a>
-                  <ul>{
-                    menu.items.map((name) =>
-                      <li>
-                        <a onClick={event => {
-                          event.preventDefault()
-                          this.onSelect(menu.type, name)
-                        }}>{name}</a>
-                      </li>
-                    )
-                  }</ul>
-                </li>
-              )
-            }</ul>
-          </aside>
+          <aside class="menu">{
+            this.menu.map((menu) =>
+              <div>
+                <p class="menu-label">{menu.title}</p>
+                <ul class="menu-list">{
+                  menu.items.map((name) =>
+                    <li>
+                      <a onClick={event => {
+                        event.preventDefault()
+                        this.onSelect(menu.type, name)
+                      }}>{name}</a>
+                    </li>
+                  )
+                }</ul>
+              </div>
+            )
+          }</aside>
         </div>
       )
     } else {
