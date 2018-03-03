@@ -19,29 +19,40 @@ export default {
         </li>
       )
     }
+    var renderMenu = (menu) => {
+      let found
+      if (menu.title.toLowerCase().includes(this.search)) {
+        found = menu.items.slice()
+      } else {
+        found = menu.items.filter((name) => name.includes(this.search))
+      }
+      if (found.length) {
+        return (
+          <div>
+            <p class="menu-label">{menu.title}</p>
+            <ul class="menu-list">{
+              found.map((name) => renderItem(menu.type, name))
+            }</ul>
+          </div>
+        )
+      } else {
+        return null
+      }
+    }
     return (
       <div id="slider">
         <i class="slider-toggle" />
         <div class={{ 'slider': 1, 'open': this.open }}>
           <button class="close" onClick={this.onToggle}>X</button>
           <br />
-          <aside class="menu">
-            <input class="input is-small"
-              type="text" placeholder="Search ..."
-              value={this.search}
-              onChange={this.onSearch}
-            />
-            {
-              this.menu.map((menu) =>
-                <div>
-                  <p class="menu-label">{menu.title}</p>
-                  <ul class="menu-list">{
-                    menu.items.map((name) => renderItem(menu.type, name))
-                  }</ul>
-                </div>
-              )
-            }
-          </aside>
+          <input class="input is-small"
+            type="text" placeholder="Search ..."
+            value={this.search}
+            onChange={this.onSearch}
+          />
+          <aside class="menu">{
+            this.menu.map((menu) => renderMenu(menu))
+          }</aside>
         </div>
       </div>
     )
