@@ -9,6 +9,7 @@
 - look for another slicker
 - add style to subtitle
 - add title to the page header
+- deflist line height narrow
 
 ### 2/27
 - ~~page title is broken~~

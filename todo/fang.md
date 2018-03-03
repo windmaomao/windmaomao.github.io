@@ -15,7 +15,7 @@
 - ~~Update pay stub info~~
 - Get pdf build from database
 - :date: `3/16` Put option expire
-- Apply Chinese school for Sophia
+- ~~Apply Chinese school for Sophia, summer~~
 
 ### 2/27
 
@@ -79,7 +79,7 @@
 
 ### 2/9 
 
-- :date: `2/23` ~~19` :fire: Book china trip tickets~~ {.red}
+- :date: `2/23` ~~19` :fire: Book china trip tickets~~
 - ~~Study markdown-it process~~
 
 ### 2/4
@@ -92,5 +92,5 @@
 
 ### 1/30
 
-- :date: `1/31` alance and flow~~
-- ind out Ne magazine issue~~
+- ~~:date: `1/31` alance and flow~~
+- ~~find out Ne magazine issue~~

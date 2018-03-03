@@ -78,6 +78,9 @@ html {
 #write>h4:first-child {
 	margin-top: 0.5rem;
 }
+.subtitle {
+	text-align: center;
+}
 h1 {
 	font-weight: normal;
 	line-height: 4rem;
@@ -322,7 +325,7 @@ blockquote p {
 	padding-top: 3em;
     margin-top: -1.5em;
 	color: #999;
-	
+
 	width: 100vw;
 	max-width: calc(100% + 60px);
 	margin-left: -30px;
