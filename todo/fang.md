@@ -2,6 +2,10 @@
 
 ## 2018
 
+### 3/3
+
+- Figure out bright horizon bill $460
+
 ### 3/2
 - ~~Add `codepen` section~~
 
@@ -10,7 +14,7 @@
 - ~~Add open source section~~
 - Sync investment and plan
 
-### 2/281
+### 2/28
 - ~~Submit `npm` `figure-caption` module~~
 - ~~Update pay stub info~~
 - Get pdf build from database

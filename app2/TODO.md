@@ -7,7 +7,7 @@
 ### 3/2
 - fix github emoji missing
 - look for another slicker
-- add style to subtitle
+- ~~add style to subtitle~~
 - add title to the page header
 - deflist line height narrow
 
