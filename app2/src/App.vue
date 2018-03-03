@@ -114,7 +114,7 @@ Demograph may explain secular stagnation {.subtitle}
       md = params['md']
     } else {
       if (params['ad']) {
-        md = localStorage.getItem('qp-md') || md;
+        md = localStorage.getItem('qp-md') || md
       }
     }
     this.menuSelected(md)

@@ -11,34 +11,34 @@ export default {
     if (!this.menu.length) {
       return null
     }
-    if (this.open) {
-      return (
-        <div class="slider" v-click-outside={this.close}>
-          <button class="close" onClick={this.onToggle}>X</button>
-          <aside class="menu">{
-            this.menu.map((menu) =>
-              <div>
-                <p class="menu-label">{menu.title}</p>
-                <ul class="menu-list">{
-                  menu.items.map((name) =>
-                    <li>
-                      <a onClick={event => {
-                        event.preventDefault()
-                        this.onSelect(menu.type, name)
-                      }}>{name}</a>
-                    </li>
-                  )
-                }</ul>
-              </div>
-            )
-          }</aside>
-        </div>
-      )
-    } else {
-      return (
-        <i class="slider-toggle" onClick={this.onToggle} />
-      )
-    }
+    return (
+      <div id="slider">
+        { !this.open ? (
+          <i class="slider-toggle" onClick={this.onToggle} />
+        ) : (
+          <div class="slider" v-click-outside={this.close}>
+            <button class="close" onClick={this.onToggle}>X</button>
+            <aside class="menu">{
+              this.menu.map((menu) =>
+                <div>
+                  <p class="menu-label">{menu.title}</p>
+                  <ul class="menu-list">{
+                    menu.items.map((name) =>
+                      <li>
+                        <a onClick={event => {
+                          event.preventDefault()
+                          this.onSelect(menu.type, name)
+                        }}>{name}</a>
+                      </li>
+                    )
+                  }</ul>
+                </div>
+              )
+            }</aside>
+          </div>
+        )}
+      </div>
+    )
   },
   methods: {
     onToggle(e) {
@@ -55,6 +55,14 @@ export default {
     close() {
       this.open = false
     }
+  },
+  mounted() {
+    // const that = this
+    // const el = window.document.getElementById('slider')
+    // const mc = window.Hammer(el)
+    // mc.on('pan tap', (ev) => {
+    //   that.open = true
+    // })
   }
 }
 </script>

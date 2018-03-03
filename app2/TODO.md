@@ -6,7 +6,7 @@
 
 ### 3/3
 - ~~refine `md` and `ad` flag~~
-- update existin md, `Github`
+- update existing md, `Github`
 
 ### 3/2
 - fix github emoji missing
