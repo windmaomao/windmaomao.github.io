@@ -1,6 +1,6 @@
 # Souped up growth
 
-America’s extraordinary economic gamble
+America’s extraordinary economic gamble {.subtitle}
 
 : Fiscal policy is adding to demand even as the economy is running hot
 : [Online](https://www.economist.com/news/leaders/21736513-fiscal-policy-adding-demand-even-economy-running-hot-americas-extraordinary)

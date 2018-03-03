@@ -5,6 +5,7 @@
 ### 3/3
 
 - Figure out bright horizon bill $460
+- Remove invest from income statement
 
 ### 3/2
 - ~~Add `codepen` section~~

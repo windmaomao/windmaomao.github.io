@@ -1,9 +1,9 @@
 # No country for young people
-Demography may explain secular stagnation
-https://www.economist.com/news/finance-and-economics/21633860-demography-may-explain-secular-stagnation-no-country-young-people
+Demography may explain secular stagnation {.subtitle}
 
-![](  
-https://s3.amazonaws.com/qp-review/no-country-young-people.png)
+: https://www.economist.com/news/finance-and-economics/21633860-demography-may-explain-secular-stagnation-no-country-young-people
+
+![Demography may explain secular stagnation](https://s3.amazonaws.com/qp-review/no-country-young-people.png)
 
 IN THE late 1930s economists trying to explain how a depression could drag on for nearly a decade wondered if the problem was a shortage of people. “A change-over from an increasing to a declining population may be very disastrous,” said John Maynard Keynes in 1937.* The following year another prominent economist, Alvin Hansen, fretted that America was running out of people, territory and new ideas. The result, he said, was “secular stagnation—sick recoveries which die in their infancy and depressions which feed on themselves and leave a hard and seemingly immovable core of unemployment.”
 
