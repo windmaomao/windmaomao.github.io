@@ -1,8 +1,8 @@
-# Frontend Architect
+# Fang Jin
+
+Frontend Developer {.subtitle}
 
 I build websites in general domains such as healthcare, banking, real estate and university. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
-
-Overall my past projects have 11 million users in production. Since 2016, my success rate of products being launched and used in the market has reached 90%.
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
@@ -15,11 +15,6 @@ Skills
   - 3 Years Async programming with promise/*observables*
   - 3 Years *API* and technical documentation
   - 2 Years _Java_/Oracle windows enterprise environment
-
-Bonus
-
-: - 15 Years Strong analytics skills in math, modeling, calculation and simulation
-  - 8 Years Reporting, charting, and visualization: _D3.js, HighCharts, Matlab, Maya, and Unity_
 
 ## Award
 
