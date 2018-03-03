@@ -1,5 +1,7 @@
 # Fang Jin
 
+UI Developer {.subtitle}
+
 I build reusable web components (or framework) for websites in general domains such as healthcare and banking. Components are designed that they can be individually injected onto existing websites with small footprints. 
 
 Skills
@@ -146,25 +148,25 @@ DataRecoveryMan
 
 Helped DataRecoveryMan.com build an application for managing inventories of hard drive repair order, tracking order status and uploading order invoice. I was responsible for gathering the business requirement, prototyping design from business workflow and working with an offshore *PHP* developer to deliver the application.
 
-## Open source
+## Open Source
 
-I casually contributes back to the communities with my free time.
+I have been casually contributing back to the community over the years by answering questions and developing plugins.
 
 Packages
 
-: [windmaomao](https://github.com/windmaomao/windmaomao.github.io), streamline resume via `Markdown` and `Github` auto deploy.
-: [markdown-it-figure-caption](https://github.com/windmaomao/markdown-it-figure-caption), convert `img` tag into `figure` with caption that can be themed.
-: [kingslanding](https://github.com/windmaomao/kingslanding), `Express` server with `Mongoose` model, `Restified` controllers, `Agenda` schedulers, etc.
-: [fjlib](https://github.com/windmaomao/fjlib), Numerical library for bubble simulations.
+: - [windmaomao](https://github.com/windmaomao/windmaomao.github.io), streamline resume via `Markdown` and `Github` auto deploy.
+  - [markdown-it-figure-caption](https://github.com/windmaomao/markdown-it-figure-caption), convert `img` tag into `figure` with caption that can be themed.
+  - [kingslanding](https://github.com/windmaomao/kingslanding), `Express` server with `Mongoose` model, `Restified` controllers, `Agenda` schedulers, etc.
+  - [fjlib](https://github.com/windmaomao/fjlib), Numerical library for bubble simulations.
 
 Drafts
 
-: [Diagram creation](https://codepen.io/windmaomao/full/prRWKg)
-: [Mobile layout](https://codepen.io/windmaomao/full/PQaBqb)
+: - [Diagram creation](https://codepen.io/windmaomao/full/prRWKg)
+  - [Mobile layout](https://codepen.io/windmaomao/full/PQaBqb)
 
 Questions
 
-: [StackOverflow](https://stackoverflow.com/users/288096/windmaomao)
+: - [StackOverflow](https://stackoverflow.com/users/288096/windmaomao)
 
 ## Education
 
