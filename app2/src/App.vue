@@ -15,7 +15,6 @@ export default {
     return {
       // debug: true,
       debug: false,
-      spinning: true,
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
       // domain: 'https://windmaomao.github.io/',
@@ -27,7 +26,7 @@ export default {
     }
   },
   template: `
-    <div id="app" v-bind:class="{ 'spinning': spinning }">
+    <div id="app">
       <Slider :menu="menu" @select="menuSelected" />
       <Main :source="source" />
       <Themer @theme="themeSwitched" />
@@ -44,14 +43,18 @@ export default {
       this.fetchUrl(url)
     },
     fetchUrl: function(url) {
-      this.spinning = true
+      this.$loading('loading...')
       url = url || this.default
       const fn = this.domain2 + url + '.md?v=' + Date.now()
       this.$http.get(fn).then(res => {
         // this.source = '[[toc]]\n' + res.body
         this.source = res.body
-        this.spinning = false
+        this.$loading.close()
         localStorage.setItem('qp-md', url)
+      }, res => {
+        this.$toast.center('Error loading!')
+        localStorage.setItem('qp-md', '')
+        console.error(res.url, res.status)
       })
       window.location = '#'
     },
@@ -95,7 +98,6 @@ export default {
     }
 
     if (this.debug) {
-      this.spinning = false
       this.testSource()
       return
     }
