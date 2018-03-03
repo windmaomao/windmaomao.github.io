@@ -1,10 +1,12 @@
-# Markdown It Figure Caption
+# Figure Caption
+
+Markdown-It Plugin {.subtitle}
 
 Convert `img` tag into a figure with caption that can be themed.
 
 ## Requirement
 
-- Compatible with common plugins, ex. `attrs`
+- Compatible with common plugins, ex. [`attrs`](https://github.com/arve0/markdown-it-attrs)
 - Allow figure caption to be displayed
 - Allow caption structure to be themable
 
