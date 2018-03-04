@@ -13,8 +13,8 @@ export default {
   },
   data () {
     return {
-      debug: true,
-      // debug: false,
+      // debug: true,
+      debug: false,
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
       // domain: 'https://windmaomao.github.io/',
