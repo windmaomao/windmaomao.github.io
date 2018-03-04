@@ -5,7 +5,7 @@
 ## 2018
 
 ### 3/4
-- refine search style
+- Merge search with header menu
 
 ### 3/3
 - ~~refine `md` and `ad` flag~~

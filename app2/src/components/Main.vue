@@ -3,6 +3,9 @@ import Toc from './Toc'
 import Footer from './Footer'
 import Anchor from '../assets/markdown-it-anchor'
 
+// Lory slides
+var lory = require('lory.js').lory
+
 // Markdown core and highlighter
 var md = require('markdown-it')({
   html: true,
@@ -54,16 +57,24 @@ md.use(container, 'abstract', {
     }
   }
 })
-md.use(container, 'swiper', {
+md.use(container, 'slider', {
   validate: function(params) {
-    return params.trim().match(/^swiper$/)
+    return params.trim().match(/^slider$/)
   },
   render: function (tokens, idx) {
     if (tokens[idx].nesting === 1) {
-      return '<div class="swiper-container">\n'
+      return '<div class="lory-slider">\n<div class="frame js_frame">\n'
     } else {
-      var nav = '<div class="swiper-pagination">\n</div>\n<div class="swiper-button-prev">\n</div>\n<div class="swiper-button-next">\n</div>\n</div>\n'
-      return nav
+      var nav = `
+  <span class="js_prev prev">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
+  </span>
+
+  <span class="js_next next">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
+  </span>
+      `
+      return nav + '</div>\n</div>\n'
     }
   }
 })
@@ -82,9 +93,7 @@ export default {
   data () {
     return {
       sidebar: false,
-      toc: [],
-      // title: '',
-      swiper: null
+      toc: []
     }
   },
   props: ['source'],
@@ -92,7 +101,7 @@ export default {
     compiled: function() {
       anchors.length = 0
       this.$nextTick(() => {
-        this.renderSwiper()
+        this.renderSlider()
       })
       return md.render(this.source)
     },
@@ -117,16 +126,15 @@ export default {
     this.toc = anchors
   },
   methods: {
-    renderSwiper() {
-      this.swiper = new window.Swiper('.swiper-container', {
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
-      })
+    renderSlider() {
+      var slider = document.querySelector('.lory-slider')
+      console.log(slider)
+      if (slider) {
+        lory(slider, {
+          infinite: true,
+          enableMouseEvents: true
+        })
+      }
     }
   }
 }

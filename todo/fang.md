@@ -7,6 +7,7 @@
 #### 3/4
 - Buy put on `Ford`
 - Consolate 2017 investment tax
+- Double check 2017 tax form
 
 #### 3/3
 
@@ -22,6 +23,7 @@
 - ~~Learn `Markdown-It` API~~
 - ~~Add open source section~~
 - Sync investment and plan
+- Continue digital renovation
 
 ### Feb
 

@@ -13,8 +13,8 @@ export default {
   },
   data () {
     return {
-      // debug: true,
-      debug: false,
+      debug: true,
+      // debug: false,
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
       // domain: 'https://windmaomao.github.io/',
@@ -80,11 +80,11 @@ export default {
 Demograph may explain secular stagnation {.subtitle}
 
 
-::: swiper
+::: slider
 
-- ![QPlot Windows Application](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
-- ![Trinity Major Minor Website](http://qplot.com/assets/images/portfolio/trinity_major.png) {.swiper-slide}
-{.swiper-wrapper}
+- ![QPlot Windows Application](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG)
+- ![Trinity Major Minor Website](http://qplot.com/assets/images/portfolio/trinity_major.png)
+{.js_slides}
 
 :::
       `
