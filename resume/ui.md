@@ -69,15 +69,15 @@ Reusable Component
 
 ## Projects
 
-::: swiper
+::: slider
 
-- ![PHP: Simcard Selection Website (2011)](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) {.swiper-slide}
-- ![Flash: Portfolio Demo Website (2011)](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif) {.swiper-slide}
-- ![PHP: Saycret Social Network (2011)](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG) {.swiper-slide}
-- ![Fortran: Tumor Blood Vessel Simulation (2007)](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png) {.swiper-slide}
-- ![Delphi: Windows Plotting Software (2006)](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG) {.swiper-slide}
-- ![C++: NASA Low Gravitation Thread (2004)](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG) {.swiper-slide}
-{.swiper-wrapper}
+- ![PHP: Simcard Selection Website (2011)](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif) 
+- ![Flash: Portfolio Demo Website (2011)](https://s3.amazonaws.com/qp-photo/freelancer_inn_portfolio.gif)
+- ![PHP: Saycret Social Network (2011)](https://s3.amazonaws.com/qp-photo/saycret_homepage.PNG)
+- ![Fortran: Tumor Blood Vessel Simulation (2007)](https://s3.amazonaws.com/qp-photo/vessel_nutrient.png)
+- ![Delphi: Windows Plotting Software (2006)](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG)
+- ![C++: NASA Low Gravitation Thread (2004)](https://s3.amazonaws.com/qp-photo/jhu_simulation_neck.PNG)
+{.js_slides}
 
 :::
 
@@ -179,24 +179,24 @@ Johns Hopkins University
 
 **Hobby 3D Rendering**
 
-::: swiper
+::: slider
 
-- ![High Def Tumor Rendering](https://s3.amazonaws.com/qp-photo/test1painting_HiRes_small.png) {.swiper-slide}
-- ![Duet](https://s3.amazonaws.com/qp-photo/duet_test_051810b.PNG) {.swiper-slide}
-- ![My Desk](https://s3.amazonaws.com/qp-photo/room_050810a.jpg) {.swiper-slide}
-- ![Submarine](https://s3.amazonaws.com/qp-photo/sub_render_sign.jpg) {.swiper-slide}
-- ![My Room](https://s3.amazonaws.com/qp-photo/room_050110b.jpg) {.swiper-slide}
-- ![Square Sphere Maze](https://s3.amazonaws.com/qp-photo/square_sphere_sign.JPG) {.swiper-slide}
-- ![Chilly Bronze](https://s3.amazonaws.com/qp-photo/chilly_bronze.jpg) {.swiper-slide}
-- ![Qing Dynasty](https://s3.amazonaws.com/qp-photo/daomu_hk_draft.jpg) {.swiper-slide}
-- ![Machine Gun](https://s3.amazonaws.com/qp-photo/machine_gun_draft.JPG) {.swiper-slide}
-- ![Majoon Batiao](https://s3.amazonaws.com/qp-photo/batiao_bar.JPG) {.swiper-slide}
-- ![Deep Blue](https://s3.amazonaws.com/qp-photo/small_blue_lzn.jpg) {.swiper-slide}
-- ![Ocean Floor](https://s3.amazonaws.com/qp-photo/ocean_light_mushroom2.jpg) {.swiper-slide}
-- ![South Park](https://s3.amazonaws.com/qp-photo/south_park_090709.png) {.swiper-slide}
-- ![Tumor Angiogenesis](https://s3.amazonaws.com/qp-photo/vessel_tumor_render.png) {.swiper-slide}
-- ![Blood Vessel](https://s3.amazonaws.com/qp-photo/blood_vessel_demo.png) {.swiper-slide}
-{.swiper-wrapper}
+- ![High Def Tumor Rendering](https://s3.amazonaws.com/qp-photo/test1painting_HiRes_small.png)
+- ![Duet](https://s3.amazonaws.com/qp-photo/duet_test_051810b.PNG)
+- ![My Desk](https://s3.amazonaws.com/qp-photo/room_050810a.jpg)
+- ![Submarine](https://s3.amazonaws.com/qp-photo/sub_render_sign.jpg)
+- ![My Room](https://s3.amazonaws.com/qp-photo/room_050110b.jpg)
+- ![Square Sphere Maze](https://s3.amazonaws.com/qp-photo/square_sphere_sign.JPG)
+- ![Chilly Bronze](https://s3.amazonaws.com/qp-photo/chilly_bronze.jpg)
+- ![Qing Dynasty](https://s3.amazonaws.com/qp-photo/daomu_hk_draft.jpg)
+- ![Machine Gun](https://s3.amazonaws.com/qp-photo/machine_gun_draft.JPG)
+- ![Majoon Batiao](https://s3.amazonaws.com/qp-photo/batiao_bar.JPG)
+- ![Deep Blue](https://s3.amazonaws.com/qp-photo/small_blue_lzn.jpg)
+- ![Ocean Floor](https://s3.amazonaws.com/qp-photo/ocean_light_mushroom2.jpg)
+- ![South Park](https://s3.amazonaws.com/qp-photo/south_park_090709.png)
+- ![Tumor Angiogenesis](https://s3.amazonaws.com/qp-photo/vessel_tumor_render.png)
+- ![Blood Vessel](https://s3.amazonaws.com/qp-photo/blood_vessel_demo.png)
+{.js_slides}
 
 :::
 
