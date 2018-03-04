@@ -1,12 +1,13 @@
+$slider-width: 100%;
+
 .slider {
   transition: all 0.5s ease;
-
   position: fixed;
   background: #fafafa;
-  width: 250px;
+  width: $slider-width;
   top: 0;
   bottom: 0;
-  left: -250px;
+  left: -$slider-width;
   z-index: 99999;
   padding: 10px;
   overflow-y: auto;
@@ -21,12 +22,13 @@
     list-style: none;
     margin: .25em;
     padding: 0;
-  }
-  a {
-    padding: 0;
-    text-transform: capitalize;
-    font-size: 13px;
-    line-height: 20px;
+    li {
+      padding: 0 10px;
+      a {
+        padding: 0;
+        text-transform: capitalize;
+      }
+    }
   }
 }
 .slider-toggle {
@@ -37,4 +39,11 @@
   width: 50px;
   z-index: 99999;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .slider {
+    ul li {
+      display: inline-block;
+    }
+  }
 }

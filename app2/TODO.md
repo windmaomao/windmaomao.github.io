@@ -4,6 +4,9 @@
 
 ## 2018
 
+### 3/4
+- refine search style
+
 ### 3/3
 - ~~refine `md` and `ad` flag~~
 - update existing md, `Github`

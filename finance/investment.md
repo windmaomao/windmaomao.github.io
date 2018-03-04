@@ -40,8 +40,6 @@
 | **Vanguard** |           | $ 20,000 |       |               |
 | BOC 4/23     | CD        | $ 10,000 | long  |               |
 | BOC 3/15     | CD        | $ 10,000 | long  |               |
-| **401K**     |       |  |  |               |
-| TOT BD MKT   | Bond      | $8900  | long |               |
 
 
 ### Feberary
