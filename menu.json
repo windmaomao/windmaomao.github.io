@@ -9,7 +9,7 @@
   },
   {
     "title": "Financial", "type": "finance",
-    "items": ["purchase", "investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment"]
+    "items": ["tax", "purchase", "investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment"]
   },
   {
     "title": "Repos", "type": "repository",
