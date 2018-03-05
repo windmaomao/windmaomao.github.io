@@ -2,8 +2,8 @@
 
 ## 2018
 
-- What will the wage be? **-1.5K**{.red}
-- What will the refunds be? +0
+- What will the wage be? +2K{.red}
+- What will the refunds be? **-3.5**{.red}
 - What will the captial gain be? +1.5K
 
 ## 2017
