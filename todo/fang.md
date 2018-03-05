@@ -4,6 +4,10 @@
 
 ### Mar
 
+#### 3/5
+- Add tax 217 summary
+- Field select [validation](https://medium.com/@tarik.nzl/angular-2-custom-form-control-with-validation-json-input-2b4cf9bc2d73)
+
 #### 3/4
 - Buy put on `Ford`
 - Consolate 2017 investment tax
