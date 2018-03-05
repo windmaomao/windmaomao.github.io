@@ -69,4 +69,76 @@ a:hover, a:focus, a:active {
 }
 ```
 
+## Flex Container
+
+### Flex Container Properties
+
+#### The flex-flow Shorthand Property
+
+The `flex-flow` property lets you define the directions of the main and cross axes and whether the flex items can wrap to more than one line if needed. The `flex-flow` shorthand property sets the `flex-direction` and `flex-wrap` properties to define the flex container’s wrapping and main and cross axes.
+
+```css
+  flex-flow: row nowrap;
+```
+
+#### The flex-direction Property
+
+The flex-direction property specifies how flex items are placed in the flex container. It defines the main axis of a flex container, which is the primary axis along which flex items are laid out.
+
+```css
+  flex-direction: row | row-reverse | column | column-reverse;
+```
+
+Let’s expand a little on our preceding HTML example, and include the navigation as a component within a home page.
+
+![fig. Home page layout using flex-direction: row and column](https://s3.amazonaws.com/qp-review/flex_in_css_c20.png)
+
+```html
+<body>
+  <header>
+    <h1>My Page's title!</h1>
+  </header>
+  <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/jobs">Careers</a>
+      <a href="/contact">Contact Us</a>
+  </nav>
+  <main>
+      <article>
+        <img alt="" src="img1.jpg">
+        <p>This is some awesome content that is on the page.</p>
+        <button>Go Somewhere</button>
+      </article>
+      <article>
+        <img alt="" src="img2.jpg">
+        <p>This is more content than the previous box, but less than
+        the next.</p>
+        <button>Click Me</button>
+      </article>
+      <article>
+        <img alt="" src="img3.jpg">
+        <p>We have lots of content here to show that content can grow, and
+        everything can be the same size if you use flexbox.</p>
+        <button>Do Something</button>
+      </article>
+  </main>
+  <footer>Copyright &#169; 2017</footer>
+</body>
+```
+
+```css
+* {
+  outline: 1px #ccc solid;
+  margin: 10px;
+  padding: 10px;
+}
+body, nav, main, article {
+  display: flex;
+}
+body, article {
+  flex-direction: column;
+}
+```
 
