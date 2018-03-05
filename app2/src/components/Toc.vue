@@ -8,16 +8,15 @@ export default {
       activated: false
     }
   },
-  // computed: {
-  //   title() {
-  //     return 'Table of Content'
-  //     if (this.toc.length) {
-  //       return this.toc[0].title
-  //     } else {
-  //       return ''
-  //     }
-  //   }
-  // },
+  computed: {
+    title() {
+      if (this.toc.length) {
+        return this.toc[0].title
+      } else {
+        return ''
+      }
+    }
+  },
   render() {
     return (
       <div class="toc">
@@ -26,6 +25,7 @@ export default {
             <a class="navbar-item logo-wrapper">
               <img src="static/img/logo.png" class="logo" />
             </a>
+            <a class="navbar-item center">{this.title}</a>
             <div data-target="navbar"
               class={{ 'navbar-burger': 1, 'burger': 1, 'is-active': this.toggled }}
               onClick={this.onToggle}

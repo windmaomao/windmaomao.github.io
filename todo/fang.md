@@ -5,21 +5,18 @@
 ### Mar
 
 #### 3/5
-- Add tax 217 summary
+- ~~Add tax 217 summary~~
 - Field select [validation](https://medium.com/@tarik.nzl/angular-2-custom-form-control-with-validation-json-input-2b4cf9bc2d73)
-- Learn `Flexbox`
+- ~~Learn `Flexbox`~~
 
 #### 3/4
 - Buy put on `Ford`
 - Consolate 2017 investment tax
-- Double check 2017 tax form
+- ~~Double check 2017 tax form~~
 
 #### 3/3
 
 - ~~Figure out bright horizon bill $460~~
-- Remove invest from income statement
-- Commit to `Github` via [API](https://developer.github.com/v3/repos/contents/)
-- Learning prototype [`Principle`](http://principleformac.com/tutorial.html)
 
 #### 3/2
 - ~~Add `codepen` section~~
