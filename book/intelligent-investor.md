@@ -82,5 +82,52 @@ Focusing on the market’s recent returns when they have been rosy, warns Graham
 
 Even though investors all know they’re supposed to buy low and sell high, in practice they often end up getting it backwards. Graham’s warning in this chapter is simple: ==“By the rule of opposites,”== **the more enthusiastic investors become about the stock market in the long run, the more certain they are to be proved wrong in the short run**. On March 24, 2000, the total value of the U.S. stock market peaked at $14.75 trillion. By October 9, 2002, just 30 months later, the total U.S. stock market was worth $7.34 trillion, or 50.2% less—a loss of $7.41 trillion. Meanwhile, many market pundits turned sourly bearish, predicting flat or even negative market returns for years—even decades—to come.
 
-> Considering how calamitously wrong the =“experts”= were the last time they agreed on something, why on earth should the intelligent investor believe them now?
+> Considering how calamitously wrong the ==“experts”== were the last time they agreed on something, why on earth should the intelligent investor believe them now?
 
+## General Portfolio Policy
+The Defensive Investor {.subtitle}
+
+It has been an old and sound principle that those who cannot afford to take risks should be content with a relatively low return on their invested funds. From this there has developed the general notion that the rate of return which the investor should aim for is more or less proportionate to the degree of risk he is ready to run. ==Our view is different.== **The rate of return sought should be dependent, rather, on the amount of intelligent effort the investor is willing and able to bring to bear on his task.** The minimum return goes to our passive investor, who wants both safety and freedom from concern. The maximum return would be realized by the alert and enterprising investor who exercises maximum intelligence and skill. In 1965 we added: “In many cases there may be less real risk associated with buying a ‘bargain issue’ offering the chance of a large profit than with a conventional bond purchase yielding about 4½%.” This statement had more truth in it than we ourselves suspected, since in subsequent years even the best long-term bonds lost a substantial part of their market value because of the rise in interest rates.
+
+### The Basic Problem of Bond-Stock Allocation
+
+We have suggested as a fundamental guiding rule that the investor should never have less than 25% or more than 75% of his funds in common stocks, with a consequent inverse range of between 75% and 25% in bonds. There is an implication here that the standard division should be an equal one, or 50–50, between the two major investment mediums. According to tradition the sound reason for increasing the percentage in common stocks would be the appearance of the “bargain price” levels created in a protracted bear market. Conversely, sound procedure would call for reducing the common-stock component below 50% when in the judgment of the investor the market level has become dangerously high.
+
+These copybook maxims have always been easy to enunciate and always difficult to follow—because they go against that ==very human nature which produces that excesses of bull and bear markets==. It is almost a contradiction in terms to suggest as a feasible policy for the average stockowner that he lighten his holdings when the market advances beyond a certain point and add to them after a corresponding decline. It is because the average man operates, and apparently must operate, in opposite fashion that we have had the great advances and collapses of the past; and—this writer believes—we are likely to have them in the future.
+
+We are thus led to put forward for most of our readers what may appear to be an oversimplified 50–50 formula. **Under this plan the guiding rule is to maintain as nearly as practicable an equal division between bond and stock holdings.** When changes in the market level have raised the common-stock component to, say, 55%, the balance would be restored by a sale of one-eleventh of the stock portfolio and the transfer of the proceeds to bonds. Conversely, a fall in the common-stock proportion to 45% would call for the use of one-eleventh of the bond fund to buy additional equities.
+
+Nonetheless we are convinced that our 50–50 version of this approach makes good sense for the defensive investor. 
+
+- It is extremely simple; 
+- It aims unquestionably in the right direction; 
+- It gives the follower the feeling that he is at least making some moves in response to market developments;
+- Most important of all, it will restrain him from being drawn more and more heavily into common stocks as the market rises to more and more dangerous heights.
+
+==Furthermore, a truly conservative investor will be satisfied with the gains shown on half his portfolio in a rising market, while in a severe decline he may derive much solace from reflecting how much better off he is than many of his more venturesome friends.==
+
+### The Bond Component
+
+The choice of issues in the bond component of the investor’s portfolio will turn about two main questions: Should he buy taxable or tax-free bonds, and should he buy shorter- or longer-term maturities? **The tax decision should be mainly a matter of arithmetic, turning on the difference in yields as compared with the investor’s tax bracket.** In January 1972 the choice in 20-year maturities was between obtaining, say, 7½% on “grade Aa” corporate bonds and 5.3% on prime tax-free issues. (The term “municipals” is generally applied to all species of tax-exempt bonds, including state obligations.) There was thus for this maturity a loss in income of some 30% in passing from the corporate to the municipal field. Hence if the investor was in a maximum tax bracket higher than 30% he would have a net saving after taxes by choosing the municipal bonds; the opposite, if his maximum tax was less than 30%. A single person starts paying a 30% rate when his income after deductions passes $10,000; for a married couple the rate applies when combined taxable income passes $20,000. It is evident that a large proportion of individual investors would obtain a higher return after taxes from good municipals than from good corporate bonds.
+
+The choice of longer versus shorter maturities involves quite a different question, viz.: Does the investor want to assure himself against a decline in the price of his bonds, but at the cost of (1) a lower annual yield and (2) loss of the possibility of an appreciable gain in principal value?
+
+As we shall point out, U.S. savings bonds still possess certain unique merits that make them a suitable purchase by any individual investor. For the man of modest capital—with, say, not more than $10,000 to put into bonds—we think they are still the easiest and the best choice. But those with larger funds may find other mediums more desirable.
+
+Let us list a few major types of bonds that deserve investor consideration, and discuss them briefly with respect to general description, safety, yield, market price, risk, income-tax status, and other features.
+
+#### U.S. SAVING BONDS, SERIES E AND SERIES H. 
+
+The Series H bonds pay interest semi-annually, as do other bonds. The rate is 4.29% for the first year, and then a flat 5.10% for the next nine years to maturity. Interest on the Series E bonds is not paid out, but accrues to the holder through increase in redemption value. The bonds are sold at 75% of their face value, and mature at 100% in 5 years 10 months after purchase. If held to maturity the yield works out at 5%, compounded semi-annually. If redeemed earlier, the yield moves up from a minimum of 4.01% in the first year to an average of 5.20% in the next 45/6 years.
+
+Interest on the bonds is subject to Federal income tax, but is exempt from state income tax. However, Federal income tax on the Series E bonds may be paid at the holder’s option either annually as the interest accrues (through higher redemption value), or not until the bond is actually disposed of.
+
+Owners of Series E bonds may cash them in at any time (shortly after purchase) at their current redemption value. Holders of Series H bonds have similar rights to ==cash them in at par value (cost)==. Series E bonds are exchangeable for Series H bonds, with certain tax advantages. Comment: There is no other investment that combines 
+
+- Absolute assurance of principal and interest payments, 
+- The right to demand full “money back” at any time, and 
+- Guarantee of at least a 5% interest rate for at least ten years. 
+
+Holders of the earlier issues of Series E bonds have had the right to extend their bonds at maturity, and thus to continue to accumulate annual values at successively higher rates. The deferral of income-tax payments over these long periods has been of great dollar advantage; we calculate it has increased the effective net-after-tax rate received by as much as a third in typical cases. 
+
+Conversely, **the right to cash in the bonds at cost price or better has given the purchasers in former years of low interest rates complete protection against the shrinkage in principal value** that befell many bond investors; otherwise stated, it gave them **the possibility of benefiting from the rise in interest rates by switching their low-interest holdings into very-high-coupon issues on an even-money basis**.
