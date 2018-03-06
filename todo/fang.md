@@ -4,6 +4,9 @@
 
 ### Mar
 
+#### 3/6
+- Create angular-select project
+
 #### 3/5
 - ~~Add tax 217 summary~~
 - Field select [validation](https://medium.com/@tarik.nzl/angular-2-custom-form-control-with-validation-json-input-2b4cf9bc2d73)
@@ -24,8 +27,6 @@
 #### 3/1 
 - ~~Learn `Markdown-It` API~~
 - ~~Add open source section~~
-- Sync investment and plan
-- Continue digital renovation
 
 ### Feb
 
