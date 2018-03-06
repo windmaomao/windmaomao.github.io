@@ -1,3 +1,4 @@
+
 # The Intelligent Investor
 
 ## Introduction
@@ -131,3 +132,46 @@ Owners of Series E bonds may cash them in at any time (shortly after purchase) a
 Holders of the earlier issues of Series E bonds have had the right to extend their bonds at maturity, and thus to continue to accumulate annual values at successively higher rates. The deferral of income-tax payments over these long periods has been of great dollar advantage; we calculate it has increased the effective net-after-tax rate received by as much as a third in typical cases. 
 
 Conversely, **the right to cash in the bonds at cost price or better has given the purchasers in former years of low interest rates complete protection against the shrinkage in principal value** that befell many bond investors; otherwise stated, it gave them **the possibility of benefiting from the rise in interest rates by switching their low-interest holdings into very-high-coupon issues on an even-money basis**.
+
+#### OTHER UNITED STATES BONDS
+
+A profusion of these issues exists, covering a wide variety of coupon rates and maturity dates. All of them are completely safe with respect to payment of interest and principal. They are subject to Federal income taxes but free from state income tax. In late 1971 the long-term issues—over ten years—showed an average yield of 6.09%, intermediate issues (three to five years) returned 6.35%, and short issues returned 6.03%.
+
+In 1970 it was possible to buy a number of old issues at large discounts. Some of these are accepted at par in settlement of estate taxes. Example: The U.S. Treasury 3½s due 1990 are in this category; they sold at 60 in 1970, but closed 1970 above 77.
+
+Perhaps the chief impact of this situation has been the creation of tax-free Housing Authority bonds, enjoying the equivalent of a U.S. guarantee, and virtually the only tax-exempt issues that are equivalent to government bonds. Another type of government-backed issues is the recently created New Community Debentures, offered to yield 7.60% in September 1971.
+
+#### STATE AND MUNICIPAL BONDS
+
+**These enjoy exemption from Federal income tax. They are also ordinarily free of income tax in the state of issue but not elsewhere.** They are either direct obligations of a state or subdivision, or “revenue bonds” dependent for interest payments on receipts from a toll road, bridge, building lease, etc. Not all tax-free bonds are strongly enough protected to justify their purchase by a defensive investor. He may be guided in his selection by the rating given to each issue by Moody’s or Standard & Poor’s. One of three highest ratings by both services—Aaa (AAA), Aa (AA), or A—should constitute a sufficient indication of adequate safety. The yield on these bonds will vary both with the quality and the maturity, with the shorter maturities giving the lower return. In late 1971 the issues represented in Standard & Poor’s municipal bond index averaged AA in quality rating, 20 years in maturity, and 5.78% in yield. A typical offering of Vineland, N.J., bonds, rated AA for A and gave a yield of only 3% on the one-year maturity, rising to 5.8% to the 1995 and 1996 maturities.
+
+#### CORPORATION BONDS
+
+These bonds are subject to both Federal and state tax. In early 1972 those of highest quality yielded 7.19% for a 25-year maturity, as reflected in the published yield of Moody’s Aaa corporate bond index. The so-called lower-medium-grade issues—rated Baa—returned 8.23% for long maturities. In each class shorter-term issues would yield somewhat less than longer-term obligations.
+
+The above summaries indicate that the average investor has several choices among high-grade bonds. Those in high income-tax brackets can undoubtedly obtain a better net yield from good tax-free issues than from taxable ones. For others the early 1972 range of taxable yield would seem to be from 5.00% on U.S. savings bonds, with their special options, to about 7½% on high-grade corporate issues.
+
+#### Higher-Yielding Bond Investments
+
+By sacrificing quality an investor can obtain a higher income return from his bonds. Long experience has demonstrated that the ordinary investor is wiser to keep away from such high-yield bonds. While, taken as a whole, they may work out somewhat better in terms of overall return than the first-quality issues, they expose the owner to too many individual risks of untoward developments, ranging from disquieting price declines to actual default. (It is true that bargain opportunities occur fairly often in lower-grade bonds, but these require special study and skill to exploit successfully.)
+
+Perhaps we should add here that the limits imposed by Congress on direct bond issues of the United States have produced at least two sorts of “bargain opportunities” for investors in the purchase of government-backed obligations. One is provided by the tax-exempt “New Housing” issues, and the other by the recently created (taxable) “New Community debentures.” An offering of New Housing issues in July 1971 yielded as high as 5.8%, free from both Federal and state taxes, while an issue of (taxable) New Community debentures sold in September 1971 yielded 7.60%. Both obligations have the “full faith and credit” of the United States government behind them and hence are safe without question. And—on a net basis—they yield considerably more than ordinary United States bonds.
+
+### Type
+
+#### Savings Deposits
+in Lieu of Bonds {.subtitle}
+
+An investor may now obtain as high an interest rate from a savings deposit in a commercial or savings bank (or from a bank certificate of deposit) as he can from a first-grade bond of short maturity. The interest rate on bank savings accounts may be lowered in the future, but under present conditions they are a suitable substitute for short-term bond investment by the individual.
+
+#### Convertible Issues
+
+EXAMPLE: Our standard example has been the issue of American Gas & Electric 100-year 5% debentures, sold to the public at 101 in 1928. Four years later, under near-panic conditions, the price of these good bonds fell to 62½, yielding 8%. By 1946, in a great reversal, bonds of this type could be sold to yield only 3%, and the 5% issue should have been quoted at close to 160. But at that point the company took advantage of the call provision and redeemed the issue at a mere 106.
+
+The call feature in these bond contracts was a thinly disguised instance of “heads I win, tails you lose.” At long last, the bond-buying institutions refused to accept this unfair arrangement; in recent years most long-term high-coupon issues have been protected against redemption for ten years or more after issuance. This still limits their possible price rise, but not inequitably.
+
+In practical terms, we advise **the investor in long-term issues to sacrifice a small amount of yield to obtain the assurance of noncallability—say for 20 or 25 years**. Similarly, there is an advantage in buying a low-coupon bond* at a discount rather than a high-coupon bond selling at about par and callable in a few years. For the discount—e.g., of a 3½% bond at 63½%, yielding 7.85%—carries full protection against adverse call action.
+
+#### Call Provisions
+
+
