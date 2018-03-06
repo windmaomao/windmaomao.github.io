@@ -5,20 +5,20 @@
 ### Mar
 
 #### 3/5
-- add green/red style
+- ~~add green/red style~~
 
 #### 3/4
 - merge search with header menu
+- need simple slider
 
 #### 3/3
 - ~~refine `md` and `ad` flag~~
-- update existing md, `Github`
 
 #### 3/2
 - fix github emoji missing
-- look for another slider, `Lory`
+- ~~look for another slider, `Lory`~~
 - ~~add style to subtitle~~
-- add title to the page header, `Flex`
+- ~~add title to the page header, `Flex`~~
 - deflist line height narrow
 
 ### Feb
