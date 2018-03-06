@@ -46,10 +46,41 @@ Just as sensible gamblers take, say, $100 down to the casino floor and leave the
 
 ## The Investor and Inflation
 
+Our readers must have enough intelligence to recognize that even high-quality stocks cannot be a better purchase than bonds under all conditions—i.e., regardless of how high the stock market may be and how low the current dividend return compared with the rates available on bonds. 
 
+Our answer to this crucial question must be a flat no. Common stocks may do better in the future than in the past, but they are far from certain to do so. We must deal here with two different time elements in investment results. The first covers what is likely to occur over the long-term future—say, the next 25 years. The second applies to what is likely to happen to the investor—both financially and psychologically—over short or intermediate periods, say five years or less. His frame of mind, his hopes and apprehensions, his satisfaction or discontent with what he has done, above all his decisions what to do next, are all determined not in the retrospect of a lifetime of investment but rather by his experience from year to year.
 
+The more the investor depends on his portfolio and the income therefrom, the more necessary it is for him to guard against the unexpected and the disconcerting in this part of his life. It is axiomatic that the conservative investor should seek to minimize his risks. We think strongly that the risks involved in buying, say, a telephone-company bond at yields of nearly 7½% are much less than those involved in buying the DJIA at 900 (or any stock list equivalent thereto). But the possibility of large-scale inflation remains, and the investor must carry some insurance against it. There is no certainty that a stock component will insure adequately against such inflation, but it should carry more protection than the bond component.
 
+> Americans are getting stronger. Twenty years ago, it took two people to carry ten dollars’ worth of groceries. Today, a five-year-old can do it. - Henny Youngman
 
+Fortunately, you can bolster your defenses against inflation by branching out beyond stocks. Since Graham last wrote, two inflation-fighters have become widely available to investors:
 
+- **REITs**. While a REIT fund is unlikely to be a foolproof inflation-fighter, in the long run it should give you some defense against the erosion of purchasing power without hampering your overall returns.
+- **TIPS**. Because the full faith and credit of the United States stands behind them, all Treasury bonds are safe from the risk of default (or nonpayment of interest). But TIPS also guarantee that the value of your investment won’t be eroded by inflation. In one easy package, you insure yourself against financial loss and the loss of purchasing power.
 
+There is one catch, however. When the value of your TIPS bond rises as inflation heats up, the Internal Revenue Service regards that increase in value as taxable income—even though it is purely a paper gain (unless you sold the bond at its newly higher price). Why does this make sense to the IRS? The intelligent investor will remember the wise words of financial analyst Mark Schweber: “The one question never to ask a bureaucrat is ‘Why?’” Because of this exasperating tax complication, TIPS are best suited for a tax-deferred retirement account like an IRA, Keogh, or 401(k), where they will not jack up your taxable income.
+
+You can buy TIPS directly from the U.S. government at www. publicdebt.treas.gov/of/ofinflin.htm, or in a low-cost mutual fund like Vanguard Inflation-Protected Securities or Fidelity Inflation-Protected Bond Fund.13 Either directly or through a fund, TIPS are the ideal substitute for the proportion of your retirement funds you would otherwise keep in cash. Do not trade them: TIPS can be volatile in the short run, so they work best as a permanent, lifelong holding. For most investors, allocating at least 10% of your retirement assets to TIPS is an intelligent way to keep a portion of your money absolutely safe—and entirely beyond the reach of the long, invisible claws of inflation.
+
+## A century of Stock-Market History
+The Level of Stock Prices in Early 1972 {.subtitle}
+
+Investors who for some time have been following a bona fide dollar-cost averaging plan can in logic elect either to continue their periodic purchases unchanged or to suspend them until they feel the market level is no longer dangerous. **We should advise rather strongly against the initiation of a new dollar-averaging plan at the late 1964 levels, since many investors would not have the stamina to pursue such a scheme if the results soon after initiation should appear highly unfavorable.**
+
+Such were our efforts to evaluate former stock-market levels. Is there anything we and our readers can learn from them? We considered the market level favorable for investment in 1948 and 1953 (but too cautiously in the latter year), “dangerous” in 1959 (at 584 for DJIA), and “too high” (at 892) in 1964. All of these judgments could be defended even today by adroit arguments. But it is doubtful if they have been as useful as our more pedestrian counsels—in favor of a consistent and controlled common-stock policy on the one hand, and discouraging endeavors to “beat the market” or to “pick the winners” on the other.
+
+> You've got to be careful if you don't know where you're going, 'cause you might not get there. - Yogi Berra
+
+### Survival of the Fattest
+
+There was a fatal flaw in the argument that stocks have “always” beaten bonds in the long run: Reliable figures before 1871 do not exist. The indexes used to represent the U.S. stock market’s earliest returns contain as few as seven (yes, 7!) stocks.1 By 1800, however, there were some 300 companies in America (many in the Jeffersonian equivalents of the Internet: wooden turnpikes and canals). Most went bankrupt, and their investors lost their knickers.
+
+Graham’s answers, as always, are rooted in logic and common sense. The value of any investment is, and always must be, a function of the price you pay for it. By the late 1990s, inflation was withering away, corporate profits appeared to be booming, and most of the world was at peace. But that did not mean—nor could it ever mean—that stocks were worth buying at any price. Since the profits that companies can earn are finite, the price that investors should be willing to pay for stocks must also be finite.
+
+Focusing on the market’s recent returns when they have been rosy, warns Graham, will lead to “a quite illogical and dangerous conclusion that equally marvelous results could be expected for common stocks in the future.” From 1995 through 1999, as the market rose by at least 20% each year—a surge unprecedented in American history—stock buyers became ever more optimistic:
+
+Even though investors all know they’re supposed to buy low and sell high, in practice they often end up getting it backwards. Graham’s warning in this chapter is simple: ==“By the rule of opposites,”== **the more enthusiastic investors become about the stock market in the long run, the more certain they are to be proved wrong in the short run**. On March 24, 2000, the total value of the U.S. stock market peaked at $14.75 trillion. By October 9, 2002, just 30 months later, the total U.S. stock market was worth $7.34 trillion, or 50.2% less—a loss of $7.41 trillion. Meanwhile, many market pundits turned sourly bearish, predicting flat or even negative market returns for years—even decades—to come.
+
+> Considering how calamitously wrong the =“experts”= were the last time they agreed on something, why on earth should the intelligent investor believe them now?
 
