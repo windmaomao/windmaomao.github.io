@@ -9,6 +9,7 @@
 - Pay joint 2500
 - Review the contribution ratio
 - Deposit Roth 5500
+- Contribute bond
 
 #### 3/5
 - ~~Add tax 217 summary~~
