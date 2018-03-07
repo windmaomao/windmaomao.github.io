@@ -6,6 +6,8 @@
 
 #### 3/6
 - Create angular-select project
+- Pay joint 2500
+- Review the contribution ratio
 
 #### 3/5
 - ~~Add tax 217 summary~~
