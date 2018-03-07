@@ -119,13 +119,15 @@
 
 #### Realized
 
-| Symbol          | Proceeds | Cost    |  Realized | 
+| Symbol          | Proceeds | Cost    |  Realized |
 | --------------- | -------- | ------: | --------: |
 | Fidelity X83    | $50,118  | $50,089 |   -$1,970 |
 
 
 | Symbol          | Industry | Cost |  Net | Type |
 | --------------- | -------- | ---: | ---: | ---- |
+| GM              |          | $655 | -$55 | long |
+| Direxion Tech B |          | $950 | -$86 |short |
 | Direxion S&P500 |          | $379 |-$112 |short |
 | Direxion Russia |          | $408 | -$49 |short |
 | Direxion DAI 24 |          | $534 | -$35 |short |
