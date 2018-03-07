@@ -2,14 +2,16 @@
 
 ## Deutsche Bank
 
-### Corporate Action UI 
-Prototype the calendar view
+Corporate Action UI 
+: Jan 2018
+: Prototype the calendar view
 
-### Agency Security Lending 
-**Jan 2018 - Feb 2018**  
-Prototype the website for dashboard and performance summary page
-* Dashboard snapshot: 
-* Performance summary: Multi page
+Agency Security Lending 
+: Jan 2018 - Feb 2018
+: Prototype the website for dashboard and performance summary page
+
+: - Dashboard snapshot: 
+  - Performance summary: Multi page
 
 ### Web ADK Core
 
@@ -23,9 +25,21 @@ Single operation UI framework
 
 #### Highlights
 
+* Fields: Custom form layout and field validation via template and reactive form engine
+* Calendar: Use _angular-calendar_ to create custom monthly calendar and events view
+* Datepicker: Custom single date and range date picker with consistent look and feel
 * Charts: Theme pie, column, stack charts with consistent look and feel using *Highcharts*
 * Documentation: Support Bootstrap documentation page layout with quick navigation list
 * Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
+
+![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
+
+![Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
+
+![Calendar Events](https://s3.amazonaws.com/qp-photo/mc-common-events.PNG)
+
+![Form Layout and Fields Handling](https://s3.amazonaws.com/qp-photo/mc-common-form2.PNG)
+
 
 ### Global Console
 Large scale reusable UI framework   
@@ -52,13 +66,10 @@ Highlights
   * Selection: Custom directive for single and multiple selection form input with consistent look and feel
   * Layout: Support customizable dashboard UI layout with responsible design
   * Compatibility: Support both IE 10/11 and Chrome browser
-  *  Component: Design fly-in menu for switching between angular applications
-  *  CSS: Modular layout and component design
-  *  Testing: Work with a test team to facilliate UI automation
+  * Component: Design fly-in menu for switching between angular applications
+  * CSS: Modular layout and component design
+  * Testing: Work with a test team to facilliate UI automation
 
-![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
-
-![Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
 
 ### AOF Account Opening
 Bank account opening form
