@@ -6,9 +6,9 @@
 
 #### 3/6
 - Create angular-select project
-- Pay joint 2500
+- ~~Pay joint 2500~~
 - Review the contribution ratio
-- Deposit Roth 5500
+- ~~Deposit Roth 5500~~
 - Contribute bond
 
 #### 3/5
