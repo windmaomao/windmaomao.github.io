@@ -5,7 +5,7 @@
 ### Mar
 
 #### 3/7
-- Update `stackoverflow` profile
+- ~~Update `stackoverflow` profile~~
 - ~~Setup sprint meetings~~
 
 #### 3/6
@@ -13,16 +13,14 @@
 - ~~Pay joint 2500~~
 - ~~Review the contribution ratio~~
 - ~~Deposit Roth 5500~~
-- Contribute bond
+- ~~Continue contribute bond~~
 
 #### 3/5
 - ~~Add tax 217 summary~~
-- Field select [validation](https://medium.com/@tarik.nzl/angular-2-custom-form-control-with-validation-json-input-2b4cf9bc2d73)
+- ~~Field select [validation](https://medium.com/@tarik.nzl/angular-2-custom-form-control-with-validation-json-input-2b4cf9bc2d73)~~
 - ~~Learn `Flexbox`~~
 
 #### 3/4
-- Buy put on `Ford`
-- Consolate 2017 investment tax
 - ~~Double check 2017 tax form~~
 
 #### 3/3
@@ -41,8 +39,8 @@
 #### 2/28
 - ~~Submit `npm` `figure-caption` module~~
 - ~~Update pay stub info~~
-- Get pdf build from database
-- :date: `3/6` Offset `GE` put before expire {.red}
+- ~~Get pdf build from database~~
+- :date: `3/12` Offset `GE` put before expire {.red}
 - ~~Apply Chinese school for Sophia, summer~~
 
 #### 2/27

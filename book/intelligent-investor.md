@@ -199,7 +199,9 @@ If you have time to spare, are highly competitive, think like a sports fan, and 
 
 Both approaches are equally intelligent, and you can be successful with either—but only if you know yourself well enough to pick the right one, stick with it over the course of your investing lifetime, and keep your costs and emotions under control. Graham’s distinction between active and passive investors is another of his reminders that **financial risk lies not only where most of us look for it—in the economy or in our investments—but also within ourselves**.
 
-### CAN YOU BE BRAVE, OR WILL YOU CAVE
+### Can You Be Brave
+
+Or will you cave? {.subtitle}
 
 The most striking thing about Graham’s discussion of how to allocate your assets between stocks and bonds is that he never mentions the word “age.” That sets his advice firmly against the winds of conventional wisdom—which holds that how much investing risk you ought to take depends mainly on how old you are.2 A traditional rule of thumb was to subtract your age from 100 and invest that percentage of your assets in stocks, with the rest in bonds or cash. (A 28-year-old would put 72% of her money in stocks; an 81-year-old would put only 19% there.) Like everything else, these assumptions got overheated in the late 1990s. By 1999, a popular book argued that if you were younger than 30 you should put 95% of your money in stocks—even if you had only a “moderate” tolerance for risk!
 
@@ -213,7 +215,7 @@ If, after considering these factors, you feel you can take the higher risks inhe
 
 Once you set these target percentages, change them only as your life circumstances change. **Do not buy more stocks because the stock market has gone up; do not sell them because it has gone down.** The very heart of Graham’s approach is to replace guesswork with discipline. Fortunately, through your 401(k), it’s easy to put your portfolio on permanent autopilot. Let’s say you are comfortable with a fairly high level of risk—say, 70% of your assets in stocks and 30% in bonds. If the stock market rises 25% (but bonds stay steady), you will now have just under 75% in stocks and only 25% in bonds.5 Visit your 401(k)’s website (or call its toll-free number) and **sell enough of your stock funds to “rebalance” back to your 70–30 target**. ==The key is to rebalance on a predictable, patient schedule—not so often that you will drive yourself crazy, and not so seldom that your targets will get out of whack.== **I suggest that you rebalance every six months, no more and no less, on easy-to-remember dates like New Year’s and the Fourth of July.**
 
-### WHY NOT 100% STOCKS?
+### Why Not 100% Stocks?
 
 For a tiny minority of investors, a 100%-stock portfolio may make sense. You are one of them if you:
 
@@ -228,7 +230,7 @@ Unless you can honestly pass all these tests, you have no business putting all y
 
 The beauty of this periodic rebalancing is that it forces you to base your investing decisions on a simple, objective standard—Do I now own more of this asset than my plan calls for?—instead of the sheer guesswork of where interest rates are heading or whether you think the Dow is about to drop dead. Some mutual-fund companies, including T. Rowe Price, may soon introduce services that will automatically rebalance your 401(k) portfolio to your preset targets, so you will never need to make an active decision.
 
-### THE INS AND OUTS OF INCOME INVESTING
+### Ins And Outs of Income Investment
 
 In Graham’s day, bond investors faced two basic choices: Taxable or tax-free? Short-term or long-term? Today there is a third: Bonds or bond funds?
 
