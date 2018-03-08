@@ -367,3 +367,10 @@ According to Ibbotson Associates, the leading financial research firm, if you ha
 Best of all, once you build a permanent autopilot portfolio with index funds as its heart and core, you’ll be able to answer every market question with the most powerful response a defensive investor could ever have: “I don’t know and I don’t care.” If someone asks whether bonds will outper-forms stocks, just answer, “I don’t know and I don’t care”—after all, you’re automatically buying both. Will health-care stocks make high-tech stocks look sick? “I don’t know and I don’t care”—you’re a permanent owner of both. What’s the next Microsoft? “I don’t know and I don’t care”—as soon as it’s big enough to own, your index fund will have it, and you’ll go along for the ride. Will foreign stocks beat U.S. stocks next year? “I don’t know and I don’t care”—if they do, you’ll capture that gain; if they don’t, you’ll get to buy more at lower prices.
 
 By enabling you to say “I don’t know and I don’t care,” a permanent autopilot portfolio liberates you from the feeling that you need to forecast what the financial markets are about to do—and the illusion that anyone else can. ==The knowledge of how little you can know about the future, coupled with the acceptance of your ignorance, is a defensive investor’s most powerful weapon.==
+
+
+
+## Portfolio Policy for the Enterprising Investor
+
+Negative Approach {.subtitle}
+
