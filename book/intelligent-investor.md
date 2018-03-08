@@ -1,4 +1,3 @@
-
 # The Intelligent Investor
 
 ## Introduction
@@ -157,14 +156,14 @@ By sacrificing quality an investor can obtain a higher income return from his bo
 
 Perhaps we should add here that the limits imposed by Congress on direct bond issues of the United States have produced at least two sorts of “bargain opportunities” for investors in the purchase of government-backed obligations. One is provided by the tax-exempt “New Housing” issues, and the other by the recently created (taxable) “New Community debentures.” An offering of New Housing issues in July 1971 yielded as high as 5.8%, free from both Federal and state taxes, while an issue of (taxable) New Community debentures sold in September 1971 yielded 7.60%. Both obligations have the “full faith and credit” of the United States government behind them and hence are safe without question. And—on a net basis—they yield considerably more than ordinary United States bonds.
 
-### Type
-
-#### Savings Deposits
+##### Savings Deposits
 in Lieu of Bonds {.subtitle}
 
 An investor may now obtain as high an interest rate from a savings deposit in a commercial or savings bank (or from a bank certificate of deposit) as he can from a first-grade bond of short maturity. The interest rate on bank savings accounts may be lowered in the future, but under present conditions they are a suitable substitute for short-term bond investment by the individual.
 
-#### Convertible Issues
+##### Convertible Issues
+
+##### Call Provisions
 
 EXAMPLE: Our standard example has been the issue of American Gas & Electric 100-year 5% debentures, sold to the public at 101 in 1928. Four years later, under near-panic conditions, the price of these good bonds fell to 62½, yielding 8%. By 1946, in a great reversal, bonds of this type could be sold to yield only 3%, and the 5% issue should have been quoted at close to 160. But at that point the company took advantage of the call provision and redeemed the issue at a mere 106.
 
@@ -172,6 +171,73 @@ The call feature in these bond contracts was a thinly disguised instance of “h
 
 In practical terms, we advise **the investor in long-term issues to sacrifice a small amount of yield to obtain the assurance of noncallability—say for 20 or 25 years**. Similarly, there is an advantage in buying a low-coupon bond* at a discount rather than a high-coupon bond selling at about par and callable in a few years. For the discount—e.g., of a 3½% bond at 63½%, yielding 7.85%—carries full protection against adverse call action.
 
-#### Call Provisions
+#### Straight
+i.e., Nonconvertible-Preferred Stocks {.subtitle}
+
+Certain general observations should be made here on the subject of preferred stocks. Really good preferred stocks can and do exist, but they are good in spite of their investment form, which is an inherently bad one. The typical preferred shareholder is dependent for his safety on the ability and desire of the company to pay dividends on its common stock. Once the common dividends are omitted, or even in danger, his own position becomes precarious, for the directors are under no obligation to continue paying him unless they also pay on the common. On the other hand, the typical preferred stock carries no share in the company’s profits beyond the fixed dividend rate. **Thus the preferred holder lacks both the legal claim of the bondholder (or creditor) and the profit possibilities of a common shareholder (or partner).**
+
+These weaknesses in the legal position of preferred stocks tend to come to the fore recurrently in periods of depression. Only a small percentage of all preferred issues are so strongly entrenched as to maintain an unquestioned investment status through all vicissitudes. Experience teaches that the time to buy preferred stocks is when their price is unduly depressed by temporary adversity. (At such times they may be well suited to the aggressive investor but too unconventional for the defensive investor.)
+
+Another peculiarity in the general position of preferred stocks deserves mention. They have a much better tax status for corporation buyers than for individual investors. Corporations pay income tax on only 15% of the income they receive in dividends, but on the full amount of their ordinary interest income. Since the 1972 corporate rate is 48%, this means that $100 received as preferred-stock dividends is taxed only $7.20, whereas $100 received as bond interest is taxed $48. On the other hand, individual investors pay exactly the same tax on preferred-stock investments as on bond interest, except for a recent minor exemption. Thus, in strict logic, all investment-grade preferred stocks should be bought by corporations, just as all tax-exempt bonds should be bought by investors who pay income tax.
+
+#### Security Forms
+
+The above describes the standard provisions and, no doubt, the majority of bond and preferred issues, but there are innumerable departures from these forms. The best-known types are convertible and similar issues, and income bonds. In the latter type, interest does not have to be paid unless it is earned by the company. (Unpaid interest may accumulate as a charge against future earnings, but the period is often limited to three years.)
+
+> When you leave it to chance, then all of a sudden you don't have any more luck. - Basketball coach Pat Riley
+
+How aggressive should your portfolio be? 
+
+That, says Graham, depends less on what kinds of investments you own than on what kind of investor you are. There are two ways to be an intelligent investor:
+
+- by continually researching, selecting, and monitoring a dynamic mix of stocks, bonds, or mutual funds;
+- or by creating a permanent portfolio that runs on autopilot and requires no further effort (but generates very little excitement).
+
+Graham calls the first approach “active” or “enterprising”; it takes lots of time and loads of energy. **The “passive” or “defensive” strategy takes little time or effort but requires an almost ascetic detachment from the alluring hullabaloo of the market.** As the investment thinker Charles Ellis has explained, the enterprising approach is physically and intellectually taxing, while the ==defensive approach is emotionally demanding==.
+
+If you have time to spare, are highly competitive, think like a sports fan, and relish a complicated intellectual challenge, then the active approach is up your alley. If you always feel rushed, crave simplicity, and don’t relish thinking about money, then the passive approach is for you. (Some people will feel most comfortable combining both methods—creating a portfolio that is mainly active and partly passive, or vice versa.)
+
+Both approaches are equally intelligent, and you can be successful with either—but only if you know yourself well enough to pick the right one, stick with it over the course of your investing lifetime, and keep your costs and emotions under control. Graham’s distinction between active and passive investors is another of his reminders that **financial risk lies not only where most of us look for it—in the economy or in our investments—but also within ourselves**.
+
+### CAN YOU BE BRAVE, OR WILL YOU CAVE
+
+The most striking thing about Graham’s discussion of how to allocate your assets between stocks and bonds is that he never mentions the word “age.” That sets his advice firmly against the winds of conventional wisdom—which holds that how much investing risk you ought to take depends mainly on how old you are.2 A traditional rule of thumb was to subtract your age from 100 and invest that percentage of your assets in stocks, with the rest in bonds or cash. (A 28-year-old would put 72% of her money in stocks; an 81-year-old would put only 19% there.) Like everything else, these assumptions got overheated in the late 1990s. By 1999, a popular book argued that if you were younger than 30 you should put 95% of your money in stocks—even if you had only a “moderate” tolerance for risk!
+
+Unless you’ve allowed the proponents of this advice to subtract 100 from your IQ, you should be able to tell that something is wrong here. Why should your age determine how much risk you can take? An 89-year-old with $3 million, an ample pension, and a gaggle of grandchildren would be foolish to move most of her money into bonds. She already has plenty of income, and her grandchildren (who will eventually inherit her stocks) have decades of investing ahead of them. On the other hand, a 25-year-old who is saving for his wedding and a house down payment would be out of his mind to put all his money in stocks. If the stock market takes an Acapulco high dive, he will have no bond income to cover his downside—or his backside.
+
+What’s more, no matter how young you are, you might suddenly need to yank your money out of stocks not 40 years from now, but 40 minutes from now. Without a whiff of warning, you could lose your job, get divorced, become disabled, or suffer who knows what other kind of surprise. The unexpected can strike anyone, at any age. ==Everyone must keep some assets in the riskless haven of cash.==
+
+Because so few investors have the guts to cling to stocks in a falling market, Graham insists that everyone should keep a minimum of 25% in bonds. That cushion, he argues, will give you the courage to keep the rest of your money in stocks even when stocks stink.
+
+If, after considering these factors, you feel you can take the higher risks inherent in greater ownership of stocks, you belong around Graham’s minimum of 25% in bonds or cash. If not, then steer mostly clear of stocks, ==edging toward Graham’s maximum of 75% in bonds or cash==.
+
+Once you set these target percentages, change them only as your life circumstances change. **Do not buy more stocks because the stock market has gone up; do not sell them because it has gone down.** The very heart of Graham’s approach is to replace guesswork with discipline. Fortunately, through your 401(k), it’s easy to put your portfolio on permanent autopilot. Let’s say you are comfortable with a fairly high level of risk—say, 70% of your assets in stocks and 30% in bonds. If the stock market rises 25% (but bonds stay steady), you will now have just under 75% in stocks and only 25% in bonds.5 Visit your 401(k)’s website (or call its toll-free number) and **sell enough of your stock funds to “rebalance” back to your 70–30 target**. ==The key is to rebalance on a predictable, patient schedule—not so often that you will drive yourself crazy, and not so seldom that your targets will get out of whack.== **I suggest that you rebalance every six months, no more and no less, on easy-to-remember dates like New Year’s and the Fourth of July.**
+
+### WHY NOT 100% STOCKS?
+
+For a tiny minority of investors, a 100%-stock portfolio may make sense. You are one of them if you:
+
+- have set aside enough cash to support your family for at least one year
+- will be investing steadily for at least 20 years to come
+- survived the bear market that began in 2000
+- did not sell stocks during the bear market that began in 2000
+- bought more stocks during the bear market that began in 2000
+- have read Chapter 8 in this book and implemented a formal plan to control your own investing behavior.
+
+Unless you can honestly pass all these tests, you have no business putting all your money in stocks. Anyone who panicked in the last bear market is going to panic in the next one—and will regret having no cushion of cash and bonds.
+
+The beauty of this periodic rebalancing is that it forces you to base your investing decisions on a simple, objective standard—Do I now own more of this asset than my plan calls for?—instead of the sheer guesswork of where interest rates are heading or whether you think the Dow is about to drop dead. Some mutual-fund companies, including T. Rowe Price, may soon introduce services that will automatically rebalance your 401(k) portfolio to your preset targets, so you will never need to make an active decision.
+
+### THE INS AND OUTS OF INCOME INVESTING
+
+In Graham’s day, bond investors faced two basic choices: Taxable or tax-free? Short-term or long-term? Today there is a third: Bonds or bond funds?
+
+**Taxable or tax-free?** Unless you’re in the lowest tax bracket, you should ==buy only tax-free (municipal) bonds outside your retirement accounts==. Otherwise too much of your bond income will end up in the hands of the IRS. The only place to ==own taxable bonds is inside your 401(k) or another sheltered account==, where you will owe no current tax on their income—and where municipal bonds have no place, since their tax advantage goes to waste.
+
+**Short-term or long-term?** Bonds and interest rates teeter on opposite ends of a seesaw: If interest rates rise, bond prices fall—although a short-term bond falls far less than a long-term bond. On the other hand, if interest rates fall, bond prices rise—and a long-term bond will outper-forms shorter ones.8 You can split the difference simply by ==buying intermediate-term bonds maturing in five to 10 years==—which do not soar when their side of the seesaw rises, but do not slam into the ground either. For most investors, intermediate bonds are the simplest choice, since they enable you to get out of the game of guessing what interest rates will do.
+
+**Bonds or bond funds?** Since bonds are generally sold in $10,000 lots and you need a bare minimum of 10 bonds to diversify away the risk that any one of them might go bust, **buying individual bonds makes no sense unless you have at least $100,000 to invest**. (The only exception is bonds issued by the U.S. Treasury, since they’re protected against default by the full force of the American government.)
+
+Bond funds offer cheap and easy diversification, along with the convenience of monthly income, which you can reinvest right back into the fund at current rates without paying a commission. For most investors, **bond funds beat individual bonds hands down** (the main exceptions are Treasury securities and some municipal bonds).
 
 
