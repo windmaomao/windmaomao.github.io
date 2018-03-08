@@ -243,3 +243,127 @@ In Graham’s day, bond investors faced two basic choices: Taxable or tax-free? 
 Bond funds offer cheap and easy diversification, along with the convenience of monthly income, which you can reinvest right back into the fund at current rates without paying a commission. For most investors, **bond funds beat individual bonds hands down** (the main exceptions are Treasury securities and some municipal bonds).
 
 
+
+### Cash Is Not Trash
+
+The intelligent investor ==should consider moving out of bank certificates of deposit or money-market accounts==—which have offered meager returns lately—into some of these cash alternatives:
+
+**Treasure securities,** as obligations of the U.S. government, carry virtually no credit risk—since, instead of defaulting on his debts, Uncle Sam can just jack up taxes or print more money at will. Treasury bills mature in four, 13, or 26 weeks. Because of their very short maturities, T-bills barely get dented when rising interest rates knock down the prices of other income investments; longer-term Treasury debt, however, suffers severely when interest rates rise. The interest income on Treasury securities is generally free from state (but not Federal) income tax. ou can buy Treasury bills, short-term notes, and long-term bonds directly from the government, with no brokerage fees, at www.publicdebt.treas.gov.
+
+**Savings bons,** unlike Treasuries, are not marketable; you cannot sell them to another investor, and you’ll forfeit three months of interest if you redeem them in less than five years. Thus they are suitable mainly as “set-aside money” to meet a future spending need—a gift for a religious ceremony that’s years away, or a jump start on putting your newborn through Harvard. They come in denominations as low as $25, making them ideal as gifts to grandchildren. For investors who can confidently leave some cash untouched for years to come, inflation-protected “I-bonds” recently offered an attractive yield of around 4%. To learn more, see www.savingsbonds.gov.
+
+### Moving Beyond Uncle Sam
+
+**Mortgage securities.** Pooled together from thousands of mortgages around the United States, these bonds are issued by agencies like the Federal National Mortgage Association (“Fannie Mae”) or the Government National Mortgage Association (“Ginnie Mae”). However, they are not backed by the U.S. Treasury, so they sell at higher yields to reflect their greater risk. **Mortgage bonds generally underperform when interest rates fall and bomb when rates rise.** (Over the long run, those swings tend to even out and the higher average yields pay off.) Good mortgage-bond funds are available from Vanguard, Fidelity, and Pimco.
+
+**Annuities.** These insurance-like investments enable you to defer current taxes and capture a stream of income after you retire. Fixed annuities offer a set rate of return; variable ones provide a fluctuating return. But what the defensive investor really needs to defend against here are the hard-selling insurance agents, stockbrokers, and financial planners who peddle annuities at rapaciously high costs. In most cases, **the high expenses of owning an annuity—including “surrender charges” that gnaw away at your early withdrawals**—will overwhelm its advantages. The few good annuities are bought, not sold; if an annuity produces fat commissions for the seller, chances are it will produce meager results for the buyer. Consider only those you can buy directly from providers with rock-bottom costs like Ameritas, TIAA-CREF, and Vanguard.
+
+
+
+## The Defensive Investor and Common Stocks
+
+### Rules for the Common Stock Component
+
+The selection of common stocks for the portfolio of the defensive investor should be a relatively simple matter. Here we would suggest four rules to be followed:
+
+ 
+
+1. There should be adequate though not excessive diversification. This might mean a minimum of ten different issues and a maximum of about thirty.
+2. Each company selected should be large, prominent, and conservatively financed. Indefinite as these adjectives must be, their general sense is clear.
+
+3. Each company should have a long record of continuous dividend payments. To be specific on this point we would suggest the requirement of continuous dividend payments beginning at least in 1950.
+
+
+4. The investor should impose some limit on the price he will pay for an issue in relation to its average earnings over, say, the past seven years. **We suggest that this limit be set at 25 times such average earnings, and not more than 20 times those of the last twelve-month period.** But such a restriction would ==eliminate nearly all the strongest and most popular companies from the portfolio==. In particular, it would ban virtually the entire category of “growth stocks,” which have for some years past been the favorites of both speculators and institutional investors. 
+
+
+
+### Growth Stocks and the Defensive Investor
+
+The problem lies there, of course, since growth stocks have long sold at high prices in relation to current earnings and at much higher multiples of their average profits over a past period. This has introduced a speculative element of considerable weight in the growth-stock picture and has made successful operations in this field a far from simple matter.
+
+The leading growth issue has long been International Business Machines, and it has brought phenomenal rewards to those who bought it years ago and held on to it tenaciously. But we have already pointed out[*](https://www.safaribooksonline.com/library/view/the-intelligent-investor/9780061745171/text/9780061745171_Footnote.xhtml#uft_43) that this “best of common stocks” actually lost 50% of its market price in a six-months’ decline during 1961–62 and nearly the same percentage in 1969–70. Other growth stocks have been even more vulnerable to adverse developments; in some cases not only has the price fallen back but the earnings as well, thus causing a double discomfiture to those who owned them. A good second example for our purpose is Texas Instruments, which in six years rose from 5 to 256, without paying a dividend, while its earnings increased from 40 cents to $3.91 per share. (Note that the price advanced five times as fast as the profits; this is characteristic of popular common stocks.) But two years later the earnings had dropped off by nearly 50% and the price by four-fifths, to 49.
+
+The reader will understand from these instances why we regard growth stocks as a whole as too uncertain and risky a vehicle for the defensive investor. Of course, wonders can be accomplished with the right individual selections, bought at the right levels, and later sold after a huge rise and before the probable decline. But ==the average investor can no more expect to accomplish this than to find money growing on trees==. In contrast we think that the group of large companies that are **relatively unpopular, and therefore obtainable at reasonable earnings multipliers offers a sound if unspectacular area of choice by the general public**.
+
+
+
+### Dollor-Cost Averaging
+
+The New York Stock Exchange has put considerable effort into popularizing its “monthly purchase plan,” under which an investor devotes the same dollar amount each month to buying one or more common stocks. This is an application of a special type of “formula investment” known as dollar-cost averaging. **During the predominantly rising-market experience since 1949 the results from such a procedure were certain to be highly satisfactory**, especially since they prevented the practitioner from concentrating his buying at the wrong times.
+
+It may be objected that dollar-cost averaging, while sound in principle, is rather unrealistic in practice, because few people are so situated that they can have available for common-stock investment the same amount of money each year for, say, 20 years. It seems to me that this apparent objection has lost much of its force in recent years. Common stocks are becoming generally accepted as a necessary component of a sound savings-investment program. Thus, systematic and uniform purchases of common stocks may present no more psychological and financial difficulties than similar continuous payments for United States savings bonds and for life insurance—to which they should be complementary. The monthly amount may be small, but the results after 20 or more years can be impressive and important to the saver.
+
+
+
+### The Investor's Personal Situation
+
+As concrete examples representing widely different conditions, we shall take: (1) a widow left $200,000 with which to support herself and her children; (2) a successful doctor in mid-career, with savings of $100,000 and yearly accretions of $10,000; and (3) a young man earning $200 per week and saving $1,000 a year.
+
+We do not preclude the possibility that the widow may qualify as an enterprising investor, in which case her objectives and methods will be quite different. The one thing the widow ==must not do is to take speculative chances in order to “make some extra income”==. By this we mean trying for profits or high income without the necessary equipment to warrant full confidence in overall success. It would be far better for her to draw $2,000 per year out of her principal, in order to make both ends meet, than to risk half of it in poorly grounded, and therefore speculative, ventures.
+
+The prosperous doctor has none of the widow’s pressures and compulsions, yet we believe that his choices are pretty much the same. Is he willing to take a serious interest in the business of investment? If he lacks the impulse or the flair, he will do best to accept the easy role of the defensive investor. **The division of his portfolio should then be no different from that of the “typical” widow**, and there would be the same area of personal choice in fixing the size of the stock component. The annual savings should be invested in about the same proportions as the total fund.
+
+The average doctor may be more likely than the average widow to elect to become an enterprising investor, and he is perhaps more likely to succeed in the undertaking. He has one important handicap, however—the fact that he has ==less time available to give to his investment education== and to the administration of his funds. In fact, medical men have been notoriously unsuccessful in their security dealings. The reason for this is that they usually have ==an ample confidence in their own intelligence and a strong desire to make a good return on their money, without the realization that to do so successfully requires both considerable attention to the matter and something of a professional approach to security values==.
+
+Finally, the young man who saves $1,000 a year—and expects to do better gradually—finds himself with the same choices, though for still different reasons. Some of his savings should go automatically into Series E bonds. The balance is so modest that it seems hardly worthwhile for him to undergo a tough educational and temperamental discipline in order to qualify as an aggressive investor. Thus a simple resort to our standard program for the defensive investor would be at once the easiest and the most logical policy.
+
+Let us not ignore human nature at this point. Finance has a fascination for many bright young people with limited means. They would like to be both intelligent and enterprising in the placement of their savings, even though investment income is much less important to them than their salaries. This attitude is all to the good. There is a great advantage for the young capitalist to begin his financial education and experience early. If he is going to operate as an aggressive investor he is certain to make some mistakes and to take some losses. **Youth can stand these disappointments and profit by them. We urge the beginner in security buying not to waste his efforts and his money in trying to beat the market. Let him study security values and initially test out his judgment on price versus value with the smallest possible sums.**
+
+>  Thus we return to the statement, made at the outset, that the kind of securities to be purchased and the rate of return to be sought ==depend not on the investor’s financial resources but on his financial equipment in terms of knowledge, experience, and temperament==.
+
+### Note on the Concept of "Risk"
+
+We shall set forth our conviction that the bona fide investor does not lose money merely because the market price of his holdings declines; hence the fact that a decline may occur does not mean that he is running a true risk of loss. If a group of well-selected common-stock investments shows a satisfactory overall return, as measured through a fair number of years, then this group investment has proved to be “safe.” During that period its market value is bound to fluctuate, and as likely as not it will sell for a while under the buyer’s cost. If that fact makes the investment “risky,” it would then have to be called both risky and safe at the same time. 
+
+This confusion **may be avoided if we apply the concept of risk** solely to a loss of value which 
+
+- either is ==realized through actual sale,== 
+- or is caused by ==a significant deterioration in the company’s position==
+- or more frequently perhaps, is the result of ==the payment of an excessive price in relation to the intrinsic worth of the security==.
+
+Many common stocks do involve risks of such deterioration. But it is our thesis that a properly executed group investment in common stocks does not carry any substantial risk of this sort and that therefore it should not be termed “risky” merely because of the element of price fluctuation. But **such risk is present if there is danger that the price may prove to have been clearly too high by intrinsic-value standards**—even if ==any subsequent severe market decline may be recouped many years later==.
+
+### Large, Prominent, and Conservatively Financed Corporations
+
+**An industrial company’s finances are not conservative unless the common stock (at book value) represents at least half of the total capitalization, including all bank debt.** For a railroad or public utility the figure should be at least 30%.
+
+The words “large” and “prominent” carry the notion of substantial size combined with a leading position in the industry. Such companies are often referred to as “primary”; all other common stocks are then called “secondary,” except that growth stocks are ordinarily placed in a separate class by those who buy them as such. To supply an element of concreteness here, let us suggest that to be “large” in present-day terms a company should have $50 million of assets or do $50 million of business.[*](https://www.safaribooksonline.com/library/view/the-intelligent-investor/9780061745171/text/9780061745171_Footnote.xhtml#uft_48) Again to be “prominent” a company should rank among the first quarter or first third in size within its industry group.
+
+### The Best Defense is a Good Offense
+
+ Amidst the bear market that began in 2000, it’s understandable if you feel burned—and if, in turn, that feeling makes you determined never to buy another stock again. As an old Turkish proverb says, **“After you burn your mouth on hot milk, you blow on your yogurt.**” Because the crash of 2000–2002 was so terrible, many investors now view stocks as scaldingly risky; but, paradoxically, the very act of crashing has taken much of the risk out of the stock market. It was hot milk before, but it is room-temperature yogurt now.
+
+Viewed logically, the decision of whether to own stocks today has nothing to do with how much money you might have lost by owning them a few years ago. ==When stocks are priced reasonably enough to give you future growth, then you should own them, regardless of the losses they may have cost you in the recent past.== That’s all the more true when bond yields are low, reducing the future returns on income-producing investments.
+
+stocks are (as of early 2003) only mildly overpriced by historical standards. Meanwhile, at recent prices, **bonds offer such low yields that an investor who buys them for their supposed safety is like a smoker who thinks he can protect himself against lung cancer by smoking low-tar cigarettes**. No matter how defensive an investor you are—in Graham’s sense of low maintenance, or in the contemporary sense of low risk—today’s values mean that you must keep at least some of your money in stocks.
+
+### Should You "Buy What You Know"?
+
+Lynch’s rule—“You can outper-forms the experts if you use your edge by investing in companies or industries you already understand”—isn’t totally implausible, and thousands of investors have profited from it over the years. But Lynch’s rule can work only if you follow its corollary as well: “Finding the promising company is only the first step. The next step is doing the research.” To his credit, Lynch insists that no one should ever invest in a company, no matter how great its products or how crowded its parking lot, without studying its financial statements and estimating its business value.
+
+“Experts” gave the idea credence too. In an interview televised on CNN in late 1999, portfolio manager Kevin Landis of the Firsthand Funds was asked plaintively, “How do you do it? Why can’t I do it, Kevin?” (From 1995 through the end of 1999, the Firsthand Technology Value fund produced an astounding 58.2% average annualized gain.) “Well, you can do it,” Landis chirped. “All you really need to do is focus on the things that you know, and stay close to an industry, and talk to people who work in it every day.”
+
+The most painful perversion of Lynch’s rule occurred in corporate retirement plans. If you’re supposed to “buy what you know,” then what could possibly be a better investment for your 401(k) than your own company’s stock? After all, you work there; don’t you know more about the company than an outsider ever could? Sadly, the employees of Enron, Global Crossing, and WorldCom—many of whom put nearly all their retirement assets in their own company’s stock, only to be wiped out—**learned that insiders often possess only the illusion of knowledge, not the real thing.**
+
+Psychologists led by Baruch Fischhoff of Carnegie Mellon University have documented a disturbing fact: becoming more familiar with a subject does not significantly reduce people’s tendency to exaggerate how much they actually know about it. ==That’s why “investing in what you know” can be so dangerous==; the more you know going in, the less likely you are to probe a stock for weaknesses. This pernicious form of overconfidence is called “home bias,” or the habit of sticking to what is already familiar:
+
+- Individual investors own three times more shares in their local phone company than in all other phone companies combined.
+- The typical mutual fund owns stocks whose headquarters are 115 miles closer to the fund’s main office than the average U.S. company is.
+- 401(k) investors keep between 25% and 30% of their retirement assets in the stock of their own company.
+
+In short, ==familiarity breeds complacency==. On the TV news, isn’t it always the neighbor or the best friend or the parent of the criminal who says in a shocked voice, “He was such a nice guy”? That’s because whenever we are too close to someone or something, we take our beliefs for granted, instead of questioning them as we do when we confront something more remote. The more familiar a stock is, the more likely it is to turn a defensive investor into a lazy one who thinks there’s no need to do any homework. Don’t let that happen to you.
+
+### Do it Yourself
+
+Fortunately, for a defensive investor who is willing to do the required homework for assembling a stock portfolio, this is the Golden Age: Never before in financial history has owning stocks been so cheap and convenient.
+
+Be warned, however, that buying stocks in tiny increments for years on end can set off big tax headaches. If you are not prepared to keep a permanent and exhaustively detailed record of your purchases, do not buy in the first place. Finally, don’t invest in only one stock—or even just a handful of different stocks. Unless you are not willing to spread your bets, you shouldn’t bet at all. Graham’s guideline of owning between 10 and 30 stocks remains a good starting point for investors who want to pick their own stocks, but you must make sure that you are not overexposed to one industry.
+
+According to Ibbotson Associates, the leading financial research firm, if you had invested $12,000 in the Standard & Poor’s 500-stock index at the beginning of September 1929, 10 years later you would have had only $7,223 left. But if you had ==started with a paltry $100 and simply invested another $100 every single month, then by August 1939, your money would have grown to $15,571!== That’s the power of disciplined buying—even in the face of the Great Depression and the worst bear market of all time.
+
+
+
+Best of all, once you build a permanent autopilot portfolio with index funds as its heart and core, you’ll be able to answer every market question with the most powerful response a defensive investor could ever have: “I don’t know and I don’t care.” If someone asks whether bonds will outper-forms stocks, just answer, “I don’t know and I don’t care”—after all, you’re automatically buying both. Will health-care stocks make high-tech stocks look sick? “I don’t know and I don’t care”—you’re a permanent owner of both. What’s the next Microsoft? “I don’t know and I don’t care”—as soon as it’s big enough to own, your index fund will have it, and you’ll go along for the ride. Will foreign stocks beat U.S. stocks next year? “I don’t know and I don’t care”—if they do, you’ll capture that gain; if they don’t, you’ll get to buy more at lower prices.
+
+By enabling you to say “I don’t know and I don’t care,” a permanent autopilot portfolio liberates you from the feeling that you need to forecast what the financial markets are about to do—and the illusion that anyone else can. ==The knowledge of how little you can know about the future, coupled with the acceptance of your ignorance, is a defensive investor’s most powerful weapon.==
