@@ -4,6 +4,10 @@
 
 ### Mar
 
+#### 3/8
+- remove bulma break point
+- buy on subtitle on small screen
+
 #### 3/5
 - ~~add green/red style~~
 
