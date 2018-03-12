@@ -64,15 +64,19 @@ h3,
 
 h2:after{
 	border-bottom: 1px solid #2f2f2f;
-    content: '';
-    width: 100px;
-    display: block;
-    margin: 0 auto;
-    height: 1px;
+	content: '';
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+	height: 1px;
 }
 
 h1+h2, h2+h3 {
 	margin-top: 0.83em;
+}
+
+h3+p.subtitle {
+	font-style: italic;
 }
 
 h1,h2,h3,h4,h5 {
