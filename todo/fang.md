@@ -4,6 +4,10 @@
 
 ### Mar
 
+#### 3/10
+
+- Learn Phaser
+
 #### 3/7
 - ~~Update `stackoverflow` profile~~
 - ~~Setup sprint meetings~~
