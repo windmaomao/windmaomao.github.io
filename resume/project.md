@@ -2,19 +2,6 @@
 
 ## Deutsche Bank
 
-Corporate Action UI 
-: Jan 2018
-: Prototype the calendar view
-
-Agency Security Lending 
-: Jan 2018 - Feb 2018
-: Prototype the website for dashboard and performance summary page
-
-: - Dashboard snapshot: 
-  - Performance summary: Multi page
-
-### Web ADK Core
-
 ### Global Console - Angular 5
 ![Global Console](https://s3.amazonaws.com/qp-photo/mc-common2-header.PNG)
 
@@ -23,14 +10,14 @@ Single operation UI framework
 : Date: Oct 2017 -
 : Keyword: *Angular, Sass, Highcharts, Ag-grid*
 
-#### Highlights
+Highlights
 
-* Fields: Custom form layout and field validation via template and reactive form engine
-* Calendar: Use _angular-calendar_ to create custom monthly calendar and events view
-* Datepicker: Custom single date and range date picker with consistent look and feel
-* Charts: Theme pie, column, stack charts with consistent look and feel using *Highcharts*
-* Documentation: Support Bootstrap documentation page layout with quick navigation list
-* Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
+: - Fields: Custom form layout and field validation via template and reactive form engine
+    Calendar: Use _angular-calendar_ to create custom monthly calendar and events view
+    Datepicker: Custom single date and range date picker with consistent look and feel
+    Charts: Theme pie, column, stack charts with consistent look and feel using *Highcharts*
+    Documentation: Support Bootstrap documentation page layout with quick navigation list
+    Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
 
 ![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
 
@@ -73,8 +60,9 @@ Highlights
 
 ### AOF Account Opening
 Bank account opening form
-06/15/2016
-Keywords: AngularJS, Bootstrap, Gulp, Form Generator, Book Chapter
+
+: 06/15/2016
+: `AngularJS`, `Bootstrap`, `Gulp`, Form Generator, Book Chapter
 
 Provided *AngularJS* UI architect for GMI West AOF applications. Served as the tech lead and project manager of six team members (UIs, API, backend developers and business analysts). Large banking account open form, categorized by pages and regions, needs to be displayed, validated and submitted for end-users. **I held morning standup meeting in daily basis, and provided demos to shareholder in weekly basis, as well as providing architect training for entry level UI developers**.
 
@@ -82,28 +70,31 @@ Provided *AngularJS* UI architect for GMI West AOF applications. Served as the t
 
 Highlights
 
-- Theme Design: Extend Bootstrap following corporate theme guideline
-- Form Directive: Data driven form generator based on field type and form layout
-- Front-end Build: AngularJS custom Gulp build within corporate infrastructure
-- Hierarchy Routes: Book-like chapter navigation between different forms for multiple regions
-- Form Design: Consistent form element between IE/Chrome browser, including radio, date and dropdown
-- Continuous Integration: Jenkins deployment with every Git commit
-- Fields Meta: Remapping of form fields and styling between API and UI
-- Modular CSS: CSS framework extending bootstrap, other vendors and individual page components
-- Modular JS: AngularJS framework with each feature linked as dependency
-- Async Operations: series of async calls chained together to perform UI tasks
-- Form validation: Validation driven by meta data provided by form API
-- Page action: Excel like validation and action rules based on user input
-- MVC Model: Extremely fat model design in MVC approach handling business logic
+: - Theme Design: Extend Bootstrap following corporate theme guideline
+  - Form Directive: Data driven form generator based on field type and form layout
+  - Front-end Build: AngularJS custom Gulp build within corporate infrastructure
+  - Hierarchy Routes: Book-like chapter navigation between different forms for multiple regions
+  - Form Design: Consistent form element between IE/Chrome browser, including radio, date and dropdown
+  - Continuous Integration: Jenkins deployment with every Git commit
+  - Fields Meta: Remapping of form fields and styling between API and UI
+  - Modular CSS: CSS framework extending bootstrap, other vendors and individual page components
+  - Modular JS: AngularJS framework with each feature linked as dependency
+  - Async Operations: series of async calls chained together to perform UI tasks
+  - Form validation: Validation driven by meta data provided by form API
+  - Page action: Excel like validation and action rules based on user input
+  - MVC Model: Extremely fat model design in MVC approach handling business logic
 
 ### SLA Event Services
+
 Report delivery and SLA notification system
-03/16/2016
-Keywords: NodeJS, AngularJS
+
+: 03/16/2016
+: Keywords: NodeJS, AngularJS
 
 Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
 
 ### DBVals Statement Audit
+
 Four-eyes-check statement audit
 
 : Date: 09/16/2015
@@ -128,6 +119,24 @@ Highlights:
   - Work with *MongoDB* (monk) for bookkeeping
   - Work with *Oracle* database query and dump
   - Use request to issue service call to on-board user
+
+### Proof of Concept
+
+Corporate Action UI 
+
+: Jan 2018
+: Prototype the calendar view
+
+Agency Security Lending 
+
+: Jan 2018 - Feb 2018
+: Prototype the website for dashboard and performance summary page
+
+Highlights: 
+
+: - Dashboard snapshot: 
+  - Performance summary: Multi page
+
 
 ## People Designs
 ### Prepare for Your Care
@@ -159,9 +168,20 @@ Highlights:
 ### Company
 Company sponsored projects & ideas {.subtitle}
 
+Account (aka. Qplot 7)
+: 12/24/16
+: Finally we need some consistent platform to build legacy data application, ex. resume etc.
+: https://bitbucket.org/qplot/account
+
+Proture
+: 1/4/16
+: Create a workflow so that building a quick mobile app using business data.
+: `Firebase`, `Angular`, `Outliner`
+: https://bitbucket.org/qplot/proture
+
 Monthly and Annually
 : 12/18/16
-: Need to have a centralized location to keep track of all money coming in and out of the system therefore serves as a base for stats. It evovles  to keep track of balance and flow for each month and year for 2012 - 2017. It splits into other files at 2018.
+: Need to have a centralized location to keep track of all money coming in and out of the system therefore serves as a base for stats. It evovles  to keep track of balance, flow of all bank and investment accounts for each month and year for 2012 - 2017. It splits into other files at 2018.
 : `Google Drive`, `Excel`
 : https://docs.google.com/spreadsheets/d/1mZB7fcpZYH2kqISwrdqoeMNSwOK5IW6DDAZJVUhiKIA/edit#gid=58175055
 
@@ -186,6 +206,7 @@ Qplot Seven
 
 : 8/9/15
 : QPLOT website, blog, and some experiment projects
+: https://bitbucket.org/qplot/qplot
 
 PKB Tasks
 
