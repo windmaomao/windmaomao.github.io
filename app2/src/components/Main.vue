@@ -128,7 +128,6 @@ export default {
   methods: {
     renderSlider() {
       var slider = document.querySelector('.lory-slider')
-      console.log(slider)
       if (slider) {
         lory(slider, {
           infinite: true,

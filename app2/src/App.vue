@@ -13,8 +13,9 @@ export default {
   },
   data () {
     return {
-      // debug: true,
-      debug: false,
+      // debug: false,
+      debug: true,
+      debugDomain: 'http://localhost:3000/',
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
       // domain: 'https://windmaomao.github.io/',
@@ -34,7 +35,7 @@ export default {
   `,
   methods: {
     fetchMenu: function() {
-      const fn = this.domain2 + 'menu.json'
+      const fn = this.domain + 'menu.json'
       this.$http.get(fn).then(res => {
         this.menu = res.body
       })
@@ -72,22 +73,6 @@ export default {
         params[key] = value
       })
       return params
-    },
-    testSource() {
-      this.source = `
-# No country for young people
-
-Demograph may explain secular stagnation {.subtitle}
-
-
-::: slider
-
-- ![QPlot Windows Application](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG)
-- ![Trinity Major Minor Website](http://qplot.com/assets/images/portfolio/trinity_major.png)
-{.js_slides}
-
-:::
-      `
     }
   },
   created() {
@@ -98,9 +83,7 @@ Demograph may explain secular stagnation {.subtitle}
 
     // Debug mode
     if (this.debug) {
-      this.fetchMenu()
-      this.testSource()
-      return
+      this.domain2 = this.debugDomain
     }
 
     // Fetch menu
