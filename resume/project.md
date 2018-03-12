@@ -1,5 +1,15 @@
 # Projects
 
+## Summary
+
+|  Company        | Duration     | Comment |
+| --------------  | ------------ | ------- |
+| Deutsche Bank   | 2015 -       | |
+| People Designs  | 2014 -       | |
+| QPlot           | 2009 -       | |
+| University      | 2000 - 2009  | |
+
+
 ## Deutsche Bank
 2015 - {.subtitle}
 
@@ -103,16 +113,18 @@ Highlights
 
 ### SLA Event
 
+Report delivery and SLA notification system
+
 : 03/16/2016
-: Report delivery and SLA notification system
 : `NodeJS`, `AngularJS`
 
 Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
 
 ### DBVals Audit
 
+Four-eyes-check statement audit
+
 : 09/16/2015
-: Four-eyes-check statement audit
 : `AngularJS`, `Grunt`
 
 Served as a lead front-end architect of *AngularJS* and UI/UX for an enterprise statement 4-eyes-check solution for 25, 000 customers worldwide. I also **served as the sprint master for 8 people team (FA, QA, Dev and Owner etc.) in daily basis**. I drafted the migration plan and collected the preliminary analysis on-boarding 25,000 users to the company banking entitlement system. I also drafted the service layer for communicating with *Auth/WebSSO* entitlement service, which had been used by five other application since.

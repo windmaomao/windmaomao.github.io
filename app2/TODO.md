@@ -4,6 +4,9 @@
 
 ### Mar
 
+#### 3/12
+- refine subtitle on themes
+
 #### 3/8
 - ~~remove bulma break point~~
 - bug on subtitle on small screen
