@@ -1,19 +1,18 @@
 # Projects
 
-## Summary
+## Two Decades
+2000 - Current {.subtitle}
 
-|  Company        | Duration     | Comment |
-| --------------  | ------------ | ------- |
-| Deutsche Bank   | 2015 -       | |
-| People Designs  | 2014 -       | |
-| QPlot           | 2009 -       | |
-| University      | 2000 - 2009  | |
+|  Company        | Duration       | Comment |
+| --------------  | -------------- | ------- |
+| Deutsche Bank   | 2015 -         | UI Framework|
+| QPlot           | 2009 -         | Visual Ideas |
+| People Designs  | 2014 - 2018    | Website Contracting |
+| University      | 2000 - 2009    | Scientific Software |
 
 
 ## Deutsche Bank
-2015 - {.subtitle}
-
-### Summary
+2015 - Current {.subtitle}
 
 |  Project        | Department      | Start    | Comment |
 | --------------  | --------------- | -------- | ------- |
@@ -163,62 +162,115 @@ Agency Security Lending
   - Performance summary: Multi page
 
 
-## People Designs
-2014 - {.subtitle}
-
-### Prepare 3
-Prepare for your care {.subtitle}
-
-: 08/1/2016
-: `Laravel`, `AngularJS`, `Bootstrap`, `HIPPA`, Book Chapter, Video and Audio
-: https://prepareforyourcare.org
-
-Provided *Laravel 4* and *AngularJS 2* architect and development for a new version of PrepareForYourCare.org, a hospital stage III counseling program to help people prepare the end of their life. The project creates flexible tree-kind chapters navigation with video/narration helper for elder visits. Since launch, **200 doctors and 50,000 users around the globe have used the site**.
-
-![](https://lh3.googleusercontent.com/I4xr1EBWDPej9CVO5J_x17orxY8pgsNqXUtubRMnS0EdFaR231U-MmXkSU1msYj4Y88R6jp4TXAOPXbFEqsapEUYAOFYFPT6SN-lW7E8mtJuKhH9YUFE2C6rWODGrgbGJyofRQ)
-
-Highlights:
-
-- HIPPA Server: *HIPPA* server host and deployment plan protecting health care privacy
-- Authentication: Two-factor *SMS* enabled authentication for better security protection
-- Password Recovery: Recovery based on either username or 3 out of 6 question answers
-- Reusable Component: Modular design for both *CSS* and *Javascript* in developing UI components
-- *508* section: Disability compliance with video, and narration support with high contrast 
-- Multilingual Support: Three language translations made for pages, snippets, and graphics
-- Multi-tenant: Theme and content changes entirely based on access domain 
-- Responsive Design: Bootstrap is used for fast prototype for desktop, iPad and other devices
-- Template Design: Allow manager to modify each page content stored in file storage
-- File Management: administer language files through web interface with easy switch
-- Browser Compatibility: Support *Chrome*, *Safari*, *Firefox* and *IE* 8, 9 and 10
-
-### Others
-
-SRCE
-
-: 1/30/16
-
-OBChat
-
-Prepare 2
-
-: 8/6/14
-: Renovation of Prepare Application
-
-: 5/9/14
-
 ## QPlot
 
-2009 - {.sutitle}
+2009 - Current {.sutitle}
 
-### Summary
+### Contract
+Contracting work with client sponsored projects {.subtitle}
+
+
+|  Project   | Company        | Client  | Start  |Comment|
+| ---------- | -------------  | ------  | ------ | ----- |
+| HMS - HSDM | DrupalConnect  | Harvard | Feb/14  | |
+| Medication | RxAnte         |         | Sep/14  | |
+| Awards     | DesignHammer   | PGH     | Nov/13  | |
+| Stemcell   | AlphaMed Press |         | Sep/13  | |
+| Trinity    | Duke University|         | Feb/13  | |
+| TEDAR      | ArchSmart LLC  | DHS     | ?/12  | |
+| PharmTrac  | PlusDelta Tech |         | Feb/12  | |
+| Orders     | DataRecoverMan |         | Apr/11  | |
+
+
+Guided Workout
+
+: 2/16/15
+: TopFitPros
+: `AngularJS`, `NodeJS`
+: Proof of concept of recipe ingredients guide application where users are guided to select healthy food based on carbs, proteins, fats and other personal preference. Internal state machine is built so that user will be suggested with choices based on six guidances step by step. At each step, user might be stopped to ask to substitute with healthy food or adjust food quantities based on personal preference.
+
+Trinity
+
+: Feb 2013 - Aug 2013
+: Duke University, contracting for Department of Trininy College of Arts & Sciences, [Duke Trinity](https://trinity.duke.edu/)
+: `Drupal`
+: Redesign in Drupal 7 architect of department landing page and new students advising network application. The project splits into discovery, development, theming and support stages, and requires 300 panel layouts, 12 content types, 10 custom modules and 60 custom views and took 8 month and 1000 billable hours to finish for single developer. After the launch the site has been used by 1,400 undergrades, 640 faculties in 50 majors.
+: - Data Modeling: page, panel and widgets
+  - Layout Design: create various combination of page layouts
+  - User Interface: apply layout pattern to multi departments
+  - Directory Search: integrated with internal directory search
+
+TEDAR
+
+: 2012
+: ArchSmart LLC, contracting for Department of Homeland Security, [Test&Evaluation Data Archival Repo](https://www.sbir.gov/sbirsearch/detail/385521)
+: `Drupal`, `Solr`
+: The TEDAR will provide a repository for T&E event data, M&S event data, and other analysis event data, consisting of very large amounts of processed and raw structured and unstructured detection device data collected by T&E and M&S events and analyses of these data. Authorized users will be able to search for and access these data collections and retrieve data relevant to their business needs, such as performing engineering analyses and studies.
+
+PharmTrac 
+
+: Feb 2012 - Feb 2013
+: [PlusDelta Technologies](http://www.plusdeltatech.com/)
+: `Drupal`, `iPhone`
+: Build startup flagship product that tracks medication inside hospitals like Fedex. I help build a medication tracking and workflow process improvement solution for hospital pharmacies that uses handheld smart mobile technology with an integrated web-enabled software that verifies, records and monitors every step in the process of medication preparation, dispensing, and delivery. The project mainly builds an API that can talk to mobile devices and takes 1 year with 2000 billable hours to finish. It has been deployed and used by 4 hospitals.
+: - Data Modeling: dispense, med, order, and locations.
+  - Tracking Workflow: design workflow states for medications.
+  - Mobile Integration: design API to connet with devices
+  - Tracking Wallboard: large screen monitor for hospital activity.
+
+JQF Management
+
+: 06/11/2011
+: `Wordpress`, `PHP`
+: http://aggievillas.net/
+: Apartment rental that you can trust
+
+![JQF Management Wordpress](https://lh3.googleusercontent.com/8qXbOliShp3JUHb7wWOcHCkd0T52myaRvqkpXFy2kJtEGonQpP_Hl6TGIXIBDfnvUQihIsC6Nmj9YIIGtJYPhffyWHMqQZjdo_AA8QOiwsXNUnRaCanCAiOhVsEfnFVcH3UxHQ)
+
+Wordpress project that I worked alone for client Cindy Fenty who manages couple of real estate properties.
+
+WebinarFunnel
+
+: 03/03/2011
+: `PHP`
+
+![Webinar Funnel](https://lh3.googleusercontent.com/25otmu2T3tnNztoDtvLSrq7X2sHtiy_YN6VZafo3laQchZ4t4z7ihs1mgsojdiVd4pj-bDkDPeSGoVhco3E-Dot33DYEX37aVgX-bylbAFAgRKu-QyQ7cQ9CtzlX_1xe-61cCA)
+
+Worked as UI and PHP developer for developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time. I was responsible for gathering business requirement and prototyping the UI design for business workflow. I also worked with an offshore PHP developer and we together coded frontend and backend logic for serving videos via PHP and MySQL.
+
+DRM Orders
+
+: 03/02/2011
+: `PHP`
+: Order and user list
+
+![DataRecoverMan Orders](https://lh3.googleusercontent.com/ys0QrPGZP0I0PJ1Ym4TyufjoI4nsWqbZi2b7DhKwlQIDof57tMGSyx3ZjCQ3fdTo4LsS4_RYF2NeK7DUIORIk_BLJtHHQgo0kzFaDlNs1TMDYsNYwQLILFs75zNfx8Hy4z31Fg)
+
+Served as the UI developer helping DataRecoveryMan.com build an application for managing inventories of hard drive repair orders and tracking order status and generating order invoice. I was responsible for gathering the requirement, prototyping UI according to business workflow and working with an offshore PHP developer to develop and deploy the application.
+
+Simwijzer.nl
+
+: 09/06/2010
+: `PHP`
+: Simcard plans
+
+![Simcard Sales Plan](https://lh3.googleusercontent.com/cX2wpV8wcPDH7_S3iS1xDv-Yvpg8b51qC8Vgg9ct0nLYWAE2DpN3b-2qD2yonlMfrPEjJgrdjyEJZ3XWNJOzI6R6jH7tv19EBQ7a86bkjLzvA3dnP0mDtzofz2OHkVPpWz9OWg)
+
+### Internal
+Company sponsored projects & ideas {.subtitle}
 
 |  Project    | Company        | Start   | Comment |
 | ----------- | -------------  | ------- | ------- |
-| Orders      | DataRecoverMan | 4/29/11 |         |
+| Github      | QPlot          | 1/23/18 |         |
 
-
-### Company
-Company sponsored projects & ideas {.subtitle}
+Github (aka. Knowledgebase)
+: 1/23/18
+: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. 
+: `Vue`, `Markdown`, `Github`
+: https://windmaomao.github.io
+: - Use `Codepen` to prototype the site and features
+  - Use `Markdown` local to draft all documentations
+  - Auto deployment via `Github`
 
 Account (aka. Qplot 7)
 : 12/24/16
@@ -271,53 +323,68 @@ PKB Tasks
 ![PKB Calendar](https://s3.amazonaws.com/qp-photo/pkb_times.png)
 ![PKB Tracking](https://s3.amazonaws.com/qp-photo/pkb_tracking.png)
 
-### Client
-Client sponsored projects {.subtitle}
 
-TopFitPros Guided Workout
+## People Designs
+2014 - {.subtitle}
 
-: 2/16/15
-: Proof of concept of recipe ingredients guide application where users are guided to select healthy food based on carbs, proteins, fats and other personal preference. Internal state machine is built so that user will be suggested with choices based on six guidances step by step. At each step, user might be stopped to ask to substitute with healthy food or adjust food quantities based on personal preference.
-: `AngularJS`, `NodeJS`
+### Prepare 3
+Prepare for your care {.subtitle}
+
+: 08/1/2016
+: `Laravel`, `AngularJS`, `Bootstrap`, `HIPPA`, Book Chapter, Video and Audio
+: https://prepareforyourcare.org
+
+Provided *Laravel 4* and *AngularJS 2* architect and development for a new version of PrepareForYourCare.org, a hospital stage III counseling program to help people prepare the end of their life. The project creates flexible tree-kind chapters navigation with video/narration helper for elder visits. Since launch, **200 doctors and 50,000 users around the globe have used the site**.
+
+![](https://lh3.googleusercontent.com/I4xr1EBWDPej9CVO5J_x17orxY8pgsNqXUtubRMnS0EdFaR231U-MmXkSU1msYj4Y88R6jp4TXAOPXbFEqsapEUYAOFYFPT6SN-lW7E8mtJuKhH9YUFE2C6rWODGrgbGJyofRQ)
+
+Highlights:
+
+- HIPPA Server: *HIPPA* server host and deployment plan protecting health care privacy
+- Authentication: Two-factor *SMS* enabled authentication for better security protection
+- Password Recovery: Recovery based on either username or 3 out of 6 question answers
+- Reusable Component: Modular design for both *CSS* and *Javascript* in developing UI components
+- *508* section: Disability compliance with video, and narration support with high contrast 
+- Multilingual Support: Three language translations made for pages, snippets, and graphics
+- Multi-tenant: Theme and content changes entirely based on access domain 
+- Responsive Design: Bootstrap is used for fast prototype for desktop, iPad and other devices
+- Template Design: Allow manager to modify each page content stored in file storage
+- File Management: administer language files through web interface with easy switch
+- Browser Compatibility: Support *Chrome*, *Safari*, *Firefox* and *IE* 8, 9 and 10
+
+### Prepare 2
+
+Provided Laravel 4 architect and development for new version of PrepareForYourCare, a hospital stage III counseling program to help people prepare the end of their life. The projects creates flexible tree-kind chapters navigation with video/narration helper for elder visits. The application has been used by 200 doctors and 50,000 users around the globe.
+
+Highlights:
+
+- HIPPA Server: HIPPA server host and deployment plan protecting health care privacy
+- Authentication: Two factor SMS enabled authentication for better security protection
+- Password Recovery: Recovery based on either username or 3 out of 6 question answers
+- 508 section: Disability compliance with video, and narration support with high contrast 
+- Multilingual Support: Three language translations made for pages, snippets and grphics
+- Responsive Design: Bootstrap is used for fast prototype for desktop, iPad and other devices
+- Template Design: Allow manager to modify each page content stored in file storage
+- File Management: administer language files through web interface with easy switch
+Browser Compatibility: Support Chrome, Safari, Firefox and IE 8, 9 and 10
+
+### Others
+
+SRCE
+
+: 1/30/16
+
+OBChat
+
+: 5/9/14
+
+Prepare 2
+
+: 8/6/14
+: Renovation of Prepare Application
 
 
-JQF Management
 
-: Apartment rental that you can trust
-: 06/11/2012
-: `Wordpress`, `PHP`
-: http://aggievillas.net/
-
-![JQF Management Wordpress](https://lh3.googleusercontent.com/8qXbOliShp3JUHb7wWOcHCkd0T52myaRvqkpXFy2kJtEGonQpP_Hl6TGIXIBDfnvUQihIsC6Nmj9YIIGtJYPhffyWHMqQZjdo_AA8QOiwsXNUnRaCanCAiOhVsEfnFVcH3UxHQ)
-
-Wordpress project that I worked alone for client Cindy Fenty who manages couple of real estate properties.
-
-WebinarFunnel
-
-: 03/03/2011
-: `PHP`
-
-![Webinar Funnel](https://lh3.googleusercontent.com/25otmu2T3tnNztoDtvLSrq7X2sHtiy_YN6VZafo3laQchZ4t4z7ihs1mgsojdiVd4pj-bDkDPeSGoVhco3E-Dot33DYEX37aVgX-bylbAFAgRKu-QyQ7cQ9CtzlX_1xe-61cCA)
-
-Worked as UI and PHP developer for developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time. I was responsible for gathering business requirement and prototyping the UI design for business workflow. I also worked with an offshore PHP developer and we together coded frontend and backend logic for serving videos via PHP and MySQL.
-
-DRM Orders
-
-: 03/02/2011
-: `PHP`
-: Order and user list
-
-![DataRecoverMan Orders](https://lh3.googleusercontent.com/ys0QrPGZP0I0PJ1Ym4TyufjoI4nsWqbZi2b7DhKwlQIDof57tMGSyx3ZjCQ3fdTo4LsS4_RYF2NeK7DUIORIk_BLJtHHQgo0kzFaDlNs1TMDYsNYwQLILFs75zNfx8Hy4z31Fg)
-
-Served as the UI developer helping DataRecoveryMan.com build an application for managing inventories of hard drive repair orders and tracking order status and generating order invoice. I was responsible for gathering the requirement, prototyping UI according to business workflow and working with an offshore PHP developer to develop and deploy the application.
-
-Simwijzer.nl
-
-: 09/06/2010
-: `PHP`
-: Simcard plans
-
-![Simcard Sales Plan](https://lh3.googleusercontent.com/cX2wpV8wcPDH7_S3iS1xDv-Yvpg8b51qC8Vgg9ct0nLYWAE2DpN3b-2qD2yonlMfrPEjJgrdjyEJZ3XWNJOzI6R6jH7tv19EBQ7a86bkjLzvA3dnP0mDtzofz2OHkVPpWz9OWg)
 
 ## University
 
