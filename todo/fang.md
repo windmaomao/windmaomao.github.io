@@ -9,6 +9,7 @@
 - 📅 `3/15` Offset `GE` put before expire {.red}
 - ~~Update invest summary~~
 - Gather piece for ideas
+- Explore DB share opiton
 
 #### 3/7
 - ~~Update `stackoverflow` profile~~

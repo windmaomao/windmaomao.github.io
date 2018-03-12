@@ -155,33 +155,73 @@ Highlights:
 - Browser Compatibility: Support *Chrome*, *Safari*, *Firefox* and *IE* 8, 9 and 10
 
 ## QPlot
-### JQF Management
-Apartment rental that you can trust
-06/11/2012
-http://aggievillas.net/
+
+### Company
+Company sponsored projects & ideas {.subtitle}
+
+PKB Tasks
+
+: 2/21/15
+: PKB was designed to track knowledge-base, however it end up with  just to track the project tasks and timesheet. And it’s very effective. Has been used for couple of years country to its low cost to build and maintain.
+: `AngularJS`, `NodeJS`
+: https://bitbucket.org/qplot/qplot-pkb
+
+Qplot Seven 
+
+: 8/9/15
+: QPLOT website, blog, and some experiment projects
+
+Knowledge-base
+
+: 11/27/15
+: Centralize project, payment, and other knowledge-base information into more organized form
+
+Docs go
+
+: 1/2/16
+: Be able to create simple page so that it’ll navigate to all the documentations
+: https://bitbucket.org/qplot/docs/overview
+
+Promise bucket
+
+: https://github.com/windmaomao/promise-bucket
+: 12/26/15
+: Create a shared repo so that we can create unified and centralized place to add APIs and handle APIs.
+
+### Client
+Client sponsored projects {.subtitle}
+
+JQF Management
+
+: Apartment rental that you can trust
+: 06/11/2012
+: http://aggievillas.net/
 
 ![](https://lh3.googleusercontent.com/8qXbOliShp3JUHb7wWOcHCkd0T52myaRvqkpXFy2kJtEGonQpP_Hl6TGIXIBDfnvUQihIsC6Nmj9YIIGtJYPhffyWHMqQZjdo_AA8QOiwsXNUnRaCanCAiOhVsEfnFVcH3UxHQ)
 
 Wordpress project that I worked alone for client Cindy Fenty who manages couple of real estate properties.
 
-### WebinarFunnel
-03/03/2011
+WebinarFunnel
+
+: 03/03/2011
 
 ![](https://lh3.googleusercontent.com/25otmu2T3tnNztoDtvLSrq7X2sHtiy_YN6VZafo3laQchZ4t4z7ihs1mgsojdiVd4pj-bDkDPeSGoVhco3E-Dot33DYEX37aVgX-bylbAFAgRKu-QyQ7cQ9CtzlX_1xe-61cCA)
 
 Worked as UI and PHP developer for developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time. I was responsible for gathering business requirement and prototyping the UI design for business workflow. I also worked with an offshore PHP developer and we together coded frontend and backend logic for serving videos via PHP and MySQL.
 
-### DRM Orders
-Order and user list
-03/02/2011
+DRM Orders
+
+: Order and user list
+: 03/02/2011
 
 ![](https://lh3.googleusercontent.com/ys0QrPGZP0I0PJ1Ym4TyufjoI4nsWqbZi2b7DhKwlQIDof57tMGSyx3ZjCQ3fdTo4LsS4_RYF2NeK7DUIORIk_BLJtHHQgo0kzFaDlNs1TMDYsNYwQLILFs75zNfx8Hy4z31Fg)
 
 Served as the UI developer helping DataRecoveryMan.com build an application for managing inventories of hard drive repair orders and tracking order status and generating order invoice. I was responsible for gathering the requirement, prototyping UI according to business workflow and working with an offshore PHP developer to develop and deploy the application.
 
-### Simwijzer.nl
-Simcard plans
-09/06/2010
+Simwijzer.nl
+
+: Simcard plans
+: 09/06/2010
 
 ![](https://lh3.googleusercontent.com/cX2wpV8wcPDH7_S3iS1xDv-Yvpg8b51qC8Vgg9ct0nLYWAE2DpN3b-2qD2yonlMfrPEjJgrdjyEJZ3XWNJOzI6R6jH7tv19EBQ7a86bkjLzvA3dnP0mDtzofz2OHkVPpWz9OWg)
 
@@ -192,7 +232,6 @@ Simcard plans
 Battleship
 
 : ??
-
 : 06/09/2009
 
 
@@ -202,7 +241,6 @@ Battleship
 FJGol
 
 : ??
-
 : 05/16/2009
 
 
