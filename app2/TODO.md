@@ -5,7 +5,7 @@
 ### Mar
 
 #### 3/8
-- remove bulma break point
+- ~~remove bulma break point~~
 - bug on subtitle on small screen
 
 #### 3/5
