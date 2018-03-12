@@ -1,6 +1,7 @@
 # Projects
 
 ## Deutsche Bank
+2015 - {.subtitle}
 
 ### Summary
 
@@ -44,7 +45,8 @@ Highlights
 
 
 ### MC Console
-Large scale reusable UI framework {.subtitle}
+
+Large scale reusable UI framework
 
 : Date: Jan 2017 -   
 : Keyword: *AngularJS, Bootstrap, Webpack, Sass, HTML5*   
@@ -150,10 +152,10 @@ Agency Security Lending
 
 
 ## People Designs
+2014 - {.subtitle}
 
-### Prepare for Your Care
-
-Prepare your end of life
+### Prepare 3
+Prepare for your care {.subtitle}
 
 : 08/1/2016
 : `Laravel`, `AngularJS`, `Bootstrap`, `HIPPA`, Book Chapter, Video and Audio
@@ -193,6 +195,8 @@ Prepare 2
 : 5/9/14
 
 ## QPlot
+
+2009 - {.sutitle}
 
 ### Summary
 
@@ -303,9 +307,17 @@ Simwijzer.nl
 
 ![Simcard Sales Plan](https://lh3.googleusercontent.com/cX2wpV8wcPDH7_S3iS1xDv-Yvpg8b51qC8Vgg9ct0nLYWAE2DpN3b-2qD2yonlMfrPEjJgrdjyEJZ3XWNJOzI6R6jH7tv19EBQ7a86bkjLzvA3dnP0mDtzofz2OHkVPpWz9OWg)
 
-## Engineering
+## University
+
+2000 - 2009 {.subtitle}
 
 ### Summary
+
+|  Project        | University      | Start    | Comment |
+| --------------  | --------------- | -------- | ------- |
+| QPlot Windowns  | Johns Hopkins   | 2006 Sep | |
+| FJLib Bubble    | Johns Hopkins   | 2000 Sep | |
+
 
 ### Projects
 
