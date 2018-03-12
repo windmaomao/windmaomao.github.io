@@ -2,9 +2,9 @@
 
 ## Contribute
 
-All files are in `markdown` format and can be checked in directly. 
+All files are in `markdown` format and can be checked in directly.
 
-- Write an article in [Stackedit](https://stackedit.io/app) 
+- Write an article in [Stackedit](https://stackedit.io/app)
 - Sync it to [Github](https://github.com/windmaomao/windmaomao.github.io) folder
 - Update new menu entry to `menus.json` under `/static/json`
 - Check [Online](https://windmaomao.github.io)
@@ -40,7 +40,7 @@ npm run build --report
 
 ## Deploy
 
-After you build. 
+After you build.
 
 - Copy dist folder to root folder
 - Push to github
@@ -48,4 +48,17 @@ After you build.
 - (Automatic) github -> netlifty
 - Visit [Online](https://windmaomao.github.io)
 
+## Debug
+
+In order to debug locally, you can set
+
+```javascript
+  debug: true
+```
+
+and then you need to host the `md` server locally by
+
+```bash
+  lite-server .
+```
 
