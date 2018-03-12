@@ -38,8 +38,10 @@
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
 | TECS         | Tech      |    $  11 | short |               |
 | **Vanguard** |           | $ 20,000 |       |               |
+| BOC 6/25     | CD        | $ 10,000 | long  | 3/23 open        |
 | BOC 4/23     | CD        | $ 10,000 | long  |               |
 | BOC 3/15     | CD        | $ 10,000 | long  |               |
+| **Roth** |           | $ 5,000 |       |  3/13 open             |
 
 
 ### Feberary

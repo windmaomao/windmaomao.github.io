@@ -4,9 +4,11 @@
 
 ### Mar
 
-#### 3/10
+3/12
 
-- Learn Phaser
+- 📅 `3/15` Offset `GE` put before expire {.red}
+- ~~Update invest summary~~
+- Gather piece for ideas
 
 #### 3/7
 - ~~Update `stackoverflow` profile~~
@@ -44,7 +46,6 @@
 - ~~Submit `npm` `figure-caption` module~~
 - ~~Update pay stub info~~
 - ~~Get pdf build from database~~
-- :date: `3/12` Offset `GE` put before expire {.red}
 - ~~Apply Chinese school for Sophia, summer~~
 
 #### 2/27
