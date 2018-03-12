@@ -2,7 +2,22 @@
 
 ## Deutsche Bank
 
-### Global Console - Angular 5
+### Summary
+
+|  Project        | Department      | Start    | Comment |
+| --------------  | --------------- | -------- | ------- |
+| Corporate Events| Corporate Action| 2018 Jan | Poc |
+| Security Conf   | Security Lending| 2018 Jan | Poc |
+| Global Console2 | Equity          | 2017 Oct | |
+| Global Console  | Market Clearing | 2017 Jan | |
+| AOF Form        | Global Markets  | 2016 Jun | |
+| SLA Events      | CPort           | 2016 Mar | |
+| DBVals Statement| DBVals          | 2015 Sep | |
+
+
+### Angular 5
+Global Console 2 {.subtitle}
+
 ![Global Console](https://s3.amazonaws.com/qp-photo/mc-common2-header.PNG)
 
 Single operation UI framework
@@ -13,11 +28,11 @@ Single operation UI framework
 Highlights
 
 : - Fields: Custom form layout and field validation via template and reactive form engine
-    Calendar: Use _angular-calendar_ to create custom monthly calendar and events view
-    Datepicker: Custom single date and range date picker with consistent look and feel
-    Charts: Theme pie, column, stack charts with consistent look and feel using *Highcharts*
-    Documentation: Support Bootstrap documentation page layout with quick navigation list
-    Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
+  - Calendar: Use _angular-calendar_ to create custom monthly calendar and events view
+  - Datepicker: Custom single date and range date picker with consistent look and feel
+  - Charts: Theme pie, column, stack charts with consistent look and feel using *Highcharts*
+  - Documentation: Support Bootstrap documentation page layout with quick navigation list
+  - Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
 
 ![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
 
@@ -89,7 +104,7 @@ Highlights
 Report delivery and SLA notification system
 
 : 03/16/2016
-: Keywords: NodeJS, AngularJS
+: `NodeJS`, `AngularJS`
 
 Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
 
@@ -120,7 +135,8 @@ Highlights:
   - Work with *Oracle* database query and dump
   - Use request to issue service call to on-board user
 
-### Proof of Concept
+### Other Projects
+Proof of concept projects {.subtitle}
 
 Corporate Action UI 
 
@@ -139,11 +155,14 @@ Highlights:
 
 
 ## People Designs
+
 ### Prepare for Your Care
+
 Prepare your end of life
-08/20/2014
-Keywords: Laravel, AngularJS, Bootstrap, HIPPA, Book Chapter, Video and Audio
-https://prepareforyourcare.org
+
+: 08/1/2016
+: `Laravel`, `AngularJS`, `Bootstrap`, `HIPPA`, Book Chapter, Video and Audio
+: https://prepareforyourcare.org
 
 Provided *Laravel 4* and *AngularJS 2* architect and development for a new version of PrepareForYourCare.org, a hospital stage III counseling program to help people prepare the end of their life. The project creates flexible tree-kind chapters navigation with video/narration helper for elder visits. Since launch, **200 doctors and 50,000 users around the globe have used the site**.
 
@@ -163,7 +182,29 @@ Highlights:
 - File Management: administer language files through web interface with easy switch
 - Browser Compatibility: Support *Chrome*, *Safari*, *Firefox* and *IE* 8, 9 and 10
 
+### Other Projects
+
+SRCE
+
+: 1/30/16
+
+OBChat
+
+Prepare 2
+
+: 8/6/14
+: Renovation of Prepare Application
+
+: 5/9/14
+
 ## QPlot
+
+### Summary
+
+|  Project    | Company        | Start   | Comment |
+| ----------- | -------------  | ------- | ------- |
+| Orders      | DataRecoverMan | 4/29/11 |         |
+
 
 ### Company
 Company sponsored projects & ideas {.subtitle}
@@ -222,6 +263,13 @@ PKB Tasks
 ### Client
 Client sponsored projects {.subtitle}
 
+TopFitPros Guided Workout
+
+: 2/16/15
+: Proof of concept of recipe ingredients guide application where users are guided to select healthy food based on carbs, proteins, fats and other personal preference. Internal state machine is built so that user will be suggested with choices based on six guidances step by step. At each step, user might be stopped to ask to substitute with healthy food or adjust food quantities based on personal preference.
+: `AngularJS`, `NodeJS`
+
+
 JQF Management
 
 : Apartment rental that you can trust
@@ -260,7 +308,11 @@ Simwijzer.nl
 
 ![Simcard Sales Plan](https://lh3.googleusercontent.com/cX2wpV8wcPDH7_S3iS1xDv-Yvpg8b51qC8Vgg9ct0nLYWAE2DpN3b-2qD2yonlMfrPEjJgrdjyEJZ3XWNJOzI6R6jH7tv19EBQ7a86bkjLzvA3dnP0mDtzofz2OHkVPpWz9OWg)
 
-## UC Irvine
+## Engineering
+
+### Summary
+
+### Projects
 
 ![Battleship](https://s3.amazonaws.com/qp-photo/battleship_demo.jpg)
 
@@ -279,27 +331,22 @@ FJGol
 : 05/16/2009
 
 
-
 FJVis
 
 : Matlab visualization package for simulation data
-
-## Johns Hopkins University
 
 ![QPlot Windows Software](https://s3.amazonaws.com/qp-photo/qplot_win_web.PNG)
 
 QPlot Windows Software
 
-: Windows sotware which serves two purposes. A) Visualize scatter data from your notpad, supporting line point series and tabular column field data. B) Allow to extract data value from published graph tilt graph and irregular shape graphs is supported.
-
 : 09/28/2006
-
-
+: Windows sotware which serves two purposes. A) Visualize scatter data from your notpad, supporting line point series and tabular column field data. B) Allow to extract data value from published graph tilt graph and irregular shape graphs is supported.
 
 FJLib Bubble
 
 : Numerical library for bubble simulations
 : 06/12/2003
+: `C++`, `Object Oriented`
 : https://github.com/windmaomao/fjlib
 
 
