@@ -10,20 +10,18 @@
 | People Designs  | 2014 - 2018    | Website Contracting |
 | University      | 2000 - 2009    | Scientific Software |
 
-
 ## Deutsche Bank
 2015 - Current {.subtitle}
 
 |  Project        | Department      | Start    | Comment |
 | --------------  | --------------- | -------- | ------- |
-| Corporate Events| Corporate Action| 2018 Jan | Poc |
-| Security Conf   | Security Lending| 2018 Jan | Poc |
-| Global Console2 | Equity          | 2017 Oct | |
-| Global Console  | Market Clearing | 2017 Jan | |
-| AOF Form        | Global Markets  | 2016 Jun | |
-| SLA Events      | CPort           | 2016 Mar | |
-| DBVals Statement| DBVals          | 2015 Sep | |
-
+| Corporate Events| Corporate Action| 2018 Jan | Poc     |
+| Security Conf   | Security Lending| 2018 Jan | Poc     |
+| Global Console2 | Equity          | 2017 Oct |         |
+| Global Console  | Market Clearing | 2017 Jan |         |
+| AOF Form        | Global Markets  | 2016 Jun |         |
+| SLA Events      | CPort           | 2016 Mar |         |
+| DBVals Statement| DBVals          | 2015 Sep |         |
 
 ### Global Console
 Reusable UI framework for Angular 5 {.subtitle}
@@ -32,8 +30,8 @@ Reusable UI framework for Angular 5 {.subtitle}
 
 Single operation UI framework
 
-: Date: Oct 2017 -
-: Keyword: *Angular, Sass, Highcharts, Ag-grid*
+: Oct 2017 -
+: *Angular* *Sass* *Ag-grid* *Highcharts* {.labels}
 
 Highlights
 
@@ -45,24 +43,21 @@ Highlights
   - Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
 
 ![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
-
 ![Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
 
 ![Calendar Events](https://s3.amazonaws.com/qp-photo/mc-common-events.PNG)
 
 ![Form Layout and Fields Handling](https://s3.amazonaws.com/qp-photo/mc-common-form2.PNG)
 
-
 ### MC Console
 
 Large scale reusable UI framework
 
-: Date: Jan 2017 -   
-: Keyword: *AngularJS, Bootstrap, Webpack, Sass, HTML5*   
+: Jan 2017 -   
+: *AngularJS* *Bootstrap* *Webpack* *Sass* *HTML5* {.labels}
+: Served as AngularJS architect for designing reusable framework for more than 35+ banking applications in Market Clearing product sector. The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
 ![MC Common Code](https://s3.amazonaws.com/qp-photo/mc-common-code.PNG)
-
-Served as AngularJS architect for designing reusable framework for more than 35+ banking applications in Market Clearing product sector. The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
 ![Light Dark Theme Colors](https://s3.amazonaws.com/qp-photo/mc-common-colors.PNG)
 
@@ -83,16 +78,15 @@ Highlights
   * CSS: Modular layout and component design
   * Testing: Work with a test team to facilliate UI automation
 
-
 ### AOF Account
+
 Bank account opening form
 
 : 06/15/2016
-: `AngularJS`, `Bootstrap`, `Gulp`, Form Generator, Book Chapter
+: *AngularJS* *Bootstrap* *Gulp* *Form* *Generator* *Book Chapter* {.labels}
+: Provided *AngularJS* UI architect for GMI West AOF applications. Served as the tech lead and project manager of six team members (UIs, API, backend developers and business analysts). Large banking account open form, categorized by pages and regions, needs to be displayed, validated and submitted for end-users. **I held morning standup meeting in daily basis, and provided demos to shareholder in weekly basis, as well as providing architect training for entry level UI developers**.
 
-Provided *AngularJS* UI architect for GMI West AOF applications. Served as the tech lead and project manager of six team members (UIs, API, backend developers and business analysts). Large banking account open form, categorized by pages and regions, needs to be displayed, validated and submitted for end-users. **I held morning standup meeting in daily basis, and provided demos to shareholder in weekly basis, as well as providing architect training for entry level UI developers**.
-
-![](https://lh3.googleusercontent.com/qxS3GalWHKyySTCXF0ahqvrg9kYMlQ7WLWQP4Q5CctK2H3bw1eNiwr9KZatQtaFbnkZFrH15oETQWDE06EIbzfzi_t5cU4ayG4q6rTgFDUoZL1YIgdtIGMkgiHDXKGBfmzK0-w)
+![AOF Form](https://s3.amazonaws.com/qp-photo/aof-firm-prototype.PNG)
 
 Highlights
 
@@ -115,20 +109,18 @@ Highlights
 Report delivery and SLA notification system
 
 : 03/16/2016
-: `NodeJS`, `AngularJS`
-
-Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
-
+: *NodeJS* *AngularJS*
+: Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
+  
 ### DBVals Audit
 
 Four-eyes-check statement audit
 
 : 09/16/2015
-: `AngularJS`, `Grunt`
+: *AngularJS* *Grunt*
+: Served as a lead front-end architect of *AngularJS* and UI/UX for an enterprise statement 4-eyes-check solution for 25, 000 customers worldwide. I also **served as the sprint master for 8 people team (FA, QA, Dev and Owner etc.) in daily basis**. I drafted the migration plan and collected the preliminary analysis on-boarding 25,000 users to the company banking entitlement system. I also drafted the service layer for communicating with *Auth/WebSSO* entitlement service, which had been used by five other application since.
 
-Served as a lead front-end architect of *AngularJS* and UI/UX for an enterprise statement 4-eyes-check solution for 25, 000 customers worldwide. I also **served as the sprint master for 8 people team (FA, QA, Dev and Owner etc.) in daily basis**. I drafted the migration plan and collected the preliminary analysis on-boarding 25,000 users to the company banking entitlement system. I also drafted the service layer for communicating with *Auth/WebSSO* entitlement service, which had been used by five other application since.
-
-![Prototype](https://lh3.googleusercontent.com/lM3phKH6yoyNHJzAVQ2svuED75j4AGqUHQOecGcGQfuhFXOysJ4fG7xrrkY628CIBi5QPajcBsLlSMeNPqZSz1DbTC10Nh9eNBg77r6hIQf3VJNz-Zqvh-0z4FvbxI6ZHnf3cQ )
+![DBvals Statement Audit](https://s3.amazonaws.com/qp-photo/db-dbvals-purple.png)
 
 Highlights: 
 
@@ -160,7 +152,6 @@ Agency Security Lending
 : Prototype the website for dashboard and performance summary page
 : - Dashboard snapshot: 
   - Performance summary: Multi page
-
 
 ## QPlot
 
@@ -350,7 +341,7 @@ Highlights:
 
 ### Prepare 2
 
-Provided Laravel 4 architect and development for new version of PrepareForYourCare, a hospital stage III counseling program to help people prepare the end of their life. The projects creates flexible tree-kind chapters navigation with video/narration helper for elder visits. The application has been used by 200 doctors and 50,000 users around the globe.
+Provided Laravel 4 architect and development for new version of PrepareForYourCare, a hospital stage III counseling program to help people prepare the end of their life. The projects creates flexible tree-kind chapters navigation with video/narration helper for elder visits. The application has been used by 200 doctors and 50,000 users around the globe.
 
 Highlights:
 
