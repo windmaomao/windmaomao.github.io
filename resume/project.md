@@ -109,7 +109,7 @@ Highlights
 Report delivery and SLA notification system
 
 : 03/16/2016
-: *NodeJS* *AngularJS*
+: *NodeJS* *AngularJS* *Kingslanding* {.labels}
 : Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
   
 ### DBVals Audit
@@ -152,6 +152,15 @@ Agency Security Lending
 : Prototype the website for dashboard and performance summary page
 : - Dashboard snapshot: 
   - Performance summary: Multi page
+
+Operations Management Dashboard
+
+: ?? 2016
+: Prototype custom table for dashboard 
+: - Need data for each sub product by region
+  - Current levels (T)
+  - Trending required, ex. 30 day rolling average (30)
+  - RAG statuses based on trending
 
 ## QPlot
 
