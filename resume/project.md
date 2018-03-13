@@ -21,6 +21,8 @@
 | Global Console  | Market Clearing | 2017 Jan |         |
 | AOF Form        | Global Markets  | 2016 Jun |         |
 | SLA Events      | CPort           | 2016 Mar |         |
+| Operations Management | MI        | 2016 Feb | Poc     |
+| Entitlement Analysis | CPort      | 2016 Jan | Poc     |
 | DBVals Statement| DBVals          | 2015 Sep |         |
 
 ![Statistics 2016 - 2017]([https://s3.amazonaws.com/qp-photo/db-stash-activity.PNG](https://s3.amazonaws.com/qp-photo/db-stash-activity.PNG))
@@ -157,12 +159,19 @@ Agency Security Lending
 
 Operations Management Dashboard
 
-: ?? 2016
+: Feb 2016
 : Prototype custom table for dashboard 
 : - Need data for each sub product by region
   - Current levels (T)
   - Trending required, ex. 30 day rolling average (30)
   - RAG statuses based on trending
+
+Entitlement Analysis 
+
+: Jan 2016
+: Use mongodb dump to analysis complex relationship inside entitlement system
+
+![Entitlement Analysis]([https://s3.amazonaws.com/qp-photo/dbvals-entitlement-analysis.PNG](https://s3.amazonaws.com/qp-photo/dbvals-entitlement-analysis.PNG))
 
 ## QPlot
 
