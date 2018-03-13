@@ -68,6 +68,14 @@ Large scale reusable UI framework
 
 ![Light Dark Theme Colors](https://s3.amazonaws.com/qp-photo/mc-common-colors.PNG)
 
+![Common Icons](https://s3.amazonaws.com/qp-photo/mc-common-icons.PNG)
+
+![Common Form](https://s3.amazonaws.com/qp-photo/mc-common-form.PNG)
+
+![Common Sidebar](https://s3.amazonaws.com/qp-photo/mc-common-sidebar.PNG)
+
+![Common Table](https://s3.amazonaws.com/qp-photo/mc-common-table.PNG)
+
 Highlights
 
 : * Prototype: Use AngularJS and Bootstrap for fast development
