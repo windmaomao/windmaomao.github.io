@@ -10,6 +10,7 @@
 - ~~Update invest summary~~
 - Gather piece for ideas
 - Explore DB share opiton
+- Add [manifest](https://manifest-validator.appspot.com/) to github
 
 #### 3/7
 - ~~Update `stackoverflow` profile~~
