@@ -203,15 +203,15 @@ Trinity
 TEDAR
 
 : 2012
-: ArchSmart LLC, contracting for Department of Homeland Security, [Test&Evaluation Data Archival Repo](https://www.sbir.gov/sbirsearch/detail/385521)
-: `Drupal`, `Solr`
-: The TEDAR will provide a repository for T&E event data, M&S event data, and other analysis event data, consisting of very large amounts of processed and raw structured and unstructured detection device data collected by T&E and M&S events and analyses of these data. Authorized users will be able to search for and access these data collections and retrieve data relevant to their business needs, such as performing engineering analyses and studies.
+: ArchSmart LLC, contracting for Department of Homeland Security
+: *Drupal* *Solr* {.labels}
+: [Test&Evaluation Data Archival Repo](https://www.sbir.gov/sbirsearch/detail/385521) will provide a repository for T&E event data, M&S event data, and other analysis event data, consisting of very large amounts of processed and raw structured and unstructured detection device data collected by T&E and M&S events and analyses of these data. Authorized users will be able to search for and access these data collections and retrieve data relevant to their business needs, such as performing engineering analyses and studies.
 
 PharmTrac 
 
 : Feb 2012 - Feb 2013
 : [PlusDelta Technologies](http://www.plusdeltatech.com/)
-: `Drupal`, `iPhone`
+: *Drupal* *iPhone* {.labels}
 : Build startup flagship product that tracks medication inside hospitals like Fedex. I help build a medication tracking and workflow process improvement solution for hospital pharmacies that uses handheld smart mobile technology with an integrated web-enabled software that verifies, records and monitors every step in the process of medication preparation, dispensing, and delivery. The project mainly builds an API that can talk to mobile devices and takes 1 year with 2000 billable hours to finish. It has been deployed and used by 4 hospitals.
 : - Data Modeling: dispense, med, order, and locations.
   - Tracking Workflow: design workflow states for medications.
@@ -221,40 +221,36 @@ PharmTrac
 JQF Management
 
 : 06/11/2011
-: `Wordpress`, `PHP`
-: http://aggievillas.net/
-: Apartment rental that you can trust
+: *Wordpress* *PHP* {.labels}
+: [Apartment rental that you can trust](http://aggievillas.net/). Wordpress project that I worked alone for client Cindy Fenty who manages couple of real estate properties.
 
-![JQF Management Wordpress](https://lh3.googleusercontent.com/8qXbOliShp3JUHb7wWOcHCkd0T52myaRvqkpXFy2kJtEGonQpP_Hl6TGIXIBDfnvUQihIsC6Nmj9YIIGtJYPhffyWHMqQZjdo_AA8QOiwsXNUnRaCanCAiOhVsEfnFVcH3UxHQ)
-
-Wordpress project that I worked alone for client Cindy Fenty who manages couple of real estate properties.
+![JQF Management](https://s3.amazonaws.com/qp-photo/jqf_management.png)
 
 WebinarFunnel
 
 : 03/03/2011
-: `PHP`
+: Teryn Ashley Enterprises
+: *PHP* *MySQL* *Video* {.labels}
+: Developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time.
 
-![Webinar Funnel](https://lh3.googleusercontent.com/25otmu2T3tnNztoDtvLSrq7X2sHtiy_YN6VZafo3laQchZ4t4z7ihs1mgsojdiVd4pj-bDkDPeSGoVhco3E-Dot33DYEX37aVgX-bylbAFAgRKu-QyQ7cQ9CtzlX_1xe-61cCA)
+![Replay Webinar System](https://s3.amazonaws.com/qp-photo/webinarfunnel_ui.jpg)
 
-Worked as UI and PHP developer for developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time. I was responsible for gathering business requirement and prototyping the UI design for business workflow. I also worked with an offshore PHP developer and we together coded frontend and backend logic for serving videos via PHP and MySQL.
-
-DRM Orders
+DataRecoverMan.com Orders
 
 : 03/02/2011
-: `PHP`
-: Order and user list
+: DataRecoverMan
+: *PHP* {.labels}
+: Help DataRecoveryMan.com build an application for managing inventories of hard drive repair orders and tracking order status and generating order invoice.
 
-![DataRecoverMan Orders](https://lh3.googleusercontent.com/ys0QrPGZP0I0PJ1Ym4TyufjoI4nsWqbZi2b7DhKwlQIDof57tMGSyx3ZjCQ3fdTo4LsS4_RYF2NeK7DUIORIk_BLJtHHQgo0kzFaDlNs1TMDYsNYwQLILFs75zNfx8Hy4z31Fg)
-
-Served as the UI developer helping DataRecoveryMan.com build an application for managing inventories of hard drive repair orders and tracking order status and generating order invoice. I was responsible for gathering the requirement, prototyping UI according to business workflow and working with an offshore PHP developer to develop and deploy the application.
+![DataRecoverMan Orders](https://s3.amazonaws.com/qp-photo/drm_ticket_sm.png)
 
 Simwijzer.nl
 
 : 09/06/2010
-: `PHP`
-: Simcard plans
+: *PHP* {.labels}
+: Choose from variety of Sim cards from different minutes, providers, and price plans.
 
-![Simcard Sales Plan](https://lh3.googleusercontent.com/cX2wpV8wcPDH7_S3iS1xDv-Yvpg8b51qC8Vgg9ct0nLYWAE2DpN3b-2qD2yonlMfrPEjJgrdjyEJZ3XWNJOzI6R6jH7tv19EBQ7a86bkjLzvA3dnP0mDtzofz2OHkVPpWz9OWg)
+![Simcard Plans](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif)
 
 ### Internal
 Company sponsored projects & ideas {.subtitle}
@@ -265,9 +261,9 @@ Company sponsored projects & ideas {.subtitle}
 
 Github (aka. Knowledgebase)
 : 1/23/18
-: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. 
 : `Vue`, `Markdown`, `Github`
-: https://windmaomao.github.io
+: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. 
+: [Online](https://windmaomao.github.io),[Repo](https://github.com/windmaomao/windmaomao.github.io)
 : - Use `Codepen` to prototype the site and features
   - Use `Markdown` local to draft all documentations
   - Auto deployment via `Github`

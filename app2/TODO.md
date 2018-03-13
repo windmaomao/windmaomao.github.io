@@ -6,6 +6,7 @@
 
 #### 3/12
 - refine subtitle on themes
+- add ul/li label styles
 
 #### 3/8
 - ~~remove bulma break point~~
