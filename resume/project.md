@@ -23,6 +23,8 @@
 | SLA Events      | CPort           | 2016 Mar |         |
 | DBVals Statement| DBVals          | 2015 Sep |         |
 
+![Statistics 2016 - 2017]([https://s3.amazonaws.com/qp-photo/db-stash-activity.PNG](https://s3.amazonaws.com/qp-photo/db-stash-activity.PNG))
+
 ### Global Console
 Reusable UI framework for Angular 5 {.subtitle}
 
