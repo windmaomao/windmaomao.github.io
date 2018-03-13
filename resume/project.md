@@ -46,7 +46,10 @@ Highlights
   - Documentation: Support Bootstrap documentation page layout with quick navigation list
   - Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
 
+![Report Field Customization](https://s3.amazonaws.com/qp-photo/mc-common-customize.PNG)
+
 ![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
+
 ![Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
 
 ![Calendar Events](https://s3.amazonaws.com/qp-photo/mc-common-events.PNG)
