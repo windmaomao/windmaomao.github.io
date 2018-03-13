@@ -4,13 +4,17 @@
 
 ### Mar
 
-3/12
+#### 3/13
+- Keymod prototype
+
+#### 3/12
 
 - 📅 `3/15` Offset `GE` put before expire {.red}
 - ~~Update invest summary~~
-- Gather piece for ideas
-- Explore DB share opiton
+- ~~Gather piece for ideas~~
+- ~~Explore DB share opiton~~
 - Add [manifest](https://manifest-validator.appspot.com/) to github
+- ~~Update db projects~~
 
 #### 3/7
 - ~~Update `stackoverflow` profile~~
