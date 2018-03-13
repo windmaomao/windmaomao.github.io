@@ -43,6 +43,7 @@ md.use(Anchor, {
 })
 
 var container = require('markdown-it-container')
+md.use(container, 'div')
 md.use(container, 'notification')
 md.use(container, 'abstract', {
   validate: function(params) {

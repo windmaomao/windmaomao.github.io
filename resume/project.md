@@ -1,6 +1,6 @@
 # Projects
 
-## Two Decades
+## Two Decades of Projects
 2000 - Current {.subtitle}
 
 |  Company        | Duration       | Comment |
@@ -48,9 +48,10 @@ Highlights
 
 ![Report Field Customization](https://s3.amazonaws.com/qp-photo/mc-common-customize.PNG)
 
+::: div {.flex}
 ![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
-
 ![Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
+:::
 
 ![Calendar Events](https://s3.amazonaws.com/qp-photo/mc-common-events.PNG)
 
@@ -65,15 +66,14 @@ Large scale reusable UI framework
 : Served as AngularJS architect for designing reusable framework for more than 35+ banking applications in Market Clearing product sector. The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
 ![MC Common Code](https://s3.amazonaws.com/qp-photo/mc-common-code.PNG)
-
-![Light Dark Theme Colors](https://s3.amazonaws.com/qp-photo/mc-common-colors.PNG)
-
 ![Common Icons](https://s3.amazonaws.com/qp-photo/mc-common-icons.PNG)
 
+::: div {.flex}
+![Light Dark Theme Colors](https://s3.amazonaws.com/qp-photo/mc-common-colors.PNG)
 ![Common Form](https://s3.amazonaws.com/qp-photo/mc-common-form.PNG)
+:::
 
 ![Common Sidebar](https://s3.amazonaws.com/qp-photo/mc-common-sidebar.PNG)
-
 ![Common Table](https://s3.amazonaws.com/qp-photo/mc-common-table.PNG)
 
 Highlights
@@ -132,7 +132,7 @@ Report delivery and SLA notification system
 Four-eyes-check statement audit
 
 : 09/16/2015
-: *AngularJS* *Grunt*
+: *AngularJS* *Grunt* {.labels}
 : Served as a lead front-end architect of *AngularJS* and UI/UX for an enterprise statement 4-eyes-check solution for 25, 000 customers worldwide. I also **served as the sprint master for 8 people team (FA, QA, Dev and Owner etc.) in daily basis**. I drafted the migration plan and collected the preliminary analysis on-boarding 25,000 users to the company banking entitlement system. I also drafted the service layer for communicating with *Auth/WebSSO* entitlement service, which had been used by five other application since.
 
 ![DBvals Statement Audit](https://s3.amazonaws.com/qp-photo/db-dbvals-purple.png)
@@ -184,11 +184,10 @@ Entitlement Analysis
 : Jan 2016
 : Use mongodb dump to analysis complex relationship inside entitlement system
 
-![Entitlement Analysis]([https://s3.amazonaws.com/qp-photo/dbvals-entitlement-analysis.PNG](https://s3.amazonaws.com/qp-photo/dbvals-entitlement-analysis.PNG))
+![Entitlement Analysis](https://s3.amazonaws.com/qp-photo/dbvals-entitlement-analysis.PNG)
 
 ## QPlot
-
-2009 - Current {.sutitle}
+2009 - Current {.subtitle}
 
 ### Contract
 Contracting work with client sponsored projects {.subtitle}
@@ -210,14 +209,14 @@ Guided Workout
 
 : 2/16/15
 : TopFitPros
-: `AngularJS`, `NodeJS`
+: *AngularJS* *NodeJS* {.labels}
 : Proof of concept of recipe ingredients guide application where users are guided to select healthy food based on carbs, proteins, fats and other personal preference. Internal state machine is built so that user will be suggested with choices based on six guidances step by step. At each step, user might be stopped to ask to substitute with healthy food or adjust food quantities based on personal preference.
 
 Trinity
 
 : Feb 2013 - Aug 2013
 : Duke University, contracting for Department of Trininy College of Arts & Sciences, [Duke Trinity](https://trinity.duke.edu/)
-: `Drupal`
+: *Drupal* {.labels}
 : Redesign in Drupal 7 architect of department landing page and new students advising network application. The project splits into discovery, development, theming and support stages, and requires 300 panel layouts, 12 content types, 10 custom modules and 60 custom views and took 8 month and 1000 billable hours to finish for single developer. After the launch the site has been used by 1,400 undergrades, 640 faculties in 50 majors.
 : - Data Modeling: page, panel and widgets
   - Layout Design: create various combination of page layouts
