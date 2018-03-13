@@ -4,6 +4,9 @@
 
 ### Mar
 
+#### 3/13
+- display size of the md file
+
 #### 3/12
 - ~~refine subtitle on themes~~
 - ~~add label styles~~
@@ -28,7 +31,7 @@
 - ~~look for another slider, `Lory`~~
 - ~~add style to subtitle~~
 - ~~add title to the page header, `Flex`~~
-- deflist line height narrow
+- ~~deflist line height narrow~~
 
 ### Feb
 
