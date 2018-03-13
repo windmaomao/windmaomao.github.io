@@ -5,8 +5,9 @@
 ### Mar
 
 #### 3/12
-- refine subtitle on themes
-- add ul/li label styles
+- ~~refine subtitle on themes~~
+- ~~add label styles~~
+- detect debug mode visually
 
 #### 3/8
 - ~~remove bulma break point~~
