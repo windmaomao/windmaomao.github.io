@@ -6,6 +6,7 @@
 
 #### 3/13
 - ~~Keymod prototype~~
+- Create [input source](https://superuser.com/questions/665494/how-to-make-a-custom-keyboard-layout-in-os-x)
 
 #### 3/12
 
