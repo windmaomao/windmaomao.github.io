@@ -7,6 +7,7 @@
 #### 3/15
 - Update 2017 projects
 - Deploy github
+- ~~Update latest repo~~
 
 #### 3/13
 - ~~Keymod prototype~~
@@ -14,7 +15,7 @@
 
 #### 3/12
 
-- 📅 `3/15` Offset `GE` put before expire {.red}
+- ~~📅 `3/15` Offset `GE` put before expire~~
 - ~~Update invest summary~~
 - ~~Gather piece for ideas~~
 - ~~Explore DB share opiton~~
