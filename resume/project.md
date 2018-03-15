@@ -298,7 +298,6 @@ Keymod (aka. Single handed)
 : *Prototype* *OSX*
 : Started couple of years back, but never got finished. This is a redo, but put serious thought on how to experiment and integrate that into daily practice.
 : [Online](https://codepen.io/windmaomao/pen/eMJRqJ)
-: - Prototype the typing online
 
 Github (aka. Knowledgebase)
 
