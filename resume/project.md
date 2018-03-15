@@ -15,17 +15,25 @@
 
 |  Project        | Department      | Start    | Comment |
 | --------------  | --------------- | -------- | ------- |
+| Angular Select  | Open Source     | 2018 Mar |         |
 | Corporate Events| Corporate Action| 2018 Jan | Poc     |
 | Security Conf   | Security Lending| 2018 Jan | Poc     |
 | Global Console2 | Equity          | 2017 Oct |         |
 | Global Console  | Market Clearing | 2017 Jan |         |
 | AOF Form        | Global Markets  | 2016 Jun |         |
+| Kingslanding    | Open Source     | 2016 Apr |         |
 | SLA Events      | CPort           | 2016 Mar |         |
 | Operations Management | MI        | 2016 Feb | Poc     |
 | Entitlement Analysis | CPort      | 2016 Jan | Poc     |
 | DBVals Statement| DBVals          | 2015 Sep |         |
 
 ![Statistics 2016 - 2017](https://s3.amazonaws.com/qp-photo/db-stash-activity.PNG)
+
+
+Angular Select
+
+: Mar 2018
+: Add select angular spec
 
 ### Global Console
 Reusable UI framework for Angular 5 {.subtitle}
@@ -119,6 +127,13 @@ Highlights
   - Page action: Excel like validation and action rules based on user input
   - MVC Model: Extremely fat model design in MVC approach handling business logic
 
+### Kingslanding
+
+: 04/26/16
+: *NodeJS* *Mongoose* *Restify*
+: A quick API server setup using mongoose and restify. Configuration files are used to setup model, routes and restful services.
+: [Repo](https://github.com/windmaomao/kingslanding)
+
 ### SLA Event
 
 Report delivery and SLA notification system
@@ -193,17 +208,24 @@ Entitlement Analysis
 Contracting work with client sponsored projects {.subtitle}
 
 
-|  Project   | Company        | Client  | Start  |Comment|
-| ---------- | -------------  | ------  | ------ | ----- |
+|  Project   | Company        | Client  | Start   |Comment|
+| ---------- | -------------  | ------  | ------  | ----- |
+| Diagram    | Stim           |         | Aug/17  |  |
 | HMS - HSDM | DrupalConnect  | Harvard | Feb/14  | |
 | Medication | RxAnte         |         | Sep/14  | |
 | Awards     | DesignHammer   | PGH     | Nov/13  | |
 | Stemcell   | AlphaMed Press |         | Sep/13  | |
 | Trinity    | Duke University|         | Feb/13  | |
-| TEDAR      | ArchSmart LLC  | DHS     | ?/12  | |
+| TEDAR      | ArchSmart LLC  | DHS     | ?/12    | |
 | PharmTrac  | PlusDelta Tech |         | Feb/12  | |
 | Orders     | DataRecoverMan |         | Apr/11  | |
 
+Stim
+
+: 8/17/17
+: Diagram creation
+: *Prototype* *Angular2* *GoJs*
+: [Codepen](https://codepen.io/windmaomao/pen/prRWKg)
 
 Guided Workout
 
@@ -281,16 +303,17 @@ Company sponsored projects & ideas {.subtitle}
 |  Project           | Start    | Comment |
 | ------------------ | --------:| ------- |
 | Keymod             |  3/01/18 |         |
+| Figure Caption     |  2/13/18 | Open source |
 | Github             |  1/23/18 | Success, redesign of knowledge-base |
 | Statement & Flow   | 12/22/17 | Success, upgraded from Monthly |
 | Account            | 12/24/16 |         |
 | Proture            |  1/04/16 |         |
 | Monthly & Annually | 12/18/16 | Success |
 | Docs to Go         |  1/02/16 |         |
-| Promise Bucket     | 12/26/15 |         |
 | Knowledge-base     | 11/27/15 |         |
 | Qplot Seven        |  8/09/15 |         |
 | PKB Tasks          |  2/21/15 | Success |
+| Environment Color  |  6/17/14 | Open source |
 
 Keymod (aka. Single handed)
 
@@ -298,6 +321,13 @@ Keymod (aka. Single handed)
 : *Prototype* *OSX*
 : Started couple of years back, but never got finished. This is a redo, but put serious thought on how to experiment and integrate that into daily practice.
 : [Online](https://codepen.io/windmaomao/pen/eMJRqJ)
+
+Figure Caption
+
+: 2/13/18
+: *Markdown It* *Plugin*
+: A Markdown It plugin that converts img tag into figure with caption that can be themed
+: [Repo](https://github.com/windmaomao/markdown-it-figure-caption), [Codepen](https://codepen.io/windmaomao/full/xYmMdb)
 
 Github (aka. Knowledgebase)
 
@@ -333,12 +363,6 @@ Docs go
 : Be able to create simple page so that it’ll navigate to all the documentations
 : [Repo](https://bitbucket.org/qplot/docs/overview)
 
-Promise bucket
-
-: 12/26/15
-: Create a shared repo so that we can create unified and centralized place to add APIs and handle APIs.
-: [Repo](https://github.com/windmaomao/promise-bucket)
-
 Knowledge-base
 
 : 11/27/15
@@ -360,6 +384,11 @@ PKB Tasks
 ![PKB Tasks](https://s3.amazonaws.com/qp-photo/pkb_tasks.png)
 ![PKB Calendar](https://s3.amazonaws.com/qp-photo/pkb_times.png)
 ![PKB Tracking](https://s3.amazonaws.com/qp-photo/pkb_tracking.png)
+
+Environment Color
+: 6/17/14
+: Adds an environment indicator color bar to either top or bottom of all pages to indicate if you are working in 'local' or 'production' environment.
+: *Laravel* *Plugin*
 
 ## People Designs
 2014 - {.subtitle}
