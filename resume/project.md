@@ -279,7 +279,7 @@ Simwijzer.nl
 Company sponsored projects & ideas {.subtitle}
 
 |  Project           | Start    | Comment |
-| ------------------ | -------- | ------- |
+| ------------------ | --------:| ------- |
 | Keymod             |  3/01/18 |         |
 | Github             |  1/23/18 | Success, redesign of knowledge-base |
 | Statement & Flow   | 12/22/17 | Success, upgraded from Monthly |
