@@ -5,7 +5,8 @@
 ### Mar
 
 #### 3/15
-- Missing 2017 projects
+- Update 2017 projects
+- Deploy github
 
 #### 3/13
 - ~~Keymod prototype~~
