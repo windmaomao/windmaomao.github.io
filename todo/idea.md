@@ -11,6 +11,7 @@ Grid Designer
 Keymod
 
 : 2015
-: - Be able to type characters using subset of keys
-  - Allow multiple mapping of keys
-  - Can see the typing results on screen
+: - Be able to type single handed, maybe with help of foot
+  - Prototype the typing [online](https://codepen.io/windmaomao/pen/eMJRqJ)
+  - Create input source for osx
+  - Support basic training lessons
