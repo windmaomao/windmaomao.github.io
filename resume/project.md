@@ -278,47 +278,67 @@ Simwijzer.nl
 ### Internal
 Company sponsored projects & ideas {.subtitle}
 
-|  Project    | Company        | Start   | Comment |
-| ----------- | -------------  | ------- | ------- |
-| Github      | QPlot          | 1/23/18 |         |
+|  Project           | Start    | Comment |
+| ------------------ | -------- | ------- |
+| Keymod             |  3/01/18 |         |
+| Github             |  1/23/18 | Success, redesign of knowledge-base |
+| Statement & Flow   | 12/22/17 | Success, upgraded from Monthly |
+| Account            | 12/24/16 |         |
+| Proture            |  1/04/16 |         |
+| Monthly & Annually | 12/18/16 | Success |
+| Docs to Go         |  1/02/16 |         |
+| Promise Bucket     | 12/26/15 |         |
+| Knowledge-base     | 11/27/15 |         |
+| Qplot Seven        |  8/09/15 |         |
+| PKB Tasks          |  2/21/15 | Success |
+
+Keymod (aka. Single handed)
+
+:  3/01/18
+: *Prototype* *OSX*
+: Started couple of years back, but never got finished. This is a redo, but put serious thought on how to experiment and integrate that into daily practice.
+: [Online](https://codepen.io/windmaomao/pen/eMJRqJ)
+: - Prototype the typing online
 
 Github (aka. Knowledgebase)
+
 : 1/23/18
-: `Vue`, `Markdown`, `Github`
-: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. 
+: *Vue* *Markdown* *Github*
+: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. And from idea to production it takes less than one month. 
 : [Online](https://windmaomao.github.io),[Repo](https://github.com/windmaomao/windmaomao.github.io)
 : - Use `Codepen` to prototype the site and features
   - Use `Markdown` local to draft all documentations
   - Auto deployment via `Github`
 
 Account (aka. Qplot 7)
+
 : 12/24/16
 : Finally we need some consistent platform to build legacy data application, ex. resume etc.
-: https://bitbucket.org/qplot/account
+: [Repo](https://bitbucket.org/qplot/account)
 
 Proture
 : 1/4/16
 : Create a workflow so that building a quick mobile app using business data.
-: `Firebase`, `Angular`, `Outliner`
-: https://bitbucket.org/qplot/proture
+: *Firebase* *Angular* *Outliner*
+: [Repo](https://bitbucket.org/qplot/proture)
 
 Monthly and Annually
 : 12/18/16
+: *Google Drive* *Excel*
 : Need to have a centralized location to keep track of all money coming in and out of the system therefore serves as a base for stats. It evovles  to keep track of balance, flow of all bank and investment accounts for each month and year for 2012 - 2017. It splits into other files at 2018.
-: `Google Drive`, `Excel`
-: https://docs.google.com/spreadsheets/d/1mZB7fcpZYH2kqISwrdqoeMNSwOK5IW6DDAZJVUhiKIA/edit#gid=58175055
+: [Online](https://docs.google.com/spreadsheets/d/1mZB7fcpZYH2kqISwrdqoeMNSwOK5IW6DDAZJVUhiKIA/edit#gid=58175055)
 
 Docs go
 
 : 1/2/16
 : Be able to create simple page so that it’ll navigate to all the documentations
-: https://bitbucket.org/qplot/docs/overview
+: [Repo](https://bitbucket.org/qplot/docs/overview)
 
 Promise bucket
 
-: https://github.com/windmaomao/promise-bucket
 : 12/26/15
 : Create a shared repo so that we can create unified and centralized place to add APIs and handle APIs.
+: [Repo](https://github.com/windmaomao/promise-bucket)
 
 Knowledge-base
 
@@ -329,19 +349,18 @@ Qplot Seven
 
 : 8/9/15
 : QPLOT website, blog, and some experiment projects
-: https://bitbucket.org/qplot/qplot
+: [Repo](https://bitbucket.org/qplot/qplot)
 
 PKB Tasks
 
 : 2/21/15
 : PKB ended up with tracking the project tasks and timesheet for Qplot. It’s very effective and has been used for couple of years since then. It's low cost to build and maintain. All timesheets has been checked into repo.
-: `AngularJS`, `NodeJS`
-: https://bitbucket.org/qplot/qplot-pkb
+: *AngularJS *NodeJS*
+: [Repo](https://bitbucket.org/qplot/qplot-pkb)
 
 ![PKB Tasks](https://s3.amazonaws.com/qp-photo/pkb_tasks.png)
 ![PKB Calendar](https://s3.amazonaws.com/qp-photo/pkb_times.png)
 ![PKB Tracking](https://s3.amazonaws.com/qp-photo/pkb_tracking.png)
-
 
 ## People Designs
 2014 - {.subtitle}
