@@ -8,6 +8,7 @@
 
 | Symbol | Industry  |  Cost |  Net | Type | Notes |
 | ------ | --------- | ----: | ---: | ---- | ----- |
+| GE P17 | Industry | $67  | $197 | short|     |
 | DBC    | Commodity | $3230 |  $81 | long |       |
 | UNG    | Gas | $245 | -$20 |  long |     |
 | RIOT    | Bitcoin | $27  | -$25 |  long |     |
@@ -18,7 +19,8 @@
 
 | Symbol | Industry | Cost |  Net | Type |  Notes |
 | ------ | -------- | ---: | ---: | ---- | ----- |
-| DBC    | Commodity | $3230 | $81 |  long |     |
+| GE P17 | Industry | $67  | $197 | short|     |
+| DBC    | Commodity| $3230| $81  | long |     |
 
 #### Owned
 
