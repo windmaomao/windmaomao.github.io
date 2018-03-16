@@ -26,14 +26,16 @@ Recognition Award [^recognition] :boom:
 
 ## Experience
 
+
 Deutsche Bank
 
-: UI AngularJS Architect
 : Sep 2015 - Current
+: UI AngularJS Architect
+: *Angular*{.l} *Sass*{.l} *Webpack*{.l}
 
 Serves as UI and _AngularJS_ architect in Market Clearing domain for 45+ banking applications.
 
-I created branding header, menu, fly-in menu, and form etc. that supports light/dark themes and can be plugged in with no more than 10 lines of code. All UI elements are also domain-aware with swappable authorization services maintaining user permissions and preferences.
+> I created branding header, menu, fly-in menu, and form etc. that supports light/dark themes and can be plugged in with no more than 10 lines of code. All UI elements are also domain-aware with swappable authorization services maintaining user permissions and preferences.
 
 The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
@@ -64,6 +66,7 @@ Reusable Component
   - Service supporting both *Http* enabled spinning notification and manual toggle
   - Service supporting both generic user prompt and custom popup dialogs
 
+
 ## Past Experience
 
 > "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to ==take vague customer requirements and turn them into a fantastic software solution== never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies [^linkedIn]
@@ -72,8 +75,11 @@ People Designs
 
 : Oct 2014 - Aug 2015
 : Lead AngularJS / Laravel Developer
+: *Laravel*{.l} *AngularJS*{.l} *Sass*{.l}
 
-Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program to help people prepare the end of their life. Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe. 
+Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program [PrepareForYourCare.org](https://prepareforyourcare.org/welcome). Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe. 
+
+![Prepare for your care](https://lh3.googleusercontent.com/I4xr1EBWDPej9CVO5J_x17orxY8pgsNqXUtubRMnS0EdFaR231U-MmXkSU1msYj4Y88R6jp4TXAOPXbFEqsapEUYAOFYFPT6SN-lW7E8mtJuKhH9YUFE2C6rWODGrgbGJyofRQ)
 
 Architect & Design
 
@@ -99,6 +105,7 @@ RxAnte
 
 : Sep 2014 - Mar 2015
 : UI / Drupal Developer
+: *Drupal*{.l} *CSS*{.l}
 
 Joined a second stage healthcare startup company working as a UI / *Drupal* developer. Provided enterprise Drupal development, support and deployment for a hospital/insurance/doctor relationship web application which helps their patients to adhere with their existing medications therefore upgrade ranking star in the healthcare system. I was responsive for refining Dashboard to present data collected from doctor office and insurance company and providing model prediction display of the patient behaviors. Analyzed data for each account (multi-tenant) are sampled from 10-20 contracts with average 0.5 to 5 millions patients.
 
@@ -107,12 +114,15 @@ Duke University
 : Jan 2013 - Sep 2014
 : Lead UI / Drupal Developer
 
+*Drupal* *CSS* {.labels}
+
 Developed *Drupal* front facing websites for Duke medical center and Duke university building landing pages for new students advising network application. The project splits into discovery, development, theming and support stages, and requires 300 panel layouts, 12 content types, 10 custom modules and 60 custom views and took 8 months and 1000 billable hours to finish for single developer. After the launch the site has been used by 1,400 undergraduates, 640 faculties in 50 majors.
 
 PlusDelta Technologies
 
 : Jun 2012 - Dec 2013
 : Lead UI / Drupal Developer
+: *Drupal*{.l} *Laravel*{.l} *CSS*{.l}
 
 Joined a startup healthcare company, worked as a UI / *Drupal* developer building the flagship product that tracks medication inside hospitals like FedEx. I help draft interface design and build a medication tracking and workflow process improvement solution for hospital pharmacies that uses handheld smart *mobile* technology with an integrated web-enabled software that verifies, records and monitors every step in the process of medication preparation, dispensing, and delivery. The project took 1 year with 2000 billable hours to finish and has been deployed and used by 4 hospitals.
 
@@ -120,15 +130,19 @@ Teryn Ashley Enterprises
 
 : Apr 2011 - Jan 2012
 : Lead UI / PHP Developer
+: *PHP*{.l} *CSS*{.l}
 
 Developed a webinar replay system of pre-recorded webinar that can be watched by invited users on preset (recurring) time. I was responsible for gathering business requirement and prototyping the UI design for business workflow. I also worked with an offshore *PHP* developer and we together coded frontend and backend logic for serving videos via *PHP* and *MySQL*.
+
+![Replay Webinar System](https://s3.amazonaws.com/qp-photo/webinarfunnel_ui.jpg)
 
 DataRecoveryMan
 
 : Apr 2011 - Dec 2011
 : UI Developer
+: *PHP*{.l}
 
-Helped DataRecoveryMan.com build an application for managing inventories of hard drive repair order, tracking order status and uploading order invoice. I was responsible for gathering the business requirement, prototyping design from business workflow and working with an offshore *PHP* developer to deliver the application.
+Helped [DataRecoveryMan.com](DataRecoveryMan.com) build an application for managing inventories of hard drive repair order, tracking order status and uploading order invoice. I was responsible for gathering the business requirement, prototyping design from business workflow and working with an offshore *PHP* developer to deliver the application.
 
 ## Education
 

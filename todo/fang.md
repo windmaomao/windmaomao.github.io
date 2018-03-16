@@ -5,7 +5,7 @@
 ### Mar
 
 #### 3/15
-- Update 2017 projects
+- Update projects & photos
 - ~~Deploy github~~
 - ~~Update latest repo~~
 
