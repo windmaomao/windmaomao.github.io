@@ -2,7 +2,8 @@
 export default {
   name: 'Slider',
   props: {
-    menu: Array
+    menu: Array,
+    disabled: Boolean,
   },
   data: () => ({
     open: false,
@@ -38,6 +39,9 @@ export default {
       } else {
         return null
       }
+    }
+    if (!this.menu || this.menu.length < 1) {
+      return null;
     }
     return (
       <div id="slider">
