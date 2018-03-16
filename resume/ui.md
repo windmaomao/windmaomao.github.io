@@ -175,6 +175,13 @@ Johns Hopkins University
 : Sep 2000 - Sep 2006
 : Bio-molecular chemical engineering, Ph.D.
 
+
+
+East China University of Science and Technology
+
+: Spe 1996 - Sep 2000
+: Department of chemical engineering, Bachelor
+
 ## Others
 
 **Hobby 3D Rendering**

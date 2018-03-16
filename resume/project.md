@@ -141,7 +141,7 @@ Report delivery and SLA notification system
 : 03/16/2016
 : *NodeJS* *AngularJS* *Kingslanding* {.labels}
 : Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
-  
+
 ### DBVals Audit
 
 Four-eyes-check statement audit
@@ -245,12 +245,17 @@ Trinity
   - User Interface: apply layout pattern to multi departments
   - Directory Search: integrated with internal directory search
 
+![Trinity Major & Minor](https://s3.amazonaws.com/qp-photo/trinity_major2.jpeg)
+
+![Trinity Advising Circle](https://s3.amazonaws.com/qp-photo/advising_circle.png)
+
 TEDAR
 
-: 2012
+: July 2012 - Jan 2013
 : ArchSmart LLC, contracting for Department of Homeland Security
 : *Drupal* *Solr* {.labels}
 : [Test&Evaluation Data Archival Repo](https://www.sbir.gov/sbirsearch/detail/385521) will provide a repository for T&E event data, M&S event data, and other analysis event data, consisting of very large amounts of processed and raw structured and unstructured detection device data collected by T&E and M&S events and analyses of these data. Authorized users will be able to search for and access these data collections and retrieve data relevant to their business needs, such as performing engineering analyses and studies.
+: Contractor (telecommuting, remote city) Drupal architect and developer for government inventory tracking system where nuclear device documents and reports are processed to be searchable across US collaboration units. Access control list design is my focus where each organization needs to be able to assign personnel/role to manage documents per document per user or user role basis. 
 
 PharmTrac 
 
@@ -263,6 +268,29 @@ PharmTrac
   - Mobile Integration: design API to connet with devices
   - Tracking Wallboard: large screen monitor for hospital activity.
 
+![Pharmtrac Workflow](https://s3.amazonaws.com/qp-photo/pharmtrac_workflow.png)
+
+![Pharmtrac Settings](https://s3.amazonaws.com/qp-photo/pharmtrac_settings.png)
+
+
+Duke DCI-IT Reporting
+
+: Apr - Jun 2012
+: Duke University Medical Center
+: *Drupal* {.labels}
+: Drupal 6 module & theme development. It allow users of different group to run reports and charts over oracle database queries. Reports/Charts can be run and viewed through website, email or cron service. Reports can be accessed by users from different group over the campus and are highly restricted by group member only. Users can login to the system through LDAP without creating multiple accounts. All user functionalities can be accessed through user or group Dashboard.
+: Contractor (telecommuting, same city) Drupal architect and developer for hospital reporting center where user can login through Microsoft Ldap and run report and chart with scheduling capability. Oracle database access is required, custom content report module and admin theme are designed and integrated through Drupal 6 atrium (or commons) profile.
+
+WebinarFunnel
+
+: 03/03/2011
+: Teryn Ashley Enterprises
+: *PHP* *MySQL* *Video* {.labels}
+: Developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time. A webinar replay system , integrated with *Infusionsoft*, plays pre-record webinar that can be watched on preset (recurring) time. 
+
+![Replay Webinar System](https://s3.amazonaws.com/qp-photo/webinarfunnel_ui.jpg)
+![Replay Webinar System](https://s3.amazonaws.com/qp-photo/webinarfunnel_user.gif)
+
 JQF Management
 
 : 06/11/2011
@@ -270,15 +298,6 @@ JQF Management
 : [Apartment rental that you can trust](http://aggievillas.net/). Wordpress project that I worked alone for client Cindy Fenty who manages couple of real estate properties.
 
 ![JQF Management](https://s3.amazonaws.com/qp-photo/jqf_management.png)
-
-WebinarFunnel
-
-: 03/03/2011
-: Teryn Ashley Enterprises
-: *PHP* *MySQL* *Video* {.labels}
-: Developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time.
-
-![Replay Webinar System](https://s3.amazonaws.com/qp-photo/webinarfunnel_ui.jpg)
 
 DataRecoverMan.com Orders
 
@@ -293,7 +312,7 @@ Simwijzer.nl
 
 : 09/06/2010
 : *PHP* {.labels}
-: Choose from variety of Sim cards from different minutes, providers, and price plans.
+: Choose from variety of Sim cards from different minutes, providers, and price plans. A sim card sale affiliation site where contracts can be queried by combination of user selection criterion.
 
 ![Simcard Plans](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif)
 

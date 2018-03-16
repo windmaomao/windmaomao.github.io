@@ -149,7 +149,14 @@ Helped [DataRecoveryMan.com](DataRecoveryMan.com) build an application for manag
 Johns Hopkins University
 
 : Sep 2000 - Sep 2006
-: Bio-molecular chemical engineering, Ph.D.
+: Bio-molecular chemical engineering, M.S and Ph.D.
+
+
+
+East China University of Science and Technology
+
+: Spe 1996 - Sep 2000
+: Department of chemical engineering, Bachelor
 
 ## Others
 
