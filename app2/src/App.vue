@@ -13,8 +13,8 @@ export default {
   },
   data () {
     return {
-      // debug: false,
-      debug: true,
+      debug: false,
+      // debug: true,
       debugDomain: 'http://localhost:3000/',
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
