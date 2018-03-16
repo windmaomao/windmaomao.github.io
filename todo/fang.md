@@ -6,7 +6,7 @@
 
 #### 3/15
 - Update 2017 projects
-- Deploy github
+- ~~Deploy github~~
 - ~~Update latest repo~~
 
 #### 3/13
@@ -19,7 +19,7 @@
 - ~~Update invest summary~~
 - ~~Gather piece for ideas~~
 - ~~Explore DB share opiton~~
-- Add [manifest](https://manifest-validator.appspot.com/) to github
+- ~~Add [manifest](https://manifest-validator.appspot.com/) to github~~
 - ~~Update db projects~~
 
 #### 3/7

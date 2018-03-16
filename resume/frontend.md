@@ -37,11 +37,7 @@ I created branding header, menu, fly-in menu, and form etc. that supports light/
 
 The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates onboarding of new apps.
 
-```html
-  <div mc-body class="content-mc">
-    <h1>Hello World</h1>
-  </div>
-```
+![Custom Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)
 
 Architect & Design
 
@@ -57,6 +53,9 @@ Architect & Design
 Reusable Component
 
 : - Reusable branding header, footer, menu as well as pluggable generic services
+  - Custom form layout and field validation via template and reactive form engine
+  - Use *angular-calendar* to create custom montly calendar and events view
+  - Theme pie, column, statck charts with consistent look and feel
   - Directives for single and multiple select form input with consistent look and feel
   - Directives for date picker and date range picker with consistent look and feel
   - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
