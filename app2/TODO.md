@@ -6,6 +6,7 @@
 
 #### 3/13
 - display size of the md file
+- bug, disable the logo menu for non-admin
 
 #### 3/12
 - ~~refine subtitle on themes~~

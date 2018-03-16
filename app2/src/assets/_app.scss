@@ -3,8 +3,10 @@
   -moz-osx-font-smoothing: grayscale;
   opacity: 1;
 }
-#app.spinning {
-  opacity: 0.4;
+#app {
+  &.spinning {
+    opacity: 0.4;
+  }
 }
 
 // #app div {

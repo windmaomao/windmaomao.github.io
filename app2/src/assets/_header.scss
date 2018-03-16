@@ -4,6 +4,9 @@
 .navbar {
   font-size: 16px;
 }
+.debug .navbar {
+  border-top: 5px solid red;
+}
 .navbar p {
   margin: 1em 0;
 }

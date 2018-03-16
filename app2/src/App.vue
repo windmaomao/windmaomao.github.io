@@ -13,8 +13,8 @@ export default {
   },
   data () {
     return {
-      debug: false,
-      // debug: true,
+      // debug: false,
+      debug: true,
       debugDomain: 'http://localhost:3000/',
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
@@ -27,7 +27,7 @@ export default {
     }
   },
   template: `
-    <div id="app">
+    <div id="app" :class="{ debug: debug }">
       <Slider :menu="menu" @select="menuSelected" />
       <Main :source="source" />
       <Themer @theme="themeSwitched" />
