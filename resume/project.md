@@ -19,8 +19,8 @@
 | Corporate Events| Corporate Action| 2018 Jan | Poc     |
 | Security Conf   | Security Lending| 2018 Jan | Poc     |
 | Global Console2 | Equity          | 2017 Oct |         |
-| Global Console  | Market Clearing | 2017 Jan |         |
-| AOF Form        | Global Markets  | 2016 Jun |         |
+| Market Clearing Console | Market Clearing | 2017 Jan | |
+| GMI AOF Form    | Global Markets  | 2016 Jun |         |
 | Kingslanding    | Open Source     | 2016 Apr |         |
 | SLA Events      | CPort           | 2016 Mar |         |
 | Operations Management | MI        | 2016 Feb | Poc     |
@@ -101,7 +101,7 @@ Highlights
   * CSS: Modular layout and component design
   * Testing: Work with a test team to facilliate UI automation
 
-### AOF Account
+### GMI AOF Account
 
 Bank account opening form
 
@@ -188,6 +188,7 @@ Agency Security Lending
 Operations Management Dashboard
 
 : Feb 2016
+: MI
 : Prototype custom table for dashboard 
 : - Need data for each sub product by region
   - Current levels (T)
@@ -197,6 +198,7 @@ Operations Management Dashboard
 Entitlement Analysis 
 
 : Jan 2016
+: *NodeJS*{.l}
 : Use mongodb dump to analysis complex relationship inside entitlement system
 
 ![Entitlement Analysis](https://s3.amazonaws.com/qp-photo/dbvals-entitlement-analysis.PNG)
@@ -208,23 +210,45 @@ Entitlement Analysis
 Contracting work with client sponsored projects {.subtitle}
 
 
-|  Project   | Company        | Client  | Start   |Comment|
-| ---------- | -------------  | ------  | ------  | ----- |
-| Diagram    | Stim           |         | Aug/17  |  |
-| HMS - HSDM | DrupalConnect  | Harvard | Feb/14  | |
-| Medication | RxAnte         |         | Sep/14  | |
-| Awards     | DesignHammer   | PGH     | Nov/13  | |
-| Stemcell   | AlphaMed Press |         | Sep/13  | |
-| Trinity    | Duke University|         | Feb/13  | |
-| TEDAR      | ArchSmart LLC  | DHS     | ?/12    | |
-| PharmTrac  | PlusDelta Tech |         | Feb/12  | |
-| Orders     | DataRecoverMan |         | Apr/11  | |
+|  Project       | Company        | Client  | Start     |
+| -------------- | -------------  | ------  | --------  |
+| Diagram        | Stim           |         | 2017 Aug  |
+| Prepare 3      | PeopleDesigns  |         | 2016 Aug  |
+| SRCE           | PeopleDesigns  |         | 2016 Jan  |
+| CleanAir       | CleanAir       |         | 2015 Nov  |
+| Guided Workout | TopFitPros     |         | 2015 Jun  |
+| Admin Portal   | Ndustrial IO   |         | 2015 May  |
+| Admin App      | Medecision     |         | 2015 May  |
+| NCPS Drupal    | NC Public School |       | 2015 Apr  | 
+| Recipe         | TopFitPros     |         | 2015 Feb  |
+| Chipra         | CCNC           |         | 2015 Feb  |
+| NewStone Realty | NSR           |         | 2015 Jan  |
+| Veolia         | ICFI           |         | 2014 Nov  |
+| Saint Gobain   | Saint Gobain   |         | 2014 Sep  |
+| Recovery       | Recovery Hub   |         | 2014 Sep  |
+| DataTools      | RxAnte         |         | 2014 Sep  |
+| Prepare 2      | PeopleDesigns  |         | 2014 Aug  |
+| OBChat         | PeopleDesigns  |         | 2014 May  |
+| HAARP          | DrupalConnect  | Harvard | 2014 Apr  |
+| Stemcell       | AlphaMed Press |         | 2014 Jan  |
+| Awards         | DesignHammer   | PGH     | 2013 Oct  |
+| Oncology       | AlphaMed Press |         | 2013 Sep  |
+| Advising Circle| Duke University|         | 2013 Jun  |
+| Trinity        | Duke University|         | 2013 Feb  |
+| TEDAR          | ArchSmart LLC  | DHS     | 2012 Jul  |
+| ??             | Metrostar      |         | 2012 May  |
+|DCI-IT Reporting| Duke Medical   |         | 2012 Apr  |
+| PharmTrac      | PlusDelta Tech |         | 2012 Feb  |
+| WebinarFunnel  | Teryn Ashley   |         | 2011 Mar  |
+| JQF Management | JQF            |         | 2011 Jun  |
+| Orders         | DataRecoverMan |         | 2011 Mar  |
+| Simwijzer      |                |         | 2010 Sep  |
 
 Stim
 
 : 8/17/17
 : Diagram creation
-: *Prototype* *Angular2* *GoJs*
+: *Prototype* *Angular2* *GoJs* {.labels}
 : [Codepen](https://codepen.io/windmaomao/pen/prRWKg)
 
 Guided Workout
@@ -233,6 +257,68 @@ Guided Workout
 : TopFitPros
 : *AngularJS* *NodeJS* {.labels}
 : Proof of concept of recipe ingredients guide application where users are guided to select healthy food based on carbs, proteins, fats and other personal preference. Internal state machine is built so that user will be suggested with choices based on six guidances step by step. At each step, user might be stopped to ask to substitute with healthy food or adjust food quantities based on personal preference.
+
+Meds Dashboard
+
+: Sep 2014 - Mar 2015
+: RxAnte
+: Provided enterprise PHP/Drupal development, support and deployment for a hospital/insurance/doctor relationship web application which helps their patients to adhere with their existing medications therefore upgrade ranking star in the healthcare system. The projects creates dashboard to present data collected from doctor office and insurance company, and try to predict the patient behaviors. Analyzed data for each account (multi-tenent) are sampled from 10-20 contracts with average 0.5 to 5 millions patients.
+: - Environment: Drupal 7 deployed in centOS with vagrant support
+  - HIPPA Server: HIPPA for health care privacy with two factor VPN protections
+  - Continuous Integration: Continious integrated dev server with auto git pull
+  - Service API: Use Slim framework to build rest service API that hosts all data
+  - Theming: Drupal theme and renderable array are extensively used
+  - IE 8 Compatibility: Resove background, round corner, table-cell and css compression
+
+HMS -HSDM
+
+: Harvard
+: Feb - May 2014
+: Provided Drupal 7 architect and development for Harvard university HR hiring process. The project creates 8 content types, 6 user roles, and 6 custom workflow supporting 5 distinct hiring state. Fields are shared between different content and has custom permission control built-in to limit access by user roles and hiring states. Automatic tests has been performed to rigorously make sure each user role and hiring state is implemented correctly.
+: - Data Modeling: candidate, instructor, location etc
+  - Workflow and Permissions:design workflow states and transition permissions
+  - Automated Test:Design automatic web test to test user role and permissions
+  - Form Customization: conditional fields with roles permissions
+
+
+Stemcell 
+
+: Jan - Feb 2014
+: AlphaMed Press
+: Drupal 7 migration and redesign. Redesign of web portal hosting latest journal article migrated from a legacy Joomla database. Lead a team of 5 with two backend and one front-end developers, and one content manager to accomplish the site. And we hit a deadline right before the site is ready for two conference audience across US in cutting edge cancer research communities. (150 hours)
+: - Design migration strategy from Joomla
+  - Construct 25 pages with various layouts
+  - Two week deadline met, finish fast and deploy solid
+
+Awards
+
+: Nov 2013 - Apr 2014
+: DesignHammer
+: Practice Greenhealth
+: Provided Drupal 7 architect and development for a hospital startup environmental excellence awards application for more accurately meanture and track sustainbility performance of hospitals by allowing members to assess and track sustainability accomplishments. 320 awards (by 2013) are given to health care facilities and business members that show achievement in varying levels of excellence in sustainability overt he course of the calendar year. The project evloves into discovery, phase I, phase II and deployment stages, and took 9 month and 2000 billable hours by a team with two developers (me as the lead) and one project manager. The site has been launched with stats of 800,000 responses, 200 hospitals and 25,000 peek daily page views.
+: - Drupal Migration: Custom module to handle large complicated dataset migration from legacy excel sheets
+  - Organic Group: When application is created, 8000 questions are auto-populated inside
+  - Form API: Questions are presented using Form API with input type dynamically populated from database
+  - Dashboard Design: Display all application percentage completion status for each client
+  - Review Workflow: Reviewer dashboard to assign, track and manage review process
+  - Cron & Batch: Batch job is heavily used for time-consuming functionalities, ex. Creation and reporting
+  - Mathematic Formula: Excel cell calculation is implemented between questions upon frone-end
+  - Score Management: Points are assigned for each question, and totaled for each application
+  - Report & Export: Mass data assignment with import and export capability
+  - Browser Compatibility: IE 7,8,9 38% user using IE7 and 96% using Windows
+
+Oncology
+
+: Sep 2013 - Feb 2014
+: AlphaMed Press
+: Redesign in Drupal 7 architect and migration from legacy Joomla site of two flagship sites Stemcell and Oncologist which integrateds with iPhone/iPad app using “One Web” solution and pulling articles daily through Stanford Hirewire. The site requires 8 user roles, 22 content types, 26 custom modules and 160 admin views. They hosts 3000 articles, 48,000 registered users and 120,000 unique visits per month.
+
+: - Data Modeling: article, interactive Ads, image, video and poll etc
+  - Data Migration:custom migration from Stanford HighWire
+  - User Interface: desktop / mobile theming and interaction
+  - Content Management: import/export and manage content categories
+
+
 
 Trinity
 
@@ -247,7 +333,17 @@ Trinity
 
 ![Trinity Major & Minor](https://s3.amazonaws.com/qp-photo/trinity_major2.jpeg)
 
+Advising Network
+
+: Drupal 7 development. Allows students and mentors to work together to gather and assess
+artifacts and evidence of student learning, and engages this process through a core set of professional mentors and allied colleagues. Team with one php developer and project manager are assembled and provided to work with one php developer, content manager and director of the
+department. (640 hours)
+: - Design feeds and import from various of data source
+  - Custom template design to display advising board circles
+  - Allow content manager to manage faculty profiles
+
 ![Trinity Advising Circle](https://s3.amazonaws.com/qp-photo/advising_circle.png)
+
 
 TEDAR
 
@@ -255,7 +351,9 @@ TEDAR
 : ArchSmart LLC, contracting for Department of Homeland Security
 : *Drupal* *Solr* {.labels}
 : [Test&Evaluation Data Archival Repo](https://www.sbir.gov/sbirsearch/detail/385521) will provide a repository for T&E event data, M&S event data, and other analysis event data, consisting of very large amounts of processed and raw structured and unstructured detection device data collected by T&E and M&S events and analyses of these data. Authorized users will be able to search for and access these data collections and retrieve data relevant to their business needs, such as performing engineering analyses and studies.
-: Contractor (telecommuting, remote city) Drupal architect and developer for government inventory tracking system where nuclear device documents and reports are processed to be searchable across US collaboration units. Access control list design is my focus where each organization needs to be able to assign personnel/role to manage documents per document per user or user role basis. 
+: Contractor (telecommuting, remote city) Drupal architect and developer for government inventory tracking system where nuclear device documents and reports are processed to be searchable across US collaboration units. Access control list design is my focus where each organization needs to be able to assign personnel/role to manage documents per document per user or user role basis.  (250 hours)
+: - Evaluate application
+  - Custom module design
 
 PharmTrac 
 
