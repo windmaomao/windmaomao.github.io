@@ -4,9 +4,18 @@
 
 ### Mar
 
+#### 3/13
+- display size of the md file
+- ~~bug, disable the logo menu for non-admin~~
+
+#### 3/12
+- ~~refine subtitle on themes~~
+- ~~add label styles~~
+- ~~detect debug mode visually~~
+
 #### 3/8
-- remove bulma break point
-- buy on subtitle on small screen
+- ~~remove bulma break point~~
+- bug on subtitle on small screen
 
 #### 3/5
 - ~~add green/red style~~
@@ -23,7 +32,7 @@
 - ~~look for another slider, `Lory`~~
 - ~~add style to subtitle~~
 - ~~add title to the page header, `Flex`~~
-- deflist line height narrow
+- ~~deflist line height narrow~~
 
 ### Feb
 

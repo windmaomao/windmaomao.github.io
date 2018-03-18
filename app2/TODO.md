@@ -4,6 +4,9 @@
 
 ### Mar
 
+#### 3/17
+- add divider for h2
+
 #### 3/13
 - display size of the md file
 - ~~bug, disable the logo menu for non-admin~~
