@@ -274,3 +274,162 @@ Early Bird Gets Wormed
 ## 7 Portfolio Policy for the Enterprising Investor : The Positive Side
 
 
+But is it not true, the reader may ask, that the really big fortunes from common stocks have been garnered by those who made a substantial commitment in the early years of a company in whose future they had great confidence, and who held their original shares unwaveringly while they increased 100-fold or more in value? The answer is “Yes.” But the big fortunes from single-company investments are almost always realized by persons who have a close relationship with the particular company—through employment, family connection, etc.—which justifies them in placing a large part of their resources in one medium and holding on to this commitment through all vicissitudes, despite numerous temptations to sell out at apparently high prices along the way. An investor without such close personal contact will constantly be faced with the question of whether too large a portion of his funds are in this one medium.
+
+### Recommended Fields
+
+To obtain better than average investment results over a long pull requires a policy of selection or operation possessing a twofold merit: 
+
+- (1) It must meet objective or rational tests of underlying soundness; and
+- (2) it must be different from the policy followed by most investors or speculators. 
+
+Our experience and study leads us to recommend three investment approaches that meet these criteria. They differ rather widely from one another, and each may require a different type of knowledge and temperament on the part of those who assay it.
+
+The Relatively Unpopular Large Company
+
+: If we assume that it is the habit of the market to overvalue common stocks which have been showing excellent growth or are glamorous for some other reason, it is logical to expect that it will undervalue—relatively, at least—companies that are out of favor because of unsatisfactory developments of a temporary nature. This may be set down as a fundamental law of the stock market, and it suggests an investment approach that should prove both conservative and promising.
+
+Purchase of Bargain Issues
+
+: We define a bargain issue as one which, on the basis of facts established by analysis, appears to be worth considerably more than it is selling for. The genus includes bonds and preferred stocks selling well under par, as well as common stocks. To be as concrete as possible, let us suggest that an issue is not a true “bargain” unless the indicated value is at least 50% more than the price. What kind of facts would warrant the conclusion that so great a discrepancy exists? How do bargains come into existence, and how does the investor profit from them?
+
+: The same vagaries of the market place that recurrently establish a bargain condition in the general list account for the existence of many individual bargains at almost all market levels. The market is fond of making mountains out of molehills and exaggerating ordinary vicissitudes into major setbacks.* Even a mere lack of interest or enthusiasm may impel a price decline to absurdly low levels. Thus we have what appear to be two major sources of undervaluation: (1) currently disappointing results and (2) protracted neglect or unpopularity.
+
+: The type of bargain issue that can be most readily identified is a common stock that sells for less than the company’s net working capital alone, after deducting all prior obligations.* This would mean that the buyer would pay nothing at all for the fixed assets—buildings, machinery, etc., or any good-will items that might exist. Very few companies turn out to have an ultimate value less than the working capital alone, although scattered instances may be found. The surprising thing, rather, is that there have been so many enterprises obtainable which have been valued in the market on this bargain basis. A compilation made in 1957, when the market’s level was by no means low, disclosed about 150 of such common stocks. In Table 7-4 we summarize the result of buying, on December 31, 1957, one share of each of the 85 companies in that list for which data appeared in Standard & Poor’s Monthly Stock Guide, and holding them for two years.
+
+Special Situations, or "Workouts"
+
+: The underlying factor here is the tendency of the security markets to undervalue issues that are involved in any sort of complicated legal proceedings. An old Wall Street motto has been: “Never buy into a lawsuit.” This may be sound advice to the speculator seeking quick action on his holdings. But the adoption of this attitude by the general public is bound to create bargain opportunities in the securities affected by it, since the prejudice against them holds their prices down to unduly low levels.*
+
+### Broader Implications
+of Our Rules for Investment {.subtitle}
+
+It follows from this reasoning that the majority of security owners should elect the defensive classification. They do not have the time, or the determination, or the mental equipment to embark upon investing as a quasi-business. **They should therefore be satisfied with the excellent return now obtainable from a defensive portfolio (and with even less), and they should stoutly resist the recurrent temptation to increase this return by deviating into other paths.**
+
+In our recommendations and caveats for this group of investors we have attempted to apply such business standards. In those for the defensive investor we have been guided largely by the three requirements of underlying safety, simplicity of choice, and promise of satisfactory results, in terms of psychology as well as arithmetic. The use of these criteria has led us to exclude from the field of recommended investment a number of security classes that are normally regarded as suitable for various kinds of investors.
+
+Let us consider a little more fully than before what is implied in these exclusions. We have advised against the purchase at “full prices” of three important categories of securities: 
+
+- (1) foreign bonds, 
+- (2) ordinary preferred stocks, and 
+- (3) secondary common stocks, including, of course, original offerings of such issues. 
+
+**By “full prices” we mean prices close to par for bonds or preferred stocks, and prices that represent about the fair business value of the enterprise in the case of common stocks. The greater number of defensive investors are to avoid these categories regardless of price; the enterprising investor is to buy them only when obtainable at bargain prices—which we define as prices not more than two-thirds of the appraisal value of the securities.**
+
+### Commentary
+
+> "It requires a great deal of boldness and a great deal of caution to make a great fortune; and when you have got it, it requires ten times as much wit to keep it." — Nathan Mayer Rothschild
+
+In an ideal world, the intelligent investor would hold stocks only when they are cheap and sell them when they become overpriced, then duck into the bunker of bonds and cash until stocks again become cheap enough to buy. From 1966 through late 2001, one study claimed, $1 held continuously in stocks would have grown to $11.71. But if you had gotten out of stocks right before the five worst days of each year, your original $1 would have grown to $987.12.
+
+## 8 The Investor and Market Fluctuations
+
+There is one aspect of the “timing” philosophy which seems to have escaped everyone’s notice. Timing is of great psychological importance to the speculator because he wants to make his profit in a hurry. The idea of waiting a year before his stock moves up is repugnant to him. But a waiting period, as such, is of no consequence to the investor. **What advantage is there to him in having his money uninvested until he receives some (presumably) trustworthy signal that the time has come to buy? He enjoys an advantage only if by waiting he succeeds in buying later at a sufficiently lower price to offset his loss of dividend income.** What this means is that timing is of no real value to the investor unless it coincides with pricing—that is, unless it enables him to repurchase his shares at substantially under his previous selling price.
+
+In our view, based on much study of this problem, the change in the Dow-theory results is not accidental. It demonstrates an inherent characteristic of forecasting and trading formulas in the fields of business and finance. Those formulas that gain adherents and importance do so because they have worked well over a period, or sometimes merely because they have been plausibly adapted to the statistical record of the past. But as their acceptance increases, their reliability tends to diminish. This happens for two reasons: First, the passage of time brings new conditions which the old formula no longer fits. Second, in stock-market affairs the popularity of a trading theory has itself an influence on the market’s behavior which detracts in the long run from its profit-making possibilities. 
+
+He would not be far wrong if this motto read more simply: **“Never buy a stock immediately after a substantial rise or sell one immediately after a substantial drop.”**
+
+But it is only the lack of alertness and intelligence among the rank and file of shareholders that permits this immunity to extend to the entire realm of market quotations, including the permanent establishment of a depreciated and unsatisfactory price level. Good managements produce a good average market price, and bad managements produce bad market prices.*
+
+### Commentary
+
+> "The happiness of those who want to be popular depends on others; the happiness of those who seek pleasure fluctuates with moods outside their control; but the happiness of the wise grows out of their own free acts." —Marcus Aurelius
+
+**The intelligent investor shouldn’t ignore Mr. Market entirely. Instead, you should do business with him—but only to the extent that it serves your interests. Mr. Market’s job is to provide you with prices; your job is to decide whether it is to your advantage to act on them. You do not have to trade with him just because he constantly begs you to.**
+
+One of Graham’s most powerful insights is this: **“The investor who permits himself to be stampeded or unduly worried by unjustified market declines in his holdings is perversely transforming his basic advantage into a basic disadvantage.”**
+
+So there’s no reason you can’t do as well as the pros. What you cannot do (despite all the pundits who say you can) is to “beat the pros at their own game.” The pros can’t even win their own game! Why should you want to play it at all? If you follow their rules, you will lose—since you will end up as much a slave to Mr. Market as the professionals are.
+
+> But investing isn’t about beating others at their game. It’s about controlling yourself at your own game.
+
+
+## 9 Investing in Investment Funds
+
+We have presented this picture in order to point a moral, which perhaps can best be expressed by the old French proverb: Plus ça change, plus c’est la même chose. Bright, energetic people—usually quite young—have promised to perform miracles with “other people’s money” since time immemorial. They have usually been able to do it for a while—or at least to appear to have done it—and they have inevitably brought losses to their public in the end.* About a half century ago the “miracles” were often accompanied by flagrant manipulation, misleading corporate reporting, outrageous capitalization structures, and other semifraudulent financial practices. All this brought on an elaborate system of financial controls by the SEC, as well as a cautious attitude toward common stocks on the part of the general public.
+
+Thus, there is a strong indication that smaller size is a necessary factor for obtaining continued outstanding results.
+
+### Commentary
+
+> The schoolteacher asks Billy Bob: “If you have twelve sheep and one jumps over the fence, how many sheep do you have left?”
+> Billy Bob answers, “None.”
+> “Well,” says the teacher, “you sure don’t know your subtraction.”
+> “Maybe not,” Billy Bob replies, “but I darn sure know my sheep.”
+> —an old Texas joke
+
+But mutual funds aren’t perfect; they are almost perfect, and that word makes all the difference. Because of their imperfections, most funds underperform the market, overcharge their investors, create tax headaches, and suffer erratic swings in performance. The intelligent investor must choose funds with great care in order to avoid ending up owning a big fat mess.
+
+Unfortunately, in the financial markets, luck is more important than skill. If a manager happens to be in the right corner of the market at just the right time, he will look brilliant—but all too often, what was hot suddenly goes cold and the manager’s IQ seems to shrivel by 50 points.
+
+This is yet another reminder that the market’s hottest market sector—in 1999, that was technology—often turns as cold as liquid nitrogen, with blinding speed and utterly no warning.1 And it’s a reminder that buying funds based purely on their past performance is one of the stupidest things an investor can do.
+
+But there’s good news, too. First of all, understanding why it’s so hard to find a good fund will help you become a more intelligent investor. Second, while past performance is a poor predictor of future returns, there are other factors that you can use to increase your odds of finding a good fund. Finally, a fund can offer excellent value even if it doesn’t beat the market—by providing an economical way to diversify your holdings and by freeing up your time for all the other things you would rather be doing than picking your own stocks.
+
+The better a fund performs, the more obstacles its investors face:
+
+- Migrating managers
+- Asset elephantiasis
+- No more fancy footwork
+- Rising expenses
+- Sheepisk Behavior
+
+So the biggest funds resemble a herd of identical and overfed sheep, all moving in sluggish lockstep, all saying “baaaa” at the same time. Nearly every growth fund owns Cisco and GE and Microsoft and Pfizer and Wal-Mart—and in almost identical proportions. This behavior is so prevalent that finance scholars simply call it herding.4 But by protecting their own fee income, fund managers compromise their ability to produce superior returns for their outside investors.
+
+> Late in his life, **Graham praised index funds as the best choice for individual investors, as does Warren Buffett**.
+
+When you add up all their handicaps, the wonder is not that so few funds beat the index, but that any do. And yet, some do. What qualities do they have in common?
+
+- Their managers are the biggest shareholders
+- They are cheap
+- They dare to be different
+- They shut the door
+- They don't advertise
+
+**So first find a low-cost fund whose managers are major shareholders, dare to be different, don’t hype their returns, and have shown a willingness to shut down before they get too big for their britches. Then, and only then, consult their Morningstar rating.**
+
+As we’ve already seen, yesterday’s winners often become tomorrow’s losers. But researchers have shown that one thing is almost certain: Yesterday’s losers almost never become tomorrow’s winners. So avoid funds with consistently poor past returns—especially if they have above-average annual expenses.
+
+> Patience is the fund investors's single most powerful ally. "If you're not prepared to stay married, you shouldn't get married." - Charles Ellis
+
+## 10 The Investor and Hist Advisers
+
+This is their general view that a stock should be bought if the near-term prospects of the business are favorable and should be sold if these are unfavorable—regardless of the current price. Such a superficial principle often prevents the services from doing the sound analytical job of which their staffs are capable—namely, to ascertain whether a given stock appears over- or undervalued at the current price in the light of its indicated long-term future earning power.
+
+## 11 Security Analysis for the Lay Investor: General Approach
+
+## 12 Things to Consider About Per-Share Earnings
+
+## 13 A Comparison of Four Listed Companies
+
+## 14 Stock Selection for the Defensive Investor
+
+His second choice would be to apply a set of standards to each purchase, to make sure that he obtains (1) a minimum of quality in the past performance and current financial position of the company, and also (2) a minimum of quantity in terms of earnings and assets per dollar of price. At the close of the previous chapter we listed seven such quality and quantity criteria suggested for the selection of specific common stocks.
+
+- 1. **Adequate Size of the Enterprise**. Not less than $100 million of annual sales for an industrial company and, not less than $50 million of total assets for a public utility.
+- 2. **A Sufficiently Strong Financial Condition**. For industrial companies current assets should be at least twice current liabilities - a so-called two-to-one current ratio. Also, long-term debt should not exceed the net current assets (or “working capital”). For public utilities the debt should not exceed twice the stock equity (at book value).
+- 3. **Earning Stability**. Some earnings for the common stock in each of the past ten years.
+- 4. **Dividend Record**. Uninterruped payments for at least the past 20 years.
+- 5. **Earnings Growth**. A minimium increase of at least one-third in per-share earnings in the past ten years using three-year averages at the beginning and end.
+- 6. **Moderate Price/Earnings Ratio**. Current price should not be more than 15 times average earnings of the past three years.
+- 7. **Moderate Ratio of Price to Assets**. Current price should not be more than 11/2 times the book value last reported. However, a multiplier of earnings below 15 could justify a correspondingly higher multiplier of assets. As a rule of thumb we suggest that the product of the multiplier times the ratio of price to book value should not exceed 22.5.
+
+GENERAL COMMENTS: These requirements are set up especially for the needs and the temperament of defensive investors. They will eliminate the great majority of common stocks as candidates for the portfolio, and in two opposite ways. On the one hand they will exclude companies that are (1) too small, (2) in relatively weak financial condition, (3) with a deficit stigma in their ten-year record, and (4) not having a long history of continuous dividends. Of these tests the most severe under recent financial conditions are those of financial strength. A considerable number of our large and formerly strongly entrenched enterprises have weakened their current ratio or overexpanded their debt, or both, in recent years.
+
+## 15 Stock Selection for the Enterprising Investor
+
+## 16 Convertible Issues and Warrants
+
+## 17 Four Extremely Instructive Case Histories
+
+## 18 A Comparison of Eight Pairs of Companies
+
+## 19 Shareholders and Managements: Dividend Policy
+
+## 20 “Margin of Safety” as the Central Concept of Investment
+
+
+
+
+

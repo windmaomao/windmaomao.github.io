@@ -4,7 +4,12 @@
 
 ### Mar
 
+#### 3/18
+
+- Study `CVS`
+
 #### 3/15
+
 - Update projects & photos
 - ~~Deploy github~~
 - ~~Update latest repo~~
