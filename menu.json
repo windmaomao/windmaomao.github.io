@@ -5,7 +5,7 @@
   },
   {
     "title": "Todo", "type": "todo",
-    "items": ["fang", "idea", "conference", "contact", "qp-knowledgebase", "digital-renovation", "angular2-mc-common", "angular-mc-common", "china-trip"]
+    "items": ["fang", "conference", "contact", "qp-knowledgebase", "digital-renovation", "angular2-mc-common", "angular-mc-common", "china-trip"]
   },
   {
     "title": "Financial", "type": "finance",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Books", "type": "book",
-    "items": ["index", "angular2-training", "flexbox-in-css", "intelligent-investor", "vue-up-running", "react-quickly", "react-up-running", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "spending-waves", "big-shifts-ahead", "mu-ai-ning-xiang"]
+    "items": ["index", "data-visualization-d3", "angular2-training", "flexbox-in-css", "intelligent-investor", "vue-up-running", "react-quickly", "react-up-running", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "spending-waves", "big-shifts-ahead", "mu-ai-ning-xiang"]
   },
   {
     "title": "Blogs", "type": "blog",
