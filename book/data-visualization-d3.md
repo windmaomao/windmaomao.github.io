@@ -43,7 +43,7 @@ At this point, you might be wondering what kind of data `d3.pie` generates. Here
 
 As we can see clearly, this is exactly what the `d3.arc` generator expects. This is why we can use this data directly with `d3.arc` without dealing with any detailed calculation for angles and partitions. 
 
-### Stacked rea Chart
+### Stacked area chart
 
 Stacked area chart is a variation of the standard area chart in which different areas are stacked on top of each other giving your audience the ability to compare not only different data series individually but also their relationship to the total in proportion.
 
