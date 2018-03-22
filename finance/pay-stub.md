@@ -1,6 +1,19 @@
 # Pay Stub
 ## 2018
+### 3/14 Bonus
 
+Statutory              |    Amount   
+---------------------- | ------------ 
+**Gross Pay**          | $  2,248.00
+**Statutory**          | 
+Federal Income Tax     | $   -494.56  
+Social Security Tax    | $   -139.38
+Medicare Tax           | $    -32.60
+NC State Income Tax    | $   -126.00 
+**Net Pay**            | $  1,455.46
+
+
+### 3/14
 ### 2/28
 ### 2/14
 ### 1/26
