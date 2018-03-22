@@ -4,6 +4,10 @@
 
 ### Mar
 
+#### 3/22
+
+- Sell `REDU`
+
 #### 3/18
 
 - Study `CVS`

@@ -8,19 +8,21 @@
 
 | Symbol | Industry  |  Cost |  Net | Type | Notes |
 | ------ | --------- | ----: | ---: | ---- | ----- |
+| BOC3/15| CD       |$10000| $13  | cd   |     |
 | GE P17 | Industry | $67  | $197 | short|     |
 | DBC    | Commodity | $3230 |  $81 | long |       |
 | UNG    | Gas | $245 | -$20 |  long |     |
-| RIOT    | Bitcoin | $27  | -$25 |  long |     |
+| RIOT   | Bitcoin | $27  | -$25 |  long |     |
 
 ### March
 
 #### Realized
 
-| Symbol | Industry | Cost |  Net | Type |  Notes |
-| ------ | -------- | ---: | ---: | ---- | ----- |
+| Symbol | Industry | Cost |  Net | Type |Notes|
+| ------ | -------- | ---: | ---: | ---- | --- |
 | GE P17 | Industry | $67  | $197 | short|     |
 | DBC    | Commodity| $3230| $81  | long |     |
+| BOC3/15| CD       |$10000| $13  | cd   |     |
 
 #### Owned
 
@@ -40,10 +42,8 @@
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
 | TECS         | Tech      |    $  11 | short |               |
 | **Vanguard** |           | $ 20,000 |       |               |
-| BOC 6/25     | CD        | $ 10,000 | long  | 3/23 open        |
-| BOC 4/23     | CD        | $ 10,000 | long  |               |
-| BOC 3/15     | CD        | $ 10,000 | long  |               |
-| **Roth** |           | $ 5,000 |       |  3/13 open             |
+| BOC 6/25     | CD        | $ 10,000 | long  |       |
+| BOC 4/23     | CD        | $ 10,000 | long  |       |
 
 
 ### Feberary
