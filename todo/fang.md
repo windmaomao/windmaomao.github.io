@@ -4,6 +4,10 @@
 
 ### Mar
 
+#### 3/24
+
+- Study `family-wealth`
+
 #### 3/22
 
 - Sell `REDU`
