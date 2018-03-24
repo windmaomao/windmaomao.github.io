@@ -233,6 +233,9 @@ h6,
 	line-height: 1.2;
 	margin: 1em 0 0.5em;
 }
+h1+p.subtitle, h2+p.subtitle, h3+p.subtitle {
+	margin-top: -3em;
+}
 @media screen and (min-width: 48em) {
 	.h1,
 	h1 {

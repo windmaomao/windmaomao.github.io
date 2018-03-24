@@ -1,7 +1,7 @@
 # 家族信托
 Family Trust {.subtitle}
 
-家族信托（Family Trust），是信托的一种形式。家族信托的主要目的是为财产委托人（Settlor）提供一套机制，以最省税的方式将自己的财产有计划的传承给信托受益人（Trust Beneficiary）。创立人（Settlor）将其财产交予受托人（Trustee），让受托人根据创立人的主旨，为受益人（Beneficiaries）之利益或为特定的目的，对财产进行管理或保管的行为。
+家族信托（Family Trust），是信托的一种形式。家族信托的主要目的是为财产委托人（Settlor）提供一套机制，以最省税的方式将自己的财产有计划的传承给信托受益人（Trust Beneficiary）。创立人（Settlor）将其财产交予受托人（Trustee），让受托人根据创立人的主旨，为受益人（Beneficiaries）之利益或为特定的目的，对财产进行管理或保管。
 
 > A family trust, sometimes called a family trust fund, is a legal device used to avoid probate, avoid or delay taxes, and protect assets. A trust is a legal arrangement, whereby a person transfers management (and actual ownership in the case of an irrevocable trust) of assets to a third party, who holds them and manages them for the benefit of others.
 
