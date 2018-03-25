@@ -4,21 +4,23 @@
 
 ### Mar
 
+#### 3/25
+
+- Buy `mushi`
+- Handle prepare `csv`
+- Init transfer conversation
+
 #### 3/24
 
-- Study `family-wealth`
+- ~~Study `family-wealth`~~
 
 #### 3/22
 
 - Sell `REDU`
 
-#### 3/18
-
-- Study `CVS`
-
 #### 3/15
 
-- Update projects & photos
+- ~~Update projects & photos~~
 - ~~Deploy github~~
 - ~~Update latest repo~~
 
