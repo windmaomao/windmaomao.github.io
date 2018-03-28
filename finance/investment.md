@@ -8,6 +8,7 @@
 
 | Symbol | Industry  |  Cost |  Net | Type | Notes |
 | ------ | --------- | ----: | ---: | ---- | ----- |
+| REDU   | Education | $93  | -$7  | long |     |
 | BOC3/15| CD       |$10000| $13  | cd   |     |
 | GE P17 | Industry | $67  | $197 | short|     |
 | DBC    | Commodity | $3230 |  $81 | long |       |
@@ -20,6 +21,7 @@
 
 | Symbol | Industry | Cost |  Net | Type |Notes|
 | ------ | -------- | ---: | ---: | ---- | --- |
+| REDU   | Education| $93  | -$7  | long |     |
 | GE P17 | Industry | $67  | $197 | short|     |
 | DBC    | Commodity| $3230| $81  | long |     |
 | BOC3/15| CD       |$10000| $13  | cd   |     |
@@ -32,12 +34,11 @@
 | AKZOY        | Paint     |  $ 3,079 | short | 4/26 dividend |
 | TSLA         | Tech      | $ 943 | short |  |
 | BLUE         | Health    |    $ 353 | short |               |
+| ADSK         | Design    |  $  247  | short |  |
 | DRV          | REIT      |    $ 244 | short |               |
 | SRTY         | Russell   |    $ 155 | short |               |
 | ALNY         | Health    |    $ 124 | short |               |
 | LABD         | Health   |    $ 108 | short |               |
-| REDU         | Edu       |    $  93 | long  |               |
-| GE P17       | Industry  |    $  67 | short | 3/16 `expire` |
 | EDZ          | Emerging  |    $  20 | short |               |
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
 | TECS         | Tech      |    $  11 | short |               |

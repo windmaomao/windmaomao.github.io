@@ -7,6 +7,7 @@
 #### 3/28
 - Pick up `Yanyun`
 - Study `health REIT`
+- Buy `FAZ`
 
 #### 3/25
 
