@@ -4,11 +4,15 @@
 
 ### Mar
 
+#### 3/28
+- Pick up `Yanyun`
+- Study `health REIT`
+
 #### 3/25
 
-- Buy `mushi`
+- Buy `Mushi`
 - Handle prepare `csv`
-- Init transfer conversation
+- ~~Study `living-trust`~~
 
 #### 3/24
 
@@ -16,7 +20,7 @@
 
 #### 3/22
 
-- Sell `REDU`
+- ~~Sell `REDU`~~
 
 #### 3/15
 
