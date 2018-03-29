@@ -1,8 +1,15 @@
+
 # QPlot Knowledgebase
 
 ## 2018
 
 ### Mar
+
+#### 3/29 
+- Add google font switcher
+
+#### 3/17
+- add divider for h2
 
 #### 3/13
 - display size of the md file
