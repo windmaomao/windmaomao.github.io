@@ -57,9 +57,11 @@ Highlights
 
 ![Entitlement Selection in D3](https://s3.amazonaws.com/qp-photo/mc-common-entitlement-tree.PNG)
 
+::: div {.flex}
 ![Radial Partition D3 Diagram](https://s3.amazonaws.com/qp-photo/mc-d3-radial-partition.PNG)
 
 ![Radial Tree D3 Diagram](https://s3.amazonaws.com/qp-photo/mc-d3-radial-tree.PNG)
+:::
 
 ![Report Field Customization](https://s3.amazonaws.com/qp-photo/mc-common-customize.PNG)
 
