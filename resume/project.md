@@ -15,7 +15,8 @@
 
 |  Project        | Department      | Start    | Comment |
 | --------------  | --------------- | -------- | ------- |
-| Angular Select  | Open Source     | 2018 Mar |         |
+| Entitlement Next| Equity          | 2018 Mar |         |
+| Angular Select  | Open Source     | 2018 Mar | Delayed |
 | Corporate Events| Corporate Action| 2018 Jan | Poc     |
 | Security Conf   | Security Lending| 2018 Jan | Poc     |
 | Global Console2 | Equity          | 2017 Oct |         |
