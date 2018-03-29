@@ -9,7 +9,7 @@
 - Add google font switcher
 
 #### 3/17
-- add divider for h2
+- add image divider 
 
 #### 3/13
 - display size of the md file
