@@ -4,8 +4,14 @@
 
 ### Mar
 
+#### 3/31
+- auto red/green color for table number
+
+#### 3/29
+- add google font switcher
+
 #### 3/17
-- add divider for h2
+- add image divider for h2
 
 #### 3/13
 - display size of the md file
