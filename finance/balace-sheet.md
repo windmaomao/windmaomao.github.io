@@ -1,17 +1,18 @@
 # Balance Sheet
 
-2022 for 1M {.subtitle} 
+With 1M asset by 2022, a passive income model is mandatory to meet the core requirement of the sustainable living. If a supplimentory risk model can be found, it'll remedy the pressure from the former while potentially opening a new door for growth.
+
 
 ## 2018
 Adjust, control and predict {.subtitle}
+
+Steadily shrinking debt, while boosting equity in relatively slower pace. 
 
 | Month |    Debt  |  Equity  |        Total |    Diff |
 | ----- | -------: | -------: | -----------: | ------: |
 | Mar   | -$3,880  | $19,732  |      $15,852 |  $5,251 |
 | Feb   | -$2,583  | $13,627  |      $11,044 | $10,601 |
 | Jan   | -$1,290  |  $1,732  |         $443 |    $443 |
-
-Steadily shrinking debt, while boosting equity in relatively slower pace. 
 
 ## 2017
 Debate, watch and see {.subtitle}
