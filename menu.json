@@ -17,7 +17,7 @@
   },
   {
     "title": "Books", "type": "book",
-    "items": ["index", "predicting-markets", "living-trust-everyone", "data-visualization-d3", "angular2-training", "flexbox-in-css", "intelligent-investor", "vue-up-running", "react-quickly", "react-up-running", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "spending-waves", "big-shifts-ahead", "mu-ai-ning-xiang"]
+    "items": ["index", "dao-of-capital", "predicting-markets", "living-trust-everyone", "data-visualization-d3", "angular2-training", "flexbox-in-css", "intelligent-investor", "vue-up-running", "react-quickly", "react-up-running", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "spending-waves", "big-shifts-ahead", "mu-ai-ning-xiang"]
   },
   {
     "title": "Blogs", "type": "blog",
