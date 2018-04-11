@@ -44,11 +44,12 @@ Reusable UI framework for Angular 5 {.subtitle}
 Single operation UI framework
 
 : Oct 2017 -
-: *Angular* *Sass* *Ag-grid* *Highcharts* *D3* {.labels}
+: *Angular* *Sass* *Ag-grid* *Flexbox* *Highcharts* *D3* {.labels}
 
 Highlights
 
-: - Diagram: Use _D3_ to create sophisticated tree and partition charts for entitlement
+: - Sidebar: Use modern _Bootstrap4_ and _Flexbox_ to layout slider, ex. sidebar and edit panel
+  - Diagram: Use _D3_ to create sophisticated tree and partition charts for entitlement
   - Fields: Custom form layout and field validation via template and reactive form engine
   - Calendar: Use _angular-calendar_ to create custom monthly calendar and events view
   - Datepicker: Custom single date and range date picker with consistent look and feel
@@ -56,7 +57,7 @@ Highlights
   - Documentation: Support Bootstrap documentation page layout with quick navigation list
   - Grid: Use *Ag-grid* for sophisticated business grid usage with custom theme designed
 
-![Entitlement Selection in D3](https://s3.amazonaws.com/qp-photo/mc-common-entitlement-tree.PNG)
+![Entitlement Selection in D3](https://s3.amazonaws.com/qp-photo/mc-common-entitlement-edit.PNG)
 
 ::: div {.flex}
 ![Radial Partition D3 Diagram](https://s3.amazonaws.com/qp-photo/mc-d3-radial-partition.PNG)
