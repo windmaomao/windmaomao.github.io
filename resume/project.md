@@ -64,7 +64,7 @@ Highlights
 ![Radial Tree D3 Diagram](https://s3.amazonaws.com/qp-photo/mc-d3-radial-tree.PNG)
 :::
 
-![Report Field Customization](https://s3.amazonaws.com/qp-photo/mc-common-customize.PNG)
+![Report Field Customization and Grid Generation](https://s3.amazonaws.com/qp-photo/mc-common-customize.PNG)
 
 ::: div {.flex}
 ![Single Date Picker](https://s3.amazonaws.com/qp-photo/mc-common-datepicker.PNG)
