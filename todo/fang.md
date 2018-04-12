@@ -4,15 +4,21 @@
 
 ### Mar
 
+#### 4/4
+
+- Add `TSLA` 2 shares
+- Start `SH` 20 shares
+
 #### 3/28
-- Pick up `Yanyun`
+
+- ~~Pick up `Yanyun`~~
 - Study `health REIT`
 - Buy `FAZ`
 
 #### 3/25
 
 - Buy `Mushi`
-- Handle prepare `csv`
+- ~~Handle prepare `csv`~~
 - ~~Study `living-trust`~~
 
 #### 3/24
