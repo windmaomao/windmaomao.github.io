@@ -4,6 +4,14 @@
 
 ### Mar
 
+#### 4/21
+
+- Recycle `Apple` stuff
+
+#### 4/17
+
+- Prepare for `Google`
+
 #### 4/4
 
 - Add `TSLA` 2 shares
@@ -17,7 +25,7 @@
 
 #### 3/25
 
-- Buy `Mushi`
+- ~~Buy `Mushi`~~
 - ~~Handle prepare `csv`~~
 - ~~Study `living-trust`~~
 
