@@ -7,6 +7,7 @@
 #### 4/21
 
 - Recycle `Apple` stuff
+- Buy `TIF` put, `GE` put,
 
 #### 4/17
 
@@ -15,13 +16,11 @@
 #### 4/4
 
 - Add `TSLA` 2 shares
-- Start `SH` 20 shares
+- ~~Start `SH` 20 shares~~
 
 #### 3/28
 
 - ~~Pick up `Yanyun`~~
-- Study `health REIT`
-- Buy `FAZ`
 
 #### 3/25
 
