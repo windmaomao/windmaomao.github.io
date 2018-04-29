@@ -24,16 +24,15 @@
 | **Fidelity** |           |  $ 4,999 |       |               |
 | AKZOY        | Paint     |  $ 3,079 | short | 4/26 dividend |
 | TSLA         | Tech      | $ 943 | short |  |
+| ADSK         | Design    |  $  503  | short |  |
 | BLUE         | Health    |    $ 353 | short |               |
-| ADSK         | Design    |  $  247  | short |  |
 | DRV          | REIT      |    $ 244 | short |               |
 | SRTY         | Russell   |    $ 155 | short |               |
 | GE180921P12  | Health    |    $ 134 | short | 4/12 `enter`  |
 | ALNY         | Health    |    $ 124 | short |               |
-| LABD         | Health   |    $ 108 | short |               |
-| EDZ          | Emerging  |    $  20 | short |               |
+| LABD         | Health   |    $ 87 | short |               |
+| GE180720P13  | Health    |    $ 34 | short | 4/23 `enter`  |
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
-| TECS         | Tech      |    $  11 | short |               |
 | **Vanguard** |           | $ 20,000 |       |               |
 | BOC 6/25     | CD        | $ 10,000 | long  |       |
 | BOC 4/23     | CD        | $ 10,000 | long  |       |
