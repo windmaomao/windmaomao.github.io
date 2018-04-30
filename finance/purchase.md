@@ -12,6 +12,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Morningstar   | $200  /y | 2017 | Financial  | 10/16 |
 | Egghead       | $140  /y | 2017 | Video      | 12/11 |
 | TradingView   | $108  /y | 2017 | Chart      | 02/03 |
+| Interview Cake| $100  /y | 2018 | Training   | 04/21 |
 | Dropbox       | $100  /y | 2013 | Storage    | 11/06 |
 | Net Magazine  | $60   /y | 2017 | Magazine   |  7/15 |
 | Diigo         | $40   /y | 2017 | Note       | 05/31 |

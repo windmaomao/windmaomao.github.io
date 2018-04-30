@@ -8,6 +8,8 @@
 
 - Dependent receipt book
 - Record DB Payroll
+- Cancel Spendee
+- ~~Update monthly~~
 
 #### 4/21
 
