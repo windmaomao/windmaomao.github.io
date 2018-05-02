@@ -7,14 +7,15 @@
 #### 4/29
 
 - Dependent receipt book
-- Record DB Payroll
+- ~~Record DB Payroll~~
 - Cancel Spendee
 - ~~Update monthly~~
+- ~~Buy `TIF` put @100~~
 
 #### 4/21
 
 - Recycle `Apple` stuff
-- Buy `TIF` put, `GE` put,
+- ~~`GE` put~~
 
 #### 4/17
 
