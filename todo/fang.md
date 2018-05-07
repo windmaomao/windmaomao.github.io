@@ -4,6 +4,13 @@
 
 ### Mar
 
+#### 5/7
+
+- Close  `AKZOY`, maybe?
+- Add `TSLA`  shares
+- Add `ADSK`  shares
+- Add `RCL` put
+
 #### 4/29
 
 - Dependent receipt book
@@ -19,11 +26,10 @@
 
 #### 4/17
 
-- Prepare for `Google`
+- ~~Prepare for `Google`~~
 
 #### 4/4
 
-- Add `TSLA` 2 shares
 - ~~Start `SH` 20 shares~~
 
 #### 3/28
