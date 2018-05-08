@@ -8,9 +8,11 @@
 
 | Symbol | Industry  |  Cost |  Net | Type | Percentage |
 | ------ | --------- | ----: | ---: | ---- | ----: |
-| BOC4/23| CD        | $10000| $23  | cd   | 0.23% |
+|**Total**  |        |   | **$253** |      |       |
+| DRV    | REIT      | $245  | -$9  | short| -3.7% |
+| BOC4/23| CD        | $10000| $23  | cd   | 0.2%  |
 | REDU   | Education |  $93  | -$7  | long | -7.5% |
-| BOC3/15| CD        | $10000| $13  | cd   | 0.13% |
+| BOC3/15| CD        | $10000| $13  | cd   | 0.1%  |
 | GE P17 | Industry  |  $67  | $197 | short| 145%  |
 | DBC    | Commodity | $3230 |  $81 | long | 2.5%  |
 | UNG    | Gas       | $245  | -$20 | long | -8.2% |
@@ -22,11 +24,10 @@
 | ------------ | --------- | -------: | :---: | ------------- |
 | **Fidelity** |           |  $ 4,999 |       |               |
 | AKZOY        | Paint     |  $ 3,079 | short | 4/26 dividend |
-| TSLA         | Tech      | $ 943 | short |  |
+| TSLA         | Tech      | $ 1541 | short |  |
 | ADSK         | Design    |  $  503  | short |  |
 | TIF180817P100| Retail    |    $ 410 | short |  |
 | BLUE         | Health    |    $ 353 | short |               |
-| DRV          | REIT      |    $ 244 | short |               |
 | SRTY         | Russell   |    $ 155 | short |               |
 | GE180921P12  | Health    |    $ 134 | short | 4/12 `enter`  |
 | ALNY         | Health    |    $ 124 | short |               |
