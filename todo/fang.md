@@ -4,18 +4,22 @@
 
 ### Mar
 
+#### 5/8
+
+- ~~Update projects repo~~
+- ~~Google interview~~
+
 #### 5/7
 
-- Close  `AKZOY`, maybe?
-- Add `TSLA`  shares
+- ~~Add `TSLA`  2 shares~~
 - Add `ADSK`  shares
 - Add `RCL` put
 
 #### 4/29
 
-- Dependent receipt book
+- ~~Dependent receipt book~~
 - ~~Record DB Payroll~~
-- Cancel Spendee
+- ~~Cancel Spendee~~
 - ~~Update monthly~~
 - ~~Buy `TIF` put @100~~
 
