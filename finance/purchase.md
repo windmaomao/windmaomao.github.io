@@ -20,7 +20,6 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Quickbook     | $15   /m | 2016 | Accounting |   |
 | Lifelock      | $10   /m | 2015 | Security   |   |
 | Digital Ocean | $5    /m | 2015 | Hosting    |   |
-| Speedee       | $3    /m | 2017 | Booking    |   |
 | Amazon AWS    | $2    /m | 2015 | Hosting    |   |
 
 ### Free
@@ -41,6 +40,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item          | Amount   | Since | End  |
 | ------------- | -------- | ----- | ---- |
+| Speedee       | $3    /m | 2017  | 2018 |
 | Economist     | $4    /m | 2017  | 2018 |
 | Github        | $7    /m | 2012  | 2017 |
 | Amazon Kindle | $11   /m | 2017  | 2017 |

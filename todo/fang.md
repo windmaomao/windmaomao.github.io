@@ -8,6 +8,8 @@
 
 - ~~Update projects repo~~
 - ~~Google interview~~
+- Cancel `Diigo` due 5/31
+- Update repo readme
 
 #### 5/7
 
