@@ -4,6 +4,11 @@
 
 ### Mar
 
+#### 5/13
+
+- Book china ticket
+- Add `ADSK`  shares
+
 #### 5/8
 
 - ~~Update projects repo~~
@@ -14,7 +19,6 @@
 #### 5/7
 
 - ~~Add `TSLA`  2 shares~~
-- Add `ADSK`  shares
 - Add `RCL` put
 
 #### 4/29
