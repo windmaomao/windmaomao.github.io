@@ -6,7 +6,7 @@
 
 #### 5/13
 
-- Book china ticket
+- ~~Book china ticket~~
 - Add `ADSK`  shares
 
 #### 5/8
