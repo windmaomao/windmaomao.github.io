@@ -9,12 +9,10 @@ I build websites in general domains such as healthcare, banking, real estate and
 Skills
 
 : - 7 Years Prototyping with _Bootstrap_ and _Sass_
-  - 4 Years _AngularJS_ and _Angular_ (2/4/5)
-  - 4 Years IA, Mockup sketch and UI Design
-  - 4 Years Project management with *Agile* workflow
-  - 3 Years Async programming with promise/*observables*
-  - 3 Years *API* and technical documentation
-  - 2 Years _Java_/Oracle windows enterprise environment
+  - 5 Years _AngularJS_ (up to 5.x)
+  - 2 Years _React_, _Vue_ and _jQuery_
+
+[![Fang Jin](https://stackoverflow.com/users/flair/288096.png)](https://stackoverflow.com/users/288096/windmaomao)
 
 ## Award
 
@@ -23,6 +21,14 @@ Recognition Award [^recognition] :boom:
 : Deutsche Bank
 : Jan 2017
 : Recognised for outstanding performance, for the exceptional UI framework build
+
+Front Cover Design
+
+: Book "Multiscale Modeling of Cancer" [^book] 
+: Nonlinearity 23(2010) [^nonlinearity]
+: Sep 2010
+: Accepted front cover design for book and magazine.
+
 
 ## Experience
 
@@ -164,16 +170,6 @@ RecoveryHub
 
 : Sep 2014 - Oct 2014
 : Volunteer for disaster and humanitarian relief
-
-Cambridge University Press
-
-: Nov 2010
-: Book "Multiscale Modeling of Cancer" [^book] front cover design
-
-Journal of Nonlinearity
-
-: Sep 2010
-: Nonlinearity 23(2010)[^nonlinearity] front cover picture design
 
 University of California Irvine
 
