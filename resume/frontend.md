@@ -1,6 +1,3 @@
-[![](https://stackoverflow.com/users/flair/288096.png)](https://stackoverflow.com/users/288096/windmaomao)
-
-
 # Fang Jin
 
 Frontend Developer {.subtitle}
@@ -177,6 +174,8 @@ University of California Irvine
 : Sep 2007 - Dec 2008
 : College math class teacher for two semesters
 
+
+[![](https://stackoverflow.com/users/flair/288096.png)](https://stackoverflow.com/users/288096/windmaomao)
 
 
 *[AngularJS]: Javascript based open-source front-end web application framework mainly maintained by Google
