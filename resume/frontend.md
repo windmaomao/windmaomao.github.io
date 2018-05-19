@@ -1,3 +1,6 @@
+[![](https://stackoverflow.com/users/flair/288096.png)](https://stackoverflow.com/users/288096/windmaomao)
+
+
 # Fang Jin
 
 Frontend Developer {.subtitle}
@@ -11,8 +14,6 @@ Skills
 : - 7 Years Prototyping with _Bootstrap_ and _Sass_
   - 5 Years _AngularJS_ (up to 5.x)
   - 2 Years _React_, _Vue_ and _jQuery_
-
-[![Fang Jin](https://stackoverflow.com/users/flair/288096.png)](https://stackoverflow.com/users/288096/windmaomao)
 
 ## Award
 
