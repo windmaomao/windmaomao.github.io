@@ -21,3 +21,9 @@ Ticket # 0060544755048, $978
 
 
 6/21 RDU-DTW-PVG 1:07pm0 6:35pm F78P6H, F78GA4
+
+
+
+Need consent form for single parent traveling with a kid
+
+Figure out presents for everyone
