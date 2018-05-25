@@ -1,3 +1,4 @@
+
 # Projects
 
 ## Two Decades of Projects
@@ -15,6 +16,7 @@
 
 |  Project        | Department      | Start    | Comment |
 | --------------  | --------------- | -------- | ------- |
+| Reports Center  | Equity          | 2018 Apr |         |
 | Entitlement Next| Equity          | 2018 Mar |         |
 | Angular Select  | Open Source     | 2018 Mar | Delayed |
 | Corporate Events| Corporate Action| 2018 Jan | Poc     |
@@ -30,6 +32,26 @@
 
 ![Statistics 2016 - 2017](https://s3.amazonaws.com/qp-photo/db-stash-activity.PNG)
 
+### Reports Center
+  
+![Reports Center](https://s3.amazonaws.com/qp-photo/report-center-scheduled.PNG)
+
+Financial Report Monitor and Generator
+
+: Apr 2018 -
+: *Angular*  *Sass*  *Ag-grid*  *Flexbox*  *Highcharts* {.labels}
+
+Highlights
+
+: - Modular: Heavily rely on _Global Console_ module for widgets and styles
+- Layout: Use _Flexbox_ for page design with sidebar and panels
+- Dialog: Custom dialog design supporting generic and custom operations
+- Notification: Project wise services handling toasters, dialogs and spinners
+- Auth: Serial authentication wired before application bootstrapping
+- Localization: i18n localization for page captions
+- Report: Generate and monitor report via async notification services
+- Grid: Dynamic generation of report data based on columns infomation
+- Preference: Support saving and managing user preference data
 
 Angular Select
 
@@ -510,5 +532,3 @@ FJLib Bubble
 : 06/12/2003
 : `C++`, `Object Oriented`
 : https://github.com/windmaomao/fjlib
-
-
