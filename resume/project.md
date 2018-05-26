@@ -7,7 +7,7 @@
 |  Company        | Duration       | Comment |
 | --------------  | -------------- | ------- |
 | Deutsche Bank   | 2015 -         | UI Framework|
-| QPlot           | 2009 -         | Visual Ideas |
+| QPlot           | 2009 - 2017   | Visual Ideas |
 | People Designs  | 2014 - 2018    | Website Contracting |
 | University      | 2000 - 2009    | Scientific Software |
 
@@ -21,7 +21,7 @@
 | Angular Select  | Open Source     | 2018 Mar | Delayed |
 | Corporate Events| Corporate Action| 2018 Jan | Poc     |
 | Security Conf   | Security Lending| 2018 Jan | Poc     |
-| Global Console2 | Equity          | 2017 Oct |         |
+| Global Console 2 | Equity          | 2017 Oct |         |
 | Global Console  | Market Clearing | 2017 Jan |         |
 | AOF Form        | Global Markets  | 2016 Jun |         |
 | Kingslanding    | Open Source     | 2016 Apr |         |
@@ -33,38 +33,35 @@
 ![Statistics 2016 - 2017](https://s3.amazonaws.com/qp-photo/db-stash-activity.PNG)
 
 ### Reports Center
-  
+
 ![Reports Center](https://s3.amazonaws.com/qp-photo/report-center-scheduled.PNG)
 
-Financial Report Monitor and Generator
+Reports Center
 
+: Reprt Generation and Monitor
 : Apr 2018 -
 : *Angular*  *Sass*  *Ag-grid*  *Flexbox*  *Highcharts* {.labels}
 
 Highlights
 
 : - Modular: Heavily rely on _Global Console_ module for widgets and styles
-- Layout: Use _Flexbox_ for page design with sidebar and panels
-- Dialog: Custom dialog design supporting generic and custom operations
-- Notification: Project wise services handling toasters, dialogs and spinners
-- Auth: Serial authentication wired before application bootstrapping
-- Localization: i18n localization for page captions
-- Report: Generate and monitor report via async notification services
-- Grid: Dynamic generation of report data based on columns infomation
-- Preference: Support saving and managing user preference data
-
-Angular Select
-
-: Mar 2018
-: Add select angular spec
+  - Layout: Use _Flexbox_ for page design with sidebar and panels
+  - Dialog: Custom dialog design supporting generic and custom operations
+  - Notification: Project wise services handling toasters, dialogs and spinners
+  - Auth: Serial authentication wired before application bootstrapping
+  - Localization: i18n localization for page captions
+  - Report: Generate and monitor report via async notification services
+  - Grid: Dynamic generation of report data based on columns infomation
+  - Preference: Support saving and managing user preference data
 
 ### Global Console
 Reusable UI framework for Angular 5 {.subtitle}
 
 ![Global Console](https://s3.amazonaws.com/qp-photo/mc-common2-header.PNG)
 
-Single operation UI framework
+Global Console
 
+: Single operation UI framework
 : Oct 2017 -
 : *Angular* *Sass* *Ag-grid* *Flexbox* *Highcharts* *D3* {.labels}
 
@@ -173,7 +170,7 @@ Report delivery and SLA notification system
 : 03/16/2016
 : *NodeJS* *AngularJS* *Kingslanding* {.labels}
 : Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
-  
+
 ### DBVals Audit
 
 Four-eyes-check statement audit

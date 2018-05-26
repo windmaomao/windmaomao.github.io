@@ -26,6 +26,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item         | Year | Type         |
 | ------------ | ---- | ------------ |
+| Dynalist     | 2018 | Outliner     |
 | Netlifty     | 2018 | Hosting      |
 | Libib        | 2018 | Library      |
 | Adobe Spark  | 2017 | Presentation |
