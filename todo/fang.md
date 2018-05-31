@@ -4,9 +4,18 @@
 
 ### Mar
 
+#### 5/29
+
+- Book sophia dental
+- Prepare for trip
+- Learn to setup ladder
+- Didi registration of `Aug`
+- Find IC bank card
+
 #### 5/26
 
 - ~~Raise amor reduce duration from 9 years to 4 years~~
+- Prototype stock quote
 
 #### 5/13
 
@@ -17,8 +26,8 @@
 
 - ~~Update projects repo~~
 - ~~Google interview~~
-- Cancel `Diigo` due 5/31
-- Update repo readme
+- ~~Cancel `Diigo` due 5/31~~
+- ~~Update repo readme~~
 
 #### 5/7
 
