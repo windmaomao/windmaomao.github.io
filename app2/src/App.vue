@@ -3,6 +3,7 @@ import './assets/styles.scss'
 import Slider from './components/Slider'
 import Themer from './components/Themer'
 import Main from './components/Main'
+import { Observable } from 'rxjs'
 
 export default {
   name: 'App',
@@ -10,6 +11,14 @@ export default {
     Slider,
     Main,
     Themer
+  },
+  subscriptions() {
+    return {
+      msg: new Observable(ob => {
+        ob.next(1)
+        ob.complete()
+      })
+    }
   },
   data () {
     return {
@@ -101,6 +110,9 @@ export default {
       }
     }
     this.menuSelected(md)
+
+    // Test
+    this.$observables.msg.subscribe(console.log)
   }
 }
 </script>

@@ -6,8 +6,8 @@
 
 #### 5/31
 
-- retire digital ocean
-- update credit card, INTUIT, LIFELOC
+- Retire digital ocean
+- Update credit card, INTUIT
 - ~~Update finance~~
 - ~Book sophia dental~
 
