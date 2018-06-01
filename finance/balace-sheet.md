@@ -10,6 +10,7 @@ Steadily shrinking debt, while boosting equity in relatively slower pace.
 
 | Month |    Debt  |  Equity  |        Total |    Diff |
 | ----- | -------: | -------: | -----------: | ------: |
+| May   | -$6,483  | $32,798  |      $26,315 |  $5,341 |
 | Apr   | -$5,180  | $26,154  |      $20,974 |  $7,323 |
 | Mar   | -$3,880  | $17,531  |      $13,651 |  $5,251 |
 | Feb   | -$2,583  | $12,093  |       $9,510 |  $9,834 |

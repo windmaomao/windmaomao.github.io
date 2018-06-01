@@ -4,13 +4,19 @@
 
 ### Mar
 
+#### 5/31
+
+- retire digital ocean
+- update credit card, INTUIT, LIFELOC
+- ~~Update finance~~
+- ~Book sophia dental~
+
 #### 5/29
 
-- Book sophia dental
 - Prepare for trip
-- Learn to setup ladder
-- Didi registration of `Aug`
-- Find IC bank card
+- ~~Learn to setup ladder~~
+- Registration of `Aug`
+- ~~Find IC bank card~~
 
 #### 5/26
 
