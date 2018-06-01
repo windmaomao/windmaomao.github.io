@@ -6,7 +6,7 @@ export default {
   name: 'Ticker',
   props: {},
   data: () => ({
-    open: false
+    tickers: []
   }),
   subscriptions() {
     const list = ['TSLA', 'FB']
@@ -42,14 +42,22 @@ export default {
     }
   },
   render() {
+    const watcher = this.tickers.map(ticker => {
+      return (
+        <li>{ ticker.tick }: { ticker.price }</li>
+      )
+    })
+
     return (
       <div id="ticker" style="position:fixed;bottom:80px;">
-        DEFGHIJKL
+        <ul>{ watcher }</ul>
       </div>
     )
   },
   created() {
-    this.$observables.watchlist.subscribe(console.log)
+    this.$observables.watchlist.subscribe(ticker => {
+      this.tickers.push(ticker)
+    })
   }
 }
 </script>
