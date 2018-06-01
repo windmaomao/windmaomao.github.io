@@ -3,23 +3,15 @@ import './assets/styles.scss'
 import Slider from './components/Slider'
 import Themer from './components/Themer'
 import Main from './components/Main'
-import { Observable, from } from 'rxjs'
-import { map, mergeMap } from 'rxjs/operators'
+import Ticker from './components/Ticker'
 
 export default {
   name: 'App',
   components: {
     Slider,
     Main,
-    Themer
-  },
-  subscriptions() {
-    return {
-      msg: new Observable(ob => {
-        ob.next(1)
-        ob.complete()
-      })
-    }
+    Themer,
+    Ticker
   },
   data () {
     return {
@@ -40,6 +32,7 @@ export default {
     <div id="app" :class="{ debug: debug }">
       <Slider :menu="menu" @select="menuSelected" />
       <Main :source="source" />
+      <Ticker />
       <Themer @theme="themeSwitched" />
     </div>
   `,
@@ -111,39 +104,6 @@ export default {
       }
     }
     this.menuSelected(md)
-
-    // Test
-    // this.$observables.msg.subscribe(console.log)
-
-    const stock$ = (tick) => {
-      const fn = `https://www.alphavantage.co/query`
-      const p = {
-        function: 'TIME_SERIES_DAILY',
-        symbol: tick,
-        interval: '60min',
-        outputsize: 'compact',
-        apikey: 'T0M13EE9U7PHS2B4'
-      }
-
-      return from(this.$http.get(fn, { params: p })).pipe(
-        map(res => {
-          const data = Object.values(res.body)
-          const series = Object.values(data[1])
-          const prices = Object.values(series[0])
-          const price = prices[3];
-          return { tick, price }
-        })
-      )
-    }
-
-    const watchlist$ = (list) => {
-      return from(list).pipe(
-        mergeMap(tick => stock$(tick))
-      )
-    }
-
-    // stock$('HSBC').subscribe(console.log)
-    watchlist$(['FB', 'TSLA']).subscribe(console.log)
   }
 }
 </script>
