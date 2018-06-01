@@ -4,7 +4,7 @@ import Slider from './components/Slider'
 import Themer from './components/Themer'
 import Main from './components/Main'
 import { Observable, from } from 'rxjs'
-import { map } from 'rxjs/operators'
+import { map, mergeMap } from 'rxjs/operators'
 
 export default {
   name: 'App',
@@ -114,27 +114,36 @@ export default {
 
     // Test
     // this.$observables.msg.subscribe(console.log)
-    const tick = 'TSLA'
-    const fn = `https://www.alphavantage.co/query`
-    const p = {
-      function: 'TIME_SERIES_DAILY',
-      symbol: tick,
-      interval: '60min',
-      outputsize: 'compact',
-      apikey: 'T0M13EE9U7PHS2B4'
-    }
-    // this.$http.get(fn, { params: p }).then(console.log)
 
-    const tick$ = from(this.$http.get(fn, { params: p }))
-      .pipe(
+    const stock$ = (tick) => {
+      const fn = `https://www.alphavantage.co/query`
+      const p = {
+        function: 'TIME_SERIES_DAILY',
+        symbol: tick,
+        interval: '60min',
+        outputsize: 'compact',
+        apikey: 'T0M13EE9U7PHS2B4'
+      }
+
+      return from(this.$http.get(fn, { params: p })).pipe(
         map(res => {
           const data = Object.values(res.body)
           const series = Object.values(data[1])
           const prices = Object.values(series[0])
-          return prices[3]
+          const price = prices[3];
+          return { tick, price }
         })
       )
-    tick$.subscribe(console.log)
+    }
+
+    const watchlist$ = (list) => {
+      return from(list).pipe(
+        mergeMap(tick => stock$(tick))
+      )
+    }
+
+    // stock$('HSBC').subscribe(console.log)
+    watchlist$(['FB', 'TSLA']).subscribe(console.log)
   }
 }
 </script>
