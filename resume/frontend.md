@@ -65,29 +65,16 @@ Reusable Component
 
 : - Reusable branding header, footer, menu as well as pluggable generic services
   - Custom form layout and field validation via template and reactive form engine
-
   - Theme pie, column, statck charts with consistent look and feel
-
   - Directives for single and multiple select form input with consistent look and feel
-
   - Directives for date picker and date range picker with consistent look and feel
-
   - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
-
   - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
-
   - Use third party *Angular-calendar* to create custom montly calendar and events view
-
-- User third party *D3* to create sophisticated tree and partition charts for entitlement
-
-- Integration with authentication and authorization service for permission control
-
+  - User third party *D3* to create sophisticated tree and partition charts for entitlement
+  - Integration with authentication and authorization service for permission control
   - Service supporting both *Http* enabled spinning notification and manual toggle
-
   - Service supporting both generic user prompt and custom popup dialogs
-
-    
-
 
 ## Past Experience
 
