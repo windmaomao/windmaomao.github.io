@@ -1,3 +1,21 @@
+<template>
+  <div id="ticker">
+    <div class="control has-icons-left">
+      <a class="select is-small">
+        <select>
+          <option v-bind:value="ticker.tick"
+            v-bind:key="ticker.tick" v-for="ticker in orderBy(tickers, 'tick')"
+          >
+            <strong>{{ ticker.tick | pad }}:</strong>
+            <span>{{ ticker.price | currency }}</span>
+          </option>
+        </select>
+      </a>
+      <span class="icon is-small is-left">$</span>
+    </div>
+  </div>
+</template>
+
 <script>
 import { Observable, from } from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
@@ -8,8 +26,13 @@ export default {
   data: () => ({
     tickers: []
   }),
+  filters: {
+    pad(value) {
+      return ('     ' + value).slice(-5)
+    }
+  },
   subscriptions() {
-    const list = ['TSLA', 'FB']
+    const list = ['TSLA', 'FB', 'HSBC', 'TIF']
     const stock$ = (tick) => {
       const fn = `https://www.alphavantage.co/query`
       const p = {
@@ -41,19 +64,20 @@ export default {
       )
     }
   },
-  render() {
-    const watcher = this.tickers.map(ticker => {
-      return (
-        <li>{ ticker.tick }: { ticker.price }</li>
-      )
-    })
+  // render() {
+  //   const watcher = this.tickers.map(ticker => {
+  //     return (
+  //       <li>
+  //         <small>{ ticker.tick }:
+  //           <span prop-innerHtml={ currency(ticker.price) }></span>
+  //         </small>
+  //       </li>
+  //     )
+  //   })
 
-    return (
-      <div id="ticker" style="position:fixed;bottom:80px;">
-        <ul>{ watcher }</ul>
-      </div>
-    )
-  },
+  //   return (
+  //   )
+  // },
   created() {
     this.$observables.watchlist.subscribe(ticker => {
       this.tickers.push(ticker)

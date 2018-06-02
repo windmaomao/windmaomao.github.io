@@ -32,8 +32,16 @@ export default {
     <div id="app" :class="{ debug: debug }">
       <Slider :menu="menu" @select="menuSelected" />
       <Main :source="source" />
-      <Ticker />
-      <Themer @theme="themeSwitched" />
+      <div id="fixer">
+        <nav class="level">
+          <div class="level-left">
+            <Ticker />
+          </div>
+          <div class="level-right">
+            <Themer @theme="themeSwitched" />
+          </div>
+        </nav>
+      </div>
     </div>
   `,
   methods: {

@@ -6,6 +6,7 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import vueHeadful from 'vue-headful'
 import VueRx from 'vue-rx'
+import Vue2Filters from 'vue2-filters'
 import Toast from 'vue2-toast'
 import ClickOutside from 'vue-click-outside'
 import App from './App'
@@ -13,6 +14,7 @@ import App from './App'
 Vue.config.productionTip = false
 Vue.use(VueResource)
 Vue.use(VueRx)
+Vue.use(Vue2Filters)
 Vue.use(Toast, { duration: 5000 })
 Vue.component('Headful', vueHeadful)
 Vue.directive('click-outside', ClickOutside)

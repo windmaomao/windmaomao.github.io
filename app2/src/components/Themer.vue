@@ -1,6 +1,6 @@
 <template>
-  <div class="" id="options">
-    <div class="control has-icons-left" id="themer">
+  <div id="themer">
+    <div class="control has-icons-left">
       <a class="select is-small">
         <select v-model="theme" v-on:change="switchTheme">
           <option v-bind:value="s"
@@ -41,19 +41,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-#options {
-  position: fixed;
-  bottom: 0;
-  height: 2.6rem;
-  z-index: 9000;
-  width: 100%;
-  background-color: #ececec;
-}
-#themer {
-  text-align: right;
-  padding: 0.5rem;
-  opacity: 0.6;
-}
-</style>
