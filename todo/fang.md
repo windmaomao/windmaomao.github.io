@@ -21,7 +21,7 @@
 #### 5/26
 
 - ~~Raise amor reduce duration from 9 years to 4 years~~
-- Prototype stock quote
+- ~~Prototype stock quote~~
 
 #### 5/13
 
