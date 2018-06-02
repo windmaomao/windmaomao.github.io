@@ -1,18 +1,11 @@
 <template>
   <div id="ticker">
-    <div class="control has-icons-left">
-      <a class="select is-small">
-        <select>
-          <option v-bind:value="ticker.tick"
-            v-bind:key="ticker.tick" v-for="ticker in orderBy(tickers, 'tick')"
-          >
-            <strong>{{ ticker.tick | pad }}:</strong>
-            <span>{{ ticker.price | currency }}</span>
-          </option>
-        </select>
-      </a>
-      <span class="icon is-small is-left">$</span>
-    </div>
+    <span class="tag is-light"
+      v-bind:key="ticker.tick" v-for="ticker in orderBy(tickers, 'tick')"
+    >
+      <strong>{{ ticker.tick | pad }}:</strong> &nbsp;
+      <span>{{ ticker.price | currency }}</span>
+    </span>
   </div>
 </template>
 
@@ -32,7 +25,7 @@ export default {
     }
   },
   subscriptions() {
-    const list = ['TSLA', 'FB', 'HSBC', 'TIF']
+    const list = ['TSLA', 'TIF']
     const stock$ = (tick) => {
       const fn = `https://www.alphavantage.co/query`
       const p = {

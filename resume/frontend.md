@@ -9,7 +9,8 @@ I build websites in general domains such as healthcare, banking, real estate and
 Skills
 
 : - 7 Years Prototyping with _Bootstrap_ and _Sass_
-  - 5 Years _AngularJS_ (up to 5.x)
+  - 5 Years _Angular_ (up to 5.x)
+  - 4 Years _RxJS_, _Promise_ and _Ajax_
   - 2 Years _React_, _Vue_ and _jQuery_
 
 ## Award
@@ -55,20 +56,37 @@ Architect & Design
   - Support dashboard layout with *Responsible* and *Flex* design
   - SVG icon design and packaging for common UI and business actions
   - Custom animation keyframe design with fallback to no-animation
+  - Localization via _i18_ engine for all application display captions
+  - Support management of user preference data
+  - Heavily documented framework with usages for layouts and widgets
+  - Build application quickly and heavily upon _this_ framework
 
 Reusable Component
 
 : - Reusable branding header, footer, menu as well as pluggable generic services
   - Custom form layout and field validation via template and reactive form engine
-  - Use *angular-calendar* to create custom montly calendar and events view
+
   - Theme pie, column, statck charts with consistent look and feel
+
   - Directives for single and multiple select form input with consistent look and feel
+
   - Directives for date picker and date range picker with consistent look and feel
+
   - Use third party *Ag-grid* for sophisticated business grid usage with custom theme designed
+
   - Use third party *Highcharts* for all dashboard bar pie charts with custom theme designed
-  - Integration with authentication and authorization service for permission control
+
+  - Use third party *Angular-calendar* to create custom montly calendar and events view
+
+- User third party *D3* to create sophisticated tree and partition charts for entitlement
+
+- Integration with authentication and authorization service for permission control
+
   - Service supporting both *Http* enabled spinning notification and manual toggle
+
   - Service supporting both generic user prompt and custom popup dialogs
+
+    
 
 
 ## Past Experience

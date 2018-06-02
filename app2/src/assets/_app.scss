@@ -21,8 +21,13 @@
   width: 100%;
   background-color: #ececec;
 
-  #ticker, #themer {
+  #themer {
     padding: 0.5rem;
     opacity: 0.8;
+  }
+
+  #ticker {
+    padding: 0.5rem;
+    opacity: 0.3;
   }
 }
