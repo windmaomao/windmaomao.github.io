@@ -1,4 +1,4 @@
-![Market Clearing Header](https://mydb.intranet.db.com/servlet/JiveServlet/downloadImage/38-84374-462499/mc-common-header.PNG)
+![Market Clearing Header](https://s3.amazonaws.com/qp-photo/mc-common-header.PNG)
 
 # Market Clearing Common Stylesheet and Components
 
@@ -12,7 +12,7 @@ For more information on reusable components, and the rational behind this approa
 
 Follow the simple three steps program, a) identify your current content, b) wrap it with a *HTML* tag, and c) apply a *CSS* tag.
 
-![](https://mydb.intranet.db.com/servlet/JiveServlet/downloadImage/38-84374-462497/mc-common-code.PNG)
+![](https://s3.amazonaws.com/qp-photo/mc-common-code.PNG)
 
 Step 1 - _Start with your current content_
 
@@ -42,7 +42,7 @@ Step 3 – _Apply styles to your content_
 
 There're quite a list of (domain) applications on-boarding with this swiss-knife approach, it not only works with *Angular* app, but aslo adapts easily to *JSP*, *GWT* or any other embedded DB framework.
 
-![](https://mydb.intranet.db.com/servlet/JiveServlet/showImage/38-84374-462498/mc-common-sidebar-slim.PNG)
+![](https://s3.amazonaws.com/qp-photo/mc-common-sidebar-slim.PNG)
 
 - GlobalPrime domain (35 apps +), via *JSP* native
 - ReportNow app, via *Angular* native
