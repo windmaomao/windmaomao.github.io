@@ -4,6 +4,7 @@ import Slider from './components/Slider'
 import Themer from './components/Themer'
 import Main from './components/Main'
 import Ticker from './components/Ticker'
+import Stocker from './components/Stocker'
 
 export default {
   name: 'App',
@@ -11,7 +12,8 @@ export default {
     Slider,
     Main,
     Themer,
-    Ticker
+    Ticker,
+    Stocker
   },
   data () {
     return {
@@ -34,6 +36,9 @@ export default {
       <Main :source="source" />
       <div id="fixer">
         <nav class="level">
+          <div class="level-left">
+            <Stocker />
+          </div>
           <div class="level-left">
             <Ticker />
           </div>

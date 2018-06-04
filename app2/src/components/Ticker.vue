@@ -1,13 +1,15 @@
 <template>
   <div id="ticker">
-    <small>Monthly:</small>
-    <span class="tag is-light"
-      v-bind:key="ticker.tick" v-for="ticker in orderBy(tickers, 'tick')"
-      v-bind:title="ticker.price | currency"
-    >
-      <strong>{{ ticker.tick | pad }}:</strong> &nbsp;
-      <span>{{ ticker.gain | percentage }}</span>
-    </span>
+    <div class="control">
+      <!-- <small>Monthly:</small> -->
+      <span class="tag is-light"
+        v-bind:key="ticker.tick" v-for="ticker in orderBy(tickers, 'tick')"
+        v-bind:title="ticker.price | currency"
+      >
+        <strong>{{ ticker.tick | pad }}:</strong> &nbsp;
+        <span>{{ ticker.gain | percentage }}</span>
+      </span>
+    </div>
   </div>
 </template>
 
