@@ -4,6 +4,11 @@
 
 ### Mar
 
+#### 6/9
+
+- Inverse on `bond`
+- Action on `md`
+
 #### 6/2
 
 - Consistent on `stackoverflow`
@@ -30,7 +35,6 @@
 #### 5/13
 
 - ~~Book china ticket~~
-- Add `ADSK`  shares
 
 #### 5/8
 
@@ -42,7 +46,6 @@
 #### 5/7
 
 - ~~Add `TSLA`  2 shares~~
-- Add `RCL` put
 
 #### 4/29
 
