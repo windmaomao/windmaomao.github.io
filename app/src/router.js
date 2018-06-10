@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import BlogPage from '@/components/blog/BlogPage'
-import StockPage from '@/components/stock/StockPage'
+import InvestPage from '@/components/invest/InvestPage'
 
 Vue.use(Router)
 
@@ -13,9 +13,9 @@ export default new Router({
       component: BlogPage
     },
     {
-      path: '/stock',
-      name: 'StockPage',
-      component: StockPage
+      path: '/invest',
+      name: 'InvestPage',
+      component: InvestPage
     }
   ]
 })
