@@ -32,6 +32,21 @@ export default {
   name: 'InvestPage',
   data () {
     return {
+      menu: [{ title: 'Owned', items: ['TSLA', 'ADSK', 'GE'] }],
+      tickers: [{ symbol: 'AB', price: 100, gain: 0.2, prevs: [] }],
+      freqTypes: {
+        daily: 'TIME_SERIES_DAILY',
+        monthly: 'TIME_SERIES_MONTHLY_ADJUSTED'
+      },
+      tickerFreq: 'monthly'
+    }
+  },
+  created () {
+  },
+  methods: {
+    tickerPrice: function (tick, freq) {
+      // const types = this.freqTypes
+
     }
   }
 }
