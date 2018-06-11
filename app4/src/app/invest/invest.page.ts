@@ -30,7 +30,8 @@ export class InvestPageComponent {
   }
 
   setup() {
-    const price$ = this.stockService.price$('TSLA', 'monthly');
+    // const price$ = this.stockService.price$('TSLA');
+    const price$ = this.stockService.watchlist$(['TSLA', 'GE']);
     price$.subscribe(console.log);
   }
 }

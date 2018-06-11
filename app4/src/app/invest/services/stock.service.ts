@@ -4,6 +4,8 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { pipe, empty, from } from 'rxjs';
+import { catchError, map, mergeMap } from 'rxjs/operators';
 
 @Injectable()
 export class StockService {
@@ -16,7 +18,7 @@ export class StockService {
 
   constructor(private http: HttpClient) {}
 
-  price$(symbol, freqType) {
+  price$(symbol) {
     const params = (func, symbol) => {
       return {
         params: {
@@ -35,8 +37,8 @@ export class StockService {
         return 0.0
       }
     };
-    const parseData = (symbol, res) => {
-      const data = Object.values(res.body)
+    const parseData = (symbol, body) => {
+      const data = Object.values(body)
       const series = Object.values(data[1])
       const prices = Object.values(series[0])
       const price = prices[3]
@@ -50,7 +52,17 @@ export class StockService {
       return { symbol, price, prev, gain }
     };
 
-    const type = this.freqTypes[freqType];
-    return this.http.get(this.queryUrl, params(type, symbol));
+    const type = this.freqTypes[this.tickerFreq];
+    const http = this.http.get(this.queryUrl, params(type, symbol))
+    return http.pipe(
+      map(res => parseData(symbol, res)),
+      catchError(() => empty())
+    );
+  }
+
+  watchlist$(symbols) {
+    return from(symbols).pipe(
+      mergeMap(symbol => this.price$(symbol))
+    );
   }
 }
