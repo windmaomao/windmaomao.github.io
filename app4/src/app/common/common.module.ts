@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonComponents } from './common.routes';
 import { CommonRoutes } from './common.routes';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,9 +14,11 @@ import { CommonRoutes } from './common.routes';
   ],
   imports: [
     RouterModule.forChild(CommonRoutes),
+    HttpClientModule
   ],
   exports: [
-    CommonComponents
+    CommonComponents,
+    HttpClientModule
   ],
   providers: [
   ]
