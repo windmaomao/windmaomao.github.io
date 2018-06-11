@@ -15,6 +15,6 @@ export const CommonComponents = [
 
 export const CommonRoutes: Route[] = [
   {
-    path: 'common',         component: CommonPageComponent,
+    path: 'common', component: CommonPageComponent,
   }
 ];

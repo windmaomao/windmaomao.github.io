@@ -15,6 +15,7 @@ import { CommonRoutes } from './common.routes';
     RouterModule.forChild(CommonRoutes),
   ],
   exports: [
+    CommonComponents
   ],
   providers: [
   ]

@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule, Component } from '@angular/core';
 import { AppRoutes } from './app.routes';
 import { AppCommonModule } from './common/common.module';
+import { AppInvestModule } from './invest/invest.module';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ export class AppComponent { }
   imports: [
     BrowserModule,
     RouterModule.forRoot(AppRoutes, { useHash: true }),
-    AppCommonModule
+    AppCommonModule,
+    AppInvestModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
