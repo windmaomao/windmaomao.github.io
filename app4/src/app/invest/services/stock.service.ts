@@ -9,6 +9,9 @@ import { catchError, map, mergeMap } from 'rxjs/operators';
 
 @Injectable()
 export class StockService {
+  // debug = true;
+  debug = false;
+  apiKey = 'T0M13EE9U7PHS2B4';
   queryUrl = 'https://www.alphavantage.co/query';
   freqTypes = {
     daily: 'TIME_SERIES_DAILY',
@@ -19,14 +22,18 @@ export class StockService {
   constructor(private http: HttpClient) {}
 
   price$(symbol) {
-    const params = (func, symbol) => {
+    if (this.debug) {
+      return this.http.get('/price');
+    }
+
+    const params = (func) => {
       return {
         params: {
           function: func,
           symbol: symbol,
           interval: '60min',
           outputsize: 'compact',
-          apikey: 'T0M13EE9U7PHS2B4'
+          apikey: this.apiKey
         }
       }
     };
@@ -37,7 +44,7 @@ export class StockService {
         return 0.0
       }
     };
-    const parseData = (symbol, body) => {
+    const parseData = (body) => {
       const data = Object.values(body)
       const series = Object.values(data[1])
       const prices = Object.values(series[0])
@@ -45,17 +52,17 @@ export class StockService {
       const prevs = Object.values(series[1])
       const prev = prevs[3]
       const gain = calcGain(price, prev)
-      // const closes = series.map(item => {
-      //   const values = Object.values(item);
-      //   return Math.log10(values[3]);
-      // });
-      return { symbol, price, prev, gain }
+      const closes = series.map(item => {
+        const values = Object.values(item);
+        return values[3];
+      });
+      return { symbol, price, prev, gain, closes }
     };
 
     const type = this.freqTypes[this.tickerFreq];
-    const http = this.http.get(this.queryUrl, params(type, symbol))
+    const http = this.http.get(this.queryUrl, params(type))
     return http.pipe(
-      map(res => parseData(symbol, res)),
+      map(res => parseData(res)),
       catchError(() => empty())
     );
   }

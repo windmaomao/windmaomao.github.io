@@ -3,6 +3,7 @@
  */
 
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   template: `
@@ -20,4 +21,8 @@ import { Component } from '@angular/core';
     </app-layout>
   `,
 })
-export class CommonPageComponent {}
+export class CommonPageComponent {
+  constructor(private http: HttpClient) {
+    // this.http.get('/price').subscribe(console.log);
+  }
+}

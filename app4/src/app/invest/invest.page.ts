@@ -10,28 +10,45 @@ import { StockService } from './services/stock.service';
     <app-layout>
       <section class="section">
         <div class="container">
-          <h1 class="title">Invest</h1>
-
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <tbody>
+              <tr *ngFor="let ticker of tickers">
+                <td>{{ ticker.symbol }}</td>
+                <td title="{{ ticker.closes.length }}">
+                  <app-spark [items]="ticker.closes" [limit]="24"></app-spark>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </app-layout>
   `,
+  styles: [`
+    td {
+      font-family: monospace;;
+      text-align: right;
+    }
+  `]
 })
 export class InvestPageComponent {
   menu = [
-    { title: 'Own', items: ['TSLA', 'GE'] }
+    { title: 'Own', items: ['TSLA', 'GE', 'TIF', 'UUP'] }
   ];
-  tickers = [
-    { symbol: 'AB', price: 123, gain: -0.02, prevs: [] }
-  ];
+  tickers = [];
+  data = [3, 2, 3, 2, 1, 0, 2];
 
   constructor(private stockService: StockService) {
     this.setup();
   }
 
   setup() {
-    // const price$ = this.stockService.price$('TSLA');
-    const price$ = this.stockService.watchlist$(['TSLA', 'GE']);
-    price$.subscribe(console.log);
+    this.tickers = [];
+    const symbols = this.menu[0].items;
+    const watchlist$ = this.stockService.watchlist$(symbols);
+    watchlist$.subscribe(ticker => {
+      console.log(ticker);
+      this.tickers.push(ticker);
+    });
   }
 }

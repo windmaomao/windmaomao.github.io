@@ -4,9 +4,15 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { MockService } from './services/mock.service';
+
 import { CommonComponents } from './common.routes';
 import { CommonRoutes } from './common.routes';
-import { HttpClientModule } from '@angular/common/http';
+import { CommonServices } from './common.routes';
 
 @NgModule({
   declarations: [
@@ -14,13 +20,22 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     RouterModule.forChild(CommonRoutes),
-    HttpClientModule
+    CommonModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      MockService, {
+        apiBase: '/',
+        delay: 500,
+        passThruUnknownUrl: true
+      }
+    )
   ],
   exports: [
     CommonComponents,
-    HttpClientModule
+    CommonModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule
   ],
-  providers: [
-  ]
+  providers: [CommonServices]
 })
 export class AppCommonModule { }
