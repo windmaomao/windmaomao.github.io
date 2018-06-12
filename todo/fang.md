@@ -6,7 +6,7 @@
 
 #### 6/12
 
-- 
+- Caching services and order list
 
 #### 6/9
 
