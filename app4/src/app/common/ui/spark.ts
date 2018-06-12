@@ -2,7 +2,7 @@
  * Invest Spark
  */
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-spark',
@@ -12,35 +12,38 @@ import { Component, Input, OnInit } from '@angular/core';
   styles: [`
     span {
       color: lightsteelblue;
-      letter-spacing: 0px;
+      letter-spacing: -12px;
     }
   `]
 })
-export class CommonSparkComponent implements OnInit {
+export class CommonSparkComponent implements OnChanges {
   @Input() items: any[];
   @Input() limit: number;
-  symbols = ['▁', '▂', '▃', '▅', '▇'];
+  symbols = ['▂', '▃', '▅', '▆', '▇']; // ▁
   line = '';
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnChanges() {
     this.update();
   }
 
   update() {
-    let data = [];
+    let raw = [];
     if (this.items.length) {
       if (this.limit) {
-        data = this.items.slice(0, this.limit - 1);
+        raw = this.items.slice(0, this.limit - 1);
       } else {
-        data = this.items.slice();
+        raw = this.items.slice();
       }
     }
+    const data = raw.map(val => parseFloat(val));
     const max = data.reduce((a, b) => Math.max(a, b));
     const min = data.reduce((a, b) => Math.min(a, b));
+    const count = this.symbols.length - 1;
     const fit = val => {
-      const n = Math.round((val - min) / (max - min) * 4);
+      const n = Math.round((val - min) / (max - min) * count);
+      // return n;
       return this.symbols[n];
     }
 
@@ -49,7 +52,5 @@ export class CommonSparkComponent implements OnInit {
     } else {
       this.line = '';
     }
-
-    console.log(this.line);
   }
 }

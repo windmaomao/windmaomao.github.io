@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MockService } from './services/mock.service';
@@ -21,6 +22,7 @@ import { CommonServices } from './common.routes';
   imports: [
     RouterModule.forChild(CommonRoutes),
     CommonModule,
+    FormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       MockService, {
@@ -33,6 +35,7 @@ import { CommonServices } from './common.routes';
   exports: [
     CommonComponents,
     CommonModule,
+    FormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule
   ],

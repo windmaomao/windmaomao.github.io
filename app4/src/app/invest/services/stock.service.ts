@@ -6,23 +6,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { pipe, empty, from } from 'rxjs';
 import { catchError, map, mergeMap } from 'rxjs/operators';
+import { STOCK } from './stock.const';
 
 @Injectable()
 export class StockService {
-  // debug = true;
-  debug = false;
-  apiKey = 'T0M13EE9U7PHS2B4';
-  queryUrl = 'https://www.alphavantage.co/query';
-  freqTypes = {
-    daily: 'TIME_SERIES_DAILY',
-    monthly: 'TIME_SERIES_MONTHLY_ADJUSTED',
-  };
   tickerFreq = 'monthly';
-
   constructor(private http: HttpClient) {}
 
   price$(symbol) {
-    if (this.debug) {
+    if (STOCK.debug) {
       return this.http.get('/price');
     }
 
@@ -33,7 +25,7 @@ export class StockService {
           symbol: symbol,
           interval: '60min',
           outputsize: 'compact',
-          apikey: this.apiKey
+          apikey: STOCK.apiKey
         }
       }
     };
@@ -59,8 +51,8 @@ export class StockService {
       return { symbol, price, prev, gain, closes }
     };
 
-    const type = this.freqTypes[this.tickerFreq];
-    const http = this.http.get(this.queryUrl, params(type))
+    const type = STOCK.freqTypes[this.tickerFreq];
+    const http = this.http.get(STOCK.queryUrl, params(type))
     return http.pipe(
       map(res => parseData(res)),
       catchError(() => empty())

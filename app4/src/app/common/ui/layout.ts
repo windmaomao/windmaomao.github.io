@@ -17,5 +17,10 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
+  styles: [`
+    .main {
+      padding: 2rem;
+    }
+  `]
 })
 export class CommonLayoutComponent {}
