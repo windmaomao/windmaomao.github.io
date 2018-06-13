@@ -3,6 +3,7 @@
  */
 
 import { Component } from '@angular/core';
+import { ActivityService } from '../services/activity.service';
 
 @Component({
   selector: 'app-layout',
@@ -23,4 +24,9 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class CommonLayoutComponent {}
+export class CommonLayoutComponent {
+  constructor(private activityService: ActivityService) {
+    activityService.touch();
+    // activityService.activity$.subscribe(console.log);
+  }
+}

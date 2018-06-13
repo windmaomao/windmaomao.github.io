@@ -59,9 +59,14 @@ export class StockService {
     );
   }
 
-  watchlist$(symbols) {
+  watchers$(symbols) {
     return from(symbols).pipe(
       mergeMap(symbol => this.price$(symbol))
     );
   }
+
+  watchlists$() {
+    return this.http.get('/watchlists.json');
+  }
+
 }
