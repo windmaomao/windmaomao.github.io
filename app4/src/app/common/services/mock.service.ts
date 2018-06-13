@@ -31,7 +31,7 @@ export class MockService implements InMemoryDbService {
     };
 
     const watchlists = [
-      { key: 'watch', items: ['TSLA', 'GE', 'TIF', 'UUP', 'DBC'] },
+      { key: 'watch', items: ['TSLA', 'GE', 'TIF', 'UUP', 'DBC', 'BND'] },
       {
         key: 'own',
         items: [

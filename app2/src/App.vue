@@ -36,12 +36,7 @@ export default {
       <Main :source="source" />
       <div id="fixer">
         <nav class="level">
-          <div class="level-left">
-            <Stocker />
-          </div>
-          <div class="level-left">
-            <Ticker />
-          </div>
+          <div class="level-left"></div>
           <div class="level-right">
             <Themer @theme="themeSwitched" />
           </div>
