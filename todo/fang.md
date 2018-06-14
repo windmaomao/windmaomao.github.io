@@ -8,7 +8,7 @@
 
 - Caching services and order list
 - Watch on `uup`, `dfvs`
-- 
+- Deploy `invest`
 
 #### 6/9
 
