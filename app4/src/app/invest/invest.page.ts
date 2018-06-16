@@ -68,7 +68,9 @@ import { ActivityService } from '../common/services/activity.service';
         >
           <ngx-datatable-column name="Symbol" [width]="60">
             <ng-template let-row="row" ngx-datatable-cell-template>
-              <span title="{{ row.title + ' ' + row.sector }}">{{ row.symbol }}</span>
+              <span title="{{ row.title + ' [' + row.sector + ']' }}">
+                {{ row.symbol }}
+              </span>
             </ng-template>
           </ngx-datatable-column>
           <ngx-datatable-column prop="closes" [width]="300">

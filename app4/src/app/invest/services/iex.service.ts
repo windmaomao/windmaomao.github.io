@@ -20,14 +20,6 @@ export class IEXService {
       url = IEX.debugUrl;
     }
 
-    const params = {
-      symbols: symbols.join(','),
-      types: 'quote,news,chart',
-      range: '5y',
-      last: 5,
-      chartInterval: 22
-    };
-
     const calcGain = (price, prev) => {
       if (prev) {
         return (price - prev) / prev
@@ -57,7 +49,16 @@ export class IEXService {
       return arr;
     };
 
-    return this.http.get(url).pipe(
+    const params = new HttpParams({
+      fromObject: {
+        symbols: symbols.join(','),
+        types: 'quote,news,chart',
+        range: '5y',
+        chartInterval: '22'
+      }
+    });
+
+    return this.http.get(url, { params: params }).pipe(
       mergeMap((res: any) => {
         console.log(res);
         return from(parseData(res));

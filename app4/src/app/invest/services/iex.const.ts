@@ -1,5 +1,5 @@
 export const IEX = {
-  debug: true,
+  debug: false,
   debugUrl: '/marketbatch',
   queryUrl: 'https://api.iextrading.com/1.0/stock/market/batch',
 };
