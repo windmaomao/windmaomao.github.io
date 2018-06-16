@@ -2,6 +2,24 @@
 
 
 
+## Iternary (Fang / Sophia)
+
+Booking
+
+: - Confirmation #: F78P6H/F78GA4
+  - Skymile #: 9352098447/9429561039
+
+FROM 
+
+: - RDU - DTW, 1:07pm - 2:57pm 6/21, #DL 507, Seat 02C/D
+  - DTW - PVG, 4:20pm - 6:35pm 6/22, #DL 583, Seat 23G/F
+
+TO
+
+: - PVG - DTW, 11:45am - 1:35pm 7/5, #DL 582, Seat 24H/J
+  - DTW - RDU,  3:35pm - 5:21pm 7/5, #DL 505, Seat 03C/D 
+
+
 ## Book Ticket
 
 Book tickets [online](https://www.justfly.com)

@@ -67,8 +67,8 @@ import { ActivityService } from '../common/services/activity.service';
           [sorts]="[{ prop: 'symbol', dir: 'asc' }]"
         >
           <ngx-datatable-column name="Symbol" [width]="60">
-            <ng-template let-value="value" ngx-datatable-cell-template>
-              {{ value }}
+            <ng-template let-row="row" ngx-datatable-cell-template>
+              <span title="{{ row.title + ' ' + row.sector }}">{{ row.symbol }}</span>
             </ng-template>
           </ngx-datatable-column>
           <ngx-datatable-column prop="closes" [width]="300">
