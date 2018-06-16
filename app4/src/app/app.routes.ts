@@ -10,7 +10,7 @@ export const AppServices = [];
 export const AppRoutes: Route[] = [
   {
     path: '',
-    redirectTo: '/common',
+    redirectTo: '/invest',
     pathMatch: 'full'
   }
 ];

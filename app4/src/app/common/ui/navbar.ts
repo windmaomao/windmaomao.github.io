@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
     >
       <div class="navbar-brand">
         <a class="navbar-item logo-wrapper">
-          <img src="/assets/logo.png" alt="QPLOT: Personal Collections" />
+          <img src="assets/logo.png" alt="QPLOT: Personal Collections" />
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">

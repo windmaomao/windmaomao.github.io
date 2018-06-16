@@ -3,7 +3,7 @@
  */
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { StockService } from './services/stock.service';
+import { IEXService } from './services/iex.service';
 import { ActivityService } from '../common/services/activity.service';
 
 @Component({
@@ -59,7 +59,30 @@ import { ActivityService } from '../common/services/activity.service';
           </small>
           <app-spinner *ngIf="activity$ | async"></app-spinner>
         </p>
-        <table class="table is-narrow is-striped is-hoverable is-fullwidth">
+        <ngx-datatable class="bootstrap"
+          [rows]="tickers"
+          [rowHeight]="'auto'"
+          [columns]="columns"
+          [columnMode]="'force'"
+          [sorts]="[{ prop: 'symbol', dir: 'asc' }]"
+        >
+          <ngx-datatable-column name="Symbol" [width]="60">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              {{ value }}
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column prop="closes" [width]="300">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+              <app-spark [items]="row.closes" [limit]="48"></app-spark>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Gain" [width]="80">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+              <app-gain [number]="value"></app-gain>
+            </ng-template>
+          </ngx-datatable-column>
+        </ngx-datatable>
+        <!--<table class="table is-narrow is-striped is-hoverable is-fullwidth">
           <tbody>
             <tr *ngFor="let ticker of filterTickers(tickers)">
               <td class="has-text-right symbol">
@@ -73,7 +96,7 @@ import { ActivityService } from '../common/services/activity.service';
               </td>
             </tr>
           </tbody>
-        </table>
+        </table>-->
       </div>
     </app-layout>
   `,
@@ -97,16 +120,21 @@ export class InvestPageComponent implements OnInit, OnDestroy {
   tickers = [];
   watchlistsSub;
   activity$;
+  columns = [
+    { name: 'Symbol' },
+    { name: 'Closes' },
+    { name: 'Gain' },
+  ]
 
   constructor(
-    private stockService: StockService,
+    private iexService: IEXService,
     private activityService: ActivityService,
   ) {
     this.activity$ = activityService.activity$;
   }
 
   ngOnInit() {
-    const watchlists$ = this.stockService.watchlists$();
+    const watchlists$ = this.iexService.watchlists$();
     this.watchlistsSub = watchlists$.subscribe((res) => {
       this.watchlists = res;
       this.watchlistIndex = 0;
@@ -123,10 +151,10 @@ export class InvestPageComponent implements OnInit, OnDestroy {
     this.tickers = [];
     const id = this.watchlistIndex;
     const symbols = this.watchlists[id].items;
-    const watchers$ = this.stockService.watchers$(symbols);
-    watchers$.subscribe(ticker => {
+    const watcher$ = this.iexService.watchers$(symbols);
+    watcher$.subscribe(ticker => {
       this.activityService.touch();
-      this.tickers.push(ticker);
+      this.tickers = [...this.tickers, ticker];
     });
   }
 

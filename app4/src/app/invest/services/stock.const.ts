@@ -1,5 +1,5 @@
 export const STOCK = {
-  debug: false,
+  debug: true,
   debugUrl: '/price',
   apiKey: 'T0M13EE9U7PHS2B4',
   queryUrl: 'https://www.alphavantage.co/query',

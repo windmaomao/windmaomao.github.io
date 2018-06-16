@@ -12,7 +12,9 @@ import { Component, Input, OnChanges } from '@angular/core';
   styles: [`
     span {
       color: lightsteelblue;
-      letter-spacing: -12px;
+      font-size: 0.6rem;
+      font-family: monospace;
+      letter-spacing: -0.2rem;
     }
   `]
 })
