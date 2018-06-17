@@ -4,12 +4,17 @@
 
 ### Jun
 
+#### 6/16
+
+- build without mock service
+
 #### 6/15
 
 - ~~fix logo bug~~
 - ~~relocate first page~~
-- group calls together 
-- allow sort of table
+- ~~group calls together~~
+- ~~allow sort of table~~
+- ~~switch to iex api~~
 
 #### 6/13
 

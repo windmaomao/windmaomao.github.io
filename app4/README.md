@@ -1,6 +1,6 @@
 # Invest
 
-The project sits under `app4` folder.
+The project sits under `app4` folder. `/watchlists.json` file under server stores all blogs entries.
 
 ## Develop
 

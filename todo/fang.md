@@ -8,6 +8,7 @@
 
 - Refine `reportsCenterUI` readme
 - Update `projects` latest progress
+- Continue on `CD` build
 
 
 #### 6/12

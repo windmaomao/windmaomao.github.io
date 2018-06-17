@@ -1,6 +1,6 @@
 # QP KB
 
-The project sits under `app2` folder.
+The project sits under `app2` folder. `/menu.json` file under server stores all blogs entries.
 
 ## Contribute
 
