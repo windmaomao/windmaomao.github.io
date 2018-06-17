@@ -2,10 +2,98 @@
 
 ## 2018
 
+### May
+
+### 5/24
+- ~~address --aot with angular package issue~~
+- ~~clear option on date picker range~~
+
+### 5/22
+- change select width
+- ~~support custom template to select~~
+
+### 5/17
+- upgrade to new ag-grid
+- ~~auto complete placeholder~~
+- ~~open custom in new dialog~~
+- ~~theme selector not stick~~
+
+### 5/15
+- ~~support ok/error dialog~~
+- ~~datepicker missing from and to option~~
+- ~~add autocomplete widget~~
+- ~~port right resizable sliding panel~~
+
+#### 5/14
+- ~~add three more icons to the lib~~
+- ~~sidebar not support dark theme~~
+- ~~datepicker needs a api to close panel~~
+- ~~datepicker double apply issue~~
+- ~~datepicker min height issue~~
+- ~~datepicker single close panel after selection~~
+- ~~datepicker font size issue~~
+
+#### 5/7
+- put error debug option in settings file
+
+#### 5/3
+- ~~document flex, and modal~~
+- package with seperation of .t and .ts
+
+#### 5/1
+- ~~finish and test modal service~~
+- ~~update pane right to reports center~~
+
+### Apr
+
+#### 4/24
+- ~~use ng-packagr to resolve `ng serve` issue~~
+
+#### 4/20
+- ~~refine current build~~
+- ~~port back features from angular-ngx-gc~~
+
 ### Mar
 
+#### 3/29
+- ~~split the core to repo, angular-ngx-gc~~
+
+#### 3/17 
+- ~~d3 on trees~~
+- ~~try node tree, sunburst, treemap~~
+
+#### 3/15
+- bug api called twice
+- ~~add form via json~~
+
+#### 3/14
+- ~~allow edit/apply json~~
+- ~~allow fields to be entered to json~~
+
+#### 3/9 
+- ~~add sample data to fields~~
+- ~~add description hover to field~~
+- ~~add sports mock data for hackthon~~
+
+#### 3/7
+- ~~add disabled state properly~~
+- sort out button and clear in date picker
+- ~~poc on grid crud~~
+
+#### 3/6
+- ~~single select doesn't update value~~
+- ~~date picker disabled state~~
+- ~~composite version css align issue~~
+- ~~select can't be disabled afterwards~~
+
+#### 3/5
+- ~~add more fields to business line~~
+- ~~add sidebar to designer + "Scheduled"~~
+- animate needs to be false on init
+
 #### 3/2
-- address form handling issue
+- ~~address form issues~~
+- ~~can not disable select~~
 
 ### Feb
 
@@ -31,7 +119,7 @@
 - ~~wrap up new doc from angular1~~
 
 #### 2/13
-- sync back angular1 datepicker
+- ~~sync back angular1 datepicker~~
 - date picker accept text change
 
 #### 2/7

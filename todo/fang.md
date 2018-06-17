@@ -4,6 +4,11 @@
 
 ### Mar
 
+#### 6/16
+
+- Refine `reportsCenterUI` readme
+
+
 #### 6/12
 
 - Caching services and order list
@@ -28,7 +33,7 @@
 
 #### 5/29
 
-- Prepare for trip
+- ~~Prepare for trip~~
 - ~~Learn to setup ladder~~
 - Registration of `Aug`
 - ~~Find IC bank card~~

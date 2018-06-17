@@ -1,7 +1,7 @@
 # Global Console - Angular 5
 ![Market Clearing Header](https://s3.amazonaws.com/qp-photo/mc-common2-header.PNG)
 
-Works with both *Internet Explorer* 11 and the rest of modern browsers.
+> Works with both *Internet Explorer* 11 and the rest of modern browsers. [Live demo site](http://cggmiu02.us.db.com:8082/)
 
 <br />
 
@@ -13,7 +13,7 @@ Common *CSS* stylesheet and *Angular* components used for *Global Console* apps.
 |----------| ---------------|-----------|---------|-------------|-------------|
 | **_Is_** | Global Console | Demo App  | 3.0     | `src/app`   | `dist`      |
 | **_Is_** | Global Console | Style     | 3.0     | `core/scss` | artifactory |
-| **_Is_** | Angular        | Module    | 5.0+    | `core`      | artifactory |
+| **_Is_** | Angular        | Module    | 5.0+    | `core/lib`  | artifactory |
 
 The repo is written in typescript and it is a demo app as well as a core library (with styles) published to artifactory `com.db.ce.ngx-gc`.
 
@@ -133,9 +133,11 @@ Angular components
 - Appnav component
 - Fly-in menu component
 - Footer component
+- Autocomplte component
 - Select component (More on `Select` section)
 - Datepicker component (More on `Datepicker` section)
 - Dialog component (More on `Dialog` section)
+- Pane right resizable component
 
 Styles
 - ADK light style
@@ -162,7 +164,7 @@ Thrid Party used in Demo
 
 ### Layout (with auth)
 
-The layout component is not visible but controls erro handing and the visibility of the rest of components.
+The layout component is not visible but controls erro handing and the visibility of the rest of components. It is the default layout component wired with `gc-body` and `gc-content`. Most of time that's all you need to start to code the main area of the page.
 
 ```html
   <gc-layout>
@@ -172,7 +174,7 @@ The layout component is not visible but controls erro handing and the visibility
 
 ### Body (with header/footer)
 
-In order to including all branding materials, ex. header, footer and etc., you can wrap your content within a body component `gc-body`.
+Under the skin, `gc-layout` calls `gc-body` for all branding materials, ex. header, footer and etc..
 
 ```html
   <gc-body>
@@ -182,7 +184,7 @@ In order to including all branding materials, ex. header, footer and etc., you c
 
 ### Content (with sidebar)
 
-To have inner page layout design, ex. sidebar etc., you can further wrap your content within a content component. Currently we have two content components, `gc-content` or `gc-content-flex`.
+To help inner page layout design, ex. sidebar etc., `gc-body` calls a content layout component. Currently we have two components, `gc-content` and `gc-content-flex`, where `gc-content-flex` uses the latest `flexbox` UI.
 
 ```html
 <gc-content>
@@ -198,7 +200,6 @@ To have inner page layout design, ex. sidebar etc., you can further wrap your co
 ```html
 <gc-content-flex>
   <div sidebar>Sidebar</div>
-  <div detail>Detail</div>
   <div main>
     <div class="content-mc">
       <h1>Hello World</h1>    
@@ -254,6 +255,26 @@ Call `toggleTheme` to switch theme manaully and in order to auto load/set theme 
   }
 ```
 
+### Autocomplete
+
+```html
+  <gc-autocomplete [(ngModel)]="value" 
+    [ngModel]="value" (selectChange)="selectionChange($event)" 
+    [items]="selection" [options]="options"
+    [disabled]="disabled"
+  ></gc-autocomplete>
+```
+
+Here, the parameters includes
+
+- `ngModel`, the input form variable
+- `items`, key/value array, { key: 'a', title: 'v' }
+- `options`, settings associative array
+- `disabled`, true to disable the input
+- `selectionChange`, event that return selected item
+- `options.key`, key of the array, default 'key'
+- `options.title`, search of the array, default 'title'
+
 ### Select
 
 For single select, 
@@ -306,15 +327,18 @@ The parameters includes
 - `disabled`, true to disable the input
 - `options.format`, specifies the input date format, ex. 'L' or 'D MMM YYYY'
 - `options.icon`, specifies the button class, ex. 'btn-gray'
+- `options.buttons`, if the button row is displayed
 - `options.clear`, if clear button is supported
 - `options.today`, if today button is supported
+- `options.before`, if set, dates before is enabled, JS Date
+- `options.after`, if set, JS dates after is enabled, JS Date
 
 For the range picker, 
 
 ```html
   <gc-daterangepicker 
     [(ngModel)]="dates" [options]="options"
-    [disabled]="disabled"
+    [disabled]="disabled" (datesApply)="datesApplied($event)"
   ></gc-daterangepicker>
 ```
 
@@ -327,6 +351,8 @@ For the range picker,
 - `options.preset`, true if you want to display presets panel
 - `options.presets`, presets array if `preset` is true
 - `options.extended`, true to have presets on the left
+- `options.apply`, true to have apply button
+- `datesApply`, output function when apply button is clicked
 
 The `presets` array is given as 
 
@@ -351,19 +377,112 @@ where
 
 ### Dialog
 
+The `dialog` support quick type such as `ok` and `error`.
+
 ```javascript
   import { GcModalService } from '@com.db.globalconsole/ngx-gc';
 
   @Component({ ... })
   export class AppDemoServicesComponent {
     constructor(private ms: GcModalService) {}
-    open() { this.ms.open('alert', { title: 'Title', body: 'Question?' }); }
-    ok() { this.ms.open('alert', { title: 'Happy', body: 'Simply Ok!<br />Second line...' }); }
-    prompt() { this.ms.open('prompt', { title: 'Question', body: 'Your name?' }); }
-    terms() { this.ms.openTerms(); }
+    ok() { 
+      this.ms.ok({ 
+        title: 'Happy', 
+        body: 'Simply Ok!<br />Second line...' 
+      }); 
+    }
+    error() { 
+      this.ms.error({ 
+        title: 'Error', 
+        body: 'Something is wrong here.' 
+      });
+    }
+    prompt() {
+      this.ms.prompt({
+        title: 'Question',
+        body: 'Please enter your name?',
+        data: 'Fang'
+      }).result.then(res => {
+        console.log('Answer:', res);
+      }, err => {});
+    }
+    confirm() {
+      this.ms.confirm({
+        title: 'Confirmation',
+        body: 'Are you sure you want to delete it?'
+      }).result.then(res => {
+        console.log('Confirmed', res);
+      }, err => {});
+    }
+  }
 }
-
 ```
+
+The options passed to the above functions are 
+
+- `size`, supports 'sm' and 'lg',
+- `dialogClass`, supports 'modal-dialog', 'modal-danger', 'modal-middle',
+- `showClose`, display the close button to the dialog,
+- `title`, dialog header title,
+- `body`, dialog body can be multi-line HTML or text,
+- `confirmCaption`, caption for confirm button,
+- `confirmClass`: supports 'btn-mc', 'btn-gray' and 'btn-danger'
+
+If you need to build a custom dialog from scratch, ex. with your custom header, footer and body area, you can use `openCustom`.
+
+```javascript
+  import { GcModalService } from '@com.db.globalconsole/ngx-gc';
+  import { AppDialog } from './ui/dialog';
+
+  @Component({ ... })
+  export class AppDemoServicesComponent {
+    constructor(private ms: GcModalService) {}
+    open() { this.ms.openCustom(AppDialog); }
+  }
+}
+```
+
+The dialog can be custom coded inside `AppDialog` as a regular component with your business logic,
+
+```javascript
+  import { DialogRef, ModalComponent, CloseGuard } from 'ngx-modialog';
+  import { GcModalContext } from 'com.db.ce.ngx-gc';
+
+  @Component({
+    templateUrl: './dialog.progress.html'
+  })
+  export class AppDialog implements ModalComponent<GcModalContext> {
+    context: GcModalContext;
+    constructor(public dialog: DialogRef<GcModalContext>) {
+      this.context = dialog.context;
+    }
+  }
+```
+
+<br />
+
+### Pane Right
+
+To slide a panel from the right, the width of the panel can be set initially. The content of the panel needs to be provided by inner templates. And the width of the panel can be adjusted by user to make viewing area comfortable.
+
+```html
+  <gc-pane-right
+    [maxWidth]="width"
+    [paneActive]="active"
+    (paneToggled)="onToggled($event)"
+    (paneResized)="onResized($event)"
+  >
+    <h1>Report Details</h1>
+    <div class="pane-body">...</div>
+  </gc-pane-right>
+```
+
+The parameters includes
+
+- `width`, the default width of the panel
+- `active`, control the visiblity of the pane
+- `paneToggled`, event fired when pane is togged
+- `paneResized`, event fired when pane is resized
 
 <br />
 
@@ -464,9 +583,5 @@ In order to update the core, you can
 ## Author
 
 - [Fang-A Jin](mailto:fang-a.jin@db.com), Angular Architect
-- [Rex Santee](mailto:rex.santee@db.com), Program Manager
-- [Andrew Kaiser](mailto:andrew.kaiser@db.com), Program Director
-
-Many thanks goes to ideas and suggestions from `Thomas Rudolph`, `Dave Brinson`, `Lakshmi Satish-Kumar`, `Shikha-A Singh`.
 
 Big thank you to Reports Center app author `Rishi Tandon` for various back port contribution from _AngularJS_ to _Angular_.
