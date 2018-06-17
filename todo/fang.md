@@ -7,6 +7,7 @@
 #### 6/16
 
 - Refine `reportsCenterUI` readme
+- Update `projects` latest progress
 
 
 #### 6/12

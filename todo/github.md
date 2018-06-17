@@ -1,4 +1,3 @@
-
 # QPlot Knowledgebase
 
 ## 2018
@@ -16,11 +15,11 @@
 #### 3/31
 - auto red/green color for table number
 
-#### 3/29 
-- Add google font switcher
+#### 3/29
+- add google font switcher
 
 #### 3/17
-- add image divider 
+- add image divider for h2
 
 #### 3/13
 - display size of the md file
@@ -111,3 +110,4 @@
 #### 2/3
 - ~~support mobile display~~
 - ~~add babel support~~
+
