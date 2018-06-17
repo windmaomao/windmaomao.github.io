@@ -1,5 +1,7 @@
 # QP KB
 
+The project sits under `app2` folder.
+
 ## Contribute
 
 All files are in `markdown` format and can be checked in directly.

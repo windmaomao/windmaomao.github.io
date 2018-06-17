@@ -1,9 +1,10 @@
 
 # QPlot Knowledgebase
+Codename `Github` Project {.subtitle}
 
 ## 2018
 
-### Jun
+### Jun (Invest)
 
 #### 6/15
 
@@ -24,7 +25,7 @@
 - ~~upgrade to rxjs 6~~
 - ~~add in memory api~~
 
-### Mar
+### Mar (Blog)
 
 #### 3/31
 - auto red/green color for table number
