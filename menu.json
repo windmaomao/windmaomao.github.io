@@ -1,11 +1,25 @@
 [
   {
     "title": "Resume", "type": "resume",
-    "items": ["frontend", "ui", "project"]
+    "items": [
+      "frontend",
+      "project",
+      "ui"
+    ]
   },
   {
     "title": "Todo", "type": "todo",
-    "items": ["fang", "family-trust", "conference", "contact", "qp-knowledgebase", "digital-renovation", "angular2-mc-common", "angular-mc-common", "china-trip"]
+    "items": [
+      "fang",
+      "qp-knowledgebase",
+      "angular2-mc-common",
+      "angular-mc-common",
+      "conference",
+      "contact",
+      "china-trip",
+      "digital-renovation",
+      "family-trust"
+    ]
   },
   {
     "title": "Financial", "type": "finance",
