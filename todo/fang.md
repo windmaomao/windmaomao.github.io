@@ -8,7 +8,8 @@
 
 - Refine `reportsCenterUI` readme
 - Update `projects` latest progress
-- Continue on `CD` build
+- Continue on `cd` build
+- Sell `adsk`, Buy `bbby`
 
 
 #### 6/12
