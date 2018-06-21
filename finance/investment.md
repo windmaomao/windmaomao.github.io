@@ -18,6 +18,26 @@
 | UNG    | Gas       | $245  | -$20 | long | -8.2% |
 | RIOT   | Bitcoin   | $27   | -$25 | long | -92.6%|
 
+### Jun
+
+| Symbol       | Industry  |     Cost | Type  | Notes         |
+| ------------ | --------- | -------: | :---: | ------------- |
+| **Fidelity** |           |  $ 4,999 |       |               |
+| AKZOY        | Paint     |  $ 3,079 | short | 4/26 dividend |
+| TSLA         | Tech      | $ 1541   | short |  |
+| ADSK         | Design    |  $  503  | short |  |
+| TIF180817P100| Retail    |    $ 410 | short |  |
+| BLUE         | Health    |    $ 353 | short |               |
+| SRTY         | Russell   |    $ 155 | short |               |
+| GE180921P12  | Health    |    $ 134 | short | 4/12 `enter`  |
+| ALNY         | Health    |    $ 124 | short |               |
+| LABD         | Health    |    $ 87  | short |               |
+| GE180720P13  | Health    |    $ 34 | short | 4/23 `enter`  |
+| XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
+| **Vanguard** |           | $ 20,000 |       |               |
+| BOC 6/25/18  | CD        | $ 10,000 | long  |       |
+| BOC 5/15/19  | CD        | $ 10,000 | long  |       |
+
 ### May
 
 | Symbol       | Industry  |     Cost | Type  | Notes         |
@@ -34,7 +54,7 @@
 | LABD         | Health   |    $ 87 | short |               |
 | GE180720P13  | Health    |    $ 34 | short | 4/23 `enter`  |
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
-| **Vanguard** |           | $ 20,000 |       |               |
+| **Vanguard** |           | $ 10,000 |       |               |
 | BOC 6/25     | CD        | $ 10,000 | long  |       |
 
 ### April
