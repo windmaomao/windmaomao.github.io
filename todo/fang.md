@@ -2,7 +2,15 @@
 
 ## 2018
 
-### Mar
+### Jun
+
+#### 6/28
+
+- Prepare stuff back to China
+- Finalize `qplot` multiple app framework
+- Update `linkedIn` cn version
+- Family tree app
+- Question math app
 
 #### 6/16
 
@@ -26,6 +34,8 @@
 #### 6/2
 
 - Consistent on `stackoverflow`
+
+### May
 
 #### 5/31
 
@@ -61,6 +71,8 @@
 
 - ~~Add `TSLA`  2 shares~~
 
+### Apr
+
 #### 4/29
 
 - ~~Dependent receipt book~~
@@ -81,6 +93,8 @@
 #### 4/4
 
 - ~~Start `SH` 20 shares~~
+
+### Mar
 
 #### 3/28
 
