@@ -4,11 +4,15 @@
 
 ### Jun
 
+#### 6/30
+
+- Fix resume, prepare picture, recognition icon
+
 #### 6/29
 
-- Prototype `blog` page
+- ~~Prototype `blog` page~~
 - Signup `codepen` pro
-- Catch up with Chinese `linkedIn`
+- Catch up with `linkedIn`
 
 #### 6/28
 
@@ -48,7 +52,7 @@
 - Retire digital ocean
 - Update credit card, INTUIT
 - ~~Update finance~~
-- ~Book sophia dental~
+- ~~Book sophia dental~~
 
 #### 5/29
 
