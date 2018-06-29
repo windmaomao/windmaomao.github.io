@@ -4,11 +4,17 @@
 
 ### Jun
 
+#### 6/29
+
+- Prototype `blog` page
+- Signup `codepen` pro
+- Catch up with Chinese `linkedIn`
+
 #### 6/28
 
-- Prepare stuff back to China
-- Finalize `qplot` multiple app framework
-- Update `linkedIn` cn version
+- Prepare stuff back to China, med, candy
+- ~~Finalize `qplot` multiple app framework~~
+- ~~Update `linkedIn` cn version~~
 - Family tree app
 - Question math app
 
@@ -250,3 +256,4 @@
 
 - ~~:date: `1/31` alance and flow~~
 - ~~find out Ne magazine issue~~
+
