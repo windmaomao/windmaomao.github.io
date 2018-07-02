@@ -4,6 +4,10 @@
 
 ### Jun
 
+#### 7/2
+
+- learn how to program
+
 #### 6/30
 
 - Fix resume, prepare picture, recognition icon
