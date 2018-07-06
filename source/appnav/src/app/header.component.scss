@@ -1,0 +1,17 @@
+.toc {
+  background-color: #fefefe;
+  padding-left: 15px;
+  li {
+    display: none;
+    &.h2 {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    &.h3 {
+      font-size: 13px;
+      padding-left: 10px;
+      display: inline-block;
+    }
+  }
+}
