@@ -4,9 +4,12 @@
 
 ### Jun
 
-#### 7/2
+#### 7/6
 
-- learn how to program
+- Update annual
+- Add dependent `FSA` recipet
+- `Cach` to bank
+- `FX` Order to sale
 
 #### 6/30
 

@@ -7,6 +7,7 @@ The quiet year for the finance. The income is stable, expense under control and 
 
 | Month   |  Income | Expense |    Net |  Ending |
 | ------- | ------: | ------: | -----: | ------: |
+| Jun     | $12,484 |  $6,821 | $5,663 | $31,644 |
 | May     | $12,662 |  $5,712 | $6,947 | $26,100 |
 | Apr     | $12,885 |  $6,417 | $6,468 | $19,428 |
 | Mar     |  $9,900 |  $6,431 | $3,470 | $12,960 |

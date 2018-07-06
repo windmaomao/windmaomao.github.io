@@ -10,11 +10,14 @@ Steadily shrinking debt, while boosting equity in relatively slower pace.
 
 | Month |    Debt  |  Equity  |        Total |    Diff |
 | ----- | -------: | -------: | -----------: | ------: |
+| Jun   |-$11,099  | $47,442  |      $36,343 | $10,028 |
 | May   | -$6,483  | $32,798  |      $26,315 |  $5,341 |
 | Apr   | -$5,180  | $26,154  |      $20,974 |  $7,323 |
 | Mar   | -$3,880  | $17,531  |      $13,651 |  $5,251 |
 | Feb   | -$2,583  | $12,093  |       $9,510 |  $9,834 |
 | Jan   | -$1,290  |  $1,732  |         $443 |    $443 |
+
+- Since Jun, the morgage increases $2000.
 
 ## 2017
 Debate, watch and see {.subtitle}
