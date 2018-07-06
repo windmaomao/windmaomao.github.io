@@ -2,6 +2,11 @@
 
 ## 2018
 
+### Jul
+
+#### 7/6
+- migrate all to source and dist folder
+
 ### Mar
 
 #### 3/31

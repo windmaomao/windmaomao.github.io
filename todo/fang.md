@@ -6,20 +6,22 @@
 
 #### 7/6
 
-- Update annual
+- ~~Update annual~~
 - Add dependent `FSA` recipet
 - `Cach` to bank
 - `FX` Order to sale
+- ~~Prototype `appnav` and `invest`~~
+- Migrate `app2` to `dist`
 
 #### 6/30
 
-- Fix resume, prepare picture, recognition icon
+- ~~Fix resume, prepare picture, recognition icon~~
 
 #### 6/29
 
 - ~~Prototype `blog` page~~
 - Signup `codepen` pro
-- Catch up with `linkedIn`
+- ~~Catch up with `linkedIn`~~
 
 #### 6/28
 
@@ -31,8 +33,8 @@
 
 #### 6/16
 
-- Refine `reportsCenterUI` readme
-- Update `projects` latest progress
+- ~~Refine `reportsCenterUI` readme~~
+- ~~Update `projects` latest progress~~
 - Continue on `cd` build
 - Sell `adsk`, Buy `bbby`
 

@@ -22,6 +22,8 @@ export default {
       debugDomain: 'http://localhost:3000/',
       domain: 'https://sleepy-kalam-ff10a0.netlify.com/',
       domain2: 'https://sleepy-kalam-ff10a0.netlify.com/',
+      app: 'kb/',
+      app2: '',
       // domain: 'https://windmaomao.github.io/',
       // domain2: 'https://raw.githubusercontent.com/windmaomao/windmaomao.github.io/master/',
       default: 'resume/frontend',
@@ -57,7 +59,7 @@ export default {
     fetchUrl: function(url) {
       this.$loading('loading...')
       url = url || this.default
-      const fn = this.domain2 + url + '.md?v=' + Date.now()
+      const fn = this.domain2 + this.app + url + '.md?v=' + Date.now()
       this.$http.get(fn).then(res => {
         // this.source = '[[toc]]\n' + res.body
         this.source = res.body
