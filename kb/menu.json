@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Resume", "type": "resume",
+    "items": [
+      "frontend",
+      "project",
+      "ui"
+    ]
+  },
+  {
+    "title": "Todo", "type": "todo",
+    "items": [
+      "fang",
+      "qp-knowledgebase",
+      "angular2-mc-common",
+      "angular-mc-common",
+      "conference",
+      "contact",
+      "china-trip",
+      "digital-renovation",
+      "family-trust"
+    ]
+  },
+  {
+    "title": "Financial", "type": "finance",
+    "items": ["tax", "purchase", "investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment", "note-riverpine"]
+  },
+  {
+    "title": "Repos", "type": "repository",
+    "items": ["figure-caption", "markdown-it", "qp-knowledgebase", "angular2-mc-common", "angular-mc-common", "aof-form", "kingslanding", "ng-admin-restify", "mongoose-restify", "event-services", "dbvals-audit"]
+  },
+  {
+    "title": "Books", "type": "book",
+    "items": ["index", "dao-of-capital", "predicting-markets", "living-trust-everyone", "data-visualization-d3", "angular2-training", "flexbox-in-css", "intelligent-investor", "vue-up-running", "react-quickly", "react-up-running", "pay-zero-taxes", "bonds-unbeaten-path", "slash-retirement-risk", "five-rules-stock-investing", "art-of-war-wisdom", "art-of-war", "spending-waves", "big-shifts-ahead", "mu-ai-ning-xiang"]
+  },
+  {
+    "title": "Blogs", "type": "blog",
+	  "items": ["index", "angular-react-vue", "power-of-loss", "identity-debt", "sustainable-prototyping", "protection-from-loss", "perfect-google-map", "middle-ground", "reusable-form", "helping-others", "law-of-winning", "reusable-components", "angular-on-windows", "tiny-upscaling", "build-new-system", "dynamic-static-approach", "container-to-rescue", "being-dependent", "active-management", "floating-pot"]
+  },
+  {
+    "title": "Articles", "type": "article",
+    "items": ["fiscal-policy-adding-demand", "no-country-young-people"]
+  },
+  {
+    "title": "Others", "type": "other",
+    "items": ["publication", "performance", "company", "recommendation"]
+  }
+]
