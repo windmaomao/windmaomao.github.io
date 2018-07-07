@@ -12,12 +12,12 @@ import { HttpClient } from '@angular/common/http';
   template: `
     <div id="app">
       <app-sidenav id="sidenav"
-        [apps]="apps"
+        [apps]="apps" (select)="switch($event)"
         [ngClass]="{ open: open }"
       ></app-sidenav>
       <div id="content" [ngClass]="{ open: open }">
-        <app-header *ngIf="!debug && !prod"></app-header>
-        <iframe [src]="app | safe" *ngIf="prod"
+        <app-header *ngIf="!prod"></app-header>
+        <iframe [src]="app | safe"
           frameborder="0" style="width:100%; height:calc(100vh);"
         ></iframe>
       </div>
@@ -26,7 +26,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: [`./app.component.scss`]
 })
 export class AppComponent implements OnInit {
-  debug = false;
   prod = environment.production;
   url = '/app.json';
   open = false;
@@ -57,6 +56,13 @@ export class AppComponent implements OnInit {
       this.sub = api$.subscribe((res: any[]) => {
         this.apps = res;
       });
+    }
+  }
+
+  switch(event) {
+    if ('url' in event) {
+      this.app = event.url + '/index.html';
+      console.log(this.app);
     }
   }
 

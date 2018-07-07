@@ -2,7 +2,7 @@
  * Sidenav component
  */
 
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -25,16 +25,12 @@ import { Component, Input } from '@angular/core';
 })
 export class SidenavComponent {
   current = '/blog';
-  menu = [
-    { title: 'Knowledge Base',  icon: 'book', url: '/blog' },
-    { title: 'Invest Watchlist', icon: 'line-chart', url: '/invest' },
-    { title: 'Simply Math', icon: 'calculator', url: '/math' },
-    { title: 'Family Tree', icon: 'tree', url: '/family' },
-    { title: 'Single Handed', icon: 'keyboard-o', url: '/keyboard' },
-  ];
   @Input() apps: any[];
+  @Output() select = new EventEmitter<string>();
 
-  toggleMenu(m) {}
+  toggleMenu(m) {
+    this.select.emit(m);
+  }
 
   isActive(m) {
     return m.url === this.current;
