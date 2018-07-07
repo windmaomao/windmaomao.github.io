@@ -35,7 +35,9 @@ export default {
       <Main :source="source" />
       <div id="fixer">
         <nav class="level">
-          <div class="level-left"></div>
+          <div class="level-left">
+            <span @click="appSlided">&nbsp;&nbsp;<&nbsp;</span>
+          </div>
           <div class="level-right">
             <Themer @theme="themeSwitched" />
           </div>
@@ -83,6 +85,13 @@ export default {
         params[key] = value
       })
       return params
+    },
+    appSlided: function() {
+      const event = document.createEvent('CustomEvent')
+      event.initCustomEvent('Sidenav', false, false, {})
+      if (window.parent) {
+        window.parent.document.dispatchEvent(event)
+      }
     }
   },
   created() {
