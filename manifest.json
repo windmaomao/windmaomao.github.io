@@ -4,7 +4,7 @@
   "start_url": ".",
   "display": "browser",
   "background_color": "#FFF",
-  "description": "My personal knowledge-base.",
+  "description": "QPlot Apps",
   "icons": [{
     "src": "static/img/logo.png",
     "sizes": "48x48",

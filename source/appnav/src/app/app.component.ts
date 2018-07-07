@@ -18,7 +18,7 @@ import { HttpClient } from '@angular/common/http';
       <div id="content" [ngClass]="{ open: open }">
         <app-header *ngIf="!debug && !prod"></app-header>
         <iframe [src]="app | safe" *ngIf="prod"
-          frameborder="0" style="width:100%; height:100vh;"
+          frameborder="0" style="width:100%; height:calc(100vh);"
         ></iframe>
       </div>
     </div>
@@ -26,12 +26,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: [`./app.component.scss`]
 })
 export class AppComponent implements OnInit {
+  debug = false;
   prod = environment.production;
-  debug = true;
   url = '/app.json';
   open = false;
   apps = [];
-  app = '/invest/index.html';
+  app = '/kb/index.html';
   private sub;
 
   constructor(private http: HttpClient) {
