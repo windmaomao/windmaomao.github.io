@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
     <nav class="navbar is-fixed-top is-light" role="navigation">
       <div class="navbar-brand">
         <a class="navbar-item" (click)="logo()" title="Swith app">
-          <img src="https://windmaomao.github.io/static/img/logo.png" class="logo"> &nbsp;
+          <img src="https://windmaomao.github.io/logo.png" class="logo"> &nbsp;
         </a>
         <a class="navbar-item center">{{ title }}</a>
         <div class="navbar-burger burger"

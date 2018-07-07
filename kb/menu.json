@@ -23,7 +23,17 @@
   },
   {
     "title": "Financial", "type": "finance",
-    "items": ["tax", "purchase", "investment", "balace-sheet", "income-statement", "pay-stub", "tree-structure", "payment", "note-riverpine"]
+    "items": [
+      "tax",
+      "purchase",
+      "loan",
+      "investment",
+      "balace-sheet",
+      "income-statement",
+      "pay-stub",
+      "tree-structure",
+      "payment"
+    ]
   },
   {
     "title": "Repos", "type": "repository",

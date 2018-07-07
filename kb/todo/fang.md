@@ -4,6 +4,13 @@
 
 ### Jun
 
+#### 7/7
+
+- Registration for lucas
+- Recycle `Apple` stuff
+- Update credit card, INTUIT
+- Study  `loan` benifits and rates
+
 #### 7/6
 
 - ~~Update annual~~
@@ -11,7 +18,7 @@
 - `Cach` to bank
 - `FX` Order to sale
 - ~~Prototype `appnav` and `invest`~~
-- Migrate `app2` to `dist`
+- ~~Migrate `app2` to `dist`~~
 
 #### 6/30
 
@@ -25,7 +32,7 @@
 
 #### 6/28
 
-- Prepare stuff back to China, med, candy
+- ~~Prepare stuff back to China, med, candy~~
 - ~~Finalize `qplot` multiple app framework~~
 - ~~Update `linkedIn` cn version~~
 - Family tree app
@@ -41,25 +48,18 @@
 
 #### 6/12
 
-- Caching services and order list
-- Watch on `uup`, `dfvs`
-- Deploy `invest`
-
-#### 6/9
-
-- Inverse on `bond`
-- Action on `md`
+- ~~Watch on `uup`, `dfvs`~~
+- ~~Deploy `invest`~~
 
 #### 6/2
 
-- Consistent on `stackoverflow`
+- ~~Consistent on `stackoverflow`~~
 
 ### May
 
 #### 5/31
 
-- Retire digital ocean
-- Update credit card, INTUIT
+- ~~Retire digital ocean~~
 - ~~Update finance~~
 - ~~Book sophia dental~~
 
@@ -67,7 +67,6 @@
 
 - ~~Prepare for trip~~
 - ~~Learn to setup ladder~~
-- Registration of `Aug`
 - ~~Find IC bank card~~
 
 #### 5/26
@@ -102,7 +101,6 @@
 
 #### 4/21
 
-- Recycle `Apple` stuff
 - ~~`GE` put~~
 
 #### 4/17
@@ -141,7 +139,7 @@
 
 #### 3/13
 - ~~Keymod prototype~~
-- Create [input source](https://superuser.com/questions/665494/how-to-make-a-custom-keyboard-layout-in-os-x)
+- ~~Create [input source](https://superuser.com/questions/665494/how-to-make-a-custom-keyboard-layout-in-os-x)~~
 
 #### 3/12
 
