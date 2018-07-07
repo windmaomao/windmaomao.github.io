@@ -10,6 +10,7 @@
 - Recycle `Apple` stuff
 - Update credit card, INTUIT
 - Study  `loan` benifits and rates
+- Redirect `qplot.com`
 
 #### 7/6
 
