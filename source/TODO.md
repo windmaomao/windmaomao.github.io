@@ -2,5 +2,5 @@
 
 ## 7/7
 
-- migrate qplot.com
+- ~~forward qplot.com~~
 - add google analytics

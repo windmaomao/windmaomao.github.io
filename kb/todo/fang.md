@@ -4,20 +4,27 @@
 
 ### Jun
 
+#### 7/8
+
+- Watch `TYO`
+- `Cach` to bank
+- `FX` Order to sale
+
+
+
 #### 7/7
 
 - Registration for lucas
 - Recycle `Apple` stuff
 - Update credit card, INTUIT
 - Study  `loan` benifits and rates
-- Redirect `qplot.com`
+- ~~Redirect `qplot.com`~~
+- Cancel `morningstar`, 18662299449
 
 #### 7/6
 
 - ~~Update annual~~
-- Add dependent `FSA` recipet
-- `Cach` to bank
-- `FX` Order to sale
+- ~~Add dependent `FSA` recipet~~
 - ~~Prototype `appnav` and `invest`~~
 - ~~Migrate `app2` to `dist`~~
 
@@ -28,7 +35,7 @@
 #### 6/29
 
 - ~~Prototype `blog` page~~
-- Signup `codepen` pro
+- :x: ~~Signup `codepen` pro~~
 - ~~Catch up with `linkedIn`~~
 
 #### 6/28
@@ -43,8 +50,7 @@
 
 - ~~Refine `reportsCenterUI` readme~~
 - ~~Update `projects` latest progress~~
-- Continue on `cd` build
-- Sell `adsk`, Buy `bbby`
+- ~~Continue on `cd` build~~`
 
 
 #### 6/12

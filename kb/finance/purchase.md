@@ -8,18 +8,14 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item          | Amount   | Year | Type       | Renew |
 | ------------- | -------- | ---- | ---------- | ----- |
-| Safari Books  | $210  /y | 2016 | Book       | 08/01 |
-| Morningstar   | $200  /y | 2017 | Financial  | 10/16 |
+| Safari Books  | $213  /y | 2016 | Book       | 08/01 |
 | Egghead       | $140  /y | 2017 | Video      | 12/11 |
 | TradingView   | $108  /y | 2017 | Chart      | 02/03 |
 | Interview Cake| $100  /y | 2018 | Training   | 04/21 |
 | Dropbox       | $100  /y | 2013 | Storage    | 11/06 |
-| Net Magazine  | $60   /y | 2017 | Magazine   |  7/15 |
-| Diigo         | $40   /y | 2017 | Note       | 05/31 |
 | Google Drive  | $5    /y | 2017 | Storage    | 03/26 |
 | Quickbook     | $15   /m | 2016 | Accounting |   |
 | Lifelock      | $10   /m | 2015 | Security   |   |
-| Digital Ocean | $5    /m | 2015 | Hosting    |   |
 | Amazon AWS    | $2    /m | 2015 | Hosting    |   |
 
 ### Free
@@ -41,6 +37,10 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item          | Amount   | Since | End  |
 | ------------- | -------- | ----- | ---- |
+| Morningstar   | $200  /y | 2017  | 2018 |
+| Digital Ocean | $5    /m | 2015  | 2018 |
+| Diigo         | $40   /y | 2017  | 2018 |
+| Net Magazine  | $60   /y | 2017  | 2018 |
 | Speedee       | $3    /m | 2017  | 2018 |
 | Economist     | $4    /m | 2017  | 2018 |
 | Github        | $7    /m | 2012  | 2017 |

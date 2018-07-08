@@ -16,6 +16,13 @@
 - Pull from personal account, 2%, $100,000
 - Borrow from a friend, 3%, $100,000
 
+
+
+![](http://ritholtz.com/wp-content/uploads/2011/03/200-YEARS-US-GOVT-BONDS.png)
+
+
+![](http://ritholtz.com/wp-content/uploads/2016/10/history-768x461.png)
+
 ## Info
 
 Address
