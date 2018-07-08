@@ -4,6 +4,10 @@
 
 ### Jun
 
+#### 7/9
+
+- ~~Normalize morgage payment~~
+
 #### 7/8
 
 - Watch `TYO`

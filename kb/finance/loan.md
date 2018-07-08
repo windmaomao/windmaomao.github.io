@@ -41,3 +41,4 @@ Loan Info
 Payment
 
 : - 09/2012 - 05/2018, $2,071
+  - 07/2018, $4,071 for that month only
