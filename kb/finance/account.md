@@ -1,8 +1,8 @@
 
 
-# Finance Tree Structure
+# Finance Accounts
 
-## Account balance
+## Balance sheet
 
 - Debt
     - River Pine

@@ -7,6 +7,7 @@
 #### 7/9
 
 - ~~Normalize morgage payment~~
+- Update `payrol`
 
 #### 7/8
 
