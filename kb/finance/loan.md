@@ -23,6 +23,11 @@
 
 ![](http://ritholtz.com/wp-content/uploads/2016/10/history-768x461.png)
 
+## Apply
+
+- Talk to banker
+- Balance sheet
+
 ## Info
 
 Address

@@ -12,7 +12,7 @@
 
 - Watch `TYO`
 - `Cach` to bank
-- `FX` Order to sale
+- ~~`FX` Order to sale~~
 
 
 
@@ -20,8 +20,8 @@
 
 - Registration for lucas
 - Recycle `Apple` stuff
-- Update credit card, INTUIT
-- Study  `loan` benifits and rates
+- ~~Update credit card, INTUIT~~
+- ~~Study  `loan` benifits and rates~~
 - ~~Redirect `qplot.com`~~
 - Cancel `morningstar`, 18662299449
 
