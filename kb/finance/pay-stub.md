@@ -1,5 +1,22 @@
 # Pay Stub
 ## 2018
+
+401K Pre Tax year to date: $10,297
+
+### 6/28
+### 6/14
+
+Statutory              |    Amount   
+---------------------- | ------------ 
+**Gross Pay**          | $  4,092.51
+**Statutory**          | 
+**Net Pay**            | $  2,546.01
+
+### 5/25
+### 5/14
+### 4/27
+### 4/13
+
 ### 3/14 Bonus
 
 Statutory              |    Amount   
@@ -158,8 +175,3 @@ Ltd Imputed            | $     -6.01
 Medical Pretax         | $    -71.64
 401K Pre Tax           | $ -  203.13
 **Net Pay**            | $  2,387.82
-
-
-
-
-
