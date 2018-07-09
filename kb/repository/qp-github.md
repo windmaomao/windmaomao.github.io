@@ -1,12 +1,19 @@
 # QPlot Github
+![QPlot Github](https://s3.amazonaws.com/qp-photo/qp-github-appnav.PNG)
 
-QP Github has been evolving into multi projects over the years.
+> Works under the same umberalla. [Live site](http://qplot.com)
 
-- Application navigation, `appnav`
-- Knowledgebase, `kb`
-- Invest, `invest`
+## What is it?
 
-## Application navigation, `appnav`
+QP Github hosts multiple projects under the same umberalla but different engines.
+
+| App            | Framework | Ver  | Codename   |
+|----------------| ----------|------|------------|
+| App Navigation | *Angular* | 5.x  | `appnav`   |
+| Knowledgebase  | *Vue*     | 2.x  | `kb`       |
+| Invest         | *Angular* | 5.x  | `invest`   |
+
+## App Navigation, `appnav`
 
 ### Develop
 
