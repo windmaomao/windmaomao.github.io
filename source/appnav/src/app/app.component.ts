@@ -3,21 +3,21 @@
  */
 
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { APPS } from './app.const';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   template: `
     <div id="app">
       <app-sidenav id="sidenav"
-        [apps]="apps" (select)="switch($event)"
+        [apps]="apps" [selected]="appUrl" (select)="switch($event)"
         [ngClass]="{ open: open }"
       ></app-sidenav>
       <div id="content" [ngClass]="{ open: open }">
         <app-header *ngIf="!prod"></app-header>
-        <iframe [src]="app | safe"
+        <iframe [src]="url(appUrl) | safe"
           frameborder="0" style="width:100%; height:calc(100vh);"
         ></iframe>
       </div>
@@ -27,13 +27,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   prod = environment.production;
-  url = '/app.json';
   open = false;
   apps = [];
-  app = '/kb/index.html';
+  appUrl = '';
+  app = '';
   private sub;
+  private params;
 
   constructor(private http: HttpClient) {
+    this.parse();
     this.fetch();
   }
 
@@ -44,25 +46,53 @@ export class AppComponent implements OnInit {
     });
   }
 
-  toggle() {
-    this.open = !this.open;
+  toggle(status?) {
+    if (status) {
+      this.open = (status === 'off') ? false : true;
+    } else {
+      this.open = !this.open;
+    }
   }
 
   fetch() {
     if (!this.prod) {
       this.apps = APPS;
+      this.switch();
     } else {
-      const api$ = this.http.get(this.url);
+      const api$ = this.http.get(environment.appUrl);
       this.sub = api$.subscribe((res: any[]) => {
         this.apps = res;
+        this.switch();
       });
     }
   }
 
-  switch(event) {
-    if ('url' in event) {
-      this.app = event.url + '/index.html';
-      console.log(this.app);
+  switch(app?) {
+    if (!app) {
+      if (this.apps.length) {
+        app = this.apps[0];
+      }
+    }
+    if (app) {
+      this.appUrl = app.url;
+      document.title = app.title;
+    }
+    this.toggle('off');
+  }
+
+  url(u) {
+    let res = u + '/index.html';
+    if (this.params) {
+      res = res + '?' + this.params;
+    }
+    return res;
+  }
+
+  parse() {
+    const url = window.location.href;
+    const parts = url.split('?');
+    if (parts.length > 1) {
+      this.params = parts[1];
     }
   }
 

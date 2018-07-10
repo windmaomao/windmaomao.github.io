@@ -24,8 +24,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: []
 })
 export class SidenavComponent {
-  current = '/blog';
   @Input() apps: any[];
+  @Input() selected: string;
   @Output() select = new EventEmitter<string>();
 
   toggleMenu(m) {
@@ -33,7 +33,7 @@ export class SidenavComponent {
   }
 
   isActive(m) {
-    return m.url === this.current;
+    return m.url === this.selected;
   }
 }
 

@@ -1,12 +1,16 @@
 # TODO
 
+## 7/10
+
+- allow first app to be configurable
+
 ## 7/7
 
-- adjust browser title based on app
-- pass parameter to child app
-- slide back apps after select
+- ~~adjust browser title based on app~~
+- ~~pass parameter to child app~~
+- ~~slide back apps after select~~
 - some transition between apps
-- highlight the active app
+- ~~highlight the active app~~
 
 ## 7/6
 

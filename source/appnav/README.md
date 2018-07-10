@@ -1,27 +1,32 @@
-# Appnav
+# App Navigation, `appnav`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+The purpose of this application is to launch multiple application via unified navigation system. 
 
-## Development server
+### Develop
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is build via Angular 5.x.
 
-## Code scaffolding
+``` bash
+  # scripts
+  "start": "ng serve --aot --port 4401",
+  "build": "ng build --prod",
+  # dependencies
+  "@angular/common": "^5.2.0",
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Deploy
 
-## Build
+Copy `dist` folder to `/appnav` and replace all. `app.json` holds all application links in production, which needs to be copied or updated at production server. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Integration
 
-## Running unit tests
+If you put app under an iframe, the following line can be used to trigger the opening. It's compatible with both `IE` and `Chrome`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+  const event = document.createEvent('CustomEvent');
+  event.initCustomEvent('Sidenav', false, false, {});
+  if (window.parent) {
+    window.parent.document.dispatchEvent(event);
+  }
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
