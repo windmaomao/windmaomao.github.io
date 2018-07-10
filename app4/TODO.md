@@ -4,9 +4,15 @@
 
 ### Jun
 
+#### 6/20
+
+- add link for tickers to go 
+- refine details layout
+
 #### 6/16
 
 - build without mock service
+- ~~build ticker details layout~~
 
 #### 6/15
 

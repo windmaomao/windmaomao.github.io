@@ -1,0 +1,45 @@
+<ngx-datatable class="bootstrap expandable" #myTable
+  [rows]="tickers"
+  [rowHeight]="'auto'"
+  [columns]="columns"
+  [columnMode]="'force'"
+  [sorts]="[{ prop: 'symbol', dir: 'asc' }]"
+>
+  <ngx-datatable-row-detail [rowHeight]="380" #myDetailRow>
+    <ng-template let-row="row" let-expanded="expanded" ngx-datatable-row-detail-template >
+      <app-ticker [ticker]="row"></app-ticker>
+    </ng-template>
+  </ngx-datatable-row-detail>
+  <ngx-datatable-column [width]="20"
+    [resizeable]="false" [sortable]="false"
+    [draggable]="false" [canAutoResize]="false"
+  >
+    <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>
+      <a class="fas fa-chevron-{{ !expanded ? 'right' : 'down' }}"
+        href="javascript:void(0)"
+        title="Expand/Collapse Row"
+        (click)="toggleRow(row)">
+      </a>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Symbol" [width]="20">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      {{ value }}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Company" [width]="200">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <span title="{{ value }}">{{ value | ellipsis: 30 }}</span>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Day" [width]="80">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <app-gain [number]="value"></app-gain>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="YTD" [width]="80">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <app-gain [number]="value"></app-gain>
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>

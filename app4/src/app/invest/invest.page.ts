@@ -2,7 +2,7 @@
  * Common Page
  */
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { IEXService } from './services/iex.service';
 import { ActivityService } from '../common/services/activity.service';
 
@@ -10,6 +10,7 @@ import { ActivityService } from '../common/services/activity.service';
   template: `
     <app-layout>
       <div class="container">
+        <!-- Ticker filter, search and display -->
         <div class="level is-mobile">
           <div class="level-left">
             <div class="control has-icons-left">
@@ -24,22 +25,12 @@ import { ActivityService } from '../common/services/activity.service';
               <span class="icon is-small is-left">
                 <i class="fas fa-tasks"></i>
               </span>
-            </div>&nbsp;
-            <div class="control has-icons-left">
-              <div class="select is-small">
-                <select [(ngModel)]="durationYear">
-                  <option value="" disabled selected>Duration</option>
-                  <option value="1">1 Year</option>
-                  <option value="2">2 Years</option>
-                  <option value="3">3 Years</option>
-                  <option value="4">4 Years</option>
-                  <option value="5">All</option>
-                </select>
-              </div>
-              <span class="icon is-small is-left">
-                <i class="far fa-calendar-alt"></i>
-              </span>
             </div>
+          </div>
+          <div class="level-left">
+            <i class="fas fa-chart-line"></i>&nbsp;
+            <small>{{ tickers.length }} items</small>&nbsp;
+            <app-spinner *ngIf="activity$ | async"></app-spinner>
           </div>
           <div class="level-right">
             <div class="control has-icons-right">
@@ -52,81 +43,29 @@ import { ActivityService } from '../common/services/activity.service';
             </div>
           </div>
         </div>
-        <p class="has-text-right">
-          <i class="fas fa-chart-line"></i>
-          <small>
-            {{ tickers.length }} items
-          </small>
-          <app-spinner *ngIf="activity$ | async"></app-spinner>
-        </p>
-        <ngx-datatable class="bootstrap"
-          [rows]="tickers"
-          [rowHeight]="'auto'"
-          [columns]="columns"
-          [columnMode]="'force'"
-          [sorts]="[{ prop: 'symbol', dir: 'asc' }]"
-        >
-          <ngx-datatable-column name="Symbol" [width]="60">
-            <ng-template let-row="row" ngx-datatable-cell-template>
-              <span title="{{ row.title + ' [' + row.sector + ']' }}">
-                {{ row.symbol }}
-              </span>
-            </ng-template>
-          </ngx-datatable-column>
-          <ngx-datatable-column prop="closes" [width]="300">
-            <ng-template let-row="row" ngx-datatable-cell-template>
-              <app-spark [items]="row.closes" [limit]="48"></app-spark>
-            </ng-template>
-          </ngx-datatable-column>
-          <ngx-datatable-column name="Gain" [width]="80">
-            <ng-template let-value="value" ngx-datatable-cell-template>
-              <app-gain [number]="value"></app-gain>
-            </ng-template>
-          </ngx-datatable-column>
-        </ngx-datatable>
-        <!--<table class="table is-narrow is-striped is-hoverable is-fullwidth">
-          <tbody>
-            <tr *ngFor="let ticker of filterTickers(tickers)">
-              <td class="has-text-right symbol">
-                {{ ticker.symbol }}
-              </td>
-              <td class="has-text-centered">
-                <app-spark [items]="ticker.closes" [limit]="durationYear*12"></app-spark>
-              </td>
-              <td class="has-text-right gain">
-                <app-gain [number]="ticker.gain"></app-gain>
-              </td>
-            </tr>
-          </tbody>
-        </table>-->
+        <!-- List of tickers -->
+        <div *ngFor="let ticker of filterTickers(tickers)">
+          <div class="ticker">
+            <app-ticker [ticker]="ticker"></app-ticker>
+          </div>
+        </div>
       </div>
     </app-layout>
   `,
   styles: [`
-    td {
-      font-family: monospace;
-    }
-    td.symbol {
-      width: 4rem;
-    }
-    td.gain {
-      width: 6rem;
+    .ticker {
+      margin-bottom: 1rem;
     }
   `]
 })
 export class InvestPageComponent implements OnInit, OnDestroy {
   watchlists: any;
   watchlistIndex = 0;
-  durationYear = 4;
   tickerSearch = '';
   tickers = [];
   watchlistsSub;
   activity$;
-  columns = [
-    { name: 'Symbol' },
-    { name: 'Closes' },
-    { name: 'Gain' },
-  ]
+  expanded: any = {};
 
   constructor(
     private iexService: IEXService,
@@ -174,4 +113,16 @@ export class InvestPageComponent implements OnInit, OnDestroy {
     return tickers;
   }
 
+  isExpanded(row) {
+    const expanded = false;
+    if (row.symbol in this.expanded) {
+      return this.expanded[row.symbol];
+    }
+    return expanded;
+  }
+
+  toggle(row) {
+    const expanded = this.isExpanded(row);
+    this.expanded[row.symbol] = !expanded;
+  }
 }

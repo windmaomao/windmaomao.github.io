@@ -10,7 +10,7 @@ import { ActivityService } from '../services/activity.service';
   template: `
     <div class="layout">
       <app-navbar></app-navbar>
-      <div class="content">
+      <div>
         <div class="sidebar"></div>
         <div class="main">
           <ng-content></ng-content>

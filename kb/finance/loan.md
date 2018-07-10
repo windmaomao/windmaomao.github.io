@@ -12,6 +12,7 @@
 
 ## Source
 
+- Borrow from BofA, 2.99% credit line up to $100,000
 - Borrow from BofA, 4.75%, starting $100,000
 - Pull from personal account, 2%, $100,000
 - Borrow from a friend, 3%, $100,000

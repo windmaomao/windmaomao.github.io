@@ -7,14 +7,13 @@ import { Component, Input, OnChanges } from '@angular/core';
 @Component({
   selector: 'app-spark',
   template: `
-    <span>{{ line }}</span>
+    <span class="is-unselectable has-text-centered">{{ line }}</span>
   `,
   styles: [`
     span {
       color: lightsteelblue;
-      font-size: 0.6rem;
-      font-family: monospace;
-      letter-spacing: -0.2rem;
+      font-size: 0.65rem;
+      letter-spacing: -0.1rem;
     }
   `]
 })

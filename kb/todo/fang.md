@@ -7,12 +7,12 @@
 #### 7/9
 
 - ~~Normalize morgage payment~~
-- Update `payrol`
+- ~~Update `payrol`~~
 
 #### 7/8
 
-- Watch `TYO`
-- `Cach` to bank
+- ~~Buy `TYO`~~
+- ~~`Cach` to bank~~
 - ~~`FX` Order to sale~~
 
 

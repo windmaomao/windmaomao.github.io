@@ -1,0 +1,15 @@
+<table class="table is-narrow is-striped is-hoverable is-fullwidth">
+  <tbody>
+    <tr *ngFor="let ticker of filterTickers(tickers)">
+      <td class="has-text-right symbol">
+        {{ ticker.symbol }}
+      </td>
+      <td class="has-text-centered">
+        <app-spark [items]="ticker.closes" [limit]="durationYear*12"></app-spark>
+      </td>
+      <td class="has-text-right gain">
+        <app-gain [number]="ticker.gain"></app-gain>
+      </td>
+    </tr>
+  </tbody>
+</table>

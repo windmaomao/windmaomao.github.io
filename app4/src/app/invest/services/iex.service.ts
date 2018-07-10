@@ -34,29 +34,32 @@ export class IEXService {
         const quote = ticker.quote;
         const news = ticker.news;
         const chart = ticker.chart;
-        const closes = chart.map(item => item.close).reverse();
+        const closes = chart.map(item => item.close);
 
         arr.push({
           symbol: quote.symbol,
-          title: quote.companyName,
+          company: quote.companyName,
           sector: quote.sector,
           price: quote.latestPrice,
           news: news,
           closes: closes,
-          gain: calcGain(quote.latestPrice, closes[1])
+          gain: calcGain(quote.latestPrice, closes[1]),
+          day: quote.changePercent,
+          volumn: quote.latestVolume,
+          ytd: quote.ytdChange
         })
       });
       return arr;
     };
 
-    const params = new HttpParams({
+    const params = !IEX.debug ? new HttpParams({
       fromObject: {
         symbols: symbols.join(','),
         types: 'quote,news,chart',
         range: '5y',
         chartInterval: '22'
       }
-    });
+    }) : {};
 
     return this.http.get(url, { params: params }).pipe(
       mergeMap((res: any) => {
