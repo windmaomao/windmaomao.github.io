@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot --port 4401",
-    "build": "ng build --prod",
+    "build": "ng build --prod --base-href=/appnav/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
