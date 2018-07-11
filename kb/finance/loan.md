@@ -13,7 +13,7 @@
 ## Source
 
 - Business Credit Line, 2.99% credit line up to $100,000
-- Home Equity Line, 4.8%
+- Home Equity Line, 4.9% up to $100,000 with initial $50,000
 - Pull from personal account, 2%, $100,000
 - Borrow from a friend, 3%, $100,000
 
