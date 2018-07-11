@@ -8,6 +8,7 @@
 
 - ~~Signup codepen pro~~
 - Explorer `uservoice`
+- Study [`SEO`](https://egghead.io/courses/seo-friendly-progressive-web-applications-with-angular-universal?utm_source=drip&utm_medium=email&utm_term=angular&utm_content=angular-seo)
 
 #### 7/9
 

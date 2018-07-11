@@ -36,6 +36,7 @@
 | GE180720P13  | Health    |    $ 34 | short | 4/23 `enter`  |
 | XNET P2.5    | Bitcoin   |    $  20 | short | 6/15 `expire` |
 | **Vanguard** |           | $ 20,000 |       |               |
+| US 10/11/18  | Bill      | $ 10,000 | long  |       |
 | BOC 6/28/19  | CD        | $ 10,000 | long  |       |
 | BOC 5/15/19  | CD        | $ 10,000 | long  |       |
 
