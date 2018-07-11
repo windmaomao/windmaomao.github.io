@@ -4,6 +4,11 @@
 
 ### Jun
 
+#### 7/11
+
+- ~~Signup codepen pro~~
+- Explorer `uservoice`
+
 #### 7/9
 
 - ~~Normalize morgage payment~~
@@ -39,8 +44,7 @@
 
 #### 6/29
 
-- ~~Prototype `blog` page~~
-- :x: ~~Signup `codepen` pro~~
+- ~~Prototype `blog` page~~ 
 - ~~Catch up with `linkedIn`~~
 
 #### 6/28
@@ -48,8 +52,6 @@
 - ~~Prepare stuff back to China, med, candy~~
 - ~~Finalize `qplot` multiple app framework~~
 - ~~Update `linkedIn` cn version~~
-- Family tree app
-- Question math app
 
 #### 6/16
 

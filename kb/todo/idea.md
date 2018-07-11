@@ -1,5 +1,11 @@
 # Idea
 
+Simply Math
+
+: 7/10/18
+: - Simply math app
+ - Family tree App
+
 Grid Designer
 
 : 3/9/18
