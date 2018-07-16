@@ -8,12 +8,12 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item          | Amount   | Year | Type       | Renew |
 | ------------- | -------- | ---- | ---------- | ----- |
-| Safari Books  | $213  /y | 2016 | Book       | 08/01 |
 | Egghead       | $140  /y | 2017 | Video      | 12/11 |
-| TradingView   | $108  /y | 2017 | Chart      | 02/03 |
-| Interview Cake| $100  /y | 2018 | Training   | 04/21 |
 | Dropbox       | $100  /y | 2013 | Storage    | 11/06 |
+| Safari Books  | $213  /y | 2016 | Book       | 08/01 |
+| Interview Cake| $100  /y | 2018 | Training   | 04/21 |
 | Google Drive  | $5    /y | 2017 | Storage    | 03/26 |
+| TradingView   | $108  /y | 2017 | Chart      | 02/03 |
 | Quickbook     | $15   /m | 2016 | Accounting |   |
 | Lifelock      | $10   /m | 2015 | Security   |   |
 | Amazon AWS    | $2    /m | 2015 | Hosting    |   |

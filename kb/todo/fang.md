@@ -4,10 +4,15 @@
 
 ### Jun
 
+#### 7/16
+
+- Registration for Lucas
+
 #### 7/11
 
 - ~~Signup codepen pro~~
-- Explorer `uservoice`
+- ~~Continue study `Redux`~~
+- ~~Renew `uservoice`~~
 - Study [`SEO`](https://egghead.io/courses/seo-friendly-progressive-web-applications-with-angular-universal?utm_source=drip&utm_medium=email&utm_term=angular&utm_content=angular-seo)
 
 #### 7/9
@@ -21,12 +26,8 @@
 - ~~`Cach` to bank~~
 - ~~`FX` Order to sale~~
 
-
-
 #### 7/7
 
-- Registration for lucas
-- Recycle `Apple` stuff
 - ~~Update credit card, INTUIT~~
 - ~~Study  `loan` benifits and rates~~
 - ~~Redirect `qplot.com`~~
