@@ -1,5 +1,5 @@
 # QPlot Github
-![QPlot Github](https://s3.amazonaws.com/qp-photo/qp-github-appnav.PNG)
+![QPlot Github](https://s3.amazonaws.com/qp-photo/qp-github-appnav.png)
 
 > Works under the same umberalla. [Live site](http://qplot.com)
 
