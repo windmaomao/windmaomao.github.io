@@ -2,44 +2,63 @@
  * App component
  */
 
+import { Store } from '@ngrx/store';
+import { AppStore, AppActions } from './app.reducer';
+
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
-import { APPS } from './app.const';
 
 @Component({
   selector: 'app-root',
   template: `
-    <div id="app">
+    <div id="app" *ngIf="!error">
       <app-sidenav id="sidenav"
-        [apps]="apps" [selected]="appUrl" (select)="switch($event)"
+        [apps]="apps$ | async" [selected]="appUrl" (select)="switch($event)"
         [ngClass]="{ open: open }"
       ></app-sidenav>
       <div id="content" [ngClass]="{ open: open }">
         <app-header *ngIf="!prod"></app-header>
-        <iframe [src]="url(appUrl) | safe"
+        <iframe [src]="url(appUrl) | safe" *ngIf="prod"
           frameborder="0" style="width:100%; height:calc(100vh);"
         ></iframe>
       </div>
     </div>
+    <section class="hero is-light is-fullheight" *ngIf="error">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">We're sorry...</h1>
+          <h2 class="subtitle">{{ error }}</h2>
+        </div>
+      </div>
+    </section>
   `,
   styleUrls: [`./app.component.scss`]
 })
 export class AppComponent implements OnInit {
-  prod = environment.production;
-  open = false;
-  apps = [];
-  appUrl = '';
-  app = '';
-  private sub;
+  public prod = environment.production;
+  public open;
+  public apps$;
+  public appUrl = '';
+  public error;
   private params;
 
-  constructor(private http: HttpClient) {
-    this.parse();
-    this.fetch();
-  }
+  constructor(private store: Store<AppStore>) {}
 
   ngOnInit() {
+    this.store.dispatch(AppActions.fetchApps());
+    this.store.select('slider').subscribe(status => {
+      this.open = status;
+    });
+    this.store.select('app').subscribe(app => {
+      this.switch(app);
+    });
+    this.apps$ = this.store.select('apps');
+    this.store.select('error').subscribe(err => {
+      this.error = err;
+    });
+
+    this.parse();
     const that = this;
     document.addEventListener('Sidenav', function(e) {
       that.toggle();
@@ -47,37 +66,21 @@ export class AppComponent implements OnInit {
   }
 
   toggle(status?) {
+    let open = false;
     if (status) {
-      this.open = (status === 'off') ? false : true;
+      open = (status === 'off') ? false : true;
     } else {
-      this.open = !this.open;
+      open = !this.open;
     }
+    this.store.dispatch(AppActions.toggleSlider(open));
   }
 
-  fetch() {
-    if (!this.prod) {
-      this.apps = APPS;
-      this.switch();
-    } else {
-      const api$ = this.http.get(environment.appUrl);
-      this.sub = api$.subscribe((res: any[]) => {
-        this.apps = res;
-        this.switch();
-      });
-    }
-  }
-
-  switch(app?) {
-    if (!app) {
-      if (this.apps.length) {
-        app = this.apps[0];
-      }
-    }
+  switch(app) {
     if (app) {
       this.appUrl = app.url;
       document.title = app.title;
+      this.toggle('off');
     }
-    this.toggle('off');
   }
 
   url(u) {
@@ -95,5 +98,4 @@ export class AppComponent implements OnInit {
       this.params = parts[1];
     }
   }
-
 }

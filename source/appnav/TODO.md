@@ -1,8 +1,17 @@
 # TODO
 
+## 7/17
+
+- fectch api as action
+
+## 7/11
+
+- ~~reduxify~~
+
 ## 7/10
 
 - allow first app to be configurable
+- add icon to slide back
 
 ## 7/7
 
