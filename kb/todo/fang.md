@@ -7,6 +7,7 @@
 #### 7/16
 
 - Registration for Lucas
+- Rearrange Dental
 
 #### 7/11
 
