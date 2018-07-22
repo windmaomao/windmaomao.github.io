@@ -4,17 +4,22 @@
 
 ### Jun
 
+#### 7/21
+
+- Prototype `scheduler`
+- Cancel `morningstar`, 18662299449
+
 #### 7/16
 
-- Registration for Lucas
-- Rearrange Dental
+- ~~Registration for Lucas~~
+- ~~Rearrange Dental~~
 
 #### 7/11
 
 - ~~Signup codepen pro~~
 - ~~Continue study `Redux`~~
 - ~~Renew `uservoice`~~
-- Study [`SEO`](https://egghead.io/courses/seo-friendly-progressive-web-applications-with-angular-universal?utm_source=drip&utm_medium=email&utm_term=angular&utm_content=angular-seo)
+- Study `SEO`
 
 #### 7/9
 
@@ -32,7 +37,6 @@
 - ~~Update credit card, INTUIT~~
 - ~~Study  `loan` benifits and rates~~
 - ~~Redirect `qplot.com`~~
-- Cancel `morningstar`, 18662299449
 
 #### 7/6
 
