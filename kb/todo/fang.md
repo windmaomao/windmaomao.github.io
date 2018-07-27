@@ -7,11 +7,11 @@
 #### 7/21
 
 - Prototype `scheduler`
-- Cancel `morningstar`, 18662299449
-- Cancel `dental`
-- Buy `USDU` and `DTYS`
-- Claim day care on `HSA`
-- Buy eyeglasses
+- ~~Cancel `morningstar`, `10/16`~~
+- ~~Cancel `dental` appointment~~
+- ~~Buy `USDU` and `DTYS`~~
+- ~~Claim dependent `HSA`~~
+- ~~Schedule eye exam~~
 
 #### 7/16
 
