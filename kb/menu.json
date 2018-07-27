@@ -41,6 +41,7 @@
       "qp-github",
       "angular2-mc-common",
       "angular-mc-common",
+      "reports-center",
       "figure-caption",
       "markdown-it",
       "aof-form",
@@ -49,6 +50,15 @@
       "mongoose-restify",
       "event-services",
       "dbvals-audit"
+    ]
+  },
+  {
+    "title": "Packages", "type": "package",
+    "items": [
+      "qp-github",
+      "angular2-mc-common",
+      "angular-mc-common",
+      "reports-center-ui"
     ]
   },
   {
