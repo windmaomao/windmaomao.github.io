@@ -8,6 +8,10 @@
 
 - Prototype `scheduler`
 - Cancel `morningstar`, 18662299449
+- Cancel `dental`
+- Buy `USDU` and `DTYS`
+- Claim day care on `HSA`
+- Buy eyeglasses
 
 #### 7/16
 
