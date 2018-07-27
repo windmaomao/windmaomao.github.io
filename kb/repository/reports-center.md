@@ -1,10 +1,10 @@
 # ReportsCenterUI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0. It heavily depends on [`Global Console`](https://github.com/angular/angular-cli) as the base library to speed up the development.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. This also starts up the mock server `http://localhost:3001/`. 
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. This also starts up the mock server `http://localhost:3001/`.
 
 In case, it is better to separate the logs for both server you can run them separately on a different console by running `npm run dev` and `npm run mock`.
 
@@ -15,11 +15,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. 
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running automated tests
+
+Run `npm run auto-test` to execute the protractor automated tests of the UI.
 
 ## Running end-to-end tests
 
@@ -28,16 +32,16 @@ There are two ways to run the end-to-end tests since the application is dependen
 ### Purely running test
 You would use this if you are just purely checking the state of the application
 
-Run `npm run e2e-with-mock` 
+Run `npm run e2e-with-mock`
 
 If mock server is already running or in the future if the app is directly connected to non-mock data servers
 
-Run `npm run e2e` 
+Run `npm run e2e`
 
 ### Developing while running end-to-end
 In case it is assumed that you are running the mock server on the side (either ```npm start``` or ```npm run mock```) . This means that you don't need to run the mock server  for the application to work. You can just run the end-to-end test at this point.
 
-Run `npm run e2e-dev` 
+Run `npm run e2e-dev`
 
 This opens a new target browser while running test against your dev server.
 
@@ -49,7 +53,7 @@ This opens a new target browser while running test against your dev server.
 
 ```set PATH=%PATH%;C:\Program Files\nodejs\```
 
-To break it down: 
+To break it down:
 
 ```set PATH=%PATH%;``` takes the current path and sets PATH to it
 
@@ -87,7 +91,8 @@ In case you need IE drivers or to test on IE browser,
 
 ```webdriver-manager status```
 
-9)	Run the following commands to update and start the Selenium server
+9)	Run the following commands to update and start the Selenium server. You may need to set your HTTP_PROXY and HTTPS_PROXY environment
+variables to equal "http://surf-proxy.gslb.db.com:8080"
 
 ```
 webdriver-manager start
@@ -103,7 +108,6 @@ To configure IE, It needs to set same Security level in all zones. To do that fo
 2.Go to Tools -> Internet Options -> Security
 
 3.Set all zones (Internet, Local intranet, Trusted sites, Restricted sites) to the same protected mode, enabled or disabled should not matter.
-
 
 ## Further help
 

@@ -4,14 +4,18 @@
 
 ### Jun
 
-#### 7/21
+#### 7/27
 
-- Prototype `scheduler`
-- ~~Cancel `morningstar`, `10/16`~~
+- - ~~Cancel `morningstar`, `10/16`~~
 - ~~Cancel `dental` appointment~~
 - ~~Buy `USDU` and `DTYS`~~
 - ~~Claim dependent `HSA`~~
 - ~~Schedule eye exam~~
+- Orangize `DB` material
+
+#### 7/21
+
+- Prototype `scheduler`
 
 #### 7/16
 
@@ -23,7 +27,7 @@
 - ~~Signup codepen pro~~
 - ~~Continue study `Redux`~~
 - ~~Renew `uservoice`~~
-- Study `SEO`
+- ~~:x: Study `SEO`~~
 
 #### 7/9
 
