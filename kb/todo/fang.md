@@ -6,12 +6,17 @@
 
 #### 7/27
 
-- - ~~Cancel `morningstar`, `10/16`~~
+- Ask for recommendation letter
+- ~~Fix `kb` mobile issue~~
+
+#### 7/26
+
+- ~~Cancel `morningstar`, `10/16`~~
 - ~~Cancel `dental` appointment~~
 - ~~Buy `USDU` and `DTYS`~~
 - ~~Claim dependent `HSA`~~
 - ~~Schedule eye exam~~
-- Orangize `DB` material
+- ~~Orangize `DB` material~~
 
 #### 7/21
 

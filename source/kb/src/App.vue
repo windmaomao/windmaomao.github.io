@@ -34,9 +34,9 @@ export default {
       <Slider :menu="menu" @select="menuSelected" />
       <Main :source="source" />
       <div id="fixer">
-        <nav class="level">
+        <nav class="level is-mobile">
           <div class="level-left">
-            <span @click="appSlided">&nbsp;&nbsp;<&nbsp;</span>
+            <span @click="appSlided">&nbsp;&nbsp;&#9887;&nbsp;</span>
           </div>
           <div class="level-right">
             <Themer @theme="themeSwitched" />

@@ -1,8 +1,8 @@
 # Fang Jin
 
-Frontend Developer {.subtitle}
+Senior Front-End Engineer {.subtitle}
 
-I build websites in general domains such as healthcare, banking, real estate and university. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
+I make websites, mostly on screens and monitors, via Angular, React or Vue web framework. Areas that I worked on includes Banking, Healthcare, and Education. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
@@ -11,7 +11,7 @@ Skills
 : - 7 Years Prototyping with _Bootstrap_ and _Sass_
   - 5 Years _Angular_ (up to 5.x)
   - 4 Years _RxJS_, _Promise_ and _Ajax_
-  - 2 Years _React_, _Vue_ and _jQuery_
+  - 3 Years _React_, _Vue_ and _jQuery_
 
 ## Award
 
