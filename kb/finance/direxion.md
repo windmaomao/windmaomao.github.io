@@ -2,11 +2,20 @@
 
 ## Index
 
+
 ### Summary
 
-| Industry | Type | Name                  | Symbol    |
-| -------- | ---- | --------------------- | --------- |
-| S&P      | Bear | Daily S&P 500         | `SPDN` 1x |
+| Industry | Type | Name                | Symbol      |
+| -------- | ---- | ------------------- | ----------- |
+| S&P      | Bear | Daily S&P 500       | `SPDN` `SH` |
+| NASDAQ   | Bear | NASDAQ 100          | `PSQ`       |
+| Dow Jones| Bear |Dow Jones Industrial | `DOG`       |
+| MidCap   | Bear | S&P MidCap 400      | `MYY`       |
+| SmallCap | Bear | S&P SmallCap 400    | `SBB`       |
+| Russell  | Bear | Russell 2000        | `RWM`       |
+| Material | Bear | S&P Basic Material  | `SBM` `UYM` |
+| Biotech  | Bear | NASDAQ Biotechnology| `BIS` `BIB` |
+| Consumer | Bear | Dow Jones U.S. Goods| `SZK` `UGE` | 
 | Bond     | Bear | Daily Total Bond      | `SAGG` 1x |
 | Treasury | Bear | Daily 7-10 Treasury   | `TYNS` 1x |
 | Treasury | Bear | Daily 20+ Treasury    | `TYBS` 1x |
