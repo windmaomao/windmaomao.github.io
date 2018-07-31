@@ -1,9 +1,8 @@
-# Direxion
+# Hedge Funds
 
 ## Index
 
-
-### Summary
+### Stock Market
 
 | Industry | Type | Name                | Symbol      |
 | -------- | ---- | ------------------- | ----------- |
@@ -13,49 +12,63 @@
 | MidCap   | Bear | S&P MidCap 400      | `MYY`       |
 | SmallCap | Bear | S&P SmallCap 400    | `SBB`       |
 | Russell  | Bear | Russell 2000        | `RWM`       |
+
+### Sectors
+
+| Industry | Type | Name                | Symbol      |
+| -------- | ---- | ------------------- | ----------- |
+| Biotech  | Bear | NASDAQ Biotechnology| `BIS`       |
+| Consumer | Bear | US Goods            | `SZK`       |
+| Consumer | Bear | US Services         | `SCC`       |
+| Consumer | Bear | US Finacials        | `SEF`       |
+| Healthcare|Bear | US Healthcare       | `RXD`       |
+| Industry | Bear | US Industries       | `SIJ`       |
+| Estate   | Bear | US Real Estate      | `REK`       |
+| Retail   | Bear | Mortar Retail       | `EMTY`      |
+| Semiconductors | Bear |Semiconductors | `SSG`       |
+| Technology|Bear | US Technology       | `REW`       |
+| Telecommunications| Long | US Select  | `LTL`       |
+| Utilities| Bear | US Utilities        | `SDP`       |
+
+### Fixed Income
+
+| Industry | Type | Name                | Symbol      |
+| -------- | ---- | ------------------- | ----------- |
+| Bond     | Bear | Daily Total Bond    | `SAGG`      |
+| Treasury | Bear | Daily 7-10 Treasury | `TYNS` `TBX`|
+| Treasury | Bear | Daily 20+ Treasury  | `TYBS` `TBF`|
+| Yield    | Bear | Daily High Yield    | `HYDD` `SJB`|
+
+### International
+
+| Industry | Type | Name                | Symbol      |
+| -------- | ---- | ------------------- | ----------- |
+| China    | Bear | CSI 300 A, FTSE A50 | `CHAD` `YXI`|
+| China    | Bull | CSI Internet        | `CWEB`      |
+| Japan    | Bear | MSCI Japan          | `EWV`       |
+| Brazil   | Bear | MSCI Brazil 25/50   | `BZQ`       |
+| Europe   | Bear | FTSE Developed Europe| `EPV`      |
+| Europe   | Bull | Daily MSCI Financials| `EUFL`     |
+| Emerging | Bear | MSCI Emerging Markets| `EUM`      |
+| EAFE     | Bear | MSCI EAFE           | `EFZ`       |
+
+### Commodity
+
+| Industry | Type | Name                | Symbol      |
+| -------- | ---- | ------------------- | ----------- |
 | Material | Bear | S&P Basic Material  | `SBM` `UYM` |
-| Biotech  | Bear | NASDAQ Biotechnology| `BIS` `BIB` |
-| Consumer | Bear | Dow Jones U.S. Goods| `SZK` `UGE` | 
-| Bond     | Bear | Daily Total Bond      | `SAGG` 1x |
-| Treasury | Bear | Daily 7-10 Treasury   | `TYNS` 1x |
-| Treasury | Bear | Daily 20+ Treasury    | `TYBS` 1x |
-| China    | Bear | Daily CSI 300 A Share | `CHAD` 1x |
-| Yield    | Bear | Daily High Yield      | `HYDD` 2x |
-| European | Bull | Daily MSCI Financials | `EUFL` 2x |
+| Oil&Gas  | Bear | US Oil & Gas        | `DDG`       |
+| Crude Oil| Bear | WTI Crude Oil       | `SCO`       |
+| Natural  | Bear | Natural Gas         | `KOLD`      |
+| Gold     | Bear | LBMA Gold Price     | `GLL`       |
+| Silver   | Bear | London Silver Price | `ZSL`       |
+| Miner    | Bear | NYSE Gold Miners    | `GDXS` `SHNY`|
 
-### S&P
+### Currency
 
-| Industry | Type | Name          | Symbol    |
-| -------- | ---- | ------------- | --------- |
-| S&P      | Bear | Daily S&P 500 | `SPDN` 1x |
-| S&P      | Bull | Daily S&P 500 | `SPUU` 2x |
-| S&P      | Bear | Daily S&P 500 | `SMLL` 2x |
-| S&P      | Bull | Daily S&P 500 | `SPXL` 3x |
-| S&P      | Bear | Daily S&P 500 | `SMXS` 3x |
-
-### Cap
-
-| Industry  | Type | Name            | Symbol    |
-| --------- | ---- | --------------- | --------- |
-| Small Cap | Bull | Daily Small Cap | `TNA ` 3x |
-| Small Cap | Bear | Daily Small Cap | `TZA ` 3x |
-| Mid Cap   | Bull | Daily Mid Cap   | `MIDU` 3x |
-| Mid Cap   | Bear | Daily Mid Cap   | `MIDZ` 3x |
-
-
-### China
-
-| Industry | Type | Name                  | Symbol    |
-| -------- | ---- | --------------------- | --------- |
-| China    | Bear | Daily CSI 300 A Share | `CHAD` 1x |
-| China    | Bull | Daily CSI 300 A Share | `CHAU` 2x |
-| China    | Bull | Daily CSI Internet    | `CWEB` 2x |
-
-## Commodity
-
-### Summary
-
-| Industry | Type | Name                | Symbol    |
-| -------- | ---- | ------------------- | --------- |
-| Mine     | Bull | Daily Silver Miners | `SHNY` 2x |
-
+| Industry | Type | Name                | Symbol      |
+| -------- | ---- | ------------------- | ----------- |
+| EUR/USD  | Bear | EUR/USD             | `EUFX`      |
+| AUD/USD  | Bear | AUD/USD             | `CROC`      |
+| JPY/USD  | Bear | JPY/USD             | `YCS`       |
+| USD      | Bull | Invesco DB USD Index| `UPP`       |

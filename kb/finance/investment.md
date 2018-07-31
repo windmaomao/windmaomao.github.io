@@ -32,6 +32,7 @@
 | DTYS         | Fixed     |    $ 468 | short |  |
 | TIF180817P100| Retail    |    $ 410 | short |  |
 | USDU         | Currency  |    $ 403 | long  |  |
+| YXI          | China     |    $ 394 | short |  |
 | TYO          | Fixed     |    $ 394 | short |  |
 | BLUE         | Health    |    $ 353 | short |  |
 | SRTY         | Russell   |    $ 155 | short |  |

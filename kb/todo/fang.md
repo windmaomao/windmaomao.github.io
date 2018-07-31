@@ -7,13 +7,13 @@
 #### 7/29
 
 - Order backyard, `18888885424` installation
-- Drug test at LabCorp
-- Onboard paperwork
+- ~~Drug test at LabCorp~~
+- ~~Onboard paperwork~~
 
 #### 7/27
 
 - Ask for recommendation letter
-- ~~Fix `kb` mobile issue
+- Fix `kb` mobile issue
 - Update `appnav` for production
 
 #### 7/26
