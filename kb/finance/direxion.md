@@ -27,7 +27,7 @@
 | Retail   | Bear | Mortar Retail       | `EMTY`      |
 | Semiconductors | Bear |Semiconductors | `SSG`       |
 | Technology|Bear | US Technology       | `REW`       |
-| Telecommunications| Long | US Select  | `LTL`       |
+| Telecommunications| Bull | US Select  | `LTL`       |
 | Utilities| Bear | US Utilities        | `SDP`       |
 
 ### Fixed Income

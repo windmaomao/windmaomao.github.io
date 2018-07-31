@@ -4,6 +4,13 @@
 
 ### Jun
 
+#### 7/31
+
+- ~~Update annually~~
+- ~~Transfer to `ally`~~
+- Findout `chase` password
+- Tax increases from May
+
 #### 7/29
 
 - Order backyard, `18888885424` installation
@@ -13,8 +20,8 @@
 #### 7/27
 
 - Ask for recommendation letter
-- Fix `kb` mobile issue
-- Update `appnav` for production
+- ~~Fix `kb` mobile issue~~
+- ~~Update `appnav` for production~~
 
 #### 7/26
 
