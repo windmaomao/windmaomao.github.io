@@ -1,5 +1,7 @@
 # Hedge Funds
 
+[New Launches](http://etfdb.com/etf-launch-center/)
+
 ## Index
 
 ### Stock Market
@@ -12,6 +14,7 @@
 | MidCap   | Bear | S&P MidCap 400      | `MYY`       |
 | SmallCap | Bear | S&P SmallCap 400    | `SBB`       |
 | Russell  | Bear | Russell 2000        | `RWM`       |
+| Votality | Bull | VIX Short-Term      | `VXX` `VIXM`|
 
 ### Sectors
 
@@ -21,14 +24,18 @@
 | Consumer | Bear | US Goods            | `SZK`       |
 | Consumer | Bear | US Services         | `SCC`       |
 | Consumer | Bear | US Finacials        | `SEF`       |
+| Consumer | Bear | Consumer Staples    | `SPLZ`      |
 | Healthcare|Bear | US Healthcare       | `RXD`       |
 | Industry | Bear | US Industries       | `SIJ`       |
 | Estate   | Bear | US Real Estate      | `REK`       |
 | Retail   | Bear | Mortar Retail       | `EMTY`      |
+| Retail   | Bull | Online Retail       | `ONLN` `IBUY` |
 | Semiconductors | Bear |Semiconductors | `SSG`       |
 | Technology|Bear | US Technology       | `REW`       |
+| Robotics | Bull | Robotics, AI & Auto | `UBOT`      |
 | Telecommunications| Bull | US Select  | `LTL`       |
 | Utilities| Bear | US Utilities        | `SDP`       |
+| FANG     | Bear | FANG + Alibaba etc. | `FNGD`      |
 
 ### Fixed Income
 
@@ -38,6 +45,7 @@
 | Treasury | Bear | Daily 7-10 Treasury | `TYNS` `TBX`|
 | Treasury | Bear | Daily 20+ Treasury  | `TYBS` `TBF`|
 | Yield    | Bear | Daily High Yield    | `HYDD` `SJB`|
+| Yield    | Bull | Lower Yielding      | `OPER`      |
 
 ### International
 

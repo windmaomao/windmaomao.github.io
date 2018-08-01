@@ -4,6 +4,15 @@
 
 ### Jun
 
+#### 8/6 Onboard
+
+- Orientation starts at 9AM Eastern. Please do not arrive earlier than 8:45AM.
+- Bring all of your completed forms (W4, state Tax form, page 1 of the I-9, direct deposit form and voided check).
+- Bring your I-9 proof of ID materials (Driver’s License, Passport, Social Security card, etc). 
+- We will be making your company Photo ID badge on your first day. We will be providing catered lunch for you both days of Orientation.
+- Office dress code is Business Casual to Casual.
+- Please be aware that you will receive some MercuryGate swag and a few training books at Orientation. I strongly encourage you to bring a set of ear buds or headphones so that you can listen to the online training.
+
 #### 7/31
 
 - ~~Update annually~~
