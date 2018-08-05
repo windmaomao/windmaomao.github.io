@@ -7,28 +7,55 @@
 #### 8/6 Onboard
 
 - Orientation starts at 9AM Eastern. Please do not arrive earlier than 8:45AM.
-- Bring all of your completed forms (W4, state Tax form, page 1 of the I-9, direct deposit form and voided check).
-- Bring your I-9 proof of ID materials (Driver’s License, Passport, Social Security card, etc). 
-- We will be making your company Photo ID badge on your first day. We will be providing catered lunch for you both days of Orientation.
-- Office dress code is Business Casual to Casual.
-- Please be aware that you will receive some MercuryGate swag and a few training books at Orientation. I strongly encourage you to bring a set of ear buds or headphones so that you can listen to the online training.
+- W4, state Tax form, page 1 of the I-9, direct deposit form and voided check.
+- Bring your I-9 proof of ID materials (**Passport**). 
+- We will be making your company Photo ID badge on your first day.
+- We will be providing catered lunch for you both days of Orientation.
+- Bring a set of ear buds or headphones so that you can listen to the online training.
+
+#### 8/4 
+
+- Short `TAL`
+- Get `loan` from boa
+- Findout `chase` password
+- Findout `microsoft` charge
+
+#### 8/2 
+
+- ~~Signup highland `daycare`~~
+- ~~Signup moravian `daycare`~~
+- ~~Watch `Eron` and `Betting Zero`~~
+- ~~Take care health benefits~~
+
+#### 8/1 Daycare
+
+- Moravian, 919-616-8873
+  - Lucas, Sep 4th.
+  - ~~$200 registration~~
+  - ~~Five days $325/month~~
+  - 9:25am - 1:00pm 
+  - Orientation at Aug 30th, 5pm - 7pm
+- Highland, 919-787-2182
+  - Sophia, Sep 4th, Tuesday
+  - ~~Check form $100~~
+  - M - F 7:30am - 6pm, $950
+  - Orientation at Aug 30th 5:30pm
 
 #### 7/31
 
 - ~~Update annually~~
 - ~~Transfer to `ally`~~
-- Findout `chase` password
-- Tax increases from May
+- ~~Tax increases from May~~
 
 #### 7/29
 
-- Order backyard, `18888885424` installation
+- ~~:x: Order backyard, `18888885424` installation~~
 - ~~Drug test at LabCorp~~
 - ~~Onboard paperwork~~
 
 #### 7/27
 
-- Ask for recommendation letter
+- ~~:x: Ask for recommendation letter~~
 - ~~Fix `kb` mobile issue~~
 - ~~Update `appnav` for production~~
 

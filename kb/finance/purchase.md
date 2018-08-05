@@ -1,7 +1,9 @@
 # Purchase List
+
 Collection of subscribedpt online services and purchased applications. 
 
 ## Subscription
+
 Current online service subscribed, such as for trading, training, accounting,  hosting and magazine etc.
 
 ### Active
@@ -10,6 +12,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | ------------- | -------- | ---- | ---------- | ----- |
 | Egghead       | $140  /y | 2017 | Video      | 12/11 |
 | Dropbox       | $100  /y | 2013 | Storage    | 11/06 |
+| Sketch        | $100  /y | 2018 | Graphic    | 08/11 |
 | Safari Books  | $213  /y | 2016 | Book       | 08/01 |
 | Interview Cake| $100  /y | 2018 | Training   | 04/21 |
 | Google Drive  | $5    /y | 2017 | Storage    | 03/26 |
@@ -52,20 +55,180 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 ## Application
 
-### Paid
-
-| Item         | Amount   | Year | Type         |
-| ------------ | -------- | ---- | ------------ |
-| Path Finder  |   $ 9?   | 2013 | Utility      |
-| Divvy        |   $ 14   | 2011 | Utility      |
-
 ### Free
 
-| Item         | Year | Type         |
-| ------------ | ---- | ------------ |
-| Typora       | 2018 | Office       |
-| Visual Studio Code       | 2017 | Programming       |
+| Item              | Year | Type         |
+| ----------------- | ---- | ------------ |
+| Typora            | 2018 | Office       |
+| Visual Studio Code| 2017 | Programming  |
 | Disk Inventory    | 2006 | Utility      |
+
+### Paid
+
+| Item           | Amount   | Year | Type         |
+| -------------- | -------- | ---- | ------------ |
+| Omini Outliner |   $ 50   | 2015 | Excel        |
+| Bundle Hunt    |   $ 20   | 2015 | Bundle       |
+| Anarchy Bundle |   $ 15   | 2015 | Bundle       |
+| Kaleidoscope   |   $ 70   | 2014 | Compare      |
+| NanoBundle 5   |   $ 20   | 2014 | Bundle       |
+| LaunchBar      |   $ 2    | 2014 | Utility      |
+| CodeKit        |   $ 30   | 2014 | Coding       |
+| NanoBundle 4   |   $ 20   | 2014 | Bundle       |
+| Little Snitch  |   $ 2    | 2014 | Security     |
+| NanoBundle 3   |   $ 10   | 2013 | Bundle       |
+| MAMP PRO       |   $ 20?  | 2013 | Server       |
+| Tower          |   $ 60   | 2013 | Repo         |
+| Sublime        |   $ 50   | 2013 | Editor       |
+| Path Finder    |   $ 9?   | 2013 | Utility      |
+| Balsamiq       |   $ 79   | 2013 | Mockup       |
+| Things         |   $ 50   | 2013 | Todo         |
+| MacHeist 4     |   $ 20   | 2012 | Bundle       |
+| Divvy          |   $ 14   | 2011 | Utility      |
+| NanoBundle 2   |   $ 20   | 2010 | Bundle       |
+| MacHeist 3     |   $ 40   | 2009 | Bundle       |
+
+## Bundle
+
+### Summary 
+
+| Item              | Year | Price |
+| ----------------- | ---- | ----- |
+| Bundle Hunt       | 2015 | $20   |
+| Anarchy Bundle    | 2015 | $15   |
+| nanoBundle 5      | 2014 | $20   |
+| nanoBundle 4      | 2014 | $20   |
+| nanoBundle 3      | 2013 | $10   |
+| MacHeist 4        | 2012 | $20   |
+| nanoBundle 2      | 2010 | $20   |
+| MacHeist 3        | 2009 | $40   |
+
+### BundleHunt, Dec 2015
+
+- Alternote
+- Downie
+- Pixa
+- Stock + Pro 3
+- iResizer
+- Delibar
+- Scrutiny
+- Deep Deramer
+- Focused
+- Flux V
+
+### Anarchy Bundle, Jan 2015
+
+- Default Folder X
+-  VirusBarrier
+-  uBar
+-  Speedy
+-  TotalFinder
+-  Parallels Access
+-  CodeKit
+-  Cocktail
+-  Little Snitch
+-  Postbox
+
+### NanoBundle 5, Jul 2014
+
+- Cinemagraph Pro
+- WebCode
+- Yep
+- Periscope Pro
+- Vitamin-R
+- Silo
+- MediaCentral
+- Oscura: Second Shadow
+- Intaglio
+- Data Rescue 3
+- 
+
+### NanoBundle 4, Jan 2014
+
+- Mac DVDRipper Pro
+- Intensify Pro
+- Swift Publisher
+- Hype
+- Chocolat
+- LaunchBar
+- djay
+- LIMBO
+- PaintCode
+
+### NanoBundle 3, Apr 2013
+
+- Clarify
+- CleanMyMac
+- Fantastical
+- iStopMotion
+- Little Inferno
+- Path Finder
+- Totals
+- xScope 
+
+### NanoBundle 1,
+
+- ShoveBox
+- WriteRoom
+- Twitterrific
+- TinyGrab
+- Hordes of Orcs
+- Mariger Write
+
+### MacHeist 4 Bundle, Oct 2012
+
+- CleanMyMac
+- Bejeweled 3
+- Scriveger
+- Courier
+- PDF Signer
+- Artboard
+- Jurassic Park
+- Sam & Max
+- Strong Bad's Cool Game
+- Radium
+- DiskTools Pro
+- Evernote Premium
+- HDRtist Pro
+- Firetask
+- Bioshock 2
+- Painter Lite
+
+### NanoBundle 2, Mar 2010
+
+- MacJournal
+- Ripit
+- Clips
+- CoverScout
+- Flow
+- Tales of Monkey Island
+- RapidWeaver
+- Tweetie
+- Airburst Extreme
+- Tracks
+- Burning Monkey Solitaire
+
+### MacHeist 3 Bundle, Apr 2009
+
+| Item         | Type         |
+| ------------ | ------------ |
+| The Hit List | Todo         |
+| Espresso     | Editor       |
+| Cro-Mag Rally| Game         |
+
+- iSale
+- Picturesque
+- SousChef
+- World of Goo
+- PhoneView
+- LittleSnapper
+- Acorn
+- Kinemac
+- WireTap Studio
+- BoinxTV
+- The Hit List
+- Espresso
+- Cro-Mag Rally
 
 
 
