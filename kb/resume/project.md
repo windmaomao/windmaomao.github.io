@@ -4,24 +4,27 @@
 ## Two Decades of Projects
 2000 - Current {.subtitle}
 
-|  Company        | Duration       | Comment |
-| --------------  | -------------- | ------- |
-| Deutsche Bank   | 2015 -         | UI Framework|
-| QPlot           | 2009 - 2017   | Visual Ideas |
-| People Designs  | 2014 - 2018    | Website Contracting |
+|  Company        | Duration       | Comment             |
+| --------------  | -------------- | ------------------- |
+| Mercury Gate    | 2018 -         | Transportation Apps |
+| Deutsche Bank   | 2015 - 2018    | Banking Websites    |
+| People Designs  | 2014 - 2018    | Healthcare Websites |
+| QPlot           | 2009 - 2017    | University Websites |
 | University      | 2000 - 2009    | Scientific Software |
 
+## Mercury Gate
+2018 - Current {.subtitle}
+
 ## Deutsche Bank
-2015 - Current {.subtitle}
+2015 - 2018 {.subtitle}
 
 |  Project        | Department      | Start    | Comment |
 | --------------  | --------------- | -------- | ------- |
 | Reports Center  | Equity          | 2018 Apr |         |
 | Entitlement Next| Equity          | 2018 Mar |         |
-| Angular Select  | Open Source     | 2018 Mar | Delayed |
 | Corporate Events| Corporate Action| 2018 Jan | Poc     |
 | Security Conf   | Security Lending| 2018 Jan | Poc     |
-| Global Console 2 | Equity          | 2017 Oct |         |
+| Global Console 2| Equity          | 2017 Oct |         |
 | Global Console  | Market Clearing | 2017 Jan |         |
 | AOF Form        | Global Markets  | 2016 Jun |         |
 | Kingslanding    | Open Source     | 2016 Apr |         |

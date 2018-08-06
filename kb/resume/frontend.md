@@ -15,7 +15,7 @@ Skills
 
 ## Award
 
-Recognition Award [^recognition] :boom:
+Recognition Award [^recognition]
 
 : Deutsche Bank
 : Jan 2017
@@ -31,11 +31,14 @@ Front Cover Design
 
 ## Experience
 
+### Deutsche Bank
+
+> "Fang continues to build his MC profile globally and is well respected across his peers group and stakeholders. Fang has ==helped build complex business solutions that can sustain a high level of performance== in CE where he has proven himself." -- Deutsche Bank Annual Review and Awards [^recognition]
 
 Deutsche Bank
 
-: Sep 2015 - Current
-: UI AngularJS Architect
+: Aug 2015 - Aug 2018
+: UI Angular Architect
 : *Angular*{.l} *Sass*{.l} *Webpack*{.l}
 
 Serves as UI and _AngularJS_ architect in Market Clearing domain for 45+ banking applications.
@@ -76,7 +79,7 @@ Reusable Component
   - Service supporting both *Http* enabled spinning notification and manual toggle
   - Service supporting both generic user prompt and custom popup dialogs
 
-## Past Experience
+### People Designs
 
 > "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to ==take vague customer requirements and turn them into a fantastic software solution== never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies [^linkedIn]
 
@@ -109,6 +112,8 @@ Reusable Component
   - Allow manager to modify each page content stored in file storage
   - Administer language files through web interface with easy switch
   - Automatic fill out custom *PDF* tempalte with user filled-out
+
+## Past Experience
 
 RxAnte
 

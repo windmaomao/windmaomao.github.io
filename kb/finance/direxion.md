@@ -1,6 +1,10 @@
 # Hedge Funds
 
-[New Launches](http://etfdb.com/etf-launch-center/)
+
+- [New Launches](http://etfdb.com/etf-launch-center/)
+- [Glaucus Research](https://glaucusresearch.com/)
+- [Muddy Water Reaserch](http://www.muddywatersresearch.com/)
+
 
 ## Index
 
