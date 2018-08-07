@@ -2,16 +2,21 @@
 
 ## 2018
 
-### Jun
+### Aug
+
+#### 8/6
+
+- ~~Registration of AC~~
+- Bring `headset`
+- Convert `401` to `IRA`, call Fidelity
+- Transfer 800 to Joint
 
 #### 8/6 Onboard
 
-- Orientation starts at 9AM Eastern. Please do not arrive earlier than 8:45AM.
+- Orientation starts at 9AM Eastern.
 - W4, state Tax form, page 1 of the I-9, direct deposit form and voided check.
 - Bring your I-9 proof of ID materials (**Passport**). 
 - We will be making your company Photo ID badge on your first day.
-- We will be providing catered lunch for you both days of Orientation.
-- Bring a set of ear buds or headphones so that you can listen to the online training.
 
 #### 8/4 
 
@@ -40,6 +45,8 @@
   - ~~Check form $100~~
   - M - F 7:30am - 6pm, $950
   - Orientation at Aug 30th 5:30pm
+
+### Jul
 
 #### 7/31
 
@@ -70,7 +77,7 @@
 
 #### 7/21
 
-- Prototype `scheduler`
+- ~~Prototype `scheduler`~~
 
 #### 7/16
 
