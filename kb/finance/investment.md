@@ -2,9 +2,7 @@
 
 ## 2018
 
-### Summary
-
-#### Realized
+### Realized Summary
 
 | Symbol | Industry  |  Cost |  Net | Type | Percentage |
 | ------ | --------- | ----: | ---: | ---- | ----: |
@@ -21,6 +19,25 @@
 | DBC    | Commodity | $3230 |  $81 | long | 2.5%  |
 | UNG    | Gas       | $245  | -$20 | long | -8.2% |
 | RIOT   | Bitcoin   | $27   | -$25 | long | -92.6%|
+
+### Practical Strategy
+#### Manage the odd in losing position
+
+- Don't Panic
+- Try to find the most complex defense
+- Look for simplifications
+- Avoid creating additional weaknesses
+- Consider returning material
+
+#### Case Study
+
+Size:     2x vs 1x   vs Curr   vs Perf
+
+Shares:   10 vs 5    vs  
+Target:  260 vs 460  vs 360
+Values:  340 vs 310  
+- Down: 1200 vs 750  vs 230    vs 1.6
++   Up:  800 vs 250  vs        vs 3.2 
 
 ### Jul
 

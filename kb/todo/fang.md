@@ -4,26 +4,35 @@
 
 ### Aug
 
+#### 8/10
+
+- take `github` private
+
+#### 8/10 Benefits
+
+- Education, $250
+- Referral, $500
+
+#### 8/9
+
+- ~~Access health insurance~~
+- ~~Findout `chase` password~~
+- Findout `microsoft` charge
+- ~~Findout `gym` membership~~
+- Check `db` `fidelity` status
+
 #### 8/6
 
 - ~~Registration of AC~~
-- Bring `headset`
-- Convert `401` to `IRA`, call Fidelity
-- Transfer 800 to Joint
+- ~~Bring `headset`~~
+- ~~Convert `401` to `IRA`, call Fidelity~~
 
 #### 8/6 Onboard
 
-- Orientation starts at 9AM Eastern.
-- W4, state Tax form, page 1 of the I-9, direct deposit form and voided check.
-- Bring your I-9 proof of ID materials (**Passport**). 
-- We will be making your company Photo ID badge on your first day.
-
-#### 8/4 
-
-- Short `TAL`
-- Get `loan` from boa
-- Findout `chase` password
-- Findout `microsoft` charge
+- ~~Orientation starts at 9AM Eastern.~~
+- ~~W4, state Tax form, page 1 of the I-9, direct deposit form and voided check.~~
+- ~~Bring your I-9 proof of ID materials (**Passport**)~~
+- ~~We will be making your company Photo ID badge on your first day.~~
 
 #### 8/2 
 

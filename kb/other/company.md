@@ -1,5 +1,11 @@
 # Company
 
+## Mercury Gate
+
+Senior Frontend Engineer
+
+MercuryGate's mission is to create transportation management system (TMS) solutions that are the perfect marriage of new technology and real-world dynamics. We believe in speed to market, speed to implement, and speed to integrate. That's the MercuryGate way and the goal of its employees. MercuryGate's success is reliant on its employees' dedication to and experience in technology and transportation management.
+
 ## Deutsche Bank
 
 UI / AngularJS Architect

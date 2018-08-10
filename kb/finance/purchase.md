@@ -65,28 +65,28 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 ### Paid
 
-| Item           | Amount   | Year | Type         |
-| -------------- | -------- | ---- | ------------ |
-| Omini Outliner |   $ 50   | 2015 | Excel        |
-| Bundle Hunt    |   $ 20   | 2015 | Bundle       |
-| Anarchy Bundle |   $ 15   | 2015 | Bundle       |
-| Kaleidoscope   |   $ 70   | 2014 | Compare      |
-| NanoBundle 5   |   $ 20   | 2014 | Bundle       |
-| LaunchBar      |   $ 2    | 2014 | Utility      |
-| CodeKit        |   $ 30   | 2014 | Coding       |
-| NanoBundle 4   |   $ 20   | 2014 | Bundle       |
-| Little Snitch  |   $ 2    | 2014 | Security     |
-| NanoBundle 3   |   $ 10   | 2013 | Bundle       |
-| MAMP PRO       |   $ 20?  | 2013 | Server       |
-| Tower          |   $ 60   | 2013 | Repo         |
-| Sublime        |   $ 50   | 2013 | Editor       |
-| Path Finder    |   $ 9?   | 2013 | Utility      |
-| Balsamiq       |   $ 79   | 2013 | Mockup       |
-| Things         |   $ 50   | 2013 | Todo         |
-| MacHeist 4     |   $ 20   | 2012 | Bundle       |
-| Divvy          |   $ 14   | 2011 | Utility      |
-| NanoBundle 2   |   $ 20   | 2010 | Bundle       |
-| MacHeist 3     |   $ 40   | 2009 | Bundle       |
+| Item           | Amount | Year | Type     |
+| -------------- | ------ | ---- | -------- |
+| Omini Outliner | $ 50   | 2015 | Excel    |
+| Bundle Hunt    | $ 20   | 2015 | Bundle   |
+| Anarchy Bundle | $ 15   | 2015 | Bundle   |
+| Kaleidoscope   | $ 70   | 2014 | Compare  |
+| NanoBundle 5   | $ 20   | 2014 | Bundle   |
+| LaunchBar      | $ 2    | 2014 | Utility  |
+| CodeKit        | $ 30   | 2014 | Coding   |
+| NanoBundle 4   | $ 20   | 2014 | Bundle   |
+| Little Snitch  | $ 2    | 2014 | Security |
+| NanoBundle 3   | $ 10   | 2013 | Bundle   |
+| MAMP PRO       | $ 20?  | 2013 | Server   |
+| Tower          | $ 60   | 2013 | Repo     |
+| Sublime        | $ 50   | 2013 | Editor   |
+| Path Finder    | $ 9?   | 2013 | Utility  |
+| Balsamiq       | $ 79   | 2013 | Mockup   |
+| Things         | $ 50   | 2013 | Todo     |
+| MacHeist 4     | $ 20   | 2012 | Bundle   |
+| :+1: Divvy     | $ 14   | 2011 | Utility  |
+| NanoBundle 2   | $ 20   | 2010 | Bundle   |
+| MacHeist 3     | $ 40   | 2009 | Bundle   |
 
 ## Bundle
 
@@ -103,7 +103,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | nanoBundle 2      | 2010 | $20   |
 | MacHeist 3        | 2009 | $40   |
 
-### BundleHunt, Dec 2015
+### BundleHunt
+Dec 2015 {.subtitle}
 
 - Alternote
 - Downie
@@ -116,7 +117,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 - Focused
 - Flux V
 
-### Anarchy Bundle, Jan 2015
+### Anarchy Bundle
+Jan 2015 {.subtitle}
 
 - Default Folder X
 -  VirusBarrier
@@ -129,7 +131,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 -  Little Snitch
 -  Postbox
 
-### NanoBundle 5, Jul 2014
+### NanoBundle 5
+Jul 2014 {.subtitle}
 
 - Cinemagraph Pro
 - WebCode
@@ -141,9 +144,9 @@ Current online service subscribed, such as for trading, training, accounting,  h
 - Oscura: Second Shadow
 - Intaglio
 - Data Rescue 3
-- 
 
-### NanoBundle 4, Jan 2014
+### NanoBundle 4
+Jan 2014 {.subtitle}
 
 - Mac DVDRipper Pro
 - Intensify Pro
@@ -155,7 +158,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 - LIMBO
 - PaintCode
 
-### NanoBundle 3, Apr 2013
+### NanoBundle 3
+Apr 2013 {.subtitle}
 
 - Clarify
 - CleanMyMac
@@ -166,7 +170,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 - Totals
 - xScope 
 
-### NanoBundle 1,
+### NanoBundle 1
 
 - ShoveBox
 - WriteRoom
@@ -175,7 +179,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 - Hordes of Orcs
 - Mariger Write
 
-### MacHeist 4 Bundle, Oct 2012
+### MacHeist 4
+Oct 2012 {.subtitle}
 
 - CleanMyMac
 - Bejeweled 3
@@ -194,7 +199,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 - Bioshock 2
 - Painter Lite
 
-### NanoBundle 2, Mar 2010
+### NanoBundle 2
+Mar 2010 {.subtitle}
 
 - MacJournal
 - Ripit
@@ -208,7 +214,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 - Tracks
 - Burning Monkey Solitaire
 
-### MacHeist 3 Bundle, Apr 2009
+### MacHeist 3
+Apr 2009 {.subtitle}
 
 | Item         | Type         |
 | ------------ | ------------ |
