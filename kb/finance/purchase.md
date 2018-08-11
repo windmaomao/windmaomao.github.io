@@ -12,7 +12,6 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | ------------- | -------- | ---- | ---------- | ----- |
 | Egghead       | $140  /y | 2017 | Video      | 12/11 |
 | Dropbox       | $100  /y | 2013 | Storage    | 11/06 |
-| Sketch        | $100  /y | 2018 | Graphic    | 08/11 |
 | Safari Books  | $213  /y | 2016 | Book       | 08/01 |
 | Interview Cake| $100  /y | 2018 | Training   | 04/21 |
 | Google Drive  | $5    /y | 2017 | Storage    | 03/26 |
@@ -25,6 +24,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item         | Year | Type         |
 | ------------ | ---- | ------------ |
+| LastPass     | 2018 | Password     |
 | Dynalist     | 2018 | Outliner     |
 | Netlifty     | 2018 | Hosting      |
 | Libib        | 2018 | Library      |
@@ -70,6 +70,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Omini Outliner | $ 50   | 2015 | Excel    |
 | Bundle Hunt    | $ 20   | 2015 | Bundle   |
 | Anarchy Bundle | $ 15   | 2015 | Bundle   |
+| Sketch         | $ 99   | 2015 | Design   |
 | Kaleidoscope   | $ 70   | 2014 | Compare  |
 | NanoBundle 5   | $ 20   | 2014 | Bundle   |
 | LaunchBar      | $ 2    | 2014 | Utility  |

@@ -6,12 +6,14 @@
 
 #### 8/10
 
-- take `github` private
+- ~~Take `github` private~~
+- Backup `tms` project
+- Store password in mobile
 
 #### 8/10 Benefits
 
 - Education, $250
-- Referral, $500
+- ~~:x: Referral, $500~~
 
 #### 8/9
 
