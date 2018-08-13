@@ -11,16 +11,13 @@ export default class Sidenav extends Component {
   constructor(props) {
     super(props);
     this.closeMenu = props.onClose;
+    this.toggleMenu = props.onClick;
     this.state = {
       apps: [
         { title: 'Test', icon: '' }
       ]
     };
     this.toggleMenu = this.toggleMenu.bind(this);
-  }
-
-  toggleMenu() {
-    console.log('Clicked');
   }
 
   apps() {
@@ -47,13 +44,9 @@ export default class Sidenav extends Component {
   render() {
     return (
       <aside className="Sidenav">
-        <img src={logo} className="App-logo" alt="logo" 
-          onClick={this.closeMenu}
-        />
+        <img src={logo} className="App-logo" alt="logo"  onClick={this.closeMenu} />
         <p className="menu-label">Apps</p>
-        <ul className="menu-list">
-          { this.apps() }
-        </ul>
+        <ul className="menu-list">{ this.apps() }</ul>
       </aside>
     );
   }
