@@ -10,6 +10,7 @@ import logo from './logo.svg';
 export default class Sidenav extends Component {
   constructor(props) {
     super(props);
+    this.closeMenu = props.onClose;
     this.state = {
       apps: [
         { title: 'Test', icon: '' }
@@ -46,7 +47,9 @@ export default class Sidenav extends Component {
   render() {
     return (
       <aside className="Sidenav">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" 
+          onClick={this.closeMenu}
+        />
         <p className="menu-label">Apps</p>
         <ul className="menu-list">
           { this.apps() }
