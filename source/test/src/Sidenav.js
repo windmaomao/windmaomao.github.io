@@ -4,6 +4,7 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import logo from './logo.svg';
 
 export default class Sidenav extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ export default class Sidenav extends Component {
     return (
       <aside className="menu">
         <p className="menu-label">
+          <img src={logo} className="App-logo" alt="logo" />
           Apps
         </p>
         <ul className="menu-list">
