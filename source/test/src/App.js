@@ -9,8 +9,12 @@ class App extends Component {
     super(props);
     this.state = {
       open: true,
-      app: { url: '' }
+      apps: [
+        { title: 'Localhost', icon: 'globe', url: 'https://localhost:8001/' }
+      ],
+      app: null
     };
+    this.state.app = this.state.apps[0];
     this.closeSidebar = this.closeSidebar.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.clickMenuItem = this.clickMenuItem.bind(this);
@@ -49,8 +53,15 @@ class App extends Component {
   }
 
   sidenav() {
+    const { apps, app } = this.state;
+    const sideNavProps = {
+      apps, 
+      app,
+      onClose: this.closeSidebar,
+      onClick: this.clickMenuItem
+    };
     return (
-      <Sidenav onClose={this.closeSidebar} onClick={this.clickMenuItem} />
+      <Sidenav {...sideNavProps} />
     );
   }
 
@@ -65,7 +76,7 @@ class App extends Component {
       <div className="App">
         <Sidebar {...sidebarProps}>
           { this.toggler() }
-          <Iframe url={app.url} />
+          <Iframe url={app ? app.url : ''} />
         </Sidebar>
       </div>
     );

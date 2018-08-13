@@ -3,38 +3,28 @@
  */
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './Sidenav.css';
 import logo from './logo.svg';
 
 export default class Sidenav extends Component {
-  constructor(props) {
-    super(props);
-    this.toggleMenu = props.onClick;
-    this.state = {
-      apps: [
-        { title: 'Localhost', icon: 'globe', url: 'https://localhost:8001/' }
-      ]
-    };
-  }
-
   apps() {
-    const appClick = app => e => {
-      this.props.onClick && this.props.onClick(app);
-    }
+    const { apps, app, onClick } = this.props;
+    const appClick = item => e => onClick && onClick(item);
     const items = [];
-    this.state.apps.forEach(app => {
+    apps.forEach(item => {
       const linkClass = classNames({
-        'is-active': app.url === 'selected'
+        'is-active': item === app
       });
       const iconClass = classNames(
         'fa', 
-        'fa-' + app.icon
+        'fa-' + item.icon
       );
       items.push(
-        <li key={ app.title }>
-          <a onClick={appClick(app)} className={linkClass}>
-            <i className={iconClass}></i>&nbsp;{ app.title }
+        <li key={ item.title }>
+          <a onClick={appClick(item)} className={linkClass}>
+            <i className={iconClass}></i>&nbsp;{ item.title }
           </a> 
         </li>
       );
@@ -52,5 +42,12 @@ export default class Sidenav extends Component {
       </aside>
     );
   }
+}
+
+Sidenav.propTypes = {
+  apps: PropTypes.array,
+  app: PropTypes.any,
+  onClose: PropTypes.func,
+  onClick: PropTypes.func
 }
 
