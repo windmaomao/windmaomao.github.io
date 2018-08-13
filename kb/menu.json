@@ -65,6 +65,7 @@
     "title": "Books", "type": "book",
     "items": [
       "index",
+      "sale-of-lifetime",
       "value-of-debt",
       "bonds-unbeaten-path",
       "dao-of-capital",
@@ -89,7 +90,29 @@
   },
   {
     "title": "Blogs", "type": "blog",
-	  "items": ["index", "angular-react-vue", "power-of-loss", "identity-debt", "sustainable-prototyping", "protection-from-loss", "perfect-google-map", "middle-ground", "reusable-form", "helping-others", "law-of-winning", "reusable-components", "angular-on-windows", "tiny-upscaling", "build-new-system", "dynamic-static-approach", "container-to-rescue", "being-dependent", "active-management", "floating-pot"]
+	  "items": [
+      "index", 
+      "consequence-of-bailout",
+      "angular-react-vue", 
+      "power-of-loss", 
+      "identity-debt", 
+      "sustainable-prototyping", 
+      "protection-from-loss", 
+      "perfect-google-map", 
+      "middle-ground", 
+      "reusable-form", 
+      "helping-others", 
+      "law-of-winning", 
+      "reusable-components", 
+      "angular-on-windows", 
+      "tiny-upscaling", 
+      "build-new-system", 
+      "dynamic-static-approach", 
+      "container-to-rescue", 
+      "being-dependent", 
+      "active-management", 
+      "floating-pot"
+    ]
   },
   {
     "title": "Articles", "type": "article",

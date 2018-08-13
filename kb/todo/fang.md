@@ -11,7 +11,8 @@
 - Check `db` `fidelity` status
 - Findout `microsoft` charge
 - Signup `health` plan
-- ~~Prototype `appnav`~~
+- ~~Prototype `appnav
+- Deploy `kb`
 
 #### 8/10
 
