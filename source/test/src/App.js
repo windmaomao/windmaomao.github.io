@@ -4,6 +4,8 @@ import Sidenav from './Sidenav';
 import Iframe from 'react-iframe'
 import classNames from 'classnames';
 import './App.css';
+
+import { appStore } from './App.reducer';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,12 +20,18 @@ class App extends Component {
     this.closeSidebar = this.closeSidebar.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.clickMenuItem = this.clickMenuItem.bind(this);
+
+    appStore.subscribe(() => {
+      const { sidenav } = appStore.getState();
+      this.setState(sidenav);
+    });
   }
 
   closeSidebar() {
-    this.setState({
-      open: false
-    });
+    // this.setState({
+    //   open: false
+    // });
+    appStore.dispatch({ type: 'CLOSE_SIDENAV' });
   }
 
   toggleSidebar() {

@@ -13,6 +13,7 @@
 - Signup `health` plan
 - ~~Prototype `appnav
 - Deploy `kb`
+- Write `reducer` test
 
 #### 8/10
 
