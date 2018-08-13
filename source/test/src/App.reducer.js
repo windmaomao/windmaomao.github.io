@@ -4,29 +4,48 @@
 
 import { createStore, combineReducers } from 'redux';
 
-const initialState = {
-  open: false
-};
-
-export const sidenav = (state = initialState, action) => {
+export const open = (state = true, action) => {
   switch (action.type) {
     case 'OPEN_SIDENAV':
-      state = Object.assign(state, { open: true });
-      break; 
+      return true;
     case 'CLOSE_SIDENAV':
-      state = Object.assign(state, { open: false });
-      break;   
+      return false;
+    case 'TOGGLE_SIDENAV':
+      return !state;
     default:
-      break;      
+      return state;
   }
-  return state;
 }
 
-const app = combineReducers({
-  sidenav
+const appsInitial = [
+  { title: 'Localhost', icon: 'globe', url: 'https://localhost:8001/' }
+];
+
+export const apps = (state = appsInitial, action) => {
+  switch (action.type) {
+    case 'ADD_APPS':
+      return action.payload;
+    default: 
+      return state;
+  }
+}
+
+export const app = (state = null, action) => {
+  switch (action.type) {
+    case 'SELECT_APP':
+      return action.payload;
+    default: 
+      return state;
+  }
+}
+
+const appReducers = combineReducers({
+  open,
+  apps,
+  app
 });
 
 export const appStore = createStore(
-  app,
+  appReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

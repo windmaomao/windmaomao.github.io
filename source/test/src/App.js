@@ -9,38 +9,26 @@ import { appStore } from './App.reducer';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      open: true,
-      apps: [
-        { title: 'Localhost', icon: 'globe', url: 'https://localhost:8001/' }
-      ],
-      app: null
-    };
-    this.state.app = this.state.apps[0];
+    this.state = appStore.getState();
     this.closeSidebar = this.closeSidebar.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.clickMenuItem = this.clickMenuItem.bind(this);
 
     appStore.subscribe(() => {
-      const { sidenav } = appStore.getState();
-      this.setState(sidenav);
+      this.setState(appStore.getState());
     });
   }
 
   closeSidebar() {
-    // this.setState({
-    //   open: false
-    // });
     appStore.dispatch({ type: 'CLOSE_SIDENAV' });
   }
 
   toggleSidebar() {
-    const open = !this.state.open;
-    this.setState({ open });
+    appStore.dispatch({ type: 'TOGGLE_SIDENAV' });
   }
 
   clickMenuItem(app) {
-    this.setState({ app });
+    appStore.dispatch({ type: 'SELECT_APP', payload: app });
   }
 
   toggler() {

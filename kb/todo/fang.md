@@ -11,9 +11,9 @@
 - Check `db` `fidelity` status
 - Findout `microsoft` charge
 - Signup `health` plan
-- ~~Prototype `appnav
-- Deploy `kb`
-- Write `reducer` test
+- ~~Prototype `appnav`~~
+- ~~Deploy `kb`~~
+- ~~Learn to write react `reducer`~~
 
 #### 8/10
 
