@@ -218,12 +218,6 @@ Mar 2010 {.subtitle}
 ### MacHeist 3
 Apr 2009 {.subtitle}
 
-| Item         | Type         |
-| ------------ | ------------ |
-| The Hit List | Todo         |
-| Espresso     | Editor       |
-| Cro-Mag Rally| Game         |
-
 - iSale
 - Picturesque
 - SousChef

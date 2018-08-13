@@ -4,24 +4,28 @@
 
 ### Aug
 
+#### 8/12
+
+- `EUM` `HIG` `GLL` `TAL` - `TYO`
+- Education, $250
+- Check `db` `fidelity` status
+- Findout `microsoft` charge
+
 #### 8/10
 
 - ~~Take `github` private~~
-- Backup `tms` project
-- Store password in mobile
+- ~~Backup `tms` project~~
+- ~~Store password in mobile~~
 
 #### 8/10 Benefits
 
-- Education, $250
 - ~~:x: Referral, $500~~
 
 #### 8/9
 
 - ~~Access health insurance~~
 - ~~Findout `chase` password~~
-- Findout `microsoft` charge
 - ~~Findout `gym` membership~~
-- Check `db` `fidelity` status
 
 #### 8/6
 
