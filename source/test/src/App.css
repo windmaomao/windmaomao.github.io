@@ -1,6 +1,15 @@
 .App {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  opacity: 1;  
 }
 
+.Toggle {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.3;  
+  right: 1.5rem;
+  top: 0.5rem;
+}
+.Toggle:hover {
+  opacity: 1;
+}

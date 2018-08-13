@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Sidebar from 'react-sidebar';
 import Sidenav from './Sidenav';
 import Iframe from 'react-iframe'
+import classNames from 'classnames';
 import './App.css';
 class App extends Component {
   constructor(props) {
@@ -29,17 +30,25 @@ class App extends Component {
     console.log('Click menu item');
   }
 
+  toggler() {
+    return (
+      <div className="Toggle">
+        <a onClick={this.toggleSidebar}>
+          <i class="fa fa-chevron-left"></i>
+        </a>
+      </div>
+    );
+  }
+
   render() {
-    const { open, background, width } = this.state;
+    const { open } = this.state;
     return (
       <div className="App">
         <Sidebar open={open}
           sidebar={<Sidenav onClose={this.closeSidebar} onClick={this.clickMenuItem} />}
         >
-          <div className="has-text-right">
-            <a onClick={this.toggleSidebar}>Toggle</a>
-          </div>
-          <Iframe url="http://www.bbc.com" />
+          { this.toggler() }
+          <Iframe url="https://localhost:8001/" />
         </Sidebar>
       </div>
     );
