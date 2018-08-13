@@ -10,6 +10,8 @@
 - Education, $250
 - Check `db` `fidelity` status
 - Findout `microsoft` charge
+- Signup `health` plan
+- ~~Prototype `appnav`~~
 
 #### 8/10
 

@@ -14,7 +14,7 @@ export default class Sidenav extends Component {
     this.toggleMenu = props.onClick;
     this.state = {
       apps: [
-        { title: 'Test', icon: '' }
+        { title: 'Test', icon: '', url: 'https://localhost:8001/' }
       ]
     };
     this.toggleMenu = this.toggleMenu.bind(this);

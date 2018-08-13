@@ -31,22 +31,38 @@ class App extends Component {
   }
 
   toggler() {
+    const iconClass = classNames(
+      'fa',
+      {
+        'fa-chevron-left': this.state.open,
+        'fa-bars': !this.state.open
+      }
+    );
     return (
       <div className="Toggle">
         <a onClick={this.toggleSidebar}>
-          <i class="fa fa-chevron-left"></i>
+          <i className={iconClass}></i>
         </a>
       </div>
     );
   }
 
+  sidenav() {
+    return (
+      <Sidenav onClose={this.closeSidebar} onClick={this.clickMenuItem} />
+    );
+  }
+
   render() {
     const { open } = this.state;
+    const sidebarProps = {
+      open,
+      sidebar: this.sidenav(),
+      onSetOpen: this.closeSidebar,
+    };
     return (
       <div className="App">
-        <Sidebar open={open}
-          sidebar={<Sidenav onClose={this.closeSidebar} onClick={this.clickMenuItem} />}
-        >
+        <Sidebar {...sidebarProps}>
           { this.toggler() }
           <Iframe url="https://localhost:8001/" />
         </Sidebar>
