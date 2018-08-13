@@ -10,17 +10,18 @@ import logo from './logo.svg';
 export default class Sidenav extends Component {
   constructor(props) {
     super(props);
-    this.closeMenu = props.onClose;
     this.toggleMenu = props.onClick;
     this.state = {
       apps: [
-        { title: 'Test', icon: '', url: 'https://localhost:8001/' }
+        { title: 'Localhost', icon: 'globe', url: 'https://localhost:8001/' }
       ]
     };
-    this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   apps() {
+    const appClick = app => e => {
+      this.props.onClick && this.props.onClick(app);
+    }
     const items = [];
     this.state.apps.forEach(app => {
       const linkClass = classNames({
@@ -32,7 +33,7 @@ export default class Sidenav extends Component {
       );
       items.push(
         <li key={ app.title }>
-          <a onClick={this.toggleMenu} className={linkClass}>
+          <a onClick={appClick(app)} className={linkClass}>
             <i className={iconClass}></i>&nbsp;{ app.title }
           </a> 
         </li>
@@ -42,9 +43,10 @@ export default class Sidenav extends Component {
   }
 
   render() {
+    const onClose = e => { this.props.onClose && this.props.onClose(); }
     return (
       <aside className="Sidenav">
-        <img src={logo} className="App-logo" alt="logo"  onClick={this.closeMenu} />
+        <img src={logo} className="App-logo" alt="logo" onClick={onClose} />
         <p className="menu-label">Apps</p>
         <ul className="menu-list">{ this.apps() }</ul>
       </aside>

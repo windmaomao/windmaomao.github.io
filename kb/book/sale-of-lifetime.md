@@ -28,8 +28,6 @@ No. They’re not. But then we’re also **not** in a positive geopolitical tren
 
 The trouble is, central banks are desperate to avoid a massive reset on their watch. That’s why they’re the loudest voices in the “no-bubble” chorus. It’s also why they’ve gone to extremes to prevent the inevitable.
 
-The last debt bubble anywhere close to this developed from 1914 into 1929 in the U.S. when we were the emerging country of that era. 
-
 > The last debt bubble anywhere close to this developed from 1914 into 1929 in the U.S. when we were the emerging country of that era. 
 
 Despite the widespread fear of inflation—and hyperinflation many worried so desperately about—the country has been able to eke out only 2% growth, with the first quarter of 2016 plunging down to 0.5%. Looks to me like we’re heading into a recession again, as we forecast. 

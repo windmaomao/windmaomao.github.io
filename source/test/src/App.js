@@ -9,6 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       open: true,
+      app: { url: '' }
     };
     this.closeSidebar = this.closeSidebar.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
@@ -26,8 +27,8 @@ class App extends Component {
     this.setState({ open });
   }
 
-  clickMenuItem() {
-    console.log('Click menu item');
+  clickMenuItem(app) {
+    this.setState({ app });
   }
 
   toggler() {
@@ -54,7 +55,7 @@ class App extends Component {
   }
 
   render() {
-    const { open } = this.state;
+    const { open, app } = this.state;
     const sidebarProps = {
       open,
       sidebar: this.sidenav(),
@@ -64,7 +65,7 @@ class App extends Component {
       <div className="App">
         <Sidebar {...sidebarProps}>
           { this.toggler() }
-          <Iframe url="https://localhost:8001/" />
+          <Iframe url={app.url} />
         </Sidebar>
       </div>
     );
