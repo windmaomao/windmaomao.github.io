@@ -2,7 +2,7 @@
  * App redux
  */
 
-import { createStore, combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 
 export const open = (state = true, action) => {
   switch (action.type) {
@@ -39,13 +39,8 @@ export const app = (state = null, action) => {
   }
 }
 
-const appReducers = combineReducers({
+export const appReducers = combineReducers({
   open,
   apps,
   app
 });
-
-export const appStore = createStore(
-  appReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);

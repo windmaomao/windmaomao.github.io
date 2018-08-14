@@ -1,42 +1,44 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Sidebar from 'react-sidebar';
 import Sidenav from './Sidenav';
 import Iframe from 'react-iframe'
 import classNames from 'classnames';
 import './App.css';
 
-import { appStore } from './App.reducer';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = appStore.getState();
     this.closeSidebar = this.closeSidebar.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.clickMenuItem = this.clickMenuItem.bind(this);
+  }
 
-    appStore.subscribe(() => {
-      this.setState(appStore.getState());
+  componentDidMount() {
+    this.unsubscribe = this.context.store.subscribe(() => {
+      this.forceUpdate();
     });
   }
 
   closeSidebar() {
-    appStore.dispatch({ type: 'CLOSE_SIDENAV' });
+    this.context.store.dispatch({ type: 'CLOSE_SIDENAV' });
   }
 
   toggleSidebar() {
-    appStore.dispatch({ type: 'TOGGLE_SIDENAV' });
+    this.context.store.dispatch({ type: 'TOGGLE_SIDENAV' });
   }
 
   clickMenuItem(app) {
-    appStore.dispatch({ type: 'SELECT_APP', payload: app });
+    this.context.store.dispatch({ type: 'SELECT_APP', payload: app });
   }
 
   toggler() {
+    const { open } = this.context.store.getState();
     const iconClass = classNames(
       'fa',
       {
-        'fa-chevron-left': this.state.open,
-        'fa-bars': !this.state.open
+        'fa-chevron-left': open,
+        'fa-bars': !open
       }
     );
     return (
@@ -49,7 +51,7 @@ class App extends Component {
   }
 
   sidenav() {
-    const { apps, app } = this.state;
+    const { apps, app } = this.context.store.getState();
     const sideNavProps = {
       apps, 
       app,
@@ -62,7 +64,7 @@ class App extends Component {
   }
 
   render() {
-    const { open, app } = this.state;
+    const { open, app } = this.context.store.getState();
     const sidebarProps = {
       open,
       sidebar: this.sidenav(),
@@ -77,6 +79,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.contextTypes = {
+  store: PropTypes.object.isRequired
 }
 
 export default App;

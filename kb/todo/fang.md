@@ -4,16 +4,22 @@
 
 ### Aug
 
+#### 8/14
+
+- Signup `health` plan
+- Investigate `ASI` for morrisville
+- `BLUE` `ALNY` `TAL`
+- `SEF` `SH` `EUM` `TYO`
+- `HLF` `JNJ` `NFLX` `TIF` `WHR` `HIG`
+
 #### 8/12
 
-- `EUM` `HIG` `GLL` `TAL` - `TYO`
 - Education, $250
 - Check `db` `fidelity` status
 - Findout `microsoft` charge
-- Signup `health` plan
 - ~~Prototype `appnav`~~
 - ~~Deploy `kb`~~
-- ~~Learn to write react `reducer`~~
+- Learn to write react `reducer`
 
 #### 8/10
 

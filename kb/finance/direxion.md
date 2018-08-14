@@ -25,10 +25,10 @@
 | Industry | Type | Name                | Symbol        |
 | -------- | ---- | ------------------- | ------------- |
 | Biotech  | Bear | NASDAQ Biotechnology| `BIS`         |
-| Consumer | Bear | US Goods            | `SZK`         |
-| Consumer | Bear | US Services         | `SCC`         |
-| Consumer | Bear | US Finacials        | `SEF`         |
-| Consumer | Bear | Consumer Staples    | `SPLZ`        |
+| Goods | Bear | US Goods            | `SZK`         |
+| Services | Bear | US Services         | `SCC`         |
+| Financials | Bear | US Finacials        | `SEF`         |
+| Staples | Bear | Consumer Staples    | `SPLZ`        |
 | Healthcare|Bear | US Healthcare       | `RXD`         |
 | Industry | Bear | US Industries       | `SIJ`         |
 | Estate   | Bear | US Real Estate      | `REK`         |
