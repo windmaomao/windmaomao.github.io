@@ -4,16 +4,37 @@
 ## Two Decades of Projects
 2000 - Current {.subtitle}
 
-|  Company        | Duration       | Comment             |
-| --------------  | -------------- | ------------------- |
-| Mercury Gate    | 2018 -         | Transportation Apps |
-| Deutsche Bank   | 2015 - 2018    | Banking Websites    |
-| People Designs  | 2014 - 2018    | Healthcare Websites |
-| QPlot           | 2009 - 2017    | University Websites |
-| University      | 2000 - 2009    | Scientific Software |
+| Company        | Duration    | Comment             |
+| -------------- | ----------- | ------------------- |
+| Mercury Gate   | 2018 -      | Transportation Apps |
+| Deutsche Bank  | 2015 - 2018 | Banking Websites    |
+| People Designs | 2014 - 2018 | Healthcare Websites |
+| QPlot          | 2009 - 2017 | University Websites |
+| University     | 2000 - 2009 | Scientific Software |
 
 ## Mercury Gate
 2018 - Current {.subtitle}
+
+|  Project                  |  Start   | Comment |
+| ------------------------  | -------- | ------- |
+| Shipping Orders Dashboard | 2018 Aug |         |
+
+### Shipping Orders Dashboard
+
+![Shipping Order](https://s3.amazonaws.com/qp-photo/shipping-order-chart.png)
+
+Shipping Order Dashboard
+
+: Shipping Order Dashboard
+: Aug 2018 -
+: *React*  *Sass*  *D3* {.labels}
+
+Highlights
+
+: - React: Fast development using common library for widgets and styles
+  - Layout: Use _Flexbox_ for page design with sidebar and cards
+  - Chart: Beautiful _SVG_ chart via *D3* and *Victory* library
+
 
 ## Deutsche Bank
 2015 - 2018 {.subtitle}
@@ -42,20 +63,14 @@
 Reports Center
 
 : Reprt Generation and Monitor
-: Apr 2018 -
+: Apr 2018 - Jun 2018
 : *Angular*  *Sass*  *Ag-grid*  *Flexbox*  *Highcharts* {.labels}
 
 Highlights
 
-: - Modular: Heavily rely on _Global Console_ module for widgets and styles
-  - Layout: Use _Flexbox_ for page design with sidebar and panels
-  - Dialog: Custom dialog design supporting generic and custom operations
-  - Notification: Project wise services handling toasters, dialogs and spinners
-  - Auth: Serial authentication wired before application bootstrapping
-  - Localization: i18n localization for page captions
-  - Report: Generate and monitor report via async notification services
-  - Grid: Dynamic generation of report data based on columns infomation
-  - Preference: Support saving and managing user preference data
+: - Modular: Heavily rely on company common libary for widgets and styles
+  - Layout: Use _Flexbox_ for page design with sidebar and cards
+  - Chart: Construct custom chart from scratch via *D3* and *Victory*
 
 ### Global Console
 Reusable UI framework for Angular 5 {.subtitle}

@@ -4,22 +4,27 @@
 
 ### Aug
 
+#### 8/18
+
+- Add invoice to `Dependent`
+- `SEF`
+
 #### 8/14
 
-- Signup `health` plan
-- Investigate `ASI` for morrisville
-- `BLUE` `ALNY` `TAL`
-- `SEF` `SH` `EUM` `TYO`
-- `HLF` `JNJ` `NFLX` `TIF` `WHR` `HIG`
+- ~~ Signup `health` plan~~
+- ~~ Close `TIF` by `Fri`~~
+- ~~Investigate `ASI` for morrisville~~
+- `JNJ` `NFLX` `TIF` `WHR` `HIG`
+- ~~Pay UDA Dental~~
 
 #### 8/12
 
 - Education, $250
-- Check `db` `fidelity` status
+- ~~Rollover `db` `10543.12` Tue~~
 - Findout `microsoft` charge
 - ~~Prototype `appnav`~~
 - ~~Deploy `kb`~~
-- Learn to write react `reducer`
+- ~~Learn to write react `reducer`~~
 
 #### 8/10
 

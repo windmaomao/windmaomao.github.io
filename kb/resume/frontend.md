@@ -33,7 +33,7 @@ Front Cover Design
 
 ### Deutsche Bank
 
-> "Fang continues to build his MC profile globally and is well respected across his peers group and stakeholders. Fang has ==helped build complex business solutions that can sustain a high level of performance== in CE where he has proven himself." -- Deutsche Bank Annual Review and Awards [^recognition]
+> "Fang continues to build his MC profile globally and is well respected across his peers group and stakeholders. Fang has helped build complex business solutions that can sustain a high level of performance in CE where he has proven himself." -- Deutsche Bank Annual Review and Awards [^recognition]
 
 Deutsche Bank
 
