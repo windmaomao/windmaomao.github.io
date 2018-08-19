@@ -24,11 +24,12 @@
 
 | Industry | Type | Name                | Symbol        |
 | -------- | ---- | ------------------- | ------------- |
+| Auto     | Bull | NASDAQ Auto Index.  | `CARZ`        |
 | Biotech  | Bear | NASDAQ Biotechnology| `BIS`         |
-| Goods | Bear | US Goods            | `SZK`         |
+| Goods    | Bear | US Goods            | `SZK`         |
 | Services | Bear | US Services         | `SCC`         |
-| Financials | Bear | US Finacials        | `SEF`         |
-| Staples | Bear | Consumer Staples    | `SPLZ`        |
+|Financials| Bear | US Finacials        | `SEF`         |
+| Staples  | Bear | Consumer Staples    | `SPLZ`        |
 | Healthcare|Bear | US Healthcare       | `RXD`         |
 | Industry | Bear | US Industries       | `SIJ`         |
 | Estate   | Bear | US Real Estate      | `REK`         |
@@ -59,10 +60,12 @@
 | China    | Bull | CSI Internet        | `CWEB`        |
 | Japan    | Bear | MSCI Japan          | `EWV`         |
 | Brazil   | Bear | MSCI Brazil 25/50   | `BZQ`         |
+| Turkey   | Bull | MSCI Turkey Investable| `TUR`       |
 | Europe   | Bear | FTSE Developed Europe| `EPV`        |
 | Europe   | Bull | Daily MSCI Financials| `EUFL`       |
 | Emerging | Bear | MSCI Emerging Markets| `EUM`        |
 | EAFE     | Bear | MSCI EAFE           | `EFZ`         |
+| ACWI     | Bull | MSCI ACWI           | `ACWI`        |
 
 ### Commodity
 

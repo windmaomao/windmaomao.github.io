@@ -7,7 +7,8 @@
 #### 8/18
 
 - Add invoice to `Dependent`
-- `SEF`
+- `EUM` `WHR` `TAL`  `HIG`
+- Easy on `SH` `TIF`  `RIOT` `NFLX` `SEF`
 
 #### 8/14
 

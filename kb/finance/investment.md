@@ -6,7 +6,8 @@
 
 | Symbol | Industry  |  Cost |  Net | Type | Percentage |
 | ------ | --------- | ----: | ---: | ---- | ----: |
-|**Total**  |        |   | **$199** |      |       |
+|**Total**  |        |   | **-$211**|      |       |
+| TIF180817P100| Retail  |$410|-$410| short| -100% |
 | GE180720P13  | Health | $34| -$34 | short| -100% |
 | XNET P2.5    | Bitcoin| $20| -$20 | short| -100% |
 | AKZOY  | Paint     | $3079 | -75$ | short| -2.4% |
@@ -29,15 +30,33 @@
 - Avoid creating additional weaknesses
 - Consider returning material
 
-#### Case Study
+### Aug
 
-Size:     2x vs 1x   vs Curr   vs Perf
-
-Shares:   10 vs 5    vs  
-Target:  260 vs 460  vs 360
-Values:  340 vs 310  
-- Down: 1200 vs 750  vs 230    vs 1.6
-+   Up:  800 vs 250  vs        vs 3.2 
+| Symbol       | Industry  |     Cost | Type  | Notes         |
+| ------------ | --------- | -------: | :---: | ------------- |
+| **Personal** | **18%**   |  $ 5,450 |       |  |
+| TSLA         | Tech      |   $ 1540 | short |  |
+| ADSK         | Design    |    $ 767 | short |  |
+| HLF          | Med       |    $ 569 | short |  |
+| USDU         | Currency  |    $ 403 | long  |  |
+| YXI          | China     |    $ 394 | short |  |
+| TYO          | Fixed     |    $ 393 | short |  |
+| ALNY         | Health    |    $ 391 | short |  |
+| BLUE         | Health    |    $ 353 | short |  |
+| TAL          | Educstion |    $ 264 | short |  |
+| SRTY         | Russell   |    $ 155 | short |  |
+| GE180921P12  | Health    |    $ 134 | short |  |
+| LABD         | Health    |    $ 87  | short |  |
+| **Roth**     | **10%**   |  $ 1,052 |       |  |
+| EUM          | Emerge    |    $ 584 | short |  |
+| DTYS         | Fixed     |    $ 468 | short |  |
+| **IRA**      | **0%**    |          |       |  |
+| **Vanguard** | **60%**   | $ 50,000 |       |  |
+| BLU11/30/18  | CD        | $ 10,000 | long  | 1.85% |
+| US 10/11/18  | Bill      | $ 10,000 | long  |       |
+| BOC 2/04/19  | CD        | $ 10,000 | long  | 1.95% |
+| BOC 6/28/19  | CD        | $ 10,000 | long  | 2.35% |
+| BOC 5/15/19  | CD        | $ 10,000 | long  | 2.20% |
 
 ### Jul
 
