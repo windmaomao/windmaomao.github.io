@@ -6,16 +6,16 @@
 
 #### 8/18
 
-- Add invoice to `Dependent`
-- `EUM` `WHR` `TAL`  `HIG`
-- Easy on `SH` `TIF`  `RIOT` `NFLX` `SEF`
+- ~~Add invoice to `Dependent`~~
+- ~~`EUM` `SH`~~
+- Book `sick` leave
+- ~~HSF contribution `4287.48/6850`~~
 
 #### 8/14
 
-- ~~ Signup `health` plan~~
-- ~~ Close `TIF` by `Fri`~~
+- ~~Signup `health` plan~~
+- ~~Close `TIF` by `Fri`~~
 - ~~Investigate `ASI` for morrisville~~
-- `JNJ` `NFLX` `TIF` `WHR` `HIG`
 - ~~Pay UDA Dental~~
 
 #### 8/12

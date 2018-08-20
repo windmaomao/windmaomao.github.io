@@ -63,7 +63,8 @@
 | Turkey   | Bull | MSCI Turkey Investable| `TUR`       |
 | Europe   | Bear | FTSE Developed Europe| `EPV`        |
 | Europe   | Bull | Daily MSCI Financials| `EUFL`       |
-| Emerging | Bear | MSCI Emerging Markets| `EUM`        |
+| Emerge   | Bear | MSCI Emerging Markets| `EUM`        |
+| Emerge   | Bull | MSCI Emerging Markets| `EEM`        |
 | EAFE     | Bear | MSCI EAFE           | `EFZ`         |
 | ACWI     | Bull | MSCI ACWI           | `ACWI`        |
 

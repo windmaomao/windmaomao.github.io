@@ -43,14 +43,15 @@
 | TYO          | Fixed     |    $ 393 | short |  |
 | ALNY         | Health    |    $ 391 | short |  |
 | BLUE         | Health    |    $ 353 | short |  |
-| TAL          | Educstion |    $ 264 | short |  |
+| TAL          | Education |    $ 264 | short |  |
 | SRTY         | Russell   |    $ 155 | short |  |
 | GE180921P12  | Health    |    $ 134 | short |  |
 | LABD         | Health    |    $ 87  | short |  |
-| **Roth**     | **10%**   |  $ 1,052 |       |  |
-| EUM          | Emerge    |    $ 584 | short |  |
+| **Roth**     | **28%**   |   $ 3013 |       |  |
+| EUM          | Emerge    |   $ 2545 | short |  |
 | DTYS         | Fixed     |    $ 468 | short |  |
-| **IRA**      | **0%**    |          |       |  |
+| **Rollover** | **0%**    |          |       |  |
+| SH           | Index     |    $ 564 | short |  |
 | **Vanguard** | **60%**   | $ 50,000 |       |  |
 | BLU11/30/18  | CD        | $ 10,000 | long  | 1.85% |
 | US 10/11/18  | Bill      | $ 10,000 | long  |       |
