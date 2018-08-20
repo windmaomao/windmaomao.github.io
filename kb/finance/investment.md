@@ -35,17 +35,18 @@
 | Symbol       | Industry  |     Cost | Type  | Notes         |
 | ------------ | --------- | -------: | :---: | ------------- |
 | **Personal** | **18%**   |  $ 5,450 |       |  |
-| TSLA         | Tech      |   $ 1540 | short |  |
-| ADSK         | Design    |    $ 767 | short |  |
-| HLF          | Med       |    $ 569 | short |  |
+| TSLA         | Consumer  |   $ 1540 | short |  |
+| ADSK         | Technology|    $ 767 | short |  |
+| HLF          | Consumer  |    $ 569 | short |  |
 | USDU         | Currency  |    $ 403 | long  |  |
 | YXI          | China     |    $ 394 | short |  |
 | TYO          | Fixed     |    $ 393 | short |  |
 | ALNY         | Health    |    $ 391 | short |  |
 | BLUE         | Health    |    $ 353 | short |  |
 | TAL          | Education |    $ 264 | short |  |
+| WHR          | Consumer  |    $ 251 | short |  |
 | SRTY         | Russell   |    $ 155 | short |  |
-| GE180921P12  | Health    |    $ 134 | short |  |
+| GE180921P12  | Industrial|    $ 134 | short |  |
 | LABD         | Health    |    $ 87  | short |  |
 | **Roth**     | **28%**   |   $ 3013 |       |  |
 | EUM          | Emerge    |   $ 2545 | short |  |
