@@ -13,6 +13,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Egghead       | $140  /y | 2017 | Video      | 12/11 |
 | Dropbox       | $100  /y | 2013 | Storage    | 11/06 |
 | Safari Books  | $213  /y | 2016 | Book       | 08/01 |
+| IntelliJ IDEA |  $50  /m | 2018 | IDE        | 04/24 |
 | Interview Cake| $100  /y | 2018 | Training   | 04/21 |
 | Google Drive  | $5    /y | 2017 | Storage    | 03/26 |
 | TradingView   | $108  /y | 2017 | Chart      | 02/03 |
@@ -59,6 +60,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item              | Year | Type         |
 | ----------------- | ---- | ------------ |
+| Smart JSON Editor | 2018 | Utility      |
 | Typora            | 2018 | Office       |
 | Visual Studio Code| 2017 | Programming  |
 | Disk Inventory    | 2006 | Utility      |

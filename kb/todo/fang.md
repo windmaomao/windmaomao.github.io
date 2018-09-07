@@ -4,11 +4,42 @@
 
 ### Aug
 
+#### 9/5
+
+- ~~IntelliJ License~~
+- ~~Whitelist on repo from home~~
+
+#### 9/4
+
+- ~~Cross ref house `insurance`~~
+  - ~~104 Climbing Ivy, Kuan Ho  919-460-6388~~
+  - ~~121 River Pine Dr, $803/year~~
+- :fire: House closing (90k=60k+30k)
+  - Qplot (10k) 
+  - Personal (10k) + Joint (5k)
+  - Fidelity (20k)
+  - Ally Personal (20k) + Joint (25k), Due 8/17
+
+#### 9/3
+
+- ~~Update monthly~~
+- ~~Backup project repo~~
+- ~~Update `HSA` and `401`~~
+
+#### 8/27
+
+- ~~Plan for `401`~~
+- `SHOO` `XNET` `ALNY`
+
+#### 8/22
+
+- Findout `microsoft` charge
+
 #### 8/18
 
 - ~~Add invoice to `Dependent`~~
 - ~~`EUM` `SH`~~
-- Book `sick` leave
+- ~~Book `sick` leave~~
 - ~~HSF contribution `4287.48/6850`~~
 
 #### 8/14
@@ -20,9 +51,7 @@
 
 #### 8/12
 
-- Education, $250
 - ~~Rollover `db` `10543.12` Tue~~
-- Findout `microsoft` charge
 - ~~Prototype `appnav`~~
 - ~~Deploy `kb`~~
 - ~~Learn to write react `reducer`~~
