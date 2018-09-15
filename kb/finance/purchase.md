@@ -254,16 +254,16 @@ Apr 2009 {.subtitle}
 [Macbook Pro](https://support.apple.com/en-us/HT201300)
 [iMac](https://support.apple.com/en-us/HT201634)
 
-| Model                     | Year | Notes          | Serial#   |
-| ------------------------- | ---- | -------------- | --------- |
-| Macbook Pro 15-inch, 2017 | 2018 | Work assigned  | |
-| iMac 2x.5-inch   Mid 201? | 201? | New home iMac  | |
-| Macbook Air 13'Early 2014 | 2014 | Mathnasium use | |
-| Macbook Pro 13' Late 2013 | 2013 | Maggie's use   | |
-| Macbook Air 13'  Mid 2013 | 2013 | Screen broken--| MD760LL/A |
-| Macbook Air 11'  Mid 2012 | 2012 | Working cond-- | MD224LL/A |
-| iMac 21.5'       Mid 2011 | 2011 | Old home iMac  | |
-| iMac 24'       Early 2009 | 2009 | Not used iMac  | MB418xx/A?|
-| Macbook Pro 13'  Mid 2009 | 2009 | Maggie's old   | MB990xx/A |
+| Model                     | Year | Notes          | Serial#   | Price |
+| ------------------------- | ---- | -------------- | --------- | |
+| Macbook Pro 15-inch, 2017 | 2018 | Work assigned  | | |
+| iMac 2x.5-inch  Late 2013 | 2013 | New home iMac  | | $ 900 |
+| Macbook Air 13'Early 2014 | 2014 | Mathnasium use | | |
+| Macbook Pro 13' Late 2013 | 2013 | Maggie's use   | | |
+| Macbook Air 13'  Mid 2013 | 2013 | Screen broken--| MD760LL/A | |
+| Macbook Air 11'  Mid 2012 | 2012 | Working cond-- | MD224LL/A | |
+| iMac 21.5'       Mid 2011 | 2011 | Old home iMac  | | |
+| iMac 24'       Early 2009 | 2009 | Not used iMac  | MB418xx/A?| |
+| Macbook Pro 13'  Mid 2009 | 2009 | Maggie's old   | MB990xx/A | |
 
 
