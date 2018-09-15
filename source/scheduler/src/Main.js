@@ -82,7 +82,7 @@ export default class Main extends Component {
       return (
         <div>
           <h1>Slots Available</h1>
-          <Plan />
+          <Plan slots={slots} teacherId={'JP'} />
           {this.errors(errors)}
           {this.slots(slots)}
         </div>
