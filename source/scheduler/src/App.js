@@ -8,6 +8,7 @@ import './App.css';
 import theme from './theme';
 // primary components
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
 // secondary components
 import Navbar from './Navbar';
 import Plan from './Plan';
@@ -20,8 +21,8 @@ const styles = theme => ({
     width: 'auto',
     marginLeft: theme.spacing.unit * 3,
     marginRight: theme.spacing.unit * 3,
-    [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
-      width: 1100,
+    [theme.breakpoints.up(1600 + theme.spacing.unit * 3 * 2)]: {
+      width: 1600,
       marginLeft: 'auto',
       marginRight: 'auto',
     },

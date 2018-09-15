@@ -33,7 +33,9 @@ class Plan extends Component {
 
   avatars(list) {
     if (!list) return null;
-    const spanStyle = { margin: '5px' };
+    const spanStyle = { 
+      float: 'left', width: '60px'
+    };
     return (
       <div>
         {list.map(item => (
