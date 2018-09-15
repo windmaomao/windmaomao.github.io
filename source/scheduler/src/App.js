@@ -40,7 +40,7 @@ class App extends Component {
   }
   render() {
     const {classes} = this.props;
-    const {slots, ids, errors} = this.state;
+    const {slots, ids} = this.state;
     return (
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
@@ -52,6 +52,10 @@ class App extends Component {
       </MuiThemeProvider>
     );
   }
+}
+
+App.propTypes = {
+  classes: PropTypes.object.isRequired
 }
 
 export default withStyles(styles)(App);

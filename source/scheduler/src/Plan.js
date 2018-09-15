@@ -31,7 +31,7 @@ class Plan extends Component {
     return (
       <div>
         {list.map(item => (
-           <span style={spanStyle}>{item}</span>
+           <span key={item} style={spanStyle}>{item}</span>
         ))}
       </div>
     );
@@ -40,20 +40,19 @@ class Plan extends Component {
   slots() {
     const {slots, ids} = this.props;
     const gunnarStyle = { height: "10px", padding: "0px"};
-    const assigned = (list) => <TableCell>{list ? list.join(',') : ''}</TableCell>;
     return (
       <Table>
         <TableHead>
           <TableRow>
             <TableCell>Slot</TableCell>
-            {ids.map(id => <TableCell>{id}</TableCell>)}
+            {ids.map(id => <TableCell key={id}>{id}</TableCell>)}
           </TableRow>
         </TableHead>
         <TableBody>
           {Object.keys(slots).map(slot => (
             <TableRow key={slot} style={gunnarStyle}>
               <TableCell>{this.slot2time(slot)}</TableCell>
-              {ids.map(id => <TableCell>{this.avatars(slots[slot][id])}</TableCell>)}
+              {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
             </TableRow>
           ))}
         </TableBody>

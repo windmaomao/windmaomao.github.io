@@ -9,28 +9,15 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 // secondary components
 
-const styles = {
-  root: {
-    flexGrow: 1,
-  },
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-};
-
 class Navbar extends Component {
   render() {
     return (
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={styles.menuButton} color="inherit" aria-label="Menu">
+          <IconButton color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" className={styles.grow}>
+          <Typography variant="title" color="inherit">
             Scheduler
           </Typography>
         </Toolbar>
