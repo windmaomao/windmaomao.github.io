@@ -15,9 +15,9 @@ const teachersInfo = [
     { id: 'Addison', start: 16, end: 19 },   // 4:00 - 5:00am
     { id: 'Bowen',  start: 16, end: 19 },   // 4:00 - 5:00am
     { id: 'Hannah',   start: 16, end: 21 },   // 4:00 - 5:30am
-    { id: 'Varsha', start: 16, end: 18 },   // 4:00 - 5:00am
-    { id: 'Heyward', start: 16, end: 18 },   // 4:00 - 5:00am
-    { id: 'Austin', start: 16, end: 18 },   // 4:00 - 5:00am
+    { id: 'Varsha', start: 16, end: 19 },   // 4:00 - 5:00am
+    { id: 'Heyward', start: 16, end: 19 },   // 4:00 - 5:00am
+    { id: 'Austin', start: 16, end: 19 },   // 4:00 - 5:00am
     { id: 'Ian',   start: 18, end: 21 },   // 4:30 - 5:30am
     { id: 'Berkely',   start: 18, end: 21 },   // 4:30 - 5:30am
     { id: 'Yusuf',   start: 20, end: 23 },   // 5:00 - 6:00am

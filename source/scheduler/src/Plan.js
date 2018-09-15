@@ -12,6 +12,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+// import Avatar from '@material-ui/core/Avatar';
 
 class Plan extends Component {
   slotMins = 15;
@@ -22,6 +23,18 @@ class Plan extends Component {
     const mins = total - hours*60;
     var s = "00" + mins;
     return hours + ':' + s.substr(s.length-2);
+  }
+
+  avatars(list) {
+    if (!list) return null;
+    const spanStyle = { margin: '5px' };
+    return (
+      <div>
+        {list.map(item => (
+           <span style={spanStyle}>{item}</span>
+        ))}
+      </div>
+    );
   }
 
   slots() {
@@ -40,7 +53,7 @@ class Plan extends Component {
           {Object.keys(slots).map(slot => (
             <TableRow key={slot} style={gunnarStyle}>
               <TableCell>{this.slot2time(slot)}</TableCell>
-              {ids.map(id => assigned(slots[slot][id]))}
+              {ids.map(id => <TableCell>{this.avatars(slots[slot][id])}</TableCell>)}
             </TableRow>
           ))}
         </TableBody>
