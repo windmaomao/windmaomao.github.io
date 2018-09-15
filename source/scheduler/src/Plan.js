@@ -1,6 +1,7 @@
 // third party
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core/styles';
 // primary components
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -11,8 +12,13 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-// import Avatar from '@material-ui/core/Avatar';
+import Grid from '@material-ui/core/Grid';
+
+const styles = { 
+	narrowCell: {
+		'width': '90px',
+	}
+};
 
 class Plan extends Component {
   slotMins = 15;
@@ -37,21 +43,21 @@ class Plan extends Component {
     );
   }
 
-  slots() {
-    const {slots, ids} = this.props;
+  slots(ids) {
+    const {slots, classes} = this.props;
     const gunnarStyle = { height: "10px", padding: "0px"};
     return (
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Slot</TableCell>
+            <TableCell className={classes.narrowCell}>Slot</TableCell>
             {ids.map(id => <TableCell key={id}>{id}</TableCell>)}
           </TableRow>
         </TableHead>
         <TableBody>
           {Object.keys(slots).map(slot => (
             <TableRow key={slot} style={gunnarStyle}>
-              <TableCell>{this.slot2time(slot)}</TableCell>
+              <TableCell className={classes.narrowCell}>{this.slot2time(slot)}</TableCell>
               {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
             </TableRow>
           ))}
@@ -59,14 +65,29 @@ class Plan extends Component {
       </Table>
     )
   }
+
+  slotsFlex() {
+    const {slots, ids} = this.props;
+    return (
+      <Grid container spacing={24}>
+        {ids.map(id => (
+          <Grid key={id} item xs={4}>
+            {this.slots([id])}
+          </Grid>          
+        ))}
+      </Grid>
+    )
+  }
   
   render() {
-    const {teacherId} = this.props;
+    const {ids} = this.props;
     return (
       <Card>
         <CardContent>
-          <Typography variant="headline" component="h3">{teacherId}</Typography>
-          {this.slots()}
+          <h3>Individual</h3>
+          {this.slotsFlex()}
+          <h3>One Piece</h3>
+          {this.slots(ids)}
         </CardContent>
         <CardActions>
           <Button size="small">Learn More</Button>
@@ -81,4 +102,5 @@ Plan.propTypes = {
   ids: PropTypes.array,
 }
 
-export default Plan;
+// export default Plan;
+export default withStyles(styles)(Plan);
