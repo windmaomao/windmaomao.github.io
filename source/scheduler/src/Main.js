@@ -1,4 +1,14 @@
+// third party
 import React, { Component } from 'react';
+// styles
+// primary components
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+// services
 import SchedulerService from './Scheduler';
 
 const teachersInfo = [
@@ -60,35 +70,39 @@ export default class Main extends Component {
     
     slot(item) {
       const teachers = Object.keys(item);
-      return <td>
-        <table className={'table-sm table-borderless'}>
-          {teachers.map(teacher => (
-            <tr key={teacher}>
-              <td width="150">{teacher}</td>
-              <td>{item[teacher].join(', ')}</td>
-            </tr>
-          ))}
-        </table>
-      </td>;
+      return (
+        <TableCell>
+          <Table>
+            {teachers.map(teacher => (
+              <TableRow key={teacher}>
+                <TableCell width="150">{teacher}</TableCell>
+                <TableCell>{item[teacher].join(', ')}</TableCell>
+              </TableRow>
+            ))}
+          </Table>
+        </TableCell>
+      );
     }
-    
+
     slots(slotsMap) {
-      return <table className={'table table-sm'}>
-        <thead className={'thead-dark'}>
-          <tr>
-            <th>Slot</th>
-            <th>Assigned Teacher / Students</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.keys(slotsMap).map(slot => (
-            <tr key={slot}>
-              <td>{this.ss.slot2time(slot)}</td>
-              {this.slot(slotsMap[slot])}
-            </tr>
-          ))}
-        </tbody>
-      </table>;
+      return (
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Slot</TableCell>
+              <TableCell>Assigned Teacher / Students</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {Object.keys(slotsMap).map(slot => (
+              <TableRow key={slot}>
+                <TableCell>{this.ss.slot2time(slot)}</TableCell>
+                {this.slot(slotsMap[slot])}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      )
     }
     
     errors(errors) {
@@ -106,10 +120,12 @@ export default class Main extends Component {
     
     render() {
       const {slots, errors} = this.state;
-      return <div>Main
-        <h1>Slots Available</h1>
-        {this.errors(errors)}
-        {this.slots(slots)}
-      </div>;
+      return (
+        <Paper classes={{rounded: true}}>
+          <h1>Slots Available</h1>
+          {this.errors(errors)}
+          {this.slots(slots)}
+        </Paper>          
+      );
     }
   }
