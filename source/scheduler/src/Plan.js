@@ -14,29 +14,35 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 class Plan extends Component {
+  slotMins = 15;
 
-  slot(key, assigned) {
-    const gunnarStyle = { height: "10px", padding: "0px"};
-    return (
-      <TableRow key={key} style={gunnarStyle}>
-        <TableCell>{key}</TableCell>
-        <TableCell>{assigned ? assigned.join(',') : ''}</TableCell>
-      </TableRow>
-    );
+  slot2time(slot) {
+    const total = slot*this.slotMins;  
+    const hours = Math.floor(total/60);
+    const mins = total - hours*60;
+    var s = "00" + mins;
+    return hours + ':' + s.substr(s.length-2);
   }
 
   slots() {
-    const {slots, teacherId} = this.props;
+    const {slots, ids} = this.props;
+    const gunnarStyle = { height: "10px", padding: "0px"};
+    const assigned = (list) => <TableCell>{list ? list.join(',') : ''}</TableCell>;
     return (
       <Table>
         <TableHead>
           <TableRow>
             <TableCell>Slot</TableCell>
-            <TableCell>Students</TableCell>
+            {ids.map(id => <TableCell>{id}</TableCell>)}
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.keys(slots).map(slot => this.slot(slot, slots[slot][teacherId]))}
+          {Object.keys(slots).map(slot => (
+            <TableRow key={slot} style={gunnarStyle}>
+              <TableCell>{this.slot2time(slot)}</TableCell>
+              {ids.map(id => assigned(slots[slot][id]))}
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
     )
@@ -60,7 +66,7 @@ class Plan extends Component {
 
 Plan.propTypes = {
   slots: PropTypes.object.isRequired,
-  teacherId: PropTypes.string.isRequired,
+  ids: PropTypes.array,
 }
 
 export default Plan;
