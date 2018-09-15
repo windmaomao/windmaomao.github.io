@@ -8,6 +8,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+// secondary components
+import Plan from './Plan';
 // services
 import SchedulerService from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data';
@@ -78,6 +80,7 @@ export default class Main extends Component {
       return (
         <Paper classes={{rounded: true}}>
           <h1>Slots Available</h1>
+          <Plan />
           {this.errors(errors)}
           {this.slots(slots)}
         </Paper>          
