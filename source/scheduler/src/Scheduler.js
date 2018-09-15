@@ -5,7 +5,11 @@ export default class SchedulerService {
     this.slotMins = 15;
     this.maxStudents = 3;
     this.acceptPref = true;
+    this.acceptCapacity = true;
+    this.teacherMaxCap = 100;
+    this.studentMinCap = 30;
     this.errors = [];
+    this.studentCap = {};
   }
 
   min2slot(min) {
@@ -42,6 +46,12 @@ export default class SchedulerService {
       return teacher;
     }, null);
   }
+
+  totalCapacity(students) {
+    return students.reduce((acc, student) => {
+      return acc + this.studentCap[student];
+    }, 0);
+  }
   
   // apply map
   tryMapStudentToTeacher(slots, student, teacher) {
@@ -65,10 +75,19 @@ export default class SchedulerService {
       }
       const students = slot[teacher.id];
       
-      // if teacher is still available
+      // if teacher has enough students
       if (students.length === this.maxStudents) {
         matchAllSlots = false;
-      } else {
+      }
+      // if teacher has reach max capacity
+      if (this.acceptCapacity) {
+        const currCap = this.totalCapacity([...students, student.id]);
+        if (currCap > this.teacherMaxCap) {
+          matchAllSlots = false;
+        }  
+      }
+      // accept this teacher
+      if (matchAllSlots) {
         students.push(student.id);
       }
     }
@@ -102,6 +121,13 @@ export default class SchedulerService {
   // fill slots info
   fillSlots(students, teachers, prefs) {
     this.errors = [];
+    // populate student cap
+    if (this.acceptCapacity) {
+      this.studentCap = {};
+      students.forEach(student => {
+        this.studentCap[student.id] = student.capacity || this.studentMinCap
+      });
+    }
     const slots = students.reduce((acc, student) => {
       // console.log(student);
       
