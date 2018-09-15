@@ -4,6 +4,21 @@
 
 ### Aug
 
+#### 9/14
+
+- ~~Prototype `schedule`~~
+- Sell coach bag
+
+#### 9/10
+
+- Book appointment for Sophia dental, (919) 803-1595 
+- ~~Fill `Sophia` missing Info~~
+- Sell laptops `broken`
+- Short `gold`
+- ~~Prototype `charts`~~
+- ~~`Rollover` sell short capability~~
+- ~~Apply `Kaleido` `Bandwidth`~~
+
 #### 9/5
 
 - ~~IntelliJ License~~
@@ -14,11 +29,11 @@
 - ~~Cross ref house `insurance`~~
   - ~~104 Climbing Ivy, Kuan Ho  919-460-6388~~
   - ~~121 River Pine Dr, $803/year~~
-- :fire: House closing (90k=60k+30k)
-  - Qplot (10k) 
+- :fire: House closing (90k=60k+30k) Due 9/17
+  - ~~Qplot (10k)~~
   - Personal (10k) + Joint (5k)
   - Fidelity (20k)
-  - Ally Personal (20k) + Joint (25k), Due 8/17
+  - Ally Personal (20k) + Joint (25k)
 
 #### 9/3
 
@@ -29,11 +44,11 @@
 #### 8/27
 
 - ~~Plan for `401`~~
-- `SHOO` `XNET` `ALNY`
 
 #### 8/22
 
-- Findout `microsoft` charge
+- ~~Findout `microsoft` charge 1(800)-6427676~~
+- ~~2016 Jul, office, charges since Sep 2016~~
 
 #### 8/18
 
