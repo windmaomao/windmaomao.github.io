@@ -27,11 +27,12 @@ export default class Main extends Component {
     
     slot(item) {
       const teachers = Object.keys(item);
+      const gunnarStyle = { height: "10px", padding: "0px"};
       return (
         <TableCell>
           <Table>
             {teachers.map(teacher => (
-              <TableRow key={teacher}>
+              <TableRow key={teacher} style={gunnarStyle}>
                 <TableCell width="150">{teacher}</TableCell>
                 <TableCell>{item[teacher].join(', ')}</TableCell>
               </TableRow>
@@ -42,6 +43,7 @@ export default class Main extends Component {
     }
 
     slots(slotsMap) {
+      const gunnarStyle = { height: "10px", padding: "0px"};
       return (
         <Table>
           <TableHead>
@@ -52,7 +54,7 @@ export default class Main extends Component {
           </TableHead>
           <TableBody>
             {Object.keys(slotsMap).map(slot => (
-              <TableRow key={slot}>
+              <TableRow key={slot} style={gunnarStyle}>
                 <TableCell>{this.ss.slot2time(slot)}</TableCell>
                 {this.slot(slotsMap[slot])}
               </TableRow>
@@ -78,12 +80,12 @@ export default class Main extends Component {
     render() {
       const {slots, errors} = this.state;
       return (
-        <Paper classes={{rounded: true}}>
+        <div>
           <h1>Slots Available</h1>
           <Plan />
           {this.errors(errors)}
           {this.slots(slots)}
-        </Paper>          
+        </div>
       );
     }
   }
