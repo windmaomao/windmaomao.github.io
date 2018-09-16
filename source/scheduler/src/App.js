@@ -36,20 +36,21 @@ class App extends Component {
     this.state = {
       slots: this.ss.fillSlots(studentsInfo, teachersInfo, prefsInfo),
       ids: map(teachersInfo, 'id'),
+      usages: this.ss.teacherUsage,
       errors: this.ss.errors
     }
-    console.log(this.ss.teacherUsage);
   }
   render() {
     const {classes} = this.props;
-    const {slots, ids} = this.state;
+    const {slots, ids, usages, errors} = this.state;
     return (
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
         <div className={classes.layout}>
           <h1>Slots Available</h1>
-          <Plan slots={slots} ids={ids} />
+          <p style={{ color: 'red' }}>{errors.join(',')}</p>
+          <Plan slots={slots} ids={ids} usages={usages} />
         </div>
       </MuiThemeProvider>
     );

@@ -46,14 +46,14 @@ class Plan extends Component {
   }
 
   slots(ids) {
-    const {slots, classes} = this.props;
+    const {slots, usages, classes} = this.props;
     const gunnarStyle = { height: "10px", padding: "0px"};
     return (
       <Table>
         <TableHead>
           <TableRow>
             <TableCell className={classes.narrowCell}>Slot</TableCell>
-            {ids.map(id => <TableCell key={id}>{id}</TableCell>)}
+            {ids.map(id => <TableCell key={id}>{id} ({usages[id]})</TableCell>)}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -73,7 +73,7 @@ class Plan extends Component {
     return (
       <Grid container spacing={24}>
         {ids.map(id => (
-          <Grid key={id} item xs={4}>
+          <Grid key={id} item xs={6} md={4} lg={3}>
             {this.slots([id])}
           </Grid>          
         ))}
@@ -102,6 +102,7 @@ class Plan extends Component {
 Plan.propTypes = {
   slots: PropTypes.object.isRequired,
   ids: PropTypes.array,
+  usages: PropTypes.object,
 }
 
 // export default Plan;

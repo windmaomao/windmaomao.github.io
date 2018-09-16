@@ -8,7 +8,7 @@ export default class SchedulerService {
     this.acceptCapacity = true;
     this.teacherMaxCap = 100;
     this.studentMinCap = 30;
-    this.avgTotalStudents = 4;
+    this.avgTotalStudents = 30;    // TODO: change to avgTotalSlots
     this.errors = [];
     this.studentCap = {};
     this.teacherUsage = {};
@@ -91,6 +91,12 @@ export default class SchedulerService {
       // accept this teacher
       if (matchAllSlots) {
         students.push(student.id);
+
+        if (!(teacher.id in this.teacherUsage)) {
+          this.teacherUsage[teacher.id] = 1;
+        } else {
+          this.teacherUsage[teacher.id]++;
+        }
       }
     }
     
@@ -113,11 +119,6 @@ export default class SchedulerService {
         const tryMap = this.tryMapStudentToTeacher(slots, student, teacher);
         // console.log('Map', tryMap);
         if (tryMap) {
-          if (!(teacher.id in this.teacherUsage)) {
-            this.teacherUsage[teacher.id] = 1;
-          } else {
-            this.teacherUsage[teacher.id]++;
-          }
           return tryMap; 
         }
       }
@@ -163,6 +164,7 @@ export default class SchedulerService {
     if (!pref) return teachers;
     const list = cloneDeep(teachers);
     list.forEach(teacher => {
+      // teacher.ranking = 1;
       let ranking = 0;
       if (pref.prefers.indexOf(teacher.id) >=0) {
         ranking = -1;
@@ -170,14 +172,13 @@ export default class SchedulerService {
       if (pref.rejects.indexOf(teacher.id) >=0) {
         ranking = 1;
       }
-      // teacher.ranking = ranking;
+      teacher.ranking = ranking;
 
-      let usage = 0;
-      if (this.teacherUsage[teacher.id]) {
-        usage = this.teacherUsage[teacher.id];
-      }
-      teacher.ranking = (usage - this.avgTotalStudents) + ranking;
-
+      // let usage = 0;
+      // if (this.teacherUsage[teacher.id]) {
+      //   usage = this.teacherUsage[teacher.id];
+      // }
+      // teacher.ranking = usage - this.avgTotalStudents + ranking * 3;
     });
     return sortBy(list, ['ranking']);
   }
