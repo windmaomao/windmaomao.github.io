@@ -8,7 +8,7 @@ import './App.css';
 import theme from './theme';
 // primary components
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 // secondary components
 import Navbar from './Navbar';
 import Plan from './Plan';
@@ -38,6 +38,7 @@ class App extends Component {
       ids: map(teachersInfo, 'id'),
       errors: this.ss.errors
     }
+    console.log(this.ss.teacherUsage);
   }
   render() {
     const {classes} = this.props;

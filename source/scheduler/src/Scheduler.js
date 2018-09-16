@@ -8,8 +8,10 @@ export default class SchedulerService {
     this.acceptCapacity = true;
     this.teacherMaxCap = 100;
     this.studentMinCap = 30;
+    this.avgTotalStudents = 4;
     this.errors = [];
     this.studentCap = {};
+    this.teacherUsage = {};
   }
 
   min2slot(min) {
@@ -111,6 +113,11 @@ export default class SchedulerService {
         const tryMap = this.tryMapStudentToTeacher(slots, student, teacher);
         // console.log('Map', tryMap);
         if (tryMap) {
+          if (!(teacher.id in this.teacherUsage)) {
+            this.teacherUsage[teacher.id] = 1;
+          } else {
+            this.teacherUsage[teacher.id]++;
+          }
           return tryMap; 
         }
       }
@@ -163,7 +170,14 @@ export default class SchedulerService {
       if (pref.rejects.indexOf(teacher.id) >=0) {
         ranking = 1;
       }
-      teacher.ranking = ranking;
+      // teacher.ranking = ranking;
+
+      let usage = 0;
+      if (this.teacherUsage[teacher.id]) {
+        usage = this.teacherUsage[teacher.id];
+      }
+      teacher.ranking = (usage - this.avgTotalStudents) + ranking;
+
     });
     return sortBy(list, ['ranking']);
   }

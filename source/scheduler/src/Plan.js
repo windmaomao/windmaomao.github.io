@@ -69,7 +69,7 @@ class Plan extends Component {
   }
 
   slotsFlex() {
-    const {slots, ids} = this.props;
+    const {ids} = this.props;
     return (
       <Grid container spacing={24}>
         {ids.map(id => (
