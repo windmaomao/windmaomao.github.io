@@ -4,7 +4,7 @@
 
 ### 09/16
 
-- refine deployment issue
+- ~~refine deployment issue~~
 - resolve mobile display issue
 - allow print schedule
 - allow change of schedules

@@ -15,6 +15,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Chip from '@material-ui/core/Chip';
 
 const styles = { 
+  grid: {
+    width: '100%',
+  },
   card: {},
   cardContent: {
     padding: 0
@@ -103,11 +106,13 @@ class Plan extends Component {
   }
 
   render() {
-    const {ids} = this.props;
+    const {ids, classes} = this.props;
     return (
-      <Grid container spacing={24}>
+      <Grid container spacing={16}>
         {ids.map(id => (
-          <Grid key={id} item sm={12} md={6} lg={4}>
+          <Grid item sm={12} md={6} lg={4} 
+            key={id} className={classes.grid}
+          >
             {this.card(id)}
           </Grid>
         ))}

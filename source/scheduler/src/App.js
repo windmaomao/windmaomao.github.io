@@ -57,17 +57,29 @@ class App extends Component {
     })    
   }
 
-  main() {
-    const {classes} = this.props;
-    const {loading, slots, ids, usages, total, errors} = this.state;
+  title(total) {
     return (
-      <div className={classes.layout}>
+      <div>
         <Button 
           variant="contained" color="secondary" style={{float: 'right'}}
           onClick={() => {this.doPlan();}}
         >Plan</Button>
         <h1>Today's Schedule <small>({total})</small></h1>
-        <p style={{ color: 'red' }}>{errors.join(',')}</p>
+      </div>
+    );
+  }
+
+  error(errors) {
+    return <p style={{ color: 'red' }}>{errors.join(',')}</p>;
+  }
+
+  main() {
+    const {classes} = this.props;
+    const {loading, slots, ids, usages, total, errors} = this.state;
+    return (
+      <div className={classes.layout}>
+        {this.title(total)}
+        {this.error(errors)}
         {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
       </div>
     );
