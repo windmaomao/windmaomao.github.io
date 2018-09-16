@@ -8,6 +8,7 @@
 
 - ~~Prototype `schedule`~~
 - Fix walls
+- Release `scheduler`
 
 #### 9/10
 
