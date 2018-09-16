@@ -16,8 +16,20 @@ import Chip from '@material-ui/core/Chip';
 
 const styles = { 
   card: {},
-  content: {
+  cardContent: {
     padding: 0
+  },
+  item: {
+    padding: '0.3rem 0 0.3rem 1rem'
+  },
+  itemIcon: {
+    margin: 0
+  },
+  itemText: {
+    padding: 0
+  },
+  chip: {
+    marginRight: '4px'
   }
 };
 
@@ -37,10 +49,11 @@ class Plan extends Component {
     if (!arr) return (
       <div style={rowStyle}>&nbsp;</div>
     );
+    const {classes} = this.props;
     return (
       <div style={rowStyle}>
         {arr.map(item => (
-          <Chip style={{marginRight: '0.2rem', padding: '0'}}
+          <Chip className={classes.chip}
             key={item} 
             label={item}
             color="primary" 
@@ -52,15 +65,18 @@ class Plan extends Component {
   }
 
   schedule(id) {
-    const {slots} = this.props;
+    const {slots, classes} = this.props;
     return (
       <List component="nav">
         {Object.keys(slots).map(slot => (
-          <ListItem key={slot} button>
-            <ListItemIcon>
+          <ListItem key={slot} button className={classes.item}>
+            <ListItemIcon className={classes.itemIcon}>
               <span>{this.slot2time(slot)}</span>
             </ListItemIcon>
-            <ListItemText inset primary={this.list(slots[slot][id])} />
+            <ListItemText 
+              disableTypography={true}
+              primary={this.list(slots[slot][id])} 
+            />
           </ListItem>
         ))}
       </List>
@@ -76,7 +92,7 @@ class Plan extends Component {
           title={id + ' (' + usages[id] + ')'}
           subheader={'July 16, 3:00 - 7:00'}
         />
-        <CardContent className={classes.content}>
+        <CardContent className={classes.cardContent}>
           {this.schedule(id)}
         </CardContent>
       </Card>
@@ -88,9 +104,9 @@ class Plan extends Component {
     return (
       <Grid container spacing={24}>
         {ids.map(id => (
-          <Grid key={id} item xs={12} sm={6} md={4}>
+          <Grid key={id} item sm={12} md={6} lg={4}>
             {this.card(id)}
-          </Grid>          
+          </Grid>
         ))}
       </Grid>
     );
