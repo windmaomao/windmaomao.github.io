@@ -8,6 +8,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -23,7 +24,11 @@ import Chip from '@material-ui/core/Chip';
 const styles = { 
 	narrowCell: {
 		'width': '90px',
-	}
+  },
+  card: {},
+  content: {
+    padding: 0
+  }
 };
 
 class Plan extends Component {
@@ -82,9 +87,12 @@ class Plan extends Component {
   }
 
   list(arr) {
-    if (!arr) return '  ';
+    const rowStyle = { height: '32px' };
+    if (!arr) return (
+      <div style={rowStyle}>&nbsp;</div>
+    );
     return (
-      <div style={{display: 'flex'}}>
+      <div style={rowStyle}>
         {arr.map(item => (
           <Chip style={{marginRight: '0.2rem', padding: '0'}}
             key={item} 
@@ -114,20 +122,17 @@ class Plan extends Component {
   }
 
   card(id) {
-    const {usages} = this.props;
+    const {usages, classes} = this.props;
     return (
-      <Card>
+      <Card className={classes.card}>
         <CardHeader 
           avatar={<Avatar>{id[0]}</Avatar>}
           title={id + ' (' + usages[id] + ')'}
           subheader={'July 16, 3:00 - 7:00'}
         />
-        <CardContent>
+        <CardContent className={classes.content}>
           {this.schedule(id)}
         </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
       </Card>
     )
   }
