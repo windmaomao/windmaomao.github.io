@@ -96,7 +96,7 @@ class Plan extends Component {
         <CardHeader className={classes.cardHeader}
           avatar={<Avatar>{id[0]}</Avatar>}
           title={id + ' (' + usages[id] + ')'}
-          subheader={'July 16, 3:00 - 7:00'}
+          subheader={'Sep 16, 3:00 - 7:00'}
         />
         <CardContent className={classes.cardContent}>
           {this.schedule(id)}

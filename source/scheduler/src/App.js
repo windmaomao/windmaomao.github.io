@@ -64,7 +64,7 @@ class App extends Component {
           variant="contained" color="secondary" style={{float: 'right'}}
           onClick={() => {this.doPlan();}}
         >Plan</Button>
-        <h1>Today's Schedule <small>({total})</small></h1>
+        <h1>Today <small>({total})</small></h1>
       </div>
     );
   }
