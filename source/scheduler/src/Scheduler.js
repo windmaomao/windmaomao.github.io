@@ -5,10 +5,9 @@ export default class SchedulerService {
     this.slotMins = 15;
     this.maxStudents = 3;
     this.acceptPref = true;
-    this.acceptCapacity = true;
+    this.acceptCapacity = false;
     this.teacherMaxCap = 100;
     this.studentMinCap = 30;
-    this.avgTotalStudents = 30;    // TODO: change to avgTotalSlots
     this.errors = [];
     this.studentCap = {};
     this.teacherUsage = {};
@@ -136,17 +135,22 @@ export default class SchedulerService {
         this.studentCap[student.id] = student.capacity || this.studentMinCap
       });
     }
+    let positive = true;
     const slots = students.reduce((acc, student) => {
       // console.log(student);
       
+      // get teachers
+      let shuffledTeachers = cloneDeep(teachers);
+      positive = !positive;
+      if (!positive) {
+        shuffledTeachers.reverse();
+      }
+
       // find student pref
-      let prefTeachers = [];
+      let prefTeachers = shuffledTeachers;
       if (this.acceptPref) {
         const pref = find(prefs, { 'id': student.id });
-        prefTeachers = this.sortTeachers(teachers, pref);
-        // console.log(prefTeachers);
-      } else {
-        prefTeachers = teachers;
+        prefTeachers = this.sortTeachers(shuffledTeachers, pref);
       }
       const tryMap = this.tryMapTeachers(acc, student, prefTeachers);
       // console.log(tryMap);
@@ -167,10 +171,10 @@ export default class SchedulerService {
       // teacher.ranking = 1;
       let ranking = 0;
       if (pref.prefers.indexOf(teacher.id) >=0) {
-        ranking = -1;
+        ranking = -10;
       } 
       if (pref.rejects.indexOf(teacher.id) >=0) {
-        ranking = 1;
+        ranking = 20;
       }
       teacher.ranking = ranking;
 
@@ -178,7 +182,7 @@ export default class SchedulerService {
       // if (this.teacherUsage[teacher.id]) {
       //   usage = this.teacherUsage[teacher.id];
       // }
-      // teacher.ranking = usage - this.avgTotalStudents + ranking * 3;
+      // teacher.ranking = usage + ranking;
     });
     return sortBy(list, ['ranking']);
   }

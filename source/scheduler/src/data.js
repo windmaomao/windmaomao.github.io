@@ -1,7 +1,7 @@
 const teachersInfo = [
-    { id: 'CS',     start: 12, end: 27 },    // 3:00 - 7:00am
-    { id: 'JP',     start: 12, end: 27 },   // 3:00 - 7:00am
-    { id: 'SH',     start: 12, end: 27 },    // 3:00 - 7:00am
+    { id: 'CS',     start: 12, end: 27 },     // 3:00 - 7:00am
+    { id: 'JP',     start: 12, end: 27 },     // 3:00 - 7:00am
+    { id: 'SH',     start: 12, end: 27 },     // 3:00 - 7:00am
   ];
   const studentsInfo = [
     { id: 'Simon',  start: 12, end: 15, capacity: 50 },   // 3:00 - 4:00am
@@ -32,7 +32,7 @@ const teachersInfo = [
     { id: 'Lily M', start: 24, end: 27 },   // 6:00 - 7:00am
     { id: 'AC',     start: 24, end: 27 },   // 6:00 - 7:00am
     { id: 'Bennett',start: 24, end: 27 },   // 6:00 - 7:00am
-    { id: 'Hayes',  start: 24, end: 27, capacity: 50 },   // 6:00 - 7:00am
+    { id: 'Hayes',  start: 24, end: 27, capacity: 40 },   // 6:00 - 7:00am
   ];
   const prefsInfo = [
     { id: 'Libba',  prefers: [], rejects: ['CS'] },
