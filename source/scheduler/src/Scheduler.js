@@ -21,12 +21,20 @@ export default class SchedulerService {
   min2slot(min) {
     return min/this.slotMins;
   }
+
   slot2time(slot) {
     const total = slot*this.slotMins;  
     const hours = Math.floor(total/60);
     const mins = total - hours*60;
     var s = "00" + mins;
     return hours + ':' + s.substr(s.length-2);
+  }
+
+  totalSlots() {
+    const usages = this.teacherUsage;
+    return Object.keys(usages).reduce((acc, teacher) => {
+      return acc + usages[teacher];
+    }, 0);
   }
   
   // match a techer

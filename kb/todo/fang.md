@@ -7,7 +7,7 @@
 #### 9/14
 
 - ~~Prototype `schedule`~~
-- Sell coach bag
+- Fix walls
 
 #### 9/10
 
@@ -24,12 +24,12 @@
 - ~~IntelliJ License~~
 - ~~Whitelist on repo from home~~
 
-#### 9/4
+#### 9/4 :fire:
 
 - ~~Cross ref house `insurance`~~
   - ~~104 Climbing Ivy, Kuan Ho  919-460-6388~~
   - ~~121 River Pine Dr, $803/year~~
-- :fire: House closing (90k=60k+30k) Due 9/17
+- House closing (90k=60k+30k) Due 9/17
   - ~~Qplot (10k)~~
   - Personal (10k) + Joint (5k)
   - Fidelity (20k)

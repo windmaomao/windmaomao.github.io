@@ -9,9 +9,9 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
+// import CardActions from '@material-ui/core/CardActions';
+// import CardContent from '@material-ui/core/CardContent';
+// import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 const styles = { 
@@ -29,12 +29,6 @@ class Plan extends Component {
     const mins = total - hours*60;
     var s = "00" + mins;
     return hours + ':' + s.substr(s.length-2);
-  }
-
-  totalSlots(usages) {
-    return Object.keys(usages).reduce((acc, teacher) => {
-      return acc + usages[teacher];
-    }, 0);
   }
 
   avatars(list) {
@@ -55,10 +49,11 @@ class Plan extends Component {
     const {slots, usages, classes} = this.props;
     const gunnarStyle = { height: "10px", padding: "0px"};
     return (
+      <Card>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell className={classes.narrowCell}>Slot</TableCell>
+            <TableCell className={classes.narrowCell}></TableCell>
             {ids.map(id => <TableCell key={id}>{id} ({usages[id]})</TableCell>)}
           </TableRow>
         </TableHead>
@@ -71,37 +66,20 @@ class Plan extends Component {
           ))}
         </TableBody>
       </Table>
+      </Card>
     )
   }
 
-  slotsFlex() {
+  render() {
     const {ids} = this.props;
     return (
       <Grid container spacing={24}>
         {ids.map(id => (
-          <Grid key={id} item xs={4}>
+          <Grid key={id} item xs={12} sm={6} md={4}>
             {this.slots([id])}
           </Grid>          
         ))}
       </Grid>
-    )
-  }
-  
-  render() {
-    const {ids, usages} = this.props;
-    const total = this.totalSlots(usages);
-    return (
-      <Card>
-        <CardContent>
-          <h3>Individual ({total})</h3>
-          {this.slotsFlex()}
-          <h3>One Piece ({total})</h3>
-          {this.slots(ids)}
-        </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
     );
   }
 }

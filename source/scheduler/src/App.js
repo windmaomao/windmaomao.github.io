@@ -38,6 +38,7 @@ class App extends Component {
       slots: {},
       usages: {},
       ids: [],
+      total: 0,
       errors: []
     };
   }
@@ -52,32 +53,33 @@ class App extends Component {
       slots: this.ss.fillSlots(studentsInfo, teachersInfo, prefsInfo),
       usages: this.ss.teacherUsage,
       ids: Object.keys(this.ss.teacherUsage),
+      total: this.ss.totalSlots(),
       errors: this.ss.errors
     })    
   }
 
-  planButton() {
+  main() {
+    const {classes} = this.props;
+    const {loading, slots, ids, usages, total, errors} = this.state;
     return (
-      <Button 
-        variant="contained" color="secondary" style={{float: 'right'}}
-        onClick={() => {this.doPlan();}}
-      >Plan</Button>
+      <div className={classes.layout}>
+        <Button 
+          variant="contained" color="secondary" style={{float: 'right'}}
+          onClick={() => {this.doPlan();}}
+        >Plan</Button>
+        <h1>Today's Schedule <small>({total})</small></h1>
+        <p style={{ color: 'red' }}>{errors.join(',')}</p>
+        {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
+      </div>
     );
   }
 
   render() {
-    const {classes} = this.props;
-    const {loading, slots, ids, usages, errors} = this.state;
     return (
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
-        <div className={classes.layout}>
-          {this.planButton()}
-          <h1>Slots Available</h1>
-          <p style={{ color: 'red' }}>{errors.join(',')}</p>
-          {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
-        </div>
+        {this.main()}
       </MuiThemeProvider>
     );
   }
