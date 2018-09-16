@@ -1,0 +1,12 @@
+{
+    "teachers": [
+      { "id": "Simon",      "start": 12, "end": 27 },
+      { "id": "Jenni",      "start": 12, "end": 27 },
+      { "id": "Mohammed",   "start": 12, "end": 27 },
+      { "id": "Jeff",       "start": 12, "end": 27 },
+      { "id": "Liam",       "start": 12, "end": 27 },
+      { "id": "Laura",      "start": 12, "end": 27 }
+    ],
+    "students": [],
+    "preferences": []
+  }
