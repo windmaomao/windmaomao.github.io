@@ -14,7 +14,7 @@ import Navbar from './Navbar';
 import Plan from './Plan';
 // services
 import SchedulerService from './Scheduler';
-import {teachersInfo, studentsInfo, prefsInfo} from './data';
+import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 
 const styles = theme => ({
   layout: {

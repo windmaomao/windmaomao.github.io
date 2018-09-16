@@ -176,21 +176,20 @@ export default class SchedulerService {
     if (!pref) return teachers;
     const list = cloneDeep(teachers);
     list.forEach(teacher => {
-      // teacher.ranking = 1;
       let ranking = 0;
       if (pref.prefers.indexOf(teacher.id) >=0) {
-        ranking = -10;
+        ranking = -100;
       } 
       if (pref.rejects.indexOf(teacher.id) >=0) {
-        ranking = 20;
+        ranking = 100;
       }
       teacher.ranking = ranking;
 
-      // let usage = 0;
-      // if (this.teacherUsage[teacher.id]) {
-      //   usage = this.teacherUsage[teacher.id];
-      // }
-      // teacher.ranking = usage + ranking;
+      let usage = 0;
+      if (this.teacherUsage[teacher.id]) {
+        usage = this.teacherUsage[teacher.id];
+      }
+      teacher.ranking = ranking - usage;
     });
     return sortBy(list, ['ranking']);
   }
