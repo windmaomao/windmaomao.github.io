@@ -19,8 +19,11 @@ const styles = {
   cardContent: {
     padding: 0
   },
+  cardHeader: {
+    padding: '1rem 0 0.5rem 1rem'
+  },
   item: {
-    padding: '0.3rem 0 0.3rem 1rem'
+    padding: '0.3rem 0 0.5rem 1rem'
   },
   itemIcon: {
     margin: 0
@@ -87,7 +90,7 @@ class Plan extends Component {
     const {usages, classes} = this.props;
     return (
       <Card className={classes.card}>
-        <CardHeader 
+        <CardHeader className={classes.cardHeader}
           avatar={<Avatar>{id[0]}</Avatar>}
           title={id + ' (' + usages[id] + ')'}
           subheader={'July 16, 3:00 - 7:00'}
