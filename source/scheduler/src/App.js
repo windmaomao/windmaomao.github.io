@@ -2,13 +2,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {MuiThemeProvider, withStyles} from '@material-ui/core/styles';
-import {map} from 'lodash';
 // styles
 import './App.css';
 import theme from './theme';
 // primary components
 import CssBaseline from '@material-ui/core/CssBaseline';
 // import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 // secondary components
 import Navbar from './Navbar';
 import Plan from './Plan';
@@ -34,23 +34,49 @@ class App extends Component {
     super(props);
     this.ss = new SchedulerService();
     this.state = {
-      slots: this.ss.fillSlots(studentsInfo, teachersInfo, prefsInfo),
-      ids: map(teachersInfo, 'id'),
-      usages: this.ss.teacherUsage,
-      errors: this.ss.errors
-    }
+      loading: true,
+      slots: {},
+      usages: {},
+      ids: [],
+      errors: []
+    };
   }
+
+  componentDidMount() {
+    this.doPlan();
+  }
+
+  doPlan() {
+    this.setState({
+      loading: false,
+      slots: this.ss.fillSlots(studentsInfo, teachersInfo, prefsInfo),
+      usages: this.ss.teacherUsage,
+      ids: Object.keys(this.ss.teacherUsage),
+      errors: this.ss.errors
+    })    
+  }
+
+  planButton() {
+    return (
+      <Button 
+        variant="contained" color="secondary" style={{float: 'right'}}
+        onClick={() => {this.doPlan();}}
+      >Plan</Button>
+    );
+  }
+
   render() {
     const {classes} = this.props;
-    const {slots, ids, usages, errors} = this.state;
+    const {loading, slots, ids, usages, errors} = this.state;
     return (
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
         <div className={classes.layout}>
+          {this.planButton()}
           <h1>Slots Available</h1>
           <p style={{ color: 'red' }}>{errors.join(',')}</p>
-          <Plan slots={slots} ids={ids} usages={usages} />
+          {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
         </div>
       </MuiThemeProvider>
     );

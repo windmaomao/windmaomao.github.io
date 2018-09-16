@@ -31,6 +31,12 @@ class Plan extends Component {
     return hours + ':' + s.substr(s.length-2);
   }
 
+  totalSlots(usages) {
+    return Object.keys(usages).reduce((acc, teacher) => {
+      return acc + usages[teacher];
+    }, 0);
+  }
+
   avatars(list) {
     if (!list) return null;
     const spanStyle = { 
@@ -73,7 +79,7 @@ class Plan extends Component {
     return (
       <Grid container spacing={24}>
         {ids.map(id => (
-          <Grid key={id} item xs={6} md={4} lg={3}>
+          <Grid key={id} item xs={4}>
             {this.slots([id])}
           </Grid>          
         ))}
@@ -82,13 +88,14 @@ class Plan extends Component {
   }
   
   render() {
-    const {ids} = this.props;
+    const {ids, usages} = this.props;
+    const total = this.totalSlots(usages);
     return (
       <Card>
         <CardContent>
-          <h3>Individual</h3>
+          <h3>Individual ({total})</h3>
           {this.slotsFlex()}
-          <h3>One Piece</h3>
+          <h3>One Piece ({total})</h3>
           {this.slots(ids)}
         </CardContent>
         <CardActions>

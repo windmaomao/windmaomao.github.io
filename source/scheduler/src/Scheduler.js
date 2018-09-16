@@ -1,4 +1,4 @@
-import {find, cloneDeep, sortBy} from 'lodash';
+import {find, cloneDeep, sortBy, shuffle} from 'lodash';
 
 export default class SchedulerService {
   constructor() {
@@ -8,6 +8,11 @@ export default class SchedulerService {
     this.acceptCapacity = false;
     this.teacherMaxCap = 100;
     this.studentMinCap = 30;
+    this.shuffleTeachers = true;
+    this.reset();
+  }
+
+  reset() {
     this.errors = [];
     this.studentCap = {};
     this.teacherUsage = {};
@@ -127,7 +132,7 @@ export default class SchedulerService {
   
   // fill slots info
   fillSlots(students, teachers, prefs) {
-    this.errors = [];
+    this.reset();
     // populate student cap
     if (this.acceptCapacity) {
       this.studentCap = {};
@@ -141,6 +146,9 @@ export default class SchedulerService {
       
       // get teachers
       let shuffledTeachers = cloneDeep(teachers);
+      if (this.shuffleTeachers) {
+        shuffledTeachers = shuffle(shuffledTeachers);
+      }
       positive = !positive;
       if (!positive) {
         shuffledTeachers.reverse();
