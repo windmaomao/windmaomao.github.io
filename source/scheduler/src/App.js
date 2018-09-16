@@ -7,7 +7,6 @@ import './App.css';
 import theme from './theme';
 // primary components
 import CssBaseline from '@material-ui/core/CssBaseline';
-// import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 // secondary components
 import Navbar from './Navbar';

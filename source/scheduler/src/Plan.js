@@ -9,9 +9,12 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Card from '@material-ui/core/Card';
-// import CardActions from '@material-ui/core/CardActions';
-// import CardContent from '@material-ui/core/CardContent';
-// import Button from '@material-ui/core/Button';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Avatar from '@material-ui/core/Avatar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 const styles = { 
@@ -48,24 +51,29 @@ class Plan extends Component {
   slots(ids) {
     const {slots, usages, classes} = this.props;
     const gunnarStyle = { height: "10px", padding: "0px"};
+    const title = ids[0];
     return (
       <Card>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell className={classes.narrowCell}></TableCell>
-            {ids.map(id => <TableCell key={id}>{id} ({usages[id]})</TableCell>)}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {Object.keys(slots).map(slot => (
-            <TableRow key={slot} style={gunnarStyle}>
-              <TableCell className={classes.narrowCell}>{this.slot2time(slot)}</TableCell>
-              {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+        <CardHeader 
+          avatar={<Avatar>{title[0]}</Avatar>}
+          title={title}
+          subheader={'July 16, 3:00 - 7:00'}
+        />
+        <CardContent>
+          <Table>
+            <TableBody>
+              {Object.keys(slots).map(slot => (
+                <TableRow key={slot} style={gunnarStyle}>
+                  <TableCell className={classes.narrowCell}>{this.slot2time(slot)}</TableCell>
+                  {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Learn More</Button>
+        </CardActions>
       </Card>
     )
   }
