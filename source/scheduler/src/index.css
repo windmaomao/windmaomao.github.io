@@ -1,5 +1,45 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@media print
+{    
+  @page {
+    size: A4;
+  }  
+  .no-print
+  {
+    display: none !important;
+  }
+
+  div { 
+    float: none !important; 
+    position: static !important; 
+    display: inline; 
+    box-sizing: content-box !important;
+  }
+
+  body {
+    overflow: visible !important;
+    float: none !important;
+  }
+  
+  header {
+    display: none !important;
+  }
+
+  .App-layout-01 {
+    width: 100% !important; 
+    margin: 0 !important;
+    float: none !important;
+  }
+
+  .App-title {
+    display: none !important;
+  }
+
+  h1 {
+    page-break-before: always;
+  }
+
+  .MuiPaper-elevation1-014 {
+    box-shadow: none !important;
+  }
+
 }

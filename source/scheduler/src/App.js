@@ -59,7 +59,7 @@ class App extends Component {
 
   title(total) {
     return (
-      <div>
+      <div className={'App-title'}>
         <Button 
           variant="contained" color="secondary" style={{float: 'right'}}
           onClick={() => {this.doPlan();}}
