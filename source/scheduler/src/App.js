@@ -14,6 +14,7 @@ import Plan from './Plan';
 // services
 import SchedulerService from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
+import ApiService from './Api';
 
 const styles = theme => ({
   layout: {
@@ -29,6 +30,9 @@ const styles = theme => ({
 });
 
 class App extends Component {
+  // debug = true;
+  debug = false;
+
   constructor(props) {
     super(props);
     this.ss = new SchedulerService();
@@ -47,22 +51,39 @@ class App extends Component {
   }
 
   doPlan() {
-    this.setState({
-      loading: false,
-      slots: this.ss.fillSlots(studentsInfo, teachersInfo, prefsInfo),
-      usages: this.ss.teacherUsage,
-      ids: Object.keys(this.ss.teacherUsage),
-      total: this.ss.totalSlots(),
-      errors: this.ss.errors
-    })    
+    if (this.debug) {
+      this.setState({
+        loading: false,
+        slots: this.ss.fillSlots(studentsInfo, teachersInfo, prefsInfo),
+        usages: this.ss.teacherUsage,
+        ids: Object.keys(this.ss.teacherUsage),
+        total: this.ss.totalSlots(),
+        errors: this.ss.errors
+      })    
+    } else {
+      this.setState({loading: true});
+      ApiService.getInfo().then(data => { console.log(data);
+        const {teachers, students, preferences} = data;
+        this.setState({
+          loading: false,
+          slots: this.ss.fillSlots(students, teachers, preferences),
+          usages: this.ss.teacherUsage,
+          ids: Object.keys(this.ss.teacherUsage),
+          total: this.ss.totalSlots(),
+          errors: this.ss.errors
+        });
+      })
+    }
   }
 
   title(total) {
+    const {loading} = this.props;
     return (
       <div className={'App-title'}>
         <Button 
           variant="contained" color="secondary" style={{float: 'right'}}
           onClick={() => {this.doPlan();}}
+          disabled={loading}
         >Plan</Button>
         <h1>Today <small>({total})</small></h1>
       </div>
