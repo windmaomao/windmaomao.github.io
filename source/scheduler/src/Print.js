@@ -94,8 +94,8 @@ class Print extends Component {
         />
         <div className={'allow-print'} ref={el => (this.componentRef = el)}>
           <h1>Today Schedule</h1>
-          {pages.map(page => (
-            <div>
+          {pages.map((page, index) => (
+            <div key={index}>
               {this.slots(page)}
               <div className={'print-page-break'}></div>
             </div>

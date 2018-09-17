@@ -63,7 +63,7 @@ class App extends Component {
       })    
     } else {
       this.setState({loading: true});
-      ApiService.getInfo().then(data => { console.log(data);
+      ApiService.getInfo().then(data => {
         const {teachers, students, preferences} = data;
         this.setState({
           loading: false,
