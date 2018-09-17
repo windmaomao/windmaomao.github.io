@@ -12,6 +12,8 @@
 - Sell laptops `broken`
 - Fix walls or cover it
 - Design workflow for `scheduler`
+  - edit `StackEdit` and push
+  - `git pull origin2 master` 
 - 📅 9 /18 Move money to `joint`
 - Give `tms` project estimates
 
