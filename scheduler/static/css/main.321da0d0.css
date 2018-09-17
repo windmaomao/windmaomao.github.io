@@ -1,0 +1,2 @@
+.allow-print{display:none;width:100%;margin:1rem}@media print{.no-print{display:none!important}.allow-print{display:block!important}.print-page-break{page-break-after:always}div{position:static!important;display:inline;-webkit-box-sizing:content-box!important;box-sizing:content-box!important}body,div{float:none!important}body{overflow:visible!important}header{display:none!important}}
+/*# sourceMappingURL=main.321da0d0.css.map*/
