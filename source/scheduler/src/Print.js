@@ -9,19 +9,17 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   fab: {
-    position: 'absolute',
+    position: 'fixed',
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2,
   },  
+  sheet: {
+    pageBreakAfter: 'always'
+  }
 });
 
 class Print extends Component {
@@ -42,35 +40,30 @@ class Print extends Component {
     );
   }
 
-  slots(index, ids) {
+  slots(ids) {
     const {slots} = this.props;
-    const gunnarStyle = { height: "10px", padding: "0px"};
+    const gunnarStyle = { height: "30px", padding: "0px"};
     return (
-      <Card>
-        <CardHeader 
-          avatar={<Avatar>{index}</Avatar>}
-          title={ids.join(', ')}
-          subheader={'July 16, 3:00 - 7:00'}
-        />
-        <CardContent>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Time</TableCell>
-                {ids.map(id => <TableCell key={id}>{id}</TableCell>)}
+      <div>
+        <h2>{ids.join(', ')}</h2>
+        <h3>{'July 16, 3:00 - 7:00'}</h3>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Time</TableCell>
+              {ids.map(id => <TableCell key={id}>{id}</TableCell>)}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {Object.keys(slots).map(slot => (
+              <TableRow key={slot} style={gunnarStyle}>
+                <TableCell>{this.slot2time(slot)}</TableCell>
+                {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
               </TableRow>
-            </TableHead>
-            <TableBody>
-              {Object.keys(slots).map(slot => (
-                <TableRow key={slot} style={gunnarStyle}>
-                  <TableCell>{this.slot2time(slot)}</TableCell>
-                  {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
     )
   }
 
@@ -83,11 +76,17 @@ class Print extends Component {
     )
   }
 
+  getPages(usages) {
+    const k = Object.keys(usages);
+    const chunk = (arr, size) => arr.reduce((acc, _, i) =>
+      (i % size) ? acc : [...acc, arr.slice(i, i + size)], []
+    );
+    return chunk(k, 3);
+  }
+
   render() {
     const {usages} = this.props;
-    const k = Object.keys(usages);
-    const t1 = [k[0], k[1], k[2]];
-    const t2 = [k[3], k[4], k[5]];
+    const pages = this.getPages(usages);
     return (
       <div>
         <ReactToPrint trigger={() => this.fab()}
@@ -95,9 +94,12 @@ class Print extends Component {
         />
         <div className={'allow-print'} ref={el => (this.componentRef = el)}>
           <h1>Today Schedule</h1>
-          <h2>Sep 17 3:00 - 7:00</h2>
-          {this.slots('1', t1)}
-          {this.slots('2', t2)}
+          {pages.map(page => (
+            <div>
+              {this.slots(page)}
+              <div className={'print-page-break'}></div>
+            </div>
+          ))}
         </div>
       </div>
     );

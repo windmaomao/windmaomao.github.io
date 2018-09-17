@@ -7,4 +7,5 @@
 - ~~refine deployment issue~~
 - ~~resolve mobile display issue~~
 - ~~allow change of schedules~~
-- allow print schedule
+- ~~allow print schedule~~
+- allow page break in print
