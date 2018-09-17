@@ -28,7 +28,12 @@ const styles = theme => ({
       marginLeft: 'auto',
       marginRight: 'auto',
     },
-  }
+  },
+  fab: {
+    position: 'absolute',
+    bottom: theme.spacing.unit * 2,
+    right: theme.spacing.unit * 2,
+  },  
 });
 
 class App extends Component {
@@ -108,14 +113,23 @@ class App extends Component {
     );
   }
 
+  fab() {
+    const {classes} = this.props;
+    return (
+      <Button variant="fab" color={'primary'} className={classes.fab}>
+        Print
+      </Button>
+    )
+  }
+
   print() {
     const {loading, slots, usages} = this.state;
     return (
       <div>
-        <ReactToPrint
-          trigger={() => <a href="#Print">Print this out!</a>}
+        <ReactToPrint trigger={() => this.fab()}
           content={() => this.componentRef}
         />
+        
         {!loading && 
           <Print slots={slots} usages={usages}
             ref={el => (this.componentRef = el)} 
