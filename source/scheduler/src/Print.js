@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
+import ReactToPrint from "react-to-print";
 // primary components
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -13,12 +14,15 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
-const styles = { 
-	narrowCell: {
-		'width': '90px',
-	}
-};
+const styles = theme => ({
+  fab: {
+    position: 'absolute',
+    bottom: theme.spacing.unit * 2,
+    right: theme.spacing.unit * 2,
+  },  
+});
 
 class Print extends Component {
   slotMins = 15;
@@ -39,9 +43,8 @@ class Print extends Component {
   }
 
   slots(index, ids) {
-    const {slots, usages, classes} = this.props;
+    const {slots} = this.props;
     const gunnarStyle = { height: "10px", padding: "0px"};
-    const title = ids[0];
     return (
       <Card>
         <CardHeader 
@@ -53,14 +56,14 @@ class Print extends Component {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell className={classes.narrowCell}>Time</TableCell>
+                <TableCell>Time</TableCell>
                 {ids.map(id => <TableCell key={id}>{id}</TableCell>)}
               </TableRow>
             </TableHead>
             <TableBody>
               {Object.keys(slots).map(slot => (
                 <TableRow key={slot} style={gunnarStyle}>
-                  <TableCell className={classes.narrowCell}>{this.slot2time(slot)}</TableCell>
+                  <TableCell>{this.slot2time(slot)}</TableCell>
                   {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
                 </TableRow>
               ))}
@@ -71,17 +74,31 @@ class Print extends Component {
     )
   }
 
+  fab() {
+    const {classes} = this.props;
+    return (
+      <Button variant="fab" color={'primary'} className={classes.fab}>
+        Print
+      </Button>
+    )
+  }
+
   render() {
     const {usages} = this.props;
     const k = Object.keys(usages);
     const t1 = [k[0], k[1], k[2]];
     const t2 = [k[3], k[4], k[5]];
     return (
-      <div className={'allow-print'}>
-        <h1>Today Schedule</h1>
-        <h2>Sep 17 3:00 - 7:00</h2>
-        {this.slots('1', t1)}
-        {this.slots('2', t2)}
+      <div>
+        <ReactToPrint trigger={() => this.fab()}
+          content={() => this.componentRef}
+        />
+        <div className={'allow-print'} ref={el => (this.componentRef = el)}>
+          <h1>Today Schedule</h1>
+          <h2>Sep 17 3:00 - 7:00</h2>
+          {this.slots('1', t1)}
+          {this.slots('2', t2)}
+        </div>
       </div>
     );
   }

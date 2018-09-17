@@ -75,7 +75,7 @@ class Plan extends Component {
     return (
       <List component="nav">
         {Object.keys(slots).map(slot => (
-          <ListItem key={slot} button className={classes.item}>
+          <ListItem key={slot} className={classes.item}>
             <ListItemIcon className={classes.itemIcon}>
               <span>{this.slot2time(slot)}</span>
             </ListItemIcon>
