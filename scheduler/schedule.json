@@ -1,6 +1,6 @@
 {
   "teachers": [
-    { "id": "Simon2",      "start": 12, "end": 27 },
+    { "id": "Simon",      "start": 12, "end": 27 },
     { "id": "Jenni",      "start": 12, "end": 27 },
     { "id": "Mohammed",   "start": 12, "end": 27 },
     { "id": "Jeff",       "start": 12, "end": 27 },
