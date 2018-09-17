@@ -7,15 +7,17 @@
 #### 9/14
 
 - ~~Prototype `schedule`~~
-- Fix walls
-- Release `scheduler`
-
-#### 9/10
-
-- Book appointment for Sophia dental, (919) 803-1595 
-- ~~Fill `Sophia` missing Info~~
+- ~~Release `scheduler`~~
+- Arrange `Fang` for annual check
 - Sell laptops `broken`
-- Short `gold`
+- Fix walls or cover it
+- Design workflow for `scheduler`
+-  📅 9 /18 Move money to `joint`
+
+####  9/10
+
+- ~~Book appointment for `Sophia` dental, (919) 803-1595~~
+- ~~Fill `Sophia` missing Info~~
 - ~~Prototype `charts`~~
 - ~~`Rollover` sell short capability~~
 - ~~Apply `Kaleido` `Bandwidth`~~
@@ -30,11 +32,11 @@
 - ~~Cross ref house `insurance`~~
   - ~~104 Climbing Ivy, Kuan Ho  919-460-6388~~
   - ~~121 River Pine Dr, $803/year~~
-- House closing (90k=60k+30k) Due 9/17
+- ~~House closing (90k=60k+30k)~~ 
   - ~~Qplot (10k)~~
-  - Personal (10k) + Joint (5k)
-  - Fidelity (20k)
-  - Ally Personal (20k) + Joint (25k)
+  - ~~Personal (10k) + Joint (5k)~~
+  - ~~Fidelity (15k)~~
+  - ~~Ally Personal (25k) + Joint (25k)~~
 
 #### 9/3
 
