@@ -1,11 +1,17 @@
+.allow-print {
+  display: none;
+  width: 100%;
+  margin: 1rem;
+}
+
 @media print
 {    
-  @page {
-    size: A4;
-  }  
-  /* .no-print
-  {
+  .no-print {
     display: none !important;
+  }
+
+  .allow-print {
+    display: block !important;
   }
 
   div { 
@@ -23,23 +29,5 @@
   header {
     display: none !important;
   }
-
-  .App-layout-01 {
-    width: 100% !important; 
-    margin: 0 !important;
-    float: none !important;
-  }
-
-  .App-title {
-    display: none !important;
-  }
-
-  h1 {
-    page-break-before: always;
-  }
-
-  .MuiPaper-elevation1-014 {
-    box-shadow: none !important;
-  } */
 
 }

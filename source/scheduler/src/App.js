@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {MuiThemeProvider, withStyles} from '@material-ui/core/styles';
+import ReactToPrint from "react-to-print";
 // styles
 import './App.css';
 import theme from './theme';
@@ -11,6 +12,7 @@ import Button from '@material-ui/core/Button';
 // secondary components
 import Navbar from './Navbar';
 import Plan from './Plan';
+import Print from './Print';
 // services
 import SchedulerService from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
@@ -106,11 +108,29 @@ class App extends Component {
     );
   }
 
+  print() {
+    const {loading, slots, usages} = this.state;
+    return (
+      <div>
+        <ReactToPrint
+          trigger={() => <a href="#Print">Print this out!</a>}
+          content={() => this.componentRef}
+        />
+        {!loading && 
+          <Print slots={slots} usages={usages}
+            ref={el => (this.componentRef = el)} 
+          />
+        }
+      </div>
+    )
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
+        {this.print()}
         {this.main()}
       </MuiThemeProvider>
     );
