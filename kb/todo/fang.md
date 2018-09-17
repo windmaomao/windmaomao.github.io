@@ -4,18 +4,24 @@
 
 ### Aug
 
+#### 9/18
+
+- 📅 9 /18 Move money to `joint`
+
+#### 9/17
+
+- Fix walls or cover it
+- Sell laptops `broken`
+- Arrange for annual check
+
 #### 9/14
 
 - ~~Prototype `schedule`~~
 - ~~Release `scheduler`~~
-- Arrange `Fang` for annual check
-- Sell laptops `broken`
-- Fix walls or cover it
-- Design workflow for `scheduler`
-  - edit `StackEdit` and push
-  - `git pull origin2 master` 
-- 📅 9 /18 Move money to `joint`
-- Give `tms` project estimates
+- ~~Design workflow for `scheduler`~~
+  - ~~edit `StackEdit` and push~~
+  - ~~commit, pull and push both `origins`~~
+- ~~`Tms` estimates, `tracking 1d` `chart  3d`~~
 
 ####  9/10
 

@@ -3,7 +3,7 @@
   @page {
     size: A4;
   }  
-  .no-print
+  /* .no-print
   {
     display: none !important;
   }
@@ -40,6 +40,6 @@
 
   .MuiPaper-elevation1-014 {
     box-shadow: none !important;
-  }
+  } */
 
 }

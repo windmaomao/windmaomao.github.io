@@ -6,6 +6,5 @@
 
 - ~~refine deployment issue~~
 - ~~resolve mobile display issue~~
-- allow change of schedules
+- ~~allow change of schedules~~
 - allow print schedule
-- decrease row item height
