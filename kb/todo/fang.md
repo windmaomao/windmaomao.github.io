@@ -12,7 +12,8 @@
 - Sell laptops `broken`
 - Fix walls or cover it
 - Design workflow for `scheduler`
--  📅 9 /18 Move money to `joint`
+- 📅 9 /18 Move money to `joint`
+- Give `tms` project estimates
 
 ####  9/10
 
