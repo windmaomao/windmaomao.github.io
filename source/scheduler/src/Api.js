@@ -4,7 +4,7 @@ export default class ApiService {
   static debug = false;
 
   static getInfo() {
-    let url = 'schedule.json';
+    let url = 'data/schedule.json';
     if (ApiService.debug) {
       url = ApiService.debugDomain + url;
     } else {
