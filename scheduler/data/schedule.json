@@ -62,7 +62,7 @@
     { "id": "AG",       "start": 24, "end": 27 }
   ],
   "preferences": [
-    { "id": "Libba", prefers: [], rejects: ["Mohammed"] }
+    { "id": "Libba", "prefers": [], "rejects": ["Mohammed"] }
   ]
 }
 
