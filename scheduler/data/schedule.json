@@ -1,6 +1,6 @@
 {
   "teachers": [
-    { "id": "Simon2",      "start": 12, "end": 27 },
+    { "id": "Simon",      "start": 12, "end": 27 },
     { "id": "Jenni",      "start": 12, "end": 27 },
     { "id": "Mohammed",   "start": 12, "end": 27 },
     { "id": "Jeff",       "start": 12, "end": 27 },
@@ -61,6 +61,8 @@
     { "id": "Isla",     "start": 24, "end": 27 },
     { "id": "AG",       "start": 24, "end": 27 }
   ],
-  "preferences": []
+  "preferences": [
+    { "id": "Libba", prefers: [], rejects: ["Mohammed"] }
+  ]
 }
 
