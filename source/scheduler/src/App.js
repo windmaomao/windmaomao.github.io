@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 import Navbar from './Navbar';
 import Plan from './Plan';
 import Print from './Print';
+import Upload from './Upload';
 // services
 import SchedulerService from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
@@ -65,6 +66,7 @@ class App extends Component {
       this.setState({loading: true});
       ApiService.getInfo().then(data => {
         const {teachers, students, preferences} = data;
+        console.log(students);
         this.setState({
           loading: false,
           slots: this.ss.fillSlots(students, teachers, preferences),
@@ -116,11 +118,16 @@ class App extends Component {
     )
   }
 
+  onUpload = (data) => {
+    console.log(data);
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
+        <Upload onDataUpload={this.onUpload} />
         {this.print()}
         {this.main()}
       </MuiThemeProvider>
