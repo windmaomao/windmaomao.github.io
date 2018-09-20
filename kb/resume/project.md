@@ -27,14 +27,18 @@ Shipping Order Dashboard
 
 : Shipping Order Dashboard
 : Aug 2018 -
-: *React*  *Sass*  *D3* {.labels}
+: *React* *Sass* *C3js* *Mobx* *Redux* *Java* {.labels}
+: Dashboard app providing custom overview of their shipping orders.
 
 Highlights
 
 : - React: Fast development using common library for widgets and styles
-  - Layout: Use _Flexbox_ for page design with sidebar and cards
-  - Chart: Beautiful _SVG_ chart via *D3* and *Victory* library
-
+  - UI Library: Rely on large set of in-house _React_ and _Sass_ components 
+  - Statistics: Heavy processing of server data via _Lodash_ and _moment_ library
+  - Chart: Beautiful _SVG_ chart via *D3* and *C3js* library
+  - Data: `Redux` workflow of providing centralized data and actions
+  - Form: `Mobx` provided for form error handling
+  - Spinner: Provides various spinner and shimmer effects during action transition
 
 ## Deutsche Bank
 2015 - 2018 {.subtitle}

@@ -7,15 +7,19 @@
 
 #### 9/20
 
-- Update `tms` project info
+- ~~Update `tms` project info~~
 
 #### 9/18
 
 - ~~📅 9 /18 Move money to `joint`~~
 - 9/26 House closing bank
 - 9/21 Quote insurance for home
-  - 104 Climbing Ivy Cary 27511
-  - (866) 487-2643-1541 Robert, $500
+  - 104 Climbing Ivy, Cary 27511
+  - 121 River Pine Dr., Morrisville
+  - 208 Walford Way, Cary
+  - 3245 Lewis Farm Rd, Raleigh
+  - (866) 487-2643-1541 Robert
+  - (919) 460-6388 
   - $135K, Dedactable $1,350
 - ~~More `CHADE`~~ & `TSLA`
 - ~~Extended hour for `fidelity`~~
