@@ -5,13 +5,16 @@ import CsvParse from '@vtex/react-csv-parse'
 
 class Upload extends Component {
   handleData = data => {
-    const processed = data.map(item => {
+    const nonEmpty = data.filter(item => item.customer);
+    const processed = nonEmpty.map(item => {
       const id = item.customer.replace('Student Name - ', '');
-      const start = item.date;
-      const end = item.duration;
+      const date = new Date(item.date);
+      const start = Math.round(date.getHours()*4+date.getMinutes()/15) - 48;
+      const duration = item.duration.replace(' mins', '');
+      const end = start + Math.round(parseInt(duration)/15) - 1;
       return {id, start, end};
     });
-    this.props.onDataUpload(processed)
+    this.props.onDataUpload(processed);
   }  
 
   render() {
