@@ -28,6 +28,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item         | Year | Type         |
 | ------------ | ---- | ------------ |
+|Realtime Board| 2018 | Planning     |
 | InVisionApp  | 2018 | Design       |
 | IEX          | 2018 | Financial    |
 | UltiPro      | 2018 | Payroll      |
@@ -44,6 +45,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Kindle Read  | 2010 | Books        |
 | Bitbucket    | 2014 | Repository   |
 | Github       | 2012 | Repository   |
+| MindMeister  | 2012 | Diagram      |
 
 ### Inactive
 

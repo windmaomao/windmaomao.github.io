@@ -4,13 +4,26 @@
 
 ### Aug
 
+
+#### 9/20
+
+- Update `tms` project info
+
 #### 9/18
 
-- 📅 9 /18 Move money to `joint`
+- ~~📅 9 /18 Move money to `joint`~~
+- 9/26 House closing bank
+- 9/21 Quote insurance for home
+  - 104 Climbing Ivy Cary 27511
+  - (866) 487-2643-1541 Robert, $500
+  - $135K, Dedactable $1,350
+- ~~More `CHADE`~~ & `TSLA`
+- ~~Extended hour for `fidelity`~~
+- ~~Buy earbud for `iphone`~~
 
 #### 9/17
 
-- Fix walls or cover it
+- ~~Fix walls or cover it~~
 - Sell laptops `broken`
 - Arrange for annual check
 
