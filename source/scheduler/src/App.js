@@ -38,44 +38,49 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.ss = new SchedulerService();
+
+    this.data = {
+      students: studentsInfo,
+      teachers: teachersInfo,
+      preferences: prefsInfo
+    };
+
     this.state = {
       loading: true,
       slots: {},
       usages: {},
       ids: [],
       total: 0,
-      errors: []
+      errors: [],
     };
   }
 
   componentDidMount() {
-    this.doPlan();
+    this.initPlan();
   }
 
-  doPlan() {
+  updatePlan() {
+    const {teachers, students, preferences} = this.info;
+    this.setState({
+      loading: false,
+      slots: this.ss.fillSlots(students, teachers, preferences),
+      usages: this.ss.teacherUsage,
+      ids: Object.keys(this.ss.teacherUsage),
+      total: this.ss.totalSlots(),
+      errors: this.ss.errors
+    });
+  }
+
+  initPlan() {
     if (this.debug) {
-      this.setState({
-        loading: false,
-        slots: this.ss.fillSlots(studentsInfo, teachersInfo, prefsInfo),
-        usages: this.ss.teacherUsage,
-        ids: Object.keys(this.ss.teacherUsage),
-        total: this.ss.totalSlots(),
-        errors: this.ss.errors
-      })    
+      this.updatePlan();
     } else {
       this.setState({loading: true});
       ApiService.getInfo().then(data => {
         const {teachers, students, preferences} = data;
-        console.log(students);
-        this.setState({
-          loading: false,
-          slots: this.ss.fillSlots(students, teachers, preferences),
-          usages: this.ss.teacherUsage,
-          ids: Object.keys(this.ss.teacherUsage),
-          total: this.ss.totalSlots(),
-          errors: this.ss.errors
-        });
-      })
+        this.info = {teachers, students, preferences};
+        this.updatePlan();
+      });
     }
   }
 
@@ -85,7 +90,7 @@ class App extends Component {
       <div className={'App-title'}>
         <Button 
           variant="contained" color="secondary" style={{float: 'right'}}
-          onClick={() => {this.doPlan();}}
+          onClick={() => {this.updatePlan();}}
           disabled={loading}
         >Plan</Button>
         <h1>Today <small>({total})</small></h1>
@@ -119,7 +124,8 @@ class App extends Component {
   }
 
   onUpload = (data) => {
-    console.log(data);
+    this.info.students = data;
+    this.updatePlan();
   }
 
   render() {

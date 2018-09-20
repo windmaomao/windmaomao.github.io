@@ -11,7 +11,7 @@ class Upload extends Component {
       const date = new Date(item.date);
       const start = Math.round(date.getHours()*4+date.getMinutes()/15) - 48;
       const duration = item.duration.replace(' mins', '');
-      const end = start + Math.round(parseInt(duration)/15) - 1;
+      const end = start + Math.round(parseInt(duration, 10)/15) - 1;
       return {id, start, end};
     });
     this.props.onDataUpload(processed);
