@@ -202,3 +202,7 @@ export default class SchedulerService {
     return sortBy(list, ['ranking']);
   }
 }
+
+const scheduler = new SchedulerService();
+
+export {scheduler};

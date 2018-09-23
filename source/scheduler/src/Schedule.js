@@ -10,7 +10,7 @@ import Plan from './Plan';
 import Print from './Print';
 import Upload from './Upload';
 // services
-import SchedulerService from './Scheduler';
+import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 import ApiService from './Api';
 
@@ -33,7 +33,6 @@ class Schedule extends Component {
 
   constructor(props) {
     super(props);
-    this.ss = new SchedulerService();
 
     this.data = {
       students: studentsInfo,
@@ -59,11 +58,11 @@ class Schedule extends Component {
     const {teachers, students, preferences} = this.info;
     this.setState({
       loading: false,
-      slots: this.ss.fillSlots(students, teachers, preferences),
-      usages: this.ss.teacherUsage,
-      ids: Object.keys(this.ss.teacherUsage),
-      total: this.ss.totalSlots(),
-      errors: this.ss.errors
+      slots: scheduler.fillSlots(students, teachers, preferences),
+      usages: scheduler.teacherUsage,
+      ids: Object.keys(scheduler.teacherUsage),
+      total: scheduler.totalSlots(),
+      errors: scheduler.errors
     });
   }
 
