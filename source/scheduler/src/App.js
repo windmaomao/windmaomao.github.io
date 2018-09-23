@@ -1,7 +1,7 @@
 // third party
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {MuiThemeProvider} from '@material-ui/core/styles';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 // styles
 import './App.css';
 import theme from './theme';
@@ -20,8 +20,6 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <Navbar />
-          <Link to="/">Home</Link>
-          <Link to="/student">Student</Link>
           <Route exact path="/" component={Schedule} />
           <Route path="/student" component={Student} />
         </MuiThemeProvider>
