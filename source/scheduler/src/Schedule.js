@@ -17,19 +17,17 @@ class Schedule extends Component {
     super(props);
 
     this.state = {
-      loading: true,
-      slots: {},
-      usages: {},
-      ids: [],
-      total: 0,
-      errors: [],
+      slots: scheduler.slots,
+      usages: scheduler.teacherUsage,
+      ids: Object.keys(scheduler.teacherUsage),
+      total: scheduler.totalSlots(),
+      errors: scheduler.errors
     };
   }
 
   updatePlan() {
     scheduler.plan();
     this.setState({
-      loading: false,
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
       ids: Object.keys(scheduler.teacherUsage),
@@ -47,7 +45,7 @@ class Schedule extends Component {
           onClick={() => {this.updatePlan();}}
           disabled={loading}
         >Plan</Button>
-        <h1>Today <small>({total})</small></h1>
+        <h1>Schedule <small>({total})</small></h1>
       </div>
     );
   }
