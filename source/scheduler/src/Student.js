@@ -29,7 +29,7 @@ class Student extends Component {
     const printTime = s => scheduler.slot2time(s);
     return (
       <div>
-        <h1>Student Page ({students.length})</h1>
+        <h1>Students ({students.length})</h1>
         <Upload onDataUpload={this.onUpload} />
 
         <Table>

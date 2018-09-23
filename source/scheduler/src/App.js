@@ -16,6 +16,7 @@ import Student from './Student';
 // services
 import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
+import ApiService from './Api';
 
 const styles = theme => ({
   layout: {
@@ -33,21 +34,45 @@ const styles = theme => ({
 class App extends Component {
   constructor(props) {
     super(props);
-    scheduler.setData(teachersInfo, studentsInfo, prefsInfo);
-    scheduler.plan();
+    this.state = {loading: true};
+  }
+
+  componentDidMount() {
+    const debug = true;
+    // const debug = false;
+    if (debug) {
+      scheduler.setData(teachersInfo, studentsInfo, prefsInfo);
+      this.setState({loading: false});
+    } else {
+      ApiService.getInfo().then(data => {
+        const {teachers, students, preferences} = data;
+        scheduler.setData(teachers, students, preferences);
+        this.setState({loading: false});
+      });
+    }
+  }
+
+  renderRoutes() {
+    const {loading} = this.state;
+    if (loading) {
+      return null;
+    }
+    const {classes} = this.props;
+    return (
+      <div className={classes.layout}>
+        <Route exact path="/" component={Schedule} />
+        <Route path="/student" component={Student} />
+      </div>
+    )
   }
 
   render() {
-    const {classes} = this.props;
     return (
       <Router>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <Navbar />
-          <div className={classes.layout}>
-            <Route exact path="/" component={Schedule} />
-            <Route path="/student" component={Student} />
-          </div>
+          {this.renderRoutes()}
         </MuiThemeProvider>
       </Router>
     );

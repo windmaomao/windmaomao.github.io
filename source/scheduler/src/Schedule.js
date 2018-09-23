@@ -8,7 +8,6 @@ import Plan from './Plan';
 import Print from './Print';
 // services
 import {scheduler} from './Scheduler';
-import ApiService from './Api';
 
 class Schedule extends Component {
   // debug = true;
@@ -27,10 +26,6 @@ class Schedule extends Component {
     };
   }
 
-  componentDidMount() {
-    this.initPlan();
-  }
-
   updatePlan() {
     scheduler.plan();
     this.setState({
@@ -41,19 +36,6 @@ class Schedule extends Component {
       total: scheduler.totalSlots(),
       errors: scheduler.errors
     });
-  }
-
-  initPlan() {
-    if (this.debug) {
-      this.updatePlan();
-    } else {
-      this.setState({loading: true});
-      ApiService.getInfo().then(data => {
-        const {teachers, preferences} = data;
-        scheduler.setData(teachers, null, preferences);
-        this.updatePlan();
-      });
-    }
   }
 
   title(total) {
