@@ -6,7 +6,8 @@
 
 | Symbol | Industry  |  Cost |  Net | Type | Percentage |
 | ------ | --------- | ----: | ---: | ---- | ----: |
-|**Total**  |        |   | **-$211**|      |       |
+|**Total**  |        |   | **-$345**|      |       |
+| GE180921P12  | Industrial|$134|-$134|short|-100% |
 | TIF180817P100| Retail  |$410|-$410| short| -100% |
 | GE180720P13  | Health | $34| -$34 | short| -100% |
 | XNET P2.5    | Bitcoin| $20| -$20 | short| -100% |
@@ -30,6 +31,23 @@
 - Avoid creating additional weaknesses
 - Consider returning material
 
+#### Analysis check
+
+| Type       | TSLA |     DB | LABD  | YXI     | TYNS | HLF | TAL | KORS |
+| -----------: | :-------: | :------: | :---: | :-----------: | :----------: | :----------: | :----------: | :----------: |
+| Low Entry | :+1: | :small_red_triangle_down: | :+1: | :+1: | :+1: | :+1: |  | :+1: |
+| Interest Rate| :+1: |  |  |  | :+1: |  |  |  |
+| Stressed     | :+1: |  |  | :+1: |  |  | :+1: |  |
+| Europe       |   |       :+1: |  |  |  |  |  |  |
+| China        | :+1: |       :+1: |  | :+1: |  |  | :+1: |  |
+| Emerging     | :+1: |            | :+1: |  |  | :+1: | :+1: |  |
+| Insurance    | |            | :+1: |  |  |  | |  |
+| Luxury      | :+1: |            | :+1: |  |  | :+1: | :+1: |  |
+| Debt         | :+1: | :question: |  | :+1: |  | :question: |  |  |
+| No profit    | :+1: | :question: | :+1: |  |  | :question: |  |  |
+
+
+
 ### Aug
 
 | Symbol       | Industry  |     Cost | Type  | Notes         |
@@ -46,7 +64,6 @@
 | TAL          | Education |    $ 264 | short |  |
 | WHR          | Consumer  |    $ 251 | short |  |
 | SRTY         | Russell   |    $ 155 | short |  |
-| GE180921P12  | Industrial|    $ 134 | short |  |
 | LABD         | Health    |    $ 87  | short |  |
 | **Roth**     | **28%**   |   $ 3013 |       |  |
 | EUM          | Emerge    |   $ 2545 | short |  |

@@ -4,23 +4,27 @@
 
 ### Aug
 
+#### 09/21
+
+- 9/26 House closing bank
+- Purchase insurance from '
+- Sell laptops `broken`
+- Arrange for annual check
+- ~~Buy grocery~~
 
 #### 9/20
 
 - ~~Update `tms` project info~~
+- ~~Purchase insurance from `state`~~
+  - ~~104 Climbing Ivy, Cary 27511~~
+  - ~~(919) 460-6388 ~~
+  - ~~$135K, Dedactable $1,350~~
 
 #### 9/18
 
 - ~~📅 9 /18 Move money to `joint`~~
-- 9/26 House closing bank
-- 9/21 Quote insurance for home
-  - 104 Climbing Ivy, Cary 27511
-  - 121 River Pine Dr., Morrisville
-  - 208 Walford Way, Cary
-  - 3245 Lewis Farm Rd, Raleigh
-  - (866) 487-2643-1541 Robert
-  - (919) 460-6388 
-  - $135K, Dedactable $1,350
+- ~~9/21 Quote insurance for home~~
+  -~~(866) 487-2643-1541 Robert~~
 - ~~More `CHADE`~~ & `TSLA`
 - ~~Extended hour for `fidelity`~~
 - ~~Buy earbud for `iphone`~~
@@ -28,8 +32,6 @@
 #### 9/17
 
 - ~~Fix walls or cover it~~
-- Sell laptops `broken`
-- Arrange for annual check
 
 #### 9/14
 

@@ -1,6 +1,6 @@
 # Loan Options
 
-## Summary
+## My Loans
 
 | Title       |   Amount | Rate | Years | Since       |
 | ----------- | -------: | ---: | ----: | ---------- |
@@ -10,7 +10,7 @@
 | BOC 6/28/19 |  $10,000 | 2.4% |     1 | 06/28/2018 |
 | BOC 5/15/19 |  $10,000 | 2.2% |     1 | 06/13/2018 |
 
-## Source
+## Loan Source
 
 - Business Credit Line, 2.99% credit line up to $100,000
 - Home Equity Line, 4.9% up to $100,000 with initial $50,000
@@ -18,6 +18,8 @@
 - Borrow from a friend, 3%, $100,000
 
 
+
+## Interest Rate
 
 ![](http://ritholtz.com/wp-content/uploads/2011/03/200-YEARS-US-GOVT-BONDS.png)
 
