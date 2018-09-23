@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {MuiThemeProvider, withStyles} from '@material-ui/core/styles';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 // styles
 import './App.css';
 import theme from './theme';
@@ -13,6 +14,8 @@ import Navbar from './Navbar';
 import Plan from './Plan';
 import Print from './Print';
 import Upload from './Upload';
+import Schedule from './Schedule';
+import Student from './Student';
 // services
 import SchedulerService from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
@@ -131,12 +134,17 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        <Navbar />
-        {this.print()}
-        {this.main()}
-      </MuiThemeProvider>
+      <Router>
+        <MuiThemeProvider theme={theme}>
+          <CssBaseline />
+          <Navbar />
+          <Link to="/student">Student</Link>
+          <Route exact path="/" component={Schedule} />
+          <Route path="/student" component={Student} />
+          {this.print()}
+          {this.main()}
+        </MuiThemeProvider>
+      </Router>
     );
   }
 }

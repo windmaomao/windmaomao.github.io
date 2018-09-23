@@ -4,8 +4,9 @@
 
 ### 09/23
 
-- deploy new file upload
-- print button not clickable
+- ~~deploy new file upload~~
+- tab to display current students
+- allow to uplaod more files
 - style file upload widget
 
 ### 09/16
@@ -15,3 +16,4 @@
 - ~~allow change of schedules~~
 - ~~allow print schedule~~
 - allow page break in print
+- print button not clickable
