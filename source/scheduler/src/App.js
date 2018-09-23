@@ -13,6 +13,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Navbar from './Navbar';
 import Schedule from './Schedule';
 import Student from './Student';
+// services
+import {scheduler} from './Scheduler';
+import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 
 const styles = theme => ({
   layout: {
@@ -28,6 +31,12 @@ const styles = theme => ({
 });
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    scheduler.setData(teachersInfo, studentsInfo, prefsInfo);
+    scheduler.plan();
+  }
+
   render() {
     const {classes} = this.props;
     return (

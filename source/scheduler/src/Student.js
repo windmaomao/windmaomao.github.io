@@ -14,12 +14,12 @@ import {scheduler} from './Scheduler';
 
 class Student extends Component {
   render() {
-    console.log(scheduler.data.students);
     const {students} = scheduler.data;
     const gunnarStyle = { height: "30px", padding: "0px"};
+    const printTime = s => scheduler.slot2time(s);
     return (
       <div>
-        <h1>Student Page</h1>
+        <h1>Student Page ({students.length})</h1>
 
         <Table>
           <TableHead>
@@ -33,8 +33,8 @@ class Student extends Component {
             {students.map(student => (
               <TableRow key={student.id + student.start} style={gunnarStyle}>
                 <TableCell>{student.id}</TableCell>
-                <TableCell>{student.start}</TableCell>
-                <TableCell>{student.end}</TableCell>
+                <TableCell>{printTime(student.start)}</TableCell>
+                <TableCell>{printTime(student.end)}</TableCell>
               </TableRow>
             ))}
           </TableBody>

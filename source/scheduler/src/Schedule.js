@@ -1,5 +1,5 @@
 // third party
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 // styles
 // primary components
 import Button from '@material-ui/core/Button';
@@ -9,7 +9,6 @@ import Print from './Print';
 import Upload from './Upload';
 // services
 import {scheduler} from './Scheduler';
-import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 import ApiService from './Api';
 
 class Schedule extends Component {
@@ -18,8 +17,6 @@ class Schedule extends Component {
 
   constructor(props) {
     super(props);
-
-    scheduler.setData(teachersInfo, studentsInfo, prefsInfo);
 
     this.state = {
       loading: true,
