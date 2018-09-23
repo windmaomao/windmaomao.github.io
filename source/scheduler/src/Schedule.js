@@ -34,11 +34,7 @@ class Schedule extends Component {
   constructor(props) {
     super(props);
 
-    this.data = {
-      students: studentsInfo,
-      teachers: teachersInfo,
-      preferences: prefsInfo
-    };
+    scheduler.setData(teachersInfo, studentsInfo, prefsInfo);
 
     this.state = {
       loading: true,
@@ -55,10 +51,10 @@ class Schedule extends Component {
   }
 
   updatePlan() {
-    const {teachers, students, preferences} = this.info;
+    scheduler.plan();
     this.setState({
       loading: false,
-      slots: scheduler.fillSlots(students, teachers, preferences),
+      slots: scheduler.slots,
       usages: scheduler.teacherUsage,
       ids: Object.keys(scheduler.teacherUsage),
       total: scheduler.totalSlots(),
@@ -73,7 +69,7 @@ class Schedule extends Component {
       this.setState({loading: true});
       ApiService.getInfo().then(data => {
         const {teachers, students, preferences} = data;
-        this.info = {teachers, students, preferences};
+        scheduler.setData(teachers, students, preferences);
         this.updatePlan();
       });
     }
@@ -120,7 +116,7 @@ class Schedule extends Component {
   }
 
   onUpload = (data) => {
-    this.info.students = data;
+    scheduler.setData(null, data, null);
     this.updatePlan();
   }
 

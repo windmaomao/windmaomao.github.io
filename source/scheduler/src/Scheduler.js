@@ -9,10 +9,12 @@ export default class SchedulerService {
     this.teacherMaxCap = 100;
     this.studentMinCap = 30;
     this.shuffleTeachers = true;
+    this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
   }
 
   reset() {
+    this.slots = {};
     this.errors = [];
     this.studentCap = {};
     this.teacherUsage = {};
@@ -149,7 +151,7 @@ export default class SchedulerService {
       });
     }
     let positive = true;
-    const slots = students.reduce((acc, student) => {
+    this.slots = students.reduce((acc, student) => {
       // console.log(student);
       
       // get teachers
@@ -176,7 +178,7 @@ export default class SchedulerService {
       }
       return tryMap;
     }, {});
-    return slots;
+    return this.slots;
   }
   
   // sort teachers by preferences
@@ -200,6 +202,28 @@ export default class SchedulerService {
       teacher.ranking = ranking - usage;
     });
     return sortBy(list, ['ranking']);
+  }
+
+  // set schedule data
+  setData(teachers, students, prefs) {
+    if (teachers) {
+      this.data.teachers = teachers;
+    }
+    if (students) {
+      this.data.students = students;
+    }
+    if (prefs) {
+      this.data.prefs = prefs;
+    }
+  }
+
+  // plan schedule
+  plan() {
+    this.fillSlots(
+      this.data.students,
+      this.data.teachers,
+      this.data.prefs
+    );
   }
 }
 
