@@ -107,6 +107,7 @@ class App extends Component {
     const {loading, slots, ids, usages, total, errors} = this.state;
     return (
       <div className={classes.layout}>
+        <Upload onDataUpload={this.onUpload} />
         {this.title(total)}
         {this.error(errors)}
         {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
@@ -133,7 +134,6 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
-        <Upload onDataUpload={this.onUpload} />
         {this.print()}
         {this.main()}
       </MuiThemeProvider>

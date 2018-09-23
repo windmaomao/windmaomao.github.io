@@ -2,6 +2,12 @@
 
 ## 2018
 
+### 09/23
+
+- deploy new file upload
+- print button not clickable
+- style file upload widget
+
 ### 09/16
 
 - ~~refine deployment issue~~
