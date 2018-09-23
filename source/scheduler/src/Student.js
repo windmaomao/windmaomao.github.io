@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 // styles
 // primary components
+import Upload from './Upload';
 // primary components
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -13,13 +14,23 @@ import TableRow from '@material-ui/core/TableRow';
 import {scheduler} from './Scheduler';
 
 class Student extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { students: scheduler.data.students };
+  }
+  onUpload = (students) => {
+    scheduler.setData(null, students, null);
+    this.setState({students});
+  }
+
   render() {
-    const {students} = scheduler.data;
+    const {students} = this.state;
     const gunnarStyle = { height: "30px", padding: "0px"};
     const printTime = s => scheduler.slot2time(s);
     return (
       <div>
         <h1>Student Page ({students.length})</h1>
+        <Upload onDataUpload={this.onUpload} />
 
         <Table>
           <TableHead>
@@ -30,8 +41,8 @@ class Student extends Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {students.map(student => (
-              <TableRow key={student.id + student.start} style={gunnarStyle}>
+            {students.map((student, index) => (
+              <TableRow key={index} style={gunnarStyle}>
                 <TableCell>{student.id}</TableCell>
                 <TableCell>{printTime(student.start)}</TableCell>
                 <TableCell>{printTime(student.end)}</TableCell>

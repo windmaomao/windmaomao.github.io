@@ -6,9 +6,7 @@
 
 - ~~deploy new file upload~~
 - ~~support multiple pages~~
-- tab to display current students
-- allow to uplaod more files
-- style file upload widget
+- ~~tab to display current students~~
 
 ### 09/16
 

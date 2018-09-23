@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 // secondary components
 import Plan from './Plan';
 import Print from './Print';
-import Upload from './Upload';
 // services
 import {scheduler} from './Scheduler';
 import ApiService from './Api';
@@ -50,8 +49,8 @@ class Schedule extends Component {
     } else {
       this.setState({loading: true});
       ApiService.getInfo().then(data => {
-        const {teachers, students, preferences} = data;
-        scheduler.setData(teachers, students, preferences);
+        const {teachers, preferences} = data;
+        scheduler.setData(teachers, null, preferences);
         this.updatePlan();
       });
     }
@@ -84,17 +83,11 @@ class Schedule extends Component {
     )
   }
 
-  onUpload = (data) => {
-    scheduler.setData(null, data, null);
-    this.updatePlan();
-  }
-
   render() {
     const {loading, slots, ids, usages, total, errors} = this.state;
     return (
       <div>
         {this.print()}
-        <Upload onDataUpload={this.onUpload} />
         {this.title(total)}
         {this.error(errors)}
         {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
