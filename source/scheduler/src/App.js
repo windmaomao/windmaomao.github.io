@@ -13,6 +13,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Navbar from './Navbar';
 import Schedule from './Schedule';
 import Student from './Student';
+import Teacher from './Teacher';
 // services
 import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
@@ -62,6 +63,7 @@ class App extends Component {
       <div className={classes.layout}>
         <Route exact path="/" component={Schedule} />
         <Route path="/student" component={Student} />
+        <Route path="/teacher" component={Teacher} />
       </div>
     )
   }
