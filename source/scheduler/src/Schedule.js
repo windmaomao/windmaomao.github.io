@@ -1,7 +1,5 @@
 // third party
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import React, {Component, Fragment} from 'react';
 // styles
 // primary components
 import Button from '@material-ui/core/Button';
@@ -13,19 +11,6 @@ import Upload from './Upload';
 import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 import ApiService from './Api';
-
-const styles = theme => ({
-  layout: {
-    width: 'auto',
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
-    [theme.breakpoints.up(1600 + theme.spacing.unit * 3 * 2)]: {
-      width: 1600,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    },
-  },
-});
 
 class Schedule extends Component {
   // debug = true;
@@ -93,19 +78,6 @@ class Schedule extends Component {
     return <p style={{ color: 'red' }}>{errors.join(',')}</p>;
   }
 
-  main() {
-    const {classes} = this.props;
-    const {loading, slots, ids, usages, total, errors} = this.state;
-    return (
-      <div className={classes.layout}>
-        <Upload onDataUpload={this.onUpload} />
-        {this.title(total)}
-        {this.error(errors)}
-        {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
-      </div>
-    );
-  }
-
   print() {
     const {loading, slots, usages} = this.state;
     return (
@@ -121,17 +93,17 @@ class Schedule extends Component {
   }
 
   render() {
+    const {loading, slots, ids, usages, total, errors} = this.state;
     return (
       <div>
         {this.print()}
-        {this.main()}
+        <Upload onDataUpload={this.onUpload} />
+        {this.title(total)}
+        {this.error(errors)}
+        {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
       </div>
     );
   }
 }
 
-Schedule.propTypes = {
-  classes: PropTypes.object.isRequired
-}
-
-export default withStyles(styles)(Schedule);
+export default Schedule;
