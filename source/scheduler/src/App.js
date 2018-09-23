@@ -13,7 +13,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Navbar from './Navbar';
 import Schedule from './Schedule';
 import Student from './Student';
-// services
 
 const styles = theme => ({
   layout: {
