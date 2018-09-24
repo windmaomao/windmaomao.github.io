@@ -26,12 +26,11 @@ class Teacher extends Component {
       return parts[0]*4+parts[1]/15- 48;
     }
     const processed = nonEmpty.map(item => {
-      const id = item.teacher;
-      const start = timeToSlot(item.start);
-      const end = timeToSlot(item.end);
+      const id = item.teacher.trim();
+      const start = timeToSlot(item.start.trim());
+      const end = timeToSlot(item.end.trim())-1;
       return {id, start, end};
     });
-    console.log(processed);
     return processed;
   }
 
