@@ -1,5 +1,7 @@
 // third party
 import React, { Component } from 'react';
+// styles
+import './App.css';
 // primary components
 import Navbar from './Navbar';
 import Article from './Article';
