@@ -14,6 +14,7 @@ import Navbar from './Navbar';
 import Schedule from './Schedule';
 import Student from './Student';
 import Teacher from './Teacher';
+import Pref from './Pref';
 // services
 import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
@@ -64,6 +65,7 @@ class App extends Component {
         <Route exact path="/" component={Schedule} />
         <Route path="/student" component={Student} />
         <Route path="/teacher" component={Teacher} />
+        <Route path="/pref" component={Pref} />
       </div>
     )
   }

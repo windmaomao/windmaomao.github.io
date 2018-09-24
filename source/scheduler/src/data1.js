@@ -61,7 +61,7 @@ const teachersInfo = [
     { id: 'AG',       start: 24, end: 27 },   // 6:00 - 7:00am
   ];
   const prefsInfo = [
-    // { id: 'Libba',  prefers: [], rejects: ['CS'] },
+    { id: 'Libba',  prefers: [], rejects: ['Simon'] },
     // { id: 'Louise', prefers: [], rejects: ['CS'] },
     // { id: 'Simon',  prefers: [], rejects: ['SH'] },
     // { id: 'Yaseen', prefers: [], rejects: ['SH'] },
