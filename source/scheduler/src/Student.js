@@ -1,8 +1,7 @@
 // third party
 import React, { Component } from 'react';
+import CsvParse from '@vtex/react-csv-parse'
 // styles
-// primary components
-import Upload from './Upload';
 // primary components
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -16,11 +15,38 @@ import {scheduler} from './Scheduler';
 class Student extends Component {
   constructor(props) {
     super(props);
+    this.keys = ["cost", "duration", "customer", "date"];
     this.state = { students: scheduler.data.students };
   }
-  onUpload = (students) => {
+
+  process(data) {
+    const nonEmpty = data.filter(item => item.customer);
+    const processed = nonEmpty.map(item => {
+      const id = item.customer.replace('Student Name - ', '');
+      const date = new Date(item.date);
+      const start = Math.round(date.getHours()*4+date.getMinutes()/15) - 48;
+      const duration = item.duration.replace(' mins', '');
+      const end = start + Math.round(parseInt(duration, 10)/15) - 1;
+      return {id, start, end};
+    });
+    return processed;
+  }
+
+  onUpload = data => {
+    const students = this.process(data);
     scheduler.setData(null, students, null);
     this.setState({students});
+  }
+
+  renderUpload() {
+    return (
+      <CsvParse
+        keys={this.keys}
+        onDataUploaded={this.onUpload}
+        onError={this.handleError}
+        render={onChange => <input type="file" onChange={onChange} />}
+      />            
+    )        
   }
 
   render() {
@@ -30,7 +56,7 @@ class Student extends Component {
     return (
       <div>
         <h1>Students ({students.length})</h1>
-        <Upload onDataUpload={this.onUpload} />
+        {this.renderUpload()}
 
         <Table>
           <TableHead>
@@ -45,7 +71,7 @@ class Student extends Component {
               <TableRow key={index} style={gunnarStyle}>
                 <TableCell>{student.id}</TableCell>
                 <TableCell>{printTime(student.start)}</TableCell>
-                <TableCell>{printTime(student.end)}</TableCell>
+                <TableCell>{printTime(student.end+1)}</TableCell>
               </TableRow>
             ))}
           </TableBody>

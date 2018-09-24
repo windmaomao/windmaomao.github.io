@@ -1,8 +1,7 @@
 // third party
 import React, { Component } from 'react';
+import CsvParse from '@vtex/react-csv-parse'
 // styles
-// primary components
-import Upload from './Upload';
 // primary components
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -16,11 +15,41 @@ import {scheduler} from './Scheduler';
 class Teacher extends Component {
   constructor(props) {
     super(props);
+    this.keys = ["cost", "teacher", "start", "end"];
     this.state = { teachers: scheduler.data.teachers };
   }
-  onUpload = (teachers) => {
+
+  process(data) {
+    const nonEmpty = data.filter(item => item.teacher);
+    const timeToSlot = time => {
+      const parts = time.split(':').map(item => parseInt(item, 10));
+      return parts[0]*4+parts[1]/15- 48;
+    }
+    const processed = nonEmpty.map(item => {
+      const id = item.teacher;
+      const start = timeToSlot(item.start);
+      const end = timeToSlot(item.end);
+      return {id, start, end};
+    });
+    console.log(processed);
+    return processed;
+  }
+
+  onUpload = data => {
+    const teachers = this.process(data);
     scheduler.setData(teachers, null, null);
     this.setState({teachers});
+  }
+
+  renderUpload() {
+    return (
+      <CsvParse
+        keys={this.keys}
+        onDataUploaded={this.onUpload}
+        onError={this.handleError}
+        render={onChange => <input type="file" onChange={onChange} />}
+      />            
+    )        
   }
 
   render() {
@@ -30,7 +59,7 @@ class Teacher extends Component {
     return (
       <div>
         <h1>Teachers ({teachers.length})</h1>
-        <Upload onDataUpload={this.onUpload} />
+        {this.renderUpload()}
 
         <Table>
           <TableHead>
@@ -45,7 +74,7 @@ class Teacher extends Component {
               <TableRow key={index} style={gunnarStyle}>
                 <TableCell>{teacher.id}</TableCell>
                 <TableCell>{printTime(teacher.start)}</TableCell>
-                <TableCell>{printTime(teacher.end)}</TableCell>
+                <TableCell>{printTime(teacher.end+1)}</TableCell>
               </TableRow>
             ))}
           </TableBody>

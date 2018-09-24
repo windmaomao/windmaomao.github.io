@@ -7,6 +7,7 @@
 - ~~deploy new file upload~~
 - ~~support multiple pages~~
 - ~~tab to display current students~~
+- upload teacher info
 
 ### 09/16
 
