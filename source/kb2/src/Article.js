@@ -1,14 +1,21 @@
+// third party
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
 class Article extends Component {
+  static propTypes = {
+    source: PropTypes.string
+  };
+
   render() {
+    // const source = this.props.source;
+    const source = '# Title';
     return (
       <div className="content">
-        <h1>Article</h1>
-        <ReactMarkdown source={this.props.source} />
+        <ReactMarkdown source={source} />
       </div>
-    )
+    );
   }
 }
 

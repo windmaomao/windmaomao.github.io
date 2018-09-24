@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 class Navbar extends Component {
   render() {
-    const title = 'ABC';
+    const title = 'Knowledgebase';
     return (
       <nav className="navbar is-light is-fixed-top">
         <div className="navbar-brand">
           <a className="navbar-item logo-wrapper">
-            <img src="static/img/logo.png" className="logo" alt="logo" />
+            <img src="logo.png" className="logo" alt="logo" />
           </a>
           <a className="navbar-item center">{title}</a>
           <div data-target="navbar"
