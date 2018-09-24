@@ -7,7 +7,7 @@
 #### 09/21
 
 - 9/26 House closing bank
-- Purchase insurance from '
+- Purchase insurance from
 - Sell laptops `broken`
 - Arrange for annual check
 - ~~Buy grocery~~
