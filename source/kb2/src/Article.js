@@ -3,11 +3,10 @@ import ReactMarkdown from 'react-markdown';
 
 class Article extends Component {
   render() {
-    const input = '# This is a header\n\nAnd this is a paragraph'
     return (
-      <div class="content">
+      <div className="content">
         <h1>Article</h1>
-        <ReactMarkdown source={input} />
+        <ReactMarkdown source={this.props.source} />
       </div>
     )
   }
