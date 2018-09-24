@@ -61,13 +61,8 @@ const teachersInfo = [
     { id: 'AG',       start: 24, end: 27 },   // 6:00 - 7:00am
   ];
   const prefsInfo = [
-    { id: 'Libba',  prefers: [], rejects: ['Simon'] },
-    // { id: 'Louise', prefers: [], rejects: ['CS'] },
-    // { id: 'Simon',  prefers: [], rejects: ['SH'] },
-    // { id: 'Yaseen', prefers: [], rejects: ['SH'] },
-    // { id: 'Hannah', prefers: ['JP'], rejects: ['CS'] },
-    // { id: 'Lily M', prefers: ['SH','JP'], rejects: ['CS'] },
-    // { id: 'Hayes',  prefers: ['CS'], rejects: [] },
+    { id: 'Libba',  prefers: [],        rejects: ['Simon', 'Jenni'] },
+    { id: 'Amir',   prefers: ['Simon'], rejects: [] },
   ];
 
   export {
