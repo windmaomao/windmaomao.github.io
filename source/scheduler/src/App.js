@@ -2,7 +2,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {MuiThemeProvider} from '@material-ui/core/styles';
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Router, Route} from "react-router-dom";
+import {createBrowserHistory} from 'history';
 // styles
 import './App.css';
 import theme from './theme';
@@ -33,6 +34,9 @@ const styles = theme => ({
   },
 });
 
+const basename = '/scheduler';
+const history = createBrowserHistory({ basename });
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -62,7 +66,7 @@ class App extends Component {
     const {classes} = this.props;
     return (
       <div className={classes.layout}>
-        <Route exact path="/" component={Schedule} />
+        <Route path="/" component={Schedule} />
         <Route path="/student" component={Student} />
         <Route path="/teacher" component={Teacher} />
         <Route path="/pref" component={Pref} />
@@ -72,7 +76,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <Navbar />
