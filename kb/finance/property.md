@@ -9,29 +9,35 @@
 | 208 Walford Way   | Cary   | 2006 | Rental     | 5,578 | |
 | 3245 Lewis Farm | Raleigh | 2006 | Residence  | 4,683 | |
 
+Progressive: (866) 487-2643
 
-  - 121 River Pine Dr., Morrisville
-    - Year: 2012
-    - Square Feet: 2,242
-    - Insurance: $803/$500 (9/18/18) 
-  - 208 Walford Way, Cary
-    - Year: 2006
-    - Square Feet: 5,578
-    - Policy Insurance: $2,732/$2,500
-  - 3245 Lewis Farm Rd, Raleigh
-    - Year: 2006
-    - Square Feet: 4,683
-    - Insurance: $1,866/$2,500
+State Farm: (919) 460-6388
 
 ## 104 Climbing Ivy
 
 - Year: 1997
 - Square Feet: 1,420
-- Insurance: $521/$1350 (9/25/18) 
-- Rent: 
+- State Form: $521/$1350 (9/25/18) 
 
+## 208 Walford Way, 27519
 
+- Year: 2006
+- Square Feet: 5,578
+- Progressive: $2,732/$2,500
 
+## 3245 Lewis Farm Rd
 
+- Year: 2006
+- Square Feet: 4,683
+- Progressive: $1,866/$2,500
+
+## 121 River Pine Dr.
+
+- Year: 2012
+- Square Feet: 2,242
+- Progressive: $682/$500 (Last Year)
+- Progressive: $803/$500 (9/18/18) 
+- **Progressive: $758/$1000** 
+- **State Farm: $837/$3130**
 
 

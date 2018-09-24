@@ -6,10 +6,10 @@
 
 #### 09/21
 
-- 9/26 House closing bank
+- :date: 9/25 House closing bank
+- Prototype blog
 - Purchase insurance from
 - Sell laptops `broken`
-- Arrange for annual check
 - ~~Buy grocery~~
 
 #### 9/20
