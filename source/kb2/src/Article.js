@@ -1,9 +1,10 @@
 // third party
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
 // styles
 import './Article.css';
+// pirmary components
+import Markdown from './Markdown';
 
 class Article extends Component {
   static propTypes = {
@@ -15,7 +16,7 @@ class Article extends Component {
     // const source = '# Title';
     return (
       <div className={'container'}>
-        <ReactMarkdown source={source} className={'writer'} />
+        <Markdown source={source} />
       </div>
     );
   }
