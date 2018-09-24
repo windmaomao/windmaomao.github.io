@@ -66,7 +66,7 @@ class App extends Component {
     const {classes} = this.props;
     return (
       <div className={classes.layout}>
-        <Route path="/" component={Schedule} />
+        <Route exact path="/" component={Schedule} />
         <Route path="/student" component={Student} />
         <Route path="/teacher" component={Teacher} />
         <Route path="/pref" component={Pref} />
