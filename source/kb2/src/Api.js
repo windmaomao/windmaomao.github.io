@@ -4,6 +4,7 @@ export default class ApiService {
   static debug = false;
   
   static getArticle() {
+    // let url = 'todo/fang';
     let url = 'resume/frontend';
     if (ApiService.debug) {
       url = ApiService.debugDomain + url;

@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
+// styles
+import './Article.css';
 
 class Article extends Component {
   static propTypes = {
@@ -9,11 +11,11 @@ class Article extends Component {
   };
 
   render() {
-    // const source = this.props.source;
-    const source = '# Title';
+    const source = this.props.source;
+    // const source = '# Title';
     return (
-      <div className="content">
-        <ReactMarkdown source={source} />
+      <div className={'container'}>
+        <ReactMarkdown source={source} className={'writer'} />
       </div>
     );
   }

@@ -1,6 +1,5 @@
 // third party
 import React, { Component } from 'react';
-import './App.css';
 // primary components
 import Navbar from './Navbar';
 import Article from './Article';
@@ -24,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <div className="container">
+        <div className="section">
           <Article source={this.state.source} />
         </div>
       </div>
