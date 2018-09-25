@@ -1,5 +1,6 @@
 // third party
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 // styles
 import './App.css';
 // primary components
@@ -10,32 +11,33 @@ import Sidenav from './Sidenav';
 import ApiService from './Api';
 
 class App extends Component {
+  static propTypes = {
+    menu: PropTypes.array,
+    articleId: PropTypes.string
+  };
 
   constructor(props) {
     super(props);
-    this.state = { source: '', menu: [] };
+    this.state = { source: '' };
   }
 
   componentDidMount() {
-    // const id = 'todo/fang';
-    const id = 'resume/frontend';
+    const id = this.props.articleId;
     ApiService.getArticle(id).then(source => {
       this.setState({source});
-    });
-    ApiService.getMenu().then(menu => {
-      this.setState({menu});
     });
   }
 
   render() {
-    const {source, menu} = this.state;
+    const {menu, articleId} = this.props;
+    const {source} = this.state;
     return (
       <div className="App">
         <Navbar />
         <div className="section">
           <Article source={source} />
         </div>
-        <Sidenav menu={menu} />
+        <Sidenav menu={menu} selected={articleId} />
       </div>
     );
   }

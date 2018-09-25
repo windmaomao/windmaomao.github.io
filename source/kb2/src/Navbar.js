@@ -4,7 +4,7 @@ class Navbar extends Component {
   render() {
     const title = 'Knowledgebase';
     return (
-      <nav className="navbar is-light is-fixed-top">
+      <nav className="navbar is-dark is-fixed-top">
         <div className="navbar-brand">
           <a className="navbar-item logo-wrapper">
             <img src="logo.png" className="logo" alt="logo" />
@@ -17,24 +17,6 @@ class Navbar extends Component {
             <span></span>
             <span></span>
             <span></span>
-          </div>
-        </div>
-        <div className={this.toggled ? 'navbar-menu is-active' : 'navbar-menu'} id="navbar" >
-          <div className="navbar-end">
-            <div className={{ 'navbar-item': 1, 'has-dropdown': 1, 'is-active': this.activated }}>
-              <a className="navbar-link" onClick={this.onActivate}>Table of Content</a>
-              <div className="navbar-dropdown">
-                <aside className="menu">
-                  <ul className="toc menu-list">{
-                    // this.toc.map((menu) =>
-                    //   <li class={menu.tag}>
-                    //     <a href={'#' + menu.anchor} onClick={this.onToggle}>{menu.title}</a>
-                    //   </li>
-                    // )
-                  }</ul>
-                </aside>
-              </div>
-            </div>
           </div>
         </div>
       </nav>
