@@ -7,8 +7,6 @@ import './App.css';
 import Navbar from './Navbar';
 import Article from './Article';
 import Sidenav from './Sidenav';
-// service
-import ApiService from './Api';
 
 class App extends Component {
   static propTypes = {
@@ -16,26 +14,13 @@ class App extends Component {
     articleId: PropTypes.string
   };
 
-  constructor(props) {
-    super(props);
-    this.state = { source: '' };
-  }
-
-  componentDidMount() {
-    const id = this.props.articleId;
-    ApiService.getArticle(id).then(source => {
-      this.setState({source});
-    });
-  }
-
   render() {
     const {menu, articleId} = this.props;
-    const {source} = this.state;
     return (
       <div className="App">
         <Navbar />
         <div className="section">
-          <Article source={source} />
+          <Article articleId={articleId} />
         </div>
         <Sidenav menu={menu} selected={articleId} />
       </div>
