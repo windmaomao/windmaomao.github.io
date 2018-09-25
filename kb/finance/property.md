@@ -34,10 +34,22 @@ State Farm: (919) 460-6388
 ## 121 River Pine Dr.
 
 - Year: 2012
+
 - Square Feet: 2,242
+
 - Progressive: $682/$500 (Last Year)
+
 - Progressive: $803/$500 (9/18/18) 
-- **Progressive: $758/$1000** 
-- **State Farm: $837/$3130**
+
+- Progressive: $758/$1000 
+
+- State Farm: $837/$3130
+
+- **State Farm: Dwelling Coverage $244,000**
+
+- **State Farm: Deductible 1% $2440**
+
+- **Morgage needs to be notified, escrow account**
+
 
 

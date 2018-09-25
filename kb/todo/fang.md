@@ -6,9 +6,9 @@
 
 #### 09/21
 
-- :date: 9/25 House closing bank
-- Prototype blog
+- :date: 9/25 House closing, $179,372.79
 - Purchase insurance from
+- Prototype blog
 - Sell laptops `broken`
 - ~~Buy grocery~~
 
