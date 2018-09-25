@@ -7,6 +7,7 @@ const md = require('markdown-it')({
   html: true,
   linkify: true,
 });
+md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'));
 
 class Markdown extends Component {
   static propTypes = {
