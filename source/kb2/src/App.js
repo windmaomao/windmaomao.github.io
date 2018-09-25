@@ -35,9 +35,7 @@ class App extends Component {
         <div className="section">
           <Article source={source} />
         </div>
-        <div id="slider">
-          <Sidenav menu={menu} />
-        </div>
+        <Sidenav menu={menu} />
       </div>
     );
   }
