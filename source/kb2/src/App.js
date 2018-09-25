@@ -17,11 +17,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // const id = 'todo/fang';
+    const id = 'todo/fang';
     // const id = 'resume/frontend';
-    // ApiService.getArticle(id).then(source => {
-    //   this.setState({source});
-    // });
+    ApiService.getArticle(id).then(source => {
+      this.setState({source});
+    });
     ApiService.getMenu().then(menu => {
       this.setState({menu});
     });
