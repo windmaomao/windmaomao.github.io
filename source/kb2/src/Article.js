@@ -12,8 +12,7 @@ class Article extends Component {
   };
 
   render() {
-    const source = this.props.source;
-    // const source = '# Title';
+    const {source} = this.props;
     return (
       <div className={'container'}>
         <Markdown source={source} />
