@@ -5,3 +5,4 @@
 - move bootstrap api to index
 - add spinner to article loading
 - support scss
+- click everywhere to dismiss sidebar

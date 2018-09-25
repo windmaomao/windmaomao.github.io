@@ -42,7 +42,10 @@ class App extends Component {
         <div className="section">
           <Article articleId={articleId} />
         </div>
-        <Sidenav toggled={sidenavOn} menu={menu} selected={articleId} onSelect={this.switch} />
+        <Sidenav 
+          toggled={sidenavOn} onToggle={this.toggle}
+          menu={menu} selected={articleId} onSelect={this.switch} 
+        />
       </div>
     );
   }

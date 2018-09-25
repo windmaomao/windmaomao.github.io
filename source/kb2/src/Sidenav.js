@@ -17,6 +17,13 @@ const styles = {
     textTransform: 'capitalize',
     fontSize: '0.8rem',
     lineHeight: '1rem'
+  },
+  toggle: {
+    position: 'absolute',
+    top: '10px',
+    right: '1rem',
+    color: 'lightgray',
+    cursor: 'pointer'
   }
 };
 
@@ -56,12 +63,14 @@ class Sidenav extends Component {
   }
 
   render() {
-    const {menu, toggled} = this.props;
+    const {menu, toggled, onToggle} = this.props;
     if (!menu) return null;
     if (!toggled) return null;
     return (
       <div className="slider">
-        <i className="slider-toggle" />
+        <i className="fa fa-close" style={styles.toggle}
+          onClick={e => onToggle && onToggle()}
+        ></i>
         <aside className="menu">
           {menu.map(this.renderMenu)}
         </aside>
