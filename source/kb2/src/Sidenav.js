@@ -3,6 +3,22 @@ import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 // styles
 import './Sidenav.css';
+// local
+const styles = {
+  list: {
+    listStyle: 'none',
+    margin: '.25em .25em 1em',
+  },
+  item: {
+    padding: '1px 2px',
+  },
+  link: {
+    padding: '0 0 0 .5rem',
+    textTransform: 'capitalize',
+    fontSize: '0.8rem',
+    lineHeight: '1rem'
+  }
+};
 
 class Sidenav extends Component {
   static propTypes = {
@@ -25,10 +41,10 @@ class Sidenav extends Component {
     return (
       <Fragment key={menu.title}>
         <p className="menu-label">{menu.title}</p>
-        <ul className="menu-list">{
+        <ul className="menu-list" style={styles.list}>{
           menu.items.map((name, index) => (
-            <li key={index}>
-              <a 
+            <li key={index} className={styles.item}>
+              <a style={styles.link}
                 className={isActive(name) ? 'is-active' : ''}
                 onClick={(e) => this.select(articleId(name))}
               >{name}</a>

@@ -16,7 +16,10 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { sidenavOn: false, articleId: this.props.articleId };
+    this.state = { 
+      sidenavOn: true, 
+      articleId: this.props.articleId 
+    };
   }
 
   toggle = () => {

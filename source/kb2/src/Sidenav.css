@@ -9,7 +9,8 @@
   height: calc(100vh - 52px);
   overflow-y: scroll;
 }
-.slider ul {
+
+/* .slider ul {
   list-style: none;
   margin: .25em .25em 1em;
   padding: 0;
@@ -25,4 +26,4 @@
   text-transform: capitalize;
   font-size: 0.8rem;
   line-height: 1rem;
-}
+} */
