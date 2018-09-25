@@ -9,8 +9,8 @@ import App from './App';
 import ApiService from './Api';
 import registerServiceWorker from './registerServiceWorker';
 // local
-// const defaultArticleId = 'todo/fang';
-const defaultArticleId = 'resume/frontend';
+const defaultArticleId = 'todo/fang';
+// const defaultArticleId = 'resume/frontend';
 
 const renderApp = (menu) => {
   const articleId = defaultArticleId;

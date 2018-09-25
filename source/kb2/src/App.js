@@ -16,7 +16,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { sidenavOn: false };
+    this.state = { sidenavOn: false, articleId: this.props.articleId };
   }
 
   toggle = () => {
@@ -24,16 +24,22 @@ class App extends Component {
     this.setState({ sidenavOn });
   }
 
+  switch = articleId => {
+    if (articleId !== this.state.articleId) {
+      this.setState({ articleId });
+    }
+  }
+
   render() {
-    const {menu, articleId} = this.props;
-    const {sidenavOn} = this.state;
+    const {menu} = this.props;
+    const {sidenavOn, articleId} = this.state;
     return (
       <div className="App">
         <Navbar onSidenavToggle={this.toggle} />
         <div className="section">
           <Article articleId={articleId} />
         </div>
-        <Sidenav menu={menu} selected={articleId} toggled={sidenavOn} />
+        <Sidenav toggled={sidenavOn} menu={menu} selected={articleId} onSelect={this.switch} />
       </div>
     );
   }
