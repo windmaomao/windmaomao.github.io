@@ -7,6 +7,8 @@ import './Article.css';
 import Markdown from './Markdown';
 // service
 import ApiService from './Api';
+// tutorial
+// https://gist.github.com/sorahn/2cdc344cc698f027a948e3fdf6e0e60f/revisions
 
 class Article extends Component {
   static propTypes = {
@@ -18,11 +20,20 @@ class Article extends Component {
     this.state = { source: '' };
   }
 
-  componentDidMount() {
-    const id = this.props.articleId;
-    ApiService.getArticle(id).then(source => {
+  loadArticle = id => {
+    return ApiService.getArticle(id).then(source => {
       this.setState({source});
     });
+  }
+
+  componentDidMount() {
+    this.loadArticle(this.props.articleId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.articleId !== nextProps.articleId) {
+      this.loadArticle(nextProps.articleId);
+    }
   }
 
   render() {
