@@ -19,8 +19,13 @@
 	font-size: 1.6em;
 	font-weight: normal;
 	font-style: italic;
-	margin-top: 0.83em;
+	margin-top: 0.8em;
 	text-align: center;
+}
+.article h4 {
+	font-size: 1.1em;
+	margin-top: 0.5em;
+	font-weight: bold;
 }
 .article p {
 	margin-top: 0;
@@ -30,7 +35,7 @@
 }
 .article ul {
 	list-style: square;
-	padding: 1em;
+	padding: 0.4em 1em;
 }
 .article ol {
 	padding-left: 1.2em;

@@ -17,8 +17,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const id = 'todo/fang';
-    // const id = 'resume/frontend';
+    // const id = 'todo/fang';
+    const id = 'resume/frontend';
     ApiService.getArticle(id).then(source => {
       this.setState({source});
     });

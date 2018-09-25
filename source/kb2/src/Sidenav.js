@@ -1,5 +1,5 @@
 // third party
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 // styles
 import './Sidenav.css';
@@ -11,7 +11,7 @@ class Sidenav extends Component {
 
   renderMenu(menu) {
     return (
-      <div key={menu.title}>
+      <Fragment key={menu.title}>
         <p className="menu-label">{menu.title}</p>
         <ul className="menu-list">{
           menu.items.map((name, index) => (
@@ -20,7 +20,7 @@ class Sidenav extends Component {
             </li>
           ))
         }</ul>
-      </div>
+      </Fragment>
     );
   }
 
