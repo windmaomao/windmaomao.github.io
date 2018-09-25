@@ -6,17 +6,22 @@ import './Sidenav.css';
 
 class Sidenav extends Component {
   static propTypes = {
-    menu: PropTypes.array.isRequired
+    menu: PropTypes.array.isRequired,
+    selected: PropTypes.string,
+    toggled: PropTypes.bool,
+    onToggle: PropTypes.func
   };
 
-  renderMenu(menu) {
+  renderMenu = menu => {
+    const {selected} = this.props;
+    const isActive = (name) => (menu.type + '/' + name) === selected;
     return (
       <Fragment key={menu.title}>
         <p className="menu-label">{menu.title}</p>
         <ul className="menu-list">{
           menu.items.map((name, index) => (
             <li key={index}>
-              <a>{name}</a>
+              <a className={isActive(name) ? 'is-active' : ''}>{name}</a>
             </li>
           ))
         }</ul>
@@ -32,11 +37,9 @@ class Sidenav extends Component {
     return (
       <div className="slider">
         <i className="slider-toggle" />
-        <div>
-          <aside className="menu">
-            {menu.map(this.renderMenu)}
-          </aside>
-        </div>
+        <aside className="menu">
+          {menu.map(this.renderMenu)}
+        </aside>
       </div> 
     );
   }
