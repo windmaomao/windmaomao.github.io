@@ -30,10 +30,9 @@ class Sidenav extends Component {
   }
 
   render() {
-    const {menu} = this.props;
-    if (!menu || menu.length < 1) {
-      return null;
-    } 
+    const {menu, toggled} = this.props;
+    if (!menu) return null;
+    if (!toggled) return null;
     return (
       <div className="slider">
         <i className="slider-toggle" />
