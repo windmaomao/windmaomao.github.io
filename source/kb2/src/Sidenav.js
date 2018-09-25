@@ -7,21 +7,19 @@ import './Sidenav.css';
 const styles = {
   list: {
     listStyle: 'none',
-    margin: '.25em .25em 1em',
+    margin: '.2rem .2rem 0.8rem',
   },
   item: {
-    padding: '1px 2px',
+    margin: '0.1rem 0'
   },
   link: {
-    padding: '0 0 0 .5rem',
+    padding: '0.1rem 0 0.1rem .5rem',
     textTransform: 'capitalize',
     fontSize: '0.8rem',
     lineHeight: '1rem'
   },
   toggle: {
-    position: 'absolute',
-    top: '10px',
-    right: '1rem',
+    float: 'right',
     color: 'lightgray',
     cursor: 'pointer'
   }
@@ -50,7 +48,7 @@ class Sidenav extends Component {
         <p className="menu-label">{menu.title}</p>
         <ul className="menu-list" style={styles.list}>{
           menu.items.map((name, index) => (
-            <li key={index} className={styles.item}>
+            <li key={index} style={styles.item}>
               <a style={styles.link}
                 className={isActive(name) ? 'is-active' : ''}
                 onClick={(e) => this.select(articleId(name))}
