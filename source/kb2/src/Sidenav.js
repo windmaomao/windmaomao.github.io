@@ -1,12 +1,12 @@
 // third party
 import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
+import ClickOutside from 'react-click-outside';
 // styles
 import './Sidenav.css';
 // local
 const styles = {
   list: {
-    listStyle: 'none',
     margin: '.2rem .2rem 0.8rem',
   },
   item: {
@@ -39,6 +39,11 @@ class Sidenav extends Component {
     onSelect && onSelect(articleId);
   }
 
+  toggle = () => {
+    const {onToggle} = this.props;
+    onToggle && onToggle();
+  }
+
   renderMenu = menu => {
     const {selected} = this.props;
     const articleId = (name) => menu.type + '/' + name;
@@ -61,18 +66,20 @@ class Sidenav extends Component {
   }
 
   render() {
-    const {menu, toggled, onToggle} = this.props;
+    const {menu, toggled} = this.props;
     if (!menu) return null;
     if (!toggled) return null;
     return (
-      <div className="slider">
-        <i className="fa fa-close" style={styles.toggle}
-          onClick={e => onToggle && onToggle()}
-        ></i>
-        <aside className="menu">
-          {menu.map(this.renderMenu)}
-        </aside>
-      </div> 
+      <ClickOutside onClickOutside={this.toggle}>
+        <div className="slider">
+          <i className="fa fa-close" style={styles.toggle}
+            onClick={e => this.toggle()}
+          ></i>
+          <aside className="menu">
+            {menu.map(this.renderMenu)}
+          </aside>
+        </div> 
+      </ClickOutside>
     );
   }
 }
