@@ -1,9 +1,8 @@
 const DOMAIN = 'https://sleepy-kalam-ff10a0.netlify.com/';
 const APP = 'kb/';
-const DATA = 'static/';
+const DATA = 'appnav/';
 
 export default class ApiService {
-  // static domain = 'http://localhost:3000/';
   static domain = DOMAIN + APP;
   static data = DOMAIN + DATA;
   
@@ -18,7 +17,7 @@ export default class ApiService {
   }
 
   static getApps() {
-    const url = this.domain + 'app.json';
+    const url = this.data + 'app.json';
     return fetch(url).then(res => res.json());
   }
 }
