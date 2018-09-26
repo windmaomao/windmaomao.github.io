@@ -4,23 +4,17 @@ I make websites, mostly on screens and monitors, via Angular, React or Vue web f
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
-Front-end
+Front-end expertise
 
 : - 8 Years Prototyping with _CSS_ and _Sass_
   - 5 Years _Angular_ (up to 5.x) and _React_
   - 4 Years _RxJS_, _Promise_ and _Ajax_
 
-Backend
+Background
 
 : - 4 Year _Java_/_Oracle_ enterprise environment
-
-Visualization
-
-: - 9 Years Reporting, charting, and visualization: *D3.js, HighCharts, Matlab, Maya, Unity*
-
-Analytics
-
-: - 15 years Strong analytical skills in math, modeling, calculation and simulation
+  - 9 Years Reporting, charting, and visualization: *D3.js, HighCharts, Matlab, Maya, Unity*
+  - 15 years Strong analytical skills in math, modeling, calculation and simulation
 
 ## Award
 
