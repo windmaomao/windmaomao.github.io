@@ -3,6 +3,7 @@
 export default class MarkdownService {
   md = null;
   anchors = [];
+  title = '';
   constructor() {
     this.md = require('markdown-it')({
       html: true,
@@ -22,9 +23,17 @@ export default class MarkdownService {
     this.anchors.push(lvl);
   }
 
-  render(source) {
+  reset() {
     this.anchors = [];
+    this.title = '';
+  }
+
+  render(source) {
+    this.reset();
     const html = this.md.render(source);
+    if (this.anchors.length) {
+      this.title = this.anchors[0].title;
+    }
     return html;
   }
 }
