@@ -1,47 +1,45 @@
-// third party
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-// services
-import {mdService} from './MarkdownService';
+// Markdown core and highlighter
 
-class Markdown extends Component {
-  static propTypes = {
-    source: PropTypes.string.isRequired,
-    onParse: PropTypes.func
-  };
-
-  constructor(props) {
-    super(props);
-    this.state = { html: '' };
-  }
-
-  renderHtml = source => {
-    const html = mdService.render(source);
-    this.setState({html});
-
-    const {onParse} = this.props;
-    onParse && onParse({
-      title: mdService.title,
-      anchors: mdService.anchors
+export default class MarkdownService {
+  md = null;
+  anchors = [];
+  title = '';
+  constructor() {
+    this.md = require('markdown-it')({
+      html: true,
+      linkify: true,
     });
+    this.md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'));
+    this.md.use(require('markdown-it-emoji'));
+    this.md.use(require('markdown-it-anchor'), { callback: this.parseHeading });
   }
 
-  componentDidMount() {
-    this.renderHtml(this.props.source);
+  parseHeading = (token, values) => {
+    const lvl = {
+      tag: token.tag,
+      title: values.title,
+      anchor: values.slug
+    };
+    this.anchors.push(lvl);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.source !== nextProps.source) {
-      this.renderHtml(nextProps.source);
+  reset() {
+    this.anchors = [];
+    this.title = '';
+  }
+
+  render(source) {
+    this.reset();
+    const html = this.md.render(source);
+    if (this.anchors.length) {
+      this.title = this.anchors[0].title;
     }
-  }
-
-  render() {
-    const __html = this.state.html;
-    return (
-      <div dangerouslySetInnerHTML={{__html}} />
-    );
+    return html;
   }
 }
 
-export default Markdown;
+const mdService = new MarkdownService();
+  
+export {
+  mdService
+};

@@ -18,7 +18,8 @@ class App extends Component {
     super(props);
     this.state = { 
       sidenavOn: true, 
-      articleId: this.props.articleId 
+      articleId: this.props.articleId,
+      title: 'Knowledgebase'
     };
   }
 
@@ -33,14 +34,18 @@ class App extends Component {
     }
   }
 
+  parse = ({title}) => {
+    this.setState({title});
+  }
+
   render() {
     const {menu} = this.props;
-    const {sidenavOn, articleId} = this.state;
+    const {sidenavOn, articleId, title} = this.state;
     return (
       <div className="App">
-        <Navbar onSidenavToggle={this.toggle} />
+        <Navbar title={title} onSidenavToggle={this.toggle} />
         <div className="section">
-          <Article articleId={articleId} />
+          <Article articleId={articleId} onParse={this.parse} />
         </div>
         <Sidenav 
           toggled={sidenavOn} onToggle={this.toggle}

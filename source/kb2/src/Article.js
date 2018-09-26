@@ -3,27 +3,41 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // styles
 import './Article.css';
-// pirmary components
-import Markdown from './Markdown';
 // service
 import ApiService from './Api';
+import {mdService} from './Markdown';
+
 // tutorial
 // https://gist.github.com/sorahn/2cdc344cc698f027a948e3fdf6e0e60f/revisions
 
 class Article extends Component {
   static propTypes = {
-    articleId: PropTypes.string
+    articleId: PropTypes.string,
+    onParse: PropTypes.func
   };
 
   constructor(props) {
     super(props);
-    this.state = { source: '' };
+    this.state = { html: '' };
   }
 
   loadArticle = id => {
     return ApiService.getArticle(id).then(source => {
-      this.setState({source});
+      return this.renderMarkdown(source);
     });
+  }
+
+  renderMarkdown = source => {
+    const html = mdService.render(source);
+    this.setState({html});
+
+    const {onParse} = this.props;
+    onParse && onParse({
+      title: mdService.title,
+      anchors: mdService.anchors
+    });
+
+    return html;
   }
 
   componentDidMount() {
@@ -37,10 +51,10 @@ class Article extends Component {
   }
 
   render() {
-    const {source} = this.state;
+    const __html = this.state.html;
     return (
       <div className={'container article'}>
-        <Markdown source={source} />
+        <div dangerouslySetInnerHTML={{__html}} />
       </div>
     );
   }

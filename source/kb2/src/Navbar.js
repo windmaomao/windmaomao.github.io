@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 class Navbar extends Component {
   static propTypes = {
+    title: PropTypes.string,
     onSidenavToggle: PropTypes.func,
   };
 
@@ -12,7 +13,7 @@ class Navbar extends Component {
   }
   
   render() {
-    const title = 'Knowledgebase';
+    const {title} = this.props;
     return (
       <nav className="navbar is-dark is-fixed-top">
         <div className="navbar-brand">
