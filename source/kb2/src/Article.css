@@ -51,3 +51,32 @@
 .article .subtitle {
 	text-align: center;
 }
+
+/* Table */
+.article table {
+	margin-bottom: 1.333333rem
+}
+.article table th,
+.article table td {
+	padding: 8px;
+	line-height: 1.333333rem;
+	vertical-align: top;
+	border-top: 1px solid #ddd
+}
+.article table th {
+	font-weight: bold
+}
+.article table thead th {
+	vertical-align: bottom
+}
+.article table caption+thead tr:first-child th,
+.article table caption+thead tr:first-child td,
+.article table colgroup+thead tr:first-child th,
+.article table colgroup+thead tr:first-child td,
+.article table thead:first-child tr:first-child th,
+.article table thead:first-child tr:first-child td {
+	border-top: 0
+}
+.article table tbody+tbody {
+	border-top: 2px solid #ddd
+}
