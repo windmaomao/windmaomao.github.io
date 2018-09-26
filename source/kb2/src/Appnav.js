@@ -35,6 +35,10 @@ class Appnav extends Component {
     this.setState({ visible: false });
   }
 
+  goto = (app) => {
+    window.location.href = app.url;
+  }
+
   render() {
     const {visible, apps} = this.state;
     const isActive = app => app.url === appId;
@@ -48,7 +52,10 @@ class Appnav extends Component {
             <ul className="menu-list">
               {apps.map((app, index) => (
                 <li key={index}>
-                  <a className={isActive(app) ? 'is-active': ''}>{app.title}</a>
+                  <a className={isActive(app) ? 'is-active': ''} onClick={e => { this.goto(app); }}>
+                    <i className={'fa fa-' + app.icon}></i>&nbsp; 
+                    {app.title}
+                  </a>
                 </li>
               ))}
             </ul>

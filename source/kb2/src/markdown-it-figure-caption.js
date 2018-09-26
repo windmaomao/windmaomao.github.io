@@ -7,10 +7,6 @@ module.exports = function markdownItFigureCaption(md, config) {
     let url = token.attrs[srcIndex][1];
     let caption = token.content;
 
-    let target = generateTargetAttribute(config.target);
-    let linkClass = generateClass(config.linkClass);
-    let imgClass = generateClass(config.imgClass);
-
     return `
       <figure>
         <img src="${url}" alt="${caption}" />
@@ -19,15 +15,3 @@ module.exports = function markdownItFigureCaption(md, config) {
     `;
   };
 };
-
-function generateClass (className) {
-  if (!className) return '';
-
-  return ' class="' + className + '"';
-}
-
-function generateTargetAttribute (target) {
-  target = target || '_self';
-
-  return ' target="' + target + '"';
-}
