@@ -11,7 +11,9 @@
 - ~~Sync games~~
 - ~~Send `resume`~~
 - ~~Schedule doctor (919) 791-2040, Gastroenterology~~
-- Update `frontend` article
+- ~~Update `frontend` article~~
+- ~~Deploy kb2~~
+- Talk to sophia teacher
 - Sell laptops `broken`
 
 #### 09/21
@@ -33,7 +35,7 @@
 - ~~📅 9 /18 Move money to `joint`~~
 - ~~9/21 Quote insurance for home~~
   -~~(866) 487-2643-1541 Robert~~
-- ~~More `CHADE`~~ & `TSLA`
+- ~~More `CHADE` & `TSLA`~~
 - ~~Extended hour for `fidelity`~~
 - ~~Buy earbud for `iphone`~~
 

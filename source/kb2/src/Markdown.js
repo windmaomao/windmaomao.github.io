@@ -1,4 +1,6 @@
-// Markdown core and highlighter
+// third party
+import Anchor from './markdown-it-anchor';
+import Figure from './markdown-it-figure-caption';
 
 export default class MarkdownService {
   md = null;
@@ -14,13 +16,13 @@ export default class MarkdownService {
     // :+1:
     this.md.use(require('markdown-it-emoji'));
     // title & toc
-    this.md.use(require('markdown-it-anchor'), { callback: this.parseHeading });
+    this.md.use(Anchor, { callback: this.parseHeading });
     // : - property list
     this.md.use(require('markdown-it-deflist'));
     // [^1]
     this.md.use(require('markdown-it-footnote'));
     //
-    this.md.use(require('markdown-it-figure-caption'));
+    this.md.use(Figure);
   }
 
   parseHeading = (token, values) => {
