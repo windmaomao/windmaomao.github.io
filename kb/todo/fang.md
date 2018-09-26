@@ -4,12 +4,20 @@
 
 ### Aug
 
+
+
+#### 09/25
+
+- ~~Sync games~~
+- ~~Send `resume`~~
+- Update `frontend` article
+- Sell laptops `broken`
+- Purchase insurance from
+
 #### 09/21
 
-- :date: 9/25 House closing, $179,372.79
-- Purchase insurance from
-- Prototype blog
-- Sell laptops `broken`
+- ~~:date: 9/25 House closing, $179,372.79~~
+- ~~Prototype blog~~
 - ~~Buy grocery~~
 
 #### 9/20

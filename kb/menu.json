@@ -2,19 +2,20 @@
   {
     "title": "Resume", "type": "resume",
     "items": [
+      "company",
       "frontend",
+      "performance",
       "project",
-      "ui"
+      "publication",
+      "recommendation"
     ]
   },
   {
     "title": "Todo", "type": "todo",
     "items": [
       "fang",
-      "conference",
       "contact",
       "china-trip",
-      "digital-renovation",
       "flymile",
       "idea"
     ]
@@ -22,42 +23,49 @@
   {
     "title": "Financial", "type": "finance",
     "items": [
-      "direxion",
-      "tax",
-      "purchase",
-      "loan",
-      "investment",
-      "balace-sheet",
-      "income-statement",
-      "pay-stub",
-      "family-trust",
       "account",
-      "payment"
+      "balace-sheet",
+      "crash",
+      "debt",
+      "direxion",
+      "family-trust",
+      "income-statement",
+      "investment",
+      "loan",
+      "pay-stub",
+      "payment",
+      "property",
+      "purchase",
+      "tax"
     ]
   },
   {
     "title": "Repos", "type": "repository",
     "items": [
-      "qp-github",
       "angular2-mc-common",
+      "angular-adk",
       "angular-mc-common",
-      "reports-center",
-      "figure-caption",
-      "markdown-it",
       "aof-form",
-      "kingslanding",
-      "ng-admin-restify",
-      "mongoose-restify",
+      "dbvals-audit",
       "event-services",
-      "dbvals-audit"
+      "figure-caption",
+      "kingslanding",
+      "markdown-it",
+      "mg-react",
+      "mg-tms",
+      "mongoose-restify",
+      "ng-admin-restify",
+      "qp-github",
+      "reports-center"
     ]
   },
   {
     "title": "Packages", "type": "package",
     "items": [
-      "qp-github",
       "angular2-mc-common",
       "angular-mc-common",
+      "mg-react",
+      "qp-github",
       "reports-center-ui"
     ]
   },
@@ -65,61 +73,57 @@
     "title": "Books", "type": "book",
     "items": [
       "index",
-      "sale-of-lifetime",
-      "value-of-debt",
+      "angular2-training",
+      "art-of-war",
+      "art-of-war-wisdom",
+      "big-shifts-ahead",
       "bonds-unbeaten-path",
       "dao-of-capital",
-      "predicting-markets",
-      "living-trust-everyone",
       "data-visualization-d3",
-      "angular2-training",
+      "five-rules-stock-investing",
       "flexbox-in-css",
+      "history-of-interest-rate",
       "intelligent-investor",
-      "vue-up-running",
+      "living-trust-everyone",
+      "mu-ai-ning-xiang",
+      "next-economic-disaster",
+      "pay-zero-taxes",
+      "predicting-markets",
       "react-quickly",
       "react-up-running",
-      "pay-zero-taxes",
+      "reactive-programming",
+      "sale-of-lifetime",
       "slash-retirement-risk",
-      "five-rules-stock-investing",
-      "art-of-war-wisdom",
-      "art-of-war",
       "spending-waves",
-      "big-shifts-ahead",
-      "mu-ai-ning-xiang"
+      "value-of-debt",
+      "vue-up-running"
     ]
   },
   {
     "title": "Blogs", "type": "blog",
 	  "items": [
       "index", 
-      "consequence-of-bailout",
-      "angular-react-vue", 
-      "power-of-loss", 
-      "identity-debt", 
-      "sustainable-prototyping", 
-      "protection-from-loss", 
-      "perfect-google-map", 
-      "middle-ground", 
-      "reusable-form", 
-      "helping-others", 
-      "law-of-winning", 
-      "reusable-components", 
-      "angular-on-windows", 
-      "tiny-upscaling", 
-      "build-new-system", 
-      "dynamic-static-approach", 
-      "container-to-rescue", 
-      "being-dependent", 
       "active-management", 
-      "floating-pot"
+      "angular-on-windows", 
+      "angular-react-vue", 
+      "being-dependent", 
+      "build-new-system", 
+      "consequence-of-bailout",
+      "container-to-rescue", 
+      "dynamic-static-approach", 
+      "floating-pot",
+      "helping-others", 
+      "html-the-one",
+      "identity-debt", 
+      "law-of-winning", 
+      "middle-ground", 
+      "perfect-google-map", 
+      "power-of-loss", 
+      "protection-from-loss", 
+      "reusable-components", 
+      "reusable-form", 
+      "sustainable-prototyping", 
+      "tiny-upscaling"
     ]
-  },
-  {
-    "title": "Articles", "type": "article",
-    "items": ["fiscal-policy-adding-demand", "no-country-young-people"]
-  },
-  {
-    "title": "Others", "type": "other",
-    "items": ["publication", "performance", "company", "recommendation"]
   }
 ]
