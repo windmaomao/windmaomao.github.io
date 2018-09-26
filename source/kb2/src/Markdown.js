@@ -1,14 +1,8 @@
 // third party
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-// Markdown core and highlighter
-const md = require('markdown-it')({
-  html: true,
-  linkify: true,
-});
-md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'));
-md.use(require('markdown-it-emoji'));
+// services
+import {mdService} from './MarkdownService';
 
 class Markdown extends Component {
   static propTypes = {
@@ -16,7 +10,7 @@ class Markdown extends Component {
   };
 
   renderContent() {
-    const __html = md.render(this.props.source);
+    const __html = mdService.render(this.props.source);
     return <span dangerouslySetInnerHTML={{__html}} />;
   }
 
