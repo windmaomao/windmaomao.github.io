@@ -12,7 +12,7 @@
 - ~~Send `resume`~~
 - Update `frontend` article
 - Sell laptops `broken`
-- Purchase insurance from
+- Schedule doctor
 
 #### 09/21
 
@@ -25,7 +25,7 @@
 - ~~Update `tms` project info~~
 - ~~Purchase insurance from `state`~~
   - ~~104 Climbing Ivy, Cary 27511~~
-  - ~~(919) 460-6388 ~~
+  - ~~(919) 460-6388~~
   - ~~$135K, Dedactable $1,350~~
 
 #### 9/18

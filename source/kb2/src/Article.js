@@ -50,10 +50,27 @@ class Article extends Component {
     }
   }
 
+  renderBreadcrumb() {
+    const {articleId} = this.props;
+    const bcs = articleId.split('/');
+    return (
+      <nav className="breadcrumb is-small" aria-label="breadcrumbs">
+        <ul>
+          {bcs.map((item, index) => (
+            <li key={index} className="is-active">
+              <a>{item.toUpperCase()}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>      
+    );
+  }
+
   render() {
     const __html = this.state.html;
     return (
       <div className={'container article'}>
+        {this.renderBreadcrumb()}
         <div dangerouslySetInnerHTML={{__html}} />
       </div>
     );

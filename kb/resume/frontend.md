@@ -1,6 +1,4 @@
-# Fang Jin
-
-Senior Front-End Engineer {.subtitle}
+# Senior Front-End Engineer
 
 I make websites, mostly on screens and monitors, via Angular, React or Vue web framework. Areas that I worked on includes Banking, Healthcare, and Education. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
 
