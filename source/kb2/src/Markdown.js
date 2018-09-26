@@ -11,6 +11,7 @@ export default class MarkdownService {
     });
     this.md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'));
     this.md.use(require('markdown-it-emoji'));
+    this.md.use(require('markdown-it-deflist'));
     this.md.use(require('markdown-it-anchor'), { callback: this.parseHeading });
   }
 

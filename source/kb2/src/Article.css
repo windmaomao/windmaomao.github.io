@@ -41,6 +41,19 @@
 .article ol {
 	padding-left: 1.2em;
 }
+.article dl {
+	margin: 1rem 0;
+}
+.article dt {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.article dd {
+  font-size: 95%;
+}
+.article dd p {
+  margin: 0;
+}
 .article blockquote {
 	margin: 1em;
 	padding-left: 1em;

@@ -4,12 +4,23 @@ I make websites, mostly on screens and monitors, via Angular, React or Vue web f
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
-Skills
+Front-end
 
-: - 7 Years Prototyping with _Bootstrap_ and _Sass_
-  - 5 Years _Angular_ (up to 5.x)
+: - 8 Years Prototyping with _CSS_ and _Sass_
+  - 5 Years _Angular_ (up to 5.x) and _React_
   - 4 Years _RxJS_, _Promise_ and _Ajax_
-  - 3 Years _React_, _Vue_ and _jQuery_
+
+Backend
+
+: - 4 Year _Java_/_Oracle_ enterprise environment
+
+Visualization
+
+: - 9 Years Reporting, charting, and visualization: *D3.js, HighCharts, Matlab, Maya, Unity*
+
+Analytics
+
+: - 15 years Strong analytical skills in math, modeling, calculation and simulation
 
 ## Award
 
@@ -28,6 +39,24 @@ Front Cover Design
 
 
 ## Experience
+
+### MercuryGate International
+
+Shipping Order Dashboard
+
+: Aug 2018 - Current
+: *React* *Sass* *C3js* *Mobx* *Redux* *Java* {.labels}
+: Dashboard app providing custom overview of their shipping orders.
+
+Highlights
+
+: - React: Fast development using common library for widgets and styles
+  - UI Library: Rely on large set of in-house _React_ and _Sass_ components 
+  - Statistics: Heavy processing of server data via _Lodash_ and _moment_ library
+  - Chart: Beautiful _SVG_ chart via *D3* and *C3js* library
+  - Data: `Redux` workflow of providing centralized data and actions
+  - Form: `Mobx` provided for form error handling
+  - Spinner: Provides various spinner and shimmer effects during action transition
 
 ### Deutsche Bank
 

@@ -13,6 +13,8 @@
 - Update `frontend` article
 - Sell laptops `broken`
 - Schedule doctor
+  - (919) 791-2040, Gastroenterology
+  - 2417 Atrium Dr #150, Raleigh
 
 #### 09/21
 
