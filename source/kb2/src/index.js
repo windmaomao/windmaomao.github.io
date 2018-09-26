@@ -5,14 +5,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // primary component
 import App from './App';
-import Site from './Site';
 // services
 import ApiService from './Api';
 import registerServiceWorker from './registerServiceWorker';
 // local
 const defaultArticleId = 'todo/fang';
 // const defaultArticleId = 'resume/frontend';
-const appId = '/kb2';
 
 const renderApp = (menu) => {
   const articleId = defaultArticleId;
@@ -26,17 +24,16 @@ const createApp = () => {
   return ApiService.getMenu().then(renderApp);
 };
 
-const renderSite = (apps) => {
-  ReactDOM.render(
-    <Site apps={apps} appId={appId} />, 
-    document.getElementById('site')
-  );
-};
+// const renderSite = (apps) => {
+//   ReactDOM.render(
+//     <Site apps={apps} appId={appId} />, 
+//     document.getElementById('site')
+//   );
+// };
+// const createSite = () => {
+//   return ApiService.getApps().then(renderSite);
+// };
+// createSite();
 
-const createSite = () => {
-  return ApiService.getApps().then(renderSite);
-};
-
-createSite();
 createApp();
 registerServiceWorker();

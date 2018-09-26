@@ -5,6 +5,7 @@ class Navbar extends Component {
   static propTypes = {
     title: PropTypes.string,
     onSidenavToggle: PropTypes.func,
+    onAppnavClick: PropTypes.func,
   };
 
   toggle = () => {
@@ -12,12 +13,9 @@ class Navbar extends Component {
     onChange && onChange();
   }
 
-  nav = () => {
-    const event = document.createEvent('CustomEvent');
-    event.initCustomEvent('Sidenav', false, false, {});
-    if (window.parent) {
-      window.parent.document.dispatchEvent(event);
-    }
+  trigger = () => {
+    const onTrigger = this.props.onAppnavClick;
+    onTrigger && onTrigger();
   }
   
   render() {
@@ -25,7 +23,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar is-dark is-fixed-top">
         <div className="navbar-brand">
-          <a className="navbar-item logo-wrapper" onClick={e => this.nav()}>
+          <a className="navbar-item logo-wrapper" onClick={e => this.trigger()}>
             <img src="logo.png" className="logo" alt="logo" />
           </a>
           <a className="navbar-item" onClick={e => this.toggle()}>{title}</a>
