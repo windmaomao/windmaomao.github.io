@@ -29,7 +29,7 @@
 	font-weight: bold;
 }
 .article p {
-	margin-top: 0;
+	margin-top: 0.5em;
 	-webkit-hypens: auto;
 	-moz-hypens: auto;
 	hyphens: auto;

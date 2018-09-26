@@ -44,7 +44,7 @@ Shipping Order Dashboard
 : *React* *Sass* *C3js* *Mobx* *Redux* *Java* {.labels}
 : Dashboard app providing custom overview of current reported shipping orders.
 
-![Dashboard Chart Switcher](https://s3.amazonaws.com/qp-photo/mg-chart-mockup-small.png)
+![Custom Charts and Switcher](https://s3.amazonaws.com/qp-photo/mg-chart-mockup-small.png)
 
 Highlights
 
