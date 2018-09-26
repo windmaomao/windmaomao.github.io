@@ -9,10 +9,18 @@ export default class MarkdownService {
       html: true,
       linkify: true,
     });
+    // {.subtitle}
     this.md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'));
+    // :+1:
     this.md.use(require('markdown-it-emoji'));
-    this.md.use(require('markdown-it-deflist'));
+    // title & toc
     this.md.use(require('markdown-it-anchor'), { callback: this.parseHeading });
+    // : - property list
+    this.md.use(require('markdown-it-deflist'));
+    // [^1]
+    this.md.use(require('markdown-it-footnote'));
+    //
+    this.md.use(require('markdown-it-figure-caption'));
   }
 
   parseHeading = (token, values) => {

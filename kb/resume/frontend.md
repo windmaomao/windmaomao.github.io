@@ -1,5 +1,7 @@
 # Senior Front-End Engineer
 
+## Fang Jin
+
 I make websites, mostly on screens and monitors, via Angular, React or Vue web framework. Areas that I worked on includes Banking, Healthcare, and Education. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
@@ -40,16 +42,16 @@ Shipping Order Dashboard
 
 : Aug 2018 - Current
 : *React* *Sass* *C3js* *Mobx* *Redux* *Java* {.labels}
-: Dashboard app providing custom overview of their shipping orders.
+: Dashboard app providing custom overview of current reported shipping orders.
 
 Highlights
 
 : - React: Fast development using common library for widgets and styles
   - UI Library: Rely on large set of in-house _React_ and _Sass_ components 
-  - Statistics: Heavy processing of server data via _Lodash_ and _moment_ library
+  - Statistics: Heavy processing of server data via _Lodash_ and _Moment_ library
   - Chart: Beautiful _SVG_ chart via *D3* and *C3js* library
-  - Data: `Redux` workflow of providing centralized data and actions
-  - Form: `Mobx` provided for form error handling
+  - Data: _Redux_ workflow of providing centralized data and actions
+  - Form: _Mobx_ provided for form error handling
   - Spinner: Provides various spinner and shimmer effects during action transition
 
 ### Deutsche Bank

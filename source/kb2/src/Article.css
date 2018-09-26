@@ -59,6 +59,30 @@
 	padding-left: 1em;
 	border-left: 1px solid #ddd;
 }
+.article abbr {
+  text-decoration: none;
+  font-style: italic;
+  font-family: serif;
+  cursor: help;
+}
+.article figure {
+	margin: 2.33em 0;
+  text-align: center;
+}
+.article figure img {
+  margin: 0;
+  border: 1px solid #f8f8ff;
+  border-radius: 2px;
+  padding: 1px;
+}
+.article figure figcaption {
+  clear: left;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 90%;
+  font-style: italic;
+  line-height: 0rem;
+}  
 
 /* Subtitle */
 .article .subtitle {
