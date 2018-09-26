@@ -11,13 +11,21 @@ class Navbar extends Component {
     const onChange = this.props.onSidenavToggle;
     onChange && onChange();
   }
+
+  nav = () => {
+    const event = document.createEvent('CustomEvent');
+    event.initCustomEvent('Sidenav', false, false, {});
+    if (window.parent) {
+      window.parent.document.dispatchEvent(event);
+    }
+  }
   
   render() {
     const {title} = this.props;
     return (
       <nav className="navbar is-dark is-fixed-top">
         <div className="navbar-brand">
-          <a className="navbar-item logo-wrapper">
+          <a className="navbar-item logo-wrapper" onClick={e => this.nav()}>
             <img src="logo.png" className="logo" alt="logo" />
           </a>
           <a className="navbar-item" onClick={e => this.toggle()}>{title}</a>
