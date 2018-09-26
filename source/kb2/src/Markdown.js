@@ -8,6 +8,7 @@ const md = require('markdown-it')({
   linkify: true,
 });
 md.use(require('markdown-it-attrs/markdown-it-attrs.browser.js'));
+md.use(require('markdown-it-emoji'));
 
 class Markdown extends Component {
   static propTypes = {
