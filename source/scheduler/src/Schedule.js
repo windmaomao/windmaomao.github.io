@@ -37,19 +37,8 @@ class Schedule extends Component {
   }
 
   stepPlan() {
-    const size = 1;
-    let stepInfo;
-    for(let i = 0; i < size; i++) {
-      stepInfo = scheduler.step();
-      if (stepInfo.index < 0) {
-        break;
-      }
-    }        
-    console.log(scheduler.data.students);
-    console.log(stepInfo);
-    const students = scheduler.data.students;
-    const step = students.map(student => student.teacherIndex);
-    console.log(step);
+    const stepInfo = scheduler.step();
+    console.log(stepInfo, scheduler.stepInfo());
 
     this.setState({
       slots: scheduler.slots,

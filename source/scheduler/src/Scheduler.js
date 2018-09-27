@@ -267,6 +267,11 @@ export default class SchedulerService {
     }
     return {index, next};
   }
+
+  stepInfo() {
+    const {students} = this.data;
+    return students.map(student => student.teacherIndex);
+  }
 }
 
 const scheduler = new SchedulerService();

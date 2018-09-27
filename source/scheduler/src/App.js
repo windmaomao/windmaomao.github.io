@@ -18,7 +18,7 @@ import Teacher from './Teacher';
 import Pref from './Pref';
 // services
 import {scheduler} from './Scheduler';
-import {teachersInfo, studentsInfo, prefsInfo} from './data';
+import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 import ApiService from './Api';
 
 const styles = theme => ({
