@@ -25,8 +25,9 @@ class Schedule extends Component {
     };
   }
 
-  updatePlan() {
-    scheduler.plan();
+  preparePlan() {
+    // scheduler.plan();
+    scheduler.prepare();
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
@@ -37,8 +38,8 @@ class Schedule extends Component {
   }
 
   stepPlan() {
-    scheduler.prepare();
-    while(scheduler.step()) {};
+    // scheduler.prepare();
+    scheduler.stepToNext();
     console.log(scheduler.teacherInfo());
     this.setState({
       slots: scheduler.slots,
@@ -53,11 +54,18 @@ class Schedule extends Component {
     const {loading} = this.props;
     return (
       <div className={'App-title'}>
-        <Button 
-          variant="contained" color="secondary" style={{float: 'right'}}
-          onClick={() => {this.stepPlan();}}
-          disabled={loading}
-        >Plan</Button>
+        <span style={{float: 'right'}}>
+          <Button 
+            variant="contained" color="primary"
+            onClick={() => {this.preparePlan();}}
+            disabled={loading}
+          >Prepare</Button>&nbsp;
+          <Button 
+            variant="contained" color="secondary"
+            onClick={() => {this.stepPlan();}}
+            disabled={loading}
+          >Plan</Button>
+        </span>
         <h1>Schedule <small>({total})</small></h1>
       </div>
     );

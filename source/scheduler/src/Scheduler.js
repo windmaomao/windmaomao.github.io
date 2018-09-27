@@ -248,6 +248,19 @@ export default class SchedulerService {
     return this.studentStepIndex < students.length;
   }
 
+  // step until success
+  stepToNext() {
+    const {students} = this.data;
+    const len = students.length;
+    if (this.studentStepIndex === len) {
+      // TODO: find a way to randomize the next move
+      // Also how to stop in the last move
+      this.studentStepIndex = 0;
+    }
+    while(this.step()) {};
+  }
+
+  // debug info
   teacherInfo() {
     const {students} = this.data;
     return students.map(student => {
