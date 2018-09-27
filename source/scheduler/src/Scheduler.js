@@ -215,7 +215,6 @@ export default class SchedulerService {
 
   // fill this step run, 
   // return failed student index
-  // -1 is success
   stepFill() {
     const {students} = this.data;
     this.reset();
@@ -232,7 +231,7 @@ export default class SchedulerService {
         this.slots = newSlots;
       }
     }
-    return -1;
+    return students.length;
   }
 
   // step after prepare
@@ -245,7 +244,8 @@ export default class SchedulerService {
     if (canStep) {
       this.studentStepIndex = this.stepFill();
     }
-    return this.studentStepIndex >=0;
+    const {students} = this.data;
+    return this.studentStepIndex < students.length;
   }
 
   teacherInfo() {

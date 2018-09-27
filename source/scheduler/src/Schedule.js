@@ -26,8 +26,7 @@ class Schedule extends Component {
   }
 
   updatePlan() {
-    // scheduler.plan();
-    scheduler.prepare();
+    scheduler.plan();
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
