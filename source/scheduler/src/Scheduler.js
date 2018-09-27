@@ -126,28 +126,6 @@ export default class SchedulerService {
     return null;
   }
   
-  // fill slots info
-  fillSlots(students, teachers, prefs) {
-    this.reset();
-    const sortedStudents = this.sortStudents(students, prefs);
-    // console.log(sortedStudents);
-    this.slots = sortedStudents.reduce((acc, student) => {
-      // find student pref
-      let prefTeachers = teachers;
-      if (this.acceptPref) {
-        const pref = find(prefs, { 'id': student.id });
-        prefTeachers = this.sortTeachers(teachers, pref);
-      }
-      const tryMap = this.tryMapTeachers(acc, student, prefTeachers);
-      if (!tryMap) {
-        this.errors.push(student.id + ' cannot find teacher.'); 
-        return acc;
-      }
-      return tryMap;
-    }, {});
-    return this.slots;
-  }
-  
   // sort teachers by preferences
   sortTeachers(teachers, pref) {
     if (!pref) return teachers;
@@ -209,13 +187,45 @@ export default class SchedulerService {
     }
   }
 
+  // fill slots info
+  fill() {
+    const {students, teachers, prefs} = this.data;
+    this.slots = students.reduce((acc, student) => {
+      // find student pref
+      let prefTeachers = teachers;
+      if (this.acceptPref) {
+        const pref = find(prefs, { 'id': student.id });
+        prefTeachers = this.sortTeachers(teachers, pref);
+      }
+      const tryMap = this.tryMapTeachers(acc, student, prefTeachers);
+      if (!tryMap) {
+        this.errors.push(student.id + ' cannot find teacher.'); 
+        return acc;
+      }
+      return tryMap;
+    }, {});
+    return this.slots;
+  }  
+
+  // prepare
+  prepare() {
+    const {students, teachers, prefs} = this.data;
+    students.forEach(student => {
+      // find student pref
+      let prefTeachers = teachers;
+      if (this.acceptPref) {
+        const pref = find(prefs, { 'id': student.id });
+        prefTeachers = this.sortTeachers(teachers, pref);
+      }
+      student.teachers = prefTeachers;
+    });
+  }
+
   // plan schedule
   plan() {
-    this.fillSlots(
-      this.data.students,
-      this.data.teachers,
-      this.data.prefs
-    );
+    this.prepare();
+    this.reset();
+    this.fill();
   }
 }
 
