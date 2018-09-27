@@ -1,4 +1,4 @@
-import {find, cloneDeep, sortBy, shuffle} from 'lodash';
+import {find, cloneDeep, sortBy, shuffle, filter} from 'lodash';
 
 export default class SchedulerService {
   constructor() {
@@ -157,20 +157,20 @@ export default class SchedulerService {
       // console.log(student);
       
       // get teachers
-      let shuffledTeachers = cloneDeep(teachers);
-      if (this.shuffleTeachers) {
-        shuffledTeachers = shuffle(shuffledTeachers);
-      }
-      positive = !positive;
-      if (!positive) {
-        shuffledTeachers.reverse();
-      }
+      // let shuffledTeachers = cloneDeep(teachers);
+      // if (this.shuffleTeachers) {
+      //   shuffledTeachers = shuffle(shuffledTeachers);
+      // }
+      // positive = !positive;
+      // if (!positive) {
+      //   shuffledTeachers.reverse();
+      // }
 
       // find student pref
-      let prefTeachers = shuffledTeachers;
+      let prefTeachers = teachers;
       if (this.acceptPref) {
         const pref = find(prefs, { 'id': student.id });
-        prefTeachers = this.sortTeachers(shuffledTeachers, pref);
+        prefTeachers = this.sortTeachers(teachers, pref);
       }
       const tryMap = this.tryMapTeachers(acc, student, prefTeachers);
       // console.log(tryMap);
@@ -203,7 +203,9 @@ export default class SchedulerService {
       }
       teacher.ranking = ranking - usage;
     });
-    return sortBy(list, ['ranking']);
+
+    const filtered = filter(list, function(o) { return o.ranking <= 0; });
+    return sortBy(filtered, ['ranking']);
   }
 
   // sort students by preferences
@@ -217,7 +219,7 @@ export default class SchedulerService {
       if (pref) {
         const prefers = pref.prefers;
         if (prefers.length) {
-          ranking = ranking - 4;
+          ranking = ranking - len;
         }
         // const rejects = pref.rejects;
         // if (rejects.length) {

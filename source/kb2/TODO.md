@@ -1,5 +1,9 @@
 # KB2
 
+## 09/27
+
+- load init article from page settings 
+
 ## 09/25
 
 - ~~move bootstrap api to index~~

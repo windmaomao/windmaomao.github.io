@@ -8,14 +8,16 @@ import App from './App';
 // services
 import ApiService from './Api';
 import registerServiceWorker from './registerServiceWorker';
-// local
-const defaultArticleId = 'todo/fang';
-// const defaultArticleId = 'resume/frontend';
+import {defaultArticleId, storedKeys} from './constant';
+
+const getArticleId = () => {
+  const id = localStorage.getItem(storedKeys.articleId) || defaultArticleId;
+  return id;
+};
 
 const renderApp = (menu) => {
-  const articleId = defaultArticleId;
   ReactDOM.render(
-    <App menu={menu} articleId={articleId} />, 
+    <App menu={menu} articleId={getArticleId()} />, 
     document.getElementById('root')
   );
 };
@@ -23,17 +25,6 @@ const renderApp = (menu) => {
 const createApp = () => {
   return ApiService.getMenu().then(renderApp);
 };
-
-// const renderSite = (apps) => {
-//   ReactDOM.render(
-//     <Site apps={apps} appId={appId} />, 
-//     document.getElementById('site')
-//   );
-// };
-// const createSite = () => {
-//   return ApiService.getApps().then(renderSite);
-// };
-// createSite();
 
 createApp();
 registerServiceWorker();
