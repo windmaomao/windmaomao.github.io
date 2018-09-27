@@ -38,9 +38,8 @@ class Schedule extends Component {
   }
 
   stepPlan() {
-    const stepInfo = scheduler.step();
-    console.log(stepInfo, scheduler.stepInfo());
-
+    scheduler.prepare();
+    while(scheduler.step()) {};
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
@@ -55,15 +54,10 @@ class Schedule extends Component {
     return (
       <div className={'App-title'}>
         <Button 
-          variant="contained" color="primary" style={{float: 'right'}}
+          variant="contained" color="secondary" style={{float: 'right'}}
           onClick={() => {this.stepPlan();}}
           disabled={loading}
-        >Step</Button>
-        <Button 
-          variant="contained" color="secondary" style={{float: 'right'}}
-          onClick={() => {this.updatePlan();}}
-          disabled={loading}
-        >Start</Button>
+        >Plan</Button>
         <h1>Schedule <small>({total})</small></h1>
       </div>
     );

@@ -210,6 +210,7 @@ export default class SchedulerService {
       student.teachers = prefTeachers;
       student.teacherIndex = 0;
     });
+    this.studentStepIndex = -1;
   }
 
   // plan schedule
@@ -260,12 +261,15 @@ export default class SchedulerService {
 
   // step after prepare
   step() {
-    const index = this.stepFill();    
-    let next = false;
-    if (index>=0) {
-      next = this.stepForward(index);
+    let canStep = true;
+    const index = this.studentStepIndex;
+    if (index >=0) {
+      canStep = this.stepForward(index);
     }
-    return {index, next};
+    if (canStep) {
+      this.studentStepIndex = this.stepFill();
+    }
+    return this.studentStepIndex >=0;
   }
 
   stepInfo() {
