@@ -9,13 +9,6 @@ export default class SchedulerService {
     this.reset();
   }
 
-  reset() {
-    this.slots = {};
-    this.errors = [];
-    this.studentCap = {};
-    this.teacherUsage = {};
-  }
-
   min2slot(min) {
     return min/this.slotMins;
   }
@@ -59,12 +52,6 @@ export default class SchedulerService {
     }, null);
   }
 
-  totalCapacity(students) {
-    return students.reduce((acc, student) => {
-      return acc + this.studentCap[student];
-    }, 0);
-  }
-  
   // apply map
   tryMapStudentToTeacher(slots, student, teacher) {
     let matchAllSlots = true;
@@ -187,19 +174,27 @@ export default class SchedulerService {
     }
   }
 
+  tryMapTeacher(slots, student, teacher) {
+    if ((student.start >= teacher.start) && (student.end <= teacher.end)) {
+      return this.tryMapStudentToTeacher(slots, student, teacher);
+    }
+    return null;
+  }
+
+  // reset step
+  reset() {
+    this.slots = {};
+    this.errors = [];
+    this.teacherUsage = {};
+  }
+
   // fill slots info
   fill() {
-    const {students, teachers, prefs} = this.data;
+    const {students} = this.data;
     this.slots = students.reduce((acc, student) => {
-      // find student pref
-      let prefTeachers = teachers;
-      if (this.acceptPref) {
-        const pref = find(prefs, { 'id': student.id });
-        prefTeachers = this.sortTeachers(teachers, pref);
-      }
-      const tryMap = this.tryMapTeachers(acc, student, prefTeachers);
+      const tryMap = this.tryMapTeachers(acc, student, student.teachers);
       if (!tryMap) {
-        this.errors.push(student.id + ' cannot find teacher.'); 
+        this.errors.push(student.id + ' |'); 
         return acc;
       }
       return tryMap;
@@ -218,6 +213,7 @@ export default class SchedulerService {
         prefTeachers = this.sortTeachers(teachers, pref);
       }
       student.teachers = prefTeachers;
+      student.teacherIndex = 0;
     });
   }
 
@@ -226,6 +222,48 @@ export default class SchedulerService {
     this.prepare();
     this.reset();
     this.fill();
+  }
+
+  // step forward
+  stepForward() {
+    const {students} = this.data;
+    for(let i = 0; i < students.length; i++) {
+      const student = students[i];
+      student.teacherIndex++;
+      if (student.teacherIndex < student.teachers.length) {
+        return true;
+      }
+      student.teacherIndex = 0;
+    }
+    return false;
+  }
+
+  // fill this step run
+  stepFill() {
+    const {students} = this.data;
+    this.reset();
+    for(let i=0; i < students.length; i++) {
+      const student = students[i];
+      const teacher = student.teachers[student.teacherIndex];
+      let newSlots = null;
+      if ((student.start >= teacher.start) && (student.end <= teacher.end)) {
+        newSlots= this.tryMapStudentToTeacher(this.slots, student, teacher);
+      }
+      if (!newSlots) {
+        return false;
+      } else {
+        this.slots = newSlots;
+      }
+    }
+    return true;
+  }
+
+  // step after prepare
+  step() {
+    const cont = this.stepForward();
+    if (!cont) return {cont};
+    const success = this.stepFill();
+    return {cont, success};
   }
 }
 
