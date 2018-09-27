@@ -21,10 +21,15 @@ class Pref extends Component {
 
   process(data) {
     const nonEmpty = data.filter(item => item.student);
+    const strSplits = str => {
+      const tmp = str.trim();
+      if (!tmp) return [];
+      return tmp.split('|')
+    }
     const processed = nonEmpty.map(item => {
       const id = item.student.trim();
-      const prefers = item.prefers.trim().split('|');
-      const rejects = item.rejects.trim().split('|');
+      const prefers = strSplits(item.prefers);
+      const rejects = strSplits(item.rejects);
       return {id, prefers, rejects};
     });
     return processed;
