@@ -28,30 +28,6 @@ export default class SchedulerService {
     }, 0);
   }
   
-  // match a techer
-  matchTeacher(student, teachers, slot) {
-    return teachers.reduce((acc, teacher) => {
-      // if found, skip to the end
-      if (acc) {
-        return acc;
-      }
-      // if teach qualify
-      if ((student.start < teacher.start) || (student.end > teacher.end)) {
-        return null;
-      }
-      
-      if (teacher.id in slot) {
-        const students = slot[teacher.id];
-        if (students.length < this.maxStudents) {
-          return teacher;
-        } else {
-          return null;
-        }
-      } 
-      return teacher;
-    }, null);
-  }
-
   // apply map
   tryMapStudentToTeacher(slots, student, teacher) {
     let matchAllSlots = true;
@@ -270,6 +246,17 @@ export default class SchedulerService {
       this.studentStepIndex = this.stepFill();
     }
     return this.studentStepIndex >=0;
+  }
+
+  teacherInfo() {
+    const {students} = this.data;
+    return students.map(student => {
+      return {
+        s: student.id,
+        t: student.teachers[student.teacherIndex].id,
+        list: student.teachers.map(teacher => teacher.id).join('|')
+      }
+    })
   }
 
   stepInfo() {

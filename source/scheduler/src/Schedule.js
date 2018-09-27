@@ -40,6 +40,7 @@ class Schedule extends Component {
   stepPlan() {
     scheduler.prepare();
     while(scheduler.step()) {};
+    console.log(scheduler.teacherInfo());
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
