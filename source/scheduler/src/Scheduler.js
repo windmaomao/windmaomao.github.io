@@ -5,10 +5,6 @@ export default class SchedulerService {
     this.slotMins = 15;
     this.maxStudents = 3;
     this.acceptPref = true;
-    this.acceptCapacity = false;
-    this.teacherMaxCap = 100;
-    this.studentMinCap = 30;
-    this.shuffleTeachers = true;
     this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
   }
@@ -95,13 +91,6 @@ export default class SchedulerService {
       if (students.length === this.maxStudents) {
         matchAllSlots = false;
       }
-      // if teacher has reach max capacity
-      if (this.acceptCapacity) {
-        const currCap = this.totalCapacity([...students, student.id]);
-        if (currCap > this.teacherMaxCap) {
-          matchAllSlots = false;
-        }  
-      }
       // accept this teacher
       if (matchAllSlots) {
         students.push(student.id);
@@ -140,13 +129,6 @@ export default class SchedulerService {
   // fill slots info
   fillSlots(students, teachers, prefs) {
     this.reset();
-    // populate student cap
-    if (this.acceptCapacity) {
-      this.studentCap = {};
-      students.forEach(student => {
-        this.studentCap[student.id] = student.capacity || this.studentMinCap
-      });
-    }
     const sortedStudents = this.sortStudents(students, prefs);
     // console.log(sortedStudents);
     this.slots = sortedStudents.reduce((acc, student) => {
