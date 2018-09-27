@@ -1,4 +1,4 @@
-import {find, cloneDeep, sortBy, shuffle, filter} from 'lodash';
+import {find, cloneDeep, sortBy, filter} from 'lodash';
 
 export default class SchedulerService {
   constructor() {
@@ -125,13 +125,10 @@ export default class SchedulerService {
   tryMapTeachers(slots, student, teachers) {
     for (let i=0; i<teachers.length; i++) {
       const teacher = teachers[i];
-      // console.log('Teacher', teacher);
-
       // if teacher quality
       if ((student.start >= teacher.start) && (student.end <= teacher.end)) {
         // try use this teacher
         const tryMap = this.tryMapStudentToTeacher(slots, student, teacher);
-        // console.log('Map', tryMap);
         if (tryMap) {
           return tryMap; 
         }
@@ -150,22 +147,9 @@ export default class SchedulerService {
         this.studentCap[student.id] = student.capacity || this.studentMinCap
       });
     }
-    let positive = true;
     const sortedStudents = this.sortStudents(students, prefs);
-    console.log(sortedStudents);
+    // console.log(sortedStudents);
     this.slots = sortedStudents.reduce((acc, student) => {
-      // console.log(student);
-      
-      // get teachers
-      // let shuffledTeachers = cloneDeep(teachers);
-      // if (this.shuffleTeachers) {
-      //   shuffledTeachers = shuffle(shuffledTeachers);
-      // }
-      // positive = !positive;
-      // if (!positive) {
-      //   shuffledTeachers.reverse();
-      // }
-
       // find student pref
       let prefTeachers = teachers;
       if (this.acceptPref) {
@@ -173,7 +157,6 @@ export default class SchedulerService {
         prefTeachers = this.sortTeachers(teachers, pref);
       }
       const tryMap = this.tryMapTeachers(acc, student, prefTeachers);
-      // console.log(tryMap);
       if (!tryMap) {
         this.errors.push(student.id + ' cannot find teacher.'); 
         return acc;
