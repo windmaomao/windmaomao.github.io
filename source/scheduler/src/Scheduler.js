@@ -98,8 +98,9 @@ export default class SchedulerService {
   }
   
   // find a teacher
-  tryMapTeachers(slots, student, teachers) {
-    for (let i=0; i<teachers.length; i++) {
+  tryMapTeachers(slots, student, teachers, start) {
+    const init = start || 0;
+    for (let i=init; i<teachers.length; i++) {
       const teacher = teachers[i];
       // if teacher quality
       if ((student.start >= teacher.start) && (student.end <= teacher.end)) {
@@ -174,13 +175,6 @@ export default class SchedulerService {
     }
   }
 
-  tryMapTeacher(slots, student, teacher) {
-    if ((student.start >= teacher.start) && (student.end <= teacher.end)) {
-      return this.tryMapStudentToTeacher(slots, student, teacher);
-    }
-    return null;
-  }
-
   // reset step
   reset() {
     this.slots = {};
@@ -225,20 +219,26 @@ export default class SchedulerService {
   }
 
   // step forward
-  stepForward() {
+  stepForward(index) {
+    if (index < 0) return false;
     const {students} = this.data;
-    for(let i = 0; i < students.length; i++) {
+
+    let i = index;
+    do {
       const student = students[i];
       student.teacherIndex++;
       if (student.teacherIndex < student.teachers.length) {
         return true;
       }
       student.teacherIndex = 0;
-    }
+      i = i -1;
+    } while (i>=0);
     return false;
   }
 
-  // fill this step run
+  // fill this step run, 
+  // return failed student index
+  // -1 is success
   stepFill() {
     const {students} = this.data;
     this.reset();
@@ -250,20 +250,22 @@ export default class SchedulerService {
         newSlots= this.tryMapStudentToTeacher(this.slots, student, teacher);
       }
       if (!newSlots) {
-        return false;
+        return i;
       } else {
         this.slots = newSlots;
       }
     }
-    return true;
+    return -1;
   }
 
   // step after prepare
   step() {
-    const cont = this.stepForward();
-    if (!cont) return {cont};
-    const success = this.stepFill();
-    return {cont, success};
+    const index = this.stepFill();    
+    let next = false;
+    if (index>=0) {
+      next = this.stepForward(index);
+    }
+    return {index, next};
   }
 }
 

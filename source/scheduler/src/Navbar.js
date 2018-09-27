@@ -33,7 +33,7 @@ class Navbar extends Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.grow}>
-            Scheduler
+            
           </Typography>
           <Button color="inherit" component={Link} to="/teacher">Teacher</Button>
           <Button color="inherit" component={Link} to="/student">Student</Button>
