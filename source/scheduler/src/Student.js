@@ -49,10 +49,20 @@ class Student extends Component {
     )        
   }
 
+  renderTeachers(student) {
+    const selected = student.teachers[student.teacherIndex].id;
+    const weight = id => (id === selected) ? 'bold' : 'normal';
+    return <span>
+      {student.teachers.map((teacher, index) => 
+        <span key={index} style={{ fontWeight: weight(teacher.id)}}>{teacher.id}, </span>
+      )}
+    </span>
+  }
+
   render() {
     const {students} = this.state;
     const gunnarStyle = { height: "30px", padding: "0px"};
-    const printTime = s => scheduler.slot2time(s);
+    const time = s => scheduler.slot2time(s);
     return (
       <div>
         <h1>Students ({students.length})</h1>
@@ -64,14 +74,17 @@ class Student extends Component {
               <TableCell>Student</TableCell>
               <TableCell>Start</TableCell>
               <TableCell>End</TableCell>
+              <TableCell>Teachers</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {students.map((student, index) => (
               <TableRow key={index} style={gunnarStyle}>
                 <TableCell>{student.id}</TableCell>
-                <TableCell>{printTime(student.start)}</TableCell>
-                <TableCell>{printTime(student.end+1)}</TableCell>
+                <TableCell>{time(student.start)}</TableCell>
+                <TableCell>{time(student.end+1)}</TableCell>
+                <TableCell>{student.teachers && 
+                  this.renderTeachers(student)}</TableCell>
               </TableRow>
             ))}
           </TableBody>
