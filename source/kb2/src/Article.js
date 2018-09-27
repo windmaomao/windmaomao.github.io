@@ -6,6 +6,7 @@ import './Article.css';
 // service
 import ApiService from './Api';
 import {mdService} from './Markdown';
+import {storedKeys} from './constant';
 
 // tutorial
 // https://gist.github.com/sorahn/2cdc344cc698f027a948e3fdf6e0e60f/revisions
@@ -13,7 +14,7 @@ import {mdService} from './Markdown';
 class Article extends Component {
   static propTypes = {
     articleId: PropTypes.string,
-    onParse: PropTypes.func
+    onParse: PropTypes.func 
   };
 
   constructor(props) {
@@ -25,6 +26,10 @@ class Article extends Component {
     return ApiService.getArticle(id).then(source => {
       return this.renderMarkdown(source);
     });
+  }
+
+  storeArticleId = id => {
+    localStorage.setItem(storedKeys.articleId, id);
   }
 
   renderMarkdown = source => {
@@ -46,7 +51,10 @@ class Article extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.articleId !== nextProps.articleId) {
-      this.loadArticle(nextProps.articleId);
+      const id = nextProps.articleId;
+      this.loadArticle(id).then(() => {
+        this.storeArticleId(id);
+      });
     }
   }
 
