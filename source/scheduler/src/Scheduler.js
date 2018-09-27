@@ -151,7 +151,9 @@ export default class SchedulerService {
       });
     }
     let positive = true;
-    this.slots = students.reduce((acc, student) => {
+    const sortedStudents = this.sortStudents(students, prefs);
+    console.log(sortedStudents);
+    this.slots = sortedStudents.reduce((acc, student) => {
       // console.log(student);
       
       // get teachers
@@ -200,6 +202,29 @@ export default class SchedulerService {
         usage = this.teacherUsage[teacher.id];
       }
       teacher.ranking = ranking - usage;
+    });
+    return sortBy(list, ['ranking']);
+  }
+
+  // sort students by preferences
+  sortStudents(students, prefs) {
+    if (!prefs.length) return students;
+    const list = cloneDeep(students);
+    const len = students.length / 2;
+    list.forEach((student, index) => {
+      let ranking = index;
+      const pref = find(prefs, { 'id': student.id });
+      if (pref) {
+        const prefers = pref.prefers;
+        if (prefers.length) {
+          ranking = ranking - 4;
+        }
+        // const rejects = pref.rejects;
+        // if (rejects.length) {
+        //   ranking = ranking - 5;
+        // }
+      }
+      student.ranking = ranking;
     });
     return sortBy(list, ['ranking']);
   }
