@@ -184,6 +184,7 @@ export default class SchedulerService {
 
   // fill slots info
   fill() {
+    this.reset();
     const {students} = this.data;
     this.slots = students.reduce((acc, student) => {
       const tryMap = this.tryMapTeachers(acc, student, student.teachers);
@@ -214,7 +215,6 @@ export default class SchedulerService {
   // plan schedule
   plan() {
     this.prepare();
-    this.reset();
     this.fill();
   }
 

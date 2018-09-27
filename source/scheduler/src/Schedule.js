@@ -26,7 +26,8 @@ class Schedule extends Component {
   }
 
   updatePlan() {
-    scheduler.plan();
+    // scheduler.plan();
+    scheduler.prepare();
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
@@ -62,7 +63,7 @@ class Schedule extends Component {
           variant="contained" color="secondary" style={{float: 'right'}}
           onClick={() => {this.updatePlan();}}
           disabled={loading}
-        >Plan</Button>
+        >Start</Button>
         <h1>Schedule <small>({total})</small></h1>
       </div>
     );
