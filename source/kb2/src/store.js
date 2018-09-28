@@ -3,7 +3,7 @@ import {observable, action, decorate, computed} from 'mobx';
 // services
 import ApiService from './Api';
 import MarkdownService from './Markdown';
-import {storedKeys} from './constant';
+import {defaultArticleId, storedKeys} from './constant';
 
 // const initAppContext = {
 //   apps: [],
@@ -30,6 +30,7 @@ import {storedKeys} from './constant';
 
 const apiFailedErrorMsg = 'API Error';
 const md = new MarkdownService();
+const startArticleId = localStorage.getItem(storedKeys.articleId) || defaultArticleId;
 
 class AppStore {
   status = '';
@@ -38,6 +39,11 @@ class AppStore {
 
   get articleId() {
     return this.article.id;
+  }
+
+  constructor() {
+    this.fetchMenu();
+    this.fetchArticle(startArticleId);
   }
 
   fetchMenu() {

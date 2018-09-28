@@ -7,24 +7,15 @@ import './index.css';
 import App from './App';
 // services
 import registerServiceWorker from './registerServiceWorker';
-import {defaultArticleId, storedKeys} from './constant';
 import AppStore from './store';
-// local
-const store = new AppStore();
-
-const getArticleId = () => {
-  const id = localStorage.getItem(storedKeys.articleId) || defaultArticleId;
-  return id;
-};
 
 const renderApp = () => {
+  const app = new AppStore();
   ReactDOM.render(
-    <App menu={store.menu} articleId={getArticleId()} article={store.article} />, 
+    <App menu={app.menu} article={app.article} />, 
     document.getElementById('root')
   );
 };
 
-store.fetchArticle(getArticleId());
-store.fetchMenu();
 renderApp();
 registerServiceWorker();
