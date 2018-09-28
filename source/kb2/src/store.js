@@ -3,30 +3,7 @@ import {observable, action, decorate, computed} from 'mobx';
 // services
 import ApiService from './Api';
 import MarkdownService from './Markdown';
-import {defaultArticleId, storedKeys} from './constant';
-
-// const initAppContext = {
-//   apps: [],
-//   menu: [],
-//   article: {
-//     id: '',
-//     html: '',
-//     title: '',
-//     anchors: [],
-//     anchor: '',
-//   },
-//   appnav: {
-//     toggled: false
-//   },
-//   sidenav: {
-//     toggled: false,
-//     selected: '',
-//   },
-//   navbar: {
-//     toggled: false,
-//     title: 'Knowledgebase',
-//   },
-// };
+import {defaultArticleId, storedKeys, appId} from './constant';
 
 const apiFailedErrorMsg = 'API Error';
 const md = new MarkdownService();
@@ -37,12 +14,15 @@ class AppStore {
   menu = [];
   article = { id: '', html: '', title: '', anchors: [], anchor: '' };
   ui = { sidenavOn: false, appnavOn: false };
+  apps = [];
+  appId = appId;
 
   get articleId() {
     return this.article.id;
   }
 
   constructor() {
+    this.fetchApps();
     this.fetchMenu();
     this.fetchArticle(startArticleId);
   }
@@ -94,6 +74,17 @@ class AppStore {
   toggleAppnav() {
     this.ui.appnavOn = !this.ui.appnavOn;
   }
+
+  fetchApps() {
+    ApiService.getApps().then(
+      action('fetchSuccess', apps => {
+        this.apps.replace(apps);
+      }),
+      action('fetchError', error => {
+        this.state = apiFailedErrorMsg;
+      })
+    );
+  }
 }
 
 decorate(AppStore, {
@@ -101,10 +92,14 @@ decorate(AppStore, {
   menu: observable,
   article: observable,
   ui: observable,
+  apps: observable,
+  appId: observable,
   articleId: computed,
-  fetchArticle: action.bound,
   toggleSidenav: action.bound,
-  toggleAppnav: action.bound
+  toggleAppnav: action.bound,
+  fetchMenu: action.bound,
+  fetchArticle: action.bound,
+  fetchApps: action.bound,
 });
 
 export default AppStore;

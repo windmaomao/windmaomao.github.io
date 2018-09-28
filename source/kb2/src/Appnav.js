@@ -4,35 +4,18 @@ import PropTypes from 'prop-types';
 import ClickOutside from 'react-click-outside';
 // styles
 import './Appnav.css';
-// service
-import ApiService from './Api';
-
-const appId = '/kb2';
 
 class Appnav extends Component {
   static propTypes = {
-    trigger: PropTypes.bool,
+    toggled: PropTypes.bool.isRequired,
+    apps: PropTypes.array,
+    appId: PropTypes.string,
+    onClose: PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
-    this.state = { apps: [], visible: false };
-  }
-
-  componentDidMount() {
-    return ApiService.getApps().then(apps => {
-      this.setState({apps});
-    });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.trigger !== nextProps.trigger) {
-      this.setState({ visible: true });
-    }
-  }
-
   close = () => {
-    this.setState({ visible: false });
+    const onClose = this.props.onClose;
+    onClose && onClose();
   }
 
   goto = (app) => {
@@ -40,11 +23,11 @@ class Appnav extends Component {
   }
 
   render() {
-    const {visible, apps} = this.state;
+    const {toggled, apps, appId} = this.props;
     const isActive = app => app.url === appId;
     return (
       <ClickOutside onClickOutside={this.close}>
-        <div id="appnav" className={ visible ? 'open' : ''}>
+        <div id="appnav" className={ toggled ? 'open' : ''}>
           <aside className="menu">
             <p className="menu-label">
               Apps

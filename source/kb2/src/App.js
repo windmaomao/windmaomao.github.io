@@ -11,13 +11,13 @@ import Article from './Article';
 import Sidenav from './Sidenav';
 
 const App = (props) => {
-  const {menu, article, fetchArticle} = props.app;
+  const {menu, article, fetchArticle, apps, appId} = props.app;
   const {id, title, anchors} = article;
   const {ui, toggleSidenav, toggleAppnav} = props.app;
   const {sidenavOn, appnavOn} = ui;
   return (
     <div className="App">
-      <Appnav trigger={appnavOn} />
+      <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
       <Navbar title={title} anchors={anchors} onSidenavToggle={toggleSidenav} onAppnavClick={toggleAppnav} />
       <Article article={article} />
       <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
