@@ -88,7 +88,7 @@ class Article extends Component {
     const __html = this.state.html;
     return (
       <div className="">
-        {this.renderToc()}
+        {/* {this.renderToc()} */}
         <div className={'section container article'}>
           {this.renderBreadcrumb()}
           <div dangerouslySetInnerHTML={{__html}} />

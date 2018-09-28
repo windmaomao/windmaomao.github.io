@@ -11,6 +11,7 @@
     "markdown-it-figure-caption": "^0.1.0",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-mark": "^2.0.0",
+    "mobx": "^5.5.0",
     "react": "^16.5.2",
     "react-click-outside": "tj/react-click-outside",
     "react-dom": "^16.5.2",

@@ -9,6 +9,9 @@ import App from './App';
 import ApiService from './Api';
 import registerServiceWorker from './registerServiceWorker';
 import {defaultArticleId, storedKeys} from './constant';
+import AppStore from './store';
+// local
+const store = new AppStore();
 
 const getArticleId = () => {
   const id = localStorage.getItem(storedKeys.articleId) || defaultArticleId;
@@ -26,5 +29,6 @@ const createApp = () => {
   return ApiService.getMenu().then(renderApp);
 };
 
+store.fetchArticle(getArticleId());
 createApp();
 registerServiceWorker();

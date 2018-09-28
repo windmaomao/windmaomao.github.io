@@ -3,6 +3,7 @@
 ## 09/27
 
 - ~~load init article from page settings ~~
+- pass current article on top chain
 
 ## 09/25
 
