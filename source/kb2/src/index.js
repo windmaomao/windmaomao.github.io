@@ -12,7 +12,7 @@ import AppStore from './store';
 const renderApp = () => {
   const app = new AppStore();
   ReactDOM.render(
-    <App menu={app.menu} article={app.article} />, 
+    <App app={app} />, 
     document.getElementById('root')
   );
 };

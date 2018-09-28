@@ -36,6 +36,7 @@ class AppStore {
   status = '';
   menu = [];
   article = { id: '', html: '', title: '', anchors: [], anchor: '' };
+  ui = { sidenavOn: false };
 
   get articleId() {
     return this.article.id;
@@ -85,14 +86,20 @@ class AppStore {
       })
     );
   }
+
+  toggleSidenav() {
+    this.ui.sidenavOn = !this.ui.sidenavOn;
+  }
 }
 
 decorate(AppStore, {
   status: observable,
   menu: observable,
   article: observable,
+  ui: observable,
   articleId: computed,
-  fetchArticle: action.bound
+  fetchArticle: action.bound,
+  toggleSidenav: action.bound
 });
 
 export default AppStore;

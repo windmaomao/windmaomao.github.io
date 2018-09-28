@@ -12,25 +12,16 @@ import Sidenav from './Sidenav';
 
 class App extends Component {
   static propTypes = {
-    menu: PropTypes.array,
-    articleId: PropTypes.string,
-    article: PropTypes.object
+    app: PropTypes.object.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = { 
       appnavOn: false,
-      sidenavOn: true, 
-      articleId: this.props.articleId,
       title: 'Knowledgebase',
       anchors: []
     };
-  }
-
-  toggle = () => {
-    const sidenavOn = !this.state.sidenavOn;
-    this.setState({sidenavOn});
   }
 
   switch = articleId => {
@@ -49,18 +40,18 @@ class App extends Component {
   }
 
   render() {
-    const {menu, article} = this.props;
-    const {appnavOn, sidenavOn, articleId} = this.state;
+    const {appnavOn} = this.state;
+    const {menu, article, ui, toggleSidenav, fetchArticle} = this.props.app;
     return (
       <div className="App">
         <Appnav trigger={appnavOn} />
         <Navbar title={article.title} anchors={article.anchors}
-          onSidenavToggle={this.toggle} onAppnavClick={this.trigger}
+          onSidenavToggle={toggleSidenav} onAppnavClick={this.trigger}
         />
-        <Article articleId={articleId} onParse={this.parse} article={article} />
+        <Article articleId={article.id} onParse={this.parse} article={article} />
         <Sidenav 
-          toggled={sidenavOn} onToggle={this.toggle}
-          menu={menu} selected={articleId} onSelect={this.switch} 
+          toggled={ui.sidenavOn} onToggle={toggleSidenav}
+          menu={menu} selected={article.id} onSelect={fetchArticle} 
         />
       </div>
     );
