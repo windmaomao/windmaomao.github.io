@@ -50,11 +50,11 @@ class App extends Component {
 
   render() {
     const {menu, article} = this.props;
-    const {appnavOn, sidenavOn, articleId, title, anchors} = this.state;
+    const {appnavOn, sidenavOn, articleId} = this.state;
     return (
       <div className="App">
         <Appnav trigger={appnavOn} />
-        <Navbar title={title} anchors={anchors}
+        <Navbar title={article.title} anchors={article.anchors}
           onSidenavToggle={this.toggle} onAppnavClick={this.trigger}
         />
         <Article articleId={articleId} onParse={this.parse} article={article} />

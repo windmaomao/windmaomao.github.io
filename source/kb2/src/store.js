@@ -3,6 +3,7 @@ import {observable, action, decorate, computed} from 'mobx';
 // services
 import ApiService from './Api';
 import MarkdownService from './Markdown';
+import {storedKeys} from './constant';
 
 // const initAppContext = {
 //   apps: [],
@@ -59,6 +60,10 @@ class AppStore {
     };
   }
 
+  _storeArticleId(id) {
+    localStorage.setItem(storedKeys.articleId, id);
+  }
+
   fetchArticle(id) {
     ApiService.getArticle(id).then(
       action('fetchSuccess', source => {
@@ -67,6 +72,7 @@ class AppStore {
         this.article.html = html;
         this.article.title = title;
         this.article.anchors = anchors;
+        this._storeArticleId(id);
       }),
       action('fetchError', error => {
         this.state = apiFailedErrorMsg;
