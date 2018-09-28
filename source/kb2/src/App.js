@@ -18,7 +18,7 @@ const App = (props) => {
   return (
     <div className="App">
       <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
-      <Navbar title={title} anchors={anchors} onSidenavToggle={toggleSidenav} onAppnavClick={toggleAppnav} />
+      <Navbar title={title} anchors={anchors} onSidenavToggle={toggleSidenav} onAppnavToggle={toggleAppnav} />
       <Article article={article} />
       <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
     </div>
