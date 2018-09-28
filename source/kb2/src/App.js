@@ -13,7 +13,8 @@ import Sidenav from './Sidenav';
 class App extends Component {
   static propTypes = {
     menu: PropTypes.array,
-    articleId: PropTypes.string
+    articleId: PropTypes.string,
+    article: PropTypes.object
   };
 
   constructor(props) {
@@ -48,7 +49,7 @@ class App extends Component {
   }
 
   render() {
-    const {menu} = this.props;
+    const {menu, article} = this.props;
     const {appnavOn, sidenavOn, articleId, title, anchors} = this.state;
     return (
       <div className="App">
@@ -56,7 +57,7 @@ class App extends Component {
         <Navbar title={title} anchors={anchors}
           onSidenavToggle={this.toggle} onAppnavClick={this.trigger}
         />
-        <Article articleId={articleId} onParse={this.parse} />
+        <Article articleId={articleId} onParse={this.parse} article={article} />
         <Sidenav 
           toggled={sidenavOn} onToggle={this.toggle}
           menu={menu} selected={articleId} onSelect={this.switch} 

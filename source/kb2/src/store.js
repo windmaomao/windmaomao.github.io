@@ -2,6 +2,7 @@
 import {observable, action, decorate, computed} from 'mobx';
 // services
 import ApiService from './Api';
+import MarkdownService from './Markdown';
 
 // const initAppContext = {
 //   apps: [],
@@ -27,6 +28,7 @@ import ApiService from './Api';
 // };
 
 const apiFailedErrorMsg = 'API Error';
+const md = new MarkdownService();
 
 class AppStore {
   status = '';
@@ -48,8 +50,28 @@ class AppStore {
     );
   }
 
+  _renderMarkdown(source) {
+    const html = md.render(source);
+    return {
+      html,
+      title: md.title,
+      anchors: md.anchors
+    };
+  }
+
   fetchArticle(id) {
-    this.article.id = id;
+    ApiService.getArticle(id).then(
+      action('fetchSuccess', source => {
+        this.article.id = id;
+        const {html, title, anchors} = this._renderMarkdown(source);
+        this.article.html = html;
+        this.article.title = title;
+        this.article.anchors = anchors;
+      }),
+      action('fetchError', error => {
+        this.state = apiFailedErrorMsg;
+      })
+    );
   }
 }
 

@@ -1,6 +1,7 @@
 // third party
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {toJS} from 'mobx';
 // styles
 import './Article.css';
 // primary component
@@ -16,7 +17,8 @@ import {storedKeys} from './constant';
 class Article extends Component {
   static propTypes = {
     articleId: PropTypes.string,
-    onParse: PropTypes.func 
+    onParse: PropTypes.func,
+    article: PropTypes.object
   };
 
   constructor(props) {
@@ -62,8 +64,8 @@ class Article extends Component {
   }
 
   renderBreadcrumb() {
-    const {articleId} = this.props;
-    const bcs = articleId.split('/');
+    const {article} = this.props;
+    const bcs = article.id.split('/');
     return (
       <nav className="breadcrumb is-small" aria-label="breadcrumbs">
         <ul>
@@ -85,13 +87,13 @@ class Article extends Component {
   }
 
   render() {
-    const __html = this.state.html;
+    const {article} = this.props; console.log(toJS(article));
     return (
       <div className="">
         {/* {this.renderToc()} */}
         <div className={'section container article'}>
           {this.renderBreadcrumb()}
-          <div dangerouslySetInnerHTML={{__html}} />
+          <div dangerouslySetInnerHTML={{__html: article.html}} />
         </div>
       </div>
     );

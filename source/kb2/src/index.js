@@ -19,7 +19,7 @@ const getArticleId = () => {
 
 const renderApp = () => {
   ReactDOM.render(
-    <App menu={store.menu} articleId={getArticleId()} />, 
+    <App menu={store.menu} articleId={getArticleId()} article={store.article} />, 
     document.getElementById('root')
   );
 };
