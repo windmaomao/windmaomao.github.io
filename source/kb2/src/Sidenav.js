@@ -1,5 +1,5 @@
 // third party
-import React, {Component, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import ClickOutside from 'react-click-outside';
 // styles
@@ -25,27 +25,14 @@ const styles = {
   }
 };
 
-class Sidenav extends Component {
-  static propTypes = {
-    toggled: PropTypes.bool,
-    onToggle: PropTypes.func,
-    menu: PropTypes.array.isRequired,
-    selected: PropTypes.string,
-    onSelect: PropTypes.func
-  };
+const Sidenav = (props) => {
+  const {onSelect, onToggle, menu, selected, toggled} = props;
+  if (!menu) return null;
+  if (!toggled) return null;
 
-  select = (articleId) => {
-    const onSelect = this.props.onSelect;
-    onSelect && onSelect(articleId);
-  }
-
-  toggle = () => {
-    const {onToggle} = this.props;
-    onToggle && onToggle();
-  }
-
-  renderMenu = menu => {
-    const {selected} = this.props;
+  const select = (id) => {onSelect && onSelect(id);};
+  const toggle = () => {onToggle && onToggle();};
+  const Menu = menu => {
     const articleId = (name) => menu.type + '/' + name;
     const isActive = (name) => articleId(name) === selected;
     return (
@@ -56,32 +43,35 @@ class Sidenav extends Component {
             <li key={index} style={styles.item}>
               <a style={styles.link}
                 className={isActive(name) ? 'is-active' : ''}
-                onClick={(e) => this.select(articleId(name))}
+                onClick={(e) => {select(articleId(name));}}
               >{name}</a>
             </li>
           ))
         }</ul>
       </Fragment>
     );
-  }
+  };
 
-  render() {
-    const {menu, toggled} = this.props;
-    if (!menu) return null;
-    if (!toggled) return null;
-    return (
-      <ClickOutside onClickOutside={this.toggle}>
-        <div className="slider">
-          <i className="fa fa-close" style={styles.toggle}
-            onClick={e => this.toggle()}
-          ></i>
-          <aside className="menu">
-            {menu.map(this.renderMenu)}
-          </aside>
-        </div> 
-      </ClickOutside>
-    );
-  }
-}
+  return (
+    <ClickOutside onClickOutside={toggle}>
+      <div className="slider">
+        <i className="fa fa-close" style={styles.toggle}
+          onClick={e => toggle()}
+        ></i>
+        <aside className="menu">
+          {menu.map(item => Menu(item))}
+        </aside>
+      </div> 
+    </ClickOutside>
+  );
+};
+
+Sidenav.propTypes = {
+  menu: PropTypes.array.isRequired,
+  toggled: PropTypes.bool,
+  onToggle: PropTypes.func,
+  selected: PropTypes.string,
+  onSelect: PropTypes.func
+};
 
 export default Sidenav;
