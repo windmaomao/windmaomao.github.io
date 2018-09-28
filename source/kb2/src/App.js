@@ -15,38 +15,21 @@ class App extends Component {
     app: PropTypes.object.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = { 
-      title: 'Knowledgebase',
-      anchors: []
-    };
-  }
-
-  switch = articleId => {
-    if (articleId !== this.state.articleId) {
-      this.setState({articleId});
-    }
-  }
-
-  parse = ({title, anchors}) => {
-    this.setState({title, anchors});
-  }
-
   render() {
     const {menu, article, fetchArticle} = this.props.app;
+    const {id, title, anchors} = article;
     const {ui, toggleSidenav, toggleAppnav} = this.props.app;
     const {sidenavOn, appnavOn} = ui;
     return (
       <div className="App">
         <Appnav trigger={appnavOn} />
-        <Navbar title={article.title} anchors={article.anchors}
+        <Navbar title={title} anchors={anchors}
           onSidenavToggle={toggleSidenav} onAppnavClick={toggleAppnav}
         />
-        <Article articleId={article.id} onParse={this.parse} article={article} />
+        <Article article={article} />
         <Sidenav 
           toggled={sidenavOn} onToggle={toggleSidenav}
-          menu={menu} selected={article.id} onSelect={fetchArticle} 
+          menu={menu} selected={id} onSelect={fetchArticle} 
         />
       </div>
     );
