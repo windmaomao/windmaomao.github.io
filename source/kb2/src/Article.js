@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // styles
 import './Article.css';
+// primary component
+import Toc from './Toc';
 // service
 import ApiService from './Api';
 import {mdService} from './Markdown';
@@ -19,7 +21,7 @@ class Article extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { html: '' };
+    this.state = { html: '', anchors: [] };
   }
 
   loadArticle = id => {
@@ -34,7 +36,8 @@ class Article extends Component {
 
   renderMarkdown = source => {
     const html = mdService.render(source);
-    this.setState({html});
+    const anchors = mdService.anchors;
+    this.setState({html, anchors});
 
     const {onParse} = this.props;
     onParse && onParse({
@@ -74,11 +77,19 @@ class Article extends Component {
     );
   }
 
+  renderToc() {
+    const {anchors} = this.state;
+    return (
+      <Toc anchors={anchors} />
+    );
+  }
+
   render() {
     const __html = this.state.html;
     return (
       <div className={'container article'}>
         {this.renderBreadcrumb()}
+        {this.renderToc()}
         <div dangerouslySetInnerHTML={{__html}} />
       </div>
     );

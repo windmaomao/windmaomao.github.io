@@ -1,3 +1,4 @@
+// third party
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -17,7 +18,21 @@ class Navbar extends Component {
     const onTrigger = this.props.onAppnavClick;
     onTrigger && onTrigger();
   }
-  
+
+  renderToc() {
+    return (
+      <div className="navbar-menu is-active">
+        <div className="navbar-end">
+          <div className="navbar-item has-dropdown is-active">
+            <a className="navbar-link">Table of Content</a>
+            <div className="navbar-dropdwon">
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     const {title} = this.props;
     return (
@@ -33,11 +48,7 @@ class Navbar extends Component {
             <span></span>
           </div>
         </div>
-        <div className="navbar-menu">
-          <div className="navbar-end">
-            <a className="navbar-item">Collections</a>
-          </div>
-        </div>
+        {/* {this.renderToc()} */}
       </nav>
     );
   }

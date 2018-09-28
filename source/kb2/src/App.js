@@ -22,6 +22,7 @@ class App extends Component {
       sidenavOn: true, 
       articleId: this.props.articleId,
       title: 'Knowledgebase',
+      anchors: []
     };
   }
 
@@ -36,8 +37,9 @@ class App extends Component {
     }
   }
 
-  parse = ({title}) => {
-    this.setState({title});
+  parse = ({title, anchors}) => {
+    console.log(anchors);
+    this.setState({title, anchors});
   }
 
   trigger = () => {    
@@ -47,11 +49,11 @@ class App extends Component {
 
   render() {
     const {menu} = this.props;
-    const {appnavOn, sidenavOn, articleId, title} = this.state;
+    const {appnavOn, sidenavOn, articleId, title, anchors} = this.state;
     return (
       <div className="App">
         <Appnav trigger={appnavOn} />
-        <Navbar title={title} 
+        <Navbar title={title} anchors={anchors}
           onSidenavToggle={this.toggle} onAppnavClick={this.trigger}
         />
         <div className="section">

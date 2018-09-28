@@ -1,0 +1,24 @@
+ul.toc {
+  background-color: #fefefe;
+  margin: 0;
+  padding-left: 15px;
+}
+ul.toc li {
+  display: none;
+  margin: 0;
+}
+ul.toc li.h1 {
+  display: none;
+  font-size: 1rem;
+}
+ul.toc li.h2 {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+}
+ul.toc li.h3 {
+  display: inline-block;
+  font-size: 1rem;
+  padding-left: 10px;
+  font-weight: normal;
+}

@@ -4,7 +4,11 @@
 
 ### 09/27 
 
-- fill slots based on permutation
+- ~~fill slots based on permutation~~
+- last name shouldn't be on same teacher
+- print needs to have page break
+- print button not clickable
+- teacher in print needs to align well
 
 ### 09/23
 
@@ -21,5 +25,3 @@
 - ~~resolve mobile display issue~~
 - ~~allow change of schedules~~
 - ~~allow print schedule~~
-- allow page break in print
-- print button not clickable
