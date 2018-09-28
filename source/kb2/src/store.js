@@ -29,10 +29,10 @@ class AppStore {
 
   fetchMenu() {
     ApiService.getMenu().then(
-      action('fetchSuccess', menu => {
+      action('fetchMenu:Success', menu => {
         this.menu.replace(menu);
       }),
-      action('fetchError', error => {
+      action('fetchMenu:Error', error => {
         this.state = apiFailedErrorMsg;
       })
     );
@@ -53,7 +53,7 @@ class AppStore {
 
   fetchArticle(id) {
     ApiService.getArticle(id).then(
-      action('fetchSuccess', source => {
+      action('fetchArticle:Success', source => {
         this.article.id = id;
         const {html, title, anchors} = this._renderMarkdown(source);
         this.article.html = html;
@@ -61,7 +61,7 @@ class AppStore {
         this.article.anchors = anchors;
         this._storeArticleId(id);
       }),
-      action('fetchError', error => {
+      action('fetchArticle:Error', error => {
         this.state = apiFailedErrorMsg;
       })
     );
@@ -77,10 +77,10 @@ class AppStore {
 
   fetchApps() {
     ApiService.getApps().then(
-      action('fetchSuccess', apps => {
+      action('fetchApps:Success', apps => {
         this.apps.replace(apps);
       }),
-      action('fetchError', error => {
+      action('fetchApps:Error', error => {
         this.state = apiFailedErrorMsg;
       })
     );
