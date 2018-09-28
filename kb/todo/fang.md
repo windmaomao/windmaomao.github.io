@@ -13,7 +13,7 @@
 - ~~Schedule doctor (919) 791-2040, Gastroenterology~~
 - ~~Update `frontend` article~~
 - ~~Deploy kb2~~
-- 3:45 Talk to `Sophia` teacher
+- ~~3:45 Talk to `Sophia` teacher~~
 - Sell laptops `broken`
 
 #### 09/21

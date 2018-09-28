@@ -23,6 +23,8 @@ export default class MarkdownService {
     this.md.use(require('markdown-it-footnote'));
     //
     this.md.use(Figure);
+    // ==
+    this.md.use(require('markdown-it-mark'));
   }
 
   parseHeading = (token, values) => {
