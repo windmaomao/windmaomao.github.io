@@ -1,5 +1,5 @@
-# MG React App
-![MG React App](https://s3.amazonaws.com/qp-photo/mg-dashboard-mockup.PNG)
+# MG React Dashboard
+![MG React App](https://s3.amazonaws.com/qp-photo/mg-dashboard-mockup.png)
 
 ## What is it?
 
