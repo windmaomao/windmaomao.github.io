@@ -6,7 +6,6 @@ import './index.css';
 // primary component
 import App from './App';
 // services
-import ApiService from './Api';
 import registerServiceWorker from './registerServiceWorker';
 import {defaultArticleId, storedKeys} from './constant';
 import AppStore from './store';
@@ -18,17 +17,14 @@ const getArticleId = () => {
   return id;
 };
 
-const renderApp = (menu) => {
+const renderApp = () => {
   ReactDOM.render(
-    <App menu={menu} articleId={getArticleId()} />, 
+    <App menu={store.menu} articleId={getArticleId()} />, 
     document.getElementById('root')
   );
 };
 
-const createApp = () => {
-  return ApiService.getMenu().then(renderApp);
-};
-
 store.fetchArticle(getArticleId());
-createApp();
+store.fetchMenu();
+renderApp();
 registerServiceWorker();

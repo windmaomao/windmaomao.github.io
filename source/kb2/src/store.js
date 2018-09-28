@@ -1,5 +1,7 @@
 // third party
 import {observable, action, decorate, computed} from 'mobx';
+// services
+import ApiService from './Api';
 
 // const initAppContext = {
 //   apps: [],
@@ -24,14 +26,26 @@ import {observable, action, decorate, computed} from 'mobx';
 //   },
 // };
 
-class AppStore {
-  apps = [];
-  article = { id: '', html: '', title: '', anchors: [], anchor: '' };
+const apiFailedErrorMsg = 'API Error';
 
-  constructor() {}
+class AppStore {
+  status = '';
+  menu = [];
+  article = { id: '', html: '', title: '', anchors: [], anchor: '' };
 
   get articleId() {
     return this.article.id;
+  }
+
+  fetchMenu() {
+    ApiService.getMenu().then(
+      action('fetchSuccess', menu => {
+        this.menu.replace(menu);
+      }),
+      action('fetchError', error => {
+        this.state = apiFailedErrorMsg;
+      })
+    );
   }
 
   fetchArticle(id) {
@@ -40,7 +54,8 @@ class AppStore {
 }
 
 decorate(AppStore, {
-  apps: observable.shallow,
+  status: observable,
+  menu: observable,
   article: observable,
   articleId: computed,
   fetchArticle: action.bound

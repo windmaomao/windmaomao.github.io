@@ -1,6 +1,7 @@
 // third party
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {observer} from 'mobx-react';
 // styles
 import './App.css';
 // primary components
@@ -65,4 +66,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default observer(App);
