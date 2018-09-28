@@ -38,7 +38,6 @@ class App extends Component {
   }
 
   parse = ({title, anchors}) => {
-    console.log(anchors);
     this.setState({title, anchors});
   }
 
@@ -56,9 +55,7 @@ class App extends Component {
         <Navbar title={title} anchors={anchors}
           onSidenavToggle={this.toggle} onAppnavClick={this.trigger}
         />
-        <div className="section">
-          <Article articleId={articleId} onParse={this.parse} />
-        </div>
+        <Article articleId={articleId} onParse={this.parse} />
         <Sidenav 
           toggled={sidenavOn} onToggle={this.toggle}
           menu={menu} selected={articleId} onSelect={this.switch} 
