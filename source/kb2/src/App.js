@@ -5,6 +5,7 @@ import {observer} from 'mobx-react';
 // styles
 import './App.css';
 // primary components
+import Spinner from './Spinner';
 import Appnav from './Appnav';
 import Navbar from './Navbar';
 import Article from './Article';
@@ -17,7 +18,8 @@ const App = (props) => {
   const {ui, toggleSidenav, toggleAppnav, toggleToc} = props.app;
   const {sidenavOn, appnavOn, tocOn} = ui;
   return (
-    <div className="App">
+    <div className="app">
+      <Spinner loading={true} />
       <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
       <Navbar title={title} onTocToggle={toggleToc} onAppnavToggle={toggleAppnav} />
       <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
