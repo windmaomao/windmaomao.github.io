@@ -4,7 +4,7 @@
 
 - convert md/html to doc file
 - ~~add spinner to article loading~~
-- add site footer
+- ~~add site credit footer~~
 
 ## 09/27
 
