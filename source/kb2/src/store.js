@@ -13,7 +13,7 @@ class AppStore {
   status = '';
   menu = [];
   article = { id: '', html: '', title: '', anchors: [], anchor: '' };
-  ui = { sidenavOn: false, appnavOn: false };
+  ui = { sidenavOn: false, appnavOn: false, tocOn: false };
   apps = [];
   appId = appId;
 
@@ -85,6 +85,10 @@ class AppStore {
       })
     );
   }
+
+  toggleToc() {
+    this.ui.tocOn = !this.ui.tocOn;
+  }
 }
 
 decorate(AppStore, {
@@ -97,6 +101,7 @@ decorate(AppStore, {
   articleId: computed,
   toggleSidenav: action.bound,
   toggleAppnav: action.bound,
+  toggleToc: action.bound,
   fetchMenu: action.bound,
   fetchArticle: action.bound,
   fetchApps: action.bound,

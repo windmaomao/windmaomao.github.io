@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Navbar = (props) => {
-  const {title, onAppnavToggle, onSidenavToggle} = props;
+  const {title, onAppnavToggle, onTocToggle} = props;
   const toggleAppnav = () => {onAppnavToggle && onAppnavToggle();};
-  const toggleSidenav = () => {onSidenavToggle && onSidenavToggle();};
+  const toggleToc = () => {onTocToggle && onTocToggle();};
 
   return (
     <nav className="navbar is-dark is-fixed-top">
@@ -13,7 +13,7 @@ const Navbar = (props) => {
         <a className="navbar-item logo-wrapper" onClick={e => toggleAppnav()}>
           <img src="logo.png" className="logo" alt="logo" />
         </a>
-        <a className="navbar-item" onClick={e => toggleSidenav()}>{title}</a>
+        <a className="navbar-item" onClick={e => toggleToc()}>{title}</a>
         <div data-target="navbar">
           <span></span>
           <span></span>
@@ -26,7 +26,7 @@ const Navbar = (props) => {
 
 Navbar.propTypes = {
   title: PropTypes.string,
-  onSidenavToggle: PropTypes.func,
+  onTocToggle: PropTypes.func,
   onAppnavToggle: PropTypes.func,
 };
 
