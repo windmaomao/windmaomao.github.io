@@ -4,6 +4,7 @@ const localStorageAppKey = 'kb';
 const storedKeys = {
   articleId: localStorageAppKey + '/articleId'
 };
+const appTitle = 'Knowledgebase';
 const footerCreditMsg = 'Patience is to wait for the sure.';
 
 export {
@@ -11,5 +12,6 @@ export {
   defaultArticleId,
   localStorageAppKey,
   storedKeys,
+  appTitle,
   footerCreditMsg
 };
