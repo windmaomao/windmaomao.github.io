@@ -13,13 +13,14 @@ import Sidenav from './Sidenav';
 import Toc from './Toc';
 
 const App = (props) => {
-  const {menu, article, fetchArticle, apps, appId} = props.app;
+  const {status, menu, article, fetchArticle, apps, appId} = props.app;
   const {id, title, anchors} = article;
   const {ui, toggleSidenav, toggleAppnav, toggleToc} = props.app;
   const {sidenavOn, appnavOn, tocOn} = ui;
+  const {loading} = status;
   return (
     <div className="app">
-      <Spinner loading={true} />
+      <Spinner loading={loading} />
       <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
       <Navbar title={title} onTocToggle={toggleToc} onAppnavToggle={toggleAppnav} />
       <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />

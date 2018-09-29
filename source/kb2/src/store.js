@@ -10,7 +10,7 @@ const md = new MarkdownService();
 const startArticleId = localStorage.getItem(storedKeys.articleId) || defaultArticleId;
 
 class AppStore {
-  status = '';
+  status = {loading: false, message: ''};
   menu = [];
   article = { id: '', html: '', title: '', anchors: [], anchor: '' };
   ui = { sidenavOn: false, appnavOn: false, tocOn: false };
@@ -30,7 +30,7 @@ class AppStore {
         this.menu.replace(menu);
       }),
       action('fetchMenu:Error', error => {
-        this.state = apiFailedErrorMsg;
+        // this.state = apiFailedErrorMsg;
       })
     );
   }
@@ -49,6 +49,7 @@ class AppStore {
   }
 
   fetchArticle(id) {
+    this.startSpinner();
     return ApiService.getArticle(id).then(
       action('fetchArticle:Success', source => {
         this.article.id = id;
@@ -57,9 +58,10 @@ class AppStore {
         this.article.title = title;
         this.article.anchors = anchors;
         this._storeArticleId(id);
+        this.stopSpinner();
       }),
       action('fetchArticle:Error', error => {
-        this.state = apiFailedErrorMsg;
+        this.stopSpinner(apiFailedErrorMsg);
       })
     );
   }
@@ -78,7 +80,7 @@ class AppStore {
         this.apps.replace(apps);
       }),
       action('fetchApps:Error', error => {
-        this.state = apiFailedErrorMsg;
+        // this.state = apiFailedErrorMsg;
       })
     );
   }
@@ -86,6 +88,18 @@ class AppStore {
   toggleToc() {
     this.ui.tocOn = !this.ui.tocOn;
   }
+
+  startSpinner() {
+    this.status.loading = true;
+  }
+
+  stopSpinner(msg) {
+    this.status.loading = false;
+    if (msg) {
+      this.status.message = msg;
+    }
+  }
+
 }
 
 decorate(AppStore, {
@@ -101,6 +115,8 @@ decorate(AppStore, {
   fetchMenu: action.bound,
   fetchArticle: action.bound,
   fetchApps: action.bound,
+  startSpinner: action.bound,
+  stopSpinner: action.bound,
 });
 
 export default AppStore;

@@ -11,11 +11,13 @@ import AppStore from './store';
 
 function bootstrapReactApp() {
   const app = new AppStore();
-  const render = () => {
+  const renderApp = () => {
     const Root = <App app={app} />;
     ReactDOM.render(Root, document.getElementById('root'));
   };
-  return app.initApp().then(render);
+
+  renderApp();
+  app.initApp();
 }
 
 bootstrapReactApp();
