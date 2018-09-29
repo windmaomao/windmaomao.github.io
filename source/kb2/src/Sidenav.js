@@ -1,7 +1,6 @@
 // third party
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import ClickOutside from 'react-click-outside';
 // styles
 import './Sidenav.css';
 // local
@@ -53,16 +52,14 @@ const Sidenav = (props) => {
   };
 
   return (
-    <ClickOutside onClickOutside={toggle}>
-      <div className="slider">
-        <i className="fa fa-close" style={styles.toggle}
-          onClick={e => toggle()}
-        ></i>
-        <aside className="menu">
-          {menu.map(item => Menu(item))}
-        </aside>
-      </div> 
-    </ClickOutside>
+    <div className="slider">
+      <i className="fa fa-close" style={styles.toggle}
+        onClick={e => toggle()}
+      ></i>
+      <aside className="menu">
+        {menu.map(item => Menu(item))}
+      </aside>
+    </div> 
   );
 };
 

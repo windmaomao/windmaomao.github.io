@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const Navbar = (props) => {
   const {title, onAppnavToggle, onSidenavToggle} = props;
-  const toggleAppnav = () => {console.log('A'); onAppnavToggle && onAppnavToggle();};
-  const toggleSidenav = () => {console.log('S'); onSidenavToggle && onSidenavToggle();};
+  const toggleAppnav = () => {onAppnavToggle && onAppnavToggle();};
+  const toggleSidenav = () => {onSidenavToggle && onSidenavToggle();};
 
   return (
     <nav className="navbar is-dark is-fixed-top">

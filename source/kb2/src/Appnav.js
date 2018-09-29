@@ -7,10 +7,12 @@ import './Appnav.css';
 
 const Appnav = (props) => {
   const {toggled, apps, appId, onClose} = props;
+  if (!toggled) return null;
+
   const isActive = app => app.url === appId;
   const close = () => {onClose && onClose();};
   const goto = (app) => {window.location.href = app.url;};
-  
+
   return (
     <ClickOutside onClickOutside={close}>
       <div id="appnav" className={toggled ? 'open' : ''}>
