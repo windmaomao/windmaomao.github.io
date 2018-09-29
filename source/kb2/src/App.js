@@ -16,12 +16,12 @@ const App = (props) => {
   const {id, title, anchors} = article;
   const {ui, toggleSidenav, toggleAppnav, toggleToc} = props.app;
   const {sidenavOn, appnavOn, tocOn} = ui;
-  const toc = tocOn ? <Toc anchors={anchors} onClose={toggleToc} /> : null;
   return (
     <div className="App">
       <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
       <Navbar title={title} onTocToggle={toggleToc} onAppnavToggle={toggleAppnav} />
-      <Article article={article} onSidenavToggle={toggleSidenav} toc={toc} />
+      <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
+      <Article article={article} onSidenavToggle={toggleSidenav} />
       <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
     </div>
   );

@@ -6,12 +6,15 @@ import './Toc.css';
 
 class Toc extends Component {
   static propTypes = {
+    toggled: PropTypes.bool,
     anchors: PropTypes.array,
     onClose: PropTypes.func
   };
 
   render() {
-    const {anchors, onClose} = this.props;
+    const {toggled, anchors, onClose} = this.props;
+    if (!toggled) return null;
+    
     const close = () => {onClose && onClose();};
     return (
       <div className="navbar-toc">
