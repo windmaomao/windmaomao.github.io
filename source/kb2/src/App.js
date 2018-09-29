@@ -12,6 +12,8 @@ import Toc from './Toc';
 import Article from './Article';
 import Sidenav from './Sidenav';
 import Credit from './Credit';
+// services
+import {footerCreditMsg} from './constant';
 
 const App = (props) => {
   const {status, menu, article, fetchArticle, apps, appId} = props.app;
@@ -27,7 +29,7 @@ const App = (props) => {
       <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
       <Article article={article} onSidenavToggle={toggleSidenav} />
       <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
-      {!loading && <Credit />}
+      {!loading && <Credit message={footerCreditMsg} />}
     </div>
   );
 };

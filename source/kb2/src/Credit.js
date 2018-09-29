@@ -1,5 +1,6 @@
 // third party
 import React from 'react';
+import PropTypes from 'prop-types';
 import {css} from 'react-emotion';
 
 const footer = css`
@@ -13,15 +14,20 @@ const footer = css`
 // .footer p {
 // }
 const Credit = (props) => {
+  const {message} = props;
   return (
     <footer className={footer}>
       <hr />
-      <p>Patience is to wait for the sure.</p>
+      <p>{message}</p>
       <p>&copy; Copyright 2018 &nbsp;
         <a href="https://www.linkedin.com/in/windmaomao">by Fang Jin</a>
       </p>
     </footer>
   );
+};
+
+Credit.propTypes = {
+  message: PropTypes.string.isRequired,
 };
 
 export default Credit;
