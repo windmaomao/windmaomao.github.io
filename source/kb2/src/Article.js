@@ -14,9 +14,12 @@ const Article = (props) => {
     return (
       <nav className="breadcrumb is-small" aria-label="breadcrumbs">
         <ul>
+          <li>
+            <a onClick={toggle}>DIRECTORY</a>
+          </li>
           {bcs.map((item, index) => (
-            <li key={index} className={index ? 'is-active' : ''}>
-              <a onClick={toggle}>{item.toUpperCase()}</a>
+            <li key={index} className={'is-active'}>
+              <a>{item.toUpperCase()}</a>
             </li>
           ))}
         </ul>

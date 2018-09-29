@@ -1,3 +1,9 @@
+.navbar-toc {
+  position: fixed;
+  width: 100%;
+  top: 52px;
+  z-index: 9999;
+}
 ul.toc {
   background-color: #fefefe;
   margin: 0;
