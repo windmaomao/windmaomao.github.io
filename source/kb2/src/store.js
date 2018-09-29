@@ -10,7 +10,7 @@ const md = new MarkdownService();
 const startArticleId = localStorage.getItem(storedKeys.articleId) || defaultArticleId;
 
 class AppStore {
-  status = {loading: false, message: ''};
+  status = {loading: false, active: false, message: ''};
   menu = [];
   article = { id: '', html: '', title: '', anchors: [], anchor: '' };
   ui = { sidenavOn: false, appnavOn: false, tocOn: false };
@@ -19,6 +19,7 @@ class AppStore {
 
   initApp() {
     const chain = this.fetchArticle(startArticleId);
+    this.startRunner();
     this.fetchApps();
     this.fetchMenu();
     return chain;
@@ -92,7 +93,6 @@ class AppStore {
   startSpinner() {
     this.status.loading = true;
   }
-
   stopSpinner(msg) {
     this.status.loading = false;
     if (msg) {
@@ -100,6 +100,14 @@ class AppStore {
     }
   }
 
+  startRunner(msg) {
+    this.status.active = true;
+    this.status.message = msg;
+  }
+  stopRunner() {
+    this.status.active = false;
+    this.status.message = '';
+  }
 }
 
 decorate(AppStore, {
@@ -117,6 +125,8 @@ decorate(AppStore, {
   fetchApps: action.bound,
   startSpinner: action.bound,
   stopSpinner: action.bound,
+  startRunner: action.bound,
+  stopRunner: action.bound,
 });
 
 export default AppStore;

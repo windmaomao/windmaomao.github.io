@@ -1,6 +1,8 @@
 // third party
 import React from 'react';
 import PropTypes from 'prop-types';
+// styles
+import './Navbar.css';
 
 const Navbar = (props) => {
   const {title, onAppnavToggle, onTocToggle} = props;

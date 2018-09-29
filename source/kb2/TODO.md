@@ -3,6 +3,7 @@
 ## 09/29
 
 - convert md/html to doc file
+- ~~add spinner to article loading~~
 
 ## 09/27
 
@@ -19,4 +20,3 @@
 
 ## 09/24 
 
-- add spinner to article loading
