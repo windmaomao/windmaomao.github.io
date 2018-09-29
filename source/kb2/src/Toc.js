@@ -7,22 +7,24 @@ import './Toc.css';
 class Toc extends Component {
   static propTypes = {
     anchors: PropTypes.array,
+    onClose: PropTypes.func
   };
 
   render() {
-    const {anchors} = this.props;
+    const {anchors, onClose} = this.props;
+    const close = () => {onClose && onClose();};
     return (
       <div className="navbar-toc">
         <div className="navbar-menu is-active">
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-active">
-              <a className="navbar-link">Table of Content</a>
+              <a className="navbar-link" onClick={close}>Table of Content</a>
               <div className="navbar-dropdwon">
                 <aside className="menu">
                   <ul className="toc menu-list">
                     {anchors.map((menu, index) => 
                       <li key={index} className={menu.tag}>
-                        <a>{menu.title}</a>
+                        <a href={'#' + menu.anchor} onClick={close}>{menu.title}</a>
                       </li>
                     )}
                   </ul>

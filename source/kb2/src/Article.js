@@ -3,11 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // styles
 import './Article.css';
-// primary component
-import Toc from './Toc';
 
 const Article = (props) => {
-  const {article, tocOn, onSidenavToggle} = props;
+  const {article, toc, onSidenavToggle} = props;
   const toggle = () => {onSidenavToggle && onSidenavToggle();};
   const Breadcrumb = (id) => {
     const bcs = id.split('/');
@@ -29,7 +27,7 @@ const Article = (props) => {
 
   return (
     <div className="">
-      {tocOn && <Toc anchors={article.anchors} />}
+      {toc}
       <div className={'section container article'}>
         {Breadcrumb(article.id)}
         <div dangerouslySetInnerHTML={{__html: article.html}} />
@@ -41,7 +39,7 @@ const Article = (props) => {
 Article.propTypes = {
   article: PropTypes.object,
   onSidenavToggle: PropTypes.func,
-  tocOn: PropTypes.bool
+  toc: PropTypes.object
 };
 
 export default Article;
