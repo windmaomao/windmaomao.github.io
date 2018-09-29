@@ -6,7 +6,10 @@
 
 #### 09/28
 
-- Keep old phone `$180`
+- ~~Sell new phone~~
+- ~~Book appointment for `service`~~
+- Update annual
+- Book doc for `Lucas`
 
 #### 09/25
 

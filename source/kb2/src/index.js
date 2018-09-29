@@ -9,7 +9,14 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import AppStore from './store';
 
-const app = new AppStore();
-ReactDOM.render(<App app={app} />, document.getElementById('root'));
+function bootstrapReactApp() {
+  const app = new AppStore();
+  const render = () => {
+    const Root = <App app={app} />;
+    ReactDOM.render(Root, document.getElementById('root'));
+  };
+  return app.initApp().then(render);
+}
 
+bootstrapReactApp();
 registerServiceWorker();

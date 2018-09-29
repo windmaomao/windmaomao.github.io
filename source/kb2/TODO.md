@@ -1,9 +1,13 @@
 # KB2
 
+## 09/29
+
+- convert md/html to doc file
+
 ## 09/27
 
 - ~~load init article from page settings ~~
-- pass current article on top chain
+- ~~pass current article on top chain~~
 
 ## 09/25
 

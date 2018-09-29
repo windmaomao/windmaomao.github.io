@@ -1,5 +1,5 @@
 // third party
-import {observable, action, decorate, computed} from 'mobx';
+import {observable, action, decorate} from 'mobx';
 // services
 import ApiService from './Api';
 import MarkdownService from './Markdown';
@@ -17,18 +17,15 @@ class AppStore {
   apps = [];
   appId = appId;
 
-  get articleId() {
-    return this.article.id;
-  }
-
-  constructor() {
+  initApp() {
+    const chain = this.fetchArticle(startArticleId);
     this.fetchApps();
     this.fetchMenu();
-    this.fetchArticle(startArticleId);
+    return chain;
   }
 
   fetchMenu() {
-    ApiService.getMenu().then(
+    return ApiService.getMenu().then(
       action('fetchMenu:Success', menu => {
         this.menu.replace(menu);
       }),
@@ -52,7 +49,7 @@ class AppStore {
   }
 
   fetchArticle(id) {
-    ApiService.getArticle(id).then(
+    return ApiService.getArticle(id).then(
       action('fetchArticle:Success', source => {
         this.article.id = id;
         const {html, title, anchors} = this._renderMarkdown(source);
@@ -76,7 +73,7 @@ class AppStore {
   }
 
   fetchApps() {
-    ApiService.getApps().then(
+    return ApiService.getApps().then(
       action('fetchApps:Success', apps => {
         this.apps.replace(apps);
       }),
@@ -98,7 +95,6 @@ decorate(AppStore, {
   ui: observable,
   apps: observable,
   appId: observable,
-  articleId: computed,
   toggleSidenav: action.bound,
   toggleAppnav: action.bound,
   toggleToc: action.bound,
