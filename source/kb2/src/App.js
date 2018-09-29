@@ -8,9 +8,10 @@ import './App.css';
 import Spinner from './Spinner';
 import Appnav from './Appnav';
 import Navbar from './Navbar';
+import Toc from './Toc';
 import Article from './Article';
 import Sidenav from './Sidenav';
-import Toc from './Toc';
+import Credit from './Credit';
 
 const App = (props) => {
   const {status, menu, article, fetchArticle, apps, appId} = props.app;
@@ -26,6 +27,7 @@ const App = (props) => {
       <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
       <Article article={article} onSidenavToggle={toggleSidenav} />
       <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
+      {!loading && <Credit />}
     </div>
   );
 };
