@@ -2,7 +2,7 @@
 
 ## 09/29
 
-- convert md/html to doc file
+- ~~convert md/html to doc file~~
 - ~~add spinner to article loading~~
 - ~~add site credit footer~~
 
