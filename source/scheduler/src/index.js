@@ -6,6 +6,7 @@ import {Router} from "react-router-dom";
 // styles
 import './index.css';
 // primary components
+import Layout from './Layout';
 import App from './App';
 // services
 import registerServiceWorker from './registerServiceWorker';
@@ -16,8 +17,11 @@ const history = createBrowserHistory({ basename });
 
 ReactDOM.render(
   <Router history={history}>
-    <App />
+    <Layout>
+      <App />
+    </Layout>
   </Router>, 
   document.getElementById('root')
 );
+
 registerServiceWorker();
