@@ -2,8 +2,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {MuiThemeProvider} from '@material-ui/core/styles';
-import {Router, Route} from "react-router-dom";
-import {createBrowserHistory} from 'history';
+import {Route} from "react-router-dom";
 // styles
 import './App.css';
 import theme from './theme';
@@ -33,9 +32,6 @@ const styles = theme => ({
     },
   },
 });
-
-const basename = '/scheduler';
-const history = createBrowserHistory({ basename });
 
 class App extends Component {
   constructor(props) {
@@ -76,13 +72,11 @@ class App extends Component {
 
   render() {
     return (
-      <Router history={history}>
-        <MuiThemeProvider theme={theme}>
-          <CssBaseline />
-          <Navbar />
-          {this.renderRoutes()}
-        </MuiThemeProvider>
-      </Router>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        <Navbar />
+        {this.renderRoutes()}
+      </MuiThemeProvider>
     );
   }
 }
