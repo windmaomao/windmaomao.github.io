@@ -5,6 +5,7 @@
 ### 09/27 
 
 - ~~fill slots based on permutation~~
+- support morning time as well
 - last name shouldn't be on same teacher
 - print needs to have page break
 - print button not clickable

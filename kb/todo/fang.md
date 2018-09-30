@@ -10,6 +10,8 @@
 - ~~Book appointment for `service`~~
 - Update annual
 - Book doc for `Lucas`
+- Fix bugs for `scheduler`
+- Sell laptops `broken`
 
 #### 09/25
 
@@ -19,7 +21,6 @@
 - ~~Update `frontend` article~~
 - ~~Deploy kb2~~
 - ~~3:45 Talk to `Sophia` teacher~~
-- Sell laptops `broken`
 
 #### 09/21
 
