@@ -8,6 +8,7 @@ import Schedule from './Schedule';
 import Student from './Student';
 import Teacher from './Teacher';
 import Pref from './Pref';
+import Print from './Print';
 // services
 import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
@@ -39,12 +40,17 @@ class App extends Component {
     if (loading) {
       return null;
     }
+
+    const print = props => {
+      return <Print slots={scheduler.slots} usages={scheduler.teacherUsage} />
+    };
     return (
       <Fragment>
         <Route exact path="/" component={Schedule} />
         <Route path="/student" component={Student} />
         <Route path="/teacher" component={Teacher} />
         <Route path="/pref" component={Pref} />
+        <Route path="/print" render={print} />
       </Fragment>
     )
   }

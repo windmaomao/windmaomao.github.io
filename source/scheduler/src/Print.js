@@ -92,7 +92,7 @@ class Print extends Component {
         <ReactToPrint trigger={() => this.fab()}
           content={() => this.componentRef}
         />
-        <div className={'allow-print'} ref={el => (this.componentRef = el)}>
+        <div ref={el => (this.componentRef = el)}>
           <h1>Today Schedule</h1>
           {pages.map((page, index) => (
             <div key={index}>

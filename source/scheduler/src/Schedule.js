@@ -40,7 +40,6 @@ class Schedule extends Component {
   stepPlan() {
     // scheduler.prepare();
     scheduler.stepToNext();
-    console.log(scheduler.teacherInfo());
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
@@ -88,7 +87,7 @@ class Schedule extends Component {
     const {loading, slots, ids, usages, total, errors} = this.state;
     return (
       <div>
-        {this.print()}
+        {/* {this.print()} */}
         {this.title(total)}
         {this.error(errors)}
         {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
