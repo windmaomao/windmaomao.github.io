@@ -15,11 +15,14 @@ import {scheduler} from './Scheduler';
 
 const styles = theme => ({
   table: {
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
   },
   row: {
     height: "30px", 
     padding: "0px"
+  },
+  timeCol: {
+    width: '2rem'
   },
   fab: {
     position: 'fixed',
@@ -36,7 +39,6 @@ class Print extends Component {
   getDesks(list, prev) {
     if (!list || !list.length) return list;
     let final = list.slice(0);
-    console.log(final, prev);
     // conforming to the previous arrangement
     const avails = [];
     if (prev && prev.length) {
@@ -69,13 +71,17 @@ class Print extends Component {
 
   persons(list) {
     if (!list || !list.length) return <span></span>;
+    const display = list.map(item => {
+      const parts = item.split(' ');
+      return parts[0].padStart(8);
+    })
     return (
-        <span>{list.join(', ')}</span>
+        <pre>{display.join(' |')}</pre>
     );
   }
 
   slots(ids) {
-    const {slots} = this.props;
+    const {slots, classes} = this.props;
     const time = scheduler.slot2time;
     const headerCols = ids.map(id => (
       <Fragment key={id}>
@@ -88,13 +94,12 @@ class Print extends Component {
       const prev = memorySlot[id] ? memorySlot[id].slice(0) : [];
       const current = this.getDesks(slots[slot][id], prev);
       const elm = <Fragment key={id}>
-        <TableCell>{time(slot)}</TableCell>
+        <TableCell className={classes.timeCol}>{time(slot)}</TableCell>
         <TableCell>{this.persons(current)}</TableCell>
       </Fragment>;
       memorySlot[id] = current;
       return elm;
     });
-    const {classes} = this.props;
     return (
       <div>
         <h2>{ids.join(', ')}</h2>
@@ -138,12 +143,12 @@ class Print extends Component {
         <ReactToPrint trigger={() => this.fab()}
           content={() => this.componentRef}
         />
-        <div ref={el => (this.componentRef = el)}>
+        <div ref={el => (this.componentRef = el)} className="allow-print">
           <h1>Today Schedule</h1>
           {pages.map((page, index) => (
             <div key={index}>
               {this.slots(page)}
-              <div className={'print-page-break'}></div>
+              <div className={'print-page-break'}>&nbsp;</div>
             </div>
           ))}
         </div>

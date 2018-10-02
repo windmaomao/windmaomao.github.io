@@ -1,7 +1,6 @@
-.allow-print {
-  display: none;
-  width: 100%;
-  margin: 1rem;
+pre {
+  margin: 0rem;
+  font-size: 0.8rem;
 }
 
 @media print
@@ -11,19 +10,22 @@
   }
 
   .allow-print {
+    width: 100%;
     display: block !important;
+    margin: 1rem;
   }
 
   .print-page-break {
     page-break-after: always;
+    margin: 5rem;
   }
 
-  div { 
+  /* div { 
     float: none !important; 
     position: static !important; 
     display: inline; 
     box-sizing: content-box !important;
-  }
+  } */
 
   body {
     overflow: visible !important;
