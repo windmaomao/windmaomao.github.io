@@ -5,10 +5,11 @@
 ### 09/27 
 
 - ~~fill slots based on permutation~~
+- ~~print button not clickable~~
+- align print col names
 - support morning time as well
 - last name shouldn't be on same teacher
 - print needs to have page break
-- print button not clickable
 - teacher in print needs to align well
 
 ### 09/23

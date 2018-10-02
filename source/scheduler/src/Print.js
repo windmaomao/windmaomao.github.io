@@ -14,6 +14,13 @@ import Button from '@material-ui/core/Button';
 import {scheduler} from './Scheduler';
 
 const styles = theme => ({
+  table: {
+    fontFamily: 'monospace'
+  },
+  row: {
+    height: "30px", 
+    padding: "0px"
+  },
   fab: {
     position: 'fixed',
     bottom: theme.spacing.unit * 2,
@@ -25,8 +32,43 @@ const styles = theme => ({
 });
 
 class Print extends Component {
-  avatars(list) {
-    if (!list) return <span></span>;
+
+  getDesks(list, prev) {
+    if (!list || !list.length) return list;
+    let final = list.slice(0);
+    console.log(final, prev);
+    // conforming to the previous arrangement
+    const avails = [];
+    if (prev && prev.length) {
+      final = prev.slice(0);
+      // place holder for existing items
+      for (let i=0; i<prev.length; i++) {
+        // if a prev item not in list
+        if (list.indexOf(prev[i]) < 0) {
+          final[i] = '';
+          avails.push(i);
+        }
+      }
+      // fill new items
+      let j = 0;
+      for (let i=0; i<list.length; i++) {
+        // for new item 
+        const item = list[i];
+        if (final.indexOf(item) < 0) {
+          j++;
+          if (j > avails.length) {
+            final.push(item);
+          } else {
+            final[avails[j-1]] = item;
+          }
+        }
+      }
+    } 
+    return final;   
+  }
+
+  persons(list) {
+    if (!list || !list.length) return <span></span>;
     return (
         <span>{list.join(', ')}</span>
     );
@@ -34,7 +76,6 @@ class Print extends Component {
 
   slots(ids) {
     const {slots} = this.props;
-    const gunnarStyle = { height: "30px", padding: "0px"};
     const time = scheduler.slot2time;
     const headerCols = ids.map(id => (
       <Fragment key={id}>
@@ -42,23 +83,29 @@ class Print extends Component {
         <TableCell>{id}</TableCell>
       </Fragment>
     ));
-    const bodyCols = slot => ids.map(id => (
-      <Fragment key={id}>
+    const memorySlot = {};
+    const bodyCols = slot => ids.map(id => {
+      const prev = memorySlot[id] ? memorySlot[id].slice(0) : [];
+      const current = this.getDesks(slots[slot][id], prev);
+      const elm = <Fragment key={id}>
         <TableCell>{time(slot)}</TableCell>
-        <TableCell>{this.avatars(slots[slot][id])}</TableCell>
-      </Fragment>
-    ));
+        <TableCell>{this.persons(current)}</TableCell>
+      </Fragment>;
+      memorySlot[id] = current;
+      return elm;
+    });
+    const {classes} = this.props;
     return (
       <div>
         <h2>{ids.join(', ')}</h2>
         <h3>{'July 16, 3:00 - 7:00'}</h3>
-        <Table>
+        <Table className={classes.table}>
           <TableHead>
             <TableRow>{headerCols}</TableRow>
           </TableHead>
           <TableBody>
             {Object.keys(slots).map(slot => (
-              <TableRow key={slot} style={gunnarStyle}>{bodyCols(slot)}</TableRow>
+              <TableRow key={slot} className={classes.row}>{bodyCols(slot)}</TableRow>
             ))}
           </TableBody>
         </Table>
@@ -108,6 +155,7 @@ class Print extends Component {
 Print.propTypes = {
   slots: PropTypes.object.isRequired,
   usages: PropTypes.object,
+  classes: PropTypes.object
 }
 
 // export default Plan;
