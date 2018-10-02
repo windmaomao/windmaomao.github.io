@@ -1,5 +1,5 @@
 // third party
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import ReactToPrint from "react-to-print";
@@ -36,23 +36,29 @@ class Print extends Component {
     const {slots} = this.props;
     const gunnarStyle = { height: "30px", padding: "0px"};
     const time = scheduler.slot2time;
+    const headerCols = ids.map(id => (
+      <Fragment key={id}>
+        <TableCell>Time</TableCell>
+        <TableCell>{id}</TableCell>
+      </Fragment>
+    ));
+    const bodyCols = slot => ids.map(id => (
+      <Fragment key={id}>
+        <TableCell>{time(slot)}</TableCell>
+        <TableCell>{this.avatars(slots[slot][id])}</TableCell>
+      </Fragment>
+    ));
     return (
       <div>
         <h2>{ids.join(', ')}</h2>
         <h3>{'July 16, 3:00 - 7:00'}</h3>
         <Table>
           <TableHead>
-            <TableRow>
-              <TableCell>Time</TableCell>
-              {ids.map(id => <TableCell key={id}>{id}</TableCell>)}
-            </TableRow>
+            <TableRow>{headerCols}</TableRow>
           </TableHead>
           <TableBody>
             {Object.keys(slots).map(slot => (
-              <TableRow key={slot} style={gunnarStyle}>
-                <TableCell>{time(slot)}</TableCell>
-                {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
-              </TableRow>
+              <TableRow key={slot} style={gunnarStyle}>{bodyCols(slot)}</TableRow>
             ))}
           </TableBody>
         </Table>
