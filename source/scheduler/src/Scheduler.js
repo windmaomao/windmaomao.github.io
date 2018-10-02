@@ -13,7 +13,7 @@ export default class SchedulerService {
     return min/this.slotMins;
   }
 
-  slot2time(slot) {
+  slot2time = slot => {
     const total = slot*this.slotMins;  
     const hours = Math.floor(total/60);
     const mins = total - hours*60;

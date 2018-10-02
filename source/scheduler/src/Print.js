@@ -10,6 +10,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
+// services
+import {scheduler} from './Scheduler';
 
 const styles = theme => ({
   fab: {
@@ -23,16 +25,6 @@ const styles = theme => ({
 });
 
 class Print extends Component {
-  slotMins = 15;
-
-  slot2time(slot) {
-    const total = slot*this.slotMins;  
-    const hours = Math.floor(total/60);
-    const mins = total - hours*60;
-    var s = "00" + mins;
-    return hours + ':' + s.substr(s.length-2);
-  }
-
   avatars(list) {
     if (!list) return <span></span>;
     return (
@@ -43,6 +35,7 @@ class Print extends Component {
   slots(ids) {
     const {slots} = this.props;
     const gunnarStyle = { height: "30px", padding: "0px"};
+    const time = scheduler.slot2time;
     return (
       <div>
         <h2>{ids.join(', ')}</h2>
@@ -57,7 +50,7 @@ class Print extends Component {
           <TableBody>
             {Object.keys(slots).map(slot => (
               <TableRow key={slot} style={gunnarStyle}>
-                <TableCell>{this.slot2time(slot)}</TableCell>
+                <TableCell>{time(slot)}</TableCell>
                 {ids.map(id => <TableCell key={id}>{this.avatars(slots[slot][id])}</TableCell>)}
               </TableRow>
             ))}
