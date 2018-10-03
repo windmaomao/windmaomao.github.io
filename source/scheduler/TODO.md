@@ -7,10 +7,15 @@
 - ~~fill slots based on permutation~~
 - ~~print button not clickable~~
 - ~~align print col names~~
-- support morning time as well
-- last name shouldn't be on same teacher
 - ~~print needs to have page break~~
 - ~~teacher in print needs to align well~~
+- ~~print perfect with grid, first name only~~
+- ~~missing time in each column~~
+- ~~print button not clickable~~
+- shuffle the teachers
+- support morning time as well
+- last name shouldn't be on same teacher
+- make sure the code has no dead end
 
 ### 09/23
 

@@ -86,6 +86,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | Bundle Hunt    | $ 20   | 2015 | Bundle   |
 | Anarchy Bundle | $ 15   | 2015 | Bundle   |
 | Sketch         | $ 99   | 2015 | Design   |
+| Tictoc         | $  5   | 2014 | Time     |
 | Kaleidoscope   | $ 70   | 2014 | Compare  |
 | NanoBundle 5   | $ 20   | 2014 | Bundle   |
 | LaunchBar      | $ 2    | 2014 | Utility  |

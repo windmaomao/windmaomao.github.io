@@ -8,9 +8,11 @@
 
 - ~~Sell new phone~~
 - ~~Book appointment for `service`~~
-- Update annual
-- Book doc for `Lucas`
-- Fix bugs for `scheduler`
+- ~~Update annual~~
+- ~~Book doc for `Lucas` ~~
+- ~~Meet David and get briefingt~~
+- ~~Fix annual asset half issue~~
+- ~~Fix bugs for `scheduler`~~
 - Sell laptops `broken`
 
 #### 09/25
