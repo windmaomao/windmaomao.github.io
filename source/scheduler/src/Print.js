@@ -103,7 +103,7 @@ class Print extends Component {
     return (
       <div>
         <h2>{ids.join(', ')}</h2>
-        <h3>{'July 16, 3:00 - 7:00'}</h3>
+        <h3>{'3:00 - 7:00'}</h3>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>{headerCols}</TableRow>
