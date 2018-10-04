@@ -11,7 +11,7 @@ class Print extends Component {
     const chunk = (arr, size) => arr.reduce((acc, _, i) =>
       (i % size) ? acc : [...acc, arr.slice(i, i + size)], []
     );
-    const groups = chunk(Object.keys(usages), 3);
+    const groupIds = chunk(Object.keys(usages), 3);
 
     return (
       <div>
@@ -20,8 +20,8 @@ class Print extends Component {
         />
         <div ref={el => (this.componentRef = el)} className="allow-print">
           <h1>Today's Schedule</h1>
-          {groups.map((group, i) => (
-            <Slots key={i} slots={slots} groupIds={group} />
+          {groupIds.map((ids, i) => (
+            <Slots key={i} slots={slots} ids={ids} />
           ))}
         </div>
  
