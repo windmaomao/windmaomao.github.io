@@ -32,6 +32,11 @@ export default class SchedulerService {
   tryMapStudentToTeacher(slots, student, teacher) {
     let matchAllSlots = true;
     const slotsMap = cloneDeep(slots);
+    const lastName = name => {
+      const parts = name.split(' ');
+      return parts.length > 1 ? parts[1] : null;
+    };
+    const studentLastName = lastName(student.id);
 
     // for each slot required by the student
     for (let i = student.start; i <= student.end; i++) { 
@@ -53,6 +58,13 @@ export default class SchedulerService {
       // if teacher has enough students
       if (students.length === this.maxStudents) {
         matchAllSlots = false;
+      }
+      // if teacher has students with unique last name
+      if (studentLastName) {
+        const lastNames = students.map(prev => lastName(prev));
+        if (lastNames.indexOf(studentLastName) >= 0) {
+          matchAllSlots = false;
+        } 
       }
       // accept this teacher
       if (matchAllSlots) {
