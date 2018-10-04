@@ -28,9 +28,9 @@ const slotTeacherCols = (slots, slot, id) => {
   const elm = (
     <Fragment key={id}>
       <Table.Cell>{time(slot)}</Table.Cell>
-      <Table.Cell>{current}</Table.Cell>
-      <Table.Cell>{''}</Table.Cell>
-      <Table.Cell>{''}</Table.Cell>
+      <Table.Cell>{current[0]}</Table.Cell>
+      <Table.Cell>{current[1]}</Table.Cell>
+      <Table.Cell>{current[2]}</Table.Cell>
     </Fragment>
   );
   memorySlot[id] = current;
@@ -38,7 +38,13 @@ const slotTeacherCols = (slots, slot, id) => {
 }
 
 const _desks = (list, prev) => {
-  if (!list || !list.length) return list;
+  const padArray = (arr, len, fill) => {
+    return arr.concat(Array(len).fill(fill)).slice(0,len);
+  }
+
+  if (!list || !list.length) {
+    return padArray([], 3, '');
+  }
   let final = list.slice(0);
   // conforming to the previous arrangement
   const avails = [];
@@ -67,7 +73,7 @@ const _desks = (list, prev) => {
       }
     }
   } 
-  return final;   
+  return padArray(final, 3, '');   
 }
 
 const Slots = props => (
@@ -75,7 +81,7 @@ const Slots = props => (
     <div>
       {props.ids.map(teacherLabel)}
     </div>
-    <Table celled>
+    <Table compact>
       <Table.Header>
         <Table.Row>
           {props.ids.map(teacherHeaderCols)}
