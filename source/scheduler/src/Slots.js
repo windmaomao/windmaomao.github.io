@@ -1,13 +1,29 @@
 // third party
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 // components
 import { Label, Icon, Table } from 'semantic-ui-react'
 
 const teacherLabel = id => (
-  <Label>
+  <Label key={id}>
     <Icon name='user' /> {id}
   </Label>
+);
+
+const teacherHeaderCols = id => (
+  <Fragment key={id}>
+    <Table.HeaderCell>Time</Table.HeaderCell>
+    <Table.HeaderCell colSpan="3">{id}</Table.HeaderCell>
+  </Fragment>
+);
+
+const slotTeacherCols = (slot, id) => (
+  <Fragment key={id}>
+    <Table.Cell>{slot}</Table.Cell>
+    <Table.Cell>{id}</Table.Cell>
+    <Table.Cell>{id}</Table.Cell>
+    <Table.Cell>{id}</Table.Cell>
+  </Fragment>
 );
 
 const Slots = props => (
@@ -18,51 +34,16 @@ const Slots = props => (
     <Table celled>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Slot</Table.HeaderCell>
-          <Table.HeaderCell colSpan="3">T1</Table.HeaderCell>
-          <Table.HeaderCell colSpan="3">T2</Table.HeaderCell>
-        </Table.Row>
-        <Table.Row>
-          <Table.HeaderCell></Table.HeaderCell>
-          <Table.HeaderCell>S1</Table.HeaderCell>
-          <Table.HeaderCell>S2</Table.HeaderCell>
-          <Table.HeaderCell>S3</Table.HeaderCell>
-          <Table.HeaderCell>S1</Table.HeaderCell>
-          <Table.HeaderCell>S2</Table.HeaderCell>
-          <Table.HeaderCell>S3</Table.HeaderCell>
+          {props.ids.map(teacherHeaderCols)}
         </Table.Row>
       </Table.Header>
 
       <Table.Body>
-        <Table.Row>
-          <Table.Cell>
-            <Label ribbon>First</Label>
-          </Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-          <Table.Cell>Cell</Table.Cell>
-        </Table.Row>
+        {Object.keys(props.slots).map(slot => (
+          <Table.Row>
+            {props.ids.map(id => slotTeacherCols(slot, id))}
+          </Table.Row>
+        ))}
       </Table.Body>
     </Table>    
   </div>         
