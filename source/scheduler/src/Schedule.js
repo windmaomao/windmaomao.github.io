@@ -52,7 +52,7 @@ class Schedule extends Component {
   title(total) {
     const {loading} = this.props;
     return (
-      <div className={'App-title'}>
+      <div>
         <span style={{float: 'right'}}>
           <Button 
             variant="contained" color="primary"
@@ -87,7 +87,6 @@ class Schedule extends Component {
     const {loading, slots, ids, usages, total, errors} = this.state;
     return (
       <div>
-        {/* {this.print()} */}
         {this.title(total)}
         {this.error(errors)}
         {!loading && <Plan slots={slots} ids={ids} usages={usages} />}

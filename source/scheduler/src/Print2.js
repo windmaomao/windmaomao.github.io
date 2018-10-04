@@ -3,7 +3,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactToPrint from "react-to-print";
 // components
+import { Button } from 'semantic-ui-react'
 import Slots from './Slots';
+
+const buttonStyle = {
+  float: 'right',
+  marginTop: '0.5rem'
+};
+const PrintButton = (
+  <Button circular color='red' style={buttonStyle}>Print</Button>
+);
 
 class Print extends Component {
   render() {
@@ -15,10 +24,11 @@ class Print extends Component {
 
     return (
       <div>
-        <ReactToPrint trigger={() => <a style={{float: 'right'}}>Print</a>}
+        <ReactToPrint trigger={() => PrintButton}
           content={() => this.componentRef}
         />
         <div ref={el => (this.componentRef = el)} className="allow-print">
+          <span></span>
           <h1>Today's Schedule</h1>
           {groupIds.map((ids, i) => (
             <Slots key={i} slots={slots} ids={ids} />

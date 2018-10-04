@@ -57,6 +57,7 @@ class Teacher extends Component {
     const printTime = s => scheduler.slot2time(s);
     return (
       <div>
+        <span></span>
         <h1>Teachers ({teachers.length})</h1>
         {this.renderUpload()}
 

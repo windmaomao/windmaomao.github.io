@@ -29,7 +29,9 @@ const slotTeacherCols = (slots, slot, id) => {
 
   const elm = (
     <Fragment key={id}>
-      <Table.Cell textAlign='center'>{time(slot)}</Table.Cell>
+      <Table.Cell textAlign='center'>
+        <Label size={'mini'} style={{ color: 'black' }}>{time(slot)}</Label>
+      </Table.Cell>
       <Table.Cell textAlign='center'>{firstName(current[0])}&nbsp;</Table.Cell>
       <Table.Cell textAlign='center'>{firstName(current[1])}&nbsp;</Table.Cell>
       <Table.Cell textAlign='center'>{firstName(current[2])}&nbsp;</Table.Cell>
