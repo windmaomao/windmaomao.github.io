@@ -27,15 +27,6 @@ export default class SchedulerService {
       return acc + usages[teacher];
     }, 0);
   }
-
-  // can map
-  canMapStudentToTeacher(student, teacher, slots) {
-    if ((student.start < teacher.start) || (student.end > teacher.end)) {
-      return false;
-    }
-    return true;
-  }
-
   
   // apply map
   tryMapStudentToTeacher(slots, student, teacher) {
@@ -231,7 +222,7 @@ export default class SchedulerService {
       const student = students[i];
       const teacher = student.teachers[student.teacherIndex];
       let newSlots = null;
-      if (this.canMapStudentToTeacher(student, teacher, this.slots)) {
+      if ((student.start >= teacher.start) && (student.end <= teacher.end)) {
         newSlots= this.tryMapStudentToTeacher(this.slots, student, teacher);
       }
       if (!newSlots) {
