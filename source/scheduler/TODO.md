@@ -12,9 +12,9 @@
 - ~~print perfect with grid, first name only~~
 - ~~missing time in each column~~
 - ~~print button not clickable~~
+- last name shouldn't be on same teacher
 - shuffle the teachers
 - support morning time as well
-- last name shouldn't be on same teacher
 - make sure the code has no dead end
 
 ### 09/23

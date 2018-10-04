@@ -2,18 +2,24 @@
 
 ## 2018
 
-### Aug
+### Oct
+
+#### 10/3
+
+- Walk in to get x-ray 
+- Sell laptops `broken`
+
+### Sep
 
 #### 09/28
 
 - ~~Sell new phone~~
 - ~~Book appointment for `service`~~
 - ~~Update annual~~
-- ~~Book doc for `Lucas` ~~
+- ~~Book doc for `Lucas`~~
 - ~~Meet David and get briefingt~~
 - ~~Fix annual asset half issue~~
 - ~~Fix bugs for `scheduler`~~
-- Sell laptops `broken`
 
 #### 09/25
 
@@ -89,6 +95,8 @@
 - ~~Update monthly~~
 - ~~Backup project repo~~
 - ~~Update `HSA` and `401`~~
+
+### Aug
 
 #### 8/27
 
