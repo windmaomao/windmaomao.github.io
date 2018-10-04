@@ -8,7 +8,7 @@ import Schedule from './Schedule';
 import Student from './Student';
 import Teacher from './Teacher';
 import Pref from './Pref';
-import Print from './Print';
+// import Print from './Print';
 import Print2 from './Print2';
 // services
 import {scheduler} from './Scheduler';
