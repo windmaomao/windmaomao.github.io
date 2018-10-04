@@ -9,6 +9,7 @@ import Student from './Student';
 import Teacher from './Teacher';
 import Pref from './Pref';
 import Print from './Print';
+import Print2 from './Print2';
 // services
 import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
@@ -42,7 +43,7 @@ class App extends Component {
     }
 
     const print = props => {
-      return <Print slots={scheduler.slots} usages={scheduler.teacherUsage} />
+      return <Print2 slots={scheduler.slots} usages={scheduler.teacherUsage} />
     };
     return (
       <Fragment>
