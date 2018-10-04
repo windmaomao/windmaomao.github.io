@@ -15,7 +15,7 @@ class Print extends Component {
 
     return (
       <div>
-        <ReactToPrint trigger={() => <a>Print</a>}
+        <ReactToPrint trigger={() => <a style={{float: 'right'}}>Print</a>}
           content={() => this.componentRef}
         />
         <div ref={el => (this.componentRef = el)} className="allow-print">

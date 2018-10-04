@@ -25,12 +25,14 @@ const teacherHeaderCols = id => (
 const slotTeacherCols = (slots, slot, id) => {
   const prev = memorySlot[id] ? memorySlot[id].slice(0) : [];
   const current = _desks(slots[slot][id], prev);
+  const firstName = name => (name.split(' '))[0];
+
   const elm = (
     <Fragment key={id}>
       <Table.Cell textAlign='center'>{time(slot)}</Table.Cell>
-      <Table.Cell textAlign='center'>{current[0]}&nbsp;</Table.Cell>
-      <Table.Cell textAlign='center'>{current[1]}&nbsp;</Table.Cell>
-      <Table.Cell textAlign='center'>{current[2]}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{firstName(current[0])}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{firstName(current[1])}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{firstName(current[2])}&nbsp;</Table.Cell>
     </Fragment>
   );
   memorySlot[id] = current;
@@ -86,7 +88,7 @@ const Slots = props => (
     <div>
       {props.ids.map(teacherLabel)}
     </div>
-    <Table compact>
+    <Table compact striped>
       <Table.Header>
         <Table.Row>
           {props.ids.map(teacherHeaderCols)}
