@@ -12,7 +12,8 @@
     "react-dom": "^16.5.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
-    "react-to-print": "^2.0.0-alpha-3"
+    "react-to-print": "^2.0.0-alpha-3",
+    "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
     "start": "PORT=3088 react-scripts start",
