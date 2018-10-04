@@ -8,6 +8,8 @@
 
 - Walk in to get x-ray 
 - Sell laptops `broken`
+- Maintainance `toyota`
+- Meeting `boa`
 
 ### Sep
 

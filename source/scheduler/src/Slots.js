@@ -17,8 +17,8 @@ const teacherLabel = id => (
 
 const teacherHeaderCols = id => (
   <Fragment key={id}>
-    <Table.HeaderCell>Time</Table.HeaderCell>
-    <Table.HeaderCell colSpan="3">{id}</Table.HeaderCell>
+    <Table.HeaderCell textAlign='center'>Time</Table.HeaderCell>
+    <Table.HeaderCell colSpan="3" textAlign='center'>{id}</Table.HeaderCell>
   </Fragment>
 );
 
@@ -27,10 +27,10 @@ const slotTeacherCols = (slots, slot, id) => {
   const current = _desks(slots[slot][id], prev);
   const elm = (
     <Fragment key={id}>
-      <Table.Cell>{time(slot)}</Table.Cell>
-      <Table.Cell>{current[0]}</Table.Cell>
-      <Table.Cell>{current[1]}</Table.Cell>
-      <Table.Cell>{current[2]}</Table.Cell>
+      <Table.Cell textAlign='center'>{time(slot)}</Table.Cell>
+      <Table.Cell textAlign='center'>{current[0]}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{current[1]}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{current[2]}&nbsp;</Table.Cell>
     </Fragment>
   );
   memorySlot[id] = current;
@@ -76,8 +76,13 @@ const _desks = (list, prev) => {
   return padArray(final, 3, '');   
 }
 
+const styles = { 
+  margin: '5rem auto',
+  pageBreakAfter: 'always',
+  maxWidth: '1024px',
+};
 const Slots = props => (
-  <div>
+  <div style={styles}>
     <div>
       {props.ids.map(teacherLabel)}
     </div>
