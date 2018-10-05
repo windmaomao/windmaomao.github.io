@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 // secondary components
 // services
 import {scheduler} from './Scheduler';
+import {slotPrintTime, displayTimeToSlot} from './constant';
 
 class Teacher extends Component {
   constructor(props) {
@@ -21,14 +22,10 @@ class Teacher extends Component {
 
   process(data) {
     const nonEmpty = data.filter(item => item.teacher);
-    const timeToSlot = time => {
-      const parts = time.split(':').map(item => parseInt(item, 10));
-      return parts[0]*4+parts[1]/15- 48;
-    }
     const processed = nonEmpty.map(item => {
       const id = item.teacher.trim();
-      const start = timeToSlot(item.start.trim());
-      const end = timeToSlot(item.end.trim())-1;
+      const start = displayTimeToSlot(item.start.trim());
+      const end = displayTimeToSlot(item.end.trim())-1;
       return {id, start, end};
     });
     return processed;
@@ -54,7 +51,6 @@ class Teacher extends Component {
   render() {
     const {teachers} = this.state;
     const gunnarStyle = { height: "30px", padding: "0px"};
-    const printTime = s => scheduler.slot2time(s);
     return (
       <div>
         <span></span>
@@ -73,8 +69,8 @@ class Teacher extends Component {
             {teachers.map((teacher, index) => (
               <TableRow key={index} style={gunnarStyle}>
                 <TableCell>{teacher.id}</TableCell>
-                <TableCell>{printTime(teacher.start)}</TableCell>
-                <TableCell>{printTime(teacher.end+1)}</TableCell>
+                <TableCell>{slotPrintTime(teacher.start)}</TableCell>
+                <TableCell>{slotPrintTime(teacher.end+1)}</TableCell>
               </TableRow>
             ))}
           </TableBody>
