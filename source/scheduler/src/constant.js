@@ -3,7 +3,7 @@ const slotMaxStudents = 3;
 // How many minutes in a slot
 const slotMinutes = 15;
 // How many slots in minutes
-const slotsInDuration = minutes => minutes / slotMinutes;
+const slotsInDuration = minutes => Math.round(minutes / slotMinutes);
 // How many slots in a hour
 const slotsPerHour = slotsInDuration(60);
 // Display time of a slot
@@ -15,7 +15,7 @@ const slotPrintTime = slot => {
   return hours + ':' + s.substr(s.length-2);
 }
 // How many hour do we shift to start the day
-const slotHourShift = 12;
+const slotHourShift = 0;
 // How many slots in hour and min
 const _time2slot = (hour, min) => {
   return hour * slotsPerHour + min / slotMinutes - slotHourShift * slotsPerHour;  
