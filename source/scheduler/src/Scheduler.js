@@ -1,5 +1,5 @@
 // libraries
-import {find, cloneDeep, sortBy, filter} from 'lodash';
+import {find, cloneDeep, sortBy, filter, shuffle} from 'lodash';
 // services
 import {slotMinutes, slotPrintTime, slotMaxStudents} from './constant';
 
@@ -8,6 +8,7 @@ export default class SchedulerService {
     this.slotMins = slotMinutes;
     this.maxStudents = slotMaxStudents;
     this.acceptPref = true;
+    this.shuffleTeacher = true;
     this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
   }
@@ -99,6 +100,7 @@ export default class SchedulerService {
     return null;
   }
   
+  // TODO: retire this function
   // sort teachers by preferences
   sortTeachers(teachers, pref) {
     if (!pref) return teachers;
@@ -120,6 +122,27 @@ export default class SchedulerService {
       teacher.ranking = ranking - usage;
     });
 
+    const filtered = filter(list, function(o) { return o.ranking <= 0; });
+    return sortBy(filtered, ['ranking']);
+  }
+
+  // filter teacher based on pref
+  preferTeachers(teachers, pref, isShuffled) {
+    let list = cloneDeep(teachers);
+    if (isShuffled) {
+      list = shuffle(list);
+    }
+    if (!pref) return list;
+    list.forEach((teacher, index) => {
+      let ranking = 0;
+      if (pref.prefers.indexOf(teacher.id) >= 0) {
+        ranking = ranking - 10000;
+      } 
+      if (pref.rejects.indexOf(teacher.id) >= 0) {
+        ranking = ranking + 10000;
+      }
+      teacher.ranking = ranking;
+    });
     const filtered = filter(list, function(o) { return o.ranking <= 0; });
     return sortBy(filtered, ['ranking']);
   }
@@ -190,7 +213,7 @@ export default class SchedulerService {
       let prefTeachers = teachers;
       if (this.acceptPref) {
         const pref = find(prefs, { 'id': student.id });
-        prefTeachers = this.sortTeachers(teachers, pref);
+        prefTeachers = this.preferTeachers(teachers, pref, this.shuffleTeacher);
       }
       student.teachers = prefTeachers;
       student.teacherIndex = 0;

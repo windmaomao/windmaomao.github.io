@@ -4,8 +4,8 @@
 
 ### 10/05
 
-- shuffle the teachers
-- support morning time as well
+- ~~support morning time as well~~
+- ~~shuffle the teachers~~
 - make sure the code has no dead end
 
 ### 09/27 
