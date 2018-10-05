@@ -5,6 +5,8 @@ import ReactToPrint from "react-to-print";
 // components
 import { Button } from 'semantic-ui-react'
 import Slots from './Slots';
+// services
+import {printTeacherGroup} from './constant';
 
 const buttonStyle = {
   float: 'right',
@@ -17,10 +19,7 @@ const PrintButton = (
 class Print extends Component {
   render() {
     const {slots, usages} = this.props;
-    const chunk = (arr, size) => arr.reduce((acc, _, i) =>
-      (i % size) ? acc : [...acc, arr.slice(i, i + size)], []
-    );
-    const groupIds = chunk(Object.keys(usages), 3);
+    const groupIds = printTeacherGroup(Object.keys(usages));
 
     return (
       <div>

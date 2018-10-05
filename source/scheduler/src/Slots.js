@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 // components
 import { Label, Icon, Table } from 'semantic-ui-react'
 // services
-import {scheduler} from './Scheduler';
+import {slotPrintTime, slotMaxStudents} from './constant';
 // locals
-const time = scheduler.slot2time;
 const memorySlot = {};
 
 const teacherLabel = id => (
@@ -18,7 +17,7 @@ const teacherLabel = id => (
 const teacherHeaderCols = id => (
   <Fragment key={id}>
     <Table.HeaderCell textAlign='center'>Time</Table.HeaderCell>
-    <Table.HeaderCell colSpan="3" textAlign='center'>{id}</Table.HeaderCell>
+    <Table.HeaderCell colSpan={slotMaxStudents} textAlign='center'>{id}</Table.HeaderCell>
   </Fragment>
 );
 
@@ -30,7 +29,7 @@ const slotTeacherCols = (slots, slot, id) => {
   const elm = (
     <Fragment key={id}>
       <Table.Cell textAlign='center'>
-        <Label size={'mini'} style={{ color: 'black' }}>{time(slot)}</Label>
+        <Label size={'mini'} style={{ color: 'black' }}>{slotPrintTime(slot)}</Label>
       </Table.Cell>
       <Table.Cell textAlign='center'>{firstName(current[0])}&nbsp;</Table.Cell>
       <Table.Cell textAlign='center'>{firstName(current[1])}&nbsp;</Table.Cell>
@@ -47,7 +46,7 @@ const _desks = (list, prev) => {
   }
 
   if (!list || !list.length) {
-    return padArray([], 3, '');
+    return padArray([], slotMaxStudents, '');
   }
   let final = list.slice(0);
   // conforming to the previous arrangement
@@ -77,7 +76,7 @@ const _desks = (list, prev) => {
       }
     }
   } 
-  return padArray(final, 3, '');   
+  return padArray(final, slotMaxStudents, '');   
 }
 
 const styles = { 

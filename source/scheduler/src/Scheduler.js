@@ -1,9 +1,12 @@
+// libraries
 import {find, cloneDeep, sortBy, filter} from 'lodash';
+// services
+import {slotMinutes, slotPrintTime, slotMaxStudents} from './constant';
 
 export default class SchedulerService {
   constructor() {
-    this.slotMins = 15;
-    this.maxStudents = 3;
+    this.slotMins = slotMinutes;
+    this.maxStudents = slotMaxStudents;
     this.acceptPref = true;
     this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
@@ -13,13 +16,7 @@ export default class SchedulerService {
     return min/this.slotMins;
   }
 
-  slot2time = slot => {
-    const total = slot*this.slotMins;  
-    const hours = Math.floor(total/60);
-    const mins = total - hours*60;
-    var s = "00" + mins;
-    return hours + ':' + s.substr(s.length-2);
-  }
+  slot2time = slotPrintTime;
 
   totalSlots() {
     const usages = this.teacherUsage;

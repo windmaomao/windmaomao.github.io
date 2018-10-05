@@ -2,6 +2,12 @@
 
 ## 2018
 
+### 10/05
+
+- shuffle the teachers
+- support morning time as well
+- make sure the code has no dead end
+
 ### 09/27 
 
 - ~~fill slots based on permutation~~
@@ -13,9 +19,6 @@
 - ~~missing time in each column~~
 - ~~print button not clickable~~
 - ~~last name shouldn't be on same teacher~~
-- shuffle the teachers
-- support morning time as well
-- make sure the code has no dead end
 
 ### 09/23
 
