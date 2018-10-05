@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 // secondary components
 // services
 import {scheduler} from './Scheduler';
+import {slotsInDuration, jsDateToSlot} from './constant';
 
 class Student extends Component {
   constructor(props) {
@@ -23,10 +24,9 @@ class Student extends Component {
     const nonEmpty = data.filter(item => item.customer);
     const processed = nonEmpty.map(item => {
       const id = item.customer.replace('Student Name - ', '');
-      const date = new Date(item.date);
-      const start = Math.round(date.getHours()*4+date.getMinutes()/15) - 48;
+      const start = jsDateToSlot(new Date(item.date));
       const duration = item.duration.replace(' mins', '');
-      const end = start + Math.round(parseInt(duration, 10)/15) - 1;
+      const end = start + slotsInDuration(parseInt(duration, 10)) - 1;
       return {id, start, end};
     });
     return processed;

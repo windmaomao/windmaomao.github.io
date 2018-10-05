@@ -1,8 +1,11 @@
-// How many minutes in a slot
-const slotMinutes = 15;
-const slotsPerHour = 60 / slotMinutes;
 // How many students a teacher can take at the same slot
 const slotMaxStudents = 3;
+// How many minutes in a slot
+const slotMinutes = 15;
+// How many slots in minutes
+const slotsInDuration = minutes => minutes / slotMinutes;
+// How many slots in a hour
+const slotsPerHour = slotsInDuration(60);
 // Display time of a slot
 const slotPrintTime = slot => {
   const total = slot * slotMinutes;  
@@ -13,10 +16,18 @@ const slotPrintTime = slot => {
 }
 // How many hour do we shift to start the day
 const slotHourShift = 12;
+// How many slots in hour and min
+const _time2slot = (hour, min) => {
+  return hour * slotsPerHour + min / slotMinutes - slotHourShift * slotsPerHour;  
+}
 // Slot number of a display time
 const displayTimeToSlot = time => {
   const parts = time.split(':').map(item => parseInt(item, 10));
-  return parts[0] * slotsPerHour + parts[1] / slotMinutes - slotHourShift * slotsPerHour;
+  return _time2slot(parts[0], parts[1]);
+}
+// Slot number of a js date
+const jsDateToSlot = date => {
+  return _time2slot(date.getHours(), date.getMinutes());
 }
 // How many teachers in a row in print
 const printRowTeachers = 3;
@@ -29,9 +40,8 @@ const printTeacherGroup = teachers => {
 }
 
 export {
-  slotMinutes, slotsPerHour,
   slotMaxStudents,
-  slotPrintTime,
-  slotHourShift, displayTimeToSlot,
+  slotMinutes, slotsInDuration, slotsPerHour, slotPrintTime,
+  slotHourShift, displayTimeToSlot, jsDateToSlot,
   printRowTeachers, printTeacherGroup
 }
