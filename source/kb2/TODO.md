@@ -3,6 +3,8 @@
 ## 10/6
 
 - support collapse ul element
+- support tree display on sidebar
+- support multiple theme switcher
 
 ## 09/29
 

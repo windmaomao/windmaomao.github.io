@@ -8,6 +8,7 @@
 - ~~shuffle the teachers~~
 - make sure the code has no dead end
 - add logo to the print page
+- sort table
 
 ### 09/27 
 
@@ -28,7 +29,6 @@
 - ~~tab to display current students~~
 - ~~upload teacher info~~
 - ~~upload schedule info~~
-- sort table
 
 ### 09/16
 

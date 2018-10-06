@@ -21,48 +21,48 @@ class Schedule extends Component {
       usages: scheduler.teacherUsage,
       ids: Object.keys(scheduler.teacherUsage),
       total: scheduler.totalSlots(),
-      errors: scheduler.errors
+      errors: scheduler.errors,
+      disabled: true
     };
   }
 
   preparePlan() {
-    // scheduler.plan();
     scheduler.prepare();
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
       ids: Object.keys(scheduler.teacherUsage),
       total: scheduler.totalSlots(),
-      errors: scheduler.errors
+      errors: scheduler.errors,
+      disabled: false
     });
   }
 
   stepPlan() {
-    // scheduler.prepare();
-    scheduler.stepToNext();
+    const canContinue = scheduler.stepToNext();
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
       ids: Object.keys(scheduler.teacherUsage),
       total: scheduler.totalSlots(),
-      errors: scheduler.errors
+      errors: scheduler.errors,
+      disabled: !canContinue
     });
   }
 
   title(total) {
-    const {loading} = this.props;
+    const {disabled} = this.state;
     return (
       <div>
         <span style={{float: 'right'}}>
           <Button 
             variant="contained" color="primary"
             onClick={() => {this.preparePlan();}}
-            disabled={loading}
           >Prepare</Button>&nbsp;
           <Button 
             variant="contained" color="secondary"
             onClick={() => {this.stepPlan();}}
-            disabled={loading}
+            disabled={disabled}
           >Plan</Button>
         </span>
         <h1>Schedule <small>({total})</small></h1>

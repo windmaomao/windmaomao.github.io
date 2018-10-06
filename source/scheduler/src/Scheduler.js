@@ -218,6 +218,7 @@ export default class SchedulerService {
       student.teachers = prefTeachers;
       student.teacherIndex = 0;
     });
+    this.restartStep = true;
     this.studentStepIndex = -1;
   }
 
@@ -269,27 +270,34 @@ export default class SchedulerService {
   // step after prepare
   step() {
     let canStep = true;
-    const index = this.studentStepIndex;
-    if (index >=0) {
+    if (!this.restartStep) {
+      const index = this.studentStepIndex;
       canStep = this.stepForward(index);
+    } else {
+      this.restartStep = false;
     }
     if (canStep) {
       this.studentStepIndex = this.stepFill();
     }
     const {students} = this.data;
-    return this.studentStepIndex < students.length;
+    const notStopped = this.studentStepIndex >=0 && 
+      this.studentStepIndex < students.length;
+    return notStopped;
   }
 
   // step until success
   stepToNext() {
-    const {students} = this.data;
-    const len = students.length;
-    if (this.studentStepIndex === len) {
-      // TODO: find a way to randomize the next move
-      // Also how to stop in the last move
-      this.studentStepIndex = 0;
+    // restart or positive index can start
+    const canStart = (this.studentStepIndex >=0) || (this.restartStep);
+    if (!canStart) return false;
+    // index adjusted before start
+    if (this.studentStepIndex >=0) {
+      this.studentStepIndex = this.studentStepIndex - 1;
     }
+    // step until found or stopped
     while(this.step()) {};
+    const canContinue = !(this.studentStepIndex < 0);
+    return canContinue;
   }
 
   // debug info
