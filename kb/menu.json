@@ -1,5 +1,14 @@
 [
   {
+    "title": "Idea", "type": "other",
+    "items": [
+      "blueprint",
+      "crash",
+      "rendering",
+      "timesheet"
+    ]
+  },
+  {
     "title": "Resume", "type": "resume",
     "items": [
       "company",
@@ -25,7 +34,6 @@
     "items": [
       "account",
       "balace-sheet",
-      "crash",
       "debt",
       "direxion",
       "family-trust",

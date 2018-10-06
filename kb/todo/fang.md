@@ -7,8 +7,8 @@
 #### 10/3
 
 - Walk in to get x-ray 
-- Sell laptops `broken`
-- Maintainance `toyota`
+- Book `pd` timesheets
+- ~~Maintainance `toyota`~~
 - ~~Meeting `boa`~~
 
 ### Sep
