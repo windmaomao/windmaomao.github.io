@@ -1,5 +1,9 @@
 # KB2
 
+## 10/6
+
+- support collapse ul element
+
 ## 09/29
 
 - ~~convert md/html to doc file~~

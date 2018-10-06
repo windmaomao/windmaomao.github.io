@@ -7,6 +7,7 @@
 - ~~support morning time as well~~
 - ~~shuffle the teachers~~
 - make sure the code has no dead end
+- add logo to the print page
 
 ### 09/27 
 
