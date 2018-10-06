@@ -42,7 +42,6 @@ class Print extends Component {
 Print.propTypes = {
   slots: PropTypes.object.isRequired,
   usages: PropTypes.object,
-  classes: PropTypes.object
 }
 
 export default Print;

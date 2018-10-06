@@ -4,15 +4,11 @@ import React, {Component} from 'react';
 // primary components
 import Button from '@material-ui/core/Button';
 // secondary components
-import Plan from './Plan';
-import Print from './Print';
+import Print from './Print2';
 // services
 import {scheduler} from './Scheduler';
 
 class Schedule extends Component {
-  // debug = true;
-  debug = false;
-
   constructor(props) {
     super(props);
 
@@ -50,46 +46,25 @@ class Schedule extends Component {
     });
   }
 
-  title(total) {
-    const {disabled} = this.state;
-    return (
-      <div>
-        <span style={{float: 'right'}}>
-          <Button 
-            variant="contained" color="primary"
-            onClick={() => {this.preparePlan();}}
-          >Prepare</Button>&nbsp;
-          <Button 
-            variant="contained" color="secondary"
-            onClick={() => {this.stepPlan();}}
-            disabled={disabled}
-          >Plan</Button>
-        </span>
-        <h1>Schedule <small>({total})</small></h1>
-      </div>
-    );
-  }
-
-  error(errors) {
-    return <p style={{ color: 'red' }}>{errors.join(',')}</p>;
-  }
-
-  print() {
-    const {loading, slots, usages} = this.state;
-    return (
-      <div>
-        {!loading && <Print slots={slots} usages={usages} />}
-      </div>
-    )
-  }
-
   render() {
-    const {loading, slots, ids, usages, total, errors} = this.state;
+    const {total, disabled} = this.state;
     return (
       <div>
-        {this.title(total)}
-        {this.error(errors)}
-        {!loading && <Plan slots={slots} ids={ids} usages={usages} />}
+        <div>
+          <span style={{float: 'right'}}>
+            <Button 
+              variant="contained" color="primary"
+              onClick={() => {this.preparePlan();}}
+            >Prepare</Button>&nbsp;
+            <Button 
+              variant="contained" color="secondary"
+              onClick={() => {this.stepPlan();}}
+              disabled={disabled}
+            >Plan</Button>
+          </span>
+          <h1>Schedule <small>({total})</small></h1>
+        </div>
+        {total && <Print slots={scheduler.slots} usages={scheduler.teacherUsage} />}
       </div>
     );
   }
