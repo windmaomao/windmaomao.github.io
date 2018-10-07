@@ -9,11 +9,13 @@ import Slots from './Slots';
 import {printTeacherGroup} from './constant';
 
 const buttonStyle = {
-  float: 'right',
-  marginTop: '0.5rem'
+  position: 'fixed',
+  bottom: '2rem',
+  right: '2rem',
+  opacity: 0.4
 };
 const PrintButton = (
-  <Button circular color='red' style={buttonStyle}>Print</Button>
+  <Button circular color='gray' style={buttonStyle}>Print</Button>
 );
 
 class Print extends Component {
@@ -27,8 +29,6 @@ class Print extends Component {
           content={() => this.componentRef}
         />
         <div ref={el => (this.componentRef = el)} className="allow-print">
-          <span></span>
-          <h1>Today's Schedule</h1>
           {groupIds.map((ids, i) => (
             <Slots key={i} slots={slots} ids={ids} />
           ))}

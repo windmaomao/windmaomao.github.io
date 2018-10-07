@@ -64,7 +64,7 @@ class Schedule extends Component {
           </span>
           <h1>Schedule <small>({total})</small></h1>
         </div>
-        {total && <Print slots={scheduler.slots} usages={scheduler.teacherUsage} />}
+        <Print slots={scheduler.slots} usages={scheduler.teacherUsage} />
       </div>
     );
   }
