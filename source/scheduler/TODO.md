@@ -6,9 +6,9 @@
 
 - ~~support morning time as well~~
 - ~~shuffle the teachers~~
-- make sure the code has no dead end
-- add logo to the print page
-- sort table
+- ~~make sure the code has no dead end~~
+- add stop/resume/prepare/run function
+- print needs to reserve three teachers
 
 ### 09/27 
 

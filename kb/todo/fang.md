@@ -7,7 +7,7 @@
 #### 10/3
 
 - Walk in to get x-ray 
-- Book `pd` timesheets
+- ~~Book `pd` timesheets~~
 - ~~Maintainance `toyota`~~
 - ~~Meeting `boa`~~
 

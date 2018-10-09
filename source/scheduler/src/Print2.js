@@ -15,7 +15,7 @@ const buttonStyle = {
   opacity: 0.4
 };
 const PrintButton = (
-  <Button circular color='gray' style={buttonStyle}>Print</Button>
+  <Button circular color='grey' style={buttonStyle}>Print</Button>
 );
 
 class Print extends Component {
