@@ -23,17 +23,16 @@ class AppStore {
     this._gatherPrint();
   }
 
-  searchScheduleStart() {
+  async searchSchedule() {
     this.schedule.calculating = true;
-    this.schedule.canContinue = scheduler.stepToNext((index) => {
-      // TODO: make this variable dynamic
-      this.schedule.stepIndex = index;
-    });
-  }
-
-  searchScheduleEnd() {
-    this._gatherPrint();
-    this.schedule.calculating = false;
+    try {
+      const canContinue = await scheduler.stepThrough();
+      this.schedule.canContinue = canContinue;
+      this.schedule.calculating = false;
+    } catch (ex) {
+      console.error(ex);
+      this.schedule.calculating = false;
+    }
   }
 
   get stepProgress() {
@@ -44,8 +43,7 @@ class AppStore {
 decorate(AppStore, {
   schedule: observable,
   resetSchedule: action.bound,
-  searchScheduleStart: action.bound,
-  searchScheduleEnd: action.bound,
+  searchSchedule: action.bound,
   stepProgress: computed,
 });
 

@@ -9,10 +9,10 @@ import Spinner from './Spinner';
 
 class Schedule extends Component {
   render() {
-    const {schedule, resetSchedule, searchScheduleStart, searchScheduleEnd } = this.props.store;
+    const {schedule, resetSchedule, searchSchedule } = this.props.store;
     const {calculating, canContinue, stepIndex} = schedule;
     const {slots, usages } = schedule;
-    const search = () => { searchScheduleStart(); searchScheduleEnd(); }
+    console.log(calculating);
     return (
       <div>
         <Spinner enabled={calculating} />
@@ -24,7 +24,7 @@ class Schedule extends Component {
             >Prepare</Button>&nbsp;
             <Button 
               variant="contained" color="secondary"
-              onClick={() => { search(); }}
+              onClick={() => { searchSchedule(); }}
               disabled={!canContinue}
             >Plan</Button>
           </span>

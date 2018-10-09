@@ -285,7 +285,7 @@ export default class SchedulerService {
     return notStopped;
   }
 
-  // step until success
+  // step until success, sync version
   stepToNext(cb) {
     // restart or positive index can start
     const canStart = (this.studentStepIndex >=0) || (this.restartStep);
@@ -302,6 +302,27 @@ export default class SchedulerService {
     } while (notStopped);
     const canContinue = !(this.studentStepIndex < 0);
     return canContinue;
+  }
+
+  // step until found, async version
+  stepThrough() {
+    // restart or positive index can start
+    const canStart = (this.studentStepIndex >=0) || (this.restartStep);
+    if (!canStart) {
+      return Promise.reject(true);
+    };
+
+    // index adjusted before start
+    this.studentStepIndex = 0;
+    const promise = new Promise((resolve, reject) => {
+      let notStopped;
+      do {
+        notStopped = this.step();
+      } while (notStopped);
+      const canContinue = !(this.studentStepIndex < 0);
+      resolve(canContinue);
+    })
+    return promise;
   }
 
   // debug info

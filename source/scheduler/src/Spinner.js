@@ -13,7 +13,7 @@ const Spinner = (props) => {
 };
 
 Spinner.propTypes = {
-  enabled: PropTypes.boolean.isRequired,
+  enabled: PropTypes.bool.isRequired
 }
 
 export default observer(Spinner);
