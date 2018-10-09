@@ -19,17 +19,19 @@ class AppStore {
   resetSchedule() {
     scheduler.prepare();
     this.schedule.stepIndex = scheduler.studentStepIndex;
-    this.schedule.restarted = true;
     this.schedule.canContinue = true;
     this._gatherPrint();
   }
 
-  searchSchedule() {
-    this.schedule.restarted = false;
+  searchScheduleStart() {
     this.schedule.calculating = true;
     this.schedule.canContinue = scheduler.stepToNext((index) => {
+      // TODO: make this variable dynamic
       this.schedule.stepIndex = index;
     });
+  }
+
+  searchScheduleEnd() {
     this._gatherPrint();
     this.schedule.calculating = false;
   }
@@ -38,7 +40,8 @@ class AppStore {
 decorate(AppStore, {
   schedule: observable,
   resetSchedule: action.bound,
-  searchSchedule: action.bound,
+  searchScheduleStart: action.bound,
+  searchScheduleEnd: action.bound,
 });
 
 export default AppStore;

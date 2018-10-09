@@ -9,9 +9,10 @@ import Print from './Print2';
 
 class Schedule extends Component {
   render() {
-    const {schedule, resetSchedule, searchSchedule } = this.props.store;
-    const {calculating, canContinue} = schedule;
+    const {schedule, resetSchedule, searchScheduleStart, searchScheduleEnd } = this.props.store;
+    const {calculating, canContinue, stepIndex} = schedule;
     const {slots, usages, total} = schedule;
+    const search = () => { searchScheduleStart(); searchScheduleEnd(); }
     return (
       <div>
         <div>
@@ -25,11 +26,11 @@ class Schedule extends Component {
             >Prepare</Button>&nbsp;
             <Button 
               variant="contained" color="secondary"
-              onClick={() => { searchSchedule() }}
+              onClick={() => { search(); }}
               disabled={!canContinue}
             >Plan</Button>
           </span>
-          <h1>Schedule <small>{total}</small></h1>
+          <h1>Schedule <small>{stepIndex}</small></h1>
         </div>
         <Print slots={slots} usages={usages} />
       </div>
