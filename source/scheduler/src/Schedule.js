@@ -1,7 +1,7 @@
 // third party
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {inject} from 'mobx-react';
+import {inject, observer} from 'mobx-react';
 // primary components
 import Button from '@material-ui/core/Button';
 // secondary components
@@ -9,9 +9,9 @@ import Print from './Print2';
 
 class Schedule extends Component {
   render() {
-    const {schedule, print, resetSchedule, searchSchedule } = this.props.store;
+    const {schedule, resetSchedule, searchSchedule } = this.props.store;
     const {calculating, canContinue} = schedule;
-    const {slots, usages, total} = print;
+    const {slots, usages, total} = schedule;
     return (
       <div>
         <div>
@@ -21,11 +21,11 @@ class Schedule extends Component {
           <span style={{float: 'right'}}>
             <Button 
               variant="contained" color="primary"
-              onClick={() => {resetSchedule();}}
+              onClick={() => { resetSchedule() }}
             >Prepare</Button>&nbsp;
             <Button 
               variant="contained" color="secondary"
-              onClick={() => {searchSchedule();}}
+              onClick={() => { searchSchedule() }}
               disabled={!canContinue}
             >Plan</Button>
           </span>
@@ -41,4 +41,4 @@ Schedule.propTypes = {
   store: PropTypes.object.isRequired,
 }
 
-export default inject("store")(Schedule);
+export default inject("store")(observer(Schedule));
