@@ -8,6 +8,8 @@
     "@vtex/react-csv-parse": "^3.0.2",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
+    "mobx": "^5.5.0",
+    "mobx-react": "^5.2.8",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-router-dom": "^4.3.1",

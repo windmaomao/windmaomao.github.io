@@ -1,5 +1,7 @@
 // third party
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {inject} from 'mobx-react';
 // styles
 // primary components
 import Button from '@material-ui/core/Button';
@@ -35,7 +37,8 @@ class Schedule extends Component {
   }
 
   stepPlan() {
-    const canContinue = scheduler.stepToNext();
+    // const canContinue = scheduler.stepToNext();
+    const canContinue = this.props.store.searchSchedule();
     this.setState({
       slots: scheduler.slots,
       usages: scheduler.teacherUsage,
@@ -48,12 +51,13 @@ class Schedule extends Component {
 
   render() {
     const {total, disabled} = this.state;
+    const {calculating} = this.props.store.schedule;
     return (
       <div>
         <div>
-          <div className="ui active dimmer">
+          {calculating && <div className="ui active dimmer">
             <div className="ui loader"></div>
-          </div>
+          </div>}
           <span style={{float: 'right'}}>
             <Button 
               variant="contained" color="primary"
@@ -73,4 +77,8 @@ class Schedule extends Component {
   }
 }
 
-export default Schedule;
+Schedule.propTypes = {
+  store: PropTypes.object.isRequired,
+}
+
+export default inject("store")(Schedule);
