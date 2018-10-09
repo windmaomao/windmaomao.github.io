@@ -2,56 +2,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {inject} from 'mobx-react';
-// styles
 // primary components
 import Button from '@material-ui/core/Button';
 // secondary components
 import Print from './Print2';
-// services
-import {scheduler} from './Scheduler';
 
 class Schedule extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      slots: scheduler.slots,
-      usages: scheduler.teacherUsage,
-      ids: Object.keys(scheduler.teacherUsage),
-      total: scheduler.totalSlots(),
-      errors: scheduler.errors,
-      disabled: true
-    };
-  }
-
-  preparePlan() {
-    scheduler.prepare();
-    this.setState({
-      slots: scheduler.slots,
-      usages: scheduler.teacherUsage,
-      ids: Object.keys(scheduler.teacherUsage),
-      total: scheduler.totalSlots(),
-      errors: scheduler.errors,
-      disabled: false
-    });
-  }
-
-  stepPlan() {
-    // const canContinue = scheduler.stepToNext();
-    const canContinue = this.props.store.searchSchedule();
-    this.setState({
-      slots: scheduler.slots,
-      usages: scheduler.teacherUsage,
-      ids: Object.keys(scheduler.teacherUsage),
-      total: scheduler.totalSlots(),
-      errors: scheduler.errors,
-      disabled: !canContinue
-    });
-  }
-
   render() {
-    const {total, disabled} = this.state;
-    const {calculating} = this.props.store.schedule;
+    const {schedule, print, resetSchedule, searchSchedule } = this.props.store;
+    const {calculating, canContinue} = schedule;
+    const {slots, usages, total} = print;
     return (
       <div>
         <div>
@@ -61,17 +21,17 @@ class Schedule extends Component {
           <span style={{float: 'right'}}>
             <Button 
               variant="contained" color="primary"
-              onClick={() => {this.preparePlan();}}
+              onClick={() => {resetSchedule();}}
             >Prepare</Button>&nbsp;
             <Button 
               variant="contained" color="secondary"
-              onClick={() => {this.stepPlan();}}
-              disabled={disabled}
+              onClick={() => {searchSchedule();}}
+              disabled={!canContinue}
             >Plan</Button>
           </span>
-          <h1>Schedule <small>({total})</small></h1>
+          <h1>Schedule <small>{total}</small></h1>
         </div>
-        <Print slots={scheduler.slots} usages={scheduler.teacherUsage} />
+        <Print slots={slots} usages={usages} />
       </div>
     );
   }

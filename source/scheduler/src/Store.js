@@ -4,11 +4,21 @@ import {observable, action, decorate} from 'mobx';
 import {scheduler} from './Scheduler';
 class AppStore {
   schedule = { stepIndex: -1, canContinue: false, restarted: true, calculating: false };
+  print = { slots: {}, usages: {}, ids: [], total: 0, errors: [] };
+
+  _gatherPrint() {
+    this.print.slots = scheduler.slots;
+    this.print.usages = scheduler.teacherUsage;
+    this.print.ids = Object.keys(scheduler.teacherUsage);
+    this.print.total = scheduler.totalSlots();
+    this.print.errors = scheduler.errors;
+  }
 
   resetSchedule() {
     scheduler.prepare();
     this.schedule.stepIndex = scheduler.studentStepIndex;
     this.schedule.restarted = true;
+    this._gatherPrint();
   }
 
   searchSchedule() {
@@ -18,7 +28,7 @@ class AppStore {
       this.schedule.stepIndex = index;
     });
     // this.schedule.calculating = false;
-    return this.schedule.canContinue;
+    this._gatherPrint();
   }
 }
 
