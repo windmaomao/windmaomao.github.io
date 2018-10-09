@@ -1,5 +1,5 @@
 // third party
-import {observable, action, decorate} from 'mobx';
+import {observable, action, computed, decorate} from 'mobx';
 // services
 import {scheduler} from './Scheduler';
 class AppStore {
@@ -35,6 +35,10 @@ class AppStore {
     this._gatherPrint();
     this.schedule.calculating = false;
   }
+
+  get stepProgress() {
+    return this.schedule.stepIndex;
+  }
 }
 
 decorate(AppStore, {
@@ -42,6 +46,7 @@ decorate(AppStore, {
   resetSchedule: action.bound,
   searchScheduleStart: action.bound,
   searchScheduleEnd: action.bound,
+  stepProgress: computed,
 });
 
 export default AppStore;

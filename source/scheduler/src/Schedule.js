@@ -2,23 +2,21 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {inject, observer} from 'mobx-react';
-// primary components
+// components
 import Button from '@material-ui/core/Button';
-// secondary components
 import Print from './Print2';
+import Spinner from './Spinner';
 
 class Schedule extends Component {
   render() {
     const {schedule, resetSchedule, searchScheduleStart, searchScheduleEnd } = this.props.store;
     const {calculating, canContinue, stepIndex} = schedule;
-    const {slots, usages, total} = schedule;
+    const {slots, usages } = schedule;
     const search = () => { searchScheduleStart(); searchScheduleEnd(); }
     return (
       <div>
+        <Spinner enabled={calculating} />
         <div>
-          {calculating && <div className="ui active dimmer">
-            <div className="ui loader"></div>
-          </div>}
           <span style={{float: 'right'}}>
             <Button 
               variant="contained" color="primary"
