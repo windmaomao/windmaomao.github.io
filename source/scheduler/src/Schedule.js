@@ -51,6 +51,9 @@ class Schedule extends Component {
     return (
       <div>
         <div>
+          <div className="ui active dimmer">
+            <div className="ui loader"></div>
+          </div>
           <span style={{float: 'right'}}>
             <Button 
               variant="contained" color="primary"

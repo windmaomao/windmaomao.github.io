@@ -1,41 +1,28 @@
 // third party
 import {observable, action, decorate} from 'mobx';
 // services
-import ApiService from './Api';
-
+import {scheduler} from './Scheduler';
 class AppStore {
-  students = [];
-  teachers = [];
-  prefs = [];
-  plan = { id: '', html: '', title: '', anchors: [], anchor: '' };
+  schedule = { stepIndex: -1, canContinue: false, restarted: true };
 
-  initApp() {}
+  resetSchedule() {
+    scheduler.prepare();
+    this.schedule.stepIndex = scheduler.studentStepIndex;
+    this.schedule.restarted = true;
+  }
 
-  fetchArticle(id) {
-    this.startSpinner();
-    return ApiService.getArticle(id).then(
-      action('fetchArticle:Success', source => {
-        this.article.id = id;
-        const {html, title, anchors} = this._renderMarkdown(source);
-        this.article.html = html;
-        this.article.title = title;
-        this.article.anchors = anchors;
-        this._storeArticleId(id);
-        this.stopSpinner();
-      }),
-      action('fetchArticle:Error', error => {
-        this.stopSpinner(apiFailedErrorMsg);
-      })
-    );
+  searchSchedule() {
+    this.schedule.restarted = false;
+    this.schedule.canContinue = scheduler.stepToNext((index) => {
+      this.schedule.stepIndex = index;
+    });
   }
 }
 
 decorate(AppStore, {
-  teachers: observable,
-  students: observable,
-  prefs: observable,
-  plan: observable,
-  planSchedule: action.bound,
+  schedule: observable,
+  resetSchedule: action.bound,
+  searchSchedule: action.bound,
 });
 
 export default AppStore;

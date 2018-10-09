@@ -286,7 +286,7 @@ export default class SchedulerService {
   }
 
   // step until success
-  stepToNext() {
+  stepToNext(cb) {
     // restart or positive index can start
     const canStart = (this.studentStepIndex >=0) || (this.restartStep);
     if (!canStart) return false;
@@ -295,7 +295,11 @@ export default class SchedulerService {
       this.studentStepIndex = this.studentStepIndex - 1;
     }
     // step until found or stopped
-    while(this.step()) {};
+    let notStopped;
+    do {
+      notStopped = this.step();
+      cb && cb(this.studentStepIndex);
+    } while (notStopped);
     const canContinue = !(this.studentStepIndex < 0);
     return canContinue;
   }
