@@ -9,6 +9,7 @@ export default class SchedulerService {
     this.maxStudents = slotMaxStudents;
     this.acceptPref = true;
     this.shuffleTeacher = true;
+    this.maxSteps = 5000;
     this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
   }
@@ -316,13 +317,21 @@ export default class SchedulerService {
     this.studentStepIndex = 0;
     const promise = new Promise((resolve, reject) => {
       let notStopped;
+      let i = 0;
       do {
         notStopped = this.step();
-      } while (notStopped);
+        i++;
+      } while (notStopped && (i < this.maxSteps));
       const canContinue = !(this.studentStepIndex < 0);
       resolve(canContinue);
     })
     return promise;
+  }
+
+  stepError() {
+    const {students} = this.data;
+    return (this.studentStepIndex < students.length) &
+      (this.studentStepIndex >=0);
   }
 
   // debug info
