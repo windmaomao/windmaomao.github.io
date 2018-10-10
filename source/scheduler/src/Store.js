@@ -29,8 +29,8 @@ class AppStore {
       const canContinue = await scheduler.stepThrough();
       this.schedule.canContinue = canContinue;
       this.schedule.calculating = false;
+      this._gatherPrint();
     } catch (ex) {
-      console.error(ex);
       this.schedule.calculating = false;
     }
   }

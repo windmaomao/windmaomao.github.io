@@ -12,7 +12,6 @@ class Schedule extends Component {
     const {schedule, resetSchedule, searchSchedule } = this.props.store;
     const {calculating, canContinue, stepIndex} = schedule;
     const {slots, usages } = schedule;
-    console.log(calculating);
     return (
       <div>
         <Spinner enabled={calculating} />
