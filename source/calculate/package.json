@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mobx": "^5.5.0",
+    "mobx-devtools-mst": "^0.9.18",
+    "mobx-react": "^5.2.8",
+    "mobx-state-tree": "^3.5.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3286 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
