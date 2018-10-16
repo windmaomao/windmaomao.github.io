@@ -7,6 +7,21 @@ const Todo = types
     id: types.identifierNumber 
   })
 
+const Question = types
+  .model({
+    type: types.string,
+    text: types.string,
+    answer: types.string
+  })
+
+const Answer = types
+  .model({
+    input: types.string,
+    correct: types.boolean
+  })
+
 export {
-  Todo
+  Todo,
+  Question,
+  Answer
 }
