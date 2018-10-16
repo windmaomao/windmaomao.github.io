@@ -4,16 +4,16 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = ({store}) => {
-  const {todos, questions} = store;
+  const {questions} = store;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <ul>
+        <p>
           {questions.map(todo => (
-            <li>{todo.text} = {todo.answer}</li>
+            <span>{todo.text} = {todo.answer}</span>
           ))}
-        </ul>
+        </p>
       </header>
     </div>
   );

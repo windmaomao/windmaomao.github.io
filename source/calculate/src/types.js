@@ -16,6 +16,7 @@ const Question = types
 
 const Answer = types
   .model({
+    question: types.string,
     input: types.string,
     correct: types.boolean
   })

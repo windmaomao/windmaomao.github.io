@@ -22,18 +22,7 @@ const RootStore = types
     }
   }))
 
-const store = RootStore.create({
-  todos: [
-    {
-      id: 13,
-      text: 'Eat',
-      completed: false
-    }
-  ]
-});
-
-store.genQuestion();
-
-makeInspectable(store)
+const store = RootStore.create();
+makeInspectable(store);
 
 export default store
