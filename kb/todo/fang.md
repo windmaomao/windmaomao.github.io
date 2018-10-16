@@ -4,9 +4,12 @@
 
 ### Oct
 
+#### 10/14
+
+- Cancel `x-ray`
+
 #### 10/3
 
-- Walk in to get x-ray 
 - ~~Book `pd` timesheets~~
 - ~~Maintainance `toyota`~~
 - ~~Meeting `boa`~~

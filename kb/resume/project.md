@@ -19,7 +19,7 @@
 | ------------------------  | -------- | ------- |
 | Shipping Orders Dashboard | 2018 Aug |         |
 
-### Shipping Orders Dashboard
+### Shipping Orders
 
 ![Shipping Order](https://s3.amazonaws.com/qp-photo/shipping-order-chart.png)
 
@@ -263,7 +263,8 @@ Contracting work with client sponsored projects {.subtitle}
 
 |  Project   | Company        | Client  | Start   |Comment|
 | ---------- | -------------  | ------  | ------  | ----- |
-| Diagram    | Stim           |         | Aug/17  |  |
+| Scheduler  | Mathnasium     |         | Sep/18  | 9/15  |
+| Diagram    | Stim           |         | Aug/17  | |
 | HMS - HSDM | DrupalConnect  | Harvard | Feb/14  | |
 | Medication | RxAnte         |         | Sep/14  | |
 | Awards     | DesignHammer   | PGH     | Nov/13  | |
@@ -272,6 +273,39 @@ Contracting work with client sponsored projects {.subtitle}
 | TEDAR      | ArchSmart LLC  | DHS     | ?/12    | |
 | PharmTrac  | PlusDelta Tech |         | Feb/12  | |
 | Orders     | DataRecoverMan |         | Apr/11  | |
+
+Knowledgebase 2
+
+: QPlot Knowledgebase 2
+: Sep 2018 - 
+: *React* *Bulma* *Mobx* {.labels}
+: This is to remake the internal knowledgebase system in a maintainable fashion. The idea is to view hierachy of the library articles (Markdown) and each article can be navigated via its table of content. 
+
+Highlights
+
+: - React: Fast development using ui library _Bulma_
+  - Markdown: Use _Markkdown-it_ and plugin matrix to render markdown file
+  - Sidenav: Multiple side menu nav toggable from various locations
+  - Navigation: Dynamic generation of article toc and reach section upon click
+  - Apps: Allow to navigate to another application via toggable menu
+  - Export: Allow download of HTML file and export as Word file afterwards
+
+Scheduler
+
+: Mathnasium Scheduler
+: Sep 2018 - Oct 2018
+: *React* *Semantic UI* *Material UI* *Mobx* {.labels}
+: Daily teacher scheduling app that assign teacher with students. Each teacher has a start and end time as well as his capcity of taking students. Each student has a start and end time and preference of teachers. The job is assign 50-100 students daily to 5-10 teachers in a time slot based system. For instance taking time slot to be 15mins.  
+
+![Custom Charts and Switcher](https://s3.amazonaws.com/qp-photo/mg-chart-mockup-small.png)
+
+Highlights
+
+: - React: Fast development using ui library material UI and semantic UI
+  - Schedule: Schedule service solving solution of teacher assignment
+  - Stepping: Allow solving to be stepping algorithm towards next solution
+  - Upload: Upload _Excel_ sheet for students, teachers and their preferences
+  - Print: Allow nice print of teacher assignment sheet
 
 Stim
 
@@ -355,10 +389,11 @@ Company sponsored projects & ideas {.subtitle}
 
 |  Project           | Start    | Comment |
 | ------------------ | --------:| ------- |
+| Knowledge-base 2   |  9/24/18 | Via component        |
 | Keymod             |  3/01/18 |         |
 | Figure Caption     |  2/13/18 | Open source |
-| Github             |  1/23/18 | Success, redesign of knowledge-base |
-| Statement & Flow   | 12/22/17 | Success, upgraded from Monthly |
+| Github             |  1/23/18 | Redesign of knowledge-base |
+| Statement & Flow   | 12/22/17 | Upgraded from Monthly |
 | Account            | 12/24/16 |         |
 | Proture            |  1/04/16 |         |
 | Monthly & Annually | 12/18/16 | Success |
@@ -445,6 +480,20 @@ Environment Color
 
 ## People Designs
 2014 - {.subtitle}
+
+### Apnea
+Sleep{.subtitle}
+
+: 09/30/2018
+: _React_, _Bootstrap_, _Mobx_, _Router5_
+: xxx
+
+Highlights
+
+- React
+- Layout: support public and internal pages via unified layout
+- Route: use routes and pages definition to drive the page routes
+- Form: form generation via page fields definition list
 
 ### Prepare 3
 Prepare for your care {.subtitle}

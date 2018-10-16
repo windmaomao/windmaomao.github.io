@@ -2,6 +2,13 @@
 
 ## 2018
 
+### 10/15
+
+- case insensitive on names
+- timeout should be less
+- last name initial SophiaJ
+- how to treat three parts
+
 ### 10/05
 
 - ~~support morning time as well~~

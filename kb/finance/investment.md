@@ -7,6 +7,7 @@
 | Symbol | Industry  |  Cost |  Net | Type | Percentage |
 | ------ | --------- | ----: | ---: | ---- | ----: |
 |**Total**  |        |   | **-$345**|      |       |
+| US10/11| CD        | $9950 | $49  | cd   | 0.5%  |
 | GE180921P12  | Industrial|$134|-$134|short|-100% |
 | TIF180817P100| Retail  |$410|-$410| short| -100% |
 | GE180720P13  | Health | $34| -$34 | short| -100% |
