@@ -2,21 +2,27 @@ import {types} from 'mobx-state-tree';
 import makeInspectable from 'mobx-devtools-mst';
 import {Todo} from './types';
 
-const RootStore = types.model('RootStore', {
-  todos: types.map(Todo)
-}).actions(self => ({
-  addTodo(title) {
-    self.todos.put({ title, id: Math.random() });
-  }
-}));
+const RootStore = types
+  .model({
+    todos: types.array(Todo)
+  }).actions(self => ({
+    addTodo(text) {
+      const id = self.todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1
+      self.todos.unshift({
+          id,
+          text
+      })
+    }
+  }))
 
 const store = RootStore.create({
-  todos: {
-    13: {
+  todos: [
+    {
       id: 13,
-      title: 'Eat'
+      text: 'Eat',
+      completed: false
     }
-  }
+  ]
 });
 
 makeInspectable(store)
