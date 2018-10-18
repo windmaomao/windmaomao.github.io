@@ -24,16 +24,30 @@ const teacherHeaderCols = id => (
 const slotTeacherCols = (slots, slot, id) => {
   const prev = memorySlot[id] ? memorySlot[id].slice(0) : [];
   const current = _desks(slots[slot][id], prev);
-  const firstName = name => (name.split(' '))[0];
+  // const firstName = name => (name.split(' '))[0];
+  const firstName2 = name => {
+    if (!name) return name;
+    const parts = name.split(' ');
+    // get first name
+    let res = parts[0];
+    // get last name initial
+    const len = parts.length;
+    if (len > 1) {
+      if (parts[len-1].length) {
+        res = res + parts[len-1][0].toUpperCase();
+      }
+    }
+    return res;
+  }
 
   const elm = (
     <Fragment key={id}>
       <Table.Cell textAlign='center'>
         <Label size={'mini'} style={{ color: 'black' }}>{slotPrintTime(slot)}</Label>
       </Table.Cell>
-      <Table.Cell textAlign='center'>{firstName(current[0])}&nbsp;</Table.Cell>
-      <Table.Cell textAlign='center'>{firstName(current[1])}&nbsp;</Table.Cell>
-      <Table.Cell textAlign='center'>{firstName(current[2])}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{firstName2(current[0])}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{firstName2(current[1])}&nbsp;</Table.Cell>
+      <Table.Cell textAlign='center'>{firstName2(current[2])}&nbsp;</Table.Cell>
     </Fragment>
   );
   memorySlot[id] = current;
