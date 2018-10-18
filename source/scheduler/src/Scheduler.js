@@ -9,7 +9,7 @@ export default class SchedulerService {
     this.maxStudents = slotMaxStudents;
     this.acceptPref = true;
     this.shuffleTeacher = true;
-    this.maxSteps = 50000;
+    this.maxSteps = 20000;
     this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
   }
