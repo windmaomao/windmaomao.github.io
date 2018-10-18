@@ -7,6 +7,7 @@
 #### 10/14
 
 - Cancel `x-ray`
+- Credit Karma password breach
 
 #### 10/3
 

@@ -4,10 +4,11 @@
 
 ### 10/15
 
-- case insensitive on names
 - timeout should be less
+- case insensitive on names
 - last name initial SophiaJ
-- how to treat three parts
+- how to treat three parts of name
+- print page for cost, student name, service and instructor
 
 ### 10/05
 
