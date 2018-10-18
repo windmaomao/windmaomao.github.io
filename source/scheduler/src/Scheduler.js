@@ -3,6 +3,13 @@ import {find, cloneDeep, sortBy, filter, shuffle} from 'lodash';
 // services
 import {slotMinutes, slotPrintTime, slotMaxStudents} from './constant';
 
+const findId = (arr, obj) => {
+  var search = obj.id.toLowerCase();
+  return find(arr, function (item) {
+    return item.id.toLowerCase() === search;
+  });  
+}
+
 export default class SchedulerService {
   constructor() {
     this.slotMins = slotMinutes;
@@ -155,7 +162,8 @@ export default class SchedulerService {
     const len = students.length / 2;
     list.forEach((student, index) => {
       let ranking = index;
-      const pref = find(prefs, { 'id': student.id });
+      // const pref = find(prefs, { 'id': student.id });
+      const pref = findId(prefs, student);
       if (pref) {
         const prefers = pref.prefers;
         if (prefers.length) {
@@ -213,7 +221,8 @@ export default class SchedulerService {
       // find student pref
       let prefTeachers = teachers;
       if (this.acceptPref) {
-        const pref = find(prefs, { 'id': student.id });
+        // const pref = find(prefs, { 'id': student.id });
+        const pref = findId(prefs, student);
         prefTeachers = this.preferTeachers(teachers, pref, this.shuffleTeacher);
       }
       student.teachers = prefTeachers;

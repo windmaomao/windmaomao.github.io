@@ -4,7 +4,7 @@
 
 ### 10/15
 
-- timeout should be less
+- ~~timeout should be less~~
 - case insensitive on names
 - last name initial SophiaJ
 - how to treat three parts of name
