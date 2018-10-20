@@ -17,6 +17,28 @@ const buttonStyle = css`
     opacity: 1;
   }
 `;
+const toggle2 = css`
+  position: fixed;
+  bottom: 0px;
+  opacity: 0.4;
+  &:hover {
+    opacity: 1;
+  }
+  &:checked ~ div ul > li > ul {
+    display: none;
+  }
+`;
+const toggle3 = css`
+  position: fixed;
+  bottom: 20px;
+  opacity: 0.4;
+  &:hover {
+    opacity: 1;
+  }
+  &:checked ~ div ul > li > ul > li > ul {
+    display: none;
+  }
+`;
 
 const Article = (props) => {
   const {article, toc, onSidenavToggle} = props;
@@ -44,6 +66,8 @@ const Article = (props) => {
       <i className="fa fa-download"></i>
     </a>;
   };
+  const ToggleSecondLevel = <input className={toggle2} type="checkbox" />;
+  const ToggleThirdLevel = <input className={toggle3} type="checkbox" />;
 
   return (
     <div className="">
@@ -51,7 +75,11 @@ const Article = (props) => {
       <div className={'section container article'}>
         {DownloadButton()}
         {Breadcrumb(article.id)}
-        <div dangerouslySetInnerHTML={{__html: article.html}} />
+        <div>
+          {ToggleSecondLevel}
+          {ToggleThirdLevel}
+          <div dangerouslySetInnerHTML={{__html: article.html}} />
+        </div>
       </div>
     </div>
   );
