@@ -1,7 +1,7 @@
 // third party
 import React from 'react';
 import PropTypes from 'prop-types';
-import {observer} from 'mobx-react';
+import {Provider, observer} from 'mobx-react';
 // styles
 import './App.css';
 // primary components
@@ -22,15 +22,17 @@ const App = (props) => {
   const {sidenavOn, appnavOn, tocOn} = ui;
   const {loading} = status;
   return (
-    <div className="app">
-      <Spinner loading={loading} />
-      <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
-      <Navbar title={title} onTocToggle={toggleToc} onAppnavToggle={toggleAppnav} />
-      <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
-      <Article article={article} onSidenavToggle={toggleSidenav} />
-      <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
-      {!loading && <Credit message={footerCreditMsg} />}
-    </div>
+    <Provider store={props.app}>
+      <div className="app">
+        <Spinner loading={loading} />
+        <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
+        <Navbar title={title} onTocToggle={toggleToc} onAppnavToggle={toggleAppnav} />
+        <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
+        <Article article={article} onSidenavToggle={toggleSidenav} />
+        <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
+        {!loading && <Credit message={footerCreditMsg} />}
+      </div>
+    </Provider>
   );
 };
 
