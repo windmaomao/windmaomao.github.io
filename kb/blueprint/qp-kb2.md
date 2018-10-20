@@ -126,18 +126,18 @@ App bootstrapping
     - `onClick=toggleLevel(1)`
   - a
     - `onClick=toggleLevel(2)`
-- Bredcrumb
-  - `article`
-    app.article
-  - `toggleSidenav`
-    app.toggleSidenav()
 - Article
   - `article`
     article
   - `toc`
     toc
-  - `onSidenavToggle`
-    toggleSidenav()
+  - `toggleSidenav`
+    app.toggleSidenav()
+  - Bredcrumb
+    - `article`
+      app.article
+    - `toggleSidenav`
+      app.toggleSidenav()
   - `dangerouslySetInnerHTML` 
     `__html=article.html`
 - Sidenav
