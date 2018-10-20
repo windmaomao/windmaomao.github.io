@@ -114,8 +114,18 @@ App bootstrapping
 - Article
   - `article`
     article
+  - `toc`
+    toc
   - `onSidenavToggle`
     toggleSidenav()
+  - ArticleActions ++
+    - DownloadButton
+    - ToggleSecondLevel
+    - ToggleThirdLevel 
+  - Breadcrumb
+    - `article.id` 
+  - `dangerouslySetInnerHTML` 
+    `__html=article.html`
 - Sidenav
   - `toggled`
     ui.sidenavOn

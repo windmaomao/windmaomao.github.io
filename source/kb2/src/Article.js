@@ -1,44 +1,10 @@
 // third party
 import React from 'react';
 import PropTypes from 'prop-types';
-import downloadData from './js-file-download';
-import {css} from 'react-emotion';
 // styles
 import './Article.css';
-
-const buttonStyle = css`
-  float: right;
-  margin-top: 0.5rem;
-  opacity: 0.5;
-  i {
-    color: gray;
-  }
-  &:hover {
-    opacity: 1;
-  }
-`;
-const toggle2 = css`
-  position: fixed;
-  bottom: 0px;
-  opacity: 0.4;
-  &:hover {
-    opacity: 1;
-  }
-  &:checked ~ div ul > li > ul {
-    display: none;
-  }
-`;
-const toggle3 = css`
-  position: fixed;
-  bottom: 20px;
-  opacity: 0.4;
-  &:hover {
-    opacity: 1;
-  }
-  &:checked ~ div ul > li > ul > li > ul {
-    display: none;
-  }
-`;
+// components
+import ArticleAction from './ArticleAction';
 
 const Article = (props) => {
   const {article, toc, onSidenavToggle} = props;
@@ -60,24 +26,18 @@ const Article = (props) => {
       </nav>      
     );
   };
-  const download = () => {downloadData(article.html, 'dl.html');};
-  const DownloadButton = () => {
-    return <a onClick={download} className={buttonStyle} title="Download HTML">
-      <i className="fa fa-download"></i>
-    </a>;
-  };
-  const ToggleSecondLevel = <input className={toggle2} type="checkbox" />;
-  const ToggleThirdLevel = <input className={toggle3} type="checkbox" />;
+  // const ToggleSecondLevel = <input className={toggle2} type="checkbox" />;
+  // const ToggleThirdLevel = <input className={toggle3} type="checkbox" />;
 
   return (
     <div className="">
       {toc}
       <div className={'section container article'}>
-        {DownloadButton()}
+        <ArticleAction article={article} />
         {Breadcrumb(article.id)}
         <div>
-          {ToggleSecondLevel}
-          {ToggleThirdLevel}
+          {/* {ToggleSecondLevel}
+          {ToggleThirdLevel} */}
           <div dangerouslySetInnerHTML={{__html: article.html}} />
         </div>
       </div>
