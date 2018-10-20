@@ -57,6 +57,8 @@ App state via `mobx`
   - `html`
   - `title`
   - `anchors`
+  - `level`
+    Toggle Level
 - `ui`
   - `sidenavOn`
   - `appnavOn`
@@ -69,6 +71,7 @@ App state via `mobx`
 - `toggleSidenav()`
 - `toggleAppnav()`
 - `toggleToc()`
+- `toggleLevel(level)`
 
 ## Components
 

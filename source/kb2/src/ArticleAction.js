@@ -3,50 +3,36 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import downloadData from './js-file-download';
 import {css} from 'react-emotion';
+import {inject} from 'mobx-react';
 
 const rootStyle = css`
   float: right;
   margin-top: 0.5rem;
 `;
-const buttonStyle = css`
-  opacity: 0.5;
-  i {
-    color: gray;
-  }
-  &:hover {
-    opacity: 1;
-  }
-`;
-const toggle2 = css`
-  position: fixed;
-  bottom: 0px;
-  opacity: 0.4;
-  &:hover {
-    opacity: 1;
-  }
-  &:checked ~ div ul > li > ul {
-    display: none;
-  }
-`;
-const toggle3 = css`
-  position: fixed;
-  bottom: 20px;
-  opacity: 0.4;
-  &:hover {
-    opacity: 1;
-  }
-  &:checked ~ div ul > li > ul > li > ul {
-    display: none;
-  }
-`;
 
-const ArticleAction = ({ article }) => {
+const ArticleAction = ({ article, toggleLevel }) => {
   const download = () => {downloadData(article.html, 'dl.html');};
   return (
     <div className={rootStyle}>
-      <a className="button is-small is-white" onClick={download} title="Download HTML">
+      <a className="button is-small is-white" title="Download HTML"
+        onClick={download}
+      >
         <span className="icon is-small">
           <i className="fa fa-download"></i>
+        </span>
+      </a>
+      <a className="button is-small is-white" title="Toggle First Level"
+        onClick={() => {toggleLevel(1); }}
+      >
+        <span className="icon is-small">
+          <i className="fa fa-align-left"></i>
+        </span>
+      </a>
+      <a className="button is-small is-white" title="Toggle Second Level"
+        onClick={() => {toggleLevel(2); }}
+      >
+        <span className="icon is-small">
+          <i className="fa fa-align-left"></i>
         </span>
       </a>
     </div>
@@ -55,7 +41,9 @@ const ArticleAction = ({ article }) => {
 
 ArticleAction.propTypes = {
   article: PropTypes.object,
-  onLevelToggle: PropTypes.func,
+  toggleLevel: PropTypes.func.isRequired
 };
 
-export default ArticleAction;
+export default inject(stores => ({
+  toggleLevel: stores.app.toggleLevel
+}))(ArticleAction);

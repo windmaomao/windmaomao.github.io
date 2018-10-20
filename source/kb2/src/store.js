@@ -12,7 +12,7 @@ const startArticleId = localStorage.getItem(storedKeys.articleId) || defaultArti
 class AppStore {
   status = {loading: false, active: false, message: ''};
   menu = [];
-  article = { id: '', html: '', title: '', anchors: [], anchor: '' };
+  article = { id: '', html: '', title: '', anchors: [], anchor: '', level: 0 };
   ui = { sidenavOn: false, appnavOn: false, tocOn: false };
   apps = [];
   appId = appId;
@@ -108,6 +108,14 @@ class AppStore {
     this.status.active = false;
     this.status.message = '';
   }
+
+  toggleLevel(level) {
+    if (this.article.toggleLevel === level) {
+      this.article.toggleLevel = 0;
+    } else {
+      this.article.toggleLevel = level;
+    }
+  }
 }
 
 decorate(AppStore, {
@@ -120,6 +128,7 @@ decorate(AppStore, {
   toggleSidenav: action.bound,
   toggleAppnav: action.bound,
   toggleToc: action.bound,
+  toggleLevel: action.bound,
   fetchMenu: action.bound,
   fetchArticle: action.bound,
   fetchApps: action.bound,

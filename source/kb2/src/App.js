@@ -22,7 +22,7 @@ const App = (props) => {
   const {sidenavOn, appnavOn, tocOn} = ui;
   const {loading} = status;
   return (
-    <Provider store={props.app}>
+    <Provider app={props.app}>
       <div className="app">
         <Spinner loading={loading} />
         <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
