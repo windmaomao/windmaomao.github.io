@@ -28,8 +28,8 @@ In-house `Mobx` store which carries some `Redux` idea around. The form field nee
 
 ### MGPostedForm
 
-- Provider `formState=form`
 - `form`
+- Provider `formState=form`
 - MGPageHeading
   - `title`
 - MGPostedCarrier

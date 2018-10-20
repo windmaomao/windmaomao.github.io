@@ -79,69 +79,54 @@ App bootstrapping
 - App
 - AppStore
 
-
 ### App
 
 - `app`
   App store
-
-#### Spinner
-
-- `loading`
-  status.loading
-- DotLoader
-  via `react-spinners`
-
-#### Appnav
-
-- `apps`
-  apps
-- `appId`
-  appId
-- `toggled`
-  ui.appnavOn
-- `onClose`
-  toggleAppnav()
-
-#### Navbar
-
-- `title`
-  article.title
-- `onTocToggle`
-  toggleToc()
-- `onAppnavToggle`
-  toggleAppnav()
-
-#### Toc
-
-- `toggled`
-  ui.tocOn
-- `anchors`
-  article.anchors
-- `onClose`
-  toggleToc
-
-#### Article
-
-- `article`
-  article
-- `onSidenavToggle`
-  toggleSidenav()
-
-#### Sidenav
-
-- `toggled`
-  ui.sidenavOn
-- `onToggle`
-  toggleSidenav()
-- `menu`
-  menu
-- `selected`
-  article.id
-- `onSelect`
-  fetchArticle()
-
-#### Credit
-
-- `message`
-  footerCreditMsg
+- Spinner
+  - `loading`
+    status.loading
+  - DotLoader
+    via `react-spinners`
+- Appnav
+  - `apps`
+    apps
+  - `appId`
+    appId
+  - `toggled`
+    ui.appnavOn
+  - `onClose`
+    toggleAppnav()
+- Navbar
+  - `title`
+    article.title
+  - `onTocToggle`
+    toggleToc()
+  - `onAppnavToggle`
+    toggleAppnav()
+- Toc
+  - `toggled`
+    ui.tocOn
+  - `anchors`
+    article.anchors
+  - `onClose`
+    toggleToc
+- Article
+  - `article`
+    article
+  - `onSidenavToggle`
+    toggleSidenav()
+- Sidenav
+  - `toggled`
+    ui.sidenavOn
+  - `onToggle`
+    toggleSidenav()
+  - `menu`
+    menu
+  - `selected`
+    article.id
+  - `onSelect`
+    fetchArticle()
+- Credit
+  - `message`
+    footerCreditMsg

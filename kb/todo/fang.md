@@ -8,6 +8,7 @@
 
 - Cancel `x-ray`
 - Credit Karma password breach
+- Deploy `kb2` with new styles
 
 #### 10/3
 
