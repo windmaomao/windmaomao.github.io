@@ -114,13 +114,8 @@ App bootstrapping
     article.anchors
   - `onClose`
     toggleToc
-- Article
+- Header
   - `article`
-    article
-  - `toc`
-    toc
-  - `onSidenavToggle`
-    toggleSidenav()
   - ArticleActions
     - `article`
       app.article
@@ -135,6 +130,13 @@ App bootstrapping
       - `onClick=toggleLevel(2)`
   - Breadcrumb
     - `article.id` 
+- Article
+  - `article`
+    article
+  - `toc`
+    toc
+  - `onSidenavToggle`
+    toggleSidenav()
   - `dangerouslySetInnerHTML` 
     `__html=article.html`
 - Sidenav

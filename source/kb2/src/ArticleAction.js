@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import downloadData from './js-file-download';
 import {css} from 'react-emotion';
-import {inject, observer} from 'mobx-react';
+import {observer} from 'mobx-react';
 import classNames from 'classnames';
 
 const rootStyle = css`
@@ -29,7 +29,7 @@ const ArticleAction = ({ article, toggleLevel }) => {
         onClick={() => {toggleLevel(1); }}
       >
         <span className="icon is-small">
-          <i className="fa fa-align-left"></i>
+          <i className="fa fa-angle-left"></i>
         </span>
       </a>
       <a 
@@ -38,7 +38,7 @@ const ArticleAction = ({ article, toggleLevel }) => {
         onClick={() => {toggleLevel(2); }}
       >
         <span className="icon is-small">
-          <i className="fa fa-align-left"></i>
+          <i className="fa fa-angle-double-left"></i>
         </span>
       </a>
     </div>
@@ -50,6 +50,4 @@ ArticleAction.propTypes = {
   toggleLevel: PropTypes.func.isRequired
 };
 
-export default inject(stores => ({
-  toggleLevel: stores.app.toggleLevel
-}))(observer(ArticleAction));
+export default observer(ArticleAction);

@@ -9,6 +9,8 @@ import Spinner from './Spinner';
 import Appnav from './Appnav';
 import Navbar from './Navbar';
 import Toc from './Toc';
+import Breadcrumb from './Breadcrumb';
+import ArticleAction from './ArticleAction';
 import Article from './Article';
 import Sidenav from './Sidenav';
 import Credit from './Credit';
@@ -18,7 +20,7 @@ import {footerCreditMsg} from './constant';
 const App = (props) => {
   const {status, menu, article, fetchArticle, apps, appId} = props.app;
   const {id, title, anchors} = article;
-  const {ui, toggleSidenav, toggleAppnav, toggleToc} = props.app;
+  const {ui, toggleSidenav, toggleAppnav, toggleToc, toggleLevel} = props.app;
   const {sidenavOn, appnavOn, tocOn} = ui;
   const {loading} = status;
   return (
@@ -28,6 +30,10 @@ const App = (props) => {
         <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
         <Navbar title={title} onTocToggle={toggleToc} onAppnavToggle={toggleAppnav} />
         <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
+        <div className="article-header">
+          <ArticleAction article={article} toggleLevel={toggleLevel} />
+          <Breadcrumb article={article} toggleSidenav={toggleSidenav} />
+        </div>
         <Article article={article} onSidenavToggle={toggleSidenav} />
         <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
         {!loading && <Credit message={footerCreditMsg} />}
