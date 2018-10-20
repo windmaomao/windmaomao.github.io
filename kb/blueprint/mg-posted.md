@@ -28,7 +28,7 @@ In-house `Mobx` store which carries some `Redux` idea around. The form field nee
 
 ### MGPostedForm
 
-- Provider `formState={form}`
+- Provider `formState=form`
 - `form`
 - MGPageHeading
   - `title`
@@ -60,7 +60,7 @@ In-house `Mobx` store which carries some `Redux` idea around. The form field nee
     - `form`
       `inject('form')`
 - MGLink
-  - `onClick={form.addNewCarrier}`
+  - `onClick=form.addNewCarrier`
   - MGIconAdd
 - MGPostedFooter
 

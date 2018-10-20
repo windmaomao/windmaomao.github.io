@@ -44,10 +44,19 @@
 	-webkit-hypens: auto;
 	-moz-hypens: auto;
 	hyphens: auto;
+	line-height: 1.5em;
 }
 .article ul {
 	list-style: square;
+	margin: 0.4em 0;
 	padding: 0.4em 1em;
+}
+.article li {
+	line-height: 1.8em;
+}
+.article ul ul {
+	margin: 0 0 0.4em;
+	padding: 0 1em;
 }
 .article ol {
 	padding-left: 1.2em;
@@ -69,6 +78,9 @@
 	margin: 1em;
 	padding-left: 1em;
 	border-left: 1px solid #ddd;
+}
+.article code {
+	color: #3273dc;
 }
 .article abbr {
   text-decoration: none;
