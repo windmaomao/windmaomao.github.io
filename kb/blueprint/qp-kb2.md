@@ -121,10 +121,18 @@ App bootstrapping
     toc
   - `onSidenavToggle`
     toggleSidenav()
-  - ArticleActions ++
-    - DownloadButton
-    - ToggleSecondLevel
-    - ToggleThirdLevel 
+  - ArticleActions
+    - `article`
+      app.article
+    - `toggleLevel`
+      app.toggleLevel()
+    - a
+      - `onClick=downloadData`
+        via `js-file-download`
+    - a
+      - `onClick=toggleLevel(1)`
+    - a
+      - `onClick=toggleLevel(2)`
   - Breadcrumb
     - `article.id` 
   - `dangerouslySetInnerHTML` 
