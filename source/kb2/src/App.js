@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Provider, observer} from 'mobx-react';
+import {css} from 'react-emotion';
 // styles
 import './App.css';
 // primary components
@@ -17,6 +18,12 @@ import Credit from './Credit';
 // services
 import {footerCreditMsg} from './constant';
 
+const headerStyle = css`
+  position: relative;
+  top: 0;
+  padding: 0.5rem 1rem 0;
+`;
+
 const App = (props) => {
   const {status, menu, article, fetchArticle, apps, appId} = props.app;
   const {id, title, anchors} = article;
@@ -30,7 +37,7 @@ const App = (props) => {
         <Appnav toggled={appnavOn} apps={apps} appId={appId} onClose={toggleAppnav} />
         <Navbar title={title} onTocToggle={toggleToc} onAppnavToggle={toggleAppnav} />
         <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
-        <div className="article-header">
+        <div className={headerStyle}>
           <ArticleAction article={article} toggleLevel={toggleLevel} />
           <Breadcrumb article={article} toggleSidenav={toggleSidenav} />
         </div>

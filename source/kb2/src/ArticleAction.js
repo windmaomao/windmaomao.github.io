@@ -8,7 +8,6 @@ import classNames from 'classnames';
 
 const rootStyle = css`
   float: right;
-  margin-top: 0.5rem;
 `;
 
 const ArticleAction = ({ article, toggleLevel }) => {
