@@ -12,10 +12,10 @@ const rootStyle = css`
 
 const ArticleAction = ({ article, toggleLevel }) => {
   const download = () => {downloadData(article.html, 'dl.html');};
-  const levelOn = (level) => ({ 'is-primary': article.toggleLevel === level});
+  const levelOn = (level) => ({ 'is-success': article.toggleLevel === level});
   return (
     <div className={rootStyle}>
-      <a className="button is-small is-white" title="Download HTML"
+      <a className="button is-small is-dark" title="Download HTML"
         onClick={download}
       >
         <span className="icon is-small">
@@ -23,7 +23,7 @@ const ArticleAction = ({ article, toggleLevel }) => {
         </span>
       </a>
       <a 
-        className={classNames('button is-small is-white', levelOn(1))}
+        className={classNames('button is-small is-dark', levelOn(1))}
         title="Toggle First Level"
         onClick={() => {toggleLevel(1); }}
       >
@@ -32,7 +32,7 @@ const ArticleAction = ({ article, toggleLevel }) => {
         </span>
       </a>
       <a 
-        className={classNames('button is-small is-white', levelOn(2))}
+        className={classNames('button is-small is-dark', levelOn(2))}
         title="Toggle Second Level"
         onClick={() => {toggleLevel(2); }}
       >

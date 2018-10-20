@@ -10,7 +10,6 @@ import Spinner from './Spinner';
 import Appnav from './Appnav';
 import Navbar from './Navbar';
 import Toc from './Toc';
-import Breadcrumb from './Breadcrumb';
 import ArticleAction from './ArticleAction';
 import Article from './Article';
 import Sidenav from './Sidenav';
@@ -19,9 +18,11 @@ import Credit from './Credit';
 import {footerCreditMsg} from './constant';
 
 const headerStyle = css`
-  position: relative;
-  top: 0;
+  position: fixed;
+  right: 1rem;
+  top: 0.2rem;
   padding: 0.5rem 1rem 0;
+  z-index: 999;
 `;
 
 const App = (props) => {
@@ -39,9 +40,8 @@ const App = (props) => {
         <Toc toggled={tocOn} anchors={anchors} onClose={toggleToc} />
         <div className={headerStyle}>
           <ArticleAction article={article} toggleLevel={toggleLevel} />
-          <Breadcrumb article={article} toggleSidenav={toggleSidenav} />
         </div>
-        <Article article={article} onSidenavToggle={toggleSidenav} />
+        <Article article={article} toggleSidenav={toggleSidenav} />
         <Sidenav toggled={sidenavOn} onToggle={toggleSidenav} menu={menu} selected={id} onSelect={fetchArticle} />
         {!loading && <Credit message={footerCreditMsg} />}
       </div>

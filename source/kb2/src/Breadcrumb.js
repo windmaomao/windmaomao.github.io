@@ -8,7 +8,7 @@ import {observer} from 'mobx-react';
 const Breadcrumb = ({article, toggleSidenav}) => {
   const bcs = article.id.split('/');
   return (
-    <nav className="breadcrumb is-small" aria-label="breadcrumbs">
+    <nav className="breadcrumb is-small is-black" aria-label="breadcrumbs">
       <ul>
         <li>
           <a onClick={toggleSidenav}>DIRECTORY</a>
