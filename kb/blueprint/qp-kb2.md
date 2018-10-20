@@ -1,6 +1,6 @@
 # KB2
 
-Knowledgebase Mobile
+Knowledgebase Mobile{.subtitle}
 
 ## Services
 
@@ -35,7 +35,7 @@ Knowledgebase Mobile
     `[^1]`
   - `markdown-it-figure-caption`
     figure & caption
-  - markdown-it-mark
+  - `markdown-it-mark`
     `==`
 - `title`
 - `anchors`

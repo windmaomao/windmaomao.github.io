@@ -17,7 +17,19 @@
 
 |  Project                  |  Start   | Comment |
 | ------------------------  | -------- | ------- |
+| Posted Equipment Form     | 2018 Oct |         |
 | Shipping Orders Dashboard | 2018 Aug |         |
+
+### Posted Equipment
+
+![Posted Equipment Form](https://s3.amazonaws.com/qp-photo/mg-posted-equipment-form.png)
+
+Posted Equipment Form
+
+: Posted Equipment Form
+:Oct 2018 -
+: *React* *Mobx* {.labels}
+: A form handles submission related to multiple carrier and multiple equipments associated with it. 
 
 ### Shipping Orders
 

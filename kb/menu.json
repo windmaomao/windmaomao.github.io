@@ -1,8 +1,14 @@
 [
   {
+    "title": "Blueprint", "type": "blueprint",
+    "items": [
+      "mg-posted",
+      "qp-kb2"
+    ]
+  },
+  {
     "title": "Idea", "type": "other",
     "items": [
-      "blueprint",
       "crash",
       "rendering",
       "timesheet"
