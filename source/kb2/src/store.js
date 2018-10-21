@@ -109,12 +109,12 @@ class AppStore {
     this.status.message = '';
   }
 
-  toggleLevel(level) {
-    if (this.article.toggleLevel === level) {
-      this.article.toggleLevel = 0;
-    } else {
-      this.article.toggleLevel = level;
-    }
+  toggleLevel(dir) {
+    let level = this.article.toggleLevel || 0;
+    level = level - dir;
+    if (level > 4) level = 0;
+    if (level < 0) level = 4;
+    this.article.toggleLevel = level;
   }
 }
 

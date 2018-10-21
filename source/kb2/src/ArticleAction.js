@@ -23,21 +23,21 @@ const ArticleAction = ({ article, toggleLevel }) => {
         </span>
       </a>
       <a 
-        className={classNames('button is-small is-dark', levelOn(1))}
+        className={classNames('button is-small is-dark', levelOn(0))}
         title="Toggle First Level"
-        onClick={() => {toggleLevel(1); }}
+        onClick={() => {toggleLevel(+1); }}
       >
         <span className="icon is-small">
           <i className="fa fa-angle-left"></i>
         </span>
       </a>
       <a 
-        className={classNames('button is-small is-dark', levelOn(2))}
+        className={classNames('button is-small is-dark', levelOn(4))}
         title="Toggle Second Level"
-        onClick={() => {toggleLevel(2); }}
+        onClick={() => {toggleLevel(-1); }}
       >
         <span className="icon is-small">
-          <i className="fa fa-angle-double-left"></i>
+          <i className="fa fa-angle-right"></i>
         </span>
       </a>
     </div>

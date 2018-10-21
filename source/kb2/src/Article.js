@@ -9,10 +9,7 @@ import './Article.css';
 import Breadcrumb from './Breadcrumb';
 
 const Article = ({article, toc, toggleSidenav}) => {
-  const toggleClasses = {
-    'ul-1': article.toggleLevel === 1,
-    'ul-2': article.toggleLevel === 2
-  };
+  const toggleClasses = `ul-${article.toggleLevel}`;
   return (
     <div>
       {toc}
