@@ -15,7 +15,10 @@ const Article = ({article, toc, toggleSidenav}) => {
       {toc}
       <div className={classNames('section container article', toggleClasses)}>
         <Breadcrumb article={article} toggleSidenav={toggleSidenav} />
-        <div dangerouslySetInnerHTML={{__html: article.html}} />
+        <div 
+          dangerouslySetInnerHTML={{__html: article.html}} 
+          onClick={e => {e.target.classList.toggle('toggled');}}
+        />
       </div>
     </div>
   );

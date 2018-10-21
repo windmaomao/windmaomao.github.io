@@ -142,6 +142,9 @@
 }
 
 /* List */
+.article li { cursor: pointer; user-select: none }
+.article li.toggled { list-style-type: circle }
+.article li.toggled > ul { display: none }
 .article.ul-1 ul.tree > li > ul { display: none }
 .article.ul-2 ul.tree > li > ul > li > ul { display: none }
 .article.ul-3 ul.tree > li > ul > li > ul > li > ul { display: none }
