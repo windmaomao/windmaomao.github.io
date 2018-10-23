@@ -4,11 +4,14 @@
 
 ### Oct
 
-#### 10/14
+### 10/21
 
-- Cancel `x-ray`
+- :date: Cancel `x-ray`
+- Practice using `option`
+- Prototype audio component
 - Credit Karma password breach
-- Deploy `kb2` with new styles
+- ~~Deploy `kb2` with new styles~~
+- ~~Signup gym for `sophia`~~
 
 #### 10/3
 

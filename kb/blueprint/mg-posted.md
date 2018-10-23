@@ -59,6 +59,13 @@ In-house `Mobx` store which carries some `Redux` idea around. The form field nee
       'carriers.0.equipments'
     - `form`
       `inject('form')`
+    - MGPostedEquipmentsHeader
+      Display table head cols
+    - 
+    - MGLink
+      Add Equipment Button
+      - `onClick=formState.addNewEquipment(equipments)`
+      - `icon=MGIconAdd`
 - MGLink
   - `onClick=form.addNewCarrier`
   - MGIconAdd
