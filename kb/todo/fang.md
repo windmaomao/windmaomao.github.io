@@ -6,8 +6,7 @@
 
 ### 10/21
 
-- :date: Cancel `x-ray`
-- Practice using `option`
+- ~~:date: Cancel `x-ray`~~
 - ~~Prototype audio component~~
 - Credit Karma password breach
 - :+1: Update to include library writing

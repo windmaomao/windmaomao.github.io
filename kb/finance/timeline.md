@@ -9,5 +9,6 @@
 
 ### Oct
 
-- 10月10日彭博社曝中国将发行三十亿美元主权债券，当天美国三大股指全线暴跌. China on Thursday sold $3 billion in U.S. dollar bonds, raising money as cheaply as some of America’s strongest companies at a time of heightened tensions with its largest trading partner and in the [midst of a global markets selloff](https://www.wsj.com/articles/worst-hit-in-global-markets-rout-tech-and-china-1539258678?mod=article_inline). The demand enabled China to price its $1.5 billion in five-year bonds at a yield of 3.33%, just 0.3 percentage point above yields on comparable U.S. Treasury notes. The country sold $1 billion in 10-year bonds at a yield of 3.63%, versus the 3.18% yield on 10-year Treasurys.
+- 10/30 Third-quarter 2018 earning results of Herballife `HLF`
+- 10/10 彭博社曝中国将发行三十亿美元主权债券，当天美国三大股指全线暴跌. China on Thursday sold $3 billion in U.S. dollar bonds, raising money as cheaply as some of America’s strongest companies at a time of heightened tensions with its largest trading partner and in the [midst of a global markets selloff](https://www.wsj.com/articles/worst-hit-in-global-markets-rout-tech-and-china-1539258678?mod=article_inline). The demand enabled China to price its $1.5 billion in five-year bonds at a yield of 3.33%, just 0.3 percentage point above yields on comparable U.S. Treasury notes. The country sold $1 billion in 10-year bonds at a yield of 3.63%, versus the 3.18% yield on 10-year Treasurys.
 
