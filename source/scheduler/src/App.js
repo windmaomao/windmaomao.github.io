@@ -16,8 +16,8 @@ import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 class App extends Component {
 
   componentDidMount() {
-    const debug = true;
-    // const debug = false;
+    // const debug = true;
+    const debug = false;
     if (debug) {
       scheduler.setData(teachersInfo, studentsInfo, prefsInfo);
     }
