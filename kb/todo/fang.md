@@ -8,10 +8,12 @@
 
 - :date: Cancel `x-ray`
 - Practice using `option`
-- Prototype audio component
+- ~~Prototype audio component~~
 - Credit Karma password breach
+- :+1: Update to include library writing
 - ~~Deploy `kb2` with new styles~~
 - ~~Signup gym for `sophia`~~
+- Backup `apnea`
 
 #### 10/3
 

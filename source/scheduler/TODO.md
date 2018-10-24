@@ -9,6 +9,7 @@
 - ~~last name initial SophiaJ~~
 - ~~how to treat three parts of name~~
 - print page for cost, student name, service and instructor
+- upload needs to give error if header is missing
 
 ### 10/05
 
@@ -16,7 +17,7 @@
 - ~~shuffle the teachers~~
 - ~~make sure the code has no dead end~~
 - ~~add stop/resume/prepare/run function~~
-- print needs to reserve three teachers
+- ~~print needs to reserve three teachers~~
 
 ### 09/27 
 
