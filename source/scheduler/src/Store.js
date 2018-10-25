@@ -5,7 +5,7 @@ import {scheduler} from './Scheduler';
 class AppStore {
   schedule = { 
     stepIndex: -1, canContinue: false, restarted: true, calculating: false,
-    slots: {}, usages: {}, ids: [], total: 0, error: false
+    slots: {}, usages: {}, ids: [], total: 0, error: false, found: false,
   };
 
   _gatherPrint() {
@@ -15,6 +15,7 @@ class AppStore {
     this.schedule.total = scheduler.totalSlots();
     this.schedule.stepIndex = scheduler.studentStepIndex;
     this.schedule.error = scheduler.stepError();
+    this.schedule.found = scheduler.stepFound();
   }
 
   resetSchedule() {
@@ -26,10 +27,12 @@ class AppStore {
 
   async searchSchedule() {
     this.schedule.calculating = true;
+    this.schedule.found = false;
     try {
       const canContinue = await scheduler.stepThrough();
       this.schedule.canContinue = canContinue;
       this._gatherPrint();
+      console.log(this.schedule.stepIndex);
       this.schedule.calculating = false;
     } catch (ex) {
       this.schedule.calculating = false;

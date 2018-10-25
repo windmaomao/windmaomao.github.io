@@ -16,7 +16,7 @@ export default class SchedulerService {
     this.maxStudents = slotMaxStudents;
     this.acceptPref = true;
     this.shuffleTeacher = true;
-    this.maxSteps = 20000;
+    this.maxSteps = 1000;
     this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
   }
@@ -252,6 +252,7 @@ export default class SchedulerService {
       }
       student.teacherIndex = 0;
       i = i -1;
+      console.log('Back:', i);
     } while (i>=0);
     return false;
   }
@@ -269,6 +270,7 @@ export default class SchedulerService {
         newSlots= this.tryMapStudentToTeacher(this.slots, student, teacher);
       }
       if (!newSlots) {
+        console.log('End:', i);
         return i;
       } else {
         this.slots = newSlots;
@@ -339,8 +341,12 @@ export default class SchedulerService {
 
   stepError() {
     const {students} = this.data;
-    return (this.studentStepIndex < students.length) &
-      (this.studentStepIndex >=0);
+    return students.length - this.studentStepIndex;
+  }
+
+  stepFound() {
+    const {students} = this.data;
+    return this.studentStepIndex === students.length;
   }
 
   // debug info

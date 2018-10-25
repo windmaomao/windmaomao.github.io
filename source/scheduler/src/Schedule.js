@@ -12,7 +12,7 @@ class Schedule extends Component {
   render() {
     const {schedule, resetSchedule, searchSchedule } = this.props.store;
     const {calculating, canContinue} = schedule;
-    const {slots, usages, error, stepIndex } = schedule;
+    const {slots, usages, error, stepIndex, found } = schedule;
     return (
       <div>
         <Spinner enabled={calculating} />
@@ -30,7 +30,8 @@ class Schedule extends Component {
           </span>
           <h1>
             Schedule &nbsp;
-            {error ? <Label color="red">{stepIndex}</Label> : null}
+            {found ? <Label color="green">Found!</Label> : null} &nbsp;
+            {error ? <Label color="red">{error}</Label> : null}
           </h1>
         </div>
         <Print slots={slots} usages={usages} />
