@@ -12,7 +12,13 @@ class Schedule extends Component {
   render() {
     const {schedule, resetSchedule, searchSchedule } = this.props.store;
     const {calculating, canContinue} = schedule;
-    const {slots, usages, error, stepIndex, found } = schedule;
+    const {slots, usages, error, found } = schedule;
+    const delayedCall = () => {
+      schedule.calculating = true;
+      setTimeout(function(){ 
+        searchSchedule();
+      }, 0);
+    }
     return (
       <div>
         <Spinner enabled={calculating} />
@@ -24,7 +30,7 @@ class Schedule extends Component {
             >Prepare</Button>&nbsp;
             <Button 
               variant="contained" color="secondary"
-              onClick={() => { searchSchedule(); }}
+              onClick={delayedCall}
               disabled={!canContinue}
             >Plan</Button>
           </span>
