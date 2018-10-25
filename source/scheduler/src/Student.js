@@ -29,7 +29,10 @@ class Student extends Component {
   constructor(props) {
     super(props);
     this.keys = ["cost", "duration", "customer", "date"];
-    this.state = { students: scheduler.data.students };
+    this.state = { 
+      students: scheduler.data.students,
+      error: ''
+    };
   }
 
   process(data) {
@@ -51,12 +54,17 @@ class Student extends Component {
     this.setState({students});
   }
 
+  onError = (error) => {
+    console.log('Error');
+    this.setState({error});
+  }
+
   renderUpload() {
     return (
       <CsvParse
         keys={this.keys}
         onDataUploaded={this.onUpload}
-        onError={this.handleError}
+        onError={this.onError}
         render={onChange => <input type="file" onChange={onChange} />}
       />            
     )        
@@ -73,7 +81,7 @@ class Student extends Component {
   }
 
   render() {
-    const {students} = this.state;
+    const {students, error} = this.state;
     const gunnarStyle = { height: "30px", padding: "0px"};
     const time = s => scheduler.slot2time(s);
     return (
@@ -85,6 +93,7 @@ class Student extends Component {
           <span></span>
           <h1>Students ({students.length})</h1>
           {this.renderUpload()}
+          {error}
           
           <Table>
             <TableHead>

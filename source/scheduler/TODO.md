@@ -8,7 +8,7 @@
 - ~~case insensitive on names~~
 - ~~last name initial SophiaJ~~
 - ~~how to treat three parts of name~~
-- print page for cost, student name, service and instructor
+- ~~print page for cost, student name, service and instructor~~
 - upload needs to give error if header is missing
 
 ### 10/05
