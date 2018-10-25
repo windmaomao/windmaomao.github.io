@@ -2,6 +2,12 @@
 
 ## Services
 
+### storage
+
+- `saveStorage(answers)`
+- `resetStorage()`
+- `fetchStorage()`
+
 ### questions
 
 - `questionDefs`
