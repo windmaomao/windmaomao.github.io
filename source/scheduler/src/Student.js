@@ -35,11 +35,12 @@ class Student extends Component {
   process(data) {
     const nonEmpty = data.filter(item => item.customer);
     const processed = nonEmpty.map(item => {
+      const cost = item.cost;
       const id = item.customer.replace('Student Name - ', '');
       const start = jsDateToSlot(new Date(item.date));
       const duration = item.duration.replace(' mins', '');
       const end = start + slotsInDuration(parseInt(duration, 10)) - 1;
-      return {id, start, end};
+      return {id, start, end, cost};
     });
     return processed;
   }
@@ -88,6 +89,7 @@ class Student extends Component {
           <Table>
             <TableHead>
               <TableRow>
+                <TableCell>Cost</TableCell>
                 <TableCell>Student</TableCell>
                 <TableCell>Start</TableCell>
                 <TableCell>End</TableCell>
@@ -97,6 +99,7 @@ class Student extends Component {
             <TableBody>
               {students.map((student, index) => (
                 <TableRow key={index} style={gunnarStyle}>
+                  <TableCell>{student.cost}</TableCell>
                   <TableCell>{student.id}</TableCell>
                   <TableCell>{time(student.start)}</TableCell>
                   <TableCell>{time(student.end+1)}</TableCell>
