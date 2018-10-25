@@ -1,6 +1,7 @@
 // third party
 import React, { Component } from 'react';
 import CsvParse from '@vtex/react-csv-parse'
+import ReactToPrint from "react-to-print";
 // styles
 // primary components
 import Table from '@material-ui/core/Table';
@@ -8,10 +9,21 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import { Button } from 'semantic-ui-react'
 // secondary components
 // services
 import {scheduler} from './Scheduler';
 import {slotsInDuration, jsDateToSlot} from './constant';
+
+const buttonStyle = {
+  position: 'fixed',
+  bottom: '2rem',
+  right: '2rem',
+  opacity: 0.4
+};
+const PrintButton = (
+  <Button circular color='grey' style={buttonStyle}>Print</Button>
+);
 
 class Student extends Component {
   constructor(props) {
@@ -65,31 +77,36 @@ class Student extends Component {
     const time = s => scheduler.slot2time(s);
     return (
       <div>
-        <span></span>
-        <h1>Students ({students.length})</h1>
-        {this.renderUpload()}
-
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Student</TableCell>
-              <TableCell>Start</TableCell>
-              <TableCell>End</TableCell>
-              <TableCell>Teachers</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {students.map((student, index) => (
-              <TableRow key={index} style={gunnarStyle}>
-                <TableCell>{student.id}</TableCell>
-                <TableCell>{time(student.start)}</TableCell>
-                <TableCell>{time(student.end+1)}</TableCell>
-                <TableCell>{student.teachers && 
-                  this.renderTeachers(student)}</TableCell>
+        <ReactToPrint trigger={() => PrintButton}
+          content={() => this.componentRef}
+        />
+        <div ref={el => (this.componentRef = el)} className="allow-print">
+          <span></span>
+          <h1>Students ({students.length})</h1>
+          {this.renderUpload()}
+          
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Student</TableCell>
+                <TableCell>Start</TableCell>
+                <TableCell>End</TableCell>
+                <TableCell>Teachers</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHead>
+            <TableBody>
+              {students.map((student, index) => (
+                <TableRow key={index} style={gunnarStyle}>
+                  <TableCell>{student.id}</TableCell>
+                  <TableCell>{time(student.start)}</TableCell>
+                  <TableCell>{time(student.end+1)}</TableCell>
+                  <TableCell>{student.teachers && 
+                    this.renderTeachers(student)}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>        
+        </div>
       </div>
     );
   }
