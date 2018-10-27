@@ -19,7 +19,9 @@ const Transaction = {
 
 const Trade = {
   name: 'TSLA',
+  title: 'Tesla',
   type: 'stock',
+  url: 'http://google.com',
   transactions: [Transaction],
   summary: Summary
 };

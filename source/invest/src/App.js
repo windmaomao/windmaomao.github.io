@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PropTypes from 'prop-types';
+import { Card } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
+    const {trades} = this.props.store;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      {trades.map(trade => (
+        <Card key={trade.name}>
+          <Card.Content>
+            <Card.Header>{trade.title}</Card.Header>
+            <Card.Meta>{trade.name}</Card.Meta>
+            <Card.Description>{trade.url}</Card.Description>
+          </Card.Content>
+        </Card>
+      ))}
       </div>
     );
   }
+}
+
+App.propTypes = {
+  store: PropTypes.object.isRequired
 }
 
 export default App;
