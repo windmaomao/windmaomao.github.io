@@ -3,7 +3,7 @@ const Summary = {
   totalCost: '7035.00',
   unitValue: '22',
   totalGain: '234.00',
-}
+};
 
 const Transaction = {
   quantity: '30',
@@ -15,18 +15,17 @@ const Transaction = {
   date: '1978-12-22',
   time: '',
   summary: Summary
-}
+};
 
 const Trade = {
   name: 'TSLA',
   type: 'stock',
   transactions: [Transaction],
-  summary: {
-  }
-}
+  summary: Summary
+};
+
 
 export {
-  Summary,
-  Transaction,
-  Trade,
+  Trade
 }
+

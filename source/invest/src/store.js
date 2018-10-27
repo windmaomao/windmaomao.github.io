@@ -1,5 +1,5 @@
 import {observable, decorate} from 'mobx';
-import {Summary, Sheet, Trade} from './model'; 
+import { Trade } from './model';
 
 class Store {
   trades = [Trade];
