@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
 import { Input as SInput, Form } from 'semantic-ui-react'
+// styles
+import './Input.css';
 
 class Input extends Component {
   render() {

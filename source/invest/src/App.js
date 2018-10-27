@@ -10,13 +10,14 @@ class App extends Component {
     const {store} = this.props;
     return (
       <Container className="App">
-        <h1>List</h1>
-        {store.trades.map((trade, index) => (
-          <Trade trade={trade} key={index} />
-        ))}
-        <div>
-          <Button onClick={() => {store.addTrade();}}>Add Trade</Button>
-        </div>
+        <h1>Trades</h1>
+        <Form unstackable size='mini'>
+          {store.trades.map((trade, index) => (
+            <Trade trade={trade} key={index} />
+          ))}
+        </Form>
+        <br />
+        <Button onClick={() => {store.addTrade();}}>Add Trade</Button>
       </Container>
     );
   }

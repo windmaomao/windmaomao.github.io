@@ -13,16 +13,40 @@ class Transactions extends Component {
         <Table unstackable compact size='small'>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell width={2}>Quantity</Table.HeaderCell>
-              <Table.HeaderCell width={3}>Action</Table.HeaderCell>
-              <Table.HeaderCell width={3}>Price</Table.HeaderCell>
-              <Table.HeaderCell width={3}>Total</Table.HeaderCell>
-              <Table.HeaderCell width={3}>Cost</Table.HeaderCell>
-              <Table.HeaderCell width={2}>Gain</Table.HeaderCell>
+              <Table.HeaderCell width={1}>Quantity</Table.HeaderCell>
+              <Table.HeaderCell width={1}>Action</Table.HeaderCell>
+              <Table.HeaderCell width={1}>Price</Table.HeaderCell>
+              <Table.HeaderCell width={1}>Total</Table.HeaderCell>
+              <Table.HeaderCell width={1}>Cost</Table.HeaderCell>
+              <Table.HeaderCell width={1}>Gain</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
+          <Table.Body>
+            {trade.transactions.map((trans, index) => (
+              <Table.Row>
+                <Table.Cell>
+                  <Input min='1' type='number' field={trans} property='quantity' />
+                </Table.Cell>
+                <Table.Cell>
+                  <Input field={trans} property='action' />
+                </Table.Cell>
+                <Table.Cell>
+                  <Input field={trans} property='price' />
+                </Table.Cell>
+                <Table.Cell>
+                  <Input field={trans} property='date' />
+                </Table.Cell>
+                <Table.Cell>
+                  <Input field={trans.summary} property='totalCost' />
+                </Table.Cell>
+                <Table.Cell>
+                  <Input field={trans.summary} property='totalGain' />
+                </Table.Cell>
+              </Table.Row>
+            ))}
+            </Table.Body>
         </Table>
-        <Form unstackable size='mini'>
+        {/* <Form unstackable size='mini'>
           {trade.transactions.map((trans, index) => (
             <Form.Group key={index}>
               <Form.Field width={2}>
@@ -45,8 +69,10 @@ class Transactions extends Component {
               </Form.Field>
           </Form.Group>
           ))}
-          <Button onClick={() => {store.addTransaction(trade)}}>Add Transaction</Button>
-        </Form>      
+        </Form>       */}
+        <Button size='mini'
+          onClick={() => {store.addTransaction(trade)}}
+        >Add Transaction</Button>
       </div>
     );
   }
