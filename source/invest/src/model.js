@@ -8,7 +8,7 @@ const Summary = {
 const Transaction = {
   quantity: '30',
   account: 'fidelity-personal',
-  type: 'long',
+  type: 'Long',
   price: '23.45',
   fee: '5.00',
   total: '7035.0',

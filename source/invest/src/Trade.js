@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Card, Form } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
+import Transactions from './Transactions';
 import Input from './Input';
 
 class Trade extends Component {
@@ -14,13 +15,12 @@ class Trade extends Component {
           <Card.Header>{trade.name}</Card.Header>
           <Card.Meta>{trade.symbol}</Card.Meta>
           <br />
-
-          <Form.Field inline>
-            <Input 
-              placeholder='Name, ex. TSLA' 
-              field={trade} property='name'
-            />
-          </Form.Field>
+          <Input 
+            placeholder='Name, ex. TSLA' 
+            field={trade} property='name'
+          />
+          <br />
+          <Transactions trade={trade} />
         </Card.Content>
       </Card>
     );
