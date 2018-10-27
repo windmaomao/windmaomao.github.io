@@ -5,6 +5,7 @@ import {observer} from 'mobx-react';
 import { Button } from 'semantic-ui-react'
 import { Container } from 'semantic-ui-react'
 import { Card } from 'semantic-ui-react'
+import { Form, Input } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
@@ -15,9 +16,19 @@ class App extends Component {
         {store.trades.map((trade, index) => (
           <Card fluid key={index}>
             <Card.Content>
-              <Card.Header>{trade.title}</Card.Header>
-              <Card.Meta>{trade.name}</Card.Meta>
-              <Card.Description>{trade.url}</Card.Description>
+              <Card.Header>{trade.name}</Card.Header>
+              <Card.Meta>{trade.symbol}</Card.Meta>
+              <br />
+
+              <Form size={'mini'}>
+                <Form.Field inline>
+                  <Input 
+                    placeholder='Name, ex. TSLA' 
+                    value={trade.name}
+                    onChange={(e) => { trade.name = e.target.value; }}
+                  />
+                </Form.Field>
+              </Form>
             </Card.Content>
           </Card>
         ))}
