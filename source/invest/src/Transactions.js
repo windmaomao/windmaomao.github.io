@@ -10,35 +10,40 @@ class Transactions extends Component {
     const {store, trade} = this.props;
     return (
       <div>
-        <Table unstackable>
+        <Table unstackable compact size='small'>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell width={2}>Quantity</Table.HeaderCell>
-              <Table.HeaderCell width={3}>Type</Table.HeaderCell>
+              <Table.HeaderCell width={3}>Action</Table.HeaderCell>
               <Table.HeaderCell width={3}>Price</Table.HeaderCell>
               <Table.HeaderCell width={3}>Total</Table.HeaderCell>
-              <Table.HeaderCell width={5}>Type</Table.HeaderCell>
+              <Table.HeaderCell width={3}>Cost</Table.HeaderCell>
+              <Table.HeaderCell width={2}>Gain</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
         </Table>
-        <Form unstackable>
+        <Form unstackable size='mini'>
           {trade.transactions.map((trans, index) => (
             <Form.Group key={index}>
               <Form.Field width={2}>
                 <Input min='1' type='number' field={trans} property='quantity' />
               </Form.Field>
               <Form.Field width={3}>
-                <Input field={trans} property='type' />
+                <Input field={trans} property='action' />
               </Form.Field>
               <Form.Field width={3}>
                 <Input field={trans} property='price' />
               </Form.Field>
               <Form.Field width={3}>
-                <Input field={trans} property='total' />
+                <Input field={trans} property='date' />
               </Form.Field>
-              <Form.Field width={5}>
+              <Form.Field width={3}>
+                <Input field={trans.summary} property='totalCost' />
               </Form.Field>
-            </Form.Group>
+              <Form.Field width={2}>
+                <Input field={trans.summary} property='totalGain' />
+              </Form.Field>
+          </Form.Group>
           ))}
           <Button onClick={() => {store.addTransaction(trade)}}>Add Transaction</Button>
         </Form>      

@@ -6,12 +6,12 @@ const Summary = {
 };
 
 const Transaction = {
-  quantity: '30',
+  quantity: '1',
   account: 'fidelity-personal',
   type: 'Long',
+  action: 'Bought',
   price: '23.45',
   fee: '5.00',
-  total: '7035.0',
   date: '1978-12-22',
   time: '',
   summary: Summary
@@ -22,6 +22,7 @@ const Trade = {
   symbol: 'TSLA',
   type: 'stock',
   url: 'http://google.com',
+  price: '20.00',
   transactions: [Transaction],
   summary: Summary
 };

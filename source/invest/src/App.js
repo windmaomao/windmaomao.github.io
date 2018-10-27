@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Button } from 'semantic-ui-react'
-import { Container } from 'semantic-ui-react'
+import { Container, Button, Form } from 'semantic-ui-react'
 import Trade from './Trade';
 
 class App extends Component {
