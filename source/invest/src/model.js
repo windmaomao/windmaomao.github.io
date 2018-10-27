@@ -28,6 +28,7 @@ const Trade = {
 
 
 export {
-  Trade
+  Trade,
+  Transaction
 }
 

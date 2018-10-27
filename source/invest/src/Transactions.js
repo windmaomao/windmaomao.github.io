@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {observer} from 'mobx-react';
+import {inject, observer} from 'mobx-react';
 // components
 import { Table, Form, Button } from 'semantic-ui-react'
 import Input from './Input';
 
 class Transactions extends Component {
   render() {
-    const {trade} = this.props;
+    const {store, trade} = this.props;
     return (
       <div>
         <Table unstackable>
@@ -40,7 +40,7 @@ class Transactions extends Component {
               </Form.Field>
             </Form.Group>
           ))}
-          <Button type='submit'>Submit</Button>
+          <Button onClick={() => {store.addTransaction(trade)}}>Add Transaction</Button>
         </Form>      
       </div>
     );
@@ -48,7 +48,8 @@ class Transactions extends Component {
 }
 
 Transactions.propTypes = {
-  trade: PropTypes.object.isRequired
+  trade: PropTypes.object.isRequired,
+  store: PropTypes.object.isRequired
 }
 
-export default observer(Transactions);
+export default inject('store')(observer(Transactions));
