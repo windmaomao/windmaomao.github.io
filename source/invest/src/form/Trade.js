@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
 import { Button, Card } from 'semantic-ui-react'
-import Transactions from './Transactions';
-import Input from './fields/Input';
+import Transactions from '../Transactions';
+import Input from '../fields/Input';
 
 class Trade extends Component {
   render() {
