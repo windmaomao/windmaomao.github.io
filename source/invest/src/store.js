@@ -14,7 +14,7 @@ export class Store {
   }
 
   saveTrade(trade) {
-    this.db.ref(`Trade/${trade.name}`).set(toJS(trade));
+    return this.db.ref(`Trade/${trade.name}`).set(toJS(trade));
   }
 }
 
