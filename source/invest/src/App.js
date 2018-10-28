@@ -4,6 +4,8 @@ import {observer} from 'mobx-react';
 // components
 import { Container, Button, Form } from 'semantic-ui-react'
 import Trade from './Trade';
+// styles
+import './App.css';
 
 class App extends Component {
   render() {

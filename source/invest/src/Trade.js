@@ -4,7 +4,7 @@ import {observer} from 'mobx-react';
 // components
 import { Card } from 'semantic-ui-react'
 import Transactions from './Transactions';
-import Input from './Input';
+import Input from './fields/Input';
 
 class Trade extends Component {
   render() {

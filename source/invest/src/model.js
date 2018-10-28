@@ -8,8 +8,8 @@ const Summary = {
 const Transaction = {
   quantity: '1',
   account: 'fidelity-personal',
-  type: 'Long',
-  action: 'Bought',
+  type: 'male',
+  action: 'buy',
   price: '23.45',
   fee: '5.00',
   date: '1978-12-22',
@@ -27,9 +27,14 @@ const Trade = {
   summary: Summary
 };
 
+const TransactionActionOptions = [
+  { key: 'buy', text: 'Bought', value: 'buy' },
+  { key: 'sell', text: 'Sold', value: 'sell' },
+];
 
 export {
   Trade,
-  Transaction
+  Transaction,
+  TransactionActionOptions,
 }
 

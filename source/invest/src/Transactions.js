@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {inject, observer} from 'mobx-react';
 // components
-import { Table, Form, Button } from 'semantic-ui-react'
-import Input from './Input';
+import { Table, Button } from 'semantic-ui-react'
+import Field from './fields';
+// services
+import {TransactionActionOptions} from './model';
 
 class Transactions extends Component {
   render() {
@@ -23,24 +25,24 @@ class Transactions extends Component {
           </Table.Header>
           <Table.Body>
             {trade.transactions.map((trans, index) => (
-              <Table.Row>
+              <Table.Row key={index}>
                 <Table.Cell>
-                  <Input min='1' type='number' field={trans} property='quantity' />
+                  <Field.Input min='1' type='number' field={trans} property='quantity' />
                 </Table.Cell>
                 <Table.Cell>
-                  <Input field={trans} property='action' />
+                  <Field.Select field={trans} property='action' options={TransactionActionOptions} />
                 </Table.Cell>
                 <Table.Cell>
-                  <Input field={trans} property='price' />
+                  <Field.Input field={trans} property='price' />
                 </Table.Cell>
                 <Table.Cell>
-                  <Input field={trans} property='date' />
+                  <Field.Input field={trans} property='date' />
                 </Table.Cell>
                 <Table.Cell>
-                  <Input field={trans.summary} property='totalCost' />
+                  <Field.Input field={trans.summary} property='totalCost' />
                 </Table.Cell>
                 <Table.Cell>
-                  <Input field={trans.summary} property='totalGain' />
+                  <Field.Input field={trans.summary} property='totalGain' />
                 </Table.Cell>
               </Table.Row>
             ))}
