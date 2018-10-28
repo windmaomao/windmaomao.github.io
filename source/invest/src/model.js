@@ -18,11 +18,12 @@ const Transaction = {
 };
 
 const Trade = {
-  name: 'Tesla',
-  symbol: 'TSLA',
-  type: 'stock',
-  url: 'http://google.com',
-  price: '20.00',
+  _meta: { enabled: true },
+  symbol: '',
+  name: '',
+  type: '',
+  url: '',
+  price: '1.00',
   transactions: [Transaction],
   summary: Summary
 };

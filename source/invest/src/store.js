@@ -1,9 +1,8 @@
 import {observable, decorate, action, toJS} from 'mobx';
 import { Trade, Transaction } from './model';
-import firebase from './firebase';
+import api from './api';
 
 export class Store {
-  db = firebase.database();
   trades = [Trade];
 
   addTrade() {
@@ -13,8 +12,13 @@ export class Store {
     trade.transactions.push(Transaction);
   }
 
-  saveTrade(trade) {
-    return this.db.ref(`Trade/${trade.name}`).set(toJS(trade));
+  async saveTrade(trade) {
+    trade._meta.enabled = false;
+    try {
+      await api.saveTrade(trade);
+    } finally {
+      trade._meta.enabled = true;
+    }    
   }
 }
 
