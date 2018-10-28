@@ -19,7 +19,7 @@ const Transaction = {
 
 const Trade = {
   _meta: { enabled: true },
-  symbol: '',
+  symbol: 'TSLA',
   name: '',
   type: '',
   url: '',

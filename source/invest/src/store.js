@@ -1,4 +1,4 @@
-import {observable, decorate, action, toJS} from 'mobx';
+import {observable, decorate, action, set} from 'mobx';
 import { Trade, Transaction } from './model';
 import api from './api';
 
@@ -20,12 +20,20 @@ export class Store {
       trade._meta.enabled = true;
     }    
   }
+
+  async loadTrade(trade) {
+    try {
+      const data = await api.loadTrade(trade.symbol);
+      set(trade, data);
+    } finally {}
+  }
 }
 
 decorate(Store, {
   trades: observable,
   addTrade: action.bound,
   saveTrade: action.bound,
+  loadTrade: action.bound,
 });
 
 const store = new Store();

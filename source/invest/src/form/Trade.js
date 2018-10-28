@@ -11,13 +11,19 @@ class Trade extends Component {
     const {store, trade} = this.props;
     const {enabled} = trade._meta;
     return (
-      <Card fluid color={!enabled ? 'red': ''}>
+      <Card fluid color={!enabled ? 'red': 'black'}>
         <Card.Content>
           <Button
             floated='right' 
             size="mini" icon="save"
             loading={!enabled}
             onClick={() => { store.saveTrade(trade); }}
+          />
+          <Button
+            floated='right' 
+            size="mini" icon="download"
+            loading={!enabled}
+            onClick={() => { store.loadTrade(trade); }}
           />
           <Card.Header>
             {trade.symbol} &nbsp;
