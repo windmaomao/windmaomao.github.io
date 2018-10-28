@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
 import { Button, Card } from 'semantic-ui-react'
-import Transactions from '../Transactions';
+import Transactions from './Transactions';
 import Input from '../fields/Input';
+import TradeSelect from './TradeSelect';
 
 class Trade extends Component {
   render() {
@@ -13,7 +14,7 @@ class Trade extends Component {
     return (
       <Card fluid color={!enabled ? 'red': 'black'}>
         <Card.Content>
-          <Button
+          <Button primary
             floated='right' 
             size="mini" icon="save"
             loading={!enabled}
@@ -21,12 +22,13 @@ class Trade extends Component {
           />
           <Button
             floated='right' 
-            size="mini" icon="download"
+            size="mini" icon="redo"
             loading={!enabled}
             onClick={() => { store.loadTrade(trade); }}
           />
           <Card.Header>
             {trade.symbol} &nbsp;
+            <TradeSelect store={store} trade={trade} />
           </Card.Header>
           <Card.Meta>{trade.name}</Card.Meta>
           <br />

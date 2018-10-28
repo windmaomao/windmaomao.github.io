@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {inject, observer} from 'mobx-react';
 // components
 import { Table, Button } from 'semantic-ui-react'
-import Field from './fields';
+import Field from '../fields';
 // services
-import {TransactionActionOptions} from './model';
+import {TransactionActionOptions} from '../model';
 
 class Transactions extends Component {
   render() {
