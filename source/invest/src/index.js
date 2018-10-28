@@ -4,9 +4,7 @@ import {Provider} from 'mobx-react';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Store from './store';
-
-const store = new Store();
+import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>

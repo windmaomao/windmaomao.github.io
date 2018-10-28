@@ -15,7 +15,7 @@ class App extends Component {
         <h1>Trades</h1>
         <Form unstackable size='mini'>
           {store.trades.map((trade, index) => (
-            <Trade trade={trade} key={index} />
+            <Trade store={store} trade={trade} key={index} />
           ))}
         </Form>
         <br />

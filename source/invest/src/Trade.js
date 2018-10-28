@@ -2,17 +2,23 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Card } from 'semantic-ui-react'
+import { Button, Card } from 'semantic-ui-react'
 import Transactions from './Transactions';
 import Input from './fields/Input';
 
 class Trade extends Component {
   render() {
-    const {trade} = this.props;
+    const {store, trade} = this.props;
     return (
       <Card fluid>
         <Card.Content>
-          <Card.Header>{trade.name}</Card.Header>
+          <Card.Header>
+            {trade.name} &nbsp;
+            <Button 
+              size="mini"
+              onClick={() => {store.saveTrade(trade);}}
+            >Save</Button>
+          </Card.Header>
           <Card.Meta>{trade.symbol}</Card.Meta>
           <br />
           <Input 
@@ -28,6 +34,7 @@ class Trade extends Component {
 }
 
 Trade.propTypes = {
+  store: PropTypes.object.isRequired,
   trade: PropTypes.object.isRequired
 }
 

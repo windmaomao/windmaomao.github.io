@@ -16,11 +16,11 @@ class Transactions extends Component {
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell width={1}>Quantity</Table.HeaderCell>
-              <Table.HeaderCell width={1}>Action</Table.HeaderCell>
-              <Table.HeaderCell width={1}>Price</Table.HeaderCell>
-              <Table.HeaderCell width={1}>Total</Table.HeaderCell>
-              <Table.HeaderCell width={1}>Cost</Table.HeaderCell>
-              <Table.HeaderCell width={1}>Gain</Table.HeaderCell>
+              <Table.HeaderCell width={2}>Action</Table.HeaderCell>
+              <Table.HeaderCell width={2}>Price</Table.HeaderCell>
+              <Table.HeaderCell width={2}>Date</Table.HeaderCell>
+              <Table.HeaderCell width={2}>Cost</Table.HeaderCell>
+              <Table.HeaderCell width={2}>Gain</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>

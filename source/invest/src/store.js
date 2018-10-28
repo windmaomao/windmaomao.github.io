@@ -1,19 +1,29 @@
-import {observable, decorate, action} from 'mobx';
+import {observable, decorate, action, toJS} from 'mobx';
 import { Trade, Transaction } from './model';
+import firebase from './firebase';
 
-class Store {
+export class Store {
+  db = firebase.database();
   trades = [Trade];
+
   addTrade() {
     this.trades.push(Trade);
   }
   addTransaction(trade) {
     trade.transactions.push(Transaction);
   }
+
+  saveTrade(trade) {
+    this.db.ref(`Trade/${trade.name}`).set(toJS(trade));
+  }
 }
 
 decorate(Store, {
   trades: observable,
   addTrade: action.bound,
+  saveTrade: action.bound,
 });
 
-export default Store;
+const store = new Store();
+
+export default store;
