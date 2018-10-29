@@ -18,13 +18,13 @@ const Transaction = {
 };
 
 const Trade = {
-  _meta: { enabled: true },
-  symbol: 'TSLA',
+  _meta: { enabled: true, selected: false },
+  symbol: '',
   name: '',
   type: '',
   url: '',
   price: '1.00',
-  transactions: [Transaction],
+  transactions: [],
   summary: Summary
 };
 

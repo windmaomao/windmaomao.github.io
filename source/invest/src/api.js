@@ -11,7 +11,12 @@ const loadTrade = (id) => {
   return db.ref(`Trade/${id}`).once('value').then(res => res.val());
 } 
 
+const loadTradeList = () => {
+  return db.ref('Trade/keys').once('value').then(res => res.val());
+}
+
 export default {
+  loadTradeList,
   saveTrade,
   loadTrade,
 };

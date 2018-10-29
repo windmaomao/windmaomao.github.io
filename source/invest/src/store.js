@@ -4,6 +4,11 @@ import api from './api';
 
 export class Store {
   trades = [Trade];
+  tradeList = [];
+
+  constructor() {
+    this.updateTradeList();
+  }
 
   addTrade() {
     this.trades.push(Trade);
@@ -27,6 +32,14 @@ export class Store {
       set(trade, data);
     } finally {}
   }
+
+  async updateTradeList() {
+    try {
+      const data = await api.loadTradeList();
+      this.tradeList.replace(data.split(','));
+    } finally {}
+  }
+
 }
 
 decorate(Store, {
@@ -34,6 +47,7 @@ decorate(Store, {
   addTrade: action.bound,
   saveTrade: action.bound,
   loadTrade: action.bound,
+  tradeList: observable,
 });
 
 const store = new Store();

@@ -2,20 +2,60 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Dropdown } from 'semantic-ui-react'
+import { Dropdown, Icon } from 'semantic-ui-react'
+import Input from '../fields/Input';
 
-const options = [
-  { key: 1, text: 'Choice 1', value: 1 },
-  { key: 2, text: 'Choice 2', value: 2 },
-  { key: 3, text: 'Choice 3', value: 3 },
-]
+// const options = [
+//   {
+//     key: 'custom',
+//     text: (
+//       <span>
+//         Input <strong>custom</strong>
+//       </span>
+//     ),
+//     disabled: true,
+//   },
+//   { key: 'profile', text: 'Your Profile' },
+//   { key: 'stars', text: 'Your Stars' },
+//   { key: 'explore', text: 'Explore' },
+//   { key: 'integrations', text: 'Integrations' },
+//   { key: 'help', text: 'Help' },
+//   { key: 'settings', text: 'Settings' },
+//   { key: 'sign-out', text: 'Sign Out' },
+// ]
+
 
 class TradeSelect extends Component {
   render() {
     const {store, trade} = this.props;
-    // const {enabled} = trade._meta;
+    const {tradeList} = store;
+    const options = tradeList.map(symbol => ({
+      key: symbol, text: symbol, value: symbol
+    }));
+    const trigger = (
+      <span>
+        {trade.symbol ? (
+          <span>{trade.symbol}</span>
+        ) : (
+          <span><Icon name='folder open outline' /> Select Trade</span>
+        )}
+      </span>
+    )
     return (
-      <Dropdown clearable options={options} selection />
+      <div>
+         <Dropdown 
+          trigger={trigger} 
+          options={options} 
+          onChange={(e, data) => {
+            trade.symbol = data.value;
+            store.loadTrade(trade);
+          }}
+        />
+        {/* <Input 
+          placeholder='Name, ex. TSLA' 
+          field={trade} property='symbol'
+        /> */}
+      </div>
     );
   }
 }

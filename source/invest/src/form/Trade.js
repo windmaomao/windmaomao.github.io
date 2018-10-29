@@ -4,7 +4,6 @@ import {observer} from 'mobx-react';
 // components
 import { Button, Card } from 'semantic-ui-react'
 import Transactions from './Transactions';
-import Input from '../fields/Input';
 import TradeSelect from './TradeSelect';
 
 class Trade extends Component {
@@ -27,15 +26,11 @@ class Trade extends Component {
             onClick={() => { store.loadTrade(trade); }}
           />
           <Card.Header>
-            {trade.symbol} &nbsp;
-            <TradeSelect store={store} trade={trade} />
+            <div style={{width: '40%'}}>
+              <TradeSelect store={store} trade={trade} />
+            </div>
           </Card.Header>
           <Card.Meta>{trade.name}</Card.Meta>
-          <br />
-          <Input 
-            placeholder='Name, ex. TSLA' 
-            field={trade} property='symbol'
-          />
           <br />
           <Transactions trade={trade} />
         </Card.Content>
