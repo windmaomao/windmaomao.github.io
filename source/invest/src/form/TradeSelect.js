@@ -2,28 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Dropdown, Icon, Button, Form } from 'semantic-ui-react'
-import Input from '../fields/Input';
-
-// const options = [
-//   {
-//     key: 'custom',
-//     text: (
-//       <span>
-//         Input <strong>custom</strong>
-//       </span>
-//     ),
-//     disabled: true,
-//   },
-//   { key: 'profile', text: 'Your Profile' },
-//   { key: 'stars', text: 'Your Stars' },
-//   { key: 'explore', text: 'Explore' },
-//   { key: 'integrations', text: 'Integrations' },
-//   { key: 'help', text: 'Help' },
-//   { key: 'settings', text: 'Settings' },
-//   { key: 'sign-out', text: 'Sign Out' },
-// ]
-
+import { Dropdown, Icon } from 'semantic-ui-react'
+// import Input from '../fields/Input';
 
 class TradeSelect extends Component {
   render() {
@@ -34,10 +14,10 @@ class TradeSelect extends Component {
     }));
     const trigger = (
       <span>
-        {trade.symbol ? (
-          <span>{trade.symbol}</span>
-        ) : (
-          <span><Icon name='folder open outline' /> Select Trade</span>
+        {!trade.symbol && (
+          <span>
+            <Icon name='folder outline' /> Select Trade
+          </span>
         )}
       </span>
     )
@@ -45,11 +25,13 @@ class TradeSelect extends Component {
       <div>
         {trade.symbol ? (
           <div>
-            <span>{trade.symbol}</span>&nbsp;
-            <Icon 
-              size="small" name='close' 
+            <span 
+              style={{ cursor: 'pointer'}}
               onClick={() => {store.resetTrade(trade); }}
-            />
+            >
+              <Icon name='folder open outline' /> {trade.symbol} &nbsp;
+              <Icon size="small" name='close' />
+            </span>&nbsp;
           </div>
         ): (
           <div>
