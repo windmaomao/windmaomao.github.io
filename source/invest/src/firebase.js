@@ -1,4 +1,5 @@
-import fb from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/app';
 
 // Initialize Firebase
 var config = {
@@ -9,6 +10,6 @@ var config = {
   storageBucket: "torrid-heat-2030.appspot.com",
   messagingSenderId: "829342570880"
 };
-fb.initializeApp(config);
+firebase.initializeApp(config);
 
-export default fb;
+export default firebase;
