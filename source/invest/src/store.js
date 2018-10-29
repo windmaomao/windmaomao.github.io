@@ -19,7 +19,7 @@ export class Store {
   }
 
   resetTrade(trade) {
-    Object.assign(trade, Trade);
+    set(trade, Trade);
   }
 
   async saveTrade(trade) {
@@ -34,6 +34,7 @@ export class Store {
   async loadTrade(trade) {
     try {
       const data = await api.loadTrade(trade.symbol);
+      data.summary = this._calcTradeSummary(data);
       set(trade, data);
     } finally {}
   }
@@ -45,6 +46,14 @@ export class Store {
     } finally {}
   }
 
+  _calcTradeSummary(trade) {
+    const init = { shares: 0 };
+    const summary = trade.transactions.reduce((acc, trans) => {
+      acc.shares = trans.quantity + acc.shares;
+      return acc;
+    }, init);
+    return summary;
+  }
 }
 
 decorate(Store, {

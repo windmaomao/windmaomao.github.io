@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {inject, observer} from 'mobx-react';
+import NumberFormat from 'react-number-format';
 // components
 import { Table, Button } from 'semantic-ui-react'
 import Field from '../fields';
@@ -12,15 +13,15 @@ class Transactions extends Component {
     const {store, trade} = this.props;
     return (
       <div>
-        <Table unstackable compact size='small'>
+        <Table unstackable compact size='medium'>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell width={1}>Quantity</Table.HeaderCell>
               <Table.HeaderCell width={2}>Action</Table.HeaderCell>
               <Table.HeaderCell width={2}>Price</Table.HeaderCell>
               <Table.HeaderCell width={2}>Date</Table.HeaderCell>
-              <Table.HeaderCell width={2}>Cost</Table.HeaderCell>
-              <Table.HeaderCell width={2}>Gain</Table.HeaderCell>
+              <Table.HeaderCell width={2} textAlign='right'>Total</Table.HeaderCell>
+              {/* <Table.HeaderCell width={2}>Gain</Table.HeaderCell> */}
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -38,12 +39,17 @@ class Transactions extends Component {
                 <Table.Cell>
                   <Field.Input field={trans} property='date' />
                 </Table.Cell>
-                <Table.Cell>
-                  <Field.Input field={trans.summary} property='totalCost' />
+                <Table.Cell textAlign='right'>
+                  <NumberFormat value={trans.quantity * trans.price} 
+                    displayType={'text'} 
+                    thousandSeparator={true} prefix={'$'} 
+                    decimalScale={1}
+                    fixedDecimalScale={true}
+                  />
                 </Table.Cell>
-                <Table.Cell>
+                {/* <Table.Cell>
                   <Field.Input field={trans.summary} property='totalGain' />
-                </Table.Cell>
+                </Table.Cell> */}
               </Table.Row>
             ))}
             </Table.Body>

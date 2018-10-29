@@ -1,4 +1,5 @@
 const Summary = {
+  shares: 0,
   unitCost: '24.03',
   totalCost: '7035.00',
   unitValue: '22',
@@ -29,8 +30,10 @@ const Trade = {
 };
 
 const TransactionActionOptions = [
-  { key: 'buy', text: 'Bought', value: 'buy' },
-  { key: 'sell', text: 'Sold', value: 'sell' },
+  { key: 'buy', text: 'Buy', value: 'buy' },
+  { key: 'sell', text: 'Sell', value: 'sell' },
+  { key: 'short', text: 'Short', value: 'short' },
+  { key: 'cover', text: 'Cover', value: 'cover' },
 ];
 
 export {
