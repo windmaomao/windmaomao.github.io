@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Dropdown, Icon } from 'semantic-ui-react'
+import { Dropdown, Icon, Button, Form } from 'semantic-ui-react'
 import Input from '../fields/Input';
 
 // const options = [
@@ -43,18 +43,30 @@ class TradeSelect extends Component {
     )
     return (
       <div>
-         <Dropdown 
-          trigger={trigger} 
-          options={options} 
-          onChange={(e, data) => {
-            trade.symbol = data.value;
-            store.loadTrade(trade);
-          }}
-        />
-        {/* <Input 
-          placeholder='Name, ex. TSLA' 
-          field={trade} property='symbol'
-        /> */}
+        {trade.symbol ? (
+          <div>
+            <span>{trade.symbol}</span>&nbsp;
+            <Icon 
+              size="small" name='close' 
+              onClick={() => {store.resetTrade(trade); }}
+            />
+          </div>
+        ): (
+          <div>
+            <Dropdown inline
+              trigger={trigger} 
+              options={options} 
+              onChange={(e, data) => {
+                trade.symbol = data.value;
+                store.loadTrade(trade);
+              }}
+            />
+            {/* <Input size="mini" inline
+              placeholder='Name, ex. TSLA' 
+              field={trade} property='symbol'
+            /> */}
+          </div>
+        )}
       </div>
     );
   }

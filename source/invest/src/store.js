@@ -13,8 +13,13 @@ export class Store {
   addTrade() {
     this.trades.push(Trade);
   }
+
   addTransaction(trade) {
     trade.transactions.push(Transaction);
+  }
+
+  resetTrade(trade) {
+    Object.assign(trade, Trade);
   }
 
   async saveTrade(trade) {
@@ -45,6 +50,7 @@ export class Store {
 decorate(Store, {
   trades: observable,
   addTrade: action.bound,
+  resetTrade: action.bound,
   saveTrade: action.bound,
   loadTrade: action.bound,
   tradeList: observable,
