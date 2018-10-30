@@ -6,15 +6,21 @@ import { Form } from 'semantic-ui-react'
 
 class SMInput extends Component {
   render() {
-    const {field} = this.props;
+    const {field, type, ...props} = this.props;
+    console.log(props);
     return (
-      <Form.Input label="" {...field.bind()} />
+      <Form.Input {...props} label={field.label} {...field.bind()} error={field.error} type={type} />
     );
   }
 }
 
+SMInput.defaultProps = {
+  type: 'text'
+}
+
 SMInput.propTypes = {
   field: PropTypes.object.isRequired,
+  type: PropTypes.string
 }
 
 const Input = observer(SMInput);

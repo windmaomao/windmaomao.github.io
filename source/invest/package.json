@@ -11,7 +11,8 @@
     "react-dom": "^16.6.0",
     "react-number-format": "^3.6.2",
     "react-scripts": "2.0.5",
-    "semantic-ui-react": "^0.83.0"
+    "semantic-ui-react": "^0.83.0",
+    "validatorjs": "^3.15.1"
   },
   "scripts": {
     "start": "PORT=3064 react-scripts start",
