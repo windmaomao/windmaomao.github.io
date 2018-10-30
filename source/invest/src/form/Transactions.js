@@ -13,7 +13,7 @@ class Transactions extends Component {
     const {store, trade} = this.props;
     return (
       <div>
-        <Table unstackable compact size='medium'>
+        <Table unstackable compact size='small'>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell width={1}>Quantity</Table.HeaderCell>
