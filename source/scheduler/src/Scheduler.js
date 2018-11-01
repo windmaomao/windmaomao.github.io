@@ -40,7 +40,7 @@ export default class SchedulerService {
     const slotsMap = cloneDeep(slots);
     const lastName = name => {
       const parts = name.split(' ');
-      return parts.length > 1 ? parts[1] : null;
+      return parts.length > 1 ? parts[parts.length - 1] : null;
     };
     const studentLastName = lastName(student.id);
 

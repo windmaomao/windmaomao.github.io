@@ -7,9 +7,8 @@ import { Form } from 'semantic-ui-react'
 class SMInput extends Component {
   render() {
     const {field, type, ...props} = this.props;
-    console.log(props);
     return (
-      <Form.Input {...props} label={field.label} {...field.bind()} error={field.error} type={type} />
+      <Form.Input {...props} label={field.label} {...field.bind()} error={!!field.error} type={type} />
     );
   }
 }

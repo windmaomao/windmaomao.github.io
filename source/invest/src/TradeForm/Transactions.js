@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {inject, observer} from 'mobx-react';
-import NumberFormat from 'react-number-format';
+import {observer} from 'mobx-react';
 // components
-import { Table, Button } from 'semantic-ui-react'
+import { Table } from 'semantic-ui-react'
 import Field from './Field';
 // services
-import {TransactionActionOptions} from '../model';
 
 class Transactions extends Component {
   render() {
