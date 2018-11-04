@@ -40,8 +40,8 @@ render() {
             {title}
           </Table.Cell>
           {cols.map(col => (
-            <Fragment key={col}>
-              <Table.Cell>{values[col] || ''}</Table.Cell>
+            <Fragment key={col.name}>
+              <Table.Cell>{col.value(values)}</Table.Cell>
             </Fragment>
           ))}
         </Table.Row>        

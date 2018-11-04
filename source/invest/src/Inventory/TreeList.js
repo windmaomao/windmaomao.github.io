@@ -5,10 +5,23 @@ import {upperFirst} from 'lodash';
 import { Table } from 'semantic-ui-react'
 import TreeNode from './TreeNode';
 
+const setupColDefs = (cols) => {
+  return cols.map(col => {
+    if (typeof col === 'string') {
+      return { 
+        name: col,
+        value: (node) => (node[col] || '')
+      }
+    }
+    return col;
+  });
+}
+
 class TreeList extends Component {
   render() {
     const {root: {title, children, cols}} = this.props;
     const colDefs = cols || this.props.cols;
+    const colDefs2 = setupColDefs(colDefs);
     return (
       <Table 
         size="small" compact
@@ -18,14 +31,14 @@ class TreeList extends Component {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>{title}</Table.HeaderCell>
-            {colDefs.map(col => (
-              <Table.HeaderCell key={col}>{upperFirst(col)}</Table.HeaderCell>
+            {colDefs2.map(col => (
+              <Table.HeaderCell key={col.name}>{upperFirst(col.name)}</Table.HeaderCell>
             ))}
           </Table.Row>
         </Table.Header>
         <Table.Body>
           {children && children.map((node, i) => (
-            <TreeNode key={i} node={node} level={0} cols={colDefs} />
+            <TreeNode key={i} node={node} level={0} cols={colDefs2} />
           ))}
         </Table.Body>
       </Table>
