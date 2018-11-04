@@ -269,4 +269,25 @@ Apr 2009 {.subtitle}
 | iMac 24'       Early 2009 | 2009 | Not used iMac  | MB418xx/A?| |
 | Macbook Pro 13'  Mid 2009 | 2009 | Maggie's old   | MB990xx/A | |
 
+### Electronics
 
+| Model                        | Model     |
+| ---------------------------- | --------- |
+| BenQ Digital Projector       | W1070     |
+| iRobot Roomba                | 530       |
+| ScanSnap Color Image Scanner | S1500M    |
+| Samsung TV 23"               | LN-S2338W |
+| OfficeJet Printer            | J4680     |
+| PlayStation 3                | 80GB      |
+| PlayStation 2                |           |
+|                              |           |
+|                              |           |
+
+### Baby
+
+| Model             | Model |
+| ----------------- | ----- |
+| Graco Pack N Play |       |
+| UPPABaby          | Vista |
+| Chair             |       |
+|                   |       |
