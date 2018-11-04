@@ -1,23 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // components
-import Header from './Header';
+import PageHeader from './Header';
+import { Container, Header, Icon, Card } from 'semantic-ui-react'
 import Form from './form/Trades';
-import TradeForm from './TradeForm/TradeForm';
-import Trade from './TradeForm/Trade';
+import SummaryList from './SummaryList/SummaryList';
+// import TradeForm from './TradeForm/TradeForm';
+// import Trade from './TradeForm/Trade';
 // styles
 import './App.css';
+// services
+import { summaries } from './SummaryList/summary.model';
 
-const form = new TradeForm();
+// const form = new TradeForm();
 
 class App extends Component {
   render() {
     const {store} = this.props;
     return (
       <div>
-        <Header />
+        <PageHeader />
+        <Container>
+          <Header as='h1'>
+            <Icon name='settings' />
+            Trade Summaries
+            <Header.Subheader>Listing of all recent trades.</Header.Subheader>
+          </Header>
+          <SummaryList items={summaries} />
+        </Container>
         <Form store={store} />
-        <Trade form={form} />
+        {/* <Trade form={form} /> */}
       </div>
     );
   }
