@@ -88,6 +88,28 @@ Routes Array
     - `route`
       `routeNode` via `react-router5`
     - `options`
+    - ClickOutside
+      via `react-click-outside`
+      - `onClickOutside`
+        `this.close`
+    - Navbar
+      via `reactstrap`
+    - Audio
+      - `url`
+      - `autoplay`
+        boolean
+      - `onAudioChange`
+        = `store.setAudioOn`
+      - ReactAudioPlayer
+        via `react-audio-player`
+        - `src`
+        - `autoPlay`
+        - `onListen`
+        - `onCanPlay`
+        - `onListen`
+        - `onPause`
+        - `onPlay`
+        - `onEnded`
     - Link
       via `react-router5`
   - Main

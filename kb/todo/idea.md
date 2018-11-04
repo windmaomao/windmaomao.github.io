@@ -1,5 +1,13 @@
 # Idea
 
+Dots Algorithm
+
+: 11/2/18
+
+: - Make a website with object, and you can drag them around
+
+- You can demo how to visualize an algorithm
+
 Simply Math
 
 : 7/10/18

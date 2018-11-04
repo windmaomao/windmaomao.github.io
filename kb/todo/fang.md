@@ -4,15 +4,31 @@
 
 ### Oct
 
-### 10/21
+#### 11/3
+
+- Devan, 732 321 9000 ext 4247
+- Ship ebay computer by Friday
+
+#### 10/31
+
+- ~~Update annual~~
+- ~~Figure out all HSA accounts~~
+- Firebase key exposed in github
+- See to close College fund
+- ~~Tumble gym montly $100~~
+- Upload paystub to cloud
+- ~~Duke energy is a lot cheaper~~
+- ~~Wake county tax $1367?~~
+- Credit Karma password breach
+- :+1: Update to include library writing
+
+#### 10/21
 
 - ~~:date: Cancel `x-ray`~~
 - ~~Prototype audio component~~
-- Credit Karma password breach
-- :+1: Update to include library writing
 - ~~Deploy `kb2` with new styles~~
 - ~~Signup gym for `sophia`~~
-- Backup `apnea`
+- ~~Backup `apnea`~~
 
 #### 10/3
 
