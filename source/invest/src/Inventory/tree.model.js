@@ -190,6 +190,7 @@ const transactions = [
 
 const getSampleInvest = {
   title: 'Investment',
+  cols: ['quantity', 'price', 'date'],
   children: trades.map(item => ({
     title: item.name,
     quantity: item.quantity,

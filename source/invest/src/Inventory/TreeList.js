@@ -7,7 +7,8 @@ import TreeNode from './TreeNode';
 
 class TreeList extends Component {
   render() {
-    const {root: {title, children}, cols} = this.props;
+    const {root: {title, children, cols}} = this.props;
+    const colDefs = cols || this.props.cols;
     return (
       <Table 
         size="small" compact
@@ -17,14 +18,14 @@ class TreeList extends Component {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>{title}</Table.HeaderCell>
-            {cols.map(col => (
+            {colDefs.map(col => (
               <Table.HeaderCell key={col}>{upperFirst(col)}</Table.HeaderCell>
             ))}
           </Table.Row>
         </Table.Header>
         <Table.Body>
           {children && children.map((node, i) => (
-            <TreeNode key={i} node={node} level={0} cols={cols} />
+            <TreeNode key={i} node={node} level={0} cols={colDefs} />
           ))}
         </Table.Body>
       </Table>

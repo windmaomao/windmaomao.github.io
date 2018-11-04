@@ -26,7 +26,7 @@ class App extends Component {
         <PageHeader />
         <Container>
           <TreeList root={getSampleMenu} cols={['type']} />
-          <TreeList root={getSampleInvest} cols={['quantity', 'price', 'date']} />
+          <TreeList root={getSampleInvest} />
           <Header as='h1'>
             <Icon name='settings' />
             Trade Summaries
