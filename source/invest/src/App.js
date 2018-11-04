@@ -11,8 +11,10 @@ import SummaryList from './SummaryList/SummaryList';
 import './App.css';
 // services
 import { summaries } from './SummaryList/summary.model';
+import { getSummaryStore } from './SummaryList/SummaryStore';
 
 // const form = new TradeForm();
+const summaryStore = getSummaryStore();
 
 class App extends Component {
   render() {
@@ -26,7 +28,7 @@ class App extends Component {
             Trade Summaries
             <Header.Subheader>Listing of all recent trades.</Header.Subheader>
           </Header>
-          <SummaryList items={summaries} />
+          <SummaryList store={summaryStore} items={summaries} />
         </Container>
         <Form store={store} />
         {/* <Trade form={form} /> */}
