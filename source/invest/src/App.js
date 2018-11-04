@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // components
 import PageHeader from './Header';
-import { Container, Header, Icon, Card } from 'semantic-ui-react'
+import { Container, Header, Icon } from 'semantic-ui-react'
 import Form from './form/Trades';
 import SummaryList from './SummaryList/SummaryList';
 import TreeList from './Inventory/TreeList';
@@ -13,7 +13,7 @@ import './App.css';
 // services
 import { summaries } from './SummaryList/summary.model';
 import { getSummaryStore } from './SummaryList/SummaryStore';
-import { getSampleMenu } from './Inventory/tree.model';
+import { getSampleMenu, getSampleInvest } from './Inventory/tree.model';
 
 // const form = new TradeForm();
 const summaryStore = getSummaryStore();
@@ -25,7 +25,8 @@ class App extends Component {
       <div>
         <PageHeader />
         <Container>
-          <TreeList root={getSampleMenu} />
+          <TreeList root={getSampleMenu} cols={['type']} />
+          <TreeList root={getSampleInvest} cols={['quantity', 'price', 'date']} />
           <Header as='h1'>
             <Icon name='settings' />
             Trade Summaries

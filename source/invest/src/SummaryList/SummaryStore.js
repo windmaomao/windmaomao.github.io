@@ -1,4 +1,4 @@
-import {observable, decorate, action, set} from 'mobx';
+import {observable, decorate, action} from 'mobx';
 import { getDefaultSummary } from './summary.model';
 
 export class SummaryStore {

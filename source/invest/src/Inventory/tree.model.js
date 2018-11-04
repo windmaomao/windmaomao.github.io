@@ -160,13 +160,52 @@ const getSampleMenu = {
     title: category.title,
     children: category.items.map(article => ({
       title: article,
-      children: []
+      children: [],
+      type: article
+    })),
+    type: category.type
+  }))
+};
+
+const trades = [
+  { name: 'ADSK', quantity: -13, cost: -1743.69 },
+  { name: 'ALNY', quantity: -8, cost: -706.08 },
+  { name: 'BC', quantity: -8, cost: -426.24 },
+  { name: 'BFAM', quantity: -8, cost: -927.44 },
+  { name: 'BKS', quantity: -80, cost: -536.00 },
+  { name: 'BLUE', quantity: -6, cost: -796.14 },
+  { name: 'DTYS', quantity: 130, cost: 3264.91 },
+  { name: 'EUM', quantity: 130, cost: 2602.60 },
+  { name: 'CHAD', quantity: 100, cost: 3706.00 },
+  { name: 'EFZ', quantity: 25, cost: 692.75 },
+  { name: 'SH', quantity: 40, cost: 1166.40 },
+];
+
+const transactions = [
+  { quantity: -2, price: 309.5, action: 'short', date: '2018-01-04' },
+  { quantity: -1, price: 334.17, action: 'short', date: '2018-03-01' },
+  { quantity: -2, price: 301.18, action: 'short', date: '2018-05-08' },
+  { quantity: 5, price: 333.65, action: 'cover', date: '2018-10-29' },
+]
+
+const getSampleInvest = {
+  title: 'Investment',
+  children: trades.map(item => ({
+    title: item.name,
+    quantity: item.quantity,
+    price: (item.cost / item.quantity).toFixed(2),
+    children: transactions.map(transaction => ({
+      title: transaction.date,
+      quantity: transaction.quantity,
+      price: transaction.price,
+      date: transaction.date
     }))
   }))
 };
 
 export {
   getSampleTree,
-  getSampleMenu
+  getSampleMenu,
+  getSampleInvest,
 }
 

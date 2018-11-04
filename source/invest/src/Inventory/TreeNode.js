@@ -13,8 +13,10 @@ class TreeNode extends Component {
     this.setState({ toggled: !toggled });
   }
 render() {
-    const {node: { title, children }, level} = this.props;
+    const {node, level, cols} = this.props;
+    const {title, children, ...values} = node;
     const {toggled} = this.state;
+    const items = children || [];
     return (
       <Fragment>
         <Table.Row className={`level-${level}`}>
@@ -26,7 +28,7 @@ render() {
             }}
             onClick={() => {this.toggle(); }}
           >
-            {children.length > 0 ? (
+            {items.length > 0 ? (
               toggled ? (
                 <Icon name="folder open outline" />
               ) : (
@@ -37,9 +39,14 @@ render() {
             )}
             {title}
           </Table.Cell>
+          {cols.map(col => (
+            <Fragment key={col}>
+              <Table.Cell>{values[col] || ''}</Table.Cell>
+            </Fragment>
+          ))}
         </Table.Row>        
-        {toggled && children.map((item, i) => (
-          <TreeNode key={i} node={item} level={level + 1} />
+        {toggled && items.map((item, i) => (
+          <TreeNode key={i} node={item} level={level + 1} cols={cols} />
         ))}
       </Fragment>
     );

@@ -4,7 +4,6 @@ import { observer } from 'mobx-react';
 import NumberFormat from 'react-number-format';
 // components
 import { Table, Icon } from 'semantic-ui-react'
-import Form from '../form/Trades';
 
 class SummaryList extends Component {
   render() {
