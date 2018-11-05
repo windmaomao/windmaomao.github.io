@@ -6,21 +6,22 @@
 
 #### 11/3
 
-- Devan, 732 321 9000 ext 4247
-- Ship ebay computer by Friday
+- ~~Devan, 732 321 9000 ext 4247~~
+- Check ebay item by Friday
+- Check Dash license
+- Credit Karma password breach
+- :+1: Update to include library writing
+- Firebase key exposed in github
+- See to close College fund
+- Upload paystub to cloud
 
 #### 10/31
 
 - ~~Update annual~~
 - ~~Figure out all HSA accounts~~
-- Firebase key exposed in github
-- See to close College fund
 - ~~Tumble gym montly $100~~
-- Upload paystub to cloud
 - ~~Duke energy is a lot cheaper~~
 - ~~Wake county tax $1367?~~
-- Credit Karma password breach
-- :+1: Update to include library writing
 
 #### 10/21
 

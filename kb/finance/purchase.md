@@ -26,26 +26,27 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 ### Free
 
-| Item         | Year | Type         |
-| ------------ | ---- | ------------ |
-|Realtime Board| 2018 | Planning     |
-| InVisionApp  | 2018 | Design       |
-| IEX          | 2018 | Financial    |
-| UltiPro      | 2018 | Payroll      |
-| FRED         | 2018 | Financial    |
-| LastPass     | 2018 | Password     |
-| Dynalist     | 2018 | Outliner     |
-| Netlifty     | 2018 | Hosting      |
-| Quandl       | 2018 | Financial    |
-| Libib        | 2018 | Library      |
-| Adobe Spark  | 2017 | Presentation |
-| Stackedit.io | 2017 | Notes        |
-| Wunderlist   | 2017 | Todos        |
-| Forge.io     | 2017 | Hosting      |
-| Kindle Read  | 2010 | Books        |
-| Bitbucket    | 2014 | Repository   |
-| Github       | 2012 | Repository   |
-| MindMeister  | 2012 | Diagram      |
+| Item           | Year | Type         |
+| -------------- | ---- | ------------ |
+| Realtime Board | 2018 | Planning     |
+| InVisionApp    | 2018 | Design       |
+| :+1: Trello    | 2018 | Planning     |
+| IEX            | 2018 | Financial    |
+| UltiPro        | 2018 | Payroll      |
+| FRED           | 2018 | Financial    |
+| LastPass       | 2018 | Password     |
+| :+1: Dynalist  | 2018 | Outliner     |
+| :+1: Netlifty  | 2018 | Hosting      |
+| Quandl         | 2018 | Financial    |
+| Libib          | 2018 | Library      |
+| Adobe Spark    | 2017 | Presentation |
+| Stackedit.io   | 2017 | Notes        |
+| Wunderlist     | 2017 | Todos        |
+| Forge.io       | 2017 | Hosting      |
+| Kindle Read    | 2010 | Books        |
+| :+1: Bitbucket | 2014 | Repository   |
+| :+1: Github    | 2012 | Repository   |
+| MindMeister    | 2012 | Diagram      |
 
 ### Inactive
 
@@ -70,40 +71,45 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item                    | Year | Type        |
 | ----------------------- | ---- | ----------- |
+| :+1: iTerm2             | 2018 | Utility     |
 | Smart JSON Editor       | 2018 | Utility     |
 | :+1: Typora             | 2018 | Notes       |
 | :+1: Visual Studio Code | 2017 | Program     |
+| :+1: SourceTree         | 2016 | Git         |
 | Disk Inventory          | 2006 | Utility     |
 | :+1: Google Chrome      | 200? | Utility     |
 
 ### Paid
 
-| Item           | Amount | Year | Type     |
-| -------------- | ------ | ---- | -------- |
-| :+1: FiveNotes | $  6   | 2018 | Notes+   |
-| :+1: iStat Menu| $  4   | 2018 | System   |
-| Omini Outliner | $ 50   | 2015 | Excel    |
-| Bundle Hunt    | $ 20   | 2015 | Bundle   |
-| Anarchy Bundle | $ 15   | 2015 | Bundle   |
-| Sketch         | $ 99   | 2015 | Design   |
-| Tictoc         | $  5   | 2014 | Time     |
-| Kaleidoscope   | $ 70   | 2014 | Compare  |
-| NanoBundle 5   | $ 20   | 2014 | Bundle   |
-| LaunchBar      | $ 2    | 2014 | Utility  |
-| CodeKit        | $ 30   | 2014 | Coding   |
-| NanoBundle 4   | $ 20   | 2014 | Bundle   |
-| Little Snitch  | $ 2    | 2014 | Security |
-| NanoBundle 3   | $ 10   | 2013 | Bundle   |
-| MAMP PRO       | $ 20?  | 2013 | Server   |
-| Tower          | $ 60   | 2013 | Repo     |
-| Sublime        | $ 50   | 2013 | Editor   |
-| Path Finder    | $ 9?   | 2013 | Utility  |
-| Balsamiq       | $ 79   | 2013 | Mockup   |
-| Things         | $ 50   | 2013 | Todo     |
-| MacHeist 4     | $ 20   | 2012 | Bundle   |
-| :+1: Divvy     | $ 14   | 2011 | Utility  |
-| NanoBundle 2   | $ 20   | 2010 | Bundle   |
-| MacHeist 3     | $ 40   | 2009 | Bundle   |
+| Item            | Amount | Year | Type     |
+| --------------- | ------ | ---- | -------- |
+| :+1: FiveNotes  | $  6   | 2018 | Notes    |
+| :+1: iStat Menu | $  4   | 2018 | Monitor  |
+| Omini Outliner  | $ 50   | 2015 | Excel    |
+| Bundle Hunt     | $ 20   | 2015 | Bundle   |
+| MacUpdate Promo | $ 60   | 2015 | Bundle   |
+| Dash            | $  6   | 2015 | Doc      |
+| CodeRunner      | $  6   | 2015 | Program  |
+| Anarchy Bundle  | $ 15   | 2015 | Bundle   |
+| Sketch          | $ 99   | 2015 | Design   |
+| :+1: Tictoc     | $  5   | 2014 | Time     |
+| Kaleidoscope    | $ 70   | 2014 | Compare  |
+| NanoBundle 5    | $ 20   | 2014 | Bundle   |
+| LaunchBar       | $ 2    | 2014 | Utility  |
+| CodeKit         | $ 30   | 2014 | Coding   |
+| NanoBundle 4    | $ 20   | 2014 | Bundle   |
+| Little Snitch   | $ 2    | 2014 | Security |
+| NanoBundle 3    | $ 10   | 2013 | Bundle   |
+| MAMP PRO        | $ 20?  | 2013 | Server   |
+| Tower           | $ 60   | 2013 | Repo     |
+| Sublime         | $ 50   | 2013 | Editor   |
+| Path Finder     | $ 9?   | 2013 | Utility  |
+| Balsamiq        | $ 79   | 2013 | Mockup   |
+| Things          | $ 50   | 2013 | Todo     |
+| MacHeist 4      | $ 20   | 2012 | Bundle   |
+| :+1: Divvy      | $ 14   | 2011 | Window   |
+| NanoBundle 2    | $ 20   | 2010 | Bundle   |
+| MacHeist 3      | $ 40   | 2009 | Bundle   |
 
 `+` License has been saved.*  
 
@@ -115,6 +121,7 @@ Current online service subscribed, such as for trading, training, accounting,  h
 | ----------------- | ---- | ----- |
 | Bundle Hunt       | 2015 | $20   |
 | Anarchy Bundle    | 2015 | $15   |
+| MacUpdate Promo   | 2015 | $60   |
 | nanoBundle 5      | 2014 | $20   |
 | nanoBundle 4      | 2014 | $20   |
 | nanoBundle 3      | 2013 | $10   |
@@ -135,6 +142,18 @@ Dec 2015 {.subtitle}
 - Deep Deramer
 - Focused
 - Flux V
+
+### MacUpdate Promo
+Jul 2015{.subtitle}
+
+- Paw
+- ForkLift
+- Base
+- CodeRunner
+- Flux
+- Hype
+- Dash
+- DeltaWalker
 
 ### Anarchy Bundle
 Jan 2015 {.subtitle}
