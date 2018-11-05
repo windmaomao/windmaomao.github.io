@@ -2,8 +2,10 @@
   {
     "title": "Blueprint", "type": "blueprint",
     "items": [
-      "mg-posted",
+      "mg-postedEquipment",
+      "mg-quickAddQuote",
       "pd-apnea",
+      "qp-inventory",
       "qp-kb2"
     ]
   },
