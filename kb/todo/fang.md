@@ -4,17 +4,23 @@
 
 ### Oct
 
+### 11/6
+
+- :+1: Update to include library writing
+- Need past pay stub
+- See to close College fund
+- Need directory multi-select screenshot
+- Check ebay item by Friday
+- Graduately change password ends jf
+
 #### 11/3
 
 - ~~Devan, 732 321 9000 ext 4247~~
 - ~~Check Dash license~~
-- Update resume
-- Check ebay item by Friday
-- Credit Karma password breach
-- :+1: Update to include library writing
-- Firebase key exposed in github
-- See to close College fund
-- Upload paystub to cloud
+- ~~Update resume and projects~~
+- ~~Firebase key exposed in github~~
+- ~~Credit Karma password breach~~
+- ~~Upload paystub to cloud~~
 
 #### 10/31
 

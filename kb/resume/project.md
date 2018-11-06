@@ -24,12 +24,31 @@
 
 ![Posted Equipment Form](https://s3.amazonaws.com/qp-photo/mg-posted-equipment-form.png)
 
-Posted Equipment Form
+Posted Equipment Management
 
-: Posted Equipment Form
-:Oct 2018 -
-: *React* *Mobx* {.labels}
-: A form handles submission related to multiple carrier and multiple equipments associated with it. 
+: Oct 2018 - Current
+: *React* *Mobx* *Redux* *Java* {.labels}
+: Management of equipments for carriers with different origin and destination and availability settings.
+
+Highlights
+
+: - React: Fast development using in-house react and UI library for widgets and styles
+  - Mobx: Complex form handling with nested data structure and realtime validation
+
+  - Typehead: _Typehead_ widget design to lookup carrier by name or id
+
+  - Quantity: Support copy/duplicate/change quantity of each equipment on the form
+
+  - Multiselect: Various _multi-select_ widgets supporting lookup table
+
+  - Directory: Custom widget wired with _multi-select_ widget for location selection
+
+  - Location: Multiple location selector based on country, states, and postal codes
+
+  - Datepicker: Date range picker for equipment availablility
+
+  - Lightbox: Form sliding from edge of screen and pinned on the screen
+
 
 ### Shipping Orders
 
@@ -309,8 +328,6 @@ Scheduler
 : *React* *Semantic UI* *Material UI* *Mobx* {.labels}
 : Daily teacher scheduling app that assign teacher with students. Each teacher has a start and end time as well as his capcity of taking students. Each student has a start and end time and preference of teachers. The job is assign 50-100 students daily to 5-10 teachers in a time slot based system. For instance taking time slot to be 15mins.  
 
-![Custom Charts and Switcher](https://s3.amazonaws.com/qp-photo/mg-chart-mockup-small.png)
-
 Highlights
 
 : - React: Fast development using ui library material UI and semantic UI
@@ -318,6 +335,7 @@ Highlights
   - Stepping: Allow solving to be stepping algorithm towards next solution
   - Upload: Upload _Excel_ sheet for students, teachers and their preferences
   - Print: Allow nice print of teacher assignment sheet
+  - Algorithm: Complex algorithm to iterate through possible solution of filling teacher slots
 
 Stim
 
@@ -494,18 +512,22 @@ Environment Color
 2014 - {.subtitle}
 
 ### Apnea
-Sleep{.subtitle}
+Sleep Study {.subtitle}
 
 : 09/30/2018
 : _React_, _Bootstrap_, _Mobx_, _Router5_
-: xxx
+: An educational program for individuals who have undergone overnight sleep testing through their local sleep center.
 
 Highlights
 
-- React
-- Layout: support public and internal pages via unified layout
-- Route: use routes and pages definition to drive the page routes
-- Form: form generation via page fields definition list
+- Design: Color theme, larger font and checkbox size favoring senior person
+- React: Rapid design with consideration of collaboration with non-tech editors
+- Layout: Support public and private pages via routing switch
+- Page: Dynamic page setup (38 pages) with page settings such as audio and navigation
+- Question: User provided multi-choices question fields injection to specific page
+- Answer: Question answers synced with the rest of the project and saved in local storage
+- Audio: Custom HTML5 audio design toggable along with each page load
+- Print: Allow print review page
 
 ### Prepare 3
 Prepare for your care {.subtitle}

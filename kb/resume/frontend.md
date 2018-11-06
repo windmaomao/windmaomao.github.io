@@ -2,7 +2,7 @@
 
 ## Fang Jin
 
-I make websites, mostly on screens and monitors, via Angular, React or Vue web framework. Areas that I worked on includes Banking, Healthcare, and Education. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
+I make websites, mostly on screens and monitors, via Javascript framework such as _Angular_, and _React_. Sectors that I worked with include Banking, Healthcare, and Education. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
 
 > "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
@@ -10,7 +10,7 @@ Front-end expertise
 
 : - 8 Years Prototyping with _CSS_ and _Sass_
   - 5 Years _Angular_ and _React_
-  - 4 Years _Lodash_, _RxJS_
+  - 4 Years _Lodash_ and _RxJS_
 
 Background
 
@@ -55,6 +55,7 @@ Highlights
   - Location: Multiple location selector based on country, states, and postal codes
   - Datepicker: Date range picker for equipment availablility
   - Lightbox: Form sliding from edge of screen and pinned on the screen
+
 
 Shipping Order Dashboard
 
