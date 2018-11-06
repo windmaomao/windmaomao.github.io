@@ -7,8 +7,9 @@
 #### 11/3
 
 - ~~Devan, 732 321 9000 ext 4247~~
+- ~~Check Dash license~~
+- Update resume
 - Check ebay item by Friday
-- Check Dash license
 - Credit Karma password breach
 - :+1: Update to include library writing
 - Firebase key exposed in github

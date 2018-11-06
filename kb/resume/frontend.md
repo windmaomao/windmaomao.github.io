@@ -9,8 +9,8 @@ I make websites, mostly on screens and monitors, via Angular, React or Vue web f
 Front-end expertise
 
 : - 8 Years Prototyping with _CSS_ and _Sass_
-  - 5 Years _Angular_ (up to 5.x) and _React_
-  - 4 Years _RxJS_, _Promise_ and _Ajax_
+  - 5 Years _Angular_ and _React_
+  - 4 Years _Lodash_, _RxJS_
 
 Background
 
@@ -38,9 +38,27 @@ Front Cover Design
 
 ### MercuryGate International
 
+Posted Equipment Management
+
+: Oct 2018 - Current
+: *React* *Mobx* *Redux* *Java* {.labels}
+: Management of equipments for carriers with different origin and destination and availability settings.
+
+Highlights
+
+: - React: Fast development using in-house react and UI library for widgets and styles
+  - Mobx: Complex form handling with nested data structure and realtime validation
+  - Typehead: _Typehead_ widget design to lookup carrier by name or id
+  - Quantity: Support copy/duplicate/change quantity of each equipment on the form
+  - Multiselect: Various _multi-select_ widgets supporting lookup table
+  - Directory: Custom widget wired with _multi-select_ widget for location selection
+  - Location: Multiple location selector based on country, states, and postal codes
+  - Datepicker: Date range picker for equipment availablility
+  - Lightbox: Form sliding from edge of screen and pinned on the screen
+
 Shipping Order Dashboard
 
-: Aug 2018 - Current
+: Aug 2018 - Sep 2018
 : *React* *Sass* *C3js* *Mobx* *Redux* *Java* {.labels}
 : Dashboard app providing custom overview of current reported shipping orders.
 
