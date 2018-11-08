@@ -19,6 +19,14 @@ export default class SchedulerService {
     this.maxSteps = 1000;
     this.data = { students: [], teachers: [], prefs: [] };
     this.reset();
+
+    // setup init config
+    this.counts = [];
+    this.config = {
+      index: 0,
+      positions: [],
+      slots: {}
+    };
   }
 
   min2slot(min) {
@@ -230,6 +238,9 @@ export default class SchedulerService {
     });
     this.restartStep = true;
     this.studentStepIndex = -1;
+
+    this.counts = students.map(student => student.teachers.length);
+    console.log(this.counts);
   }
 
   // plan schedule
