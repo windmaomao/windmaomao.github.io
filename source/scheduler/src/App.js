@@ -14,15 +14,19 @@ import {scheduler} from './Scheduler';
 import {teachersInfo, studentsInfo, prefsInfo} from './data1';
 // import ApiService from './Api';
 
-const filler = new Filler();
-const start = filler.start();
-let done = false;
-while (!done) {
-  const obj = start.next();
-  done = obj.done;
-}
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    const filler = new Filler();
+    const start = filler.start();
+    let done = false;
+    while (!done) {
+      const obj = start.next();
+      done = obj.done;
+    }
+  }
 
   componentDidMount() {
     const debug = true;
