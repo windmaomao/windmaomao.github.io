@@ -163,6 +163,17 @@ export default class SchedulerService {
     return sortBy(filtered, ['ranking']);
   }
 
+  // available teacher
+  availableTeachers(student, teachers) {
+    const avaialbles = teachers.reduce((acc, teacher) => {
+      if ((student.start >= teacher.start) && (student.end <= teacher.end)) {
+        acc.push(teacher);
+      }
+      return acc;
+    }, []);
+    return avaialbles;
+  }
+
   // sort students by preferences
   sortStudents(students, prefs) {
     if (!prefs.length) return students;
@@ -227,7 +238,7 @@ export default class SchedulerService {
     const {students, teachers, prefs} = this.data;
     students.forEach(student => {
       // find student pref
-      let prefTeachers = teachers;
+      let prefTeachers = this.availableTeachers(student, teachers);
       if (this.acceptPref) {
         // const pref = find(prefs, { 'id': student.id });
         const pref = findId(prefs, student);
