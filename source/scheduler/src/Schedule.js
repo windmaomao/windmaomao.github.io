@@ -38,12 +38,12 @@ class Schedule extends Component {
             <Button 
               variant="contained" color="secondary"
               onClick={() => {test(); }}
-            >Filler</Button>
-            {/* <Button 
+            >Filler</Button>&nbsp;
+            <Button 
               variant="contained" color="secondary"
               onClick={delayedCall}
               disabled={!canContinue}
-            >Plan</Button> */}
+            >Plan</Button>
           </span>
           <h1>
             Schedule &nbsp;

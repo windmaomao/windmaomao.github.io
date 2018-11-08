@@ -14,9 +14,12 @@ class Filler {
   counts = [];
   // tryCase
   tryFunc = null;
+  // init data
+  initConfig = {};
 
-  constructor(counts = [], tryFunc = defaultTryFunc) {
+  constructor(counts = [], initConfig = {}, tryFunc = defaultTryFunc, ) {
     this.counts = counts;
+    this.initConfig = initConfig;
     this.tryFunc = tryFunc;
   }
 
@@ -46,12 +49,12 @@ class Filler {
     if (this.counts.length < 1) return;
 
     // setup starting config
-    let config = {
+    let config = Object.assign({
       // use for index
       index: 0,
       // use natural index
       positions: Array(this.counts.length).fill(0),
-    };
+    }, this.initConfig);
     // enter pool
     let done = false;
     let steps = 0;

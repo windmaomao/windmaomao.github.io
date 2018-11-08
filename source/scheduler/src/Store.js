@@ -45,7 +45,8 @@ class AppStore {
   }
 
   runFiller() {
-    const filler = new Filler(scheduler.counts);
+    const config = { slots: scheduler.slots };
+    const filler = new Filler(scheduler.counts, config, scheduler.tryFill);
     const start = filler.start();
     let done = false;
     while (!done) {
