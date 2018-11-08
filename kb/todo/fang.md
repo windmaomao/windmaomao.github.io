@@ -6,10 +6,11 @@
 
 ### 11/6
 
-- :+1: Update to include library writing
-- Need past pay stub
+- ~~Wageworks submission~~
+- ~~Need directory multi-select screenshot~~
+- ~~Need past pay stub~~
+- - :+1: Update to include library writing
 - See to close College fund
-- Need directory multi-select screenshot
 - Check ebay item by Friday
 - Graduately change password ends jf
 
