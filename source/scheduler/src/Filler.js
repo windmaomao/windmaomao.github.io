@@ -2,6 +2,10 @@
 import {cloneDeep} from 'lodash';
 // locals
 const maxSteps = 2000;
+const defaultTryFunc = (config) => ({
+  success: true,
+  configNew: config
+});
 
 class Filler {
   // configs stack
@@ -11,7 +15,7 @@ class Filler {
   // tryCase
   tryFunc = null;
 
-  constructor(counts = [], tryFunc = null) {
+  constructor(counts = [], tryFunc = defaultTryFunc) {
     this.counts = counts;
     this.tryFunc = tryFunc;
   }
@@ -23,20 +27,13 @@ class Filler {
       return { success: false, config };
     }
 
-    const {positions, index} = cloneDeep(config);
+    const {positions, index, ...rest} = cloneDeep(config);
     positions[index]++;
-    if (this.tryFunc) {
-      if (!this.tryFunc(config)) {
-        return { success: false, config };
-      }
-    }
     if (positions[index] > this.counts[index]) {
       return { success: false, config }
     }
-    return {
-      success: true,
-      configNew: { index, positions }
-    };
+
+    return this.tryFunc({positions, index, ...rest});
   }
 
   // print
