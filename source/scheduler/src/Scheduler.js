@@ -246,15 +246,6 @@ export default class SchedulerService {
     this.counts = students.map(student => student.teachers.length);
   }
 
-  // try fill
-  tryFill(config) {
-    console.log(config);
-    return {
-      success: true,
-      configNew: config
-    }
-  }
-
   // plan schedule
   plan() {
     this.prepare();
@@ -300,6 +291,26 @@ export default class SchedulerService {
       }
     }
     return students.length;
+  }
+
+  // try fill
+  tryFill(config) {
+    console.log(config);
+    const student = config.students[config.index];
+    const teacherIndex = config.positions[config.index] - 1;
+    const teacher = student.teachers[teacherIndex];
+    // TODO: turn tryMap into local function
+    const newSlots = this.tryMapStudentToTeacher(config.slots, student, teacher);
+    if (!newSlots) {
+      return {
+        success: false,
+        configNew: config
+      };
+    }
+    return {
+      success: true,
+      configNew: Object.assign({}, config, { slots: newSlots })
+    };
   }
 
   // step after prepare

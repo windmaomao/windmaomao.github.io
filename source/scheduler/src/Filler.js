@@ -1,7 +1,7 @@
 // libraries
 import {cloneDeep} from 'lodash';
 // locals
-const maxSteps = 2000;
+const maxSteps = 1;
 const defaultTryFunc = (config) => ({
   success: true,
   configNew: config
@@ -67,7 +67,7 @@ class Filler {
       if (success) {
         this.configs.push(configNew);
         config = cloneDeep(configNew);
-        // this.print(steps, config);
+        this.print(steps, config);
         yield config;
         config.index++;
         steps++;
