@@ -1,11 +1,20 @@
 // libraries
 import {cloneDeep} from 'lodash';
+// locals
+const maxSteps = 2000;
 
 class Filler {
   // configs stack
   configs = [];
-  // options for each level
-  counts = [3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 3, 2];
+  // opt ions for each level
+  counts = [];
+  // tryCase
+  tryFunc = null;
+
+  constructor(counts = [], tryFunc = null) {
+    this.counts = counts;
+    this.tryFunc = tryFunc;
+  }
 
   // solve puzzel
   solve(config) {
@@ -16,6 +25,11 @@ class Filler {
 
     const {positions, index} = cloneDeep(config);
     positions[index]++;
+    if (this.tryFunc) {
+      if (!this.tryFunc(config)) {
+        return { success: false, config };
+      }
+    }
     if (positions[index] > this.counts[index]) {
       return { success: false, config }
     }
@@ -28,10 +42,12 @@ class Filler {
   // print
   print(steps, config) {
     // const found = config.index === this.counts.length - 1;
-    console.log(steps, config.index, config.positions);
+    console.log(steps+1, config.index, config.positions);
   }
 
   * start() {
+    if (this.counts.length < 1) return;
+
     // setup starting config
     let config = {
       // use for index
@@ -43,7 +59,7 @@ class Filler {
     let done = false;
     let steps = 0;
     // while (config.index < this.counts.length) {
-    while (!done && steps < 2000) {
+    while (!done && steps < maxSteps) {
         // try solving current puzzel
       const { success, configNew } = this.solve(config);
       // Success, stack it and move to next level

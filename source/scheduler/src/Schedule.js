@@ -20,19 +20,17 @@ class Schedule extends Component {
         searchSchedule();
       }, 0);
     }
-    var wait = ms => new Promise((r, j)=>setTimeout(r, ms))
     const test = () => {
       schedule.calculating = true;
       setTimeout(function() {
-        const filler = new Filler();
+        const filler = new Filler([3, 2]);
         const start = filler.start();
         let done = false;
         while (!done) {
           const obj = start.next();
-          (async () => { await wait(2); })()
           done = obj.done;
         }              
-        console.warn('done')
+        console.warn('done');
         schedule.calculating = false;
       }, 0);
     }
