@@ -27,6 +27,7 @@ class Filler {
   solve(config) {
     // if it's the end
     if (config.index === this.counts.length) {
+      console.warn('FOUND');
       return { success: false, config };
     }
 
