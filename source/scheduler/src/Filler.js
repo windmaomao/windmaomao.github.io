@@ -64,7 +64,7 @@ class Filler {
       if (success) {
         this.configs.push(configNew);
         config = cloneDeep(configNew);
-        this.print(steps, config);
+        // this.print(steps, config);
         yield config;
         config.index++;
         steps++;

@@ -251,7 +251,6 @@ export default class SchedulerService {
     this.studentStepIndex = -1;
 
     this.counts = students.map(student => student.teachers.length);
-    console.log(this.counts);
   }
 
   // plan schedule

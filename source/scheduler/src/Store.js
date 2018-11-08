@@ -2,6 +2,7 @@
 import {observable, action, computed, decorate} from 'mobx';
 // services
 import {scheduler} from './Scheduler';
+import Filler from './Filler';
 class AppStore {
   schedule = { 
     stepIndex: -1, canContinue: false, restarted: true, calculating: false,
@@ -41,6 +42,17 @@ class AppStore {
 
   get stepProgress() {
     return this.schedule.stepIndex;
+  }
+
+  runFiller() {
+    const filler = new Filler(scheduler.counts);
+    const start = filler.start();
+    let done = false;
+    while (!done) {
+      const obj = start.next();
+      done = obj.done;
+    }              
+    console.warn('done');
   }
 }
 
