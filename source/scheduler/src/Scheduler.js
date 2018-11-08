@@ -299,8 +299,43 @@ export default class SchedulerService {
     const student = config.students[config.index];
     const teacherIndex = config.positions[config.index] - 1;
     const teacher = student.teachers[teacherIndex];
-    // TODO: turn tryMap into local function
-    const newSlots = this.tryMapStudentToTeacher(config.slots, student, teacher);
+
+    const tryFillStudent = (slots) => {
+      let matchAllSlots = true;
+      const slotsMap = cloneDeep(slots);  
+      // for each slot required by the student
+      for (let i = student.start; i <= student.end; i++) { 
+        // skip if not work 
+        if (!matchAllSlots) break;
+        
+        // find the slot in the map
+        if (!(i in slotsMap)) {
+          slotsMap[i] = {};
+        }
+        const slot = slotsMap[i];
+  
+        // get current students for the slot
+        if (!(teacher.id in slot)) {
+          slot[teacher.id] = [];
+        }
+        const students = slot[teacher.id];
+        
+        // if teacher has enough students
+        if (students.length === this.maxStudents) {
+          matchAllSlots = false;
+        }
+      }
+      
+      if (matchAllSlots) {
+        return slotsMap;
+      } else {
+        return null;
+      }
+    }
+
+    // const newSlots = this.tryMapStudentToTeacher(config.slots, student, teacher);
+    const newSlots = tryFillStudent(config.slots);
+
     if (!newSlots) {
       return {
         success: false,

@@ -1,7 +1,7 @@
 // libraries
 import {cloneDeep} from 'lodash';
 // locals
-const maxSteps = 1;
+const maxSteps = 100;
 const defaultTryFunc = (config) => ({
   success: true,
   configNew: config
