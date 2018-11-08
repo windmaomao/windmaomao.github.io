@@ -43,7 +43,7 @@ class Filler {
     let done = false;
     let steps = 0;
     // while (config.index < this.counts.length) {
-    while (!done && steps < 2500) {
+    while (!done && steps < 2000) {
         // try solving current puzzel
       const { success, configNew } = this.solve(config);
       // Success, stack it and move to next level

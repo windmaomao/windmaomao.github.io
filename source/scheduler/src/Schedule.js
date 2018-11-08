@@ -7,6 +7,7 @@ import { Label } from 'semantic-ui-react'
 import Button from '@material-ui/core/Button';
 import Print from './Print2';
 import Spinner from './Spinner';
+import Filler from './Filler';
 
 class Schedule extends Component {
   render() {
@@ -19,11 +20,28 @@ class Schedule extends Component {
         searchSchedule();
       }, 0);
     }
+    var wait = ms => new Promise((r, j)=>setTimeout(r, ms))
+    const test = () => {
+      schedule.calculating = true;
+      setTimeout(function() {
+        const filler = new Filler();
+        const start = filler.start();
+        let done = false;
+        while (!done) {
+          const obj = start.next();
+          (async () => { await wait(2); })()
+          done = obj.done;
+        }              
+        console.warn('done')
+        schedule.calculating = false;
+      }, 0);
+    }
     return (
       <div>
         <Spinner enabled={calculating} />
         <div>
           <span style={{float: 'right'}}>
+            <Button onClick={() => {test();}}>Test</Button>
             <Button 
               variant="contained" color="primary"
               onClick={() => { resetSchedule() }}
