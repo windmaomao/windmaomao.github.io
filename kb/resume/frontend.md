@@ -44,8 +44,6 @@ Posted Equipment Management
 : *React* *Mobx* *Redux* *Java* {.labels}
 : Management of equipments for carriers with different origin and destination and availability settings.
 
-![Custom Multi-select Location](https://s3.amazonaws.com/qp-photo/mg-posted-origin-destinations.png)
-
 Highlights
 
 : - React: Fast development using in-house react and UI library for widgets and styles
@@ -58,7 +56,7 @@ Highlights
   - Datepicker: Date range picker for equipment availablility
   - Lightbox: Form sliding from edge of screen and pinned on the screen
 
-
+![Custom Multi-select Location](https://s3.amazonaws.com/qp-photo/mg-posted-origin-destinations.png)
 
 Shipping Order Dashboard
 
