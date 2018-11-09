@@ -295,11 +295,12 @@ export default class SchedulerService {
 
   // try fill
   tryFill(config) {
-    console.log(config);
     const student = config.students[config.index];
     const teacherIndex = config.positions[config.index] - 1;
     const teacher = student.teachers[teacherIndex];
     const maxStudents = 3;
+    console.log(student);
+    console.log(teacher);
 
     const tryFillStudent = (slots) => {
       let matchAllSlots = true;

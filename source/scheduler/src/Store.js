@@ -54,6 +54,7 @@ class AppStore {
     let done = false;
     while (!done) {
       const obj = start.next();
+      console.log(obj.value);
       done = obj.done;
     }              
     console.warn('done');

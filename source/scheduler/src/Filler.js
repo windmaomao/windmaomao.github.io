@@ -27,7 +27,7 @@ class Filler {
   solve(config) {
     // if it's the end
     if (config.index === this.counts.length) {
-      console.warn('FOUND');
+      console.error('found');
       return { success: false, config };
     }
 
@@ -52,7 +52,7 @@ class Filler {
     // setup starting config
     let config = Object.assign({
       // use for index
-      index: 0,
+      index: -1,
       // use natural index
       positions: Array(this.counts.length).fill(0),
     }, this.initConfig);
@@ -61,19 +61,21 @@ class Filler {
     let steps = 0;
     // while (config.index < this.counts.length) {
     while (!done && steps < maxSteps) {
-        // try solving current puzzel
+      // try solving current puzzel
+      config = cloneDeep(config);
+      config.index++;
       const { success, configNew } = this.solve(config);
       // Success, stack it and move to next level
       // Fail, pop to previous level and continue
       if (success) {
         this.configs.push(configNew);
-        config = cloneDeep(configNew);
-        this.print(steps, config);
+        config = configNew;
+        // this.print(steps, config);
         yield config;
-        config.index++;
         steps++;
       } else {
         config = this.configs.pop();
+        console.warn(config.index);
         done = config === undefined;        
       }
     }
