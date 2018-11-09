@@ -299,6 +299,7 @@ export default class SchedulerService {
     const student = config.students[config.index];
     const teacherIndex = config.positions[config.index] - 1;
     const teacher = student.teachers[teacherIndex];
+    const maxStudents = 3;
 
     const tryFillStudent = (slots) => {
       let matchAllSlots = true;
@@ -321,9 +322,14 @@ export default class SchedulerService {
         const students = slot[teacher.id];
         
         // if teacher has enough students
-        if (students.length === this.maxStudents) {
+        if (students.length === maxStudents) {
           matchAllSlots = false;
         }
+
+        // accept teacher on the slot
+        if (matchAllSlots) {
+          students.push(student.id);
+        }  
       }
       
       if (matchAllSlots) {
