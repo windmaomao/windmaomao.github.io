@@ -2,17 +2,18 @@
 
 ## 2018
 
-### Oct
+### Nov
+
+- Send ebay item ASAP
+- See to close College fund
 
 ### 11/6
 
 - ~~Wageworks submission~~
 - ~~Need directory multi-select screenshot~~
 - ~~Need past pay stub~~
-- - :+1: Update to include library writing
-- See to close College fund
-- Check ebay item by Friday
-- Graduately change password ends jf
+- ~~:+1: Update to include library writing~~
+- ~~Graduately change password ends jf~~
 
 #### 11/3
 
@@ -22,6 +23,8 @@
 - ~~Firebase key exposed in github~~
 - ~~Credit Karma password breach~~
 - ~~Upload paystub to cloud~~
+
+### Oct
 
 #### 10/31
 
