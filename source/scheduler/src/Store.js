@@ -52,7 +52,8 @@ class AppStore {
       students: scheduler.data.students,
       slots: scheduler.slots 
     };
-    const filler = new Filler(scheduler.counts, config, scheduler.tryFill);
+    const filler = new Filler();
+    filler.init(scheduler.counts, config, scheduler.tryFill);
     const start = filler.start();
     let done = false;
     let solution = null;
