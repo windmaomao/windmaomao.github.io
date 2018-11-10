@@ -4,8 +4,7 @@
 
 ### Nov
 
-- Send ebay item ASAP
-- See to close College fund
+- Send ebay item
 
 ### 11/6
 

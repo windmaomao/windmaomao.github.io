@@ -2,6 +2,12 @@
 
 ## 2018
 
+### 11/09
+
+- redesign using generator
+- check available teachers before start
+- upload needs to give error if header is missing
+
 ### 10/15
 
 - ~~timeout should be less~~
@@ -9,7 +15,6 @@
 - ~~last name initial SophiaJ~~
 - ~~how to treat three parts of name~~
 - ~~print page for cost, student name, service and instructor~~
-- upload needs to give error if header is missing
 
 ### 10/05
 
