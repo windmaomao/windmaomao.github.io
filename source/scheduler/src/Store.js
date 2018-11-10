@@ -52,12 +52,15 @@ class AppStore {
     const filler = new Filler(scheduler.counts, config, scheduler.tryFill);
     const start = filler.start();
     let done = false;
+    let solution = null;
     while (!done) {
       const obj = start.next();
-      console.log(obj.value);
       done = obj.done;
-    }              
-    console.warn('done');
+      if (!done) {
+        solution = obj.value;
+      }
+    }
+    return solution;    
   }
 }
 

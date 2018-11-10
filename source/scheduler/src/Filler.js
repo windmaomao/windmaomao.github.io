@@ -10,6 +10,8 @@ const defaultTryFunc = (config) => ({
 });
 
 class Filler {
+  // debug
+  debug = false;
   // configs stack
   configs = [];
   // opt ions for each level
@@ -59,32 +61,33 @@ class Filler {
       const { success, configNew, levelEnd, goal } = this.solve(config);
       // full solution found
       if (goal) {
-        console.error('found', steps);
+        if (this.debug) console.error('found', steps);
+        yield config;
         done = true;
-      }
-      // if level end and no solution found
-      if (levelEnd) {
-        config = cloneDeep(this.configs.pop());
-        console.warn('level end');
-        done = config === undefined;        
-      }
-      // if solution found for this level
-      // stack it and move to next level
-      if (success) {
-        // Save the history config and new iterator
-        config.positions = configNew.positions;
-        this.configs.push(cloneDeep(config));
-        // Continue with new configuration
-        config = configNew;
-        yield cloneDeep(config);
-        // Prepare for next puzzel
-        config.index++;
       } else {
-        config.positions[config.index]++;
-        console.warn('not success');
-        // try next posible config
+        // if level end and no solution found
+        if (levelEnd) {
+          config = cloneDeep(this.configs.pop());
+          if (this.debug) console.warn('level end');
+          done = config === undefined;        
+        }
+        // if solution found for this level
+        // stack it and move to next level
+        if (success) {
+          // Save the history config and new iterator
+          config.positions = configNew.positions;
+          this.configs.push(cloneDeep(config));
+          // Continue with new configuration
+          config = configNew;
+          yield cloneDeep(config);
+          // Prepare for next puzzel
+          config.index++;
+        } else {
+          // try next posible config
+          config.positions[config.index]++;
+          if (this.debug) console.warn('not success');
+        }        
       }
-
       steps++;
     }
   }

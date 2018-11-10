@@ -22,7 +22,16 @@ class Schedule extends Component {
     const test = () => {
       schedule.calculating = true;
       setTimeout(function() {
-        runFiller();
+        const found = runFiller();
+
+        schedule.slots = found.slots;
+        schedule.usages = Object.keys(found.slots).reduce((acc, key) => {
+          Object.keys(found.slots[key]).forEach(teacher => {
+            acc[teacher] = 1;
+          });
+          return acc;
+        }, {});
+
         schedule.calculating = false;
       }, 0);
     }
