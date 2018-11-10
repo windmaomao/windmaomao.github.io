@@ -23,6 +23,7 @@ class Schedule extends Component {
       schedule.calculating = true;
       setTimeout(function() {
         const found = runFiller();
+        console.log(found);
 
         schedule.slots = found.slots;
         schedule.usages = Object.keys(found.slots).reduce((acc, key) => {
@@ -32,6 +33,7 @@ class Schedule extends Component {
           return acc;
         }, {});
 
+        schedule.error = found.positions.length - found.index;
         schedule.calculating = false;
       }, 0);
     }

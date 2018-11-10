@@ -21,10 +21,6 @@ export default class SchedulerService {
     this.reset();
   }
 
-  min2slot(min) {
-    return min/this.slotMins;
-  }
-
   slot2time = slotPrintTime;
 
   totalSlots() {
@@ -239,6 +235,7 @@ export default class SchedulerService {
       student.teachers = prefTeachers;
       student.teacherIndex = 0;
     });
+    console.log(students);
     this.restartStep = true;
     this.studentStepIndex = -1;
 

@@ -1,7 +1,7 @@
 // libraries
 import {cloneDeep} from 'lodash';
 // locals
-const maxSteps = 2500;
+const maxSteps = 125000;
 const defaultTryFunc = (config) => ({
   success: true,
   configNew: config,
@@ -21,10 +21,10 @@ class Filler {
   // init data
   initConfig = {};
 
-  constructor(counts = [], initConfig = {}, tryFunc = defaultTryFunc, ) {
+  init(counts, initConfig, tryFunc) {
     this.counts = counts;
     this.initConfig = initConfig;
-    this.tryFunc = tryFunc;
+    this.tryFunc = tryFunc || defaultTryFunc;
   }
 
   // solve puzzel

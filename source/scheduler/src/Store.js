@@ -3,11 +3,14 @@ import {observable, action, computed, decorate} from 'mobx';
 // services
 import {scheduler} from './Scheduler';
 import Filler from './Filler';
+// import {scheduler2} from './Scheduler2';
+
 class AppStore {
   schedule = { 
     stepIndex: -1, canContinue: false, restarted: true, calculating: false,
     slots: {}, usages: {}, ids: [], total: 0, error: false, found: false,
   };
+  data = { students: [], teachers: [], prefs: [] };
 
   _gatherPrint() {
     this.schedule.slots = scheduler.slots;
@@ -62,6 +65,11 @@ class AppStore {
     }
     return solution;    
   }
+
+  prepareScheduler2() {
+
+  }
+
 }
 
 decorate(AppStore, {
