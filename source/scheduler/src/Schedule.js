@@ -37,6 +37,8 @@ class Schedule extends Component {
         schedule.calculating = false;
       }, 0);
     }
+
+    const {planSchedule} = this.props.store;
     return (
       <div>
         <Spinner enabled={calculating} />
@@ -54,7 +56,11 @@ class Schedule extends Component {
               variant="contained" color="secondary"
               onClick={delayedCall}
               disabled={!canContinue}
-            >Plan</Button>
+            >Plan</Button>&nbsp;
+            <Button 
+              variant="contained" color="secondary"
+              onClick={() => { planSchedule() }}
+            >Plan</Button>&nbsp;
           </span>
           <h1>
             Schedule &nbsp;

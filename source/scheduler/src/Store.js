@@ -3,7 +3,7 @@ import {observable, action, computed, decorate} from 'mobx';
 // services
 import {scheduler} from './Scheduler';
 import Filler from './Filler';
-// import {scheduler2} from './Scheduler2';
+import {scheduler2} from './Scheduler2';
 
 class AppStore {
   schedule = { 
@@ -67,8 +67,8 @@ class AppStore {
     return solution;    
   }
 
-  prepareScheduler2() {
-
+  planSchedule() {
+    scheduler2.prepare(scheduler.data);
   }
 
 }

@@ -117,7 +117,7 @@ function getStudentTeachers(data, shuffleTeacher) {
 }
 
 // Use filler to schedule
-export class Scheduler2 {
+export default class Scheduler2 {
   // if a teacher order should be shuffled
   shuffleTeacher = true;
   // max steps for solver
@@ -127,29 +127,16 @@ export class Scheduler2 {
   // filler
   filler = null;
   // data
-  data = {teachers: [], students: [], prefs: []};
+  // data = {teachers: [], students: [], prefs: []};
   
   constructor() {
     this.filler = new Filler();
   }
 
-  // set schedule data
-  setData(teachers, students, prefs) {
-    if (teachers) {
-      this.data.teachers = teachers;
-    }
-    if (students) {
-      this.data.students = students;
-    }
-    if (prefs) {
-      this.data.prefs = prefs;
-    }
-  }
-  
   // prepare solver
-  prepareSolver() {
-    const studentTeachers = getStudentTeachers(this.data, this.shuffleTeacher);
-    const students = this.data.students;
+  prepare(data) {
+    const studentTeachers = getStudentTeachers(data, this.shuffleTeacher);
+    const students = data.students;
     const consts = {
       maxStudents: this.maxStudentsPerTeacher, 
       students, 
@@ -163,4 +150,6 @@ export class Scheduler2 {
 }
 
 const scheduler2 = new Scheduler2();
-export default scheduler2;
+export {
+  scheduler2
+};
