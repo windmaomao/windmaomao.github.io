@@ -98,6 +98,7 @@ class Student extends Component {
           <Table>
             <TableHead>
               <TableRow>
+                <TableCell>Index</TableCell>
                 <TableCell>Cost</TableCell>
                 <TableCell>Student</TableCell>
                 <TableCell>Start</TableCell>
@@ -108,6 +109,7 @@ class Student extends Component {
             <TableBody>
               {students.map((student, index) => (
                 <TableRow key={index} style={gunnarStyle}>
+                  <TableCell>{index}</TableCell>
                   <TableCell>{student.cost}</TableCell>
                   <TableCell>{student.id}</TableCell>
                   <TableCell>{time(student.start)}</TableCell>

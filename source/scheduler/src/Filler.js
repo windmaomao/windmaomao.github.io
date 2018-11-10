@@ -1,10 +1,12 @@
 // libraries
 import {cloneDeep} from 'lodash';
 // locals
-const maxSteps = 2;
+const maxSteps = 2500;
 const defaultTryFunc = (config) => ({
   success: true,
-  configNew: config
+  configNew: config,
+  levelEnd: false,
+  goal: false
 });
 
 class Filler {
@@ -25,25 +27,19 @@ class Filler {
 
   // solve puzzel
   solve(config) {
-    // if it's the end
     if (config.index === this.counts.length) {
-      console.error('found');
-      return { success: false, config };
+      return { success: false, config, levelEnd: false, goal: true };
     }
 
-    const {positions, index, ...rest} = cloneDeep(config);
-    positions[index]++;
-    if (positions[index] > this.counts[index]) {
-      return { success: false, config }
+    const {positions, index, ...rest} = config;
+    if (positions[index] === this.counts[index]) {
+      return { success: false, config, levelEnd: true, goal: false }
     }
 
-    return this.tryFunc({positions, index, ...rest});
-  }
-
-  // print
-  print(steps, config) {
-    // const found = config.index === this.counts.length - 1;
-    console.log(steps+1, config.index, config.positions);
+    return Object.assign({}, 
+      this.tryFunc({positions, index, ...rest}),
+      {levelEnd: false, goal: false}
+    );
   }
 
   * start() {
@@ -51,9 +47,7 @@ class Filler {
 
     // setup starting config
     let config = Object.assign({
-      // use for index
-      index: -1,
-      // use natural index
+      index: 0,
       positions: Array(this.counts.length).fill(0),
     }, this.initConfig);
     // enter pool
@@ -61,23 +55,37 @@ class Filler {
     let steps = 0;
     // while (config.index < this.counts.length) {
     while (!done && steps < maxSteps) {
-      // try solving current puzzel
-      config = cloneDeep(config);
-      config.index++;
-      const { success, configNew } = this.solve(config);
-      // Success, stack it and move to next level
-      // Fail, pop to previous level and continue
-      if (success) {
-        this.configs.push(configNew);
-        config = configNew;
-        // this.print(steps, config);
-        yield config;
-        steps++;
-      } else {
-        config = this.configs.pop();
-        console.warn(config.index);
+      // solve current puzzel
+      const { success, configNew, levelEnd, goal } = this.solve(config);
+      // full solution found
+      if (goal) {
+        console.error('found', steps);
+        done = true;
+      }
+      // if level end and no solution found
+      if (levelEnd) {
+        config = cloneDeep(this.configs.pop());
+        console.warn('level end');
         done = config === undefined;        
       }
+      // if solution found for this level
+      // stack it and move to next level
+      if (success) {
+        // Save the history config and new iterator
+        config.positions = configNew.positions;
+        this.configs.push(cloneDeep(config));
+        // Continue with new configuration
+        config = configNew;
+        yield cloneDeep(config);
+        // Prepare for next puzzel
+        config.index++;
+      } else {
+        config.positions[config.index]++;
+        console.warn('not success');
+        // try next posible config
+      }
+
+      steps++;
     }
   }
 }
