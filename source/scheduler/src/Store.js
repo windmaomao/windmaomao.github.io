@@ -69,6 +69,7 @@ class AppStore {
 
   planSchedule() {
     scheduler2.prepare(scheduler.data);
+    scheduler2.solve();
   }
 
 }

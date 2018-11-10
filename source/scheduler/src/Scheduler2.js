@@ -126,8 +126,6 @@ export default class Scheduler2 {
   maxStudentsPerTeacher = 3;
   // filler
   filler = null;
-  // data
-  // data = {teachers: [], students: [], prefs: []};
   
   constructor() {
     this.filler = new Filler();
@@ -147,6 +145,22 @@ export default class Scheduler2 {
     const config = {consts, slots};
     this.filler.init(counts, config, tryFill);
   }
+
+  // solve to get a solution
+  solve() {
+    const start = this.filler.start();
+    let done = false;
+    let solution = null;
+    while (!done) {
+      const obj = start.next();
+      done = obj.done;
+      if (!done) {
+        solution = obj.value;
+      }
+    }
+    return solution;
+  }
+
 }
 
 const scheduler2 = new Scheduler2();
