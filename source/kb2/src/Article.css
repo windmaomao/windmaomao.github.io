@@ -143,16 +143,15 @@
 
 /* List */
 .article li { cursor: pointer; user-select: none }
+.article li.toggled { border-top: 1px dotted lightblue }
+.article li.toggled > ul ul { display: none }
+.article h3.toggled { border-bottom: 1px dotted lightblue }
+.article h3.toggled + ul ul { display: none }
+/* .article h3.toggled + * { display: none } */
+/* .article *.toggled + * { display: none } */
+/* .article *.toggled ul { display: none } */
+/* .article li.toggled ul ul { display: none } */
+/* .article dt.toggled + dd ul { display: none } */
+/* .article h3:hover + ul ul { display: none }
 .article li.toggled { list-style-type: circle }
-.article li.toggled > ul { display: none }
-.article.ul-1 ul.tree > li > ul { display: none }
-.article.ul-2 ul.tree > li > ul > li > ul { display: none }
-.article.ul-3 ul.tree > li > ul > li > ul > li > ul { display: none }
-.article.ul-4 ul.tree > li > ul > li > ul > li > ul > li > ul { display: none }
-/* .article ul.tree { list-style: circle }
-.article ul.tree ul { list-style: square }
-.article ul.tree > li { border-bottom: 1px solid #eee }
-.article ul.tree ul ul { list-style: disc }
-.article ul.tree ul ul ul { list-style: none }
-.article ul.tree ul ul li { line-height: 1.5em }
-.article ul.tree ul ul ul li { line-height: 1.2em } */
+.article li.toggled > ul { display: none } */
