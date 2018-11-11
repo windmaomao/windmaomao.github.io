@@ -204,9 +204,208 @@ const getSampleInvest = {
   }))
 };
 
+const opml = {
+  "head": {
+    "title": "",
+    "flavor": "dynalist",
+    "source": "https://dynalist.io",
+    "ownerName": "Fang Jin",
+    "ownerEmail": "windmaomao@gmail.com"
+  },
+  "body": {
+    "outline": {
+      "outline": [
+        {
+          "_text": "`form`",
+          "__note": "Mobx store"
+        },
+        {
+          "outline": {
+            "_text": "`title`"
+          },
+          "_text": "MGPageHeader"
+        },
+        {
+          "outline": [
+            {
+              "_text": "`form`"
+            },
+            {
+              "_text": "`carrier`"
+            },
+            {
+              "outline": [
+                {
+                  "_text": "`form`"
+                },
+                {
+                  "_text": "`carrier`"
+                }
+              ],
+              "_text": "MGCarrierSelect"
+            }
+          ],
+          "_text": "MGPostedCarrierTitle"
+        },
+        {
+          "outline": [
+            {
+              "_text": "`form`"
+            },
+            {
+              "_text": "`carrier`"
+            },
+            {
+              "_text": "MGPostedEquipmentEntryHeader",
+              "__note": "Table header"
+            },
+            {
+              "outline": {
+                "_text": "`name`",
+                "__note": "`'quantity'`"
+              },
+              "_text": "MGInput",
+              "__note": "Quantity column input"
+            },
+            {
+              "outline": {
+                "_text": "`name`",
+                "__note": "`'id'`"
+              },
+              "_text": "MGInput"
+            },
+            {
+              "_text": "MGSelect",
+              "__note": "name='mode'"
+            },
+            {
+              "_text": "MGSelect",
+              "__note": "name='type'"
+            },
+            {
+              "outline": [
+                {
+                  "_text": "`form`"
+                },
+                {
+                  "_text": "`origin`"
+                },
+                {
+                  "_text": "`disabled`"
+                }
+              ],
+              "_text": "MGPostedEquipmentOrigin"
+            },
+            {
+              "_text": "MGPostedEquipmentDestination"
+            },
+            {
+              "outline": [
+                {
+                  "_text": "`form`"
+                },
+                {
+                  "_text": "`contact`"
+                }
+              ],
+              "_text": "MGPostedEquipmentContact"
+            },
+            {
+              "outline": [
+                {
+                  "_text": "`form`"
+                },
+                {
+                  "_text": "`availability`"
+                },
+                {
+                  "_text": "`disabled`"
+                }
+              ],
+              "_text": "MGPostedEquipmentAvailability"
+            },
+            {
+              "outline": [
+                {
+                  "_text": "`form`"
+                },
+                {
+                  "_text": "`equipments`"
+                },
+                {
+                  "_text": "`index`"
+                },
+                {
+                  "_text": "`isDisabled`"
+                }
+              ],
+              "_text": "MGPostedEquipmentActionsMenu"
+            },
+            {
+              "_text": "UXLink",
+              "__note": "onClick=form.addNewEquipment(equipements, autoGenerateId)"
+            }
+          ],
+          "_text": "MGPostedEquipments"
+        },
+        {
+          "outline": {
+            "_text": "MGIconAdd"
+          },
+          "_text": "MGLink",
+          "__note": "onClick={form.addNewCarrier}"
+        },
+        {
+          "outline": [
+            {
+              "_text": "`form`"
+            },
+            {
+              "_text": "UXButton",
+              "__note": "Cancel"
+            },
+            {
+              "outline": [
+                {
+                  "_text": "`onclick`",
+                  "__note": "`form.submit()`"
+                },
+                {
+                  "_text": "`disabled`",
+                  "__note": "`!!errors.size`"
+                }
+              ],
+              "_text": "UXButton"
+            }
+          ],
+          "_text": "MGPostedFooter"
+        }
+      ],
+      "_text": "MGPostedForm"
+    }
+  },
+  "_version": "2.0"
+};
+
+const parseOutline = (item) => {
+  return {
+    title: item._text || '',
+    note: item.__note || '',
+    children: item.outline ? (Array.isArray(item.outline) ? 
+        item.outline.map(parseOutline) : [parseOutline(item.outline)]
+    ) : []
+  }
+}
+
+const getSampleOutline = Object.assign({}, parseOutline(opml.body.outline), {
+  cols: ['note']
+});
+// console.log(getSampleBlueprint);
+
 export {
   getSampleTree,
   getSampleMenu,
   getSampleInvest,
+  getSampleOutline 
 }
 
