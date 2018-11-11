@@ -2,6 +2,7 @@
   {
     "title": "Blueprint", "type": "blueprint",
     "items": [
+      "ma-scheduler",
       "mg-postedEquipment",
       "mg-quickAddQuote",
       "pd-apnea",
