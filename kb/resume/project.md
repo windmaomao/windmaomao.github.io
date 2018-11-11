@@ -308,7 +308,7 @@ Contracting work with client sponsored projects {.subtitle}
 Knowledgebase 2
 
 : QPlot Knowledgebase 2
-: Sep 2018 - 
+: Sep 2018 - Oct 2018
 : *React* *Bulma* *Mobx* {.labels}
 : This is to remake the internal knowledgebase system in a maintainable fashion. The idea is to view hierachy of the library articles (Markdown) and each article can be navigated via its table of content. 
 
@@ -324,18 +324,18 @@ Highlights
 Scheduler
 
 : Mathnasium Scheduler
-: Sep 2018 - Oct 2018
+: Sep 2018 - Nov 2018
 : *React* *Semantic UI* *Material UI* *Mobx* {.labels}
 : Daily teacher scheduling app that assign teacher with students. Each teacher has a start and end time as well as his capcity of taking students. Each student has a start and end time and preference of teachers. The job is assign 50-100 students daily to 5-10 teachers in a time slot based system. For instance taking time slot to be 15mins.  
+
+![Mathnasium Scheduler Plan](https://s3.amazonaws.com/qp-photo/ma-scheduler-plan.png)
 
 Highlights
 
 : - React: Fast development using ui library material UI and semantic UI
-  - Schedule: Schedule service solving solution of teacher assignment
-  - Stepping: Allow solving to be stepping algorithm towards next solution
+  - Schedule: Generator service solving solution of teacher assignment to students
   - Upload: Upload _Excel_ sheet for students, teachers and their preferences
-  - Print: Allow nice print of teacher assignment sheet
-  - Algorithm: Complex algorithm to iterate through possible solution of filling teacher slots
+  - Print: Allow nice printer version of teacher assignment sheet
 
 Stim
 

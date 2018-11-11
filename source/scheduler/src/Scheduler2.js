@@ -134,8 +134,6 @@ function getStudentTeachers(data, shuffleTeacher) {
 export default class Scheduler2 {
   // if a teacher order should be shuffled
   shuffleTeacher = true;
-  // max steps for solver
-  maxSteps = 1000;
   // max students per teacher
   maxStudentsPerTeacher = 3;
   // filler
