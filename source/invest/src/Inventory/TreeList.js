@@ -4,6 +4,9 @@ import {upperFirst} from 'lodash';
 // components
 import { Table } from 'semantic-ui-react'
 import TreeNode from './TreeNode';
+// services
+var Remarkable = require('remarkable');
+var md = new Remarkable();
 
 const setupColDefs = (cols) => {
   return cols.map(col => {
@@ -38,7 +41,7 @@ class TreeList extends Component {
         </Table.Header>
         <Table.Body>
           {children && children.map((node, i) => (
-            <TreeNode key={i} node={node} level={0} cols={colDefs2} />
+            <TreeNode key={i} node={node} level={0} cols={colDefs2} md={md} />
           ))}
         </Table.Body>
       </Table>
