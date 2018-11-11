@@ -238,9 +238,6 @@ export default class SchedulerService {
     console.log(students);
     this.restartStep = true;
     this.studentStepIndex = -1;
-
-    // filler
-    this.counts = students.map(student => student.teachers.length);
   }
 
   // plan schedule
@@ -288,67 +285,6 @@ export default class SchedulerService {
       }
     }
     return students.length;
-  }
-
-  // try fill
-  tryFill(config) {
-    const student = config.students[config.index];
-    const teacherIndex = config.positions[config.index];
-    const teacher = student.teachers[teacherIndex];
-    const maxStudents = 3;
-    // console.log(student.id, teacher.id);
-
-    const tryFillStudent = (slots) => {
-      let matchAllSlots = true;
-      const slotsMap = cloneDeep(slots);  
-      // for each slot required by the student
-      for (let i = student.start; i <= student.end; i++) { 
-        // skip if not work 
-        if (!matchAllSlots) break;
-        
-        // find the slot in the map
-        if (!(i in slotsMap)) {
-          slotsMap[i] = {};
-        }
-        const slot = slotsMap[i];
-  
-        // get current students for the slot
-        if (!(teacher.id in slot)) {
-          slot[teacher.id] = [];
-        }
-        const students = slot[teacher.id];
-        
-        // if teacher has enough students
-        if (students.length === maxStudents) {
-          matchAllSlots = false;
-        }
-
-        // accept teacher on the slot
-        if (matchAllSlots) {
-          students.push(student.id);
-        }  
-      }
-      
-      if (matchAllSlots) {
-        return slotsMap;
-      } else {
-        return null;
-      }
-    }
-
-    // const newSlots = this.tryMapStudentToTeacher(config.slots, student, teacher);
-    const newSlots = tryFillStudent(config.slots);
-
-    if (!newSlots) {
-      return {
-        success: false,
-        configNew: config
-      };
-    }
-    return {
-      success: true,
-      configNew: Object.assign({}, config, { slots: newSlots })
-    };
   }
 
   // step after prepare

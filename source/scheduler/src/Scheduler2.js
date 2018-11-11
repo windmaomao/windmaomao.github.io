@@ -3,10 +3,16 @@ import {find, cloneDeep, sortBy, filter, shuffle} from 'lodash';
 // services
 // import {slotMaxStudents} from './constant';
 import Filler from './Filler';
+ 
+function lastName(name) {
+  const parts = name.split(' ');
+  return parts.length > 1 ? parts[parts.length - 1] : null;
+}
 
- // try fill
+// try fill
  function tryFill(config) {
   const student = config.consts.students[config.index];
+  const studentLastName = lastName(student.id);
   const teacherIndex = config.positions[config.index];
   const teachers = config.consts.studentTeachers[config.index];
   const teacher = teachers[teacherIndex];
@@ -36,6 +42,14 @@ import Filler from './Filler';
       // if teacher has enough students
       if (students.length === maxStudents) {
         matchAllSlots = false;
+      }
+
+      // if teacher has students with unique last name
+      if (studentLastName) {
+        const lastNames = students.map(prev => lastName(prev));
+        if (lastNames.indexOf(studentLastName) >= 0) {
+          matchAllSlots = false;
+        } 
       }
 
       // accept teacher on the slot
