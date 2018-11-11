@@ -69,7 +69,16 @@ class AppStore {
 
   planSchedule() {
     scheduler2.prepare(scheduler.data);
-    scheduler2.solve();
+    const found = scheduler2.solve();
+
+    this.schedule.slots = found.slots;
+    this.schedule.usages = Object.keys(found.slots).reduce((acc, key) => {
+      Object.keys(found.slots[key]).forEach(teacher => {
+        acc[teacher] = 1;
+      });
+      return acc;
+    }, {});
+    this.schedule.error = found.positions.length - found.index;
   }
 
 }
@@ -79,6 +88,7 @@ decorate(AppStore, {
   resetSchedule: action.bound,
   searchSchedule: action.bound,
   stepProgress: computed,
+  planSchedule: action.bound
 });
 
 export default AppStore;

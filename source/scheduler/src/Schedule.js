@@ -10,56 +10,24 @@ import Spinner from './Spinner';
 
 class Schedule extends Component {
   render() {
-    const {schedule, resetSchedule, searchSchedule, runFiller} = this.props.store;
-    const {calculating, canContinue} = schedule;
-    const {slots, usages, error, found } = schedule;
-    const delayedCall = () => {
-      schedule.calculating = true;
-      setTimeout(function(){ 
-        searchSchedule();
-      }, 0);
-    }
-    const test = () => {
+    const {schedule} = this.props.store;
+    const {calculating, slots, usages, error, found } = schedule;
+    const {planSchedule} = this.props.store;
+    const test2 = () => {
       schedule.calculating = true;
       setTimeout(function() {
-        const found = runFiller();
-        console.log(found);
-
-        schedule.slots = found.slots;
-        schedule.usages = Object.keys(found.slots).reduce((acc, key) => {
-          Object.keys(found.slots[key]).forEach(teacher => {
-            acc[teacher] = 1;
-          });
-          return acc;
-        }, {});
-
-        schedule.error = found.positions.length - found.index;
+        planSchedule();
         schedule.calculating = false;
       }, 0);
     }
-
-    const {planSchedule} = this.props.store;
     return (
       <div>
         <Spinner enabled={calculating} />
         <div>
           <span style={{float: 'right'}}>
             <Button 
-              variant="contained" color="primary"
-              onClick={() => { resetSchedule() }}
-            >Prepare</Button>&nbsp;
-            <Button 
               variant="contained" color="secondary"
-              onClick={() => {test(); }}
-            >Filler</Button>&nbsp;
-            <Button 
-              variant="contained" color="secondary"
-              onClick={delayedCall}
-              disabled={!canContinue}
-            >Plan</Button>&nbsp;
-            <Button 
-              variant="contained" color="secondary"
-              onClick={() => { planSchedule() }}
+              onClick={() => { test2() }}
             >Plan</Button>&nbsp;
           </span>
           <h1>
