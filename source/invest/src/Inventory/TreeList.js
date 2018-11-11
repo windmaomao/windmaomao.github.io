@@ -5,8 +5,8 @@ import {upperFirst} from 'lodash';
 import { Table } from 'semantic-ui-react'
 import TreeNode from './TreeNode';
 // services
-var Remarkable = require('remarkable');
-var md = new Remarkable();
+const MarkdownIt = require('markdown-it'),
+    md = new MarkdownIt();
 
 const setupColDefs = (cols) => {
   return cols.map(col => {
