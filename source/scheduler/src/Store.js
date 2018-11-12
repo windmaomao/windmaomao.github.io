@@ -11,11 +11,7 @@ class AppStore {
   };
   data = { students: [], teachers: [], prefs: [] };
 
-  planSchedule() {
-    scheduler2.prepare(scheduler.data);
-    const found = scheduler2.solve();
-    console.log(found.positions);
-
+  collectResults(found) {
     // update students data
     // TODO: should update store only
     scheduler.data.students = found.consts.students;
@@ -34,16 +30,24 @@ class AppStore {
     this.schedule.error = found.positions.length - found.index;
   }
 
+  planSchedule() {
+    scheduler2.prepare(scheduler.data);
+    const found = scheduler2.solve();
+    this.collectResults(found);
+  }
+
   planScheduleN() {
-    const solution = scheduler2.solveN(scheduler.data);
-    console.log(solution);
+    const found = scheduler2.solveN(scheduler.data);
+    this.collectResults(found);
   }
 
 }
 
 decorate(AppStore, {
   schedule: observable,
-  planSchedule: action.bound
+  planSchedule: action.bound,
+  planScheduleN: action.bound,
+  collectResults: action.bound,
 });
 
 export default AppStore;
