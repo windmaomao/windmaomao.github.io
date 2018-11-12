@@ -13,7 +13,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import AppStore from './Store';
 // locals
-const basename = '/scheduler';
+const basename = '/scheduler2';
 const history = createBrowserHistory({ basename });
 const store = new AppStore();
 
