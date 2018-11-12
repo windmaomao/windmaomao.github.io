@@ -1,7 +1,8 @@
 // libraries
 import {cloneDeep} from 'lodash';
 // locals
-const maxSteps = 225000;
+const maxSteps = 525000;
+// const maxSteps = 100;
 const defaultTryFunc = (config) => ({
   success: true,
   configNew: config,
@@ -85,6 +86,7 @@ class Filler {
         } else {
           // try next posible config
           config.positions[config.index]++;
+          console.log(config.positions);
           if (this.debug) console.warn('not success');
         }        
       }

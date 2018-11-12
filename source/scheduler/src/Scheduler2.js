@@ -136,8 +136,9 @@ function prepareStudents(data, shuffleTeacher) {
     student.teachers = teachers[index];
     student.teacherIndex = 0;
   });
+  return data.students;
   // sort student list by teachers options
-  return sortBy(data.students, [student => student.teachers.length]);
+  // return sortBy(data.students, [student => -student.teachers.length]);
 }
 
 // Use filler to schedule
