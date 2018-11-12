@@ -12,11 +12,18 @@ class Schedule extends Component {
   render() {
     const {schedule} = this.props.store;
     const {calculating, slots, usages, error, found } = schedule;
-    const {planSchedule} = this.props.store;
+    const {planSchedule, planScheduleN} = this.props.store;
     const test2 = () => {
       schedule.calculating = true;
       setTimeout(function() {
         planSchedule();
+        schedule.calculating = false;
+      }, 0);
+    }
+    const testN = () => {
+      schedule.calculating = true;
+      setTimeout(function() {
+        planScheduleN();
         schedule.calculating = false;
       }, 0);
     }
@@ -29,6 +36,10 @@ class Schedule extends Component {
               variant="contained" color="secondary"
               onClick={() => { test2() }}
             >Plan</Button>&nbsp;
+            <Button 
+              variant="contained" color="secondary"
+              onClick={() => { testN() }}
+            >PlanN</Button>&nbsp;
           </span>
           <h1>
             Schedule &nbsp;

@@ -34,6 +34,11 @@ class AppStore {
     this.schedule.error = found.positions.length - found.index;
   }
 
+  planScheduleN() {
+    const solution = scheduler2.solveN(scheduler.data);
+    console.log(solution);
+  }
+
 }
 
 decorate(AppStore, {
