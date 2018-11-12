@@ -152,6 +152,7 @@ export default class Scheduler2 {
   // prepare solver
   prepare(data) {
     const students = prepareStudents(data, shuffleTeachers);
+    console.warn('Students');
     console.log(students);
     const consts = {
       maxStudents: slotMaxStudents, 
@@ -175,6 +176,8 @@ export default class Scheduler2 {
         solution = obj.value;
       }
     }
+    console.warn('Solutions');
+    console.log(solution);
     return solution;
   }
 

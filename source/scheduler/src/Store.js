@@ -16,6 +16,14 @@ class AppStore {
     const found = scheduler2.solve();
     console.log(found.positions);
 
+    // update students data
+    // TODO: should update store only
+    scheduler.data.students = found.consts.students;
+    scheduler.data.students.forEach((student, i) => {
+      student.teacherIndex = found.positions[i];
+    });
+
+    // update store status
     this.schedule.slots = found.slots;
     this.schedule.usages = Object.keys(found.slots).reduce((acc, key) => {
       Object.keys(found.slots[key]).forEach(teacher => {
