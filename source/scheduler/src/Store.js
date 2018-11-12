@@ -14,6 +14,7 @@ class AppStore {
   planSchedule() {
     scheduler2.prepare(scheduler.data);
     const found = scheduler2.solve();
+    console.log(found.positions);
 
     this.schedule.slots = found.slots;
     this.schedule.usages = Object.keys(found.slots).reduce((acc, key) => {

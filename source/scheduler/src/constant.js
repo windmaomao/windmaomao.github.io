@@ -38,10 +38,13 @@ const printTeacherGroup = teachers => {
   );
   return chunk(teachers, printRowTeachers);  
 }
+// shuffer teachers
+const shuffleTeachers = true;
 
 export {
   slotMaxStudents,
   slotMinutes, slotsInDuration, slotsPerHour, slotPrintTime,
   slotHourShift, displayTimeToSlot, jsDateToSlot,
-  printRowTeachers, printTeacherGroup
+  printRowTeachers, printTeacherGroup,
+  shuffleTeachers
 }

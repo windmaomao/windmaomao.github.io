@@ -1,7 +1,7 @@
 // libraries
 import {find, cloneDeep, sortBy, filter, shuffle} from 'lodash';
 // services
-// import {slotMaxStudents} from './constant';
+import {slotMaxStudents, shuffleTeachers} from './constant';
 import Filler from './Filler';
  
 function lastName(name) {
@@ -14,8 +14,7 @@ function lastName(name) {
   const student = config.consts.students[config.index];
   const studentLastName = lastName(student.id);
   const teacherIndex = config.positions[config.index];
-  const teachers = config.consts.studentTeachers[config.index];
-  const teacher = teachers[teacherIndex];
+  const teacher = student.teachers[teacherIndex];
   const maxStudents = config.consts.maxStudents;
   // console.log(student.id, teacher.id);
 
@@ -118,7 +117,7 @@ const findId = (arr, obj) => {
   });  
 }
 
-// prepare students
+// get student teachers
 function getStudentTeachers(data, shuffleTeacher) {
   const {students, teachers, prefs} = data;
   return students.map(student => {
@@ -130,12 +129,19 @@ function getStudentTeachers(data, shuffleTeacher) {
   });
 }
 
+// get sorted students
+function prepareStudents(data, shuffleTeacher) {
+  const teachers = getStudentTeachers(data, shuffleTeacher);
+  data.students.forEach((student, index) => {
+    student.teachers = teachers[index];
+    student.teacherIndex = 0;
+  });
+  // sort student list by teachers options
+  return sortBy(data.students, [student => student.teachers.length]);
+}
+
 // Use filler to schedule
 export default class Scheduler2 {
-  // if a teacher order should be shuffled
-  shuffleTeacher = true;
-  // max students per teacher
-  maxStudentsPerTeacher = 3;
   // filler
   filler = null;
   
@@ -145,16 +151,14 @@ export default class Scheduler2 {
 
   // prepare solver
   prepare(data) {
-    const studentTeachers = getStudentTeachers(data, this.shuffleTeacher);
-    console.log(studentTeachers);
-    const students = data.students;
+    const students = prepareStudents(data, shuffleTeachers);
+    console.log(students);
     const consts = {
-      maxStudents: this.maxStudentsPerTeacher, 
+      maxStudents: slotMaxStudents, 
       students, 
-      studentTeachers
     };
     const slots = {};
-    const counts = students.map((student,i) => studentTeachers[i].length);
+    const counts = students.map(student => student.teachers.length);
     const config = {consts, slots};
     this.filler.init(counts, config, tryFill);
   }
