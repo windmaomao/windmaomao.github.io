@@ -205,186 +205,336 @@ const getSampleInvest = {
 };
 
 const opml = {
-  "head": {
-    "title": "",
-    "flavor": "dynalist",
-    "source": "https://dynalist.io",
-    "ownerName": "Fang Jin",
-    "ownerEmail": "windmaomao@gmail.com"
-  },
-  "body": {
-    "outline": {
-      "outline": [
-        {
-          "_text": "`form`",
-          "__note": "Mobx store"
-        },
-        {
-          "outline": {
-            "_text": "`title`"
-          },
-          "_text": "MGPageHeader"
-        },
-        {
-          "outline": [
-            {
-              "_text": "`form`"
-            },
-            {
-              "_text": "`carrier`"
-            },
-            {
-              "outline": [
-                {
-                  "_text": "`form`"
-                },
-                {
-                  "_text": "`carrier`"
-                }
-              ],
-              "_text": "MGCarrierSelect"
-            }
-          ],
-          "_text": "MGPostedCarrierTitle"
-        },
-        {
-          "outline": [
-            {
-              "_text": "`form`"
-            },
-            {
-              "_text": "`carrier`"
-            },
-            {
-              "_text": "MGPostedEquipmentEntryHeader",
-              "__note": "Table header"
-            },
-            {
-              "outline": {
-                "_text": "`name`",
-                "__note": "`'quantity'`"
+  "opml": {
+    "head": {
+      "title": "",
+      "flavor": "dynalist",
+      "source": "https://dynalist.io",
+      "ownerName": "Fang Jin",
+      "ownerEmail": "windmaomao@gmail.com"
+    },
+    "body": {
+      "outline": {
+        "outline": [
+          {
+            "outline": [
+              {
+                "outline": [
+                  {
+                    "_text": "`questionList`",
+                    "__note": "['whose-idea']"
+                  },
+                  {
+                    "outline": {
+                      "outline": [
+                        {
+                          "_text": "`name`",
+                          "__note": "'q1'"
+                        },
+                        {
+                          "_text": "`label`",
+                          "__note": "'What is your name'"
+                        },
+                        {
+                          "_text": "`type`",
+                          "__note": "'Radio'"
+                        },
+                        {
+                          "outline": [
+                            {
+                              "_text": "`key`"
+                            },
+                            {
+                              "_text": "`title`"
+                            }
+                          ],
+                          "_text": "`options`"
+                        }
+                      ],
+                      "_text": "'whose-idea'"
+                    },
+                    "_text": "`questionDefs`"
+                  }
+                ],
+                "_text": "questions"
               },
-              "_text": "MGInput",
-              "__note": "Quantity column input"
-            },
-            {
-              "outline": {
-                "_text": "`name`",
-                "__note": "`'id'`"
+              {
+                "outline": [
+                  {
+                    "_text": "`pageList`",
+                    "__note": "['landing', 'tour']"
+                  },
+                  {
+                    "outline": {
+                      "outline": [
+                        {
+                          "_text": "`name`"
+                        },
+                        {
+                          "_text": "`path`"
+                        }
+                      ],
+                      "_text": "landing"
+                    },
+                    "_text": "`pageRoutes`"
+                  },
+                  {
+                    "outline": {
+                      "outline": [
+                        {
+                          "_text": "next",
+                          "__note": "tour"
+                        },
+                        {
+                          "_text": "question"
+                        }
+                      ],
+                      "_text": "landing"
+                    },
+                    "_text": "`pageDefs`"
+                  }
+                ],
+                "_text": "pages"
               },
-              "_text": "MGInput"
-            },
-            {
-              "_text": "MGSelect",
-              "__note": "name='mode'"
-            },
-            {
-              "_text": "MGSelect",
-              "__note": "name='type'"
-            },
-            {
-              "outline": [
-                {
-                  "_text": "`form`"
-                },
-                {
-                  "_text": "`origin`"
-                },
-                {
-                  "_text": "`disabled`"
-                }
-              ],
-              "_text": "MGPostedEquipmentOrigin"
-            },
-            {
-              "_text": "MGPostedEquipmentDestination"
-            },
-            {
-              "outline": [
-                {
-                  "_text": "`form`"
-                },
-                {
-                  "_text": "`contact`"
-                }
-              ],
-              "_text": "MGPostedEquipmentContact"
-            },
-            {
-              "outline": [
-                {
-                  "_text": "`form`"
-                },
-                {
-                  "_text": "`availability`"
-                },
-                {
-                  "_text": "`disabled`"
-                }
-              ],
-              "_text": "MGPostedEquipmentAvailability"
-            },
-            {
-              "outline": [
-                {
-                  "_text": "`form`"
-                },
-                {
-                  "_text": "`equipments`"
-                },
-                {
-                  "_text": "`index`"
-                },
-                {
-                  "_text": "`isDisabled`"
-                }
-              ],
-              "_text": "MGPostedEquipmentActionsMenu"
-            },
-            {
-              "_text": "UXLink",
-              "__note": "onClick=form.addNewEquipment(equipements, autoGenerateId)"
-            }
-          ],
-          "_text": "MGPostedEquipments"
-        },
-        {
-          "outline": {
-            "_text": "MGIconAdd"
+              {
+                "outline": [
+                  {
+                    "_text": "`basename`",
+                    "__note": "'/apnea'"
+                  },
+                  {
+                    "outline": {
+                      "_text": "`idea_doc`",
+                      "__note": "false"
+                    },
+                    "_text": "`answers`"
+                  }
+                ],
+                "_text": "store",
+                "__note": "via `mobx`"
+              },
+              {
+                "outline": [
+                  {
+                    "_text": "`name`"
+                  },
+                  {
+                    "_text": "`path`"
+                  },
+                  {
+                    "outline": [
+                      {
+                        "_text": "`name`"
+                      },
+                      {
+                        "_text": "`path`"
+                      }
+                    ],
+                    "_text": "`children`"
+                  }
+                ],
+                "_text": "router",
+                "__note": "createRouter via `router5` "
+              },
+              {
+                "outline": [
+                  {
+                    "_text": "Home `/`"
+                  },
+                  {
+                    "_text": "About `/about`"
+                  },
+                  {
+                    "_text": "Landing `/page/landing`"
+                  },
+                  {
+                    "_text": "Tour `/page/tour`"
+                  },
+                  {
+                    "_text": "..."
+                  }
+                ],
+                "_text": "routePages"
+              }
+            ],
+            "_text": "Services"
           },
-          "_text": "MGLink",
-          "__note": "onClick={form.addNewCarrier}"
-        },
-        {
-          "outline": [
-            {
-              "_text": "`form`"
-            },
-            {
-              "_text": "UXButton",
-              "__note": "Cancel"
-            },
-            {
-              "outline": [
-                {
-                  "_text": "`onclick`",
-                  "__note": "`form.submit()`"
-                },
-                {
-                  "_text": "`disabled`",
-                  "__note": "`!!errors.size`"
-                }
-              ],
-              "_text": "UXButton"
-            }
-          ],
-          "_text": "MGPostedFooter"
-        }
-      ],
-      "_text": "MGPostedForm"
-    }
-  },
-  "_version": "2.0"
+          {
+            "outline": [
+              {
+                "outline": [
+                  {
+                    "_text": "`router`"
+                  },
+                  {
+                    "_text": "Root"
+                  }
+                ],
+                "_text": "index"
+              },
+              {
+                "outline": [
+                  {
+                    "_text": "`router`"
+                  },
+                  {
+                    "_text": "RouterProvider",
+                    "__note": "via `react-router5`"
+                  },
+                  {
+                    "_text": "App"
+                  }
+                ],
+                "_text": "Root"
+              },
+              {
+                "outline": [
+                  {
+                    "_text": "Provider `store`",
+                    "__note": "via `mobx-react`"
+                  },
+                  {
+                    "outline": [
+                      {
+                        "outline": [
+                          {
+                            "_text": "`route`"
+                          },
+                          {
+                            "_text": "PublicHeader"
+                          },
+                          {
+                            "_text": "PageHeader"
+                          }
+                        ],
+                        "_text": "Header"
+                      },
+                      {
+                        "outline": [
+                          {
+                            "_text": "`route`"
+                          },
+                          {
+                            "outline": {
+                              "_text": "`field`"
+                            },
+                            "_text": "Question"
+                          },
+                          {
+                            "outline": {
+                              "_text": "`page`"
+                            },
+                            "_text": "Navigation"
+                          }
+                        ],
+                        "_text": "Main"
+                      },
+                      {
+                        "outline": [
+                          {
+                            "_text": "`route`"
+                          },
+                          {
+                            "_text": "PublicFooter"
+                          },
+                          {
+                            "_text": "PageFooter"
+                          }
+                        ],
+                        "_text": "Footer"
+                      }
+                    ],
+                    "_text": "Page"
+                  },
+                  {
+                    "outline": [
+                      {
+                        "_text": "Field",
+                        "__note": "Generic field"
+                      },
+                      {
+                        "outline": [
+                          {
+                            "_text": "`label`"
+                          },
+                          {
+                            "_text": "`keys`"
+                          },
+                          {
+                            "_text": "`answers`"
+                          }
+                        ],
+                        "_text": "Text"
+                      },
+                      {
+                        "outline": [
+                          {
+                            "_text": "`label`"
+                          },
+                          {
+                            "_text": "`options`"
+                          },
+                          {
+                            "_text": "`keys`"
+                          },
+                          {
+                            "_text": "`answers`"
+                          },
+                          {
+                            "_text": "`answerChange`"
+                          }
+                        ],
+                        "_text": "Checkbox"
+                      },
+                      {
+                        "outline": [
+                          {
+                            "_text": "`label`"
+                          },
+                          {
+                            "_text": "`options`"
+                          },
+                          {
+                            "_text": "`keys`"
+                          },
+                          {
+                            "_text": "`answers`"
+                          },
+                          {
+                            "_text": "`answerChange`"
+                          }
+                        ],
+                        "_text": "Radio"
+                      },
+                      {
+                        "outline": [
+                          {
+                            "_text": "`field`"
+                          },
+                          {
+                            "_text": "`store`"
+                          }
+                        ],
+                        "_text": "Fieldset"
+                      },
+                      {
+                        "_text": "Embedded"
+                      }
+                    ],
+                    "_text": "Fields"
+                  }
+                ],
+                "_text": "App"
+              }
+            ],
+            "_text": "Components"
+          }
+        ],
+        "_text": "Apnea"
+      }
+    },
+    "_version": "2.0"
+  }
 };
 
 const parseOutline = (item) => {
@@ -397,7 +547,7 @@ const parseOutline = (item) => {
   }
 }
 
-const getSampleOutline = Object.assign({}, parseOutline(opml.body.outline), {
+const getSampleOutline = Object.assign({}, parseOutline(opml.opml.body.outline), {
   cols: ['note']
 });
 // console.log(getSampleBlueprint);
