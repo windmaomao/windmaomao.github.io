@@ -1,7 +1,7 @@
 // libraries
 import {cloneDeep} from 'lodash';
 // locals
-const maxSteps = 15000;
+const maxSteps = 25000;
 // const maxSteps = 100;
 const defaultTryFunc = (config) => ({
   success: true,
@@ -46,6 +46,7 @@ class Filler {
   }
 
   * start() {
+    this.configs = [];
     if (this.counts.length < 1) return;
 
     // setup starting config
@@ -68,9 +69,10 @@ class Filler {
       } else {
         // if level end and no solution found
         if (levelEnd) {
+          console.log(config.positions);
           config = cloneDeep(this.configs.pop());
-          if (this.debug) console.warn('level end');
-          done = config === undefined;        
+          done = config === undefined;
+          if (this.debug) console.warn('level end', done);
         }
         // if solution found for this level
         // stack it and move to next level
@@ -84,10 +86,13 @@ class Filler {
           // Prepare for next puzzel
           config.index++;
         } else {
-          // try next posible config
-          config.positions[config.index]++;
-          console.log(config.positions);
-          if (this.debug) console.warn('not success');
+          if (!done) {
+            // try next posible config
+            config.positions[config.index]++;
+            if (this.debug) console.warn('not success');
+          } else {
+            console.error('no solution');
+          }
         }        
       }
       steps++;
