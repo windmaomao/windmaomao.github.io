@@ -122,10 +122,10 @@ const findId = (arr, obj) => {
 function getStudentTeachers(data, shuffleTeacher) {
   const {students, teachers, prefs} = data;
   return students.map(student => {
+    let availables = availableTeachers(student, teachers);
     // find student pref
-    let prefTeachers = availableTeachers(student, teachers);
     const pref = findId(prefs, student);
-    prefTeachers = preferTeachers(teachers, pref, shuffleTeacher);
+    const prefTeachers = preferTeachers(availables, pref, shuffleTeacher);
     return prefTeachers;
   });
 }
@@ -146,6 +146,7 @@ export default class Scheduler2 {
   // prepare solver
   prepare(data) {
     const studentTeachers = getStudentTeachers(data, this.shuffleTeacher);
+    console.log(studentTeachers);
     const students = data.students;
     const consts = {
       maxStudents: this.maxStudentsPerTeacher, 
