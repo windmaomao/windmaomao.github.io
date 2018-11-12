@@ -1,7 +1,7 @@
 // libraries
 import {cloneDeep} from 'lodash';
 // locals
-const maxSteps = 25000;
+const maxSteps = 55000;
 // const maxSteps = 100;
 const defaultTryFunc = (config) => ({
   success: true,
@@ -12,7 +12,7 @@ const defaultTryFunc = (config) => ({
 
 class Filler {
   // debug
-  debug = false;
+  debug = true;
   // configs stack
   configs = [];
   // opt ions for each level
@@ -63,16 +63,14 @@ class Filler {
       const { success, configNew, levelEnd, goal } = this.solve(config);
       // full solution found
       if (goal) {
-        if (this.debug) console.error('found', steps);
         yield config;
         done = true;
       } else {
         // if level end and no solution found
         if (levelEnd) {
-          console.log(config.positions);
+          // if (this.debug) console.log(config.positions);
           config = cloneDeep(this.configs.pop());
           done = config === undefined;
-          if (this.debug) console.warn('level end', done);
         }
         // if solution found for this level
         // stack it and move to next level
@@ -89,9 +87,8 @@ class Filler {
           if (!done) {
             // try next posible config
             config.positions[config.index]++;
-            if (this.debug) console.warn('not success');
           } else {
-            console.error('no solution');
+            if (this.debug) console.error('No solution');
           }
         }        
       }

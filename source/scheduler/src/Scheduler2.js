@@ -208,13 +208,13 @@ export default class Scheduler2 {
   // solve N
   solveN(data) {
     const studentAll = prepareStudents(data, shuffleTeachers);
-    const chunkSize = Math.max(Math.floor(studentAll.length / 3), 20);
+    const chunkSize = Math.min(Math.floor(studentAll.length / 3), 30);
     const studentParts = chunk(studentAll, chunkSize);
     console.log(studentParts);
 
     let slots = {}, solution = null;
     studentParts.forEach((students, index) => {
-      console.warn('Part' + index);
+      console.warn('Part' + index, students.length);
       const partialSolution = this.solve1(students, slots);
       slots = partialSolution.slots;
       // collect
