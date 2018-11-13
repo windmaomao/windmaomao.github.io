@@ -27,7 +27,6 @@ class AppStore {
       });
       return acc;
     }, {});
-    this.schedule.error = found.positions.length - found.index;
   }
 
   planSchedule() {
@@ -38,7 +37,13 @@ class AppStore {
 
   planScheduleN() {
     const found = scheduler2.solveN(scheduler.data);
-    this.collectResults(found);
+    if (!found) {
+      console.error('No solution');
+      this.schedule.error = true;
+    } else {
+      this.collectResults(found);
+      this.schedule.error = false;
+    }
   }
 
 }

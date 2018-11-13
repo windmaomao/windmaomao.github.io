@@ -60,7 +60,13 @@ class Filler {
     // while (config.index < this.counts.length) {
     while (!done && steps < maxSteps) {
       // solve current puzzel
-      const { success, configNew, levelEnd, goal } = this.solve(config);
+      let res = null;
+      try {
+        res = this.solve(config);
+      } catch (e) {
+        return;
+      }
+      const { success, configNew, levelEnd, goal } = res;
       // full solution found
       if (goal) {
         yield config;
@@ -80,7 +86,7 @@ class Filler {
           this.configs.push(cloneDeep(config));
           // Continue with new configuration
           config = configNew;
-          yield cloneDeep(config);
+          // yield cloneDeep(config);
           // Prepare for next puzzel
           config.index++;
         } else {
@@ -88,7 +94,7 @@ class Filler {
             // try next posible config
             config.positions[config.index]++;
           } else {
-            if (this.debug) console.error('No solution');
+            return;
           }
         }        
       }

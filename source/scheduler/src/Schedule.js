@@ -12,14 +12,14 @@ class Schedule extends Component {
   render() {
     const {schedule} = this.props.store;
     const {calculating, slots, usages, error, found } = schedule;
-    const {planSchedule, planScheduleN} = this.props.store;
-    const test2 = () => {
-      schedule.calculating = true;
-      setTimeout(function() {
-        planSchedule();
-        schedule.calculating = false;
-      }, 0);
-    }
+    const {planScheduleN} = this.props.store;
+    // const test2 = () => {
+    //   schedule.calculating = true;
+    //   setTimeout(function() {
+    //     planSchedule();
+    //     schedule.calculating = false;
+    //   }, 0);
+    // }
     const testN = () => {
       schedule.calculating = true;
       setTimeout(function() {
@@ -34,17 +34,13 @@ class Schedule extends Component {
           <span style={{float: 'right'}}>
             <Button 
               variant="contained" color="secondary"
-              onClick={() => { test2() }}
-            >Plan</Button>&nbsp;
-            <Button 
-              variant="contained" color="secondary"
               onClick={() => { testN() }}
-            >PlanN</Button>&nbsp;
+            >Plan</Button>&nbsp;
           </span>
           <h1>
             Schedule &nbsp;
             {found ? <Label color="green">Found!</Label> : null} &nbsp;
-            {error ? <Label color="red">{error}</Label> : null}
+            {error ? <Label color="red">Not Found!</Label> : null}
           </h1>
         </div>
         <Print slots={slots} usages={usages} />

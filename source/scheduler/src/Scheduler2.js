@@ -208,28 +208,31 @@ export default class Scheduler2 {
   // solve N
   solveN(data) {
     const studentAll = prepareStudents(data, shuffleTeachers);
-    const chunkSize = Math.min(Math.floor(studentAll.length / 3), 30);
+    const chunkSize = 20;
     const studentParts = chunk(studentAll, chunkSize);
     console.log(studentParts);
 
-    let slots = {}, solution = null;
+    let slots = {}, solution = null, found = true;
     studentParts.forEach((students, index) => {
       console.warn('Part' + index, students.length);
       const partialSolution = this.solve1(students, slots);
-      slots = partialSolution.slots;
-      // collect
-      if (!solution) {
-        solution = partialSolution;
+      if (partialSolution) {
+        slots = partialSolution.slots;
+        // collect
+        if (!solution) {
+          solution = partialSolution;
+        } else {
+          solution.consts.students = solution.consts.students.concat(partialSolution.consts.students);
+          solution.positions = solution.positions.concat(partialSolution.positions);
+          solution.slots = partialSolution.slots;
+          solution.index = solution.index + partialSolution.index;
+        }
       } else {
-        solution.consts.students = solution.consts.students.concat(partialSolution.consts.students);
-        solution.positions = solution.positions.concat(partialSolution.positions);
-        solution.slots = partialSolution.slots;
-        solution.index = solution.index + partialSolution.index;
+        found = false;
       }
     });
 
-    console.log(solution);
-    return solution;
+    return found ? solution : null;
   }
 
 }
