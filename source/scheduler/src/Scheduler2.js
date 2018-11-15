@@ -1,5 +1,5 @@
 // libraries
-import {find, cloneDeep, sortBy, filter, shuffle, chunk} from 'lodash';
+import {find, cloneDeep, sortBy, filter, shuffle, chunk, groupBy, map} from 'lodash';
 // services
 import {slotMaxStudents, shuffleTeachers} from './constant';
 import Filler from './Filler';
@@ -141,6 +141,14 @@ function prepareStudents(data, shuffleTeacher) {
   // return sortBy(data.students, [student => -student.teachers.length]);
 }
 
+// chunk students by hours
+function chunkStudents(students) {
+  const byHours = groupBy(students, student => {
+    return Math.floor(student.start / 4);
+  });
+  return map(byHours, v => v);
+}
+
 // Use filler to schedule
 export default class Scheduler2 {
   // filler
@@ -209,8 +217,9 @@ export default class Scheduler2 {
   solveN(data) {
     const studentAll = prepareStudents(data, shuffleTeachers);
     const chunkSize = 20;
-    const studentParts = chunk(studentAll, chunkSize);
-    console.log(studentParts);
+    // const studentParts = chunk(studentAll, chunkSize);
+    const studentParts = chunkStudents(studentAll);
+    // console.log(chunkStudents(studentAll));
 
     let slots = {}, solution = null, found = true;
     studentParts.forEach((students, index) => {
