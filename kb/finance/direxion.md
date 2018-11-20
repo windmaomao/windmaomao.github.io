@@ -19,6 +19,7 @@
 | SmallCap | Bear | S&P SmallCap 400    | `SBB`         |
 | Russell  | Bear | Russell 2000        | `RWM`         |
 | Votality | Bull | VIX Short-Term      | `VXX` `VIXM`  |
+| Votality | Bear | VIX Short-Term      | `SVXY` (0.5) |
 
 ### Sectors
 
@@ -86,9 +87,9 @@
 
 ### Currency
 
-| Industry | Type | Name                | Symbol        |
-| -------- | ---- | ------------------- | ------------- |
-| EUR/USD  | Bear | EUR/USD             | `EUFX`        |
-| AUD/USD  | Bear | AUD/USD             | `CROC`        |
-| JPY/USD  | Bear | JPY/USD             | `YCS`         |
-| USD      | Bull | Invesco DB USD Index| `UPP`         |
+| Industry | Type | Name                 | Symbol |
+| -------- | ---- | -------------------- | ------ |
+| Euro     | Bear | EUR/USD              | `EUFX` |
+| AUD/USD  | Bear | AUD/USD              | `CROC` |
+| JPY/USD  | Bear | JPY/USD              | `YCS`  |
+| USD      | Bull | Invesco DB USD Index | `UPP`  |

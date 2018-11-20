@@ -4,7 +4,14 @@
 
 ### Nov
 
-- Send ebay item
+- Fix qplot domain
+- Buy Pro version
+- ~~Organzie old files a bit more systematic~~
+- ~~Send inspection report~~
+- ~~Send ebay item~~
+- ~~Smoke check~~
+- ~~Upload blueprints to cloud~~
+- ~~Address `firebase` Security~~
 
 ### 11/6
 
