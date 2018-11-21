@@ -1,13 +1,20 @@
 // libraries
-import React from 'react';
+import React, {Fragment} from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // components
 import LayoutShell from './Layout/LayoutShell';
-import Page from './Page';
+import Showcase from './Showcase/Showcase';
 
 const App = () => {
   return (
     <LayoutShell>
-      <Page />
+      <Router>
+        <Fragment>
+          <Link to="/">Playground</Link>
+
+          <Route path="/" exact component={Showcase} />
+        </Fragment>
+      </Router>
     </LayoutShell>
   );
 };
