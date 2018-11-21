@@ -9,13 +9,16 @@ import { Container } from 'semantic-ui-react';
 
 const TestControl = ({ sheet }) => {
   const {status} = sheet;
-  const {questionCount, questionIndex} = status;
+  const {questionCount, questionIndex, testEnd} = status;
+  const canDisplay = !testEnd;
   return (
     <Container 
       textAlign='center'
       style={{ position: 'fixed', bottom: '10px', right: '0' }}
     >
-      {questionIndex+1} / {questionCount}
+      {canDisplay && (
+        <span>{questionIndex+1} / {questionCount}</span>
+      )}
     </Container>
   );
 };

@@ -18,7 +18,10 @@ const TestQuestion = ({ question, onAnswer }) => {
           tabIndex={0}
           type='text'
           {...onKey({
-            Enter: e => { onAnswer(e.target.value); }
+            Enter: e => { 
+              onAnswer(e.target.value); 
+              e.target.value = '';
+            }
           })}
         />
       </p>

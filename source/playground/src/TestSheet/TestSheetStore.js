@@ -36,6 +36,9 @@ class TestSheetStore {
 
   nextQuestion() {
     this.status.questionIndex++;
+    if (this.status.questionIndex === this.test.questions.length) {
+      this.status.testEnd = true;
+    }
   }
 }
 
