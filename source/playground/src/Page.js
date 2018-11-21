@@ -1,9 +1,18 @@
 import React from 'react';
+import {inject} from 'mobx-react';
 
-const Page = (props) => {
+const Page = ({ layout }) => {
+  const {showMessage} = layout;
   return (
-    <span>Page</span>
-  )
+    <div>
+      <span>Page</span>
+      <button 
+        onClick={e => {showMessage(); }}
+      >
+        Open
+      </button>
+    </div>
+  );
 };
 
-export default Page;
+export default inject('layout')(Page);

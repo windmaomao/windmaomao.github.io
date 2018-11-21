@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // components
 import { Header, Segment, Portal } from 'semantic-ui-react';
 
-const LayoutMessage = ({ open }) => {
+const LayoutMessage = ({ layout, open }) => {
   return (
     <Portal
       open={open}
@@ -28,7 +28,8 @@ const LayoutMessage = ({ open }) => {
 }
 
 LayoutMessage.propTypes = {
-  open: PropTypes.bool
+  layout: PropTypes.object.isRequired,
+  open: PropTypes.bool.isRequired
 }
 
 export default LayoutMessage;

@@ -1,20 +1,23 @@
 // libraries
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
+import {Provider, observer} from 'mobx-react';
 // components
 import LayoutMessage from './LayoutMessage';
 // services
 import LayoutStore from './LayoutStore';
-
-const store = new LayoutStore();
+// locals
+const layout = new LayoutStore();
 
 const LayoutShell = ({ children }) => {
-  const {status: { messageOn }} = store;
+  const {status: { messageOn }} = layout;
   return (
-    <div className="App">
-      {children}
-      <LayoutMessage store={store} open={messageOn} />
-    </div>
+    <Fragment>
+      <LayoutMessage layout={layout} open={messageOn} />
+      <Provider layout={layout}>
+        {children}
+      </Provider>
+    </Fragment>
   );
 }
 
@@ -25,4 +28,4 @@ LayoutShell.propTypes = {
   ]).isRequired
 }
 
-export default LayoutShell;
+export default observer(LayoutShell);
