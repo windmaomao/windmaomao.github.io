@@ -5,10 +5,13 @@ import PropTypes from 'prop-types';
 import { Header, Segment, Portal } from 'semantic-ui-react';
 
 const LayoutMessage = ({ layout, open }) => {
+  const {hideMessage} = layout;
   return (
     <Portal
       open={open}
-      closeOnTriggerClick
+      closeOnDocumentClick
+      onClose={hideMessage}
+      // closeOnTriggerClick
       // openOnTriggerClick
       // trigger={
       //   <Button
