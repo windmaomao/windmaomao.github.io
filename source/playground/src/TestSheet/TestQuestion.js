@@ -1,17 +1,38 @@
 // libraries
 import React from 'react';
+import PropTypes from 'prop-types';
 // components
 import { Container } from 'semantic-ui-react';
 // services
-// locals
+import onKey from '../utils/onKey';
 
-const TestQuesiton = ({ question }) => {
+const TestQuestion = ({ question, onAnswer }) => {
   const {title} = question;
   return (
     <Container text>
-      <p>{title}</p>
+      <p>
+        {title} = &nbsp;
+        <input 
+          autoFocus
+          name="question"
+          tabIndex={0}
+          type='text'
+          {...onKey({
+            Enter: e => { onAnswer(e.target.value); }
+          })}
+        />
+      </p>
     </Container>
   );
 };
 
-export default TestQuesiton;
+TestQuestion.defaultProps = {
+  onAnswer: undefined
+}
+
+TestQuestion.propTypes = {
+  question: PropTypes.object.isRequired,
+  onAnswer: PropTypes.func
+}
+
+export default TestQuestion;

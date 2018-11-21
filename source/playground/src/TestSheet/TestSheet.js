@@ -9,6 +9,10 @@ import TestSheetStore from './TestSheetStore';
 const sheet = new TestSheetStore();
 sheet.addNewTest();
 
+// const onAnswer = v => {
+//   console.log(v);
+// }
+
 const TestSheet = () => {
   const {status, curQuestion} = sheet;
   const {questionCount} = status;
@@ -16,7 +20,10 @@ const TestSheet = () => {
     <div>
       <span>{questionCount}</span>
       {curQuestion && (
-        <TestQuestion question={curQuestion} />
+        <TestQuestion 
+          question={curQuestion} 
+          onAnswer={console.log}
+        />
       )}
     </div>
   );
