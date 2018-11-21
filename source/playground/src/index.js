@@ -1,7 +1,12 @@
+// libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
+// styles
+import 'semantic-ui-css/semantic.min.css';
 import './index.css';
+// components
 import App from './App';
+// services
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

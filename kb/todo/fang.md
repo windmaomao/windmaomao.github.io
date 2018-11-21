@@ -4,8 +4,16 @@
 
 ### Nov
 
+#### 11/21
+
 - Fix qplot domain
-- Buy Pro version
+- Buy `tradeview` pro
+- Update `apnea` project
+- Read rule `firebase`
+
+#### 11/15
+
+- ~~Update resume~~
 - ~~Organzie old files a bit more systematic~~
 - ~~Send inspection report~~
 - ~~Send ebay item~~
