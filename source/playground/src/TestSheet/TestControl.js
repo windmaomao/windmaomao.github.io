@@ -3,19 +3,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Container } from 'semantic-ui-react';
+import { Container, Button } from 'semantic-ui-react';
 // services
 // locals
 
 const TestControl = ({ sheet }) => {
-  const {status} = sheet;
+  const {status, addNewTest} = sheet;
   const {questionCount, questionIndex, testEnd} = status;
-  const canDisplay = !testEnd;
   return (
     <Container className="test-sheet-footer"
       textAlign='center'
     >
-      {canDisplay && (
+      {testEnd && (
+        <span onClick={e => { addNewTest(); }}>
+          Restart
+        </span>
+      )}
+      {!testEnd && (
         <span>{questionIndex+1} / {questionCount}</span>
       )}
     </Container>

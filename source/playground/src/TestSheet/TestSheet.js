@@ -20,11 +20,6 @@ const TestSheet = () => {
   }
   return (
     <div className="test-sheet">
-      {testEnd && (
-        <Container textAlign='center'>
-          End of Test.
-        </Container>
-      )}
       {curQuestion && (
         <TestQuestion 
           question={curQuestion} 
