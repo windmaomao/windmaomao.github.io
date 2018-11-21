@@ -1,8 +1,9 @@
 // libraries
 import React, {Fragment} from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 // components
 import LayoutShell from './Layout/LayoutShell';
+import LayoutHeader from './Layout/LayoutHeader';
 import Playground from './Playground/Playground';
 import TestSheet from './TestSheet/TestSheet';
 
@@ -11,8 +12,7 @@ const App = () => {
     <LayoutShell>
       <Router>
         <Fragment>
-          <Link to="/">Playground</Link>
-          <Link to="/testsheet/">Test Sheet</Link>
+          <LayoutHeader />
           <Route path="/" exact component={Playground} />
           <Route path="/testsheet" exact component={TestSheet} />
         </Fragment>
