@@ -2,20 +2,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // components
-import { Button, Header, Segment, Portal } from 'semantic-ui-react';
+import { Header, Segment, Portal } from 'semantic-ui-react';
 
 const LayoutMessage = ({ open }) => {
   return (
     <Portal
+      open={open}
       closeOnTriggerClick
-      openOnTriggerClick
-      trigger={
-        <Button
-          content={!open ? 'Close Portal' : 'Open Portal'}
-          negative={open}
-          positive={!open}
-        />
-      }
+      // openOnTriggerClick
+      // trigger={
+      //   <Button
+      //     content={open ? 'Close Portal' : 'Open Portal'}
+      //     negative={open}
+      //     positive={!open}
+      //   />
+      // }
     >
     <Segment style={{ left: '40%', position: 'fixed', top: '40%', zIndex: 1000 }}>
       <Header>This is an example portal</Header>

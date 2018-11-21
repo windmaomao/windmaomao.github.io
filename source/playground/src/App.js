@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+// libraries
+import React from 'react';
+// components
 import LayoutShell from './Layout/LayoutShell';
+import Page from './Page';
 
-class App extends Component {
-  render() {
-    return (
-      <LayoutShell>
-        <h1>ABC</h1>
-      </LayoutShell>
-    );
-  }
-}
+const App = () => {
+  return (
+    <LayoutShell>
+      <Page />
+    </LayoutShell>
+  );
+};
 
 export default App;
