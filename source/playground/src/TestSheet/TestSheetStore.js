@@ -28,6 +28,15 @@ class TestSheetStore {
     }
     return this.test.questions[this.status.questionIndex];
   }
+
+  answer(v) {
+    console.log(v);
+    this.nextQuestion();
+  }
+
+  nextQuestion() {
+    this.status.questionIndex++;
+  }
 }
 
 decorate(TestSheetStore, {
@@ -35,6 +44,8 @@ decorate(TestSheetStore, {
   test: observable,
   addNewTest: action.bound,
   curQuestion: computed,
+  answer: action.bound,
+  nextQuestion: action.bound,
 })
 
 export default TestSheetStore;

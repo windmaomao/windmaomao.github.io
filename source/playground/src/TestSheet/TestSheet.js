@@ -10,18 +10,17 @@ import TestSheetStore from './TestSheetStore';
 const sheet = new TestSheetStore();
 sheet.addNewTest();
 
-// const onAnswer = v => {
-//   console.log(v);
-// }
-
 const TestSheet = () => {
   const {curQuestion} = sheet;
+  const onAnswer = v => {
+    sheet.answer(v);
+  }
   return (
     <div>
       {curQuestion && (
         <TestQuestion 
           question={curQuestion} 
-          onAnswer={console.log}
+          onAnswer={onAnswer}
         />
       )}
       <TestControl sheet={sheet} />

@@ -15,7 +15,7 @@ const TestControl = ({ sheet }) => {
       textAlign='center'
       style={{ position: 'fixed', bottom: '10px', right: '0' }}
     >
-      {questionIndex} / {questionCount}
+      {questionIndex+1} / {questionCount}
     </Container>
   );
 };
