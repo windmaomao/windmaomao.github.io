@@ -12,9 +12,8 @@ const TestControl = ({ sheet }) => {
   const {questionCount, questionIndex, testEnd} = status;
   const canDisplay = !testEnd;
   return (
-    <Container 
+    <Container className="test-sheet-footer"
       textAlign='center'
-      style={{ position: 'fixed', bottom: '10px', right: '0' }}
     >
       {canDisplay && (
         <span>{questionIndex+1} / {questionCount}</span>

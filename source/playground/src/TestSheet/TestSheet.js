@@ -4,6 +4,9 @@ import {observer} from 'mobx-react';
 // components
 import TestQuestion from './TestQuestion';
 import TestControl from './TestControl';
+import { Container } from 'semantic-ui-react';
+// styles
+import './TestSheet.css';
 // services
 import TestSheetStore from './TestSheetStore';
 // locals
@@ -11,12 +14,17 @@ const sheet = new TestSheetStore();
 sheet.addNewTest();
 
 const TestSheet = () => {
-  const {curQuestion} = sheet;
+  const {curQuestion, status: {testEnd}} = sheet;
   const onAnswer = v => {
     sheet.answer(v);
   }
   return (
-    <div>
+    <div className="test-sheet">
+      {testEnd && (
+        <Container textAlign='center'>
+          End of Test.
+        </Container>
+      )}
       {curQuestion && (
         <TestQuestion 
           question={curQuestion} 

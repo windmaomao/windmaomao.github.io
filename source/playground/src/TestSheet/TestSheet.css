@@ -1,0 +1,14 @@
+.test-sheet {
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+
+.test-sheet input {
+  width: 4rem;
+}
+
+.test-sheet-footer {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+}

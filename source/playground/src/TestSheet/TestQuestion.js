@@ -3,15 +3,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // components
 import { Container } from 'semantic-ui-react';
+// import { Input } from 'semantic-ui-react'
 // services
 import onKey from '../utils/onKey';
 
 const TestQuestion = ({ question, onAnswer }) => {
   const {title} = question;
   return (
-    <Container text>
-      <p>
-        {title} = &nbsp;
+    <Container textAlign='center'>
+      {title} = &nbsp;
+      <div className="ui transparent input">
         <input 
           autoFocus
           name="question"
@@ -24,7 +25,7 @@ const TestQuestion = ({ question, onAnswer }) => {
             }
           })}
         />
-      </p>
+      </div>
     </Container>
   );
 };
