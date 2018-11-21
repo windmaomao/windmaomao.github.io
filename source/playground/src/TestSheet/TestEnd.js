@@ -3,26 +3,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // components
 import { Container } from 'semantic-ui-react';
-// import { Input } from 'semantic-ui-react'
 // services
 import onKey from '../utils/onKey';
 
-const TestQuestion = ({ question, onAnswer }) => {
-  const {title} = question;
+const TestEnd = ({ sheet }) => {
   return (
     <Container textAlign='center'>
-      {title} = &nbsp;
+      Done. &nbsp;
       <div className="ui transparent input">
         <input 
           autoFocus
-          name="question"
+          name="question-end"
           tabIndex={0}
           type='text'
           {...onKey({
             Enter: e => { 
               e.stopPropagation();
-              onAnswer(e.target.value); 
-              e.target.value = '';
+              sheet.addNewTest();
             }
           })}
         />
@@ -31,13 +28,8 @@ const TestQuestion = ({ question, onAnswer }) => {
   );
 };
 
-TestQuestion.defaultProps = {
-  onAnswer: undefined
+TestEnd.propTypes = {
+  sheet: PropTypes.object.isRequired,
 }
 
-TestQuestion.propTypes = {
-  question: PropTypes.object.isRequired,
-  onAnswer: PropTypes.func
-}
-
-export default TestQuestion;
+export default TestEnd;

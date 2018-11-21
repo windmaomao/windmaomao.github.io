@@ -4,11 +4,12 @@ import {observer} from 'mobx-react';
 // components
 import TestQuestion from './TestQuestion';
 import TestControl from './TestControl';
-import { Container } from 'semantic-ui-react';
+import TestEnd from './TestEnd';
 // styles
 import './TestSheet.css';
 // services
 import TestSheetStore from './TestSheetStore';
+import onKey from '../utils/onKey';
 // locals
 const sheet = new TestSheetStore();
 sheet.addNewTest();
@@ -20,6 +21,9 @@ const TestSheet = () => {
   }
   return (
     <div className="test-sheet">
+      {testEnd && (
+        <TestEnd sheet={sheet} />
+      )}
       {curQuestion && (
         <TestQuestion 
           question={curQuestion} 
