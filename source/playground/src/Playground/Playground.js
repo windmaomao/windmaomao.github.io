@@ -5,11 +5,11 @@ const Playground = ({ layout }) => {
   const {showMessage} = layout;
   return (
     <div>
-      <span>Page</span>
+      <h1>Welcome to Playground</h1>
       <button 
         onClick={e => {showMessage(); }}
       >
-        Open
+        Open Message
       </button>
     </div>
   );
