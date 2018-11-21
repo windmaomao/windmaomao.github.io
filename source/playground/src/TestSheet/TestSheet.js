@@ -1,17 +1,25 @@
 // libraries
 import React from 'react';
-import {inject} from 'mobx-react';
+import {observer} from 'mobx-react';
 // components
-import { Container } from 'semantic-ui-react';
+import TestQuestion from './TestQuestion';
+// services
+import TestSheetStore from './TestSheetStore';
+// locals
+const sheet = new TestSheetStore();
+sheet.addNewTest();
 
-const TestSheet = ({ layout }) => {
+const TestSheet = () => {
+  const {status, curQuestion} = sheet;
+  const {questionCount} = status;
   return (
     <div>
-      <Container text>
-        <p>Test sheet</p>
-      </Container>
+      <span>{questionCount}</span>
+      {curQuestion && (
+        <TestQuestion question={curQuestion} />
+      )}
     </div>
   );
 };
 
-export default inject('layout')(TestSheet);
+export default observer(TestSheet);
