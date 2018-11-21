@@ -1,10 +1,15 @@
+// libraries
 import React from 'react';
 import {inject} from 'mobx-react';
+// components
+import { Container } from 'semantic-ui-react';
 
 const TestSheet = ({ layout }) => {
   return (
     <div>
-      <h1>Test sheet</h1>
+      <Container text>
+        <p>Test sheet</p>
+      </Container>
     </div>
   );
 };
