@@ -3,6 +3,7 @@ import React from 'react';
 import {observer} from 'mobx-react';
 // components
 import TestQuestion from './TestQuestion';
+import TestControl from './TestControl';
 // services
 import TestSheetStore from './TestSheetStore';
 // locals
@@ -14,17 +15,16 @@ sheet.addNewTest();
 // }
 
 const TestSheet = () => {
-  const {status, curQuestion} = sheet;
-  const {questionCount} = status;
+  const {curQuestion} = sheet;
   return (
     <div>
-      <span>{questionCount}</span>
       {curQuestion && (
         <TestQuestion 
           question={curQuestion} 
           onAnswer={console.log}
         />
       )}
+      <TestControl sheet={sheet} />
     </div>
   );
 };
