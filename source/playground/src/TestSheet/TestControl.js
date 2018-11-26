@@ -5,7 +5,6 @@ import {observer} from 'mobx-react';
 // components
 import { Container } from 'semantic-ui-react';
 // services
-import onKey from '../utils/onKey';
 // locals
 
 const TestControl = ({ sheet }) => {

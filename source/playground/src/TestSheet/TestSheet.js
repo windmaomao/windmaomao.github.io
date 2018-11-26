@@ -9,7 +9,6 @@ import TestEnd from './TestEnd';
 import './TestSheet.css';
 // services
 import TestSheetStore from './TestSheetStore';
-import onKey from '../utils/onKey';
 // locals
 const sheet = new TestSheetStore();
 sheet.addNewTest();
