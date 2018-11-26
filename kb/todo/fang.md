@@ -6,10 +6,12 @@
 
 #### 11/21
 
-- Fix qplot domain
-- Buy `tradeview` pro
-- Update `apnea` project
 - Read rule `firebase`
+- Fix qplot domain
+- Support `apnea` more
+- ~~Study `option` book~~
+- ~~Buy `tradeview` pro~~
+- ~~Update `apnea` project~~
 
 #### 11/15
 
