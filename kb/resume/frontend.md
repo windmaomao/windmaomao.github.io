@@ -2,15 +2,15 @@
 
 ## Fang Jin
 
-I make websites, mostly on screens and monitors, via Javascript framework such as _Angular_, and _React_. Sectors that I worked with include Banking, Healthcare, and Education. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
+I make websites, via Javascript framework such as _React_ and _Angular_. Sectors that I worked with include Transportation, Banking, Healthcare, and Education. I use **Modular design** and **Reusable components** to architect websites and design _UI/UX_ elements.
 
-> "My latest accomplishment is a web framework supporting dark light theme as well as pluggable branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
+> "My latest accomplishment is a web framework supporting dark/light theme of branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."
 
 Front-end expertise
 
 : - 8 Years Prototyping with _CSS_ and _Sass_
   - 5 Years _Angular_ and _React_
-  - 4 Years _Lodash_ and _RxJS_
+  - 4 Years _Lodash_ and _Functional Programming_
 
 Background
 
@@ -126,9 +126,29 @@ Reusable Component
 
 > "Fang is one of the most talented software developer / architecture individual I have ever met. His ability to ==take vague customer requirements and turn them into a fantastic software solution== never ceased to amaze me ..." -- David Pfeiffenberger, President / COO of PlusDelta Technologies [^linkedIn]
 
-People Designs
+Apnea
 
-: Oct 2014 - Aug 2015
+: Sep 2018 - 
+: Lead React Developer
+: _React_{.I}, _Bootstrap_{.I}, _Mobx_{.I}, _Router5_{.I}
+
+An educational program for individuals who have undergone overnight sleep testing through their local sleep center.
+
+Architect & Design
+
+: - Design: Color theme, larger font and checkbox size favoring senior person
+- React: Rapid design with consideration of collaboration with non-tech editors
+- Layout: Support public and private pages via routing switch
+- Page: Dynamic page setup (38 pages) with page settings such as audio and navigation
+- Question: User provided multi-choices question fields injection to specific page
+- Answer: Question answers synced with the rest of the project and saved in local storage
+- Audio: Custom HTML5 audio design toggable along with each page load
+- Print: Allow print review page
+
+
+Prepare For Your Care
+
+: Oct 2014 - Aug 2016
 : Lead AngularJS / Laravel Developer
 : *Laravel*{.l} *AngularJS*{.l} *Sass*{.l}
 

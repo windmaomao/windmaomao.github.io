@@ -28,7 +28,7 @@ Posted Equipment Management
 
 : Oct 2018 - Current
 : *React* *Mobx* *Redux* *Java* {.labels}
-: Management of equipments for carriers with different origin and destination and availability settings.
+: Post equipments for carriers with different origin and destination and availability settings.
 
 Highlights
 

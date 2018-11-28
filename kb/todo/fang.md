@@ -4,11 +4,25 @@
 
 ### Nov
 
+#### 12/2
+
+- Update `annually`
+- Deploy `sheet`
+- ~~Support `apnea`~~
+
+#### 11/27
+
+- ~~Merge subscription to `purchases`~~
+- ~~Merge investment to `trades`~~
+- ~~Update `storages` file~~
+- ~~Sync with `knowledgebase` folder~~
+~~Update `projects`~~ 
+
 #### 11/21
 
-- Read rule `firebase`
-- Fix qplot domain
-- Support `apnea` more
+- ~~Fix qplot domain~~
+- ~~FInd housing borrow rate~~
+- ~~Support `apnea` more~~
 - ~~Study `option` book~~
 - ~~Buy `tradeview` pro~~
 - ~~Update `apnea` project~~
