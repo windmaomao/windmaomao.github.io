@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // components
-import { Table } from 'semantic-ui-react'
+import { Table, Button, Icon } from 'semantic-ui-react'
 import TableTreeNode from './TableTreeNode';
 // services
 
@@ -27,7 +27,7 @@ class TableTree extends Component {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell />
-            <Table.HeaderCell width='ten'>{title}</Table.HeaderCell>
+            <Table.HeaderCell width={10}>{title}</Table.HeaderCell>
             {colDefs2.map(col => (
               <Table.HeaderCell key={col.name}>{col.name}</Table.HeaderCell>
             ))}
@@ -38,7 +38,21 @@ class TableTree extends Component {
               <TableTreeNode key={i} node={node} level={1} cols={colDefs2} />
             ))}
         </Table.Body>
-      </Table>
+        <Table.Footer fullWidth>
+          <Table.Row>
+            <Table.HeaderCell />
+            <Table.HeaderCell colSpan='3'>
+              <Button floated='right' icon labelPosition='left' primary size='small'>
+                <Icon name='user' /> Add User
+              </Button>
+              <Button size='small'>Approve</Button>
+              <Button disabled size='small'>
+                Approve All
+              </Button>
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Footer>
+     </Table>
     );
   }
 }

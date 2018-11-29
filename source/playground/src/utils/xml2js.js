@@ -15,9 +15,11 @@ function xml2js(source, format) {
 }
 
 const parseOmniOutliner = (item) => {
+  const {text, _note, ...otherAttribs} = item._attributes;
   return {
-    title: item._attributes.text || '',
-    note: item._attributes._note || '',
+    title: text || '',
+    note: _note || '',
+    ...otherAttribs,
     children: item.outline ? (Array.isArray(item.outline) ? 
         item.outline.map(parseOmniOutliner) : [parseOmniOutliner(item.outline)]
     ) : []
