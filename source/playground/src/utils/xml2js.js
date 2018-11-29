@@ -15,6 +15,10 @@ function xml2js(source, format) {
 }
 
 const parseOmniOutliner = (item) => {
+  // empty node
+  if (!item._attributes) {
+    return { title: '', note: '', children: [], cols: [] };
+  }
   const {text, _note, ...otherAttribs} = item._attributes;
   const res = {
     title: text || '',
@@ -23,6 +27,7 @@ const parseOmniOutliner = (item) => {
     children: [],
     cols: Object.keys(otherAttribs)
   }
+  // console.log(res);
   if (!item.outline) {
     return res;
   }
