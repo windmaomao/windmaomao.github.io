@@ -8,6 +8,7 @@
 
 - Update `annually`
 - Deploy `sheet`
+- Update single page `resume`
 - ~~Support `apnea`~~
 
 #### 11/27
