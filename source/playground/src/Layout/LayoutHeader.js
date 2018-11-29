@@ -13,6 +13,9 @@ const LayoutHeader = () => {
       <List.Item>
         <Link to="/testsheet/">Test Sheet</Link>
       </List.Item>
+      <List.Item>
+        <Link to="/outliner/">Outliner</Link>
+      </List.Item>
     </List>
   );
 };
