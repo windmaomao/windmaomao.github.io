@@ -13,7 +13,7 @@ import './App.css';
 // services
 import { summaries } from './SummaryList/summary.model';
 import { getSummaryStore } from './SummaryList/SummaryStore';
-import { getSampleMenu, getSampleInvest, getSampleOutline } from './Inventory/tree.model';
+import { getSampleMenu, getSampleInvest, getSampleOutline, getSampleOmniOutliner } from './Inventory/tree.model';
 
 // const form = new TradeForm();
 const summaryStore = getSummaryStore();
@@ -25,6 +25,7 @@ class App extends Component {
       <div>
         <PageHeader />
         <Container>
+          <TreeList root={getSampleOmniOutliner} />
           <TreeList root={getSampleOutline} />
           <TreeList root={getSampleMenu} cols={['type']} />
           <TreeList root={getSampleInvest} />
