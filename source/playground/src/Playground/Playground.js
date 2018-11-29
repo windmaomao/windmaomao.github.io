@@ -3,7 +3,10 @@ import React from 'react';
 import {inject} from 'mobx-react';
 // components
 import { Container } from 'semantic-ui-react';
+// services
+import callApi from '../utils/callApi';
 
+fetch('opml/projects.opml').then(console.log);
 var convert = require('xml-js');
 var xml =`<?xml version="1.0" encoding="utf-8"?>
 <opml version="1.0">
