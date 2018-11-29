@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head>
+    <title>projects</title>
+    <expansionState>0,9,10,20,24,26</expansionState>
+  </head>
+  <body>
+    <outline text="QPLOT" _note="Position: Owner" Since="Jan 14">
+      <outline text="Playground" _note="Project: Repo&#10;Description: Would like to reduce cost in developing prototyping decent apps by leveraging infrastructure provided by framework. This is to explore an idea to see if a long term development environment can be established for sustainability. And this is extended by using GitHub one repo and further inspired by MercuryGate’ large code reservoir." Since="Nov 18" Rating="★★">
+        <outline text="Outliner" _note="Display xml outliner file on web via opml file format" Since="Nov 18"/>
+        <outline text="TestSheet" _note="Math question answer sheet for basic operations" Since="Nov 18"/>
+        <outline text="Layout" _note="Unified layout shell for common message handling and header" Since="Nov 18"/>
+        <outline text="Highlights" Since="Nov 18"/>
+      </outline>
+      <outline text="Scheduler" _note="Project: Repo&#10;Description: Develop for mathnasium app for scheduling app that assign teacher with students. The effort is paid via Mathnasium." Since="Sep 18" Rating="★★★">
+        <outline text="stable"/>
+        <outline text="init" Since="Sep 18"/>
+      </outline>
+      <outline text="Github - aka. KB" _note="Project: Repo&#10;Description: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. And from idea to production it takes less than one month. “The workflow it established is fundamental scalable in terms of bringing ideas/data from paper level to potential organized format.”" Since="Jan 18" Rating="★★★★">
+        <outline text="Hosting">
+          <outline text="Main"/>
+        </outline>
+        <outline text="Updates" Since="Jan 18">
+          <outline text="Knowledgebase 2 using react" Since="Sep 18"/>
+          <outline text="Use codeine to prototype the site and features"/>
+          <outline text="Use Markdown local to draft all documentations"/>
+          <outline text="Auto deployment via Github"/>
+          <outline text="Init" Since="Jan 18"/>
+        </outline>
+      </outline>
+      <outline text="Diagram" _note="Project: Codepen&#10;Description: Prototype for stim a person I met from DB using angular2 and GoJs. The project stopped before going into serious development." Since="Aug 17">
+        <outline text="Init" Since="Aug 17"/>
+      </outline>
+      <outline text="Knowledge-base" _note="Product: Dropbox&#10;Description: Centralize project, payment, and other knowledge-base information into more organized outliner data format such as OmniOutliner files. Over five years of practice, this is proven to be a strong stepping stone in supporting hierarchy data with relatively well defined format. Currently it includes blueprints, payment, projects, purchases, storages and trades. " Since="Nov 15" Rating="★★★★★">
+        <outline text="Purchases" _note="Inventory purchased books, software, subscription and hardware." Since="Nov 18">
+          <outline text="Books" Since="Nov 18"/>
+          <outline text="Hardware"/>
+          <outline text="Software">
+            <outline text="Paid"/>
+          </outline>
+          <outline text="Subscriptions">
+            <outline text="Active"/>
+          </outline>
+        </outline>
+        <outline text="Storages" _note="Collection of all scattered file resources from dropbox, S3 and git repos." Since="Nov 18">
+          <outline text="Dropbox" Since="Nov 18"/>
+          <outline text="S3"/>
+          <outline text="Github"/>
+        </outline>
+        <outline text="Trades" _note="Trading log with trade symbol, action, size, price as well as realized gain and annualized yield." Since="Nov 18">
+          <outline text="Owned" Since="Nov 18"/>
+          <outline text="Realized"/>
+          <outline text="Analyze"/>
+        </outline>
+        <outline text="Blueprints" _note="Architect documentation of technical projects with components and their usages." Since="Oct 18">
+          <outline text="Projects"/>
+          <outline text="UI" Since="Oct 18"/>
+          <outline text="Services"/>
+          <outline text="Dependencies"/>
+        </outline>
+        <outline text="Projects" _note="Listing of all projects with company, description, highlights and manuals." Since="Jan 17">
+          <outline text="Companies" Since="Jan 17"/>
+          <outline text="Projects"/>
+        </outline>
+        <outline text="Payment" _note="Aggregation of receivable payments by each company." Since="Nov 15">
+          <outline text="Companies" Since="Nov 15"/>
+          <outline text="Payments"/>
+        </outline>
+        <outline text="Highlights" Since="Nov 15">
+          <outline text="Reaffirmed to use this format" Since="Oct 18"/>
+          <outline text="Add sitemap outline file" Since="Jan 16"/>
+          <outline text="Add goals outline file" Since="Jan 16"/>
+          <outline text="Add skills outline file" Since="Dec 15"/>
+          <outline text="Add knowledge outline file" Since="Nov 15"/>
+          <outline text="Add projects outline file" Since="Nov 15"/>
+        </outline>
+      </outline>
+      <outline text="PKB Tasks" _note="Project: Repo&#10;Technology: AngularJS, NodeJS&#10;Description: PKB was designed to track knowledge-base, however it end up with  just to track the project tasks and timesheet. And it’s been very effective when there’re lots of contracting work. Recently it’s retired and instead Github KB app is used." Since="Feb 15" Rating="★★★">
+        <outline text="Retired and not used that much " Since="Aug 18"/>
+        <outline text="Make tasks list view responsive " Since="Jun 15"/>
+        <outline text="Add custom calendar for timesheet" Since="May 15"/>
+        <outline text="Add task list" Since="Apr 15"/>
+        <outline text="Add userapp authentication integration" Since="Apr 15"/>
+        <outline text="Kickoff" Since="Feb 15"/>
+      </outline>
+      <outline text="Monthly and Annually" _note="Product: Google Sheets&#10;Technology: Excel and Outliner&#10;Description: Keep track of income statement and balance sheet from all financial accounts. Every month balance sheet and income flow is collected from all accounts and filled in the excel sheet. It became the watch tower on money in and out the system and how well each of them is performing therefore provides the ground that financial decisions can be based on." Since="Jan 14" Rating="★★★★★">
+        <outline text="2018 Income Statement" Since="Jan 18"/>
+        <outline text="2018 Account Balance" Since="Jan 18"/>
+        <outline text="2017 Income Statement" Since="Jan 17"/>
+        <outline text="2017 Account Balance" Since="Jan 17"/>
+        <outline text="Account balance and gain" Since="Dec 16"/>
+        <outline text="Highlights" Since="Jan 14">
+          <outline text="Add spend outline to keep track of vendor contribution" Since="Jan 16"/>
+          <outline text="Add payment outline to keep track of client contribution" Since="Nov 15"/>
+          <outline text="Setup annual schedule in updating the doc" Since="Jan 15"/>
+          <outline text="Setup monthly schedule in updating the doc" Since="Jan 14"/>
+        </outline>
+      </outline>
+      <outline text="Seven Website" _note="Project: Repo&#10;Technology: Assemble and mixed&#10;Description: QPLOT website, blog, and some experiment projects" Since="Aug 15">
+        <outline text="Kickoff" Since="Aug 15"/>
+      </outline>
+      <outline text="Docs go" _note="Description: be able to create simple page so that it’ll navigate to all the documentations&#10;Technology: html from nsdoc, jsdoc&#10;Project: repo" Since="Jan 15">
+        <outline text="Host docs on qplot via nginx and digital ocean subdomain" Since="Jan 15"/>
+        <outline text="Apply pure.css framework and blog theme" Since="Dec 15"/>
+        <outline text="Kickoff the idea" Since="Dec 15"/>
+      </outline>
+      <outline text="Promise bucket" _note="Project: Repo&#10;Description: create a shared repo so that we can create unified and centralized place to add APIs and handle APIs." Since="Dec 15">
+        <outline text="Setup project with tests at github" Since="Dec 15"/>
+      </outline>
+    </outline>
+  </body>
+</opml>
