@@ -9,7 +9,7 @@ function getApi(url) {
 function getXml(url) {
   return fetch(domain + url)
     .then(res => res.text())
-    .then(res => xml2js(res))
+    .then(res => xml2js(res, true))
   ;
 }
 
