@@ -6,6 +6,7 @@ import LayoutShell from './Layout/LayoutShell';
 import LayoutHeader from './Layout/LayoutHeader';
 import Playground from './Playground/Playground';
 import TestSheet from './TestSheet/TestSheet';
+import Outliner from './Outliner/Outliner';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <LayoutHeader />
           <Route path="/" exact component={Playground} />
           <Route path="/testsheet" exact component={TestSheet} />
+          <Route path="/outliner" exact component={Outliner} />
         </Fragment>
       </Router>
     </LayoutShell>
