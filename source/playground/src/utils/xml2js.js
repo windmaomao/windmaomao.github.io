@@ -2,8 +2,14 @@ const convert = require('xml-js');
 
 function xml2js(source, format) {
   const obj = convert.xml2js(source, {compact: true});
+  console.log(obj);
   if (format) {
-    obj.opml.body = parseOmniOutliner(obj.opml.body.outline);
+    // TODO: fix the file format on root level
+    obj.opml.body._attributes = Object.assign({}, {
+      text: 'File',
+      _note: '',
+    })
+    obj.opml.body = parseOmniOutliner(obj.opml.body);
   }
   return obj;
 }

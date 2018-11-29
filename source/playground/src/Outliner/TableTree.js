@@ -34,7 +34,7 @@ class TableTree extends Component {
         </Table.Header>
         <Table.Body>
             {children && children.map((node, i) => (
-              <TableTreeNode key={i} node={node} level={0} cols={colDefs2} />
+              <TableTreeNode key={i} node={node} level={1} cols={colDefs2} />
             ))}
         </Table.Body>
       </Table>
