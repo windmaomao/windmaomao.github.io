@@ -1,18 +1,23 @@
 // libraries
 import React from 'react';
-import {inject} from 'mobx-react';
+import PropTypes from 'prop-types';
+import {inject, observer} from 'mobx-react';
 // components
+import TableTree from './TableTree';
 // import { Container } from 'semantic-ui-react';
 // styles
 import './Outliner.scss'; 
 // services
-// import {getXml} from '../utils/callApi';
+import OutlinerStore from './OutlinerStore';
 
-// getXml('opml/projects.opml').then(console.log);
+const store = new OutlinerStore();
 
 const Outliner = ({ layout }) => {
+  const {fetchOutliner, root} = store; 
   return (
     <div className="content">
+      <button onClick={fetchOutliner}>Load</button>
+      <TableTree root={root}></TableTree>
       <table className="ui unstackable very basic table">
         <thead>
           <tr>
@@ -215,4 +220,8 @@ const Outliner = ({ layout }) => {
   );
 };
 
-export default inject('layout')(Outliner);
+Outliner.propTypes = {
+  layout: PropTypes.object.isRequired
+}
+
+export default inject('layout')(observer(Outliner));
