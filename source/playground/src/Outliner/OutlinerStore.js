@@ -7,7 +7,7 @@ class OutlinerStore {
   root = {};
 
   fetchOutliner() {
-    return getXml('opml/blueprints.opml').then(res => {
+    return getXml('opml/projects.opml').then(res => {
       this.root = res.opml.body;
       console.log(this.root);
       return res;
