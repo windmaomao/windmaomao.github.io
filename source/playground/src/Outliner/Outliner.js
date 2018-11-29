@@ -14,10 +14,11 @@ const store = new OutlinerStore();
 
 const Outliner = ({ layout }) => {
   const {fetchOutliner, root} = store; 
+  const cols = ['Since', 'Rating'];
   return (
     <div className="content">
       <button onClick={fetchOutliner}>Load</button>
-      <TableTree root={root}></TableTree>
+      <TableTree root={root} cols={cols}></TableTree>
       <table className="ui unstackable very basic table">
         <thead>
           <tr>

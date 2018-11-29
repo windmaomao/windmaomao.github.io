@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // components
 import { Table } from 'semantic-ui-react'
-// import TreeNode from './TreeNode';
+import TableTreeNode from './TableTreeNode';
 // services
 
 const setupColDefs = (cols) => {
@@ -23,11 +23,7 @@ class TableTree extends Component {
     const colDefs = cols || this.props.cols;
     const colDefs2 = setupColDefs(colDefs);
     return (
-      <Table 
-        size="small" compact
-        unstackable selectable
-        basic='very' celled
-      >
+      <Table unstackable selectable basic='very'>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>{title}</Table.HeaderCell>
@@ -37,6 +33,9 @@ class TableTree extends Component {
           </Table.Row>
         </Table.Header>
         <Table.Body>
+            {children && children.map((node, i) => (
+              <TableTreeNode key={i} node={node} level={0} cols={colDefs2} />
+            ))}
         </Table.Body>
       </Table>
     );
