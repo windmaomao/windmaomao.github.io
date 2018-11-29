@@ -23,6 +23,7 @@ render() {
     return (
       <Fragment>
         <Table.Row className={`level-${level}`}>
+          <Table.Cell></Table.Cell>
           <Table.Cell
             style={{ 
               paddingLeft: 8*level + 8 + 'px',

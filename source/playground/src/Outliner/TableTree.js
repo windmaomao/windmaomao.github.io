@@ -23,9 +23,10 @@ class TableTree extends Component {
     const colDefs = cols || this.props.cols;
     const colDefs2 = setupColDefs(colDefs);
     return (
-      <Table unstackable selectable basic='very'>
+      <Table unstackable basic='very'>
         <Table.Header>
           <Table.Row>
+            <Table.HeaderCell></Table.HeaderCell>
             <Table.HeaderCell>{title}</Table.HeaderCell>
             {colDefs2.map(col => (
               <Table.HeaderCell key={col.name}>{col.name}</Table.HeaderCell>

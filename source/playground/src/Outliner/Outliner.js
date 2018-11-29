@@ -17,7 +17,9 @@ const Outliner = ({ layout }) => {
   const cols = ['Since', 'Rating'];
   return (
     <div className="content">
-      <button onClick={fetchOutliner}>Load</button>
+      <p>
+        <button onClick={fetchOutliner}>Load</button>
+      </p>
       <TableTree root={root} cols={cols}></TableTree>
       <table className="ui unstackable very basic table">
         <thead>

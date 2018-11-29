@@ -6,7 +6,7 @@ function xml2js(source, format) {
   if (format) {
     // TODO: fix the file format on root level
     obj.opml.body._attributes = Object.assign({}, {
-      text: 'File',
+      text: 'Topic',
       _note: '',
     })
     obj.opml.body = parseOmniOutliner(obj.opml.body);
