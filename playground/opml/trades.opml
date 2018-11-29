@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head>
+    <title>trades</title>
+    <expansionState>0,55,304,315</expansionState>
+  </head>
+  <body>
+    <outline text="Owned" _note="Currently trading with size and average cost basis" Date="11/28/18" Size="-150" Gain="305" Yield="69%">
+      <outline text="ALNY" Date="11/28/18" Size="-16" Price="74.61" Gain="297" Yield="40%">
+        <outline text="Sell" Date="11/28/18" Symbol="ALNY" Size="-8" Price="77.56"/>
+        <outline text="Sell" Date="11/19/18" Symbol="ALNY" Size="-8" Price="71.65"/>
+        <outline text="Buy" Date="11/15/18" Symbol="ALNY" Size="8" Price="69.58" Gain="297" Yield="40%"/>
+        <outline text="Sell" Date="09/07/18" Symbol="ALNY" Size="-4" Price="113.08"/>
+        <outline text="Sell" Date="08/14/18" Symbol="ALNY" Size="-3" Price="92.74"/>
+        <outline text="Sell" Date="02/07/18" Symbol="ALNY" Size="-1" Price="123.39"/>
+      </outline>
+      <outline text="ADSK" Date="11/28/18" Size="-9" Price="139.44" Gain="-86" Yield="-8%">
+        <outline text="Buy" Date="11/28/18" Symbol="ADSK" Size="10" Price="144.94" Gain="-86" Yield="-8%"/>
+        <outline text="Sell" Date="11/27/18" Symbol="ADSK" Size="-6" Price="142.00"/>
+        <outline text="Sell" Date="10/16/18" Symbol="ADSK" Size="-4" Price="140.58"/>
+        <outline text="Sell" Date="10/05/18" Symbol="ADSK" Size="-3" Price="150.91"/>
+        <outline text="Sell" Date="08/14/18" Symbol="ADSK" Size="-2" Price="134.53"/>
+        <outline text="Sell" Date="04/23/18" Symbol="ADSK" Size="-2" Price="130.56"/>
+        <outline text="Sell" Date="03/28/18" Symbol="ADSK" Size="-2" Price="126.08"/>
+      </outline>
+      <outline text="JNJ" Date="11/20/18" Size="-8" Price="147.42" Gain="-17">
+        <outline text="Sell" Date="11/20/18" Symbol="JNJ" Size="-8" Price="147.42"/>
+        <outline text="Buy" Date="11/19/18" Symbol="JNJ" Size="6" Price="147.53" Gain="-17"/>
+        <outline text="Sell" Date="11/14/18" Symbol="JNJ" Size="-6" Price="144.62"/>
+      </outline>
+      <outline text="BFAM" Date="11/20/18" Size="-10" Price="117.39" Gain="-64" Yield="-48%">
+        <outline text="Sell" Date="11/20/18" Symbol="BFAM" Size="-10" Price="117.39"/>
+        <outline text="Buy" Date="11/14/18" Symbol="BFAM" Size="14" Price="117.91" Gain="-64" Yield="-48%"/>
+        <outline text="Sell" Date="11/05/18" Symbol="BFAM" Size="-6" Price="114.51"/>
+        <outline text="Sell" Date="10/30/18" Symbol="BFAM" Size="-8" Price="113.16"/>
+      </outline>
+      <outline text="GDS" Date="11/16/18" Size="-20" Price="29.01" Gain="289" Yield="371%">
+        <outline text="Sell" Date="11/16/18" Symbol="GDS" Size="-20" Price="29.01"/>
+        <outline text="Buy" Date="10/31/18" Symbol="GDS" Size="20" Price="23.34" Gain="289" Yield="371%"/>
+        <outline text="Sell" Date="08/31/18" Symbol="GDS" Size="-20" Price="37.77"/>
+      </outline>
+      <outline text="SHOO" Date="11/14/18" Size="-30" Price="32.34">
+        <outline text="Sell" Date="11/14/18" Symbol="SHOO" Size="-30" Price="32.34"/>
+      </outline>
+      <outline text="SBUX" Date="11/14/18" Size="-10" Price="67.20">
+        <outline text="Sell" Date="11/14/18" Symbol="SBUX" Size="-10" Price="67.20"/>
+      </outline>
+      <outline text="DIS" Date="11/14/18" Size="-8" Price="117.74">
+        <outline text="Sell" Date="11/14/18" Symbol="DIS" Size="-8" Price="117.74"/>
+      </outline>
+      <outline text="TSLA" Date="11/09/18" Size="-4" Price="342.17" Gain="-113" Yield="-9%">
+        <outline text="Sell" Date="11/09/18" Symbol="TSLA" Size="-2" Price="351.22"/>
+        <outline text="Sell" Date="11/05/18" Symbol="TSLA" Size="-2" Price="333.12"/>
+        <outline text="Buy" Date="10/29/18" Symbol="TSLA" Size="5" Price="333.65" Gain="-113" Yield="-9%"/>
+        <outline text="Sell" Date="05/08/18" Symbol="TSLA" Size="-2" Price="301.18"/>
+        <outline text="Sell" Date="03/01/18" Symbol="TSLA" Size="-1" Price="334.17"/>
+        <outline text="Sell" Date="01/04/18" Symbol="TSLA" Size="-2" Price="309.50"/>
+      </outline>
+      <outline text="BLUE" Date="10/16/18" Size="-6" Price="143.77">
+        <outline text="Sell" Date="10/16/18" Symbol="BLUE" Size="-4" Price="128.64"/>
+        <outline text="Sell" Size="-2"/>
+      </outline>
+      <outline text="TAL" Date="10/16/18" Size="-24" Price="27.24">
+        <outline text="Sell" Date="10/16/18" Symbol="TAL" Size="-16" Price="24.05"/>
+        <outline text="Sell" Date="08/13/18" Symbol="TAL" Size="-8" Price="33.64"/>
+      </outline>
+      <outline text="HLF" Date="08/14/18" Size="-10" Price="57.43">
+        <outline text="Sell" Date="08/14/18" Symbol="HLF" Size="-10" Price="57.43"/>
+      </outline>
+      <outline text="SRTY" Date="04/28/17" Size="3">
+        <outline text="Sell" Date="04/28/17" Symbol="SRTY" Size="-6" Price="43.95"/>
+        <outline text="Buy" Date="04/17/17" Symbol="SRTY" Size="9" Price="51.21"/>
+      </outline>
+      <outline text="LABD" Size="2">
+        <outline Size="2" Price="43.34"/>
+      </outline>
+    </outline>
+    <outline text="Realized" _note="Realized Gain with size 0 and gain" Date="11/28/18" Size="-1" Gain="550" Yield="28%">
+      <outline text="EUM" Date="11/28/18" Size="0" Gain="80" Yield="13%">
+        <outline text="Sell" Date="11/28/18" Size="-130" Price="20.12" Gain="80" Yield="13%"/>
+        <outline text="Buy" Date="08/20/18" Size="100" Price="19.56"/>
+        <outline text="Buy" Date="08/13/18" Size="30" Price="19.33"/>
+      </outline>
+      <outline text="BKS" Date="11/23/18" Size="0" Gain="-14" Yield="-32%">
+        <outline text="Buy" Date="11/23/18" Symbol="BKS" Size="80" Price="6.69" Gain="-14" Yield="-32%"/>
+        <outline text="Sell" Date="10/24/18" Symbol="BKS" Size="-80" Price="6.52"/>
+      </outline>
+      <outline text="WHR" Date="11/23/18" Size="0" Gain="-40" Yield="-21%">
+        <outline text="Buy" Date="11/23/18" Symbol="WHR" Size="6" Price="121.32" Gain="-40" Yield="-21%"/>
+        <outline text="Sell" Date="10/24/18" Symbol="WHR" Size="-4" Price="107.95"/>
+        <outline text="Sell" Date="08/20/18" Symbol="WHR" Size="-2" Price="127.92"/>
+      </outline>
+      <outline text="KO" Date="11/19/18" Size="0" Gain="-14">
+        <outline text="Buy" Date="11/19/18" Symbol="KO" Size="15" Price="50.52" Gain="-14"/>
+        <outline text="Sell" Date="11/15/18" Symbol="KO" Size="-15" Price="49.57"/>
+      </outline>
+      <outline text="YXI" Date="11/16/18" Size="0" Gain="29" Yield="6%">
+        <outline text="Sell" Date="11/16/18" Symbol="YXI" Size="-20" Price="20.29" Gain="16" Yield="6%"/>
+        <outline text="Sell" Date="11/13/18" Symbol="YXI" Size="-50" Price="20.66" Gain="13"/>
+        <outline text="Buy" Date="11/05/18" Symbol="YXI" Size="50" Price="20.40"/>
+        <outline text="Buy" Date="07/31/18" Symbol="YXI" Size="20" Price="19.48"/>
+      </outline>
+      <outline text="BC" Date="11/15/18" Size="0" Gain="120" Yield="131%">
+        <outline text="Buy" Date="11/15/18" Symbol="BC" Size="8" Price="53.89" Gain="120" Yield="131%"/>
+        <outline text="Sell" Date="09/13/18" Symbol="BC" Size="-8" Price="68.83"/>
+      </outline>
+      <outline text="CHAD" Date="11/13/18" Size="0" Gain="39" Yield="6%">
+        <outline text="Sell" Date="11/13/18" Symbol="CHAD" Size="-100" Price="37.54" Gain="39" Yield="6%"/>
+        <outline text="Buy" Date="10/24/18" Symbol="CHAD" Size="25" Price="38.70"/>
+        <outline text="Buy" Date="10/03/18" Symbol="CHAD" Size="25" Price="36.34"/>
+        <outline text="Buy" Date="09/28/18" Symbol="CHAD" Size="25" Price="35.92"/>
+        <outline text="Buy" Date="09/18/18" Symbol="CHAD" Size="25" Price="37.64"/>
+      </outline>
+      <outline text="KORS" Date="11/12/18" Size="0" Gain="202" Yield="138%">
+        <outline text="Buy" Date="11/12/18" Symbol="KORS" Size="8" Price="48.07" Gain="202" Yield="138%"/>
+        <outline text="Sell" Date="08/31/18" Symbol="KORS" Size="-8" Price="73.31"/>
+      </outline>
+      <outline text="DTYS" Date="11/06/18" Size="0" Gain="119" Yield="16%">
+        <outline text="Sell" Date="11/06/18" Symbol="DTYS" Size="-130" Price="25.06" Gain="119" Yield="16%"/>
+        <outline text="Buy" Date="10/16/18" Symbol="DTYS" Size="50" Price="25.08"/>
+        <outline text="Buy" Date="10/11/18" Symbol="DTYS" Size="30" Price="25.12"/>
+        <outline text="Buy" Date="08/29/18" Symbol="DTYS" Size="30" Price="22.27"/>
+        <outline text="Buy" Date="07/27/18" Symbol="DTYS" Size="20" Price="23.15"/>
+      </outline>
+      <outline text="REK" Date="10/31/18" Size="0" Gain="-30" Yield="-9%">
+        <outline text="Sell" Date="10/31/18" Symbol="REK" Size="-265" Price="15.86" Gain="-30" Yield="-9%"/>
+        <outline text="Buy" Date="10/22/18" Symbol="REK" Size="75" Price="16.16"/>
+        <outline text="Buy" Date="10/18/18" Symbol="REK" Size="60" Price="16.11"/>
+        <outline text="Buy" Date="10/10/18" Symbol="REK" Size="60" Price="15.82"/>
+        <outline text="Buy" Date="10/08/18" Symbol="REK" Size="50" Price="15.87"/>
+        <outline text="Buy" Date="10/01/18" Symbol="REK" Size="20" Price="15.57"/>
+      </outline>
+      <outline text="SKF" Date="10/31/18" Size="0" Gain="51" Yield="82%">
+        <outline text="Sell" Date="10/31/18" Symbol="SKF" Size="-20" Price="21.25" Gain="51" Yield="82%"/>
+        <outline text="Buy" Date="09/12/18" Symbol="SKF" Size="20" Price="18.69"/>
+      </outline>
+      <outline text="TSLA"/>
+      <outline text="TYO" Date="10/26/18" Size="0" Gain="8" Yield="8%">
+        <outline text="Sell" Date="10/26/18" Size="-26" Price="15.27" Gain="8" Yield="8%"/>
+        <outline text="Buy" Date="07/09/18" Symbol="TYO" Size="26" Price="14.96"/>
+      </outline>
+      <outline text="USDU" Date="09/24/18" Size="0" Gain="-0" Yield="0%">
+        <outline text="Sell" Date="09/24/18" Symbol="USDU" Size="-15" Price="26.54" Gain="-0" Yield="0%"/>
+        <outline text="Buy" Date="07/27/18" Symbol="USDU" Size="15" Price="26.54"/>
+      </outline>
+      <outline text="TIF" Date="08/20/18" Size="-1">
+        <outline text="Expired" Date="08/20/18" Symbol="TIF" Size="-1"/>
+      </outline>
+    </outline>
+    <outline text="Analyze" _note="Analyze possible trade with P/E and Yield Info" Yield="2%">
+      <outline text="Todos">
+        <outline text="Cover" Symbol="WHR"/>
+      </outline>
+      <outline text="Owns" Yield="2%">
+        <outline Symbol="AAPL" Price="14.55" Yield="2%" Rating="★★☆☆☆"/>
+        <outline text="Short" Symbol="ADSK" Price="1,000.00" Yield="0%" Rating="★★★★★"/>
+        <outline Symbol="AMZN" Price="93.36" Yield="0%" Rating="★★★★☆"/>
+        <outline text="Short" Symbol="BFAM" Price="49.63" Yield="0%" Rating="★★★★☆"/>
+        <outline text="Short" Symbol="BKS" Price="1,000.00" Yield="9%" Rating="★★★☆☆"/>
+        <outline text="Short" Symbol="BLUE" Price="1,000.00" Yield="0%" Rating="★★★★☆"/>
+        <outline Symbol="DB" Price="1,000.00" Yield="1%" Rating="★☆☆☆☆"/>
+        <outline text="Short" Symbol="DIS" Price="15.63" Yield="1%" Rating="★★★☆☆"/>
+        <outline Symbol="EBAY" Price="12.60" Yield="0%" Rating="★☆☆☆☆"/>
+        <outline Symbol="F" Price="6.27" Yield="7%" Rating="★★★☆☆"/>
+        <outline Symbol="FB" Price="18.20" Yield="0%" Rating="★★☆☆☆"/>
+        <outline text="Short" Symbol="GDS" Price="1,000.00" Yield="0%" Rating="★★★☆☆"/>
+        <outline Symbol="GE" Price="1,000.00" Yield="1%" Rating="★☆☆☆☆"/>
+        <outline Symbol="HIG" Price="9.98" Yield="3%" Rating="★★★☆☆"/>
+        <outline text="Short" Symbol="HLF" Price="24.00" Yield="0%" Rating="★★★☆☆"/>
+        <outline Symbol="HLT" Price="31.54" Yield="1%" Rating="★★★★☆"/>
+        <outline Symbol="JD" Price="158.80" Yield="0%" Rating="★★★☆☆"/>
+        <outline text="Short" Symbol="JNJ" Price="25.60" Yield="3%" Rating="★★★☆☆"/>
+        <outline Symbol="KO" Price="31.14" Yield="3%" Rating="★★★☆☆"/>
+        <outline Symbol="KORS" Price="11.40" Yield="0%" Rating="★★★☆☆"/>
+        <outline Symbol="MAT" Price="1,000.00" Yield="0%" Rating="★★★☆☆"/>
+        <outline Symbol="MCD" Price="24.27" Yield="3%" Rating="★★★☆☆"/>
+        <outline Symbol="MFC" Price="14.67" Yield="5%" Rating="★★★☆☆"/>
+        <outline Symbol="NSANY" Price="5.27" Yield="6%" Rating="★★☆☆☆"/>
+        <outline Symbol="NAVI" Price="1,000.00" Yield="6%" Rating="★★★★☆"/>
+        <outline text="Short" Symbol="TSLA" Price="1,000.00" Yield="0%" Rating="★★★★★"/>
+        <outline Symbol="NFLX" Price="90.58" Yield="0%" Rating="★★★☆☆"/>
+        <outline Symbol="NKE" Price="28.84" Yield="1%" Rating="★★☆☆☆"/>
+        <outline Symbol="PDD" Price="1,000.00" Yield="0%" Rating="★★★★★"/>
+        <outline Symbol="RCL" Price="12.75" Yield="3%" Rating="★★★☆☆"/>
+        <outline text="Short" Symbol="SBUX" Price="20.09" Yield="2%" Rating="★★★☆☆"/>
+        <outline text="Short" Symbol="SHOO" Price="20.21" Yield="2%" Rating="★★★☆☆"/>
+        <outline Symbol="SNAP" Price="1,000.00" Yield="0%" Rating="★★☆☆☆"/>
+        <outline text="Short" Symbol="TAL" Price="110.18" Yield="0%" Rating="★★★★☆"/>
+        <outline Symbol="TIF" Price="21.57" Yield="2%" Rating="★★☆☆☆"/>
+        <outline Symbol="TROW" Price="12.59" Yield="3%" Rating="★★☆☆☆"/>
+        <outline Symbol="TWTR" Price="17.32" Yield="0%" Rating="★★☆☆☆"/>
+        <outline text="Short" Symbol="WHR" Price="1,000.00" Yield="4%" Rating="★★★☆☆"/>
+        <outline Symbol="WSM" Price="13.72" Yield="3%" Rating="★★★☆☆"/>
+        <outline Symbol="XNET" Price="1,000.00" Yield="0%" Rating="★★☆☆☆"/>
+      </outline>
+    </outline>
+    <outline text="Stock" Yield="2%">
+      <outline text="Bitcoin">
+        <outline text="Xunlei Limited" Symbol="XNET" Rating="★★★☆☆"/>
+        <outline text="Bitcoin Investment" Symbol="GBTC"/>
+        <outline text="Marathon Pale" Symbol="MARA"/>
+        <outline text="Overstock com" Symbol="OSTK"/>
+        <outline text="Riot Blockchain" Symbol="RIOT"/>
+      </outline>
+      <outline text="Industry" Yield="3%">
+        <outline text="Autodesk, Inc." Symbol="ADSK" Rating="★★★★★"/>
+        <outline text="General Electric Company" Symbol="GE" Price="28.01" Yield="4%" Rating="★★★★☆"/>
+        <outline text="Boeing Co" Symbol="BA" Price="24.40" Yield="3%"/>
+      </outline>
+      <outline text="Chemicals">
+        <outline text="Akzo Nobel N.V" Symbol="AKZOY" Rating="★★★★★"/>
+      </outline>
+      <outline text="Business DC">
+        <outline text="Apollo Investment" Symbol="AINV"/>
+        <outline text="Ares Capital" Symbol="ARCC"/>
+        <outline text="UBS ETRACS" Symbol="BDCS"/>
+        <outline text="Main Street" Symbol="MAIN"/>
+        <outline text="Medley Capital" Symbol="MCC"/>
+        <outline text="Monroe Capital" Symbol="MRCC"/>
+        <outline text="Oak tree Specialtiy" Symbol="OCSL"/>
+        <outline text="Omega Healthcare" Symbol="OHI"/>
+        <outline text="PennantPark Invest" Symbol="PNNT"/>
+        <outline text="Prospect Capital" Symbol="PSEC"/>
+        <outline text="Triangle Capital" Symbol="TCAP"/>
+        <outline text="THL Credit" Symbol="TCRD"/>
+      </outline>
+      <outline text="Insurance">
+        <outline Symbol="AIG"/>
+        <outline Symbol="ALL"/>
+        <outline Symbol="CB"/>
+        <outline Symbol="FNHC"/>
+        <outline Symbol="HCI"/>
+        <outline Symbol="HIG"/>
+        <outline Symbol="HRTG"/>
+        <outline Symbol="MET"/>
+        <outline Symbol="MHLD"/>
+        <outline Symbol="NGHC"/>
+        <outline Symbol="PIH"/>
+        <outline Symbol="TRV"/>
+        <outline Symbol="UIHC"/>
+        <outline Symbol="UVE"/>
+      </outline>
+      <outline text="Internet" Yield="1%">
+        <outline text="Int Business Machines Corp" Symbol="IBM" Price="12.72" Yield="4%"/>
+        <outline text="Intel Corp" Symbol="INTC" Price="14.65" Yield="3%"/>
+        <outline Symbol="AMZN" Price="181.29"/>
+        <outline text="Hologic Inc" Symbol="HOLX" Price="16.33" Yield="0%"/>
+        <outline Symbol="FB" Price="37.67"/>
+        <outline Symbol="MSFT" Price="30.35"/>
+        <outline text="Micron Technology Inc" Symbol="MU" Price="13.49" Yield="0%"/>
+        <outline Symbol="AMD"/>
+        <outline Symbol="FIT"/>
+        <outline Symbol="TEAM"/>
+        <outline Symbol="NVDA" Price="48.24"/>
+        <outline Symbol="ATVI" Price="42.04"/>
+        <outline Symbol="LNKD"/>
+        <outline Symbol="NFLX" Price="194.67"/>
+        <outline Symbol="TWTR"/>
+        <outline Symbol="CMCSA" Price="20.24"/>
+        <outline text="Alphabet Inc C" Symbol="GOOG" Price="30.77" Yield="0%"/>
+        <outline text="Walt Disney Co" Symbol="DIS" Price="18.86" Yield="1%"/>
+        <outline text="Apple Inc" Symbol="AAPL" Price="16.80" Yield="2%"/>
+        <outline text="Leisure"/>
+      </outline>
+      <outline text="Leisure" Yield="2%">
+        <outline text="Royal Caribbean Cruises" Symbol="RCL" Price="17.14" Yield="2%"/>
+        <outline text="Tiffany &amp; Co" Symbol="TIF" Price="26.26" Yield="2%"/>
+      </outline>
+      <outline text="Travel" Yield="0%">
+        <outline text="Southwest Airlines Co" Symbol="LUV" Price="18.76" Yield="1%"/>
+        <outline text="Priceline Group Inc" Symbol="PCLN" Price="42.17" Yield="0%"/>
+      </outline>
+      <outline text="Finance" Yield="1%">
+        <outline text="Affiliated Managers Group" Symbol="AMG" Price="19.27" Yield="0%"/>
+        <outline text="Interactive Brokers Group" Symbol="IBKR" Price="34.86" Yield="1%"/>
+        <outline text="Deutsche Bank AG" Symbol="DB" Yield="1%"/>
+        <outline text="Berkshire Hathaway Inc B" Symbol="BRK.B" Price="18.77" Yield="0%"/>
+      </outline>
+      <outline text="Retail" Yield="2%">
+        <outline text="Bed Bath &amp; Beyond Inc" Symbol="BBBY" Price="7.18" Yield="2%"/>
+        <outline text="Dick’s Sporting Goods Inc" Symbol="DKS" Price="15.56" Yield="2%"/>
+        <outline text="Home Depot" Symbol="HD" Price="23.07" Yield="2%"/>
+        <outline text="Starbucks Corp" Symbol="SBUX" Price="29.02" Yield="2%"/>
+        <outline text="Williams-Sonoma Inc" Symbol="WSM" Price="14.20" Yield="3%"/>
+        <outline Symbol="SKX" Price="19.26"/>
+        <outline Symbol="WMT" Price="17.20"/>
+        <outline Symbol="NKE" Price="23.51"/>
+        <outline Symbol="BABA" Price="56.32"/>
+        <outline text="Philips Morris Int" Symbol="PM" Price="25.92" Yield="4%"/>
+        <outline text="Sears Holdings Corp" Symbol="SHLD"/>
+        <outline text="CVS Health Corp" Symbol="CVS" Price="16.83" Yield="2%"/>
+      </outline>
+      <outline text="Recruit" Yield="2%">
+        <outline text="Robert Half Int" Symbol="RHI" Price="18.24" Yield="2%"/>
+      </outline>
+      <outline text="Mining" Yield="3%">
+        <outline text="Philips 66" Symbol="PSX" Price="25.94" Yield="3%"/>
+        <outline text="Cameco Corp" Symbol="CCJ" Yield="3%"/>
+      </outline>
+      <outline text="Paint">
+        <outline Symbol="AKZOY"/>
+        <outline Symbol="PPG"/>
+        <outline Symbol="SHW"/>
+      </outline>
+      <outline text="Pension">
+        <outline text="American Airline" Symbol="AAL"/>
+        <outline text="Argon N.V." Symbol="AEGOF"/>
+        <outline text="Anadarko Petro" Symbol="APC"/>
+        <outline text="Apt PLC" Symbol="APTV"/>
+        <outline text="ARconic Inc" Symbol="ARNC"/>
+        <outline Symbol="AVGO"/>
+        <outline Symbol="BDX"/>
+        <outline Symbol="COL"/>
+        <outline Symbol="DAL"/>
+        <outline Symbol="DWDP"/>
+        <outline Symbol="FCX"/>
+        <outline Symbol="FE"/>
+        <outline Symbol="GE"/>
+        <outline Symbol="HRS"/>
+        <outline Symbol="INTC"/>
+        <outline Symbol="LMT"/>
+        <outline Symbol="PG"/>
+        <outline Symbol="PH"/>
+        <outline Symbol="SRE"/>
+        <outline Symbol="TEL"/>
+        <outline Symbol="UAL"/>
+      </outline>
+      <outline text="Elder" Yield="1%">
+        <outline text="Carriage Services Inc" Symbol="CSV" Price="21.80" Yield="1%"/>
+      </outline>
+      <outline text="Restaurant">
+        <outline Symbol="PZZA" Price="25.52"/>
+        <outline Symbol="CMG" Price="127.13"/>
+      </outline>
+      <outline text="Automobile" Yield="2%">
+        <outline text="Bayerische Motor" Symbol="BMWYY"/>
+        <outline text="Avis Budget Group" Symbol="CAR"/>
+        <outline text="Daimler AG" Symbol="DDAIF"/>
+        <outline text="Ford Motor" Symbol="F"/>
+        <outline text="CarMax Group" Symbol="KMX"/>
+        <outline text="Fiat Chrysler Auto" Symbol="FCAU" Price="7.54" Yield="0%"/>
+        <outline text="Toyota" Symbol="TM" Price="9.83" Yield="4%"/>
+        <outline text="Goodyear Tire &amp; Rubber Co" Symbol="GT" Price="7.44" Yield="1%"/>
+        <outline text="Tesla Motors" Symbol="TSLA" Rating="★★★★☆"/>
+      </outline>
+      <outline text="Pharmaceutical" Yield="0%">
+        <outline Symbol="ARGX"/>
+        <outline text="Bluebird Bio, Inc." Symbol="BLUE" Yield="0%" Rating="★★★★★"/>
+        <outline Symbol="CMTA"/>
+        <outline Symbol="FOLD"/>
+        <outline Symbol="GBT"/>
+        <outline Symbol="GLMD"/>
+        <outline Symbol="GLYC"/>
+        <outline Symbol="GWPH"/>
+        <outline text="Valeant Pharmaceuticals Int" Symbol="VRX" Yield="0%" Rating="★★★★☆"/>
+        <outline Symbol="MRTX"/>
+        <outline Symbol="MYOK"/>
+      </outline>
+    </outline>
+    <outline text="Collection">
+      <outline text="Sold">
+        <outline text="Jan 5th Put at $100 for $72" Symbol="ADSK"/>
+        <outline/>
+      </outline>
+      <outline text="Own">
+        <outline text="Long 100 shares" Symbol="AKZOY" Rating="★★★☆☆"/>
+        <outline text="Short 2 shares" Symbol="BLUE" Rating="☆☆☆☆☆"/>
+        <outline text="Long 200 shares" Symbol="DBC" Rating="★★☆☆☆"/>
+        <outline text="Mar 16th Put at $17 for $40" Symbol="GE" Rating="★★★☆☆"/>
+        <outline Symbol="GLD"/>
+        <outline Symbol="JO"/>
+        <outline Symbol="SPY"/>
+        <outline Symbol="TSLA"/>
+        <outline Symbol="VUSTX"/>
+        <outline text="Jun 15th Put at $2.5 for $15" Symbol="XNET" Rating="★☆☆☆☆"/>
+      </outline>
+      <outline text="Watch">
+        <outline Symbol="HLF" Rating="★★★★☆"/>
+        <outline Symbol="HTZ" Rating="★★★★☆"/>
+        <outline Symbol="AAPL" Rating="★★★★★"/>
+        <outline Symbol="WSM" Rating="★★★★★"/>
+        <outline text="Watch closely" Symbol="WPG" Rating="★★★★★"/>
+      </outline>
+    </outline>
+    <outline text="Fund" Yield="5%">
+      <outline text="Commodity">
+        <outline text="PowerShares " Symbol="DBC" Rating="★★★★☆"/>
+        <outline text="SPDR Gold Trust" Symbol="GLD" Rating="★★★☆☆"/>
+        <outline Symbol="CEF"/>
+        <outline text="iPath Dow Jone Coffee" Symbol="JO"/>
+      </outline>
+      <outline text="S/P">
+        <outline text="SPDR S&amp;P 500" Symbol="SPY" Rating="★★★☆☆"/>
+      </outline>
+      <outline text="Treasury">
+        <outline text="Vanguard Long Term" Symbol="VUSTX" Rating="★★☆☆☆"/>
+        <outline Symbol="DFVS"/>
+        <outline Symbol="DTUS"/>
+        <outline Symbol="FLAT"/>
+        <outline Symbol="SHV"/>
+        <outline Symbol="SHY"/>
+        <outline Symbol="SPSB"/>
+        <outline Symbol="TAPR"/>
+        <outline Symbol="TLT"/>
+        <outline Symbol="VCSH"/>
+      </outline>
+      <outline text="Others" Yield="5%">
+        <outline text="Hoya Corporate Leaders Trust B" Symbol="LEXCX" Price="22.52" Yield="4%"/>
+        <outline text="Deutsche High Income Inst" Symbol="KHYIX" Price="0.00" Yield="5%" Rating="★★★☆☆"/>
+      </outline>
+    </outline>
+  </body>
+</opml>

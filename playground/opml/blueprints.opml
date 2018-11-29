@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head>
+    <title>blueprints</title>
+    <expansionState>0,1,12,15,25,27,29,48,96,104,111,114,117,122,125,127,132,134,138,141,142,143,144,149,155,159,179,182,186,189,190,192,193,194,199,201,202,204,230,235,237,239,342,344,396,403,473,536,540,546,551,562,572,630,634,661,685,697,758,772,802,813,832,845,848,858,861,875,889,903,911,915,929,930,938,958,964,1042</expansionState>
+  </head>
+  <body>
+    <outline text="Playground" _note="Description: Infrastructure for building apps using shared common UI elements" Type="Project" Notes="QP" Date="11/18/18">
+      <outline text="UI">
+        <outline text="App" Type="Component" Notes="Route `/`">
+          <outline text="LayoutShell" Type="Component"/>
+          <outline text="Router"/>
+          <outline text="LayoutHeader" Type="Component"/>
+          <outline text="Route"/>
+          <outline text="Route"/>
+        </outline>
+        <outline text="Layout" Type="Folder" Date="11/21/18">
+          <outline text="LayoutShell" Type="Component">
+            <outline text="layout" Type="Store" Value="layout" Notes="Create layout object"/>
+            <outline text="children" Type="Array" Value="node"/>
+            <outline text="LayoutMessage">
+              <outline text="layout" Type="Store" Value="layout"/>
+              <outline text="open" Type="Function" Value="status.messageOn"/>
+            </outline>
+            <outline text="Provider">
+              <outline text="layout" Type="Store" Value="layout"/>
+              <outline text="children" Type="Array" Value="children"/>
+            </outline>
+          </outline>
+          <outline text="LayoutStore" Type="Store" Notes="Mobx store">
+            <outline text="status">
+              <outline text="messageOn" Type="Bool" Value="false"/>
+            </outline>
+            <outline text="showMessage" Type="Function" Notes="Display a message on screen"/>
+            <outline text="hideMessage" Type="Function" Notes="Dismiss the message from screen"/>
+          </outline>
+          <outline text="LayoutHeader" Type="Component"/>
+        </outline>
+        <outline text="Playground" Type="Folder" Date="11/21/18">
+          <outline text="Playground" Type="Component">
+            <outline text="Container"/>
+          </outline>
+        </outline>
+        <outline text="Outliner" Type="Folder" Date="11/28/18">
+          <outline text="Xml2js"/>
+          <outline text="OutlinerStore">
+            <outline text="root" Type="Object" Notes="Xml object "/>
+            <outline text="fetchOutliner" Type="Function" Notes="Fetch online file"/>
+          </outline>
+          <outline text="TableTree" Type="Component" Notes="Display tree as table" Date="11/04/18">
+            <outline text="root" Type="Node">
+              <outline text="title" Type="String"/>
+              <outline text="chidren" Type="Array"/>
+              <outline text="cols" Type="Array"/>
+            </outline>
+            <outline text="cols" Type="Array" Value="[]"/>
+            <outline text="Table">
+              <outline text="size" Type="String" Value="‘small’"/>
+            </outline>
+            <outline text="Table.Header"/>
+            <outline text="Table.Row"/>
+            <outline text="Table.HeaderCell"/>
+            <outline text="Table.Body"/>
+            <outline text="TreeNode">
+              <outline text="node" Type="Node" Value="node"/>
+              <outline text="level" Type="Number" Value="0"/>
+              <outline text="cols" Type="Array" Value="colDefs"/>
+            </outline>
+          </outline>
+          <outline text="TableTreeNode" Type="Component" Notes="Display tree node as row" Date="11/04/18">
+            <outline text="node" Type="Node" Notes="Node data">
+              <outline text="title" Type="String"/>
+              <outline text="children" Type="Array"/>
+              <outline text="…values" Type="Object"/>
+            </outline>
+            <outline text="level" Type="Number" Value="1" Notes="Level of the node"/>
+            <outline text="cols" Type="Array" Notes="Columns for this node"/>
+            <outline text="toggled" Type="Bool" Notes="Is node open or close"/>
+            <outline text="Table.Row"/>
+            <outline text="Table.Cell">
+              <outline text="style" Type="Object">
+                <outline text="paddingLeft" Value="8*level+8" Notes="Indent"/>
+              </outline>
+              <outline text="onClick" Type="Function" Value="toggle" Notes="Toggle node"/>
+            </outline>
+            <outline text="Icon">
+              <outline text="name" Type="String" Value="‘folder open’"/>
+            </outline>
+            <outline text="TreeNode">
+              <outline text="node" Type="Node" Value="item"/>
+              <outline text="level" Type="Number" Value="level+1"/>
+              <outline text="cols" Type="Array" Value="Cols"/>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="TestSheet" Type="Folder" Date="11/21/18">
+          <outline text="Question" Type="Object">
+            <outline text="title" Type="String" Notes="Question display"/>
+            <outline text="answer" Type="String" Notes="Question answer"/>
+            <outline text="correct" Type="Bool" Notes="If answered correct"/>
+          </outline>
+          <outline text="TestSheetStore" Type="Store">
+            <outline text="status">
+              <outline text="questionCount" Type="Number" Notes="Total question in test"/>
+              <outline text="questionIndex" Type="Number" Notes="Current question index"/>
+              <outline text="testStart" Type="Bool" Notes="If test starts"/>
+              <outline text="testEnd" Type="Bool" Notes="If test ends"/>
+            </outline>
+            <outline text="test">
+              <outline text="questions" Type="Array" Value="[Question]"/>
+              <outline text="score" Type="Number"/>
+            </outline>
+            <outline text="addNewTest" Type="Function" Notes="Assemble a new test sheet"/>
+            <outline text="curQuestion" Type="Object" Notes="Get current question test"/>
+            <outline text="answer" Type="Function" Notes="Answer current question"/>
+            <outline text="nextQuestion" Type="Function" Notes="Move to next question"/>
+          </outline>
+          <outline text="TestSheet" Type="Component" Notes="Route `/test-sheet`" Date="11/21/18">
+            <outline text="TestEnd">
+              <outline text="sheet" Type="Store" Value="sheet"/>
+            </outline>
+            <outline text="TestQuestion">
+              <outline text="question" Type="Object" Value="sheet.curQuestion"/>
+              <outline text="onAnswer" Type="Function" Value="sheet.answer"/>
+            </outline>
+            <outline text="TestControl">
+              <outline text="sheet" Type="Store" Value="sheet"/>
+            </outline>
+          </outline>
+          <outline text="TestEnd" Type="Component" Notes="Display when test ends">
+            <outline text="sheet" Type="Store" Value="sheet"/>
+            <outline text="Container" Type="Component"/>
+            <outline text="input">
+              <outline text="autoFocus"/>
+              <outline text="onEnter" Type="Function" Value="sheet.addNewTest"/>
+            </outline>
+          </outline>
+          <outline text="TestQuestion" Type="Component" Notes="Question and accept answer">
+            <outline text="question" Type="Question" Value="sheet.curQuestion"/>
+            <outline text="onAnswer" Type="Function" Value="sheet.answer"/>
+            <outline text="span" Type="Html" Value="question.title"/>
+            <outline text="Container" Type="Component"/>
+            <outline text="input">
+              <outline text="autoFocus"/>
+              <outline text="onEnter" Type="Function" Value="onAnswer"/>
+            </outline>
+          </outline>
+          <outline text="TestControl" Type="Component" Notes="Question counter">
+            <outline text="sheet" Type="Store" Value="sheet"/>
+            <outline text="span" Type="Html" Value="sheet.questionIndex"/>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="AppStore - -" Type="Store">
+        <outline text="spinnings" Type="Map" Notes="Spinning actions">
+          <outline text="key" Type="String" Notes="Action"/>
+          <outline text="value" Type="String" Notes="Message"/>
+        </outline>
+        <outline text="spinner" Type="Object" Notes="Spinner">
+          <outline text="on" Type="Bool"/>
+          <outline text="message" Type="String"/>
+        </outline>
+        <outline text="spin" Type="Function" Notes="Spinning with message">
+          <outline text="on" Type="Bool" Value="true" Notes="Set wait on or off"/>
+          <outline text="message" Type="String" Value="‘’" Notes="Associated message"/>
+          <outline text="action" Type="String" Value="‘’" Notes="Associated action"/>
+        </outline>
+        <outline text="toasters" Type="Array" Notes="Toasters"/>
+        <outline text="toast" Type="Function" Notes="Add toast message">
+          <outline text="message" Type="String"/>
+          <outline text="type" Type="String" Value="'error'"/>
+        </outline>
+        <outline text="error" Type="Object" Notes="Error ">
+          <outline text="code" Type="String"/>
+        </outline>
+        <outline text="raise" Type="Function" Notes="Raise error">
+          <outline text="code" Type="String"/>
+          <outline text="title" Type="String" Value="''"/>
+          <outline text="description" Type="String" Value="''"/>
+        </outline>
+      </outline>
+      <outline text="App - -" Type="Component">
+        <outline text="Provider" Notes="Provide app store">
+          <outline text="appStore" Type="AppStore" Value="store"/>
+        </outline>
+        <outline text="Portal" Notes="Spinner">
+          <outline text="onOpen"/>
+          <outline text="onClose"/>
+          <outline text="closeOnTriggerClick"/>
+        </outline>
+        <outline text="Portal" Notes="Toaster">
+          <outline/>
+        </outline>
+        <outline text="ErrorPage"/>
+      </outline>
+    </outline>
+    <outline text="Customer Load" Type="Project" Value="debug" Notes="MG" Date="11/28/19">
+      <outline text="Services">
+        <outline text="addCustomerLoadStore" Type="Store">
+          <outline text="constructor">
+            <outline text="configGroupId"/>
+            <outline text="values"/>
+            <outline text="constraints"/>
+            <outline text="reduxActions"/>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+    <outline text="Posted Equipment" _note="Description: Post equipments for carriers with various settings such as equipment id, origin location, multiple destination locations, contact info and availability date range. " Type="Project" Notes="MG" Date="10/16/18">
+      <outline text="Dependencies">
+        <outline text="mobx"/>
+        <outline text="redux"/>
+      </outline>
+      <outline text="Services">
+        <outline text="MG">
+          <outline text="Bundle">
+            <outline text="isMilitary"/>
+            <outline text="label" Type="Function" Value="String" Notes="Translate label"/>
+          </outline>
+        </outline>
+        <outline text="MGCommon">
+          <outline text="post" Type="Function" Value="Promise" Notes="Post fetch api">
+            <outline text="url" Type="String"/>
+            <outline text="body" Type="Object"/>
+            <outline text="useJson" Type="Bool"/>
+          </outline>
+        </outline>
+        <outline text="formLabel" Type="File" Notes="Form labels">
+          <outline text="bundleLables" Notes="Internationalization strings">
+            <outline text="title" Value="‘addequipment’"/>
+            <outline text="form.submit" Value="‘submit’"/>
+            <outline text="form.update" Value="‘update’"/>
+            <outline text="form.reset" Value="‘reset’"/>
+            <outline text="form.cancel" Value="‘cancel"/>
+            <outline text="form.add" Value="‘add’"/>
+            <outline text="form.save" Value="‘save’"/>
+            <outline text="form.sving" Value="‘saving’"/>
+            <outline text="form.success" Value="‘successMessage’"/>
+            <outline text="form.error" Value="‘failureMessage’"/>
+            <outline text="error.uniqueid"/>
+            <outline text="carrier.title"/>
+            <outline text="carrier.emptyText"/>
+            <outline text="… lots of them"/>
+          </outline>
+          <outline text="formLabel" Type="String">
+            <outline text="key" Type="String"/>
+          </outline>
+        </outline>
+        <outline text="fromApi" Type="File" Notes="Form apis">
+          <outline text="bundleApis">
+            <outline text="submit" Type="String" Value="‘postedequipment’"/>
+            <outline text="carrier.search" Type="String" Value="‘Carriers?query’"/>
+            <outline text="equipment.submit" Type="String" Value="‘posted-equipment’"/>
+          </outline>
+          <outline text="getApi">
+            <outline text="key"/>
+          </outline>
+        </outline>
+        <outline text="formConstraints" Type="File" Notes="Constraints object">
+          <outline text="carriers">
+            <outline text="*">
+              <outline text="carrier"/>
+              <outline text="equipments">
+                <outline text="*">
+                  <outline text="id" Type="Object" Notes="Id custom validation">
+                    <outline text="validator" Value="equipmentId"/>
+                  </outline>
+                  <outline text="quantity" Value="required"/>
+                  <outline text="mode" Value="required"/>
+                  <outline text="type" Value="required"/>
+                  <outline text="origin" Value="required" Notes="Origin custom validation">
+                    <outline text="validator"/>
+                  </outline>
+                  <outline text="contact">
+                    <outline text="email">
+                      <outline text="validator" Notes="Email validation"/>
+                    </outline>
+                  </outline>
+                </outline>
+              </outline>
+            </outline>
+          </outline>
+          <outline text="location">
+            <outline text="validator" Notes="Location validation"/>
+          </outline>
+        </outline>
+        <outline text="formDefaults" Type="File" Notes="Form defaults">
+          <outline text="getDefaultEquipment" Type="Function" Value="Object" Notes="Observed default equipment">
+            <outline text="quantity" Type="Number" Value="2"/>
+            <outline text="id" Type="String" Value="‘Abc’"/>
+            <outline text="mode" Type="String"/>
+            <outline text="type" Type="String"/>
+            <outline text="origin" Type="Object" Value="location"/>
+            <outline text="destination" Type="Array" Value="[]"/>
+            <outline text="contact" Type="Object" Value="person"/>
+            <outline text="driver" Type="Object" Value="person"/>
+            <outline text="availability" Type="Object" Value="daterange"/>
+            <outline text="notes" Type="String"/>
+            <outline text="linked" Type="Bool" Value="false" Notes="If equipment is ghost node"/>
+            <outline text="submitted" Type="Number" Value="-1,0,1" Notes="If equipment submitted" Date="11/19/18"/>
+          </outline>
+          <outline text="getDefaultCarrier" Type="Function" Value="Object" Notes="Observed default carrier">
+            <outline text="disabled" Type="Bool" Value="false" Notes="If carrier is not selected"/>
+            <outline text="autoGeneratedId" Type="Bool" Value="false" Notes="If auto generated id turned on"/>
+            <outline text="disableQuantity" Type="Bool" Value="false" Notes="If carrier quantity is locked" Date="11/19/18"/>
+            <outline text="carrier" Type="Carrier" Value="carrier"/>
+            <outline text="equipments" Type="Array" Value="[equipment]"/>
+          </outline>
+          <outline text="getDefaultCarrierDetail" Type="Function" Value="Object" Notes="Observed default carrier detail">
+            <outline text="name" Type="String"/>
+            <outline text="carrierId" Type="String"/>
+            <outline text="oid" Type="String"/>
+          </outline>
+          <outline text="getDefaultPerson" Type="Function" Value="Object" Notes="Observed default person">
+            <outline text="name" Type="String"/>
+            <outline text="phone" Type="String"/>
+            <outline text="email" Type="String"/>
+          </outline>
+          <outline text="getLocationTypes" Type="Function" Value="Object" Notes="Location types">
+            <outline text="cityState">
+              <outline text="criteria" Type="String" Value="‘City, Zip, State, Country’"/>
+            </outline>
+            <outline text="multipleStates">
+              <outline text="criteria" Type="String" Value="‘Multiple States'"/>
+            </outline>
+            <outline text="multiplePostalCodes">
+              <outline text="criteria" Type="String" Value="‘Multiple Zips’"/>
+            </outline>
+          </outline>
+          <outline text="getDefaultLocation" Type="Function" Value="Object" Notes="Observed default location">
+            <outline text="type"/>
+            <outline text="country"/>
+            <outline text="city"/>
+            <outline text="state"/>
+            <outline text="postalCode"/>
+            <outline text="name"/>
+            <outline text="description"/>
+            <outline text="radius"/>
+          </outline>
+          <outline text="getDefaultDatePickerValues" Type="Function" Value="Object" Notes="Observed default date range"/>
+          <outline text="getDefaultValues *" Type="Function" Value="Object" Notes="Observed default form values">
+            <outline text="carriers" Type="Array" Value="[Carrier]" Notes="List of carriers"/>
+            <outline text="location" Type="Location" Value="Object" Notes="Meta helper for location picker"/>
+          </outline>
+          <outline text="getDefaultConstraints" Type="Function" Value="Object" Notes="Observed default form constraint"/>
+          <outline text="getLabel" Type="Function" Value="String" Notes="Form labels"/>
+          <outline text="getApi" Type="Function" Value="String" Notes="Form apis"/>
+        </outline>
+        <outline text="masterNodes" Type="File" Notes="Master/ghost relationship">
+          <outline text="exports">
+            <outline text="getMasterNodes" Type="Function"/>
+            <outline text="concatMasterNodes" Type="Function"/>
+          </outline>
+        </outline>
+        <outline text="PostedEquipmentStore *" Type="Form" Notes="Mobx store">
+          <outline text="constructor" Type="Function" Notes="Constructor">
+            <outline text="values" Type="Object" Notes="Initial observed values"/>
+            <outline text="constraints" Type="Object" Notes="Initial observed constraints"/>
+            <outline text="configGroupId" Type="String" Notes="Config group Id"/>
+            <outline text="reduxActions" Type="Object" Notes="All redux actions"/>
+          </outline>
+          <outline text="validateField" Type="Function" Notes="Validate field manually">
+            <outline text="name" Type="String" Value="'origin'"/>
+            <outline text="quiteMode" Type="Bool" Value="true" Notes="If update form errors"/>
+          </outline>
+          <outline text="invalidateForm" Type="Function" Notes="Validate form ">
+            <outline text="return" Type="Array" Notes="Array of errors"/>
+          </outline>
+          <outline text="validateFormValues" _note="wire all input onBlur with this function" Type="Function" Notes="Override parent validation"/>
+          <outline text="carrierCount" Type="Computed" Value="Number" Notes="Get carrier count"/>
+          <outline text="addNewCarrier" Type="Function" Notes="Add a carrier panel"/>
+          <outline text="resetCarrier" Type="Function" Notes="Reset carrier to default">
+            <outline text="carrier" Type="String"/>
+          </outline>
+          <outline text="deleteCarrier" Type="Function" Notes="Delete a carrier">
+            <outline text="carrier" Type="String"/>
+          </outline>
+          <outline text="setCarrierDetail" Type="Function" Notes="Set carrier detail">
+            <outline text="carrier" Type="String"/>
+            <outline text="detail" Type="Object"/>
+          </outline>
+          <outline text="getCarrierError" Type="Function" Notes="Get errors for carrier"/>
+          <outline text="getObservedEquipment" Type="Function" Notes="Get observed equipment">
+            <outline text="raw" Type="Object" Notes="Taking raw equipment "/>
+          </outline>
+          <outline text="getEquipmentLinkedIndex" Type="Function" Value="Array" Notes="Find equipments relationship"/>
+          <outline text="addNewEquipment" Type="Function" Notes="Add a new equipment"/>
+          <outline text="resetEquipment" Type="Function" Notes="Reset equipment"/>
+          <outline text="removeEquipment" Type="Function" Notes="Remove equipment">
+            <outline text="equipments" Type="String" Value="'equipments'"/>
+            <outline text="index" Type="Number" Value="0"/>
+          </outline>
+          <outline text="addEquipmentsCopy" Type="Function" Notes="Copy equipments">
+            <outline text="equipments" Type="String" Value="'equipments'"/>
+            <outline text="index" Type="Number" Value="0"/>
+          </outline>
+          <outline text="setEquipmentQuantity" Type="Function" Notes="Change equipment quantity">
+            <outline text="equipments" Type="String" Value="'equipments'"/>
+            <outline text="index" Type="Number" Value="0"/>
+            <outline text="quantity" Type="Number" Value="2"/>
+          </outline>
+          <outline text="getObservedLocation" Type="Function" Notes="Get observed location"/>
+          <outline text="setOriginLocation" Type="Function" Notes="Set origin from location">
+            <outline text="origin" Type="String" Value="'origin'"/>
+            <outline text="location" Type="String" Value="'location'"/>
+          </outline>
+          <outline text="addDestLocation" Type="Function" Notes="Add dest from location">
+            <outline text="destination"/>
+            <outline text="location"/>
+          </outline>
+          <outline text="removeDestLocatoin" Type="Function">
+            <outline text="destination"/>
+            <outline text="index" Type="Number"/>
+          </outline>
+          <outline text="resetDestLocation" Type="Function">
+            <outline text="destination"/>
+          </outline>
+          <outline text="getDestDisplay" Type="Function" Value="String">
+            <outline text="destination"/>
+          </outline>
+          <outline text="resetLocation" Type="Function">
+            <outline text="location"/>
+          </outline>
+          <outline text="resetContact" Type="Function">
+            <outline text="contact"/>
+            <outline text="driver"/>
+          </outline>
+          <outline text="calcPostedEquipment" Notes="Process before submission">
+            <outline text="carrier" Type="Object" Notes="Carrier"/>
+            <outline text="eq" Type="Object" Notes="Equipment"/>
+            <outline text="master" Type="Object" Notes="Master equipment"/>
+            <outline text="return">
+              <outline text="autogenerateEquipmentId"/>
+              <outline text="quantity"/>
+              <outline text="carrierOid"/>
+              <outline text="equipmentId"/>
+              <outline text="mode"/>
+              <outline text="equipmentType"/>
+              <outline text="origin"/>
+              <outline text="destinations"/>
+              <outline text="contact"/>
+              <outline text="driver"/>
+              <outline text="availability"/>
+            </outline>
+          </outline>
+          <outline text="submit" Type="Function" Value="async" Notes="Submit form"/>
+          <outline text="cancel" Type="Function" Notes="Cancel and close page"/>
+          <outline text="toaster" Type="Function" Notes="Add toaster message">
+            <outline text="msg" Type="String"/>
+            <outline text="type" Type="String" Value="'error'"/>
+          </outline>
+          <outline text="pinForm" Type="Function" Notes="Pin the form"/>
+          <outline text="lightboxOn" Type="Function"/>
+          <outline text="lightboxOff" Type="Function"/>
+        </outline>
+      </outline>
+      <outline text="UI">
+        <outline text="UX components" Notes="UX Library">
+          <outline text="Icons">
+            <outline text="SVGIcons" Notes="MGIcon base">
+              <outline text="className" Type="String"/>
+              <outline text="size" Type="Number"/>
+              <outline text="onClick" Type="Function"/>
+              <outline text="onKeyDown" Type="Function"/>
+              <outline text="tabIndex" Type="Number"/>
+              <outline text="title" Type="String"/>
+            </outline>
+            <outline text="MGIconAdd"/>
+            <outline text="MGPlusCircle"/>
+            <outline text="MGIconTimesCircle"/>
+          </outline>
+          <outline text="UXButton" Type="Component">
+            <outline text="buttonType" Type="String" Value="'button', 'submit' or 'reset'"/>
+            <outline text="buttonStyle" Type="String" Value="'primary', 'secondary', 'error'"/>
+            <outline text="buttonSize" Type="String" Value="'large', 'medium' or 'small'"/>
+            <outline text="onClick"/>
+            <outline text="disabled"/>
+            <outline text="isOultined"/>
+            <outline text="borderless"/>
+            <outline text="isGradient"/>
+          </outline>
+          <outline text="UXLink" Type="Component">
+            <outline text="onClick"/>
+            <outline text="text"/>
+            <outline text="iconComponent"/>
+          </outline>
+          <outline text="UXInputLabel" Type="Component" Notes="Input wrapper"/>
+          <outline text="MGLink" Type="Component"/>
+          <outline text="MGInput" Type="Component" Notes="Text input field">
+            <outline text="type"/>
+            <outline text="name"/>
+            <outline text="disabled"/>
+            <outline text="onChange"/>
+          </outline>
+          <outline text="MGToggle" Type="Component" Notes="Toggle input field">
+            <outline text="name"/>
+            <outline text="label"/>
+            <outline text="disabled"/>
+          </outline>
+          <outline text="MGPillInput" Type="Component" Notes="Multiple pills text field" Date="11/20/18">
+            <outline text="label" Type="String"/>
+            <outline text="className" Type="String"/>
+            <outline text="required" Type="Bool"/>
+            <outline text="meta" Type="Object"/>
+            <outline text="style" Type="Object"/>
+            <outline text="name" Type="String"/>
+            <outline text="value" Type="Array" Value="[‘abc’]" Notes="Array of pill texts"/>
+            <outline text="disabled" Type="Bool"/>
+            <outline text="onChange" Type="Function"/>
+            <outline text="onBlur" Type="Function"/>
+          </outline>
+          <outline text="MGSelect" Type="Component" Notes="Select input field"/>
+          <outline text="MGMultiSelect" Type="Component">
+            <outline text="formState"/>
+            <outline text="onChange"/>
+            <outline text="onBlur"/>
+            <outline text="lookupName"/>
+            <outline text="readOnly"/>
+            <outline text="MGMultiSelect" _note="Unconnected" Type="Component">
+              <outline text="label"/>
+              <outline text="required"/>
+              <outline text="onChange"/>
+              <outline text="hidden"/>
+              <outline text="meta"/>
+              <outline text="name"/>
+              <outline text="lookup" Type="Array" Value="[]">
+                <outline text="label" Type="String"/>
+                <outline text="value" Type="String"/>
+              </outline>
+              <outline text="value" Type="Array" Value="[]"/>
+              <outline text="readOnly" Type="Bool"/>
+            </outline>
+          </outline>
+          <outline text="MGGeoLookupInput" Type="Component">
+            <outline text="searchBy" Type="String" Value="‘zip’ or  ‘city’"/>
+            <outline text="name" Type="String" Notes="Field name"/>
+            <outline text="partialReadOnly" Type="Bool"/>
+            <outline text="formState" Type="Form" Notes="Injected"/>
+            <outline text="MGGeoLocationLookup"/>
+          </outline>
+          <outline text="MGPopoverHoverTrigger" Type="Component">
+            <outline text="popoverContent"/>
+            <outline text="position"/>
+          </outline>
+        </outline>
+        <outline text="MGPostedForm *" Type="Component" Notes="Main entry" Date="10/19/18">
+          <outline text="form" Type="Form" Value="form" Notes="PostedEquipmentStore"/>
+          <outline text="configGroupId" Type="String"/>
+          <outline text="reduxActions" Type="Object" Notes="Redux global actions">
+            <outline text="openToaster" Type="Function">
+              <outline text="message"/>
+              <outline text="alertType" Type="String" Value="'error'"/>
+            </outline>
+            <outline text="closeFlyout" Type="Function"/>
+            <outline text="pinForm" Type="Function"/>
+            <outline text="openLightbox" Type="Function">
+              <outline text="Component" Type="Component"/>
+              <outline text="title" Type="String"/>
+              <outline text="width" Type="Number" Value="1222"/>
+            </outline>
+            <outline text="closeLightbox" Type="Function"/>
+          </outline>
+          <outline text="Provider" Type="Component">
+            <outline text="formState" Type="Form" Value="form" Notes="for Redux input"/>
+          </outline>
+          <outline text="MGPageHeading" Type="Component">
+            <outline text="title" Type="String" Value="'Posted Equipment'"/>
+            <outline text="onClose" Type="Function" Value="cancel" Notes="Cancel form"/>
+            <outline text="pinForm" Type="Function" Value="pinForm" Notes="Pin form to the screen"/>
+          </outline>
+          <outline text="MGPostedCarrierTitle" Type="Component" Notes="Carrier title control">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="carrier" Type="String" Value="'carriers.1'"/>
+            <outline text="MGCarrierSelect" Type="Component" Notes="Carrier typehead picker">
+              <outline text="carrier" Type="String"/>
+            </outline>
+            <outline text="MGToggle" Type="Component">
+              <outline text="name" Type="String"/>
+              <outline text="label" Type="String" Value="'Auto Generated'"/>
+              <outline text="disabled" Type="Bool"/>
+            </outline>
+            <outline text="MGInfoIcon" Type="Component" Notes="Popover info"/>
+            <outline text="MGActionsMenu" Type="Component"/>
+            <outline text="MGActionsMenuOption" Type="Component">
+              <outline text="action" Value="resetCarrier"/>
+              <outline text="icon" Value="MGIconMailReply"/>
+            </outline>
+            <outline text="MGActionsMenuOption" Type="Component">
+              <outline text="action" Value="deleteCarrier"/>
+              <outline text="icon" Value="MGIconTrash"/>
+            </outline>
+          </outline>
+          <outline text="MGPostedCarrierError" Type="Component" Notes="Display carrier error">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="carrier" Type="String" Value="'carriers.1'"/>
+          </outline>
+          <outline text="MGPostedEquipments" Type="Component" Notes="Carrier equipments table">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="carrier" Type="String" Value="'carriers.1'"/>
+          </outline>
+          <outline text="UXLink" Type="Component" Notes="Add carrier button">
+            <outline text="onClick" Type="Function" Value="addNewCarrier"/>
+            <outline text="text" Type="String" Value="'Add new carrier'"/>
+            <outline text="usesSvgIcon" Type="Component" Value="MGIconAdd"/>
+          </outline>
+          <outline text="MGLocationForm" Type="Component" Notes="Inline location forms">
+            <outline text="form" Type="Form" Value="form"/>
+          </outline>
+          <outline text="MGPostedFooter" Type="Component" Notes="Carrier footer control">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="UXButton" Type="Component" Notes="Form cancel button">
+              <outline text="label" Type="String" Value="'Cancel'"/>
+              <outline text="onClick" Type="Function" Value="cancel"/>
+            </outline>
+            <outline text="MGWaitingButton" Type="Component" Notes="Submission waiting">
+              <outline text="text" Type="String" Value="'Saving'"/>
+            </outline>
+            <outline text="UXButton" Type="Component" Notes="Form submit button">
+              <outline text="label" Type="String" Value="'Submit'"/>
+              <outline text="disabled" Type="Bool" Value="!!errors.length"/>
+              <outline text="onClick" Type="Function" Value="submit"/>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="MGPostedEquipments" Type="Component" Notes="Equipments table">
+          <outline text="form" Type="Form"/>
+          <outline text="carrier" Type="String" Value="'carriers.1'"/>
+          <outline text="MGPostedEquipmentHeader" Type="Component" Notes="Table header"/>
+          <outline text="MGInput" Type="Component" Notes="Quantity">
+            <outline text="type" Type="String" Value="'number'"/>
+            <outline text="name" Type="String" Value="'quantity'"/>
+            <outline text="disabled" Type="Boolean" Notes="Is carrier disabled"/>
+            <outline text="onChange" Type="Function" Value="setEquipmentQuantity"/>
+          </outline>
+          <outline text="MGInput" Type="Component" Notes="Id">
+            <outline text="type" Type="String" Value="'text'"/>
+            <outline text="name" Type="String" Value="'id'"/>
+            <outline text="disabled" Type="Boolean" Notes="Is auto generated"/>
+            <outline text="placeholder" Type="String" Value="'Enter Id …'"/>
+          </outline>
+          <outline text="MGSelect" Type="Component" Notes="Mode">
+            <outline text="name" Type="String" Value="'mode'"/>
+            <outline text="lookupName" Type="String" Value="'mode'"/>
+            <outline text="disabled" Type="Boolean" Notes="Is linked equipment"/>
+          </outline>
+          <outline text="MGSelect" Type="Component" Notes="Type">
+            <outline text="name" Type="String" Value="'type'"/>
+            <outline text="lookupName" Type="String" Value="'equipment'"/>
+            <outline text="disabled" Type="Boolean" Notes="Is linked equipment"/>
+          </outline>
+          <outline text="MGPostedEquipmentOrigin" Type="Component" Notes="Origin">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="origin" Type="String" Value="'origin'"/>
+            <outline text="location" Type="String" Value="'location'" Notes="Location helper"/>
+            <outline text="disabled" Type="Boolean" Notes="Is linked equipment"/>
+          </outline>
+          <outline text="MGPostedEquipmentDestination" Type="Component" Notes="Destination">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="destination" Type="String" Value="'destination'"/>
+            <outline text="location" Type="String" Value="'location'" Notes="Location helper"/>
+            <outline text="disabled" Type="Boolean" Notes="Is linked equipment"/>
+          </outline>
+          <outline text="MGPostedEquipmentContact" Type="Component" Notes="Contact">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="contact" Type="String" Value="'contact'"/>
+            <outline text="driver" Type="String" Value="'driver'"/>
+            <outline text="disabled" Type="Boolean" Notes="Is carrier disabled"/>
+          </outline>
+          <outline text="MGPostedEquipmentAvailability" Type="Component" Notes="Dates range">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="availability" Type="String" Value="'availability'"/>
+            <outline text="disabled" Type="Boolean" Notes="Is carrier disabled"/>
+          </outline>
+          <outline text="MGPostedEquipmentActionsMenu" Type="Component" Notes="Actions menu">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="notes" Type="String" Value="'notes'"/>
+            <outline text="equipments" Type="String" Value="'equipments'"/>
+            <outline text="index" Type="Number" Value="0"/>
+            <outline text="disabled" Type="Boolean" Notes="Is carrier disabled"/>
+            <outline text="isLinked" Type="Boolean" Notes="Is linked equipment"/>
+          </outline>
+          <outline text="UXLink" Type="Component" Notes="Add button">
+            <outline text="onClick" Type="Function" Value="addNewEquipment"/>
+            <outline text="text" Value="'Add new equipment'"/>
+            <outline text="iconComponent" Value="MGIconAdd"/>
+            <outline text="disabled" Notes="Is carrier disabled"/>
+          </outline>
+        </outline>
+        <outline text="MGPostedEquipmentOrigin" Type="Component" Notes="Origin custom field">
+          <outline text="form" Type="Form" Value="form"/>
+          <outline text="origin" Type="String" Value="'origin'"/>
+          <outline text="location" Type="String" Value="'location'" Notes="Location helper"/>
+          <outline text="disabled" Type="Bool" Notes="Is linked equipment"/>
+          <outline text="toggled" Type="Bool" Notes="via `toggled`"/>
+          <outline text="MGBlurSnatcher" Type="Component">
+            <outline text="onFocus"/>
+            <outline text="onBlurout"/>
+          </outline>
+          <outline text="UXInputLabel" Type="Component" Notes="Input wrapper"/>
+          <outline text="MGLocationsPill" Type="Component" Notes="Multiple locations pill" Date="11/12/18">
+            <outline text="text" Type="String" Notes="Display"/>
+            <outline text="titles" Type="Array" Value="['']" Notes="Multiple item titles"/>
+            <outline text="onClick" Type="Function" Notes="Pill clicked"/>
+            <outline text="onRemove(i)" Type="Function" Notes="Pill or item removed"/>
+            <outline text="readOnly" Type="Bool" Notes="Is read only"/>
+            <outline text="MGPopoverHoverTrigger">
+              <outline text="popoverContent"/>
+              <outline text="position"/>
+            </outline>
+            <outline text="MGIconWindowClose"/>
+          </outline>
+          <outline text="MCIconTriangleDown"/>
+          <outline text="MGPostedDirectory">
+            <outline text="form" Type="Form"/>
+            <outline text="location" Type="String"/>
+            <outline text="onClose" Type="Function"/>
+            <outline text="multiple" Type="Bool" Value="false"/>
+          </outline>
+        </outline>
+        <outline text="MGPostedEquipmentDestination" Type="Component" Notes="Destination custom field">
+          <outline text="form" Type="Form" Value="form"/>
+          <outline text="destination" Type="String" Value="'destination'"/>
+          <outline text="loation" Type="String" Value="'location'" Notes="Location helper"/>
+          <outline text="disabled" Type="Bool" Notes="Is linked equipment"/>
+          <outline text="toggled" Type="Bool" Value="true" Notes="via `toggled`"/>
+          <outline text="MGBlurSnatcher" Type="Component">
+            <outline text="onFocus" Type="Function" Value="toggled.open"/>
+            <outline text="onBlurout" Value="toggled.close"/>
+          </outline>
+          <outline text="UXInputLabel" Type="Component" Notes="Input wrapper"/>
+          <outline text="MGLocationsPill" Type="Component" Notes="Multiple locations pill" Date="11/12/18">
+            <outline text="text" Type="String" Notes="Display"/>
+            <outline text="titles" Type="Array" Notes="Multiple item titles"/>
+            <outline text="onClick" Type="Function" Notes="Pill clicked"/>
+            <outline text="onRemove(i)" Type="Function" Notes="Pill or item removed"/>
+            <outline text="readOnly" Type="Bool" Notes="Is read only"/>
+            <outline text="MGPopoverHoverTrigger">
+              <outline text="popoverContent"/>
+              <outline text="position"/>
+            </outline>
+            <outline text="MGIconWindowClose"/>
+          </outline>
+          <outline text="MGPlusCircle" Notes="Plus circle select icon"/>
+          <outline text="MGPostedDirectory">
+            <outline text="form" Type="Form"/>
+            <outline text="location" Type="String"/>
+            <outline text="onClose" Type="Function"/>
+            <outline text="multiple" Type="Bool" Value="true"/>
+          </outline>
+        </outline>
+        <outline text="MGPostedDirectory" Type="Component" Notes="Directory navigation">
+          <outline text="form" Type="Form"/>
+          <outline text="location" Type="String" Value="'location'"/>
+          <outline text="onClose" Type="Function" Notes="Button inside is clicked"/>
+          <outline text="multiple" Type="Bool" Value="false" Notes="Is multiple selection"/>
+          <outline text="MGDirectory" Type="Component"/>
+          <outline text="SubdirectoryLink" Type="Component"/>
+          <outline text="MGIconAngleRight"/>
+          <outline text="MGSubdirectory" Type="Component"/>
+          <outline text="MGPostedLocation" Type="Component" Notes="Location mini form"/>
+        </outline>
+        <outline text="MGPostedLocation" Type="Component" Notes="Location mini form">
+          <outline text="form" Type="Form" Value="form"/>
+          <outline text="location" Type="String"/>
+          <outline text="type" Type="String" Value="'cityState'" Notes="Type of location form"/>
+          <outline text="onClose" Type="Function"/>
+          <outline text="onSave" Type="Function"/>
+          <outline text="closeLabel" Type="String" Value="'Reset'"/>
+          <outline text="saveLabel" Type="String" Value="'Save'"/>
+          <outline text="MGLocationCityState" Type="Component" Notes="City state form">
+            <outline text="location" Type="String" Value="'location'"/>
+            <outline text="MGSelect" Type="Component" Notes="Country select">
+              <outline text="name" Type="String" Value="'country'"/>
+              <outline text="lookupName" Type="String" Value="'countries'"/>
+              <outline text="label" Type="String" Value="'Country'"/>
+            </outline>
+            <outline text="MGGeoLookupInput" Type="Component" Notes="Linked city select">
+              <outline text="searchBy" Value="'city'"/>
+              <outline text="name" Value="'city'"/>
+              <outline text="label" Value="'City'"/>
+            </outline>
+            <outline text="MGStateSelect" Type="Component" Notes="Linked state select">
+              <outline text="name" Value="'state'"/>
+              <outline text="baseInputName" Value="'location'"/>
+              <outline text="baseInputProperty" Value="'country'"/>
+              <outline text="label" Value="'State'"/>
+            </outline>
+            <outline text="MGGeoLookupInput" Type="Component" Notes="Linked zip select">
+              <outline text="searchBy" Value="'zip'"/>
+              <outline text="name" Value="'postalCode'"/>
+              <outline text="label" Value="'Postal Code'"/>
+            </outline>
+            <outline text="MGInput" Type="Component" Notes="Radius input">
+              <outline text="type" Value="'number'"/>
+              <outline text="name" Value="'radius'"/>
+              <outline text="label" Value="'Radius'"/>
+            </outline>
+          </outline>
+          <outline text="MGLocationStates" Type="Component" Notes="Multiple states form">
+            <outline text="form" Type="Form" Value="form"/>
+            <outline text="location" Type="String" Value="'location'"/>
+            <outline text="MGSelect" Type="Component" Notes="Country select">
+              <outline text="name" Type="String" Value="'country'"/>
+              <outline text="lookupName" Type="String" Value="'countries'"/>
+              <outline text="label" Type="String" Value="'Country'"/>
+            </outline>
+            <outline text="MGMultiSelect" Type="Component" Notes="Zip multiple select">
+              <outline text="name" Value="'states'"/>
+              <outline text="label" Value="'States'"/>
+              <outline text="lookupName" Type="String" Value="'stateCodes: USA'"/>
+            </outline>
+          </outline>
+          <outline text="MGLocationPostalCodes" Type="Component" Notes="Multiple zips form">
+            <outline text="location" Type="String" Value="'location'"/>
+            <outline text="MGSelect" Type="Component" Notes="Country select">
+              <outline text="name" Type="String" Value="'country'"/>
+              <outline text="lookupName" Type="String" Value="'countries'"/>
+              <outline text="label" Type="String" Value="'Country'"/>
+            </outline>
+            <outline text="MGInput " Notes="TODO +++"/>
+          </outline>
+          <outline text="UXButton" Notes="Cancel or reset button">
+            <outline text="label" Value="'Cancel'"/>
+            <outline text="onClick" Value="onClose"/>
+          </outline>
+          <outline text="UXButton" Notes="Save button">
+            <outline text="label" Value="'Save'"/>
+            <outline text="onClick" Value="onSave"/>
+          </outline>
+        </outline>
+        <outline text="MGPostalCodes" Type="Component" Notes="Postal codes custom field" Date="10/20/18">
+          <outline text="form" Type="Form" Value="form"/>
+          <outline text="postalCodes" Type="String" Value="‘postalCodes’"/>
+        </outline>
+      </outline>
+    </outline>
+    <outline text="Apnea" _note="Description: An educational program for individuals who have undergone overnight sleep testing through their local sleep center." Type="Project" Notes="PD" Date="09/30/18">
+      <outline text="Dependencies">
+        <outline text="bootstrap"/>
+        <outline text="mobx"/>
+        <outline text="router5"/>
+        <outline text="reactstrap"/>
+        <outline text="react-to-print"/>
+        <outline text="pretty-checkbox"/>
+        <outline text="react-audio-player"/>
+        <outline text="react-click-outside"/>
+      </outline>
+      <outline text="Types">
+        <outline text="Question" Type="Object" Notes="Question definition">
+          <outline text="label" Type="String" Value="‘Who suggested you?’" Notes="Question title"/>
+          <outline text="type" Type="String" Value="‘text’" Notes="hidden|text|checkbox|radio|fieldset"/>
+          <outline text="keys" Type="Array" Value="[‘idea_doc’]" Notes="List of question keys"/>
+          <outline text="options" Type="Array" Notes="Question choices">
+            <outline text="title" Type="String" Value="‘A doctor recommended’" Notes="Option title"/>
+            <outline text="value" Type="String" Notes="Answer key"/>
+            <outline text="default" Type="String" Notes="Default value"/>
+            <outline text="hidden" Type="Bool" Notes="If hidden"/>
+            <outline text="embedded" Type="Object" Notes="Another question embedded">
+              <outline text="type" Type="String" Value="‘text’" Notes="Embed a text field"/>
+              <outline text="keys" Type="Array" Value="[‘goal_other_exp’]" Notes="List of question keys"/>
+              <outline text="options" Type="Array" Notes="Question choices"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="Services">
+        <outline text="questions" Type="Object" Notes="Questions def by pages">
+          <outline text="others"/>
+          <outline text="landing"/>
+          <outline text="whose-idea"/>
+          <outline text="etc."/>
+        </outline>
+        <outline text="pages"/>
+        <outline text="audios" Type="Object" Notes="Audio files">
+          <outline text="tour" Type="String" Value="‘tour.mp3’"/>
+          <outline text="etc."/>
+        </outline>
+        <outline text="Store" Type="Store" Notes="App Store"/>
+        <outline text="router" Type="Router" Notes="Router with routes">
+          <outline text="routes" Type="Array" Notes="Routes definition">
+            <outline text="home" Type="/"/>
+            <outline text="about" Type="/about"/>
+            <outline text="privacy" Type="/privacy"/>
+            <outline text="terms" Type="/terms"/>
+            <outline text="help" Type="/help"/>
+            <outline text="page" Type="/page" Value="pageRoutes"/>
+          </outline>
+          <outline text="usePlugin" Type="Function" Value="browserPlugin" Notes="Via `router5`"/>
+          <outline text="canActivate" Type="Function" Notes="Protect internal page">
+            <outline text="name" Type="String" Value="‘page’"/>
+            <outline text="toState"/>
+          </outline>
+          <outline text="canActivate" Type="Function" Notes="Protect preference 2">
+            <outline text="name" Type="String" Value="‘page.preference-2’"/>
+            <outline text="toState"/>
+          </outline>
+          <outline text="getPageName" Type="Function" Notes="Get page name from route"/>
+        </outline>
+        <outline text="storage" Type="File" Notes="Local storage support">
+          <outline text="saveStorage" Type="Function" Notes="Save answers to storage"/>
+          <outline text="resetStorage" Type="Function" Notes="Reset to default and save"/>
+          <outline text="fetchStorage" Type="Function" Notes="Fetch from storage and reset if null"/>
+        </outline>
+      </outline>
+      <outline text="Pages">
+        <outline text="About"/>
+        <outline text="Barriers"/>
+        <outline text="BenefitCrash"/>
+        <outline text="BenefitDeath"/>
+        <outline text="BenefitHeart"/>
+        <outline text="Benefits"/>
+        <outline text="BenefitSleepiness"/>
+        <outline text="BenefitSnoring"/>
+        <outline text="BenefitThinking"/>
+        <outline text="BenefitWellbeing"/>
+        <outline text="Decisions"/>
+        <outline text="Exit"/>
+        <outline text="Goals"/>
+        <outline text="Help"/>
+        <outline text="Home"/>
+        <outline text="Landing"/>
+        <outline text="NextSteps"/>
+        <outline text="PartialRiskFrequency"/>
+        <outline text="Plan"/>
+        <outline text="Preference1"/>
+        <outline text="Preference2"/>
+        <outline text="Privacy"/>
+        <outline text="Program"/>
+        <outline text="Resources"/>
+        <outline text="RiskCosts"/>
+        <outline text="RiskHassles"/>
+        <outline text="RiskModd"/>
+        <outline text="RiskMouth"/>
+        <outline text="Risks"/>
+        <outline text="RiskSkin"/>
+        <outline text="RiskStomach"/>
+        <outline text="RiskTeeth"/>
+        <outline text="Terms"/>
+        <outline text="Testimonial"/>
+        <outline text="TestResults"/>
+        <outline text="Tour"/>
+        <outline text="TreatmentDental"/>
+        <outline text="TreatmentHealthy"/>
+        <outline text="TreatmentNone"/>
+        <outline text="TreatmentPap"/>
+        <outline text="Treatments"/>
+        <outline text="TreatmentSurgeries"/>
+        <outline text="UntreatedOsa"/>
+        <outline text="Urgency"/>
+        <outline text="WhoseIdea"/>
+      </outline>
+      <outline text="Fields">
+        <outline text="Checkbox">
+          <outline text="label"/>
+          <outline text="options"/>
+          <outline text="keys"/>
+          <outline text="answers"/>
+          <outline text="answerChange"/>
+        </outline>
+        <outline text="Embedded">
+          <outline text="options"/>
+          <outline text="keys"/>
+          <outline text="answers"/>
+          <outline text="answerChange"/>
+        </outline>
+        <outline text="Field">
+          <outline text="store" Type="Store" Value="store"/>
+          <outline text="component" Type="Component"/>
+          <outline text="label" Type="String"/>
+          <outline text="options" Type="Array"/>
+          <outline text="keys" Type="Array"/>
+        </outline>
+        <outline text="Fieldset"/>
+        <outline text="Radio"/>
+        <outline text="Text"/>
+      </outline>
+      <outline text="UI">
+        <outline text="App" Type="Component">
+          <outline text="Provider" Type="Store" Value="store" Notes="Provide app store"/>
+          <outline text="ScrollToTop" Type="Component" Notes="Scroll to top for new route">
+            <outline text="children" Notes="Wrap children in"/>
+            <outline text="route" Notes="via `withRoute` "/>
+          </outline>
+          <outline text="Page" Type="Component">
+            <outline text="Header">
+              <outline text="PublicHeader"/>
+              <outline text="PageHeader"/>
+            </outline>
+            <outline text="Main"/>
+            <outline text="Footer"/>
+          </outline>
+        </outline>
+        <outline text="Header" Type="Component">
+          <outline text="PublicHeader" Type="Component" Notes="Public header">
+            <outline text="Link" Notes="Brand logo link">
+              <outline text="routeName" Type="String" Value="‘home’"/>
+              <outline text="routeOptions" Type="Object" Value="{reload: true}"/>
+            </outline>
+          </outline>
+          <outline text="HeaderPage" Type="Component" Notes="Header for internal pages">
+            <outline text="ClickOutside" Type="Component" Notes="Via `react-click-outside`"/>
+            <outline text="Audio" Type="Component" Notes="Audio"/>
+            <outline text="NavbarBrand" Type="Component" Notes="Via `reactstrap`"/>
+            <outline text="NavbarToggler" Type="Component" Notes="Via `reactstrap`"/>
+            <outline text="Collapse" Type="Component" Notes="Via `reactstrap`"/>
+            <outline text="Nav" Type="Component" Notes="Via `reactstrap`"/>
+            <outline text="NavItem" Type="Component" Notes="Via `reactstrap`"/>
+            <outline text="NavLink" Type="Component" Notes="Via `reactstrap`"/>
+          </outline>
+        </outline>
+        <outline text="Main" Type="Component">
+          <outline text="route" Type="Route" Notes="Injected via `withRoute`"/>
+          <outline text="store" Type="Store" Notes="Injected via `store`"/>
+          <outline text="Content" Type="Component" Value="routePages[route.name]" Notes="Page comp  based on route"/>
+          <outline text="Navigation" Notes="Navigation links for pages">
+            <outline text="page" Type="Page" Value="{}" Notes="Current page"/>
+            <outline text="store" Type="Store" Value="store" Notes="Injected via `store`"/>
+            <outline text="Link" Type="Component" Notes="Exit page button">
+              <outline text="routeName" Type="String" Value="‘page.exit’"/>
+            </outline>
+            <outline text="Link" Type="Component" Notes="Help page button">
+              <outline text="routeName" Type="String" Value="‘page.help’"/>
+            </outline>
+            <outline text="button" Type="Component" Notes="History back button">
+              <outline text="onClick" Type="Function" Value="history.back"/>
+            </outline>
+            <outline text="NextLink" Type="Component" Notes="Next page button">
+              <outline text="next" Type="String" Value="page.next"/>
+              <outline text="Link" Notes="Continue button">
+                <outline text="routeName" Type="String" Value="‘page.${next}’"/>
+              </outline>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="Footer" Type="Component">
+          <outline text="route" Type="Route" Notes="Injected via `routeNode`"/>
+          <outline text="PublicFooter" Notes="Public footer">
+            <outline text="Link" Type="routeName" Value="‘about’" Notes="About page button"/>
+            <outline text="Link" Type="routeName" Value="‘privacy’" Notes="Privacy page button"/>
+            <outline text="Link" Type="routeName" Value="‘Terms’" Notes="Terms page button"/>
+          </outline>
+          <outline text="PageFooter" Notes="Footer for internal pages">
+            <outline text="Link" Type="routeName" Value="‘about’" Notes="About page button"/>
+            <outline text="Link" Type="routeName" Value="‘privacy’" Notes="Privacy page button"/>
+            <outline text="Link" Type="routeName" Value="‘Terms’" Notes="Terms page button"/>
+            <outline text="Link" Notes="Brand logo link">
+              <outline text="routeName" Value="‘page.program’"/>
+              <outline text="routeOptions" Type="Object" Value="{reload: true}"/>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="Audio" Type="Component" Notes="Custom audio display">
+          <outline text="url" Type="String" Notes="Audio file url"/>
+          <outline text="autoplay" Type="Bool" Notes="If autoplay is enabled"/>
+          <outline text="onAudioChange" Type="Function" Notes="When play/stop is clicked"/>
+          <outline text="ReactAudioPlayer" Type="Component" Notes="via `react-audio-player`">
+            <outline text="src" Type="String" Value="url"/>
+            <outline text="listenInterval" Type="Number" Value="500"/>
+            <outline text="autoPlay" Type="Bool"/>
+            <outline text="onCanPlay" Type="Function"/>
+            <outline text="onListen" Type="Function"/>
+            <outline text="onPause" Type="Function"/>
+            <outline text="onPlay" Type="Function"/>
+            <outline text="onEnded" Type="Function"/>
+            <outline text="onError" Type="Function"/>
+            <outline text="Div">
+              <outline text="className" Type="String" Value="‘progress-bar’"/>
+              <outline text="style" Type="String" Value="{width}"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+    <outline text="Outliner - -" Type="Project" Value="QP" Notes="Outline viewer" Date="11/18/18">
+      <outline text="Dependencies">
+        <outline text="fast-xml-parser"/>
+      </outline>
+      <outline text="Services">
+        <outline text="Api">
+          <outline text="domain"/>
+          <outline text="fetch"/>
+          <outline text="getMenu"/>
+        </outline>
+        <outline text="Store" Type="Store">
+          <outline text="outline" Type="Object" Notes="Outline parsed json"/>
+          <outline text="menu" Type="Array" Notes="File Array"/>
+          <outline text="fetchMenu" Type="Function" Notes="Fetch file list"/>
+          <outline text="fetchOutline" Type="Function" Notes="Fetch outline file"/>
+        </outline>
+      </outline>
+      <outline text="UI">
+        <outline text="App" Type="Component">
+          <outline text="outline" Type="Object" Value="outline"/>
+          <outline text="Sidebar">
+            <outline text="menu"/>
+          </outline>
+        </outline>
+        <outline text="TreeList" Type="Component" Notes="Display tree table">
+          <outline text="root" Type="Node">
+            <outline text="title" Type="String"/>
+            <outline text="chidren" Type="Array"/>
+            <outline text="cols" Type="Array"/>
+          </outline>
+          <outline text="cols" Type="Array" Value="[]"/>
+          <outline text="Table">
+            <outline text="size" Type="String" Value="‘small’"/>
+          </outline>
+          <outline text="Table.Header"/>
+          <outline text="Table.Row"/>
+          <outline text="Table.HeaderCell"/>
+          <outline text="Table.Body"/>
+          <outline text="TreeNode">
+            <outline text="node" Type="Node" Value="node"/>
+            <outline text="level" Type="Number" Value="0"/>
+            <outline text="cols" Type="Array" Value="colDefs"/>
+          </outline>
+        </outline>
+        <outline text="TreeNode" Type="Component" Notes="Display tree node">
+          <outline text="node" Type="Node">
+            <outline text="title" Type="String"/>
+            <outline text="children" Type="Array"/>
+            <outline text="…values" Type="Object"/>
+          </outline>
+          <outline text="level" Type="Number" Value="0"/>
+          <outline text="cols" Type="Array"/>
+          <outline text="toggled" Type="Bool" Notes="Is node toggled"/>
+          <outline text="Table.Row"/>
+          <outline text="Table.Cell">
+            <outline text="style" Type="Object">
+              <outline text="paddingLeft" Value="8*level+8" Notes="Indent"/>
+            </outline>
+            <outline text="onClick" Type="Function" Value="toggle" Notes="Toggle node"/>
+          </outline>
+          <outline text="Icon">
+            <outline text="name" Type="String" Value="‘folder open’"/>
+          </outline>
+          <outline text="TreeNode">
+            <outline text="node" Type="Node" Value="item"/>
+            <outline text="level" Type="Number" Value="level+1"/>
+            <outline text="cols" Type="Array" Value="Cols"/>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+    <outline text="Math Test - -" Type="Project" Value="FA" Notes="Math work sheet" Date="11/15/18">
+      <outline text="Dependencies">
+        <outline text="Mobs"/>
+        <outline text="react-slick"/>
+      </outline>
+      <outline text="Types">
+        <outline text="Question" Type="Object">
+          <outline text="title" Type="String" Value="'3+2'"/>
+          <outline text="answer" Type="Number" Value="5"/>
+          <outline text="correct" Type="Bool" Value="true" Notes="If answered right"/>
+        </outline>
+        <outline text="Test">
+          <outline text="date" Type="Timestamp" Value="2018-10-22"/>
+          <outline text="questions" Type="Array" Value="Question" Notes="Array of question"/>
+          <outline text="score" Type="Number" Value="5" Notes="Total answered right"/>
+        </outline>
+      </outline>
+      <outline text="Services">
+        <outline text="TestCreator" Type="Class">
+          <outline text="generate(n)" Type="Function" Notes="Generate test with questions">
+            <outline text="return" Type="Object" Value="test"/>
+          </outline>
+        </outline>
+        <outline text="TestSheetStore" Type="Store">
+          <outline text="test" Type="Test" Notes="Current test"/>
+          <outline text="testStatus">
+            <outline text="questionCount" Type="Number" Value="5" Notes="Current question count"/>
+            <outline text="questionIndex" Type="Number" Value="2" Notes="Current question index"/>
+            <outline text="testStart" Type="Bool" Value="true" Notes="If test starts"/>
+            <outline text="testEnd" Type="Bool" Value="false" Notes="If test ends "/>
+          </outline>
+          <outline text="prepareTest" Type="Function" Notes="Generate a test"/>
+          <outline text="answer" Type="Function" Notes="Answer current question">
+            <outline text="index" Type="Number" Notes="Question index in test"/>
+            <outline text="value" Type="Number" Notes="User input"/>
+            <outline text="return" Type="Bool" Notes="If answer is correct"/>
+          </outline>
+          <outline text="nextQuestion" Type="Function" Notes="Goto next question">
+            <outline text="return" Type="Bool" Notes="If no question is left"/>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="UI">
+        <outline text="TestSheet" Type="Component" Notes="Test with questions ">
+          <outline text="sheet" Type="Store" Value="sheet" Notes="Test sheet store"/>
+          <outline text="TestQuestion" Type="Component" Notes="Present question">
+            <outline text="question" Type="Question" Value="{}"/>
+            <outline text="onAnswer" Type="Function" Value="answer"/>
+          </outline>
+          <outline text="TestControl" Type="Component" Notes="Test controls">
+            <outline text="Button" Notes="Restart Button">
+              <outline text="onClick" Type="Function" Value="prepareTest"/>
+            </outline>
+            <outline text="Button - -" Type="Component" Notes="Next Button">
+              <outline text="onClick" Type="Function" Value="nextQuestion"/>
+            </outline>
+          </outline>
+          <outline text="Slider" Type="Component" Notes="via `react-slick`">
+            <outline text="ref" Type="Ref" Value="slider">
+              <outline text="slickNext" Type="Function" Notes="Go to the next slide"/>
+            </outline>
+            <outline text="slidesToShow" Type="Number" Value="1"/>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+    <outline text="KB 2" Type="Project" Value="QP" Notes="Personal knowledge 2" Date="09/24/18">
+      <outline text="Dependencies">
+        <outline text="react"/>
+        <outline text="markdonw-it"/>
+        <outline text="mobx"/>
+        <outline text="react-spinner"/>
+      </outline>
+      <outline text="Services">
+        <outline text="Constant" Type="File" Notes="constant.js">
+          <outline text="appId" Type="String" Value="'kb2'"/>
+          <outline text="defaultArticleId" Type="String" Value="'todo/fang'"/>
+          <outline text="localStorageAppKey" Type="String" Value="'kb'"/>
+          <outline text="storedKeys" Type="String"/>
+          <outline text="appTitle" Type="String" Value="'Knowledgebase'"/>
+          <outline text="footerCreditMsg" Type="String" Value="'Patience is virtue.'"/>
+        </outline>
+        <outline text="ApiService" Type="Class">
+          <outline text="domain" Type="String" Value="'netlify'"/>
+          <outline text="getArticle(id)" Type="Function"/>
+          <outline text="getMenu" Type="Function"/>
+          <outline text="getApps" Type="Function"/>
+        </outline>
+        <outline text="MarkdownService" Type="Class">
+          <outline text="imports">
+            <outline text="markdown-it" Type="Package"/>
+            <outline text="markdown-it-attrs" Type="Package" Notes="{.class}"/>
+            <outline text="markdown-it-emoj" Type="Package" Notes=":+1:"/>
+            <outline text="markdown-it-anchor" Type="Package" Notes="title &amp; toc"/>
+            <outline text="markdown-it-deflist" Type="Package" Notes=": - definition"/>
+            <outline text="markdown-it-footnote" Type="Package" Notes="[^1]"/>
+            <outline text="markdown-it-figure-caption" Type="Package" Notes="figure caption"/>
+            <outline text="markdown-it-mark" Type="Package" Notes="== comments"/>
+          </outline>
+          <outline text="title" Type="String" Notes="Blog title"/>
+          <outline text="anchors" Type="Array" Notes="Blog headers"/>
+          <outline text="render(source)" Type="Function" Notes="Render markdown"/>
+        </outline>
+        <outline text="AppStore" Type="Class">
+          <outline text="status" Type="Object" Notes="Loading  status">
+            <outline text="loading" Type="Bool" Notes="API spinner status"/>
+            <outline text="activity" Notes="Site activity status"/>
+            <outline text="message"/>
+          </outline>
+          <outline text="menu" Type="Array" Notes="Article menu"/>
+          <outline text="article" Type="Object" Notes="UI article">
+            <outline text="id"/>
+            <outline text="html"/>
+            <outline text="title"/>
+            <outline text="anchors"/>
+            <outline text="anchor"/>
+            <outline text="level"/>
+          </outline>
+          <outline text="ui" Type="Object" Notes="UI status">
+            <outline text="sidenavOn" Type="Bool" Notes="If sidenav on"/>
+            <outline text="appnavOn" Type="Bool" Notes="If appnav on"/>
+            <outline text="tocOn" Type="Bool" Notes="If toc on"/>
+          </outline>
+          <outline text="apps" Type="Array" Notes="Site apps"/>
+          <outline text="appId" Type="String" Notes="Current app id"/>
+          <outline text="toggleSidenav" Type="Function" Notes="Toggle side nav"/>
+          <outline text="toggleAppnav" Type="Function" Notes="Toggle app nav"/>
+          <outline text="toggleToc" Type="Function" Notes="Toggle toc"/>
+          <outline text="toggleLevel" Type="Function" Notes="Toggle level"/>
+          <outline text="fetchMenu" Type="Function" Notes="Fetch article menu"/>
+          <outline text="fetchArticle" Type="Function" Notes="Fetch article"/>
+          <outline text="fetchApps" Type="Function" Notes="Fetch apps"/>
+          <outline text="startSpinner" Type="Function" Notes="Start spinner"/>
+          <outline text="stopSpinner" Type="Function" Notes="Stop spinner"/>
+        </outline>
+      </outline>
+      <outline text="Components">
+        <outline text="App">
+          <outline text="app" Type="Store" Value="App"/>
+          <outline text="Spinner">
+            <outline text="loading" Type="Bool"/>
+          </outline>
+          <outline text="Appnav">
+            <outline text="toggled" Type="Bool" Value="ui.appnavOn"/>
+            <outline text="apps" Type="Array" Value="apps"/>
+            <outline text="appId" Type="String" Value="appId"/>
+            <outline text="onClose" Type="Function" Value="toggleAppnav"/>
+          </outline>
+          <outline text="Navbar">
+            <outline text="title" Type="String" Value="article.title"/>
+            <outline text="onTocToggle" Type="Function" Value="toggleToc"/>
+            <outline text="onAppnavToggle" Type="Function" Value="toggleAppnav"/>
+          </outline>
+          <outline text="Toc">
+            <outline text="toggled" Type="Bool" Value="ui.tocOn"/>
+            <outline text="anchors" Type="Array" Value="article.anchors"/>
+            <outline text="onClose" Type="Function" Value="toggleToc"/>
+          </outline>
+          <outline text="ArticleAction">
+            <outline text="article" Type="Object" Value="article"/>
+            <outline text="toggleLevel" Type="Function" Value="toggleLevel"/>
+          </outline>
+          <outline text="Article">
+            <outline text="article" Type="Object" Value="article"/>
+            <outline text="toggleSidenav" Type="Function" Value="toggleSidenav"/>
+          </outline>
+          <outline text="Sidenav">
+            <outline text="toggled" Type="Bool" Value="ui.sidenavOn"/>
+            <outline text="onToggle" Type="Function" Value="toggleSidenav"/>
+            <outline text="menu" Type="Array" Value="menu"/>
+            <outline text="selected" Type="String" Value="article .id"/>
+          </outline>
+          <outline text="Credit">
+            <outline text="Message" Type="String" Value="footerCreditMsg"/>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+    <outline text="KB" Type="Project" Value="QP" Notes="Personal knowledge">
+      <outline text="Dependencies">
+        <outline text="vue"/>
+        <outline text="markdown-it"/>
+        <outline text="vue-click-outside"/>
+        <outline text="vue-resource"/>
+        <outline text="vue2-filters"/>
+      </outline>
+      <outline text="Components">
+        <outline text="App"/>
+      </outline>
+    </outline>
+    <outline text="Scheduler" Type="Project" Value="MA" Notes="Teacher assignment" Date="09/15/18">
+      <outline text="Dependencies">
+        <outline text="lodash"/>
+        <outline text="mobx"/>
+        <outline text="semantic-ui-react"/>
+        <outline text="react-csv-parse"/>
+        <outline text="react-to-print"/>
+      </outline>
+      <outline text="Types">
+        <outline text="Student" Type="Object">
+          <outline text="id" Type="String" Value="Libba" Notes="Student name"/>
+          <outline text="start" Type="Number" Value="12" Notes="3:00"/>
+          <outline text="end" Type="Number" Value="15" Notes="4:00"/>
+        </outline>
+        <outline text="Teacher" Type="Object">
+          <outline text="id" Type="String" Value="Simon" Notes="Teacher name"/>
+          <outline text="start" Type="Number" Value="12" Notes="3:00"/>
+          <outline text="end" Type="Number" Value="27" Notes="7:00"/>
+        </outline>
+        <outline text="Pref">
+          <outline text="id" Type="Student" Value="Libba" Notes="Student name"/>
+          <outline text="prefers" Type="Array" Value="['Simon']" Notes="Teacher preferences"/>
+          <outline text="rejects" Type="Array" Value="[]" Notes="Teacher rejects"/>
+        </outline>
+      </outline>
+      <outline text="Services">
+        <outline text="Constant" Type="Export" Notes="constant.js">
+          <outline text="slotMaxStudents" Type="Number" Notes="Max students per teacher"/>
+          <outline text="slotMinutes" Type="Number" Notes="Minutes per slot"/>
+          <outline text="slotsInDuration(minutes)" Type="Function" Notes="Slots in minutes"/>
+          <outline text="slotsPerHour" Type="Number" Notes="Slots per hour"/>
+          <outline text="slotPrintTime"/>
+          <outline text="slotHourShift"/>
+          <outline text="displayTimeToSlot"/>
+          <outline text="jsDateToSlot"/>
+          <outline text="printRowTeachers"/>
+          <outline text="printTeacherGroup"/>
+          <outline text="shuffleTeachers" Type="Bool" Value="true" Notes="Shuffle student teachers"/>
+        </outline>
+        <outline text="Filler" Type="Class">
+          <outline text="config"/>
+          <outline text="counts" Type="Array" Value="[2,3,2]" Notes="Level choices"/>
+          <outline text="typeFunc" Type="Func" Notes="Try function"/>
+          <outline text="initConfig" Type="Object"/>
+          <outline text="init()" Type="Func">
+            <outline text="counts"/>
+            <outline text="initConfig"/>
+            <outline text="tryFunc"/>
+          </outline>
+          <outline text="*start()" Type="Generator" Notes="Solver generator"/>
+        </outline>
+        <outline text="Scheduler2" Type="Class">
+          <outline text="shuffleTeacher" Type="Boolean" Value="true"/>
+          <outline text="maxStudentsPerTeacher" Type="Number" Value="3"/>
+          <outline text="data">
+            <outline text="students" Type="Array"/>
+            <outline text="teachers" Type="Array"/>
+            <outline text="prefs" Type="Array"/>
+          </outline>
+          <outline text="filler" Type="Filler" Notes="Filler object"/>
+          <outline text="prepare(data)" Type="Function"/>
+          <outline text="solver()" Type="Function"/>
+        </outline>
+      </outline>
+      <outline text="UI">
+        <outline text="Bootstrap" Notes="index.js">
+          <outline text="Router" Notes="via `react-router`">
+            <outline text="history" Notes="Browser history"/>
+          </outline>
+          <outline text="Provider">
+            <outline text="store" Type="Store"/>
+          </outline>
+          <outline text="Layout"/>
+          <outline text="App">
+            <outline text="Route" Notes="via `react-router`">
+              <outline text="path"/>
+              <outline text="component"/>
+            </outline>
+            <outline text="Student" Notes="path `/student`"/>
+            <outline text="Teacher" Notes="path `/teacher`"/>
+            <outline text="Pref" Notes="path `/pref`"/>
+            <outline text="Schedule" Notes="path `/`">
+              <outline text="Label" Notes="via `semantic-ui`"/>
+              <outline text="Spinner">
+                <outline text="enabled" Type="Boolean"/>
+              </outline>
+              <outline text="Print2" Notes="Print solution">
+                <outline text="slots" Type="Object" Notes="slots config"/>
+                <outline text="usages" Type="Object" Notes="teacher usages"/>
+              </outline>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head>
+    <title>purchases</title>
+    <expansionState>0,1,125,139,140,148,179,180,192,194,214</expansionState>
+  </head>
+  <body>
+    <outline text="Books">
+      <outline text="Collection">
+        <outline text="A Gift to My Children" _note="A Father’s Lessons for Life and Investing" Category="Investment" Where="Kindle"/>
+        <outline text="ABC's of Writing Winning Business Plans" Category="Business" Where="Kindle"/>
+        <outline text="Accounting At Your Fingertips" Category="Finance" Where="Safari"/>
+        <outline text="Advanced Transport Phenomena" Category="Science" Author="Gary Leal" Where="Dropbox"/>
+        <outline text="America’s War for the Greater Middle East" _note="A Military History" Rating="★★★★★" Category="Politics" Where="Kindle"/>
+        <outline text="Angular 2 By Example" Category="Software" Where="Safari"/>
+        <outline text="AngularJS Directives" Category="Software" Where="Safari"/>
+        <outline text="Backbone.js Essentials" Category="Software" Where="Dropbox"/>
+        <outline text="Backbone.js Essentials" Category="Software" Where="Safari"/>
+        <outline text="Big Debt Crisis" Rating="★★★★" Category="Investment" Author="Ray Dalio" Where="Kindle"/>
+        <outline text="Big Shifts Ahead" _note="Demographic Clarity For Business" Category="Business" Where="Kindle"/>
+        <outline text="Blunder" _note="Why Smart People Make Bad Decisions" Category="Help" Where="Kindle"/>
+        <outline text="Bonds" _note="The Unbeaten Path to Secure Investment Growth" Category="Investment" Where="Safari"/>
+        <outline text="Boombustology" _note="Spotting Financial Bubbles Before They Burst" Category="Investment" Where="Safari"/>
+        <outline text="Bootstrap Site Blueprints" Category="Software" Where="Safari"/>
+        <outline text="Catching Fire" _note="Hunger Games Trilogy, Book 1" Category="Novel" Where="Kindle"/>
+        <outline text="Client-Side Data Storage" Category="Software" Where="Safari"/>
+        <outline text="Commodities for Every Portfolio" _note="How You Can Profit from the Long-term Commodity Boom" Category="Investment" Where="Safari"/>
+        <outline text="CouchDB" _note="The Definitive Guide" Category="Software" Where="Safari"/>
+        <outline text="CSS 3 for Web Designer" Category="Software" Where="Dropbox"/>
+        <outline text="Data Visualization with D3 4.x Cookbook" Category="Software" Where="Safari"/>
+        <outline text="Essential Algorithms" _note="A Practical Approach to Computer Algorithms" Category="Software" Where="Safari"/>
+        <outline text="Exile on Wall Street" _note="One Analyst’s Fight to Save the Big Banks from Themselves" Rating="★★" Category="Finance" Where="Kindle"/>
+        <outline text="Expert Angular" Category="Software" Where="Safari"/>
+        <outline text="Family Wealth" _note="Keeping it in the Family" Rating="★★★★" Category="Finance" Where="Safari"/>
+        <outline text="Financial Turmoil in Europe and the United States" Category="Economy" Author="George Soros" Where="Safari"/>
+        <outline text="Flexbox in CSS" Category="Software" Where="Safari"/>
+        <outline text="Fooling Some of the People All of the Time" Rating="★★★★" Category="Investment" Where="Kindle"/>
+        <outline text="From Boom to Bust and Beyond" Category="Investment" Where="Kindle"/>
+        <outline text="Get Rich with Dividends" _note="A Proven System for Earning Double-Digit Returns" Category="Investment" Where="Safari"/>
+        <outline text="Good Debt, Bad Debt and a Better Way Forward" Category="Investment" Where="Kindle"/>
+        <outline text="Grokking Algorithms" _note="An illustrated guide for programmers and other curious people" Rating="★★★★★" Category="Software" Where="Safari"/>
+        <outline text="Guerrilla Marketing" _note="Easy and Inexpensive Strategies for Making Big Profits from Your Small Business" Category="Business" Where="Kindle"/>
+        <outline text="Havana, Cuba Travel Guide" Category="Help" Where="Kindle"/>
+        <outline text="High Performance MySQL" Category="Software" Where="Dropbox"/>
+        <outline text="Higher Probability Commodity Trading" Category="Investment" Where="Kindle"/>
+        <outline text="Hot Commondities" _note="How Anyone Can Invest Profitably in the World’s Best Market" Category="Investment" Where="Kindle"/>
+        <outline text="How I Made $2 Million in the Stock Market" _note="The Darvas system for stock market profits" Category="Trade" Where="Safari"/>
+        <outline text="How to Become a Nurse" _note="The Exact Roadmap that will Lead Your to a fulfilling Career in Nursing!" Category="Help" Where="Kindle"/>
+        <outline text="How to Fail at Almost Everything and Still Win Big" Rating="★★★★" Category="Help" Where="Kindle"/>
+        <outline text="How to Make Money in Stocks" Category="Investment" Where="Kindle"/>
+        <outline text="How to Pay Zero Taxes, 2018" _note="Your Guid to Every Tax Break the IRS allows" Category="Finance" Where="Safari"/>
+        <outline text="How to Price and Trade Options" _note="Identify, Analyze, and Execute the best Trade Probabilities" Category="Trade" Where="Safari"/>
+        <outline text="How to Really Ruin Your Financial Life and Portfolio" Rating="★★★★" Category="Finance" Author="Ben Stein" Where="Safari"/>
+        <outline text="Investing in Frontier Markets" _note="Opportunity, Risk and Role in an Investment Portfolio" Category="Investment" Where="Safari"/>
+        <outline text="Investing Psychology" _note="The Effects of Behavioral Finance on Investment Choice and Bias&#10;" Category="Trade" Where="Safari"/>
+        <outline text="Ionic in Action" _note="Hybrid Mobile Apps with Ionic and Angular JS" Category="Software" Where="Safari"/>
+        <outline text="Irrational Exuberance" Rating="★★★★" Category="Investment" Where="Kindle"/>
+        <outline text="Japanization" _note="What the World can Learn from Japan’s Lost Decades" Category="Economy" Where="Safari"/>
+        <outline text="Laravel Testing Decoded" _note="The testing book you've been waiting for" Purchase="11/1/13" Category="Software" Author="Jeffrey Way" Where="Dropbox"/>
+        <outline text="Learning Javascript Data Structures and Algorithms" Category="Software" Where="Safari"/>
+        <outline text="Leviathan Wakes" Category="Novel" Where="Kindle"/>
+        <outline text="Living Trusts for Everyone" _note="Why a Will is Note the Way to Avoid Probate, Protect Heirs, and Settle Estates" Category="Finance" Where="Kindle"/>
+        <outline text="Making Money with Option Strategies" Purchase="11/25/18" Rating="★★★★" Category="Investment" Author="Michael Thomsett" Where="Safari"/>
+        <outline text="Managing the VC Game" Category="Business" Where="Kindle"/>
+        <outline text="Mastering Regular Expression" Rating="★★★★" Category="Software" Where="Dropbox"/>
+        <outline text="Mastering Selenium WebDriver" Category="Software" Where="Safari"/>
+        <outline text="Mastering the VC Game" _note="A venture Capital Insider Reveals How to Get from Start-up to IPO on Your Terms" Category="Business" Where="Kindle"/>
+        <outline text="Mobile First" Category="Software" Where="Dropbox"/>
+        <outline text="Mobx Quick Start Guide" Category="Software" Where="Safari"/>
+        <outline text="Paypal Up and Running" Category="Software" Where="Dropbox"/>
+        <outline text="Practical ES6" Category="Software" Where="Safari"/>
+        <outline text="Predicting the Markets" _note="A Professional Autobiography" Category="Investment" Where="Kindle"/>
+        <outline text="Principles: Life and Work" Rating="★★★★" Category="Help" Author="Ray Dalio" Where="Kindle"/>
+        <outline text="Pro Angular JS" Category="Software" Where="Safari"/>
+        <outline text="Pro Couchbase Server" Category="Software" Where="Safari"/>
+        <outline text="Pro CSS3 Animation" Category="Software" Where="Safari"/>
+        <outline text="React Quickly" _note="Painless web apps with React, JSX, Redux and GraphQL" Category="Software" Where="Safari"/>
+        <outline text="Reactive Programming with RxJS 5" Category="Software" Where="Safari"/>
+        <outline text="Real Estate Note Investing" _note="Using Mortgage Notes to Passively and Massively Increase Your Income" Category="Finance" Where="Kindle"/>
+        <outline text="Rethinking the Economics of Land and Housing" Category="Investment" Where="Kindle"/>
+        <outline text="RxJS in Action" Category="Software" Where="Safari"/>
+        <outline text="Second Chance" _note="How to Make and Keep Big Money from the Coming Gold and Silver Shock" Category="Investment" Where="Kindle"/>
+        <outline text="Selling to the Government" _note="What it Takes to Compete and Win in the World’s Largest Market" Category="Business" Where="Kindle"/>
+        <outline text="Slash Your Retirement Risk" Category="Finance" Where="Safari"/>
+        <outline text="Spending Waves" _note="The scientific key to predicting market behavior for the next 20 years" Rating="★★★★★" Category="Investment" Author="Harry S. Dent" Where="Dropbox"/>
+        <outline text="SVG Essentials" Category="Software" Where="Dropbox"/>
+        <outline text="Tax Insight" _note="For Tax Year 2013 and Beyond" Category="Investment" Where="Safari"/>
+        <outline text="Test-Driving Javascript Applications" Category="Software" Where="Safari"/>
+        <outline text="The Aftershock Investor" _note="A Crash Course in Staying Afloat in a Sinking Economy" Category="Investment" Where="Kindle"/>
+        <outline text="The Age Curve" _note="How to Profit from the Coming Demographic Storm" Category="Economy" Where="Safari"/>
+        <outline text="The Big Short" _note="Inside the Doomsday Machine" Category="Investment" Where="Kindle"/>
+        <outline text="The Black Swan" _note="The Impact of the Highly Improbable" Category="Investment" Where="Kindle"/>
+        <outline text="The Breaking Point" _note="Profit from the Coming Money Cataclysm" Category="Investment" Where="Kindle"/>
+        <outline text="The Complete Guide to Option Selling" _note="How Selling Options Can Lead to Stellar Returns in Bull and Bear Markets" Category="Trade" Where="Safari"/>
+        <outline text="The Dao of Captal" _note="Austrian Investing in a Distorted World" Rating="★★★★★" Category="Investment" Where="Safari"/>
+        <outline text="The Death of Money" _note="The Coming Collapse of the international Monetary System" Category="Investment" Where="Kindle"/>
+        <outline text="The E-Myth Manager" _note="Leading Your Business Through Turbulent" Category="Business" Where="Kindle"/>
+        <outline text="The Five Rules for Successful Stock Investing" _note="Morningstar's Guide to Building Wealth and Winning in the Market" Category="Investment" Where="Kindle"/>
+        <outline text="The Forgotten Depression" _note="1921: The Crash That Cured Itself" Category="Economy" Where="Kindle"/>
+        <outline text="The Forgotten Man" _note="A New History of the Great Depression" Category="Economy" Where="Kindle"/>
+        <outline text="The Future for Investors" _note="Why the Tried and the True Triumphs Over the Bold and the New" Category="Investment" Where="Kindle"/>
+        <outline text="The Hunger Games" Category="Novel" Where="Kindle"/>
+        <outline text="The Intelligent Investor" Rating="★★★★" Category="Investment" Author="Benjamin Graham" Where="Safari"/>
+        <outline text="The Israel Lobby and U.S. Foreign Policy" Rating="★★★★" Category="Politics" Where="Kindle"/>
+        <outline text="The New Gold Standard" _note="Rediscovering the Power of Gold to Protect and Grow Wealth" Category="Investment" Where="Safari"/>
+        <outline text="The New Trading for a Living" _note="Psychology, Discipline, Trading Tools and System and Risk control" Category="Trade" Where="Safari"/>
+        <outline text="The Next Economic Disaster" _note="Why It’s Coming and How to Avoid it" Category="Investment" Where="Kindle"/>
+        <outline text="The Power Formula for LinkedIn Success" _note="Kick-start Your Business, Brand, and Job Search" Category="Business" Where="Kindle"/>
+        <outline text="The Rise and Fall of Nations" _note="Forces of Change in the Post-Crisis World" Category="Business" Where="Kindle"/>
+        <outline text="The Road to Ruin" _note="The Global Elites’ Secret Plan for the Next Financial Crisis" Category="Investment" Where="Kindle"/>
+        <outline text="The Sale of a Lifetime" _note="How the Great Bubble Burst of 2017-2019 can Make You Rich" Rating="★★★★★" Category="Investment" Author="Harry S. Dent" Where="Kindle"/>
+        <outline text="The Sales Magnet" _note="How to Get More Customers without Cold Calling" Category="Business" Where="Kindle"/>
+        <outline text="The Sector Strategist" _note="Using New Asset Allocation Techniques to Reduce Risk and Improve Investment Returns" Category="Investment" Where="Safari"/>
+        <outline text="The Silver Manifesto" Category="Investment" Where="Kindle"/>
+        <outline text="The Theory of Money and Credit" Rating="★★★★★" Category="Investment" Author="Ludwig von Mises" Where="Kindle"/>
+        <outline text="The Value of Debt" _note="How to Manage Both Sides of a Balance Sheet to Maximize Wealth" Category="Investment" Where="Safari"/>
+        <outline text="The Warren Buffett Philosophy of Investment" _note="How a Combination of Value Investing and Smart Acquisitions Drives Extraordinary Success" Category="Investment" Where="Safari"/>
+        <outline text="The Worse President in History" _note="The Legacy of Barack Obama" Category="Politics" Where="Kindle"/>
+        <outline text="Think Like an Option Trader" _note="How to Profit by Moving from Stocks to Options" Category="Trade" Where="Safari"/>
+        <outline text="Thinking in Bets" _note="Making Smarter Decisions When You Don’t Have All the Facts" Rating="★★★★★" Category="Help" Author="Annie Duke" Where="Kindle"/>
+        <outline text="This Time is Different" _note="Eight Centuries of Financial Folly" Category="Investment" Where="Kindle"/>
+        <outline text="Trade Like an O’Neil Disciple" _note="How We Made 18000% in the Stock Market" Category="Investment" Where="Safari"/>
+        <outline text="Trumped! " _note="A Nation on the Brink of Ruin." Category="Politics" Where="Kindle"/>
+        <outline text="Turning Silver in Gold" _note="How to Profit in the New Boomer Marketplace" Category="Investment" Where="Safari"/>
+        <outline text="Upside" _note="Profiting from the Profound Demographic Shifts Ahead" Category="Investment" Where="Kindle"/>
+        <outline text="Version Control with Git" Rating="★★★★★" Category="Software" Where="Dropbox"/>
+        <outline text="Vue.js 2 Web Development Projects" Category="Software" Where="Safari"/>
+        <outline text="Web Development with Bootstrap 4 and Angular2" Category="Software" Where="Safari"/>
+        <outline text="What to Say When You Talk to Your Self" Category="Help" Where="Kindle"/>
+        <outline text="Write Modern Web Apps with the MEAN stack" Category="Software" Where="Dropbox"/>
+        <outline text="You Can Be a Stock Market Genius" _note="Uncover the Secret Hiding Places of Stock Market" Category="Investment" Where="Kindle"/>
+        <outline text="Zero Hour" _note="Turn the Greatest Political and Financial Upheaval in Modern History to Your Advantage" Rating="★★★" Category="Investment" Author="Harry S. Dent" Where="Kindle"/>
+      </outline>
+    </outline>
+    <outline text="Hardware">
+      <outline text="Computer">
+        <outline text="iMac 21.5'       Mid 2011" Purchase="11/1/11"/>
+        <outline text="iMac 24'       Early 2009" Purchase="11/1/09"/>
+        <outline text="iMac 2x.5-inch  Late 2013" Purchase="11/1/13"/>
+        <outline text="Macbook Air 11'  Mid 2012" Purchase="11/1/12"/>
+        <outline text="Macbook Air 13'  Mid 2013" Purchase="11/1/13"/>
+        <outline text="Macbook Air 13'Early 2014" Purchase="11/1/14"/>
+        <outline text="Macbook Pro 13'  Mid 2009" Purchase="11/1/09"/>
+        <outline text="Macbook Pro 13' Late 2013" Purchase="11/1/13"/>
+        <outline text="Macbook Pro 15-inch, 2017" Purchase="11/1/18"/>
+      </outline>
+      <outline text="Electronics">
+        <outline/>
+      </outline>
+    </outline>
+    <outline text="Movies"/>
+    <outline text="Software">
+      <outline text="Free">
+        <outline text="Disk Inventory" Category="Utility"/>
+        <outline text="Google Chrome" Category="Browser"/>
+        <outline text="iTerm2" Category="Utility"/>
+        <outline text="Smart JSON Editor" Category="Editor"/>
+        <outline text="SourceTree" Category="Repo"/>
+        <outline text="Typora" Category="Editor"/>
+        <outline text="Visual Studio Code" Category="Editor"/>
+      </outline>
+      <outline text="Paid">
+        <outline text="1Password v3.8" Purchase="6/26/11" Category="Utility" Price="$39.99"/>
+        <outline text="1Password v5.4" Purchase="12/24/15" Category="Utility" Price="$24.61"/>
+        <outline text="Anarchy Bundle" Price="$15.00"/>
+        <outline text="Balsamiq" Price="$80.00"/>
+        <outline text="Bootstrap Studio"/>
+        <outline text="Bundle Hunt" Price="$20.00"/>
+        <outline text="CodeKit" Price="$30.00"/>
+        <outline text="CodeRunner" Price="$6.00"/>
+        <outline text="Dash" Category="Document" Price="$6.00"/>
+        <outline text="Divvy" Category="Utility" Price="$14.00"/>
+        <outline text="FiveNotes" Category="Utility" Price="$6.00"/>
+        <outline text="iState Menu" Category="Utility" Price="$4.00"/>
+        <outline text="Kaleidoscope" Price="$70.00"/>
+        <outline text="LaunchBar" Category="Utility" Price="$2.00"/>
+        <outline text="Little Snitch" Price="$2.00"/>
+        <outline text="MacHeist 3"/>
+        <outline text="MacHeist 4" Price="$20.00"/>
+        <outline text="MacUpdate Promo" Price="$60.00"/>
+        <outline text="MAMP PRO" Price="$20.00"/>
+        <outline text="NanoBundle 2" Price="$20.00"/>
+        <outline text="NanoBundle 3" Price="$10.00"/>
+        <outline text="NanoBundle 4" Price="$20.00"/>
+        <outline text="NanoBundle 5" Price="$20.00"/>
+        <outline text="Omini Outliner v4" Purchase="11/14/15" Category="Editor" Price="$50.00"/>
+        <outline text="Path Finder" Price="$9.00"/>
+        <outline text="Sketch" Price="$99.00"/>
+        <outline text="Sublime" Price="$50.00"/>
+        <outline text="Things" Price="$50.00"/>
+        <outline text="Tictoc" Category="Utility" Price="$5.00"/>
+        <outline text="Tower" Price="$60.00"/>
+      </outline>
+    </outline>
+    <outline text="Subscriptions">
+      <outline text="Active">
+        <outline text="Amazon AWS" Rating="★★" Category="Storage" Price="$24.00"/>
+        <outline text="CodePen" Rating="★★★" Category="Software" Price="$96.00"/>
+        <outline text="Dropbox" Purchase="11/6/13" Rating="★★★★" Category="Storage" Price="$100.00"/>
+        <outline text="Egghead" Purchase="12/11/17" Rating="★" Category="Video" Price="$140.00"/>
+        <outline text="Google Drive" Rating="★★★★" Category="Storage" Price="$5.00"/>
+        <outline text="Interview Cake" Rating="★★" Category="Software" Price="$100.00"/>
+        <outline text="Lifelock" Rating="★★" Category="Security" Price="$120.00"/>
+        <outline text="NYTimes" Purchase="8/22/17" Rating="★★★★★" Category="News" Price="$48.00"/>
+        <outline text="Quickbook" Rating="★★★" Category="Accouting" Price="$180.00"/>
+        <outline text="Safari Books" Purchase="8/1/16" Rating="★★★★★" Category="Book" Price="$213.00"/>
+        <outline text="TradingView" Purchase="1/27/18" Rating="★★★★" Category="Stock" Price="$108.00"/>
+      </outline>
+      <outline text="Company">
+        <outline text="IntelliJ IDEA" Price="$600.00"/>
+      </outline>
+      <outline text="Free">
+        <outline text="Adobe Spark"/>
+        <outline text="Bitbucket" Rating="★★★★★"/>
+        <outline text="Dynalist" Rating="★★★★"/>
+        <outline text="Forge.io"/>
+        <outline text="FRED"/>
+        <outline text="Github" Rating="★★★★★"/>
+        <outline text="IEX"/>
+        <outline text="InVisionApp" Purchase="9/30/18" Category="Design"/>
+        <outline text="Kindle Read" Rating="★★★★★"/>
+        <outline text="LastPass"/>
+        <outline text="Libib"/>
+        <outline text="MindMeister" Rating="★★★"/>
+        <outline text="Netlifty" Rating="★★★★"/>
+        <outline text="Quandl"/>
+        <outline text="Realtime Board" Purchase="11/1/18" Category="Planning"/>
+        <outline text="Stackedit.io" Rating="★★★"/>
+        <outline text="Trello" Rating="★★★★"/>
+        <outline text="UltiPro" Rating="★★★"/>
+        <outline text="Wunderlist"/>
+      </outline>
+      <outline text="Inactive">
+        <outline text="Amazon AWS" Purchase="9/3/15" Price="$24.00"/>
+        <outline text="Amazon Kindle" Price="$132.00"/>
+        <outline text="Digital Ocean" Purchase="4/1/15" Price="$60.00"/>
+        <outline text="Diigo" Purchase="5/31/17" Price="$40.00"/>
+        <outline text="DrupalizeMe" Price="$480.00"/>
+        <outline text="Economist" Price="$48.00"/>
+        <outline text="Egghead.IO" Purchase="11/11/17" Price="$139.00"/>
+        <outline text="Github" Price="$84.00"/>
+        <outline text="LinkedIn" Price="$240.00"/>
+        <outline text="Morningstar" Purchase="10/16/17" Price="$200.00"/>
+        <outline text="Net Magazine" Price="$60.00"/>
+        <outline text="Office 360" Price="$132.00"/>
+        <outline text="Sitepoint" Purchase="1/21/15" Price="$108.00"/>
+        <outline text="Speedee" Price="$36.00"/>
+      </outline>
+    </outline>
+  </body>
+</opml>
