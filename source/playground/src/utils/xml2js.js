@@ -16,14 +16,27 @@ function xml2js(source, format) {
 
 const parseOmniOutliner = (item) => {
   const {text, _note, ...otherAttribs} = item._attributes;
-  return {
+  const res = {
     title: text || '',
     note: _note || '',
     ...otherAttribs,
-    children: item.outline ? (Array.isArray(item.outline) ? 
-        item.outline.map(parseOmniOutliner) : [parseOmniOutliner(item.outline)]
-    ) : []
+    children: [],
+    cols: Object.keys(otherAttribs)
   }
+  if (!item.outline) {
+    return res;
+  }
+  res.children = Array.isArray(item.outline) ? 
+    item.outline.map(parseOmniOutliner) : [parseOmniOutliner(item.outline)];
+  res.cols = res.children.reduce((acc, item) => {
+    item.cols.forEach(col => {
+      if (acc.indexOf(col) <0) {
+        acc.push(col);
+      }
+    })
+    return acc;
+  }, res.cols);
+  return res;
 }
 
 export {
