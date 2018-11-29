@@ -26,8 +26,8 @@ class TableTree extends Component {
       <Table unstackable basic='very'>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell>{title}</Table.HeaderCell>
+            <Table.HeaderCell />
+            <Table.HeaderCell width='ten'>{title}</Table.HeaderCell>
             {colDefs2.map(col => (
               <Table.HeaderCell key={col.name}>{col.name}</Table.HeaderCell>
             ))}

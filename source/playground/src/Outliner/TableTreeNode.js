@@ -16,33 +16,35 @@ class TableTreeNode extends Component {
   }
 render() {
     const {node, level, cols, md} = this.props;
-    const {title, children, ...values} = node;
+    const {title, note, children, ...values} = node;
     const {toggled} = this.state;
     const items = children || [];
     const parse = v => (md ? md.render(v.toString()) : v);
     return (
       <Fragment>
         <Table.Row className={`level-${level}`}>
-          <Table.Cell></Table.Cell>
-          <Table.Cell
-            style={{ 
-              paddingLeft: 8*level + 8 + 'px',
-              cursor: 'pointer',
-              userSelect: 'none'
-            }}
+          <Table.Cell />
+          <Table.Cell className="title"
             onClick={() => {this.toggle(); }}
           >
-            {items.length > 0 ? (
-              toggled ? (
-                <Icon name="folder open outline" />
+            <span className="folder">
+              {items.length > 0 ? (
+                toggled ? (
+                  <Icon name="caret down" />
+                ) : (
+                  <Icon name="caret right" />
+                )
               ) : (
-                <Icon name="folder outline" />
-              )
-            ) : (
-              <Icon name="file outline" />
-            )}
-            <span dangerouslySetInnerHTML={{__html: parse(title)}} />
+                <Icon name="file outline" />
+              )}
+            </span>
+            <span className="caption" 
+              dangerouslySetInnerHTML={{__html: parse(title)}}
+            />
+            <span className="description">{note}</span>
           </Table.Cell>
+          {/* <Table.Cell>Jan 14</Table.Cell>
+          <Table.Cell>★★</Table.Cell> */}
           {cols.map(col => (
             <Fragment key={col.name}>
               <Table.Cell>{col.value(values)}</Table.Cell>
