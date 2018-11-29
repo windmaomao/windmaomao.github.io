@@ -8,7 +8,7 @@ import { Table, Icon } from 'semantic-ui-react'
 class TableTreeNode extends Component {
   constructor(props) {
     super(props);
-    this.state = { toggled: true };
+    this.state = { toggled: false };
   }
   toggle = () => {
     const {toggled} = this.state;  

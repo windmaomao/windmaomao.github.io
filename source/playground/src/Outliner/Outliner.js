@@ -15,10 +15,9 @@ store.fetchOutliner();
 
 const Outliner = ({ layout }) => {
   const {root} = store; 
-  const cols = ['Since', 'Rating'];
   return (
     <div className="content">
-      <TableTree root={root} cols={cols}></TableTree>
+      <TableTree root={root}></TableTree>
       {/* Enable following line for prototype version */}
       {/* <TablePrototype />  */}
     </div>
