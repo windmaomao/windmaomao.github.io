@@ -5,6 +5,9 @@ import {getXml} from '../utils/callApi';
 
 class OutlinerStore {
   root = {};
+  options = {
+    noteInRow: true
+  };
 
   fetchOutliner() {
     return getXml('opml/projects.opml').then(res => {
@@ -17,6 +20,7 @@ class OutlinerStore {
 
 decorate(OutlinerStore, {
   root: observable,
+  options: observable,
   fetchOutliner: action.bound,
 })
 

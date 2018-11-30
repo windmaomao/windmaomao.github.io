@@ -14,10 +14,10 @@ const store = new OutlinerStore();
 store.fetchOutliner();
 
 const Outliner = ({ layout }) => {
-  const {root} = store; 
+  const {root, options} = store; 
   return (
     <div className="content">
-      <TableTree root={root}></TableTree>
+      <TableTree root={root} options={options}></TableTree>
       {/* Enable following line for prototype version */}
       {/* <TablePrototype />  */}
     </div>

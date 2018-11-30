@@ -19,7 +19,7 @@ const setupColDefs = (cols) => {
 
 class TableTree extends Component {
   render() {
-    const {root: {title, children, cols}} = this.props;
+    const {root: {title, children, cols}, options} = this.props;
     const colDefs = cols || this.props.cols;
     const colDefs2 = setupColDefs(colDefs);
     return (
@@ -35,7 +35,10 @@ class TableTree extends Component {
         </Table.Header>
         <Table.Body>
             {children && children.map((node, i) => (
-              <TableTreeNode key={i} node={node} level={1} cols={colDefs2} />
+              <TableTreeNode key={i} 
+                node={node} level={1} 
+                cols={colDefs2} options={options}
+              />
             ))}
         </Table.Body>
         <Table.Footer fullWidth>
@@ -59,13 +62,15 @@ class TableTree extends Component {
 
 TableTree.defaultProps = {
   cols: [],
-  noteInRow: false
+  options: {
+    noteInRow: false
+  },
 }
 
 TableTree.propTypes = {
   root: PropTypes.object.isRequired,
   cols: PropTypes.array,
-  noteInRow: PropTypes.bool
+  options: PropTypes.object
 }
 
 export default TableTree;

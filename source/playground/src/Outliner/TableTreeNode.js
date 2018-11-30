@@ -15,7 +15,7 @@ class TableTreeNode extends Component {
     this.setState({ toggled: !toggled });
   }
 render() {
-    const {node, level, cols, md} = this.props;
+    const {node, level, cols, md, options} = this.props;
     const {title, note, children, ...values} = node;
     const {toggled} = this.state;
     const items = children || [];
@@ -41,14 +41,24 @@ render() {
             <span className="caption" 
               dangerouslySetInnerHTML={{__html: parse(title)}}
             />
-            <span className="description">{note}</span>
+            {!options.noteInRow && (
+              <span className="description">{note}</span>
+            )}
           </Table.Cell>
           {cols.map(col => (
             <Fragment key={col.name}>
               <Table.Cell>{col.value(values)}</Table.Cell>
             </Fragment>
           ))}
-        </Table.Row>        
+        </Table.Row>
+        {options.noteInRow && (
+          <Table.Row className={`level-${level} description`}>
+            <Table.Cell />
+            <Table.Cell className="title" colSpan={cols.length + 1}>
+              <span className="description">{note}</span>
+            </Table.Cell>
+          </Table.Row>
+        )}
         {toggled && items.map((item, i) => (
           <TableTreeNode key={i} node={item} level={level + 1} cols={cols} md={md} />
         ))}
@@ -58,7 +68,7 @@ render() {
 }
 
 TableTreeNode.defaultProps = {
-  md: null
+  md: null,
 }
 
 TableTreeNode.propTypes = {
