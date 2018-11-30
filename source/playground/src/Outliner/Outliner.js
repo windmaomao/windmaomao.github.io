@@ -9,7 +9,7 @@ import TableTree from './TableTree';
 import './Outliner.scss'; 
 // services
 import OutlinerStore from './OutlinerStore';
-
+// locals
 const store = new OutlinerStore();
 store.fetchOutliner();
 

@@ -2,10 +2,13 @@
 import {decorate, observable, action} from 'mobx';
 // services
 import {getXml} from '../utils/callApi';
+// locals
+const MarkdownIt = require('markdown-it'), md = new MarkdownIt();
 
 class OutlinerStore {
   root = {};
   options = {
+    markdown: md,
     noteInRow: true
   };
 

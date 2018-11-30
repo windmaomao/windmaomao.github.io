@@ -15,11 +15,12 @@ class TableTreeNode extends Component {
     this.setState({ toggled: !toggled });
   }
 render() {
-    const {node, level, cols, md, options} = this.props;
+    const {node, level, cols, options} = this.props;
     const {title, note, children, ...values} = node;
     const {toggled} = this.state;
     const items = children || [];
-    const parse = v => (md ? md.render(v.toString()) : v);
+    const {markdown, noteInRow} = options;
+    const parse = v => (markdown ? markdown.render(v.toString()) : v);
     return (
       <Fragment>
         <Table.Row className={`tree-row level-${level}`}>
@@ -38,10 +39,8 @@ render() {
                 <Icon name="file outline" />
               )}
             </span>
-            <span className="caption" 
-              dangerouslySetInnerHTML={{__html: parse(title)}}
-            />
-            {!options.noteInRow && (
+            <span className="caption">{title}</span>
+            {!noteInRow && (
               <span className="description">{note}</span>
             )}
           </Table.Cell>
@@ -52,11 +51,13 @@ render() {
           ))}
         </Table.Row>
         {note ? (
-          options.noteInRow && (
+          noteInRow && (
             <Table.Row className={`tree-row level-${level} note`}>
               <Table.Cell />
               <Table.Cell className="title" colSpan={cols.length + 1}>
-                <span className="description">{note}</span>
+                <span className="description" 
+                  dangerouslySetInnerHTML={{__html: parse(note)}}
+                />
               </Table.Cell>
             </Table.Row>
           )
@@ -64,7 +65,7 @@ render() {
         {toggled && items.map((item, i) => (
           <TableTreeNode 
             key={i} node={item} level={level + 1} 
-            cols={cols} md={md} options={options} />
+            cols={cols} options={options} />
         ))}
       </Fragment>
     );

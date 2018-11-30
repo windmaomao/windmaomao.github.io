@@ -2,101 +2,19 @@
 <opml version="1.0">
   <head>
     <title>projects</title>
-    <expansionState>12,25,29,41,56,66,70,79,80,90,94,96,150,155,158,173,177,198,199,200,217,218,220,224,228,233,241,244,249,257,258,265,273,278,281,285,289,293,297,300,303</expansionState>
+    <expansionState>0,1,2,3,15,25,29,31</expansionState>
   </head>
   <body>
-    <outline text="MercuryGate International" _note="Position: Senior Front-end Developer&#10;People: Scott Johnson (Director), Chris Swift(Front), Barbara Reed (Backend), Oliver Hargreaves (PM)&#10;Rate: 110K, all holidays, 10 days off, insurance, senior front-end, all teams backup" Since="Aug 18" Rating="★★★">
-      <outline text="Posted Equipment" Since="Oct 18">
-        <outline text="init" Since="Oct 18"/>
-      </outline>
-      <outline text="Shipping Order Dashboard" Since="Aug 18">
-        <outline text="init" Since="Aug 18"/>
-      </outline>
-    </outline>
-    <outline text="Deutsche Bank" _note="Position: AngularJS Front-end Developer&#10;People: Thomas Rudolph (Director), Svetlana  Nikitina(Backend), Anju Yadav (Test), Shihka(BA), Shrine (Data), Vlad (BA)&#10;Company: Lexsoft (Offshore)&#10;Rate: 93K, *8/6=60/hr , all holidays, 10 days off, insurance, entry front-end, all teams backup" Since="Sep 15" Rating="★★★★">
-      <outline text="Reports Center" Since="Apr 18">
-        <outline text="Init" Since="Apr 18"/>
-      </outline>
-      <outline text="Market Clearing Console" _note="A single UI for operations, container for markets Clearing apps in one place: multiple apps can share on screen, standardized navigation - launch in same or new tabs, standardized look and feel. A rapid application dev framwork: simple set of directives and services - provides headers, navigation, entitlements, etc; easy onboarding of new apps. It could extended to a framework for renovation of Global Prime Portal with streamlined and enhanced entitlements." Since="Jan 17" Rating="★★★★★">
-        <outline Since="Jan 17"/>
-      </outline>
-      <outline text="GMI West" _note="Provided AngularJS UI architect for GMI West AOF applications. Served as the tech lead and project manager of six team members (UIs, API, backend developers and business analysts). Large banking account open form, categorized by pages and regions, needs to be displayed, validated and submitted for end-users. I held morning standup meeting in daily basis, and provided demos to shareholder in weekly basis, as well as providing architect training for entry level UI developers." Since="Jul 16">
-        <outline text="Techs" _note="Bootstrap, AngularJS 1.4"/>
-        <outline text="Updates">
-          <outline text="Theme Design" _note="Extend Bootstrap following corporate theme guideline"/>
-          <outline text="Front-end Build" _note="Custom Gulp build working with corporate deployment infrastructure"/>
-          <outline text="Hierarchy Routes" _note="Book-like chapter navigation between different forms for multiple regions"/>
-          <outline text="Form Design" _note="Consistent form element between IE/Chrome browser, including radio, date and dropdown (Chosen)"/>
-          <outline text="Widget Design" _note="Custom dialog, composite dropdown group, and various custom widget development"/>
-          <outline text="Continuous Integration" _note="Jenkins deployment with every Git commit"/>
-          <outline text="Fields Meta" _note="Establish form fields forward/backward mapping between API and UI and keep them in sync"/>
-          <outline text="Modular CSS" _note="CSS framework extending bootstrap, other vendors and individual page components"/>
-          <outline text="Modular JS" _note="AngularJS framework with each feature nested via module dependency"/>
-          <outline text="Async Operations" _note="Series of async calls chained together to perform UI tasks"/>
-          <outline text="Form Validation" _note="Automatic forms validation driven by fields meta data "/>
-          <outline text="MVC Model" _note="Extremely fat model with wrapped business logic coupled with preset lookups data"/>
-        </outline>
-        <outline text="Tasks" Since="Jul 16">
-          <outline text="mark" Since="Oct 16"/>
-          <outline text="init" Since="Jul 16"/>
-        </outline>
-      </outline>
-      <outline text="Event" _note="Position: NodeJS developer&#10;Project:&#10;People: Sagar, Mia, Thomas&#10;Description: " Since="Mar 16">
-        <outline text="Tasks" Since="Mar 16">
-          <outline text="Add restify+mongoose config driven framework" Since="Mar 16"/>
-        </outline>
-      </outline>
-      <outline text="dbVals" _note="Position: Front-end AngularJS developer&#10;Project: UI development, Repo&#10;People: Anju (Test), Shihka (BA), Vlad (BA), Sagar (Backend), Svetlana (Backend), Shrini (Data)&#10;Description: create portal for reviewing statements for audit purpose." Since="Sep 15">
-        <outline text="Problems">
-          <outline text="Deviate too much from the original business plan"/>
-          <outline text="No one agrees with these new changes"/>
-          <outline text="New technology has been brought after business plan has been written"/>
-          <outline text="Aggressive on project deadline without risk assessment"/>
-          <outline text="Micro-level control to kill the productivity of individual team members"/>
-        </outline>
-        <outline text="Milestones">
-          <outline text="Prepare launch infrastructure"/>
-          <outline text="Develop UI and backend service"/>
-        </outline>
-        <outline text="Updates" Since="Sep 15">
-          <outline text="Error handling for 200, 400, and 500 respectively" Since="Jan 16"/>
-          <outline text="Add CSRF token implementation" Since="Dec 15"/>
-          <outline text="Create generic API bucket service (not done)" Since="Dec 15"/>
-          <outline text="Add angularJS documentation" Since="Dec 15"/>
-          <outline text="Add company/entity selector workflow" Since="Dec 15"/>
-          <outline text="Parallel tasks before page load" Since="Dec 15"/>
-          <outline text="Generate code coverage and ensure 80% above" Since="Nov 15"/>
-          <outline text="Unit test controller, directive, services" Since="Nov 15"/>
-          <outline text="Develop recipient email list directive" Since="Nov 15"/>
-          <outline text="Apply angularJS framework and build" Since="Oct 15"/>
-          <outline text="Draft html version based on design" Since="Oct 15"/>
-          <outline text="Draft statement audition page design" Since="Sep 15"/>
-          <outline text="Project kickoff" Since="Sep 15"/>
-        </outline>
-      </outline>
-      <outline text="Entitlement id:9" _note="Position: Backend NodeJS developer&#10;Project: Analysis, Repo" Since="Dec 15">
-        <outline text="Updates" Since="Dec 15">
-          <outline text="Design, document and test migration steps" Since="Jan 16"/>
-          <outline text="Export excel action lists for legal entity, parent and user" Since="Jan 16"/>
-          <outline text="Analysis on oracle database via query and synonyms" Since="Jan 16"/>
-          <outline text="Operate on oracle database to draft migration plan of users" Since="Jan 16"/>
-          <outline text="Use request to talk to service and display results on std" Since="Jan 16"/>
-          <outline text="Thorough understanding on parent, legal entity, user and feature entitlement" Since="Dec 15"/>
-          <outline text="Work with mongoDB with monk" Since="Dec 15"/>
-          <outline text="Setup command line tool using flatiron" Since="Dec 15"/>
-        </outline>
-      </outline>
-      <outline text="MI" _note="Position: Front-end AngularJS developer" Since="Feb 16">
-        <outline text="Updates" Since="Feb 16">
-          <outline text="Draft fix column multi section complex header table " _note="AngularJS: angular-datatables&#10;CSS: table" Since="Feb 16"/>
-          <outline text="Plot metric charts with multiple business and regions" _note="AngularJS: NVD3" Since="Feb 16"/>
-          <outline text="Design grid table for multiple business, region, metric and aggregation type" _note="CSS: table&#10;Bootstrap: collapse"/>
-        </outline>
-      </outline>
-    </outline>
     <outline text="QPLOT" _note="Position: Owner" Since="Jan 14">
-      <outline text="Playground" _note="Project: Repo&#10;Description: Would like to reduce cost in developing prototyping decent apps by leveraging infrastructure provided by framework. This is to explore an idea to see if a long term development environment can be established for sustainability. And this is extended by using GitHub one repo and further inspired by MercuryGate’ large code reservoir." Since="Nov 18" Rating="★★">
-        <outline text="Outliner" _note="Display xml outliner file on web via opml file format" Since="Nov 18"/>
+      <outline text="Playground" _note="Project: Repo&#10;Description: Would like to reduce cost in developing prototyping decent apps by leveraging infrastructure provided by framework. _This is to explore an idea to see if a long term development environment can be established for sustainability_. And this is extended by using GitHub one repo and further inspired by MercuryGate’ large code reservoir." Since="Nov 18" Rating="★★">
+        <outline text="Outliner" _note="Prototype: Codepen &#10;Omnioutliner file visualizer on web" Since="Nov 18">
+          <outline text="Todo" Since="Nov 18">
+            <outline text="Support markdown rendering on note"/>
+            <outline text="Support one line row note" Since="Nov 18"/>
+            <outline text="Make color consistent between web and app" Since="Nov 18"/>
+            <outline text="Prototype tree table view" Since="Nov 18"/>
+          </outline>
+        </outline>
         <outline text="TestSheet" _note="Math question answer sheet for basic operations" Since="Nov 18"/>
         <outline text="Layout" _note="Unified layout shell for common message handling and header" Since="Nov 18"/>
         <outline text="Highlights" Since="Nov 18"/>
@@ -105,7 +23,7 @@
         <outline text="stable"/>
         <outline text="init" Since="Sep 18"/>
       </outline>
-      <outline text="Github - aka. KB" _note="Project: Repo&#10;Description: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. And from idea to production it takes less than one month. “The workflow it established is fundamental scalable in terms of bringing ideas/data from paper level to potential organized format.”" Since="Jan 18" Rating="★★★★">
+      <outline text="Github - aka. KB" _note="Project: Repo&#10;Description: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. And from idea to production it takes less than one month. _“The workflow it established is fundamental scalable in terms of bringing ideas/data from paper level to potential organized format.”_" Since="Jan 18" Rating="★★★★">
         <outline text="Hosting">
           <outline text="Main"/>
         </outline>
@@ -197,215 +115,5 @@
         <outline text="Setup project with tests at github" Since="Dec 15"/>
       </outline>
     </outline>
-    <outline text="PeopleDesigns" _note="Position: PHP Developer&#10;People: David Farrell (Owner), Brandon Helsel (Express)&#10;Rate: $43/hr&#10;Status: Support stage, low level of budget but steady development " Since="May 14" Rating="★★★★">
-      <outline text="Apnea" _note="Project: individuals undergone overnight sleep testing" Since="Sep 18">
-        <outline text="Update" Since="Sep 18">
-          <outline text="init" Since="Sep 18"/>
-        </outline>
-      </outline>
-      <outline text="Prepare 3" _note="Project: New design for legacy Prepare" Since="Aug 16">
-        <outline text="Updates" Since="Aug 16">
-          <outline text="init" Since="Aug 16"/>
-        </outline>
-      </outline>
-      <outline text="Prepare 2" _note="Project: Renovation of Prepare Application" Since="Aug 14">
-        <outline text="Update" Since="Aug 14">
-          <outline text="Add theme and content path fallback" Since="Feb 16"/>
-          <outline text="Add notification message for mobile device" Since="Jan 16"/>
-          <outline text="Login anonymous user after skipping signup" Since="Jan 16"/>
-          <outline text="Add CSRF protection" Since="Nov 15"/>
-          <outline text="Make idle page to sign out user after idle time" Since="Sep 15"/>
-          <outline text="Display popup for unsupported browser usage" Since="Dec 14"/>
-          <outline text="Use token to track  both anonymous and login user" Since="Nov 14"/>
-          <outline text="Add activity tracking for each page" Since="Sep 14"/>
-          <outline text="Kickoff project" Since="Aug 14"/>
-        </outline>
-      </outline>
-      <outline text="SRCE" Since="Jan 16">
-        <outline text="Adjust logo size for both desktop and mobile version" Since="Jan 16"/>
-      </outline>
-      <outline text="OBChat" Since="May 14">
-        <outline text="Fix question scales text" Since="Jan 15"/>
-        <outline text="Kickoff" Since="May 14"/>
-      </outline>
-    </outline>
-    <outline text="TopFitPros" _note="On-board: Found my resume in &#10;Position: Web Developer&#10;People: Jim Frith (Owner), Josh Rickert (Developer), Zach Burk (Developer), Dan Rickert (Video)&#10;Rate: 25*4 = 100/hr&#10;Status: Active, however it’s not pushing forward due to lack of basic infrastructure and unrealistic demanding of production ready features." Since="Feb 15">
-      <outline text="TopFitPros Wordpress" _note="Site:  url"/>
-      <outline text="Eamayw UI" _note="Staging: ec2 &#10;Description: "/>
-      <outline text="Backend" _note="Project: Git&#10;Technology: Sails&#10;Description: Started as Guided workout backend, and now turns into TopFitPros backend" Since="Jun 15">
-        <outline text="Update" Since="Jun 15">
-          <outline text="Port food search with Sequalize and Postgres" _note="search with food scores based on partial or full matching" Since="Mar 16"/>
-          <outline text="Host sails on aws beanstalk" _note="Server: aws-beanstalk&#10;NodeJS: sails" Since="Feb 16"/>
-          <outline text="Add JWT authentication " _note="NodeJS: jwt" Since="Feb 16"/>
-          <outline text="Model from Drupal database"/>
-          <outline text="Support commerce purchase with credit card" _note="Javascript: stripe" Since="Sep 15"/>
-          <outline text="Prototype sites with all mockup and static content" _note="HTML: assemble" Since="Aug 15"/>
-          <outline text="Design video and break workflow" _note="Javascript: jquery.countdown" Since="Aug 15"/>
-          <outline text="Play video with jwplayer" _note="Javascript: jwplayer" Since="Aug 15"/>
-          <outline text="Model workout, exercise, locations"/>
-          <outline text="Use swagger to document and test API" _note="Doc: swagger" Since="Jul 15"/>
-          <outline text="Model space, area, and equipment" _note="NodeJS: waterline" Since="Jun 15"/>
-          <outline text="Support session based authentication" _note="NodeJS: passport, bcrypt" Since="Jun 15"/>
-          <outline text="Host front-end via backend" _note="NodeJS: sails" Since="Jun 15"/>
-          <outline text="Use sails backend engine" _note="NodeJS: sails, sails-disk" Since="Jun 15"/>
-        </outline>
-      </outline>
-      <outline text="Guided Workout" _note="Project: client backend&#10;Technology: NodeJS (Sails), AngularJS" Since="Jun 15">
-        <outline text="Submit profile" Since="Nov 15"/>
-        <outline text="Kickoff" Since="Jun 15"/>
-      </outline>
-      <outline text="Recipe Prototype" _note="Technology: NodeJS, AngularJS&#10;Project: repo" Since="Feb 15">
-        <outline text="Add documentation" Since="May 15"/>
-        <outline text="Kickoff" Since="Feb 15"/>
-      </outline>
-    </outline>
-    <outline text="NewStone Realty" _note="Position: Web Developer&#10;Rate: 20*5=100/hr&#10;Status: Support stage, lack of budgets" Since="Jan 15">
-      <outline text="NewStone Website" _note="Description: &#10;Project: Remodel newstone website, Repo&#10;People: Fang Jin (Lead), Zach (Content), Lisa (Designer), Steve (Owner)&#10;Tech: AngularJS, NodeJS, Sails, CSS, Grunt, Git" Since="Jan 15">
-        <outline text="Updates" Since="Jan 15">
-          <outline text="SEO strategy redirect www to non www" _note="Server: nginx, redirect" Since="Feb 16"/>
-          <outline text="Create search widget for both mobile and desktop" _note="AngularJS: angular.filter&#10;CSS: css, media-query" Since="Feb 16"/>
-          <outline text="Model school and add school to search" _note="AngularJS: ui-select" Since="Dec 15"/>
-          <outline text="Fetch IDX page and hack it into right look and feel" Since="Dec 15"/>
-          <outline text="Create simple auth for admin only" _note="AngularJS: ui.route" Since="Dec 15"/>
-          <outline text="Document front-end angularJS code" _note="Grunt: ngdocs" Since="Dec 15"/>
-          <outline text="Document backend NodeJS code" _note="NodeJS: jsdoc" Since="Dec 15"/>
-          <outline text="Support dropdown search from neighborhood, city, school and zip" _note="AngularJS: ui.select, ngSanitize" Since="Nov 15"/>
-          <outline text="Support auto git deploy" _note="Git: git-hook" Since="Aug 15"/>
-          <outline text="Combine front and back routes in same server" _note="Sails" Since="Aug 15"/>
-          <outline text="Switch off database data from code repository" _note="Sails: sails-disk" Since="Jul 15"/>
-          <outline text="Switch off resource file revision" _note="Grunt: filerev" Since="Jul 15"/>
-          <outline text="Model neighborhood and create API" _note="NodeJS: waterline" Since="Jul 15"/>
-          <outline text="Add html5 support while removing hashbang" _note="Grunt: connect-modrewrite" Since="Jul 15"/>
-          <outline text="NodeJS express server with custom resource model" _note="NodeJS: express, jfs" Since="Mar 15"/>
-          <outline text="Kickoff" Since="Jan 15"/>
-        </outline>
-      </outline>
-    </outline>
-    <outline text="PlusDelta Technologies" _note="Position: Drupal Developer&#10;People: David Pfeiffenberger (CEO), Mike Fahy (iPhone)&#10;Rate: 50/hr, 81K&#10;Status: Leave due to lack of skills in using Drupal, lack of skills in contributing projects" Since="Sep 13">
-      <outline text="AuditTrac PD" Since="Nov 13">
-        <outline text="Update latest progress" Since="Nov 13"/>
-      </outline>
-      <outline text="PharmTrac PD" Since="Sep 13">
-        <outline text="Fired" Since="Sep 13"/>
-        <outline text="Kickoff"/>
-      </outline>
-    </outline>
-    <outline text="AlphaMedPress" _note="Position: Drupal Developer&#10;People:&#10;Rate:&#10;Status: Lack of budget and no clear direction on scope" Since="Oct 13">
-      <outline text="Stemcell" Since="Oct 13">
-        <outline text="Add css fix" Since="Aug 14"/>
-        <outline text="Kickoff" Since="Oct 13"/>
-      </outline>
-    </outline>
-    <outline text="RxAnte" _note="Position: Drupal Developer&#10;People:&#10;Rate: 87K, 42*2 = 84/hr, holidays&#10;Status: Left the company due to switch of personal goal from backend to front-end and lack of my role in the project" Since="Sep 14">
-      <outline text="DataTools" Since="Sep 14">
-        <outline text="Leave position" Since="Mar 15"/>
-        <outline text="Create table display of providers" Since="Feb 15"/>
-        <outline text="Kickoff project" Since="Sep 14"/>
-      </outline>
-    </outline>
-    <outline text="DesignHammers" _note="Position: Drupal Developer&#10;People: David Minton (Owner), Frank Yonnetti (Front-end), Jay Roberts (Backend), Stephen Pashby (PM), Kosta Harian (Backend)&#10;Rate:50/hr&#10;Status: Leave due to lack of budget and mis-management on budget as well as bossy team member" Since="Oct 13">
-      <outline text="PGH Awards" Since="Oct 13">
-        <outline text="Add Application reviewer view" Since="Apr 14"/>
-        <outline text="Kickoff" Since="Oct 13"/>
-      </outline>
-    </outline>
-    <outline text="Duke Trinity" _note="Position: Drupal Developer&#10;People: Edward Gnomes (Director)&#10;Rate: 45/hr, 70/hr&#10;Status: Leave due to lack of project budget in supporting QPLOT" Since="Sep 14">
-      <outline text="Advising Circle" Since="Sep 14"/>
-      <outline text="Trinity Website">
-        <outline text="Kickoff"/>
-      </outline>
-    </outline>
-    <outline text="Drupal Connect" _note="On-board: Applied on Drupal.org&#10;Position: Drupal developer&#10;People: John Florez (CEO), Chad Hester (Drupal Lead)&#10;Status: Not much project to do, and not happy about Chad’s leadership, however the client seems to be solid.&#10;Rate: 50/hr" Since="Apr 14">
-      <outline text="Website" Since="May 14">
-        <outline text="Add foundation fix" Since="May 14"/>
-        <outline text="Kickoff" Since="May 14"/>
-      </outline>
-      <outline text="HAARP" _note="Havard project" Since="Apr 14">
-        <outline text="Fix bug in testing" Since="Apr 14"/>
-        <outline text="Kickoff"/>
-      </outline>
-    </outline>
-    <outline text="Medecision" _note="Position: AngularJS and UI&#10;People: Murali Kurukunda (Director), Arvind Paul (Architect), Dave Herzog (Frontend), Richard Small (BA)&#10;Rate: 40*4 = 160/hr" Since="May 15">
-      <outline text="Data Ingestion" _note="Project: Test Bed - UI&#10;People: Mark Albright"/>
-      <outline text="Admin App" _note="Position: Front-end AngularJS developer&#10;Project: UI and workflow design&#10;People: Arvind Paul (Architect), Dave Herzog (Frontend), Richard Small (BA)&#10;Status: UI finished, however the entire scope is cancelled due to unclear expectation, over sophisticated architecture and chaotic resource shift" Since="May 15">
-        <outline text="Cancellation of the project" Since="Jun 15"/>
-        <outline text="Create slidable sidebar" Since="Jun 15"/>
-        <outline text="Manager user list and permissions" Since="Jun 15"/>
-        <outline text="Apply authentication token" Since="Jun 15"/>
-        <outline text="Create google like context menu " Since="May 15"/>
-        <outline text="Apply corp style guide" Since="May 15"/>
-        <outline text="Kickoff project" Since="May 15"/>
-      </outline>
-    </outline>
-    <outline text="CleanAir" _note="Position: Web Developer&#10;Technology: MySQL, Loopback, AngularJS, Metronic&#10;Project: Repo&#10;Rate: 0/hr, 15*3 = 45/hr, 25*3 = 75/hr" Since="Nov 15">
-      <outline text="Draft" Since="Nov 15">
-        <outline text="Draft search page for multiple content types" Since="Jan 16"/>
-        <outline text="Write project technology planning documentation" Since="Jan 16"/>
-        <outline text="Add project best practice guideline" Since="Dec 15"/>
-        <outline text="Draft project with theme and mockup data" Since="Dec 15"/>
-        <outline text="Kickoff" Since="Nov 15"/>
-      </outline>
-    </outline>
-    <outline text="Ndustrial IO" _note="On-board: require to finish a week project as a test for employment&#10;Position: AngularJS Developer&#10;People: Isaac Castelan (Recruiter)&#10;Company: Procom (Recruit)&#10;Rate: 50*4 = 200/hr" Since="May 15">
-      <outline text="Admin Portal" _note="Project: Understanding the offshore codebase&#10;Position: AngularJS developer&#10;People: John Crawford (CTO)&#10;Status: Cancelled due to my unwillingness to join the team with lack of project fund and uncompetitive rate against Russian offshore company" Since="May 15">
-        <outline text="Cancellation of project" Since="Jul 15"/>
-        <outline text="Management of user info and permissions" Since="Jul 15"/>
-        <outline text="Fetch and display tree structure info" Since="Jun 15"/>
-        <outline text="Integration of API for resource loading" Since="Jun 15"/>
-        <outline text="Add multiple menu navigation" Since="Jun 15"/>
-        <outline text="Kickoff project" Since="May 15"/>
-      </outline>
-    </outline>
-    <outline text="NC Public School" _note="On-board: Get personal phone call from the director&#10;People: Traci Tillis (Director), Alice Shen (Developer)&#10;Company: Trigyn (Recruit)&#10;Rate: 45*5 = 225/hr" Since="Apr 15">
-      <outline text="NCPS Drupal" _note="Project: Evaluation of Drupal conversion project&#10;Status: Evaluation is successful, however the project is cut due to lack of budget." Since="Apr 15">
-        <outline text="Draft of migration plan" Since="May 15"/>
-        <outline text="Evaluation of sitemap" Since="May 15"/>
-        <outline text="Kickoff project" Since="Apr 15"/>
-      </outline>
-    </outline>
-    <outline text="Silicon Cloud Int" _note="On-board: Met on airplane&#10;People:&#10;Status: Reject the project due to dis-agreement on payment&#10;Rate: 15/hr to 0/hr" Since="Mar 15">
-      <outline text="SCI Machines" Since="Mar 15">
-        <outline text="Add simple hosting framework" Since="Mar 15"/>
-      </outline>
-    </outline>
-    <outline text="Recovery Hub" _note="Rate: 0" Since="Sep 14">
-      <outline text="Recovery" Since="Sep 14">
-        <outline text="Add Drupal Commons" Since="Oct 14"/>
-        <outline text="Kickoff" Since="Sep 14"/>
-      </outline>
-    </outline>
-    <outline text="ICFI" Since="Nov 14">
-      <outline text="Veolia" Since="Nov 14">
-        <outline text="Add templates" Since="Nov 14"/>
-        <outline text="Kickoff project" Since="Nov 14"/>
-      </outline>
-    </outline>
-    <outline text="Saint Gobain" Since="Sep 14">
-      <outline text="Saint Gobain Site" Since="Sep 14">
-        <outline text="Add path auto module" Since="Oct 14"/>
-        <outline text="Kickoff project" Since="Sep 14"/>
-      </outline>
-    </outline>
-    <outline text="CCNC" _note="Community Care of NC&#10;Company: LifeAnalytics&#10;People: Jennifer Noden (HR)&#10;Rate: 40*4 = 150/hr" Since="Feb 15">
-      <outline text="Chipra" _note="Project: two week prototype practice, pretty much been played by the agent and the CCNC company." Since="Feb 15">
-        <outline text="Add demo page link" Since="Feb 15"/>
-        <outline text="Kickoff project" Since="Feb 15"/>
-      </outline>
-    </outline>
-    <outline text="Software Woks" Since="Aug 14">
-      <outline text="Markets" Since="Aug 14">
-        <outline text="Change chart type" Since="Sep 14"/>
-        <outline text="Kickoff" Since="Aug 14"/>
-      </outline>
-    </outline>
-    <outline text="IBM" _note="Position: AngularJS Developer&#10;Company: Kforce&#10;Rate: 45/hr" Since="May 15">
-      <outline text="Resiliency Service" _note="Status: Cancelled due to my unwillingness to work with current prototype architect" Since="May 15">
-        <outline text="Kickoff and cancel project" Since="May 15"/>
-      </outline>
-    </outline>
-    <outline text="Metrostar" _note="People: Jonathan Lamb" Since="May 12">
-      <outline Since="May 12"/>
-    </outline>
-    <outline text="DataRecoveryMan" Since="Apr 11"/>
   </body>
 </opml>

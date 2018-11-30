@@ -1,11 +1,12 @@
 // @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 
 body {
+  font-size: 12px;
   font-family: 'Times New Rome', serif;
   // font-family: 'Crimson Text', 'Times New Rome', serif; 
 }
 
-// row 
+// row
 .tree-row {
   &.note {
     td { 
@@ -13,42 +14,42 @@ body {
       border-top: 0px !important; 
     }
     span.description {
-      padding-right: 4em;
+      padding-right: 2em;      
     }
   }  
 
   // cell
   .title {
-    cursor: pointer;
     span.folder {
+      cursor: pointer;
       i.icon {
-        color: #6C7071;
+        color: #6C6E6F;
       }
     }
-    span.caption {
-      font-weight: bold;
-    }
     span.description {
-      font-size: 1rem;
-      font-style: italic;
-      color: gray;
       display: block;
+      font-size: 0.9rem;
+      font-weight: normal;
+      font-style: italic;
+      color: #6C6E6F;
       margin-top: 0.2rem;
     }
-  }  
+  }
 }
 
 // row level
 .level-1 {
-  font-size: 1.5rem;
-  background-color: #EEDBED;
-  color: #8B2B8C;  
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #F2E3F1;
+  color: #9E439E;  
 }
 
 .level-2 {
   font-size: 1.3rem;
-  background-color: #D8EBEE;
-  color: #127B8D;
+  font-weight: 600;
+  background-color: #DFEFF1;
+  color: #058D9F;
   .title {
     padding-left: 2rem !important;
   }
@@ -56,16 +57,13 @@ body {
 
 .level-3 {
   font-size: 1.1rem;
-  background-color: #E9F7F9;
-  color: #127B8D;
+  background-color: #EDF9FA;
+  color: #058D9F;
   .title {
     padding-left: 4rem !important;
-    .caption {
-      font-weight: 600;
-    }
   }
 }
- 
+
 .level-4 {
   font-size: 1rem;
   .title {
@@ -78,9 +76,6 @@ body {
   font-style: italic;
   .title {
     padding-left: 8rem !important;
-    .caption {
-      font-weight: normal;
-    }
   }
 }
 
