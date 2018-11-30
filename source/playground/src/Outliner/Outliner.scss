@@ -3,28 +3,42 @@
 body {
   font-family: 'Times New Rome', serif;
   // font-family: 'Crimson Text', 'Times New Rome', serif; 
-  cursor: pointer;
 }
 
-.title {
-  span.folder {
-    i.icon {
-      margin: 0;
-      color: #6C7071;
+// row 
+.tree-row {
+  &.note {
+    td { 
+      padding-top: 0em;
+      border-top: 0px !important; 
     }
-  }
-  span.caption {
-    font-weight: bold;
-  }
-  span.description {
-    font-size: 1rem;
-    font-style: italic;
-    color: gray;
-    display: block;
-    margin-top: 0.2rem;
-  }
+    span.description {
+      padding-right: 4em;
+    }
+  }  
+
+  // cell
+  .title {
+    cursor: pointer;
+    span.folder {
+      i.icon {
+        color: #6C7071;
+      }
+    }
+    span.caption {
+      font-weight: bold;
+    }
+    span.description {
+      font-size: 1rem;
+      font-style: italic;
+      color: gray;
+      display: block;
+      margin-top: 0.2rem;
+    }
+  }  
 }
 
+// row level
 .level-1 {
   font-size: 1.5rem;
   background-color: #EEDBED;

@@ -22,7 +22,7 @@ render() {
     const parse = v => (md ? md.render(v.toString()) : v);
     return (
       <Fragment>
-        <Table.Row className={`level-${level}`}>
+        <Table.Row className={`tree-row level-${level}`}>
           <Table.Cell />
           <Table.Cell className="title"
             onClick={() => {this.toggle(); }}
@@ -51,16 +51,20 @@ render() {
             </Fragment>
           ))}
         </Table.Row>
-        {options.noteInRow && (
-          <Table.Row className={`level-${level} description`}>
-            <Table.Cell />
-            <Table.Cell className="title" colSpan={cols.length + 1}>
-              <span className="description">{note}</span>
-            </Table.Cell>
-          </Table.Row>
-        )}
+        {note ? (
+          options.noteInRow && (
+            <Table.Row className={`tree-row level-${level} note`}>
+              <Table.Cell />
+              <Table.Cell className="title" colSpan={cols.length + 1}>
+                <span className="description">{note}</span>
+              </Table.Cell>
+            </Table.Row>
+          )
+        ) : null}        
         {toggled && items.map((item, i) => (
-          <TableTreeNode key={i} node={item} level={level + 1} cols={cols} md={md} />
+          <TableTreeNode 
+            key={i} node={item} level={level + 1} 
+            cols={cols} md={md} options={options} />
         ))}
       </Fragment>
     );
@@ -74,6 +78,7 @@ TableTreeNode.defaultProps = {
 TableTreeNode.propTypes = {
   node: PropTypes.object.isRequired,
   level: PropTypes.number.isRequired,
+  options: PropTypes.object.isRequired,
   md: PropTypes.object,
 }
 
