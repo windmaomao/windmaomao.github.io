@@ -9,6 +9,7 @@
 - Update `annually`
 - Deploy `sheet`
 - Update single page `resume`
+- Prototype `outliner`
 - ~~Support `apnea`~~
 
 #### 11/27

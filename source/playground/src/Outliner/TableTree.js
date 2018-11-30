@@ -58,12 +58,14 @@ class TableTree extends Component {
 }
 
 TableTree.defaultProps = {
-  cols: []
+  cols: [],
+  noteInRow: false
 }
 
 TableTree.propTypes = {
   root: PropTypes.object.isRequired,
-  cols: PropTypes.array
+  cols: PropTypes.array,
+  noteInRow: PropTypes.bool
 }
 
 export default TableTree;

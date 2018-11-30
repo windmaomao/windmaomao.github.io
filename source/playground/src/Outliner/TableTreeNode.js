@@ -43,8 +43,6 @@ render() {
             />
             <span className="description">{note}</span>
           </Table.Cell>
-          {/* <Table.Cell>Jan 14</Table.Cell>
-          <Table.Cell>★★</Table.Cell> */}
           {cols.map(col => (
             <Fragment key={col.name}>
               <Table.Cell>{col.value(values)}</Table.Cell>

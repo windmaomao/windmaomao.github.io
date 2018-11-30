@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+// @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 
 body {
-  font-family: 'Crimson Text', 'Times New Rome', serif;
+  font-family: 'Times New Rome', serif;
+  // font-family: 'Crimson Text', 'Times New Rome', serif; 
+  cursor: pointer;
 }
 
 .title {
   span.folder {
-    cursor: pointer;
     i.icon {
       margin: 0;
+      color: #6C7071;
     }
   }
   span.caption {
@@ -25,14 +27,14 @@ body {
 
 .level-1 {
   font-size: 1.5rem;
-  background-color: #EFE4F0;
-  color: #934A99;  
+  background-color: #EEDBED;
+  color: #8B2B8C;  
 }
 
 .level-2 {
   font-size: 1.3rem;
-  background-color: #E2EEF0;
-  color: #3E8B9C;
+  background-color: #D8EBEE;
+  color: #127B8D;
   .title {
     padding-left: 2rem !important;
   }
@@ -40,8 +42,8 @@ body {
 
 .level-3 {
   font-size: 1.1rem;
-  background-color: #EFF8FA;
-  color: #3E8BA1;
+  background-color: #E9F7F9;
+  color: #127B8D;
   .title {
     padding-left: 4rem !important;
     .caption {
