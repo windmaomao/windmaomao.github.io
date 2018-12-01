@@ -21,6 +21,7 @@ render() {
     const items = children || [];
     const {markdown, noteInRow} = options;
     const parse = v => (markdown ? markdown.render(v.toString()) : v);
+    const displayNoteInRow = noteInRow && !!note;
     return (
       <Fragment>
         <Table.Row className={`tree-row level-${level}`}>
@@ -50,18 +51,16 @@ render() {
             </Fragment>
           ))}
         </Table.Row>
-        {note ? (
-          noteInRow && (
-            <Table.Row className={`tree-row level-${level} note`}>
-              <Table.Cell />
-              <Table.Cell className="title" colSpan={cols.length + 1}>
-                <span className="description" 
-                  dangerouslySetInnerHTML={{__html: parse(note)}}
-                />
-              </Table.Cell>
-            </Table.Row>
-          )
-        ) : null}        
+        {displayNoteInRow && (
+          <Table.Row className={`tree-row level-${level} note`}>
+            <Table.Cell />
+            <Table.Cell className="title" colSpan={cols.length + 1}>
+              <span className="description" 
+                dangerouslySetInnerHTML={{__html: parse(note)}}
+              />
+            </Table.Cell>
+          </Table.Row>
+        )}
         {toggled && items.map((item, i) => (
           <TableTreeNode 
             key={i} node={item} level={level + 1} 

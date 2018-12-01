@@ -9,7 +9,7 @@
 - Update `annually`
 - Deploy `sheet`
 - Update single page `resume`
-- Seal `apnea` hours
+- ~~Seal `apnea` hours~~
 - ~~Prototype `outliner`~~
 - ~~Support `apnea`~~
 

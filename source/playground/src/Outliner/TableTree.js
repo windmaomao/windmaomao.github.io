@@ -27,7 +27,7 @@ class TableTree extends Component {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell />
-            <Table.HeaderCell width={8}>{title}</Table.HeaderCell>
+            <Table.HeaderCell width={9}>{title}</Table.HeaderCell>
             {colDefs2.map(col => (
               <Table.HeaderCell key={col.name}>{col.name}</Table.HeaderCell>
             ))}
