@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {observer} from 'mobx-react';
 // components
 import { Table, Button, Icon } from 'semantic-ui-react'
 import TableTreeNode from './TableTreeNode';
 // services
 
-const setupColDefs = (cols) => {
+const setupColDefs = (cols, hiddens) => {
   return cols.map(col => {
     if (typeof col === 'string') {
       return { 
         name: col,
-        value: (node) => (node[col] || '')
+        value: (node) => (node[col] || ''),
+        visible: hiddens.indexOf(col) < 0
       }
     }
     return col;
@@ -21,7 +23,8 @@ class TableTree extends Component {
   render() {
     const {root: {title, children, cols}, options} = this.props;
     const colDefs = cols || this.props.cols;
-    const colDefs2 = setupColDefs(colDefs);
+    const {hiddenCols, outliner} = options;
+    const colDefs2 = setupColDefs(colDefs, hiddenCols || []).filter(col => col.visible);
     return (
       <Table unstackable basic='very'>
         <Table.Header>
@@ -29,7 +32,9 @@ class TableTree extends Component {
             <Table.HeaderCell />
             <Table.HeaderCell width={9}>{title}</Table.HeaderCell>
             {colDefs2.map(col => (
-              <Table.HeaderCell key={col.name}>{col.name}</Table.HeaderCell>
+              <Table.HeaderCell key={col.name} 
+                onClick={e => {outliner.toggleColVisible(col.name); }}
+              >{col.name}</Table.HeaderCell>
             ))}
           </Table.Row>
         </Table.Header>
@@ -64,7 +69,8 @@ TableTree.defaultProps = {
   cols: [],
   options: {
     markdown: null,
-    noteInRow: false
+    noteInRow: false,
+    hiddenCols: []
   },
 }
 
@@ -74,4 +80,4 @@ TableTree.propTypes = {
   options: PropTypes.object
 }
 
-export default TableTree;
+export default observer(TableTree);

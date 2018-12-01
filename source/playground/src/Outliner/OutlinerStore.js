@@ -9,8 +9,10 @@ const MarkdownIt = require('markdown-it'),
 class OutlinerStore {
   root = {};
   options = {
+    outliner: this,
     markdown: md,
-    noteInRow: true
+    noteInRow: true,
+    hiddenCols: []
   };
 
   fetchOutliner() {
@@ -20,12 +22,23 @@ class OutlinerStore {
       return res;
     });
   }
+
+  toggleColVisible(col) {
+    const hiddens = this.options.hiddenCols;
+    const index = hiddens.indexOf(col);
+    if (index < 0) {
+      hiddens.push(col);
+    } else {
+      hiddens.splice(index, 1);
+    }
+  }
 }
 
 decorate(OutlinerStore, {
   root: observable,
   options: observable,
   fetchOutliner: action.bound,
+  toggleColVisible: action.bound
 })
 
 export default OutlinerStore;
