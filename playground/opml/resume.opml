@@ -2,53 +2,53 @@
 <opml version="1.0">
   <head>
     <title>resume</title>
-    <expansionState>0,1,10,13,16,31</expansionState>
+    <expansionState>0,15,23,26,31</expansionState>
   </head>
   <body>
-    <outline text="Fang Jin">
-      <outline text="Senior Front-end Engineer" _note="I make websites, via Javascript framework such as React and Angular. Sectors that I worked with include Transportation, Banking, Healthcare, and Education. I use Modular design and Reusable components to architect websites and design UI/UX elements.">
-        <outline text="Front-end expertise">
-          <outline text="Prototyping with CSS and Sass" Duration="8 years"/>
-          <outline text="Angular and React" Duration="5 years"/>
-          <outline text="Lodash and Functional Programming" Duration="4 years"/>
+    <outline text="Fang Jin" _note="Senior Front-end Engineerx">
+      <outline text="Front-end" _note="I make websites, via Javascript framework such as React and Angular. Sectors that I worked with include Transportation, Banking, Healthcare, and Education. I use Modular design and Reusable components to architect websites and design UI/UX elements." Since="2010">
+        <outline text="Prototyping with CSS and Sass" Since="8 years"/>
+        <outline text="Angular and React" Since="5 years"/>
+        <outline text="Lodash and Functional Programming" Since="4 years"/>
+      </outline>
+      <outline text="Background" Since="2003">
+        <outline text="Java/Oracle enterprise environment" Since="4 years"/>
+        <outline text="Reporting, charting, and visualization" _note="D3.js, HighCharts, Matlab, Maya, Unity" Since="9 years"/>
+        <outline text="Strong analytical skills" _note="Math, modeling, calculation and simulation" Since="15 years"/>
+      </outline>
+      <outline text="Recognition" Since="2010">
+        <outline text="Recognition Award" _note="Deutsche Bank: Recognized for outstanding performance, for the exceptional UI framework build" Since="Jan 2017"/>
+        <outline text="Front Cover Design" _note="Book “Multi-scale Modeling of Cancer”: Front cover design for the book, accepted." Since="Sep 2010"/>
+      </outline>
+      <outline text="Education" Since="2000">
+        <outline text="Johns Hopkins University" _note="Bio-molecular chemical engineering, M.S and Ph.D." Since="Sep 2006"/>
+        <outline text="East China University of Science and Technology" _note="Department of chemical engineering, Bachelor" Since="Sep 2000"/>
+      </outline>
+      <outline text="Experience">
+        <outline text="MercuryGate International">
+          <outline text="Posted Equipment Management"/>
+          <outline text="Shipping Order Dashboard"/>
         </outline>
-        <outline text="Background">
-          <outline text="Java/Oracle enterprise environment" Duration="4 years"/>
-          <outline text="Reporting, charting, and visualization" _note="D3.js, HighCharts, Matlab, Maya, Unity" Duration="9 years"/>
-          <outline text="Strong analytical skills" _note="Math, modeling, calculation and simulation" Duration="15 years"/>
+        <outline text="Deutsche Bank"/>
+        <outline text="People Designs">
+          <outline text="Apnea"/>
+          <outline text="Prepare for Your Care"/>
+        </outline>
+        <outline text="Past Projects">
+          <outline text="RxAnte"/>
+          <outline text="Duke University"/>
+          <outline text="PlusDelta Technologies" _note="Lead UI / Drupal Developer" Since="Jun 2012" Duration="1.5 Year">
+            <outline text="Drupal, Laravel, CSS"/>
+            <outline text="Description" _note="Joined a startup healthcare company, worked as a UI / Drupal developer building the flagship product that tracks medication inside hospitals like FedEx. I help draft interface design and build a medication tracking and workflow process improvement solution for hospital pharmacies that uses handheld smart mobile technology with an integrated web-enabled software that verifies, records and monitors every step in the process of medication preparation, dispensing, and delivery. The project took 1 year with 2000 billable hours to finish and has been deployed and used by 4 hospitals."/>
+          </outline>
+          <outline text="Teryn Ashley Enterprises" _note="Developed a webinar replay system of pre-recorded webinar that can be watched by invited users on preset (recurring) time. I was responsible for gathering business requirement and prototyping the UI design for business workflow. I also worked with an offshore PHP developer and we together coded frontend and backend logic for serving videos via PHP and MySQL." Since="Apr 2011" Duration="10 month"/>
+          <outline text="DataRecoveryMan" _note="UI Developer: Helped DataRecoveryMan.com build an application for managing inventories of hard drive repair order, tracking order status and uploading order invoice. I was responsible for gathering the business requirement, prototyping design from business workflow and working with an offshore PHP developer to deliver the application." Since="Apr 2011" Duration="9 month"/>
         </outline>
       </outline>
-      <outline text="Recognition">
-        <outline text="Recognition Award" _note="Deutsche Bank: Recognized for outstanding performance, for the exceptional UI framework build" Duration="Jan 2017"/>
-        <outline text="Front Cover Design" _note="Book “Multi-scale Modeling of Cancer”: Front cover design for the book, accepted." Duration="Sep 2010"/>
+      <outline text="Other Activities">
+        <outline text="Volunteer" _note="Volunteer for disaster and humanitarian relief" Since="2014"/>
+        <outline text="Math Teacher" _note="College math class teacher for two semesters" Since="2007"/>
       </outline>
-      <outline text="Education">
-        <outline text="Johns Hopkins University" _note="Bio-molecular chemical engineering, M.S and Ph.D." Duration="Sep 2006"/>
-        <outline text="East China University of Science and Technology" _note="Department of chemical engineering, Bachelor" Duration="Sep 2000"/>
-      </outline>
-    </outline>
-    <outline text="Experience">
-      <outline text="MercuryGate International">
-        <outline text="Posted Equipment Management"/>
-        <outline text="Shipping Order Dashboard"/>
-      </outline>
-      <outline text="Deutsche Bank"/>
-      <outline text="People Designs">
-        <outline text="Apnea"/>
-        <outline text="Prepare for Your Care"/>
-      </outline>
-      <outline text="Past Projects">
-        <outline text="RxAnte"/>
-        <outline text="Duke University"/>
-        <outline text="PlusDelta Technologies"/>
-        <outline text="Teryn Ashley Enterprises"/>
-        <outline text="DataRecoveryMan"/>
-        <outline/>
-      </outline>
-    </outline>
-    <outline text="Activities">
-      <outline text="Volunteer"/>
-      <outline text="Math Teacher"/>
     </outline>
   </body>
 </opml>

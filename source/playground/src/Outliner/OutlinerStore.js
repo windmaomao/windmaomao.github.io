@@ -16,7 +16,7 @@ class OutlinerStore {
   };
 
   fetchOutliner() {
-    return getXml('opml/purchases.opml').then(res => {
+    return getXml('opml/resume.opml').then(res => {
       this.root = res.opml.body;
       console.log(this.root);
       return res;
