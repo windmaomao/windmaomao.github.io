@@ -28,7 +28,7 @@ const OutlinerTableNode = ({ node, cols, options }) => {
               <Icon name="file outline" />
             )}
           </span>
-          <span className="caption">{title} 123 {collapsed.toString()}</span>
+          <span className="caption">{title} 123</span>
           {!noteInRow && (
             <span className="description">{note}</span>
           )}
@@ -47,6 +47,11 @@ const OutlinerTableNode = ({ node, cols, options }) => {
               dangerouslySetInnerHTML={{__html: parse(note)}}
             />
           </Table.Cell>
+        </Table.Row>
+      )}
+      {!collapsed && (
+        <Table.Row>
+          <Table.Cell>{children.length}</Table.Cell>
         </Table.Row>
       )}
       {!collapsed && children.map((item, i) => (

@@ -14,7 +14,6 @@ function setupTreeNodes(root) {
       level: level,
       folder: node.children.length > 0,
       collapsed: false,
-      parent: parent,
       children: node.children || []
     });
     node.children.forEach(item => {
@@ -41,7 +40,7 @@ function setupTreeCols(root) {
 
 class OutlinerStore {
   root = {};
-  nodes = null;
+  nodes = {};
   cols = [];
   options = {
     outliner: this,
