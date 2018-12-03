@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import {observer} from 'mobx-react';
 // components
 import { Table, Icon } from 'semantic-ui-react'
 
-const OutlinerTableRow = ({ row, cols, options }) => {
-  const {id, level, node, folder, collapsed} = row;
-  const {title, note, children, ...values} = node;
-  const {markdown, noteInRow} = options;
+const OutlinerTableNode = ({ node, cols, options }) => {
+  const {level, folder, collapsed, title, note, children, ...values} = node;
+  const {outliner, markdown, noteInRow} = options;
+  const {toggleNodeCollapsed} = outliner;
   const parse = v => (markdown ? markdown.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
   return (
@@ -14,7 +15,7 @@ const OutlinerTableRow = ({ row, cols, options }) => {
       <Table.Row className={`tree-row level-${level}`}>
         <Table.Cell />
         <Table.Cell className="title"
-          onClick={() => {this.toggle(); }}
+          onClick={() => {toggleNodeCollapsed(node); }}
         >
           <span className="folder">
             {folder ? (
@@ -48,19 +49,22 @@ const OutlinerTableRow = ({ row, cols, options }) => {
           </Table.Cell>
         </Table.Row>
       )}
+      {!collapsed && children.map((item, i) => (
+        <OutlinerTableNode key={i} node={item} cols={cols} options={options} />
+      ))}
     </Fragment>
   );
 };
 
-OutlinerTableRow.defaultProps = {
+OutlinerTableNode.defaultProps = {
   cols: [],
   options: {},
 }
 
-OutlinerTableRow.propTypes = {
-  row: PropTypes.object.isRequired,
+OutlinerTableNode.propTypes = {
+  node: PropTypes.object.isRequired,
   cols: PropTypes.array,
   options: PropTypes.object,
 }
 
-export default OutlinerTableRow;
+export default observer(OutlinerTableNode);

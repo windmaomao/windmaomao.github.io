@@ -16,10 +16,10 @@ const store = new OutlinerStore();
 store.fetchOutliner();
 
 const Outliner = ({ layout }) => {
-  const {root, rows, cols, options} = store; 
+  const {root, nodes, cols, options} = store; 
   return (
     <div className="content">
-      <OutlinerTable rows={rows} cols={cols} options={options}></OutlinerTable>
+      {nodes && <OutlinerTable root={nodes} cols={cols} options={options} />}
       <TableTreeControl options={options}></TableTreeControl>
       <TableTree root={root} options={options}></TableTree>
       {/* Enable following line for prototype version */}

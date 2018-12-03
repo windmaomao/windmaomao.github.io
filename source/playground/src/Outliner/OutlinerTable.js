@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
 import {Table} from 'semantic-ui-react'
-import OutlinerTableRow from './OutlinerTableRow';
+import OutlinerTableNode from './OutlinerTableNode';
 // services
 
-const OutlinerTable = ({ rows, cols, options }) => {
+const OutlinerTable = ({ root, cols, options }) => {
   const {title, outliner} = options;
   return (
     <Table unstackable basic='very'>
@@ -22,22 +22,19 @@ const OutlinerTable = ({ rows, cols, options }) => {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {rows.map((row, rowId) => (
-          <OutlinerTableRow key={`row-${rowId}`} row={row} cols={cols} options={options} />
-        ))}
+        <OutlinerTableNode node={root} cols={cols} options={options} />
       </Table.Body>
     </Table>
   );
 }
 
 OutlinerTable.defaultProps = {
-  rows: [],
   cols: [],
   options: {},
 }
 
 OutlinerTable.propTypes = {
-  rows: PropTypes.array,
+  root: PropTypes.object.isRequired,
   cols: PropTypes.array,
   options: PropTypes.object
 }

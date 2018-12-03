@@ -8,28 +8,21 @@ const MarkdownIt = require('markdown-it'),
 
 
 // Given a tree root, return row configs
-function setupTreeRows(root) {
-  const rows = [];
-  let idGen = 0;
-
-  const assignAttrs = (node, level, parent) => {
-    // assign node id
-    node.id = idGen++;
-    const row = {
-      parent: parent,
+function setupTreeNodes(root) {
+  const attrsAssigned = (node, level, parent) => {
+    Object.assign(node, {
       level: level,
       folder: node.children.length > 0,
       collapsed: false,
-      node: node,
-    };
-    rows.push(row);
+      parent: parent,
+      children: node.children || []
+    });
     node.children.forEach(item => {
-      assignAttrs(item, level + 1, node);
+      attrsAssigned(item, level + 1, node);
     });
   }
-
-  assignAttrs(root, 0, null);
-  return rows;
+  attrsAssigned(root, 0, null);
+  return root;
 }
 
 // Given a tree root, return col configs
@@ -48,7 +41,7 @@ function setupTreeCols(root) {
 
 class OutlinerStore {
   root = {};
-  rows = [];
+  nodes = null;
   cols = [];
   options = {
     outliner: this,
@@ -61,10 +54,11 @@ class OutlinerStore {
   fetchOutliner() {
     return getXml('opml/projects.opml').then(res => {
       this.root = res.opml.body;
-      this.rows = setupTreeRows(this.root);
+      this.nodes = setupTreeNodes(this.root);
       this.cols = setupTreeCols(this.root);
       console.log(toJS(this.root));
       console.log(toJS(this.options));
+      console.log(toJS(this.nodes));
       return res;
     });
   }
@@ -79,19 +73,19 @@ class OutlinerStore {
     }
   }
 
-  toggleRowCollapsed(row) {
-    row.collapsed = !row.collapsed;
+  toggleNodeCollapsed(node) {
+    node.collapsed = !node.collapsed;
   }
 }
 
 decorate(OutlinerStore, {
   root: observable,
-  rows: observable,
+  nodes: observable.deep,
   cols: observable,
   options: observable,
   fetchOutliner: action.bound,
   toggleColVisible: action.bound,
-  toggleRowCollapsed: action.bound,
+  toggleNodeCollapsed: action.bound,
 })
 
 export default OutlinerStore;
