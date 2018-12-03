@@ -6,7 +6,7 @@ import {Table} from 'semantic-ui-react'
 // import TableRow from './TableRow';
 // services
 
-const TableRows = ({ rows, cols, options }) => {
+const OutlinerTable = ({ rows, cols, options }) => {
   const {title, outliner} = options;
   return (
     <Table unstackable basic='very'>
@@ -30,14 +30,16 @@ const TableRows = ({ rows, cols, options }) => {
   );
 }
 
-TableRows.defaultProps = {
+OutlinerTable.defaultProps = {
   rows: [],
+  cols: [],
   options: {},
 }
 
-TableRows.propTypes = {
-  rows: PropTypes.object.isRequired,
+OutlinerTable.propTypes = {
+  rows: PropTypes.object,
+  cols: PropTypes.object,
   options: PropTypes.object
 }
 
-export default observer(TableRows);
+export default observer(OutlinerTable);
