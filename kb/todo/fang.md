@@ -6,12 +6,12 @@
 
 #### 12/2
 
-- Update `annually`
-- Deploy `sheet`
 - Update single page `resume`
+- Deploy `sheet`
+- Support `apnea`
+- ~~Update `annually`~~
 - ~~Seal `apnea` hours~~
 - ~~Prototype `outliner`~~
-- ~~Support `apnea`~~
 
 #### 11/27
 
