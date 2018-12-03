@@ -18,6 +18,7 @@ function setupTreeRows(root) {
     const row = {
       parent: parent,
       level: level,
+      folder: node.children.length > 0,
       collapsed: false,
       node: node,
     };

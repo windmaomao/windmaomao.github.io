@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
 import {Table} from 'semantic-ui-react'
-// import TableRow from './TableRow';
+import OutlinerTableRow from './OutlinerTableRow';
 // services
 
 const OutlinerTable = ({ rows, cols, options }) => {
@@ -22,9 +22,9 @@ const OutlinerTable = ({ rows, cols, options }) => {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-          {/* {rows.map((row, rowId) => (
-            <TableRow key={`row-${rowId}`} row={row} cols={cols} options={options} />
-          ))} */}
+        {rows.map((row, rowId) => (
+          <OutlinerTableRow key={`row-${rowId}`} row={row} cols={cols} options={options} />
+        ))}
       </Table.Body>
     </Table>
   );
@@ -37,8 +37,8 @@ OutlinerTable.defaultProps = {
 }
 
 OutlinerTable.propTypes = {
-  rows: PropTypes.object,
-  cols: PropTypes.object,
+  rows: PropTypes.array,
+  cols: PropTypes.array,
   options: PropTypes.object
 }
 
