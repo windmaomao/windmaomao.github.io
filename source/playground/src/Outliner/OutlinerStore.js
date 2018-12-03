@@ -12,27 +12,43 @@ function setupTreeRows(root) {
   const rows = [];
   let idGen = 0;
 
-  const assignAttrs = (node, level) => {
+  const assignAttrs = (node, level, parent) => {
     // assign node id
     node.id = idGen++;
     const row = {
+      parent: parent,
       level: level,
       collapsed: false,
       node: node,
     };
     rows.push(row);
     node.children.forEach(item => {
-      assignAttrs(item, level + 1);
+      assignAttrs(item, level + 1, node);
     });
   }
 
-  assignAttrs(root, 0);
+  assignAttrs(root, 0, null);
   return rows;
+}
+
+// Given a tree root, return col configs
+function setupTreeCols(root) {
+  return root.cols.map(col => {
+    if (typeof col === 'string') {
+      return { 
+        name: col,
+        value: (node) => (node[col] || ''),
+        visible: true
+      }
+    }
+    return col;
+  });
 }
 
 class OutlinerStore {
   root = {};
   rows = [];
+  cols = [];
   options = {
     outliner: this,
     markdown: md,
@@ -45,6 +61,7 @@ class OutlinerStore {
     return getXml('opml/projects.opml').then(res => {
       this.root = res.opml.body;
       this.rows = setupTreeRows(this.root);
+      this.cols = setupTreeCols(this.root);
       console.log(toJS(this.root));
       console.log(toJS(this.options));
       return res;
@@ -68,6 +85,8 @@ class OutlinerStore {
 
 decorate(OutlinerStore, {
   root: observable,
+  rows: observable,
+  cols: observable,
   options: observable,
   fetchOutliner: action.bound,
   toggleColVisible: action.bound,
