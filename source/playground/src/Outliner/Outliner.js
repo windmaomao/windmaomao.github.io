@@ -20,8 +20,8 @@ const Outliner = ({ layout }) => {
   return (
     <div className="content">
       {nodes && <OutlinerTable root={nodes} cols={cols} options={options} />}
-      <TableTreeControl options={options}></TableTreeControl>
-      <TableTree root={root} options={options}></TableTree>
+      {/* <TableTreeControl options={options}></TableTreeControl>
+      <TableTree root={root} options={options}></TableTree> */}
       {/* Enable following line for prototype version */}
       {/* <TablePrototype />  */}
     </div>

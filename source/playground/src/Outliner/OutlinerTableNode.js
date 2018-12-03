@@ -28,7 +28,7 @@ const OutlinerTableNode = ({ node, cols, options }) => {
               <Icon name="file outline" />
             )}
           </span>
-          <span className="caption">{title}</span>
+          <span className="caption">{title} 123 {collapsed.toString()}</span>
           {!noteInRow && (
             <span className="description">{note}</span>
           )}
@@ -50,7 +50,7 @@ const OutlinerTableNode = ({ node, cols, options }) => {
         </Table.Row>
       )}
       {!collapsed && children.map((item, i) => (
-        <OutlinerTableNode key={i} node={item} cols={cols} options={options} />
+        <OutlinerTableNode key={`node-${i}`} node={item} cols={cols} options={options} />
       ))}
     </Fragment>
   );

@@ -80,7 +80,7 @@ class OutlinerStore {
 
 decorate(OutlinerStore, {
   root: observable,
-  nodes: observable.deep,
+  nodes: observable,
   cols: observable,
   options: observable,
   fetchOutliner: action.bound,
