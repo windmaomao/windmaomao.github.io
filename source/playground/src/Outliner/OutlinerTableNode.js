@@ -49,11 +49,6 @@ const OutlinerTableNode = ({ node, cols, options }) => {
           </Table.Cell>
         </Table.Row>
       )}
-      {!collapsed && (
-        <Table.Row>
-          <Table.Cell>{children.length}</Table.Cell>
-        </Table.Row>
-      )}
       {!collapsed && children.map((item, i) => (
         <OutlinerTableNode key={`node-${i}`} node={item} cols={cols} options={options} />
       ))}
