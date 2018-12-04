@@ -6,7 +6,7 @@ import {Table} from 'semantic-ui-react'
 import OutlinerTableNode from './OutlinerTableNode';
 // services
 
-const OutlinerTable = ({ root, cols, options }) => {
+const OutlinerTable = ({ tree, cols, options }) => {
   const {title, outliner} = options;
   return (
     <Table unstackable basic='very'>
@@ -22,7 +22,7 @@ const OutlinerTable = ({ root, cols, options }) => {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        <OutlinerTableNode node={root} cols={cols} options={options} />
+        {tree.root && <OutlinerTableNode node={tree.root} cols={cols} options={options} />}
       </Table.Body>
     </Table>
   );
@@ -34,7 +34,6 @@ OutlinerTable.defaultProps = {
 }
 
 OutlinerTable.propTypes = {
-  root: PropTypes.object.isRequired,
   tree: PropTypes.object.isRequired,
   cols: PropTypes.array,
   options: PropTypes.object

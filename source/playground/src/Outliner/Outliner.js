@@ -3,8 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {inject, observer} from 'mobx-react';
 // components
-import TableTree from './TableTree';
-import TableTreeControl from './TableTreeControl';
 import OutlinerTable from './OutlinerTable';
 // import TablePrototype from './TablePrototype';
 // styles
@@ -16,12 +14,10 @@ const store = new OutlinerStore();
 store.fetchOutliner();
 
 const Outliner = ({ layout }) => {
-  const {root, tree, nodes, cols, options} = store; 
+  const {tree, cols, options} = store; 
   return (
     <div className="content">
-      {nodes.children && <OutlinerTable root={nodes} tree={tree} cols={cols} options={options} />}
-      {/* <TableTreeControl options={options}></TableTreeControl>
-      <TableTree root={root} options={options}></TableTree> */}
+      <OutlinerTable tree={tree} cols={cols} options={options} />
       {/* Enable following line for prototype version */}
       {/* <TablePrototype />  */}
     </div>

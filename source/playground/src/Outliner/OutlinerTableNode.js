@@ -4,10 +4,9 @@ import {observer} from 'mobx-react';
 // components
 import { Table, Icon } from 'semantic-ui-react'
 
-const OutlinerTableNode = ({ node, cols, options }) => {
+const OutlinerTableNode = observer(({ node, cols, options }) => {
   const {level, folder, collapsed, title, note, children, ...values} = node;
-  const {outliner, markdown, noteInRow} = options;
-  const {toggleNodeCollapsed} = outliner;
+  const {markdown, noteInRow} = options;
   const parse = v => (markdown ? markdown.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
   return (
@@ -15,7 +14,7 @@ const OutlinerTableNode = ({ node, cols, options }) => {
       <Table.Row className={`tree-row level-${level}`}>
         <Table.Cell />
         <Table.Cell className="title"
-          onClick={() => {toggleNodeCollapsed(node); }}
+          onClick={node.toggle}
         >
           <span className="folder">
             {folder ? (
@@ -28,7 +27,7 @@ const OutlinerTableNode = ({ node, cols, options }) => {
               <Icon name="file outline" />
             )}
           </span>
-          <span className="caption">{title} 123</span>
+          <span className="caption">{title}</span>
           {!noteInRow && (
             <span className="description">{note}</span>
           )}
@@ -54,7 +53,7 @@ const OutlinerTableNode = ({ node, cols, options }) => {
       ))}
     </Fragment>
   );
-};
+});
 
 OutlinerTableNode.defaultProps = {
   cols: [],
@@ -67,4 +66,4 @@ OutlinerTableNode.propTypes = {
   options: PropTypes.object,
 }
 
-export default observer(OutlinerTableNode);
+export default OutlinerTableNode;

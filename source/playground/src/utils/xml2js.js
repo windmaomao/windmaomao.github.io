@@ -2,7 +2,7 @@ const convert = require('xml-js');
 
 function xml2js(source, format) {
   const obj = convert.xml2js(source, {compact: true});
-  console.log(obj);
+  // console.log(obj);
   if (format) {
     // TODO: fix the file format on root level
     obj.opml.body._attributes = Object.assign({}, {

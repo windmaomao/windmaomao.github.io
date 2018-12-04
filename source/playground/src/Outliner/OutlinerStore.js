@@ -1,6 +1,6 @@
 // libraries
 import {decorate, observable, action, toJS} from 'mobx';
-import { onSnapshot } from "mobx-state-tree"
+// import {onSnapshot, onPatch, onAction} from "mobx-state-tree"
 // services
 import {getXml} from '../utils/callApi';
 import TreeStore from './TreeStore';
@@ -8,23 +8,6 @@ import TreeStore from './TreeStore';
 const MarkdownIt = require('markdown-it'), 
   md = new MarkdownIt({ breaks: true });
 
-
-// Given a tree root, return row configs
-function setupTreeNodes(root) {
-  const attrsAssigned = (node, level, parent) => {
-    Object.assign(node, {
-      level: level,
-      folder: node.children.length > 0,
-      collapsed: false,
-      children: node.children || []
-    });
-    node.children.forEach(item => {
-      attrsAssigned(item, level + 1, node);
-    });
-  }
-  attrsAssigned(root, 0, null);
-  return root;
-}
 
 // Given a tree root, return col configs
 function setupTreeCols(root) {
@@ -41,38 +24,42 @@ function setupTreeCols(root) {
 }
 
 class OutlinerStore {
+  // raw xml tree data
   root = {};
-  nodes = {};
+  // tree store
+  tree = null;
+  // cols defs
   cols = [];
+  // options
   options = {
-    outliner: this,
     markdown: md,
     noteInRow: true,
     hiddenCols: [],
     searchText: 'ABC',
   };
-  tree = null;
 
   constructor() {
-    this.tree = TreeStore.create({
-      nodes: [],
-      root: null
-    });
+    this.tree = TreeStore.create({nodes: [], root: null});
 
-    onSnapshot(this.tree, snapshot => {
-      console.dir(snapshot)
-    });
+    // onSnapshot(this.tree, snapshot => {
+    //   console.dir(snapshot)
+    // });
+
+    // onPatch(this.tree, patch => {
+    //   console.log("Got change: ", patch)
+    // }) 
+    
+    // onAction(this.tree, call => {
+    //   console.log("Action was called: ", call)
+    // })    
   }
 
   fetchOutliner() {
     return getXml('opml/projects.opml').then(res => {
       this.root = res.opml.body;
-      this.tree.populate(this.root);
-      this.nodes = setupTreeNodes(this.root);
-      this.cols = setupTreeCols(this.root);
       console.log(toJS(this.root));
-      console.log(toJS(this.options));
-      console.log(toJS(this.nodes));
+      this.tree.populate(this.root);
+      this.cols = setupTreeCols(this.root);
       return res;
     });
   }
@@ -87,19 +74,13 @@ class OutlinerStore {
     }
   }
 
-  toggleNodeCollapsed(node) {
-    node.collapsed = !node.collapsed;
-  }
 }
 
 decorate(OutlinerStore, {
-  root: observable,
-  nodes: observable,
   cols: observable,
   options: observable,
   fetchOutliner: action.bound,
   toggleColVisible: action.bound,
-  toggleNodeCollapsed: action.bound,
 })
 
 export default OutlinerStore;

@@ -6,21 +6,18 @@ const Node = types.model('Node', {
   title: types.string,
   level: types.number,
   collapsed: false,
-  children: types.array(types.late(() => types.reference(Node)))
+  children: types.array(types.late(() => types.reference(Node))),
+  folder: false,
 }).actions(self => ({
   toggle() {
     self.collapsed = !self.collapsed
   }
 }))
 
-const TreeStore = types.model('Tree', {
+const TreeStore = types.model('TreeStore', {
   nodes: types.array(Node),
   root: types.maybeNull(types.reference(Node))
 }).actions(self => ({
-  addNode(obj) {
-    self.nodes.push(obj)
-    self.root = obj.id
-  },
   populate(root) {
     let genId = 0
 
@@ -36,8 +33,9 @@ const TreeStore = types.model('Tree', {
       node.children = item.children.map(child => {
         return addNode(child, level + 1)
       })
-      self.nodes.push(node);
-      return node.id;
+      node.folder = node.children.length > 0
+      self.nodes.push(node)
+      return node.id
     }
   
     self.root = addNode(root, 0)
