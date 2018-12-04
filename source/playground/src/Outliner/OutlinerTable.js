@@ -35,6 +35,7 @@ OutlinerTable.defaultProps = {
 
 OutlinerTable.propTypes = {
   root: PropTypes.object.isRequired,
+  tree: PropTypes.object.isRequired,
   cols: PropTypes.array,
   options: PropTypes.object
 }

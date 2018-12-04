@@ -62,17 +62,12 @@ class OutlinerStore {
     onSnapshot(this.tree, snapshot => {
       console.dir(snapshot)
     });
-
-    this.tree.addNode({
-      id: '47',
-      title: 'ABC', 
-      collapsed: true
-    })
   }
 
   fetchOutliner() {
     return getXml('opml/projects.opml').then(res => {
       this.root = res.opml.body;
+      this.tree.populate(this.root);
       this.nodes = setupTreeNodes(this.root);
       this.cols = setupTreeCols(this.root);
       console.log(toJS(this.root));
