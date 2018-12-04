@@ -9,6 +9,7 @@
 - Update single page `resume`
 - Deploy `sheet`
 - Support `apnea`
+- Deal with `ebay` invoice
 - ~~Update `annually`~~
 - ~~Seal `apnea` hours~~
 - ~~Prototype `outliner`~~

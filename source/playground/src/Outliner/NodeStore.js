@@ -1,48 +1,26 @@
 // libraries
-import {decorate, observable, action, toJS, autorun} from 'mobx';
+import { types, onSnapshot } from "mobx-state-tree"
 
-
-// // Given a tree root, return row configs
-// function setupTreeNodes(root) {
-//   const attrsAssigned = (node, level, parent) => {
-//     Object.assign(node, {
-//       level: level,
-//       folder: node.children.length > 0,
-//       collapsed: false,
-//       children: node.children || []
-//     });
-//     node.children.forEach(item => {
-//       attrsAssigned(item, level + 1, node);
-//     });
-//   }
-//   attrsAssigned(root, 0, null);
-//   return root;
-// }
-
-class NodeStore {
-  title = 'abc';
-  children = [];
-  node = observable.object({
-    title: 'level0',
-    children: observable.array([
-      { title: 'level1' }
-    ])
-  })
-
-  constructor() {
-    autorun(() => {
-      console.log(this.node.title);
-      const length = this.node.children.length;
-      if (length) {
-        console.log(this.node.children[0].title);
-      }
-    });
+const Node = types.model('Node', {
+  title: types.string,
+  collapsed: false
+}).actions(self => ({
+  toggle() {
+    self.collapsed = !self.collapsed
   }
-}
+}))
 
-decorate(NodeStore, {
-  title: observable,
-  children: observable,  
+// const Tree = types.model('Tree', {
+//   root: types.reference(Node)
+// })
+
+const node = Node.create({
+  title: 'ABC',
+  collapsed: false
 })
 
-export default NodeStore;
+onSnapshot(node, snapshot => {
+  console.dir(snapshot)
+})
+
+export default node;

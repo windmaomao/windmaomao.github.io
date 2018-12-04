@@ -2,11 +2,10 @@
 import {decorate, observable, action, toJS} from 'mobx';
 // services
 import {getXml} from '../utils/callApi';
-import NodeStore from './NodeStore';
+import node from './NodeStore';
 
-const node = new NodeStore();
-node.node.children.push('abcd');
-node.node.children[0].title = 'def';
+node.toggle();
+node.toggle();
 
 // locals
 const MarkdownIt = require('markdown-it'), 
