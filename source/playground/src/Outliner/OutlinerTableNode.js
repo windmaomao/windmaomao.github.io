@@ -5,7 +5,7 @@ import {observer} from 'mobx-react';
 import { Table, Icon } from 'semantic-ui-react'
 
 const OutlinerTableNode = observer(({ node, cols, options }) => {
-  const {level, folder, collapsed, title, note, children, ...values} = node;
+  const {level, folder, collapsed, title, note, children} = node;
   const {markdown, noteInRow} = options;
   const parse = v => (markdown ? markdown.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
@@ -34,7 +34,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
         </Table.Cell>
         {cols.map(col => (
           <Fragment key={col.name}>
-            <Table.Cell>{col.value(values)}</Table.Cell>
+            <Table.Cell>{col.value(node)}</Table.Cell>
           </Fragment>
         ))}
       </Table.Row>

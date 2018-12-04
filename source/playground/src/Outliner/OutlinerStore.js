@@ -1,6 +1,6 @@
 // libraries
 import {decorate, observable, action, toJS} from 'mobx';
-// import {onSnapshot, onPatch, onAction} from "mobx-state-tree"
+import {onSnapshot} from "mobx-state-tree"
 // services
 import {getXml} from '../utils/callApi';
 import TreeStore from './TreeStore';
@@ -39,11 +39,11 @@ class OutlinerStore {
   };
 
   constructor() {
-    this.tree = TreeStore.create({nodes: [], root: null});
+    this.tree = TreeStore.create({nodes: [], root: null, cols: []});
 
-    // onSnapshot(this.tree, snapshot => {
-    //   console.dir(snapshot)
-    // });
+    onSnapshot(this.tree, snapshot => {
+      console.dir(snapshot)
+    });
 
     // onPatch(this.tree, patch => {
     //   console.log("Got change: ", patch)
