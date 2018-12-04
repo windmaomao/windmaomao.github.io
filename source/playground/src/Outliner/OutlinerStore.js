@@ -13,13 +13,10 @@ class OutlinerStore {
   root = {};
   // tree store
   tree = null;
-  // cols defs
-  cols = [];
   // options
   options = {
     markdown: md,
     noteInRow: true,
-    hiddenCols: [],
     searchText: 'ABC',
   };
 
@@ -40,7 +37,7 @@ class OutlinerStore {
   }
 
   fetchOutliner() {
-    return getXml('opml/projects.opml').then(res => {
+    return getXml('opml/trades.opml').then(res => {
       this.root = res.opml.body;
       console.log(toJS(this.root));
       this.tree.populate(this.root);

@@ -32,7 +32,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
         </Table.Cell>
         {cols.map(col => (
           <Fragment key={col.name}>
-            <Table.Cell>{col.value(node)}</Table.Cell>
+            <Table.Cell>{col.visible ? col.value(node) : ''}</Table.Cell>
           </Fragment>
         ))}
       </Table.Row>
