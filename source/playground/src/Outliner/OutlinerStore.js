@@ -1,12 +1,9 @@
 // libraries
 import {decorate, observable, action, toJS} from 'mobx';
+import { onSnapshot } from "mobx-state-tree"
 // services
 import {getXml} from '../utils/callApi';
-import node from './NodeStore';
-
-node.toggle();
-node.toggle();
-
+import TreeStore from './TreeStore';
 // locals
 const MarkdownIt = require('markdown-it'), 
   md = new MarkdownIt({ breaks: true });
@@ -54,6 +51,24 @@ class OutlinerStore {
     hiddenCols: [],
     searchText: 'ABC',
   };
+  tree = null;
+
+  constructor() {
+    this.tree = TreeStore.create({
+      nodes: [],
+      root: null
+    });
+
+    onSnapshot(this.tree, snapshot => {
+      console.dir(snapshot)
+    });
+
+    this.tree.addNode({
+      id: '47',
+      title: 'ABC', 
+      collapsed: true
+    })
+  }
 
   fetchOutliner() {
     return getXml('opml/projects.opml').then(res => {
