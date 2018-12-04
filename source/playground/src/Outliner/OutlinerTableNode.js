@@ -13,9 +13,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
     <Fragment>
       <Table.Row className={`tree-row level-${level}`}>
         <Table.Cell />
-        <Table.Cell className="title"
-          onClick={node.toggle}
-        >
+        <Table.Cell className="title" onClick={node.toggle}>
           <span className="folder">
             {folder ? (
               !collapsed ? (
