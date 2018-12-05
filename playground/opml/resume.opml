@@ -2,7 +2,7 @@
 <opml version="1.0">
   <head>
     <title>resume</title>
-    <expansionState>0,15,16,17,84</expansionState>
+    <expansionState>0,15,16,29,38,79,81,90</expansionState>
   </head>
   <body>
     <outline text="Fang Jin" _note="**Senior Front-end Engineer**&#10;I make websites, via Javascript framework such as React and Angular. Sectors that I worked with include Transportation, Banking, Healthcare, and Education. I use _Modular design_ and _Reusable components_ to architect websites and design UI/UX elements. _”My latest accomplishment is a web framework supporting dark/light theme of branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code.”_">
@@ -50,14 +50,10 @@
               <outline text="Form: _Mobx_ provided for form error handling"/>
               <outline text="Spinner: Provides various spinner and shimmer effects during action transition"/>
             </outline>
-            <outline text="Pictures">
-              <outline text="Shipping Order" _note="![Shipping Order](https://s3.amazonaws.com/qp-photo/shipping-order-chart.png)"/>
-              <outline text="Custom Charts and Switchers" _note="![Custom Charts and Switcher](https://s3.amazonaws.com/qp-photo/mg-chart-mockup-small.png)"/>
-            </outline>
           </outline>
         </outline>
         <outline text="Deutsche Bank" _note="Serves as UI and AngularJS architect in Market Clearing domain for 45+ banking applications. _”Fang continues to build his MC profile globally and is well respected across his peers group and stakeholders. Fang has helped build complex business solutions that can sustain a high level of performance in CE where he has proven himself.”_ -- Deutsche Bank Annual Review and Awards" Date="2015" Duration="3 years">
-          <outline text="Global Console" _note="`Angular`, `Bootstrap`, `Flexbox`&#10;The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates on-boarding of new apps. ![Custom Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)" Date="Jan 17" Duration="1.5 years">
+          <outline text="Global Console" _note="`Angular`, `Bootstrap`, `Flexbox`&#10;The product provides a single UI for operations, container for apps in one place with standardized navigation and look and feel. It also serves as a rapid application dev framework with a set of directives and services, ex. headers, navigation, entitlements, etc, to facilitates on-boarding of new apps. &#10;![Custom Date Range Picker](https://s3.amazonaws.com/qp-photo/mc-common-rangepicker.PNG)" Date="Jan 17" Duration="1.5 years">
             <outline text="Architect &amp; Design">
               <outline text="Support both *IE* 10/11 and *Chrome* browser"/>
               <outline text="Use *Angular* and *Bootstrap* for fast development"/>
@@ -115,7 +111,7 @@
               <outline text="Print: Allow print review page"/>
             </outline>
           </outline>
-          <outline text="Prepare for Your Care" _note="Lead AngularJS / Laravel Developer&#10;`Laravel` `AngularJS` `Sass`&#10;Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program [PrepareForYourCare.org](https://prepareforyourcare.org/welcome). Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe. " Date="Aug 2016" Duration="2 years">
+          <outline text="Prepare for Your Care" _note="Lead AngularJS / Laravel Developer&#10;`Laravel` `AngularJS` `Sass`&#10;Served as lead *AngularJS* and *Laravel* developer for educational applications, including southern regional center of excellence in nutrition education and obesity prevention, and a hospital stage III counseling program [PrepareForYourCare.org](https://prepareforyourcare.org/welcome). Projects mostly builds book-like chapter navigation with video/narration helper for elder visits. Projects are hosted under *HIPPA* server with consideration of *Section 508* for people with disability. Customers include 200 doctors and 50,000 users around the globe. &#10;![Prepare for your care](https://lh3.googleusercontent.com/I4xr1EBWDPej9CVO5J_x17orxY8pgsNqXUtubRMnS0EdFaR231U-MmXkSU1msYj4Y88R6jp4TXAOPXbFEqsapEUYAOFYFPT6SN-lW7E8mtJuKhH9YUFE2C6rWODGrgbGJyofRQ)" Date="Aug 2016" Duration="2 years">
             <outline text="Architect &amp; Design">
               <outline text="*HIPPA* server host and deployment plan protecting health care privacy"/>
               <outline text="Disability compliance with video, and narration support with high contrast"/>
@@ -134,7 +130,6 @@
               <outline text="Administer language files through web interface with easy switch"/>
               <outline text="Automatic fill out custom *PDF* tempalte with user filled-out"/>
             </outline>
-            <outline text="Prepare for your care" _note="![Prepare for your care](https://lh3.googleusercontent.com/I4xr1EBWDPej9CVO5J_x17orxY8pgsNqXUtubRMnS0EdFaR231U-MmXkSU1msYj4Y88R6jp4TXAOPXbFEqsapEUYAOFYFPT6SN-lW7E8mtJuKhH9YUFE2C6rWODGrgbGJyofRQ)"/>
           </outline>
         </outline>
         <outline text="Past Projects">
