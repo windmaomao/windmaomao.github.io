@@ -42,12 +42,12 @@ Posted Equipment Management
 
 : Oct 2018 - Current
 : *React* *Mobx* *Redux* *Java* {.labels}
-: Management of equipments for carriers with different origin and destination and availability settings.
+: Management of equipments for carriers with different origin and destination and availability settings. Transaction page submission with multiple equipments with error handling and display on each row and each field. 
 
 Highlights
 
 : - React: Fast development using in-house react and UI library for widgets and styles
-  - Mobx: Complex form handling with nested data structure and realtime validation
+  - Mobx: Complex form handling with nested object/array data structure and real-time field error validation
   - Typehead: _Typehead_ widget design to lookup carrier by name or id
   - Quantity: Support copy/duplicate/change quantity of each equipment on the form
   - Multiselect: Various _multi-select_ widgets supporting lookup table
@@ -55,6 +55,7 @@ Highlights
   - Location: Multiple location selector based on country, states, and postal codes
   - Datepicker: Date range picker for equipment availablility
   - Lightbox: Form sliding from edge of screen and pinned on the screen
+  - Pill input: Custom widget for selecting items delimitated by comma and displayed as pill label with hover message 
 
 ![Custom Multi-select Location](https://s3.amazonaws.com/qp-photo/mg-posted-origin-destinations.png)
 

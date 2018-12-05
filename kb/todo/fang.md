@@ -10,7 +10,8 @@
 - Deploy `sheet`
 - Support `apnea`
 - Deal with `ebay` invoice
-- ~~Update `annually`~~
+- Update `posted` photos
+- - ~~Update `annually`~~
 - ~~Seal `apnea` hours~~
 - ~~Prototype `outliner`~~
 
