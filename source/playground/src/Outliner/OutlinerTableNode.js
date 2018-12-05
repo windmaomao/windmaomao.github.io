@@ -39,6 +39,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
         <Table.Row className={`tree-row level-${level} note`}>
           <Table.Cell />
           <Table.Cell className="title" colSpan={cols.length + 1}>
+            {/* <span className="description">{note}</span> */}
             <span className="description" 
               dangerouslySetInnerHTML={{__html: parse(note)}}
             />

@@ -39,6 +39,17 @@ body {
       margin-top: 0.2rem;
     }
   }
+
+  img {
+    max-width: 100%
+  }
+
+  code {
+    color: #6C6E6F;
+    font-style: normal;
+    font-size: 11px;
+    color: #9E439E;
+  }
 }
 
 // row level
@@ -84,6 +95,13 @@ body {
   color: #666;
   .title {
     padding-left: 8rem !important;
+  }
+}
+
+.level-6 {
+  font-size: 0.9rem;
+  .title {
+    padding-left: 10rem !important;
   }
 }
 
