@@ -37,7 +37,7 @@ class OutlinerStore {
   }
 
   fetchOutliner() {
-    return getXml('opml/trades.opml').then(res => {
+    return getXml('opml/projects.opml').then(res => {
       this.root = res.opml.body;
       console.log(toJS(this.root));
       this.tree.populate(this.root);

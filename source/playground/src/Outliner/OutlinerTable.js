@@ -9,13 +9,14 @@ import OutlinerTableNode from './OutlinerTableNode';
 const OutlinerTable = ({ tree, options }) => {
   const {title} = options;
   const {root, cols} = tree;
+  const visible = v => v.visible;
   return (
     <Table unstackable basic='very'>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell />
           <Table.HeaderCell width={9}>{title}</Table.HeaderCell>
-          {cols.map((col) => (
+          {cols.filter(visible).map((col) => (
             <Table.HeaderCell key={col.name} onClick={col.toggle}>{col.name}</Table.HeaderCell>
           ))}
         </Table.Row>

@@ -9,6 +9,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
   const {markdown, noteInRow} = options;
   const parse = v => (markdown ? markdown.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
+  const visible = v => v.visible;
   return (
     <Fragment>
       <Table.Row className={`tree-row level-${level}`}>
@@ -30,10 +31,8 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
             <span className="description">{note}</span>
           )}
         </Table.Cell>
-        {cols.map(col => (
-          <Fragment key={col.name}>
-            <Table.Cell>{col.visible ? col.value(node) : ''}</Table.Cell>
-          </Fragment>
+        {cols.filter(visible).map((col) => (
+          <Table.Cell key={col.name}>{col.value(node)}</Table.Cell>
         ))}
       </Table.Row>
       {displayNoteInRow && (
