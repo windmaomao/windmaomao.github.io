@@ -22,7 +22,7 @@
 
 ### Posted Equipment
 
-![Posted Equipment Form](https://s3.amazonaws.com/qp-photo/mg-posted-equipment-form.png)
+![Posted Equipment Form](<https://s3.amazonaws.com/qp-photo/mg-posted-equipment-demo.png>)
 
 Posted Equipment Management
 
