@@ -2,32 +2,32 @@
 <opml version="1.0">
   <head>
     <title>resume</title>
-    <expansionState>0,15,16,29,38,79,81,90</expansionState>
+    <expansionState>0,5,9,12,15,16,17,18,29,38,79,81,90</expansionState>
   </head>
   <body>
     <outline text="Fang Jin" _note="**Senior Front-end Engineer**&#10;I make websites, via Javascript framework such as React and Angular. Sectors that I worked with include Transportation, Banking, Healthcare, and Education. I use _Modular design_ and _Reusable components_ to architect websites and design UI/UX elements. _”My latest accomplishment is a web framework supporting dark/light theme of branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code.”_">
       <outline text="Front-end" Date="2010">
         <outline text="Prototyping layout with CSS" _note="`CSS`, `Sass`, `Bootstrap`, `SemanticUI`" Duration="8 years"/>
-        <outline text="Leveraging with Javascript Framework" _note="`React`, `Angular` , `Vue` " Duration="5 years"/>
+        <outline text="Leveraging with Javascript Framework" _note="`React`, `Angular`, `Vue` " Duration="5 years"/>
         <outline text="Utilizing Functional Libraries" _note="`ES6`, `Lodash`, `RxJS`" Duration="4 years"/>
       </outline>
       <outline text="Background" Date="2003">
         <outline text="Java/Oracle enterprise environment" Duration="4 years"/>
-        <outline text="Reporting, charting, and visualization" _note="D3.js, HighCharts, Matlab, Maya, Unity" Duration="9 years"/>
+        <outline text="Reporting, charting, and visualization" _note="`D3.js`, `HighCharts`, `Matlab`, `Maya`, `Unity`" Duration="9 years"/>
         <outline text="Strong analytical skills" _note="Math, modeling, calculation and simulation" Duration="15 years"/>
       </outline>
       <outline text="Recognition" Date="2010">
-        <outline text="Recognition Award" _note="Deutsche Bank: Recognized for outstanding performance, for the exceptional UI framework build" Date="Jan 2017"/>
-        <outline text="Front Cover Design" _note="Book “Multi-scale Modeling of Cancer”: Front cover design for the book, accepted." Date="Sep 2010"/>
+        <outline text="Recognition Award" _note="**Deutsche Bank**&#10;Recognized for outstanding performance, for the exceptional UI framework build" Date="Jan 2017"/>
+        <outline text="Front Cover Design" _note="**“Multi-scale Modeling of Cancer”**&#10;Front cover design for the book, accepted." Date="Sep 2010"/>
       </outline>
       <outline text="Education" Date="2000">
-        <outline text="Johns Hopkins University" _note="Bio-molecular chemical engineering, M.S and Ph.D." Date="Sep 2006"/>
-        <outline text="East China University of Science and Technology" _note="Department of chemical engineering, Bachelor" Date="Sep 2000"/>
+        <outline text="Johns Hopkins University" _note="Bio-molecular chemical engineering, M.S and Ph.D." Date="Sep 2000" Duration="6 years"/>
+        <outline text="East China University of Science and Technology" _note="Department of chemical engineering, Bachelor" Date="Sep 1996" Duration="4 years"/>
       </outline>
       <outline text="Experience" Date="2011">
         <outline text="MercuryGate International" Date="2018">
           <outline text="Posted Equipment Management" _note="`React`, `Mobx`, `Redux`, `Java`&#10;Management of equipments for carriers with different origin and destination and availability settings. Transaction page submission with multiple equipments with error handling and display on each row and each field. &#10;![Custom Multi-select Location](https://s3.amazonaws.com/qp-photo/mg-posted-origin-destinations.png)" Date="Oct 2018">
-            <outline text="Highlights">
+            <outline text="Highlights" _note="- React: Fast development using in-house react and UI library for widgets and styles&#10;- Mobx: Complex form handling with nested object/array data structure and real-time field error validation&#10;- Typehead: _Typehead_ widget design to lookup carrier by name or id&#10;- Quantity: Support copy/duplicate/change quantity of each equipment on the form&#10;- Multiselect: Various _multi-select_ widgets supporting lookup table&#10;- Directory: Custom widget wired with _multi-select_ widget for location selection&#10;- Location: Multiple location selector based on country, states, and postal codes&#10;- Datepicker: Date range picker for equipment availablility&#10;- Lightbox: Form sliding from edge of screen and pinned on the screen&#10;- Pill input: Custom widget for selecting items delimitated by comma and displayed as pill label with hover message ">
               <outline text="React: Fast development using in-house react and UI library for widgets and styles"/>
               <outline text="Mobx: Complex form handling with nested object/array data structure and real-time field error validation"/>
               <outline text="Typehead: _Typehead_ widget design to lookup carrier by name or id"/>
