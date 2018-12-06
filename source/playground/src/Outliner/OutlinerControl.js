@@ -7,18 +7,19 @@ import { Input, Dropdown } from 'semantic-ui-react'
 
 const OutlinerControl = ({ tree, title }) => {
   const {cols} = tree;
-  const options = cols.map(col => ({
-    text: col.name,
-    value: col.name
-  }))
   return (
     <Dropdown text={title} multiple icon='filter'>
       <Dropdown.Menu>
-        <Input icon='search' iconPosition='left' className='search' />
+        {/* <Input icon='search' iconPosition='left' className='search' />
         <Dropdown.Divider />
-        <Dropdown.Header icon='tags' content='Columns' />
+        <Dropdown.Header icon='tags' content='Columns' /> */}
         <Dropdown.Menu scrolling>
-          {options.map(option => <Dropdown.Item key={option.value} {...option} />)}
+          {cols.map(col => (
+            <Dropdown.Item 
+              key={col.name} text={col.name}
+              onClick={col.toggle}
+            />
+          ))}
         </Dropdown.Menu>
       </Dropdown.Menu>
     </Dropdown>
