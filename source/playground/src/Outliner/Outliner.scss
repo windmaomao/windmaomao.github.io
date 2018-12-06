@@ -6,6 +6,13 @@ body {
   // font-family: 'Crimson Text', 'Times New Rome', serif; 
 }
 
+$text-gray: #6C6E6F;
+$text-pink: #9E439E;
+$text-blue: #058D9F;
+$bg-pink: #F2E3F1;
+$bg-blue: #DFEFF1;
+$bg-lightblue: #EDF9FA;
+
 // row
 .tree-row {
   &.note {
@@ -16,7 +23,7 @@ body {
     span.description {
       padding-right: 2em;
       em {
-        color: #9E439E;
+        color: $text-pink;
       }
     }
   }  
@@ -27,7 +34,7 @@ body {
       cursor: pointer;
       user-select: none;
       i.icon {
-        color: #6C6E6F;
+        color: $text-gray;
       }
     }
     span.description {
@@ -35,8 +42,12 @@ body {
       font-size: 0.95rem;
       font-weight: normal;
       font-style: italic;
-      color: #6C6E6F;
+      color: $text-gray;
+      padding-left: 23px;
       margin-top: 0.2rem;
+      strong {
+        font-style: normal;
+      }
     }
   }
 
@@ -45,10 +56,9 @@ body {
   }
 
   code {
-    color: #6C6E6F;
     font-style: normal;
     font-size: 11px;
-    color: #9E439E;
+    color: $text-pink;
   }
 }
 
@@ -56,15 +66,15 @@ body {
 .level-1 {
   font-size: 1.3rem;
   font-weight: 400;
-  background-color: #F2E3F1;
-  color: #9E439E;  
+  background-color: $bg-pink;
+  color: $text-pink;  
 }
 
 .level-2 {
   font-size: 1.3rem;
   font-weight: 600;
-  background-color: #DFEFF1;
-  color: #058D9F;
+  background-color: $bg-blue;
+  color: $text-blue;
   .title {
     padding-left: 2rem !important;
   }
@@ -73,8 +83,8 @@ body {
 .level-3 {
   font-size: 1.1rem;
   font-weight: 600;
-  background-color: #EDF9FA;
-  color: #058D9F;
+  background-color: $bg-lightblue;
+  color: $text-blue;
   .title {
     padding-left: 4rem !important;
   }
@@ -83,7 +93,7 @@ body {
 .level-4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #666;
+  color: $text-gray;
   .title {
     padding-left: 6rem !important;
   }
@@ -92,7 +102,7 @@ body {
 .level-5 {
   font-size: 0.9rem;
   font-style: italic;
-  color: #666;
+  color: $text-gray;
   .title {
     padding-left: 8rem !important;
   }
