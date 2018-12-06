@@ -11,6 +11,9 @@
 - Support `apnea`
 - Deal with `ebay` invoice
 - Update `posted` photos
+- Sync latest `kb` files to dropbox
+- Backup `mg` repos
+- Update screenshot to `s3`
 - - ~~Update `annually`~~
 - ~~Seal `apnea` hours~~
 - ~~Prototype `outliner`~~

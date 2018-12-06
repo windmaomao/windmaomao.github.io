@@ -4,6 +4,7 @@ import {observer} from 'mobx-react';
 // components
 import {Table} from 'semantic-ui-react'
 import OutlinerTableNode from './OutlinerTableNode';
+import OutlinerControl from './OutlinerControl';
 // services
 
 const OutlinerTable = ({ tree, options }) => {
@@ -15,7 +16,9 @@ const OutlinerTable = ({ tree, options }) => {
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell />
-          <Table.HeaderCell width={9}>{title}</Table.HeaderCell>
+          <Table.HeaderCell width={9}>
+            <OutlinerControl tree={tree} title={title} />
+          </Table.HeaderCell>
           {cols.filter(visible).map((col) => (
             <Table.HeaderCell key={col.name} onClick={col.toggle}>{col.name}</Table.HeaderCell>
           ))}

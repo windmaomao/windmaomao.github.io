@@ -18,7 +18,7 @@ const Outliner = ({ layout }) => {
   const {tree, options} = store; 
   return (
     <div className="content">
-      <OutlinerControl tree={tree} />
+      {/* <OutlinerControl tree={tree} /> */}
       <OutlinerTable tree={tree} options={options} />
       {/* Enable following line for prototype version */}
       {/* <TablePrototype />  */}
