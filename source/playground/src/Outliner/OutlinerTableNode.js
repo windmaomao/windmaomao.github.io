@@ -10,32 +10,37 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
   const parse = v => (markdown ? markdown.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
   const visible = v => v.visible;
+  const displayRow = true;
+  // const displayRow = node.found('equipments');
+  // console.log(displayRow);
   return (
     <Fragment>
-      <Table.Row className={`tree-row level-${level}`}>
-        <Table.Cell />
-        <Table.Cell className="title" onClick={node.toggle}>
-          <span className="folder">
-            {folder ? (
-              !collapsed ? (
-                <Icon name="caret down" />
+      {displayRow && (
+        <Table.Row className={`tree-row level-${level}`}>
+          <Table.Cell />
+          <Table.Cell className="title" onClick={node.toggle}>
+            <span className="folder">
+              {folder ? (
+                !collapsed ? (
+                  <Icon name="caret down" />
+                ) : (
+                  <Icon name="caret right" />
+                )
               ) : (
-                <Icon name="caret right" />
-              )
-            ) : (
-              <Icon name="file outline" />
+                <Icon name="file outline" />
+              )}
+            </span>
+            <span className="caption">{title}</span>
+            {!noteInRow && (
+              <span className="description">{note}</span>
             )}
-          </span>
-          <span className="caption">{title}</span>
-          {!noteInRow && (
-            <span className="description">{note}</span>
-          )}
-        </Table.Cell>
-        {cols.filter(visible).map((col) => (
-          <Table.Cell key={col.name}>{col.value(node)}</Table.Cell>
-        ))}
-      </Table.Row>
-      {displayNoteInRow && (
+          </Table.Cell>
+          {cols.filter(visible).map((col) => (
+            <Table.Cell key={col.name}>{col.value(node)}</Table.Cell>
+          ))}
+        </Table.Row>
+      )}
+      {(displayRow && displayNoteInRow) && (
         <Table.Row className={`tree-row level-${level} note`}>
           <Table.Cell />
           <Table.Cell className="title" colSpan={cols.length + 1}>

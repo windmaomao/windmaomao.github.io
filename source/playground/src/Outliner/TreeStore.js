@@ -13,6 +13,9 @@ const Node = types.model('Node', {
 }).actions(self => ({
   toggle() {
     self.collapsed = !self.collapsed
+  },
+  found(text) {
+    return self.title.search(text) !== -1;
   }
 }))
 
