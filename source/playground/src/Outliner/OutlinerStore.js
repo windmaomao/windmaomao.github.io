@@ -5,23 +5,18 @@ import {onSnapshot} from "mobx-state-tree"
 import {getXml} from '../utils/callApi';
 import TreeStore from './TreeStore';
 // locals
-const MarkdownIt = require('markdown-it'), 
-  md = new MarkdownIt({ breaks: true });
 
 class OutlinerStore {
   // raw xml tree data
   root = {};
   // tree store
   tree = null;
-  // options
-  options = {
-    markdown: md,
-    noteInRow: true,
-    searchText: 'ABC',
-  };
 
   constructor() {
-    this.tree = TreeStore.create({nodes: [], root: null, cols: []});
+    this.tree = TreeStore.create({
+      title: '', filterText: '', noteInRow: true,
+      nodes: [], root: null, cols: []
+    });
 
     onSnapshot(this.tree, snapshot => {
       console.dir(snapshot)
@@ -49,7 +44,6 @@ class OutlinerStore {
 
 decorate(OutlinerStore, {
   cols: observable,
-  options: observable,
   fetchOutliner: action.bound,
 })
 

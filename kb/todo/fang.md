@@ -4,17 +4,21 @@
 
 ### Nov
 
-#### 12/2
+#### 12/7
 
 - Update single page `resume`
-- Deploy `sheet`
 - Support `apnea`
-- Deal with `ebay` invoice
-- Update `posted` photos
-- Sync latest `kb` files to dropbox
 - Backup `mg` repos
-- Update screenshot to `s3`
-- - ~~Update `annually`~~
+- Sync latest `kb` files to dropbox
+
+
+#### 12/2
+
+- Deal with `ebay` invoice
+- Collect `offer` letters
+- ~~Update `posted` photos~~
+- ~~Update screenshot to `s3`~~
+- ~~Update `annually`~~
 - ~~Seal `apnea` hours~~
 - ~~Prototype `outliner`~~
 

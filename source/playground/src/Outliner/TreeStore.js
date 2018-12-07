@@ -35,6 +35,8 @@ const TreeStore = types.model('TreeStore', {
   nodes: types.array(Node),
   root: types.maybeNull(types.reference(Node)),
   cols: types.array(Col),
+  title: types.string,
+  noteInRow: types.boolean,
   filterText: types.string
 }).actions(self => ({
   populate(root) {

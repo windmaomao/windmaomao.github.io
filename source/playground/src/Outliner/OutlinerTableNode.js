@@ -3,16 +3,17 @@ import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
 import { Table, Icon } from 'semantic-ui-react'
+// services
+const MarkdownIt = require('markdown-it'), 
+  md = new MarkdownIt({ breaks: true });
 
 const OutlinerTableNode = observer(({ node, cols, options }) => {
   const {level, folder, collapsed, title, note, children} = node;
-  const {markdown, noteInRow} = options;
-  const parse = v => (markdown ? markdown.render(v.toString()) : v);
+  const {noteInRow, filterText} = options;
+  const parse = v => (md ? md.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
   const visible = v => v.visible;
-  // const displayRow = true;
-  const displayRow = node.found('Equipment');
-  // console.log(displayRow);
+  const displayRow = filterText ? node.found('Equipment') : true;
   return (
     <Fragment>
       {displayRow && (
@@ -44,7 +45,6 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
         <Table.Row className={`tree-row level-${level} note`}>
           <Table.Cell />
           <Table.Cell className="title" colSpan={cols.length + 1}>
-            {/* <span className="description">{note}</span> */}
             <span className="description" 
               dangerouslySetInnerHTML={{__html: parse(note)}}
             />
@@ -60,7 +60,10 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
 
 OutlinerTableNode.defaultProps = {
   cols: [],
-  options: {},
+  options: {
+    filterText: '',
+    noteInRow: true,
+  },
 }
 
 OutlinerTableNode.propTypes = {

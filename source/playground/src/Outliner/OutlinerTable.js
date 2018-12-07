@@ -7,10 +7,13 @@ import OutlinerTableNode from './OutlinerTableNode';
 import OutlinerControl from './OutlinerControl';
 // services
 
-const OutlinerTable = ({ tree, options }) => {
-  const {title} = options;
-  const {root, cols} = tree;
+const OutlinerTable = ({ tree }) => {
+  const {title, root, cols} = tree;
   const visible = v => v.visible;
+  const options = { 
+    filterText: tree.filterText,
+    noteInRow: tree.noteInRow,
+  };
   return (
     <Table unstackable basic='very'>
       <Table.Header>
@@ -31,13 +34,8 @@ const OutlinerTable = ({ tree, options }) => {
   );
 }
 
-OutlinerTable.defaultProps = {
-  options: {},
-}
-
 OutlinerTable.propTypes = {
   tree: PropTypes.object.isRequired,
-  options: PropTypes.object
 }
 
 export default observer(OutlinerTable);
