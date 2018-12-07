@@ -14,7 +14,7 @@ const Node = types.model('Node', {
   toggle() {
     self.collapsed = !self.collapsed
   },
-  found(text) { console.log('Called');
+  found(text) {
     return self.title.toLowerCase().search(text) !== -1;
   }
 }))
@@ -36,6 +36,7 @@ const TreeStore = types.model('TreeStore', {
   root: types.maybeNull(types.reference(Node)),
   cols: types.array(Col),
   title: types.string,
+  noteEnabled: types.boolean,
   noteInRow: types.boolean,
   filterText: types.string
 }).actions(self => ({

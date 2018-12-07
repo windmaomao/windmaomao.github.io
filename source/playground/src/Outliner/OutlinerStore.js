@@ -14,13 +14,14 @@ class OutlinerStore {
 
   constructor() {
     this.tree = TreeStore.create({
-      title: '', filterText: '', noteInRow: true,
+      title: '', filterText: '', 
+      noteEnabled: false, noteInRow: true, 
       nodes: [], root: null, cols: []
     });
 
-    // onSnapshot(this.tree, snapshot => {
-    //   console.dir(snapshot)
-    // });
+    onSnapshot(this.tree, snapshot => {
+      console.dir(snapshot)
+    });
 
     // onPatch(this.tree, patch => {
     //   console.log("Got change: ", patch)

@@ -12,6 +12,7 @@ const OutlinerTable = ({ tree }) => {
   const visible = v => v.visible;
   const options = { 
     filterText: tree.filterText,
+    noteEnabled: tree.noteEnabled,
     noteInRow: tree.noteInRow,
   };
   return (

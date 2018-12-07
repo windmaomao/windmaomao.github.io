@@ -9,9 +9,10 @@ const MarkdownIt = require('markdown-it'),
 
 const OutlinerTableNode = observer(({ node, cols, options }) => {
   const {level, folder, collapsed, title, note, children} = node;
-  const {noteInRow, filterText} = options;
+  const {noteEnabled, noteInRow, filterText} = options;
   const parse = v => (md ? md.render(v.toString()) : v);
-  const displayNoteInRow = noteInRow && !!note;
+  const hasNote = !!note;
+  const displayNoteInRow = noteEnabled && noteInRow && hasNote;
   const visible = v => v.visible;
   const displayRow = filterText ? node.found(filterText) : true;
   return (
@@ -32,7 +33,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
               )}
             </span>
             <span className="caption">{title}</span>
-            {!noteInRow && (
+            {(noteEnabled && !noteInRow) && (
               <span className="description">{note}</span>
             )}
           </Table.Cell>
@@ -62,6 +63,7 @@ OutlinerTableNode.defaultProps = {
   cols: [],
   options: {
     filterText: '',
+    noteEnabled: false,
     noteInRow: true,
   },
 }
