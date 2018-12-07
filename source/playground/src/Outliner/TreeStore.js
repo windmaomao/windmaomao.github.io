@@ -14,8 +14,8 @@ const Node = types.model('Node', {
   toggle() {
     self.collapsed = !self.collapsed
   },
-  found(text) {
-    return self.title.search(text) !== -1;
+  found(text) { console.log('Called');
+    return self.title.toLowerCase().search(text) !== -1;
   }
 }))
 
@@ -73,7 +73,7 @@ const TreeStore = types.model('TreeStore', {
     self.root = addNode(root, 0)
   },
   applyFilter(text) {
-    self.filterText = text;
+    self.filterText = text.toLowerCase();
   }
 }))
 

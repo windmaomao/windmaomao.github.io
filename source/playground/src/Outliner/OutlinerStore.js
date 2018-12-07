@@ -18,9 +18,9 @@ class OutlinerStore {
       nodes: [], root: null, cols: []
     });
 
-    onSnapshot(this.tree, snapshot => {
-      console.dir(snapshot)
-    });
+    // onSnapshot(this.tree, snapshot => {
+    //   console.dir(snapshot)
+    // });
 
     // onPatch(this.tree, patch => {
     //   console.log("Got change: ", patch)

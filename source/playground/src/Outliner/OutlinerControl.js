@@ -9,7 +9,10 @@ const OutlinerControl = ({ tree }) => {
   const {title, cols} = tree;
   return (
     <div>
-      <Input icon='search' iconPosition='left' className='search' />
+      <Input 
+        icon='search' iconPosition='left' className='search' 
+        onChange={e => { tree.applyFilter(e.target.value); }}
+      />
       <Dropdown text={title} multiple icon='filter'>
         <Dropdown.Menu>
           {/* <Dropdown.Header icon='tags' content='Columns' /> */}

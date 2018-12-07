@@ -13,7 +13,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
   const parse = v => (md ? md.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
   const visible = v => v.visible;
-  const displayRow = filterText ? node.found('Equipment') : true;
+  const displayRow = filterText ? node.found(filterText) : true;
   return (
     <Fragment>
       {displayRow && (
@@ -72,4 +72,4 @@ OutlinerTableNode.propTypes = {
   options: PropTypes.object,
 }
 
-export default OutlinerTableNode;
+export default observer(OutlinerTableNode);
