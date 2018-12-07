@@ -10,8 +10,8 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
   const parse = v => (markdown ? markdown.render(v.toString()) : v);
   const displayNoteInRow = noteInRow && !!note;
   const visible = v => v.visible;
-  const displayRow = true;
-  // const displayRow = node.found('equipments');
+  // const displayRow = true;
+  const displayRow = node.found('Equipment');
   // console.log(displayRow);
   return (
     <Fragment>

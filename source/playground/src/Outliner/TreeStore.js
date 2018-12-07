@@ -34,7 +34,8 @@ const Col = types.model('Col', {
 const TreeStore = types.model('TreeStore', {
   nodes: types.array(Node),
   root: types.maybeNull(types.reference(Node)),
-  cols: types.array(Col)
+  cols: types.array(Col),
+  filterText: types.string
 }).actions(self => ({
   populate(root) {
     let genId = 0
@@ -68,6 +69,9 @@ const TreeStore = types.model('TreeStore', {
     }
   
     self.root = addNode(root, 0)
+  },
+  applyFilter(text) {
+    self.filterText = text;
   }
 }))
 
