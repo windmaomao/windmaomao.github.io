@@ -10,14 +10,13 @@ import './Outliner.scss';
 // services
 import OutlinerStore from './OutlinerStore';
 // locals
-const store = new OutlinerStore();
-store.fetchOutliner();
+const outliner = new OutlinerStore();
+outliner.fetchOutliner();
 
 const Outliner = ({ layout }) => {
-  const {tree, options} = store; 
   return (
     <div className="content">
-      <OutlinerTable tree={tree} options={options} />
+      <OutlinerTable tree={outliner.tree} />
       {/* Enable following line for prototype version */}
       {/* <TablePrototype />  */}
     </div>

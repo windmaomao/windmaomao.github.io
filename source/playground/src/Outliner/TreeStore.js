@@ -77,8 +77,4 @@ const TreeStore = types.model('TreeStore', {
   }
 }))
 
-// onSnapshot(tree, snapshot => {
-//   console.dir(snapshot)
-// })
-
 export default TreeStore;

@@ -8,7 +8,7 @@ import OutlinerControl from './OutlinerControl';
 // services
 
 const OutlinerTable = ({ tree }) => {
-  const {title, root, cols} = tree;
+  const {root, cols} = tree;
   const visible = v => v.visible;
   const options = { 
     filterText: tree.filterText,
@@ -20,7 +20,7 @@ const OutlinerTable = ({ tree }) => {
         <Table.Row>
           <Table.HeaderCell />
           <Table.HeaderCell width={9}>
-            <OutlinerControl tree={tree} title={title} />
+            {root && <OutlinerControl tree={tree} />}
           </Table.HeaderCell>
           {cols.filter(visible).map((col) => (
             <Table.HeaderCell key={col.name} onClick={col.toggle}>{col.name}</Table.HeaderCell>
