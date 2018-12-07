@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {observer} from 'mobx-react';
 // components
-import { Input, Dropdown } from 'semantic-ui-react'
+import { Icon, Input, Dropdown } from 'semantic-ui-react'
 
 const OutlinerControl = ({ tree }) => {
   const {title, cols} = tree;
@@ -26,6 +26,9 @@ const OutlinerControl = ({ tree }) => {
           </Dropdown.Menu>
         </Dropdown.Menu>
       </Dropdown>
+      <Icon name="sticky note outline"
+        onClick={tree.toggleNote}
+      />      
     </div>
   );
 };

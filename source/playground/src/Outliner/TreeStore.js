@@ -75,6 +75,9 @@ const TreeStore = types.model('TreeStore', {
   },
   applyFilter(text) {
     self.filterText = text.toLowerCase();
+  },
+  toggleNote() {
+    self.noteEnabled = !self.noteEnabled;
   }
 }))
 

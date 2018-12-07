@@ -32,7 +32,12 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
                 <Icon name="file outline" />
               )}
             </span>
-            <span className="caption">{title}</span>
+            <span className="caption">
+              {title} &nbsp;
+              {hasNote && (
+                <Icon disabled size='small' name='sticky note outline' title='Notes' />
+              )}
+            </span>
             {(noteEnabled && !noteInRow) && (
               <span className="description">{note}</span>
             )}
