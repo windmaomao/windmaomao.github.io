@@ -6,27 +6,29 @@ import { Table, Icon } from 'semantic-ui-react'
 // services
 const MarkdownIt = require('markdown-it'), 
   md = new MarkdownIt({ breaks: true });
+const parse = v => (md ? md.render(v.toString()) : v);
+const visible = v => v.visible;
 
 const OutlinerTableNode = observer(({ node, cols, options }) => {
-  const {level, folder, collapsed, title, note, children} = node;
+  const {level, folder, collapsed, title, note, children, noteHidden} = node;
+  const {toggle, toggleNote} = node;
   const {noteEnabled, noteInRow, filterText} = options;
-  const parse = v => (md ? md.render(v.toString()) : v);
-  const hasNote = !!note;
-  const displayNoteInRow = noteEnabled && noteInRow && hasNote;
-  const visible = v => v.visible;
   const displayRow = filterText ? node.found(filterText) : true;
+  const hasNote = !!note;
+  const displayNote = noteEnabled && !noteHidden && hasNote;
+  const displayNoteRow = noteInRow && displayNote && displayRow;
   return (
     <Fragment>
       {displayRow && (
         <Table.Row className={`tree-row level-${level}`}>
           <Table.Cell />
-          <Table.Cell className="title" onClick={node.toggle}>
+          <Table.Cell className="title">
             <span className="folder">
               {folder ? (
                 !collapsed ? (
-                  <Icon name="caret down" />
+                  <Icon name="caret down" onClick={toggle} />
                 ) : (
-                  <Icon name="caret right" />
+                  <Icon name="caret right" onClick={toggle} />
                 )
               ) : (
                 <Icon name="file outline" />
@@ -35,10 +37,15 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
             <span className="caption">
               {title} &nbsp;
               {hasNote && (
-                <Icon disabled size='small' name='sticky note outline' title='Notes' />
+                <Icon 
+                  link size='small' 
+                  name={noteHidden ? 'sticky note' : 'sticky note outline'}
+                  title='Notes' 
+                  onClick={toggleNote}
+                />
               )}
             </span>
-            {(noteEnabled && !noteInRow) && (
+            {(displayNote && !noteInRow) && (
               <span className="description">{note}</span>
             )}
           </Table.Cell>
@@ -47,7 +54,7 @@ const OutlinerTableNode = observer(({ node, cols, options }) => {
           ))}
         </Table.Row>
       )}
-      {(displayRow && displayNoteInRow) && (
+      {displayNoteRow && (
         <Table.Row className={`tree-row level-${level} note`}>
           <Table.Cell />
           <Table.Cell className="title" colSpan={cols.length + 1}>
@@ -68,7 +75,7 @@ OutlinerTableNode.defaultProps = {
   cols: [],
   options: {
     filterText: '',
-    noteEnabled: false,
+    noteEnabled: true,
     noteInRow: true,
   },
 }

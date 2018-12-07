@@ -15,7 +15,7 @@ class OutlinerStore {
   constructor() {
     this.tree = TreeStore.create({
       title: '', filterText: '', 
-      noteEnabled: false, noteInRow: true, 
+      noteEnabled: true, noteInRow: true, 
       nodes: [], root: null, cols: []
     });
 

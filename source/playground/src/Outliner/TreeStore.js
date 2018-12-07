@@ -10,12 +10,16 @@ const Node = types.model('Node', {
   children: types.array(types.late(() => types.reference(Node))),
   folder: false,
   data: types.optional(types.map(types.string), {}),
+  noteHidden: false,
 }).actions(self => ({
   toggle() {
     self.collapsed = !self.collapsed
   },
   found(text) {
     return self.title.toLowerCase().search(text) !== -1;
+  },
+  toggleNote() {
+    self.noteHidden = !self.noteHidden;
   }
 }))
 
@@ -36,8 +40,8 @@ const TreeStore = types.model('TreeStore', {
   root: types.maybeNull(types.reference(Node)),
   cols: types.array(Col),
   title: types.string,
-  noteEnabled: types.boolean,
-  noteInRow: types.boolean,
+  noteEnabled: true,
+  noteInRow: true,
   filterText: types.string
 }).actions(self => ({
   populate(root) {
