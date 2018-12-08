@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head>
+    <title>accounts</title>
+    <expansionState>0,9</expansionState>
+  </head>
+  <body>
+    <outline text="Summary" LatestBalance="853912">
+      <outline text="Investment" LatestBalance="184870">
+        <outline text="T.RowePrice College" LatestBalance="3621"/>
+        <outline text="Fidelity Individual" LatestBalance="15649"/>
+        <outline text="Fidelity Roth" LatestBalance="11150"/>
+        <outline text="Fidelity IRA" LatestBalance="55838"/>
+        <outline text="Fidelity 401" LatestBalance="5237"/>
+        <outline text="Vanguard IRA" LatestBalance="83596"/>
+        <outline text="Gold" LatestBalance="9779"/>
+      </outline>
+      <outline text="Deposit" LatestBalance="124217">
+        <outline text="Cash" LatestBalance="300"/>
+        <outline text="Paypal" LatestBalance="678"/>
+        <outline text="Ally Personal" LatestBalance="77071"/>
+        <outline text="Ally Joint *" LatestBalance="12042"/>
+        <outline text="BofA #0534" LatestBalance="14107"/>
+        <outline text="BofA #3950 *" LatestBalance="13055"/>
+        <outline text="BofA Regular" LatestBalance="626"/>
+        <outline text="Qplot Checking" LatestBalance="4517"/>
+        <outline text="Qplot Saving " LatestBalance="1601"/>
+        <outline text="Chase Qplot" LatestBalance="-28"/>
+        <outline text="Chase Personal" LatestBalance="-941"/>
+        <outline text="Health Savings" LatestBalance="1189"/>
+      </outline>
+      <outline text="Estate" LatestBalance="544825">
+        <outline text="Riverpine" LatestBalance="340000"/>
+        <outline text="Climbing Ivy" LatestBalance="179372"/>
+        <outline text="Toyota" LatestBalance="21675"/>
+        <outline text="Coin" LatestBalance="3778"/>
+      </outline>
+    </outline>
+  </body>
+</opml>

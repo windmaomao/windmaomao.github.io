@@ -11,11 +11,10 @@
 - Backup `mg` repos
 - Sync latest `kb` files to dropbox
 
-
 #### 12/2
 
-- Deal with `ebay` invoice
 - Collect `offer` letters
+- ~~Deal with `ebay` invoice~~
 - ~~Update `posted` photos~~
 - ~~Update screenshot to `s3`~~
 - ~~Update `annually`~~
