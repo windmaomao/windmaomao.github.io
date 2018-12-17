@@ -6,7 +6,7 @@
 
 | Company        | Duration    | Comment             |
 | -------------- | ----------- | ------------------- |
-| Mercury Gate   | 2018 -      | Transportation Apps |
+| Mercury Gate   | 2018        | Transportation      |
 | Deutsche Bank  | 2015 - 2018 | Banking Websites    |
 | People Designs | 2014 - 2018 | Healthcare Websites |
 | QPlot          | 2009 - 2017 | University Websites |
@@ -34,21 +34,13 @@ Highlights
 
 : - React: Fast development using in-house react and UI library for widgets and styles
   - Mobx: Complex form handling with nested data structure and realtime validation
-
   - Typehead: _Typehead_ widget design to lookup carrier by name or id
-
   - Quantity: Support copy/duplicate/change quantity of each equipment on the form
-
   - Multiselect: Various _multi-select_ widgets supporting lookup table
-
   - Directory: Custom widget wired with _multi-select_ widget for location selection
-
   - Location: Multiple location selector based on country, states, and postal codes
-
   - Datepicker: Date range picker for equipment availablility
-
   - Lightbox: Form sliding from edge of screen and pinned on the screen
-
 
 ### Shipping Orders
 
@@ -303,7 +295,9 @@ Contracting work with client sponsored projects {.subtitle}
 | Trinity    | Duke University|         | Feb/13  | |
 | TEDAR      | ArchSmart LLC  | DHS     | ?/12    | |
 | PharmTrac  | PlusDelta Tech |         | Feb/12  | |
+| Webinar    | Realstate      |         | Apr/11  | |
 | Orders     | DataRecoverMan |         | Apr/11  | |
+| Simwijzer.nl | | | Sep/10 ||
 
 Knowledgebase 2
 
@@ -380,6 +374,20 @@ PharmTrac
   - Mobile Integration: design API to connet with devices
   - Tracking Wallboard: large screen monitor for hospital activity.
 
+
+
+Duke DCI Reporting
+
+: ?
+: *Drupal* {.albels}
+: Duke DCI-IT Reporting - Drupal 6 module & theme development. It
+allow users of different group to run reports and charts over oracle database
+queries. Reports/Charts can be run and viewed through website, email or
+cron service. Reports can be accessed by users from different group over
+the campus and are highly restricted by group member only. Users can
+login to the system through LDAP without creating multiple accounts. All
+user functionalities can be accessed through user or group Dashboard.
+
 JQF Management
 
 : 06/11/2011
@@ -391,13 +399,21 @@ JQF Management
 WebinarFunnel
 
 : 03/03/2011
+: Project Manager / CakePHP Developer, Apr - 2011
 : Teryn Ashley Enterprises
 : *PHP* *MySQL* *Video* {.labels}
 : Developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time.
 
 ![Replay Webinar System](https://s3.amazonaws.com/qp-photo/webinarfunnel_ui.jpg)
 
-DataRecoverMan.com Orders
+Highlights:
+
+- Amazon S3 | Videos are uploaded and hosted with Amazon S3 for streaming efficiency
+- Video Replay | Videos can be replayed at specific time using flowplayer 
+- Infusionsoft CRM | Integrated with Infusionsoft CRM API to use custom actions driving CRM 
+- Roles / Permissions | Admin, customer and regular visitors. 
+
+DataRecoverMan.com Orders 
 
 : 03/02/2011
 : DataRecoverMan
@@ -410,7 +426,7 @@ Simwijzer.nl
 
 : 09/06/2010
 : *PHP* {.labels}
-: Choose from variety of Sim cards from different minutes, providers, and price plans.
+:Simcard web application where public user can visit and choose the right sim card based on the cell phone carrier, plan type and montly cost. They can purchase the card after that. It's composed with two UI, one for the admin who can add new carrier plans and one for public user who can view and choose plans.
 
 ![Simcard Plans](https://s3.amazonaws.com/qp-photo/sim_card_portfolio.gif)
 

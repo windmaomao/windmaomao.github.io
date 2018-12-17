@@ -4,17 +4,23 @@
 
 ### Nov
 
+#### 12/15
+
+- Clean `mg` laptop, `sourcetree`
+- Collect people `references`
+- Dispute `19.5` ebay issue
+- ~~Adjust `401k` to 11%~~
+
 #### 12/7
 
-- Update single page `resume`
-- Support `apnea`
-- Backup `mg` repos
-- Sync latest `kb` files to dropbox
+- ~~Sync latest `kb` files to dropbox~~
+- ~~Backup `mg` repos~~
+- ~~Collect `offer` letters~~
+- ~~Deal with `ebay` invoice~~
+- ~~Support `apnea`~~
 
 #### 12/2
 
-- Collect `offer` letters
-- ~~Deal with `ebay` invoice~~
 - ~~Update `posted` photos~~
 - ~~Update screenshot to `s3`~~
 - ~~Update `annually`~~
