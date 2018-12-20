@@ -11,4 +11,7 @@ describe('Layout Message', () => {
   it("should display paragraph", () => {
     expect(rendered.find('p').length).toBe(2);
   })
+  it('should read props open', () => {
+    expect(rendered.props().open).toBe(false);
+  })
 })

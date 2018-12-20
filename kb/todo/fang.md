@@ -6,9 +6,14 @@
 
 #### 12/15
 
-- Clean `mg` laptop, `sourcetree`
-- Collect people `references`
+- Clean `Sites` folder
+- ~~Clean `mg` laptop, `sourcetree`~~
+- ~~Collect people `references`~~
 - Dispute `19.5` ebay issue
+- ~~Submit onboard `form`~~
+- GC Employee Trading Hotline at 212-325-8723
+- ~~Work Opportunity Tax 0308198E4N~~
+- Get update `ux-components`
 - ~~Adjust `401k` to 11%~~
 
 #### 12/7
