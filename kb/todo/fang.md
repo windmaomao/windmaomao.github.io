@@ -4,16 +4,26 @@
 
 ### Nov
 
+#### 12/22
+
+- Get update ux-components
+- Dispute `19.5` ebay issue
+- GC Employee Trading Hotline at 212-325-8723
+
 #### 12/15
 
-- Clean `Sites` folder
+- Delete `chrome` and extensions
+- Migrate all `LastPass`
+- Clean `application` folder, `VC` `Typora`
+- Clean `Sites` folder `apnea` `prepare` `github`
+- ~~Organize bookmarks via `booky.io`~~
+- ~~Update `offer` letter~~
+- ~~Save five `notes`~~
+- ~~Delete `dropbox` and `outliner`~~
 - ~~Clean `mg` laptop, `sourcetree`~~
 - ~~Collect people `references`~~
-- Dispute `19.5` ebay issue
 - ~~Submit onboard `form`~~
-- GC Employee Trading Hotline at 212-325-8723
 - ~~Work Opportunity Tax 0308198E4N~~
-- Get update `ux-components`
 - ~~Adjust `401k` to 11%~~
 
 #### 12/7
