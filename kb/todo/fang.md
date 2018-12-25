@@ -9,13 +9,14 @@
 - Get update ux-components
 - Dispute `19.5` ebay issue
 - GC Employee Trading Hotline at 212-325-8723
+- Organize `sites` files
 
 #### 12/15
 
 - Delete `chrome` and extensions
 - Migrate all `LastPass`
-- Clean `application` folder, `VC` `Typora`
 - Clean `Sites` folder `apnea` `prepare` `github`
+- Clean `application` folder, `VC` `Typora`
 - ~~Organize bookmarks via `booky.io`~~
 - ~~Update `offer` letter~~
 - ~~Save five `notes`~~
