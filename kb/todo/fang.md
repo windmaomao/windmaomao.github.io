@@ -1,22 +1,33 @@
 # Fang's Todo
 
+## 2019
+
+#### 1/4
+
+- Get last `paystub` 
+- Get `experience` letter
+- GC Employee Trading Hotline at 212-325-8723
+
 ## 2018
 
 ### Nov
 
 #### 12/22
 
-- Get update ux-components
+- ~~Pay `Conceptions` bill~~
+- Check `children` bill paid?
+- Call `Cedar` to setup ACH draft
+- ~~Deal with `wageworks` before end of year~~
 - Dispute `19.5` ebay issue
-- GC Employee Trading Hotline at 212-325-8723
-- Organize `sites` files
+- Delete `chrome` and extensions
+- Clean `Sites` folder `apnea` `prepare` `github`
+- Migrate all `LastPass`
+- Clean `application` folder, `VC` `Typora`
+- ~~Fire `resignation` letter~~
+- ~~Organize `sites` files~~
 
 #### 12/15
 
-- Delete `chrome` and extensions
-- Migrate all `LastPass`
-- Clean `Sites` folder `apnea` `prepare` `github`
-- Clean `application` folder, `VC` `Typora`
 - ~~Organize bookmarks via `booky.io`~~
 - ~~Update `offer` letter~~
 - ~~Save five `notes`~~
