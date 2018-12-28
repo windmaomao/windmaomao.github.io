@@ -14,15 +14,19 @@
 
 #### 12/22
 
-- ~~Pay `Conceptions` bill~~
+- Clean browser history
+- Remove `LastPass`
+- Remove `Sites` folder
+- Remove `~/ssh` folder
+- Remove `Dropbox` folder
 - Check `children` bill paid?
 - Call `Cedar` to setup ACH draft
-- ~~Deal with `wageworks` before end of year~~
 - Dispute `19.5` ebay issue
-- Delete `chrome` and extensions
-- Clean `Sites` folder `apnea` `prepare` `github`
-- Migrate all `LastPass`
-- Clean `application` folder, `VC` `Typora`
+- ~~Clean `Sites` folder `apnea` `prepare` `github`~~
+- ~~Pay `Conceptions` bill~~
+- ~~Deal with `wageworks` before end of year~~
+- ~~Delete `chrome` and extensions~~
+- ~~Clean `application` folder, `VC` `Typora`~~
 - ~~Fire `resignation` letter~~
 - ~~Organize `sites` files~~
 

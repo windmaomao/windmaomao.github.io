@@ -290,6 +290,9 @@ Contracting work with client sponsored projects {.subtitle}
 | Diagram    | Stim           |         | Aug/17  | |
 | HMS - HSDM | DrupalConnect  | Harvard | Feb/14  | |
 | Medication | RxAnte         |         | Sep/14  | |
+|Saint Gobain| Teclink        |         | Aug/14  | |
+| Scheduler  | Mathnasium     |         | Jun/14  | Failed|
+| Recovery   | RecoveryHub    |         | Jun/14  | |
 | Awards     | DesignHammer   | PGH     | Nov/13  | |
 | Stemcell   | AlphaMed Press |         | Sep/13  | |
 | Trinity    | Duke University|         | Feb/13  | |
@@ -344,6 +347,35 @@ Guided Workout
 : TopFitPros
 : *AngularJS* *NodeJS* {.labels}
 : Proof of concept of recipe ingredients guide application where users are guided to select healthy food based on carbs, proteins, fats and other personal preference. Internal state machine is built so that user will be suggested with choices based on six guidances step by step. At each step, user might be stopped to ask to substitute with healthy food or adjust food quantities based on personal preference.
+
+Techlink Saint Gobain
+
+: Aug - Sep 2014
+: Leading role in architect and deployment
+: Supplied Drupal subject matter expertise to Saint Gobain North America for their upcoming website which includes 250 pages with 91 static layout and 10 dynamic pages. Main content type has been modeled and deployed under three weeks.
+
+RecoveryHub
+
+: June - Oct 2014
+: Leading role in architect and deployment
+: Voluntarily provided Drupal 7 architect and deployment for RecoveryHub, which serves as a national (and potentially global) online network whose mission is to improve the lives of disaster survivors and enable community-led recovery.  For survivors and their communities, it provides a platform through which post-disaster needs can be matched with the goods and services – the recovery resources – made available to address those needs. 
+
+![](https://s3.amazonaws.com/qp-photo/recovery-home.png)
+
+Mathnasium Scheduler 
+
+: Jun 15th, 2014 - July 2014
+: Provided Laravel 4 architect and development for daily appointment management for a mathnasium center. Admin can setup multiple calendar where each calendar can have different daily working hours and off-days depending on your currently running program. And then customer can book/reserve appointments based on the available time slots allocated based on the calendar settings.
+: Laravel
+
+Highlights:
+: - Contents: Customer, Kids, Schedule, Appointment, Service and Calendar etc.
+ - Roles: Admin, Customer with two different UI
+ -  Dates: Recurring dates (weekly and monthly) can be added
+ -  UI: custom calendar frontend design and booking experience
+ -  Booking: Dates are booked according to available slots, and service hours
+ -  Import: Legacy csv data migration is supported
+ -  Calendar: Single page setup for complex data structure through front-end design
 
 Trinity
 
@@ -402,7 +434,7 @@ WebinarFunnel
 : Project Manager / CakePHP Developer, Apr - 2011
 : Teryn Ashley Enterprises
 : *PHP* *MySQL* *Video* {.labels}
-: Developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time.
+: Developing a webinar replay system playing pre-recorded webinar that can be watched by invited users on preset (recurring) time. This applicaiton is made for group of real estate people where they want to have a way to setup pre-recorded webinars and then invite people to attend them in a prescribed future date. It's composed of two UI, one for customer who can setup webinars and one for end-user who can attend webinars.
 
 ![Replay Webinar System](https://s3.amazonaws.com/qp-photo/webinarfunnel_ui.jpg)
 
