@@ -1,27 +1,38 @@
 # Fang's Todo
 
 ## 2019
-
+10:51-10:57
 #### 1/4
 
-- Get last `paystub` 
+- ~~Get last `paystub` ~~
 - Get `experience` letter
 - GC Employee Trading Hotline at 212-325-8723
+- Check `Cedar` payment on 1/7
 
 ## 2018
 
 ### Nov
 
-#### 12/22
+#### 12/28
 
-- Clean browser history
+- Monthly and Annual summary !!
+- Migrate legacy `md` projects
+- Close T.RowePrice account
+- Call Re'Shanda 919 994 1906
+- ~~Call `Cedar` to setup ACH draft, 919-348-2031~~
+- ~~Dispute `19.5` ebay issue~~
+
+#### Cleanup
+
+- Remove `Chrome`
 - Remove `LastPass`
 - Remove `Sites` folder
 - Remove `~/ssh` folder
 - Remove `Dropbox` folder
-- Check `children` bill paid?
-- Call `Cedar` to setup ACH draft
-- Dispute `19.5` ebay issue
+
+#### 12/22
+
+- ~~Sortout `pd` timesheet~~
 - ~~Clean `Sites` folder `apnea` `prepare` `github`~~
 - ~~Pay `Conceptions` bill~~
 - ~~Deal with `wageworks` before end of year~~
