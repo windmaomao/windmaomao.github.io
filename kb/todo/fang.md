@@ -5,13 +5,12 @@
 #### 1/8
 
 - Execute stock plan
-- Deal with trade policy
 - Setup Maggie fidelity account
-- Reinit `KB` online 
+- ~~Reinit `KB` online~~
 
 ## 2018
 
-### Nov
+### Dec
 
 #### 12/28
 
@@ -69,6 +68,8 @@
 - ~~Update `annually`~~
 - ~~Seal `apnea` hours~~
 - ~~Prototype `outliner`~~
+
+### Nov
 
 #### 11/27
 
