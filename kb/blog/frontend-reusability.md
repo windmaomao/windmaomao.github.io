@@ -25,21 +25,21 @@ With proper budget we should aim for branding Module without Javascript introduc
 
 ### Dynamic Component
 
-We use module to capture the programming resuable unit and should be build in its own repo. Inside we can expose each dynamic component through an interface where the consumer can call as a function. This has been demonstrated via React and other frontend framework. Our job is to continue with this approach with proper documentation. 
+We use module to capture the programming resuable unit. Inside we can expose each dynamic component through an interface where the consumer can call as a function. This has been demonstrated via React and other frontend framework. Our job is to continue with this approach with some convention and proper documentation. 
 
 Since dynamic components are not a presentable webpage, there're certain considerations we need to have in order to test them properly in an isolated repo before integration into Applications. The bottom line is that there shouldn't be too much guess work for down stream consumer. 
 
 ### Application Creation
 
-Each application sits in its own repo (or an isolated folder inside another repo). The connection between the app and the components are through Module dependencies. Therefore a simple application creation process is, if not automatic,
+Each application sits in its own repo (or an isolated folder inside another repo). The connection between the app and the components are through Module dependencies. Therefore a typical application creation process is,
 
 - create an empty application
 - declare the branding dependency to add consistent look and feel
 - declare other component dependency to add more functionalities
 
-For now on, you can add custom functionalities specific to this app. The key thing is that the above steps shouldn't take a lot of time, if we can minimize it to under 50 lines, this process can be taken as a good candidate other than automatic process.
+For now on, you can add custom functionalities specific to this app. The key thing is that the above steps shouldn't take a lot of time, if we can minimize it to under 50 lines, this process can be taken as almost close to an automatic process.
 
-Since the app is just another higher level of module, you can either
+The app is just another higher level of module, you can either
 
 - publish it as a standalone app (with internal routes, and pages)
 - Or publish it as a library for other app to consume
@@ -48,13 +48,13 @@ This pattern scales on itself.
 
 ### Application Registration
 
-How a finished application should be integrated with the global domain is part of application on-boarding process, which determins where the application is deployed, and who should access the application.
+How a finished application should be integrated with the global domain is part of application on-boarding process, which determins where the application (or page) is deployed, and who should access the application.
 
-For a distributed system, this could be a exception that we don't want to declare hard dependency through coding. Instead we can establish the dependency through soft linking or configurational settings stored in the server. This way we help to separate the team responsibility and minimize the build conflicts between different teams. 
+For a distributed system, this could be an exception that we don't want to declare hard dependency through coding. Instead we can establish the dependency through soft linking or configurational settings stored in the server. This way we help to separate the team responsibility and minimize the build conflicts between different teams as well as maximizing the flexibility of deployment.
 
 ## Conclusion
 
-In short, by identifying the strategic repos, each as a reusable functional unit, we can create application efficiently.  The identification requires considerate amount of effort in planning, documentation, and refactoring for these repos. 
+In short, by identifying the strategic repos, each as a reusable functional unit, we can create application efficiently with overall reduced cost.  Although these repos require considerate amount of effort in planning, documentation, and refactoring, it pays off when we reach 5-10 apps, and becomes relatively negligible when it's over 20-100 apps. 
 
 
 
