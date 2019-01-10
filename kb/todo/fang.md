@@ -6,6 +6,7 @@
 
 - Execute stock plan
 - Setup Maggie fidelity account
+- ~~Upgrade wifi speed~~
 - ~~Reinit `KB` online~~
 
 ## 2018
