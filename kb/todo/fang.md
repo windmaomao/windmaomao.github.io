@@ -2,10 +2,19 @@
 
 ## 2019
 
+#### 1/12
+
+- ~~Access `adp`~~
+- SJB, PSQ, EUM, REK, EFZ, EPV, SJB, SH, RWM, 
+- HLT,MAT,MCD,MET,AIG, NKE, NYT, UA
+- SOYB, SHOO
+- Signup healthcare
+- Study spending wave
+
 #### 1/8
 
-- Execute stock plan
-- Setup Maggie fidelity account
+- ~~Disclose stock plan~~
+- ~~Setup Maggie fidelity account~~
 - ~~Upgrade wifi speed~~
 - ~~Reinit `KB` online~~
 
