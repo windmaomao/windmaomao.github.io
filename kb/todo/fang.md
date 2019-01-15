@@ -9,6 +9,7 @@
 - HLT,MAT,MCD,MET,AIG, NKE, NYT, UA
 - SOYB, SHOO
 - Signup healthcare
+- Add direct deposit
 - Study spending wave
 
 #### 1/8
