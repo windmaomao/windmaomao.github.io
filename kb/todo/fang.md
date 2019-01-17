@@ -4,13 +4,13 @@
 
 #### 1/12
 
-- ~~Access `adp`~~
-- SJB, PSQ, EUM, REK, EFZ, EPV, SJB, SH, RWM, 
-- HLT,MAT,MCD,MET,AIG, NKE, NYT, UA
-- SOYB, SHOO
-- Signup healthcare
-- Add direct deposit
-- Study spending wave
+- `LGND`
+- Support `prepare`
+- Transfer `HSA`
+- Signup `healthcare`
+- - ~~Add direct deposit~~
+- ~~Study spending wave~~
+- ~~Access adp~~
 
 #### 1/8
 
