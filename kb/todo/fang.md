@@ -4,11 +4,14 @@
 
 #### 1/12
 
-- `LGND`
+- `PSQ` `SEF` `REK` `BLUE` `CHAD` `SH` `SJB` `VXX`
+- `NAVI` `TDC` `MCD` `GE` `DIS` `RCL` `TIF`
+- `SBUX` `TAL`
+- Rollover `MG` IRA
 - Support `prepare`
 - Transfer `HSA`
-- Signup `healthcare`
-- - ~~Add direct deposit~~
+- ~~Signup `healthcare`~~
+- ~~Add direct deposit~~
 - ~~Study spending wave~~
 - ~~Access adp~~
 
