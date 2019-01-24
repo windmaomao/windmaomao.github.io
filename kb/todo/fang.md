@@ -2,11 +2,14 @@
 
 ## 2019
 
+#### 1/23
+
+- Research 'ACL` 
+
 #### 1/12
 
-- `PSQ` `SEF` `REK` `BLUE` `CHAD` `SH` `SJB` `VXX`
-- `NAVI` `TDC` `MCD` `GE` `DIS` `RCL` `TIF`
-- `SBUX` `TAL`
+- `CHAD` `SEF` `SJB` `VXX`
+- `NAVI` `TDC` `SBUX` `MCD` `CRM` `GE` `DIS` `RCL` `TIF`
 - Rollover `MG` IRA
 - Support `prepare`
 - Transfer `HSA`
