@@ -8,8 +8,7 @@
 
 #### 1/12
 
-- `CHAD` `SEF` `SJB` `VXX`
-- `NAVI` `TDC` `SBUX` `MCD` `CRM` `GE` `DIS` `RCL` `TIF`
+- `LUV` `NYT` `PDD` `TDC`
 - Rollover `MG` IRA
 - Support `prepare`
 - Transfer `HSA`
