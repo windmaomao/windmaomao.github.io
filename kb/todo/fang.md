@@ -4,14 +4,16 @@
 
 #### 1/23
 
-- Research 'ACL` 
+- Research `ACL`
+- Prepare `tax` for trades
+- Purchase a laptop
+- Transfer `HSA`
+- Rollover `MG` IRA
 
 #### 1/12
 
-- `LUV` `NYT` `PDD` `TDC`
-- Rollover `MG` IRA
-- Support `prepare`
-- Transfer `HSA`
+- `PSQ` `ADSK` `CRM` `LUV` `NYT` `PDD` `TDC`
+- ~~Support `prepare`~~
 - ~~Signup `healthcare`~~
 - ~~Add direct deposit~~
 - ~~Study spending wave~~

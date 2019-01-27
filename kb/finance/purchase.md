@@ -278,6 +278,7 @@ Apr 2009 {.subtitle}
 
 | Model                     | Year | Notes          | Serial#   | Price |
 | ------------------------- | ---- | -------------- | --------- | |
+| Macbook Air 15-inch, 2019 | 2019 | Home main | MRE82LL/A | $1099 |
 | Macbook Pro 15-inch, 2017 | 2018 | Work assigned  | | |
 | iMac 2x.5-inch  Late 2013 | 2013 | New home iMac  | | $ 900 |
 | Macbook Air 13'Early 2014 | 2014 | Mathnasium use | | |
