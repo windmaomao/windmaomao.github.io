@@ -2,17 +2,66 @@
 
 ## 2019
 
+### Feb
+
+#### 3/23
+
+- sync tree 2
+- sync wokabulary
+- sync tower projects
+- sync documents
+- sync amazon s3 picture
+
+#### 3/14
+
+- Cancel FT subscription before Apr15th
+- sell iMac computer
+- Collect zeplin images
+- Cover  `EBAY`
+- Follow `CRM` `ECL` `GDS` `HLT` `HON` `IT` `PAYC` `TDC`
+- `02209SBG7`  `22541LAE3` 
+- `251525AP6` `345370BY5` `22541LAE3`
+- `37045XBJ4` `36966TDJ8`
+- `38150AC94` `02209SBE2`
+- ~~Write objectives~~
+- ~~License for recessionAlert~~
+- ~~Find out FSA~~
+- ~~Delta call them to ask fund back~~
+
+#### 2/26
+
+- ~~Apply virtual smart card~~
+- ~~Monthly summary~~
+- ~~US bank login password~~
+
+#### 2/1
+
+- ~~Buy apple care~~
+- ~~US bank `shortage`~~
+- ~~Fix `AC`~~
+- ~~C  `TAL`~~
+
+### Jan
+
+#### 1/27
+
+- ~~Transfer `HSA` (877) 924-3967~~
+- ~~Send apple laptops~~
+- ~~Mandatory training~~
+- ~~Seal `PD` Timesheet~~
+- ~~`JNJ` `HLF`~~
+- ~~Monthly statement~~
+- ~~Cancel dental appointment~~
+- ~~Take break on Thursday morning~~
+- ~~Get `W2` from Detusche~~
+
 #### 1/23
 
-- Research `ACL`
-- Prepare `tax` for trades
-- Purchase a laptop
-- Transfer `HSA`
-- Rollover `MG` IRA
+- ~~Rollover `MG` IRA 800-835-5097~~
+- ~~Purchase a laptop~~
 
 #### 1/12
 
-- `PSQ` `ADSK` `CRM` `LUV` `NYT` `PDD` `TDC`
 - ~~Support `prepare`~~
 - ~~Signup `healthcare`~~
 - ~~Add direct deposit~~
