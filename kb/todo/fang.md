@@ -4,25 +4,34 @@
 
 ### Feb
 
+#### 3/30
+
+- ~~monthly summary~~
+- ~~sync wokabulary~~
+- ~~Cancel LifeLock~~
+- Prepare for the trip
+- Cover `MET` `V`
+- Cancel FT subscription before Apr15th
+- Qplot yahoo $50
+- Research accounting, income statement, zipbooks
+- sync amazon s3 picture
+- Collect zeplin images
+
 #### 3/23
 
-- sync tree 2
-- sync wokabulary
-- sync tower projects
-- sync documents
-- sync amazon s3 picture
+- ~~visit dental office~~
+- ~~sell iMac computer~~
+- ~~:fire: `02209SBE2` on rollover~~
+- ~~sync tree 2~~
+- ~~sync tower projects~~
+- ~~sync documents~~
 
 #### 3/14
 
-- Cancel FT subscription before Apr15th
-- sell iMac computer
-- Collect zeplin images
-- Cover  `EBAY`
-- Follow `CRM` `ECL` `GDS` `HLT` `HON` `IT` `PAYC` `TDC`
 - `02209SBG7`  `22541LAE3` 
 - `251525AP6` `345370BY5` `22541LAE3`
 - `37045XBJ4` `36966TDJ8`
-- `38150AC94` `02209SBE2`
+- `38150AC94` `02209SBE2/02209SBG7` `65820AAK4`
 - ~~Write objectives~~
 - ~~License for recessionAlert~~
 - ~~Find out FSA~~
