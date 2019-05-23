@@ -2,20 +2,39 @@
 
 ## 2019
 
-### Feb
+### May
+
+#### 5/19
+
+- Cover `DBA`
+- $405 gift card
+
+#### 5/4
+
+- Setup 529 in fidelity
+- ~~Cover stocks `V`  `NAVI`~~
+- Lease 7/26
+- sync amazon s3 picture
+
+### Apr
+
+#### Move
+
+- ~~Room paint~~
+- ~~Aim for 5/15~~
+- ~~Third floor bathroom~~
+- ~~Fix Second flloor bathroom~~
+- ~~Clean first fllor~~
 
 #### 3/30
 
 - ~~monthly summary~~
 - ~~sync wokabulary~~
 - ~~Cancel LifeLock~~
-- Prepare for the trip
-- Cover `MET` `V`
-- Cancel FT subscription before Apr15th
-- Qplot yahoo $50
-- Research accounting, income statement, zipbooks
-- sync amazon s3 picture
-- Collect zeplin images
+- ~~b) Wrapper to init api~~
+- ~~Watch `HD` `ADSK`~~
+- ~~Cancel FT subscription before Apr15th~~
+- ~~Qplot yahoo $50~~
 
 #### 3/23
 
