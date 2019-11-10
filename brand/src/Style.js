@@ -13,7 +13,7 @@ const Div = styled.div`
     flex-wrap: wrap;
 
     .book-title {
-      font-family: ${Var.fontFamily.headline};
+      font-family: ${Var.fontFamily.default};
       font-size: 20px;
       font-weight: bold;
       letter-spacing: 0.5px;
@@ -26,6 +26,7 @@ const Div = styled.div`
       span {
         cursor: pointer;
         margin-right: 8px;
+        font-weight: 100;
         &.active, &.separator {
           font-family: ${Var.fontFamily.bold};
           font-weight: bold;
@@ -135,6 +136,30 @@ const Div = styled.div`
       margin: 0 auto;
     }    
   `}
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  h1 {
+    font-family: ${Var.fontFamily.headline};
+    font-weight: 700;
+  }
+  p {
+    text-align: justify;
+    margin-top: 30px;
+  }
+  i {
+    font-style: normal;
+    font-family: ${Var.fontFamily.headline};
+  }
+  blockquote {
+    font-family: ${Var.fontFamily.headline};
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 30px;
+    margin: 40px;
+  }
 `
 
 export default Div

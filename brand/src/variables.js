@@ -1,4 +1,5 @@
-const font = "'Vollkorn', Palatino, Times, serif"
+const font = "'Roboto Slab', serif"
+const font2 = "'Roboto', sans-serif"
 
 const variables = {
   unit: 'px',
@@ -8,7 +9,7 @@ const variables = {
     light: font,
     italic: font,
     lightItalic: 'CS-Light-Italic, sans-serif',
-    headline: font,
+    headline: font2,
     defaultMono: 'CST-Regular, monospace',
     boldMono: 'CST-Bold, monospace',
     lightMono: 'CST-Light, monospace',
