@@ -2,19 +2,83 @@
 
 ## 2019
 
+- Credit Suisse `M377930`
+- ~~Sync project, `Gpat`~~
+- ~~Fix car tire~~
+- Cover `BBBY`  `BZQ`   `SCHW` `EFZ` 
+- Day-3: `YANG` `LBJ` `BRZU` `EUFL` 
+- Day-2: `TMV` `RUSS` `MJ` `GASL` `TVIX` `DRV` 
+- Day-1:   `VIA`  `BIIB`
+- Day-0:  `WBA` `AAL`  `IEP` `KBH`  `RUSS` 
+
+
+### Oct
+
+- ~~Update resume~~
+- ~~Create `brandbook` repo~~
+
+### Sep 
+
+- ~~Install ATT, `3qydtvr=6wtt`, `# 147746083`~~
+- ~~ATT acc, `147746083`~~
+- ~~$405 gift card~~
+- ~~Ask feifei to start school~~
+- ~~Bed 76x81~~
+- ~~Disclose HSA `231272971`~~
+
+### Aug
+
+- ~~Lucas, 20th~~
+- ~~Sophia, 26th~~
+
+### Jul
+
+- ~~Call USBank to pay down~~, 
+- ~~Cancel `Barron` due 7/28~~
+- ~~Check all moving utilities~~
+- ~~Ask for reciept of Feifei tuition~~
+- ~~Cover `REK` `JNJ`~~
+- ~~Buy bond `KBH ` 48666KAV1~~
+
+| Symbol | Yrs | Rating  | Yield %      |
+| -----: | :-: | :-----: | -----------: |
+| DB |  6  | BA2     | 5.3 |
+| DELL   | 20  | BA2     | 6.1 |
+| F      | 10  | BAA3    | 5.8 |
+| FDX    | 30  | BAA2    | 4.3 |
+| JNJ    | 20  | AAA     | 3.2 |
+| KB | 10  | BA3     | 5.3 |
+| MSFT   | 40  | AAA     | 3.4 |
+| NFLX   | 10  | BA3     | 4.5 |
+| TGT    | 30  | A2      | 3.4 |
+
+### Jun
+
+- ~~buy `VUSTX`~~
+- ~~FSA Dental~~
+- ~~8882329223, nc pro service, 1:00pm~~
+- ~~Refund 181~~
+- ~~Quater tax qplot~~
+- ~~Cover `DIS`~~
+
 ### May
 
 #### 5/19
 
-- Cover `DBA`
-- $405 gift card
+- ~~Activate PSNC 7/22 Ginisty~~ 
+- ~~Dental appointment for Fei, 6/19th~~
+- ~~Add expense column for Maggie~~
+- ~~Change Trow 529 to money~~
+- ~~Lease 7/26~~
+- ~~Handle dependent HSA~~
+
+~~Duke Energy Progress, #0399710639. checked~~
+~~Town of Cary utility Water/Sewer/Garbage. checked~~ 16th
+~~SCE&G PSNC 7/31 stop 7/22 start Ginisty. checked~~
 
 #### 5/4
 
-- Setup 529 in fidelity
 - ~~Cover stocks `V`  `NAVI`~~
-- Lease 7/26
-- sync amazon s3 picture
 
 ### Apr
 

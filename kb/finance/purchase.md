@@ -10,16 +10,17 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item          | Amount   | Year | Type       | Renew |
 | ------------- | -------- | ---- | ---------- | ----- |
-| **Total**     |$1134  /y |      |            |       |
+| **Total**    |$1134  /y |      |            |       |
+| SimplyWall    | $115  /y | 2018 | Stock      | 12/29 |
 | Egghead       | $140  /y | 2017 | Video      | 12/11 |
 | Dropbox       | $100  /y | 2013 | Storage    | 11/06 |
 | NYTimes       |  $48  /y | 2017 | News       | 08/22 |
 | Safari Books  | $213  /y | 2016 | Book       | 08/01 |
 | CodePen       |  $96  /y | 2017 | Program    | 07/11 |
-| IntelliJ IDEA |  $50  /m | 2018 | IDE        | 04/24 |
-| Interview Cake| $100  /y | 2018 | Training   | 04/21 |
+| Medium        | $5    /m | 2019 | Blog       | 05/28 |
+| Barron        | $20   /m | 2019 | News       | 05/27 |
 | Google Drive  | $5    /y | 2017 | Storage    | 03/26 |
-| TradingView   | $108  /y | 2017 | Chart      | 02/03 |
+| TradingView   | $108  /y | 2017 | Stock      | 02/03 |
 | Quickbook     | $15   /m | 2016 | Accounting |   |
 | Lifelock      | $10   /m | 2015 | Security   |   |
 | Amazon AWS    | $2    /m | 2015 | Hosting    |   |
@@ -52,6 +53,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item          | Amount   | Since | End  |
 | ------------- | -------- | ----- | ---- |
+| IntelliJ IDEA | $50   /m | 2018  | 2018 |
+| Interview Cake| $100  /y | 2018  | 2018 |
 | Morningstar   | $200  /y | 2017  | 2018 |
 | Digital Ocean | $5    /m | 2015  | 2018 |
 | Diigo         | $40   /y | 2017  | 2018 |
@@ -83,6 +86,8 @@ Current online service subscribed, such as for trading, training, accounting,  h
 
 | Item            | Amount | Year | Type     |
 | --------------- | ------ | ---- | -------- |
+| Clock           | $  6   | 2019 | Utility  |
+| Numi            | $ 19   | 2019 | Utility  |
 | :+1: FiveNotes  | $  6   | 2018 | Notes    |
 | :+1: iStat Menu | $  4   | 2018 | Monitor  |
 | Omini Outliner  | $ 50   | 2015 | Excel    |
