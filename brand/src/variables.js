@@ -1,12 +1,14 @@
+const font = "'Vollkorn', Palatino, Times, serif"
+
 const variables = {
   unit: 'px',
   fontFamily: {
-    default: 'CS-Regular, sans-serif',
-    bold: 'CS-Bold, sans-serif',
-    light: 'CS-Light, sans-serif',
-    italic: 'CS-Italic, sans-serif',
+    default: font,
+    bold: font,
+    light: font,
+    italic: font,
     lightItalic: 'CS-Light-Italic, sans-serif',
-    headline: 'CS-Headline, sans-serif',
+    headline: font,
     defaultMono: 'CST-Regular, monospace',
     boldMono: 'CST-Bold, monospace',
     lightMono: 'CST-Light, monospace',
