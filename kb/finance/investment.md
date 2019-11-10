@@ -1,5 +1,27 @@
 # Investment
 
+## Jul 2019
+
+### Estate
+
+Estate is reaching return rate of 4% for new investment, therefore it carries more and more risk, especially the change of no appreciation in the next 5 years. 
+
+### Retirement
+
+There's considerate amount of reservation in retirment account which is generating base treasure interest rate. Therefore the longer goal is to convert them into somewhere with relative higher return or hedging attributes in case real estate / dollar might experience trouble time ahead. 
+
+### Bond
+
+This is a good temperory buffer between risky and safe asset. However the rates is going to decrease whereas the term to expire is going to increase. Considerate amount of risk will start to build into this area. Therefore currently it suits as a reasonable return against the interest paid towards my personal debt.
+
+### Commodity
+
+Personal study area is set towards commodity, although there's practically no experience in trading it. The rational is that if house or dollar is not going to hold through down turn, there must be something relatively more stable and desiable to counter the depressation. What's learned recently is that commodity serves purpose mostly in the speculation stage when building tension between parties, countries or sectors. By the time we're sure it's going to shine or fall, the value of commodity deteroriates to its doment value. $35 per ounce at 1933.
+
+### Stock
+
+Hedging and shorting are used poorly in the past year and there's almost -10% - -20% return so far although no more than 2% of total asset has been contributed to stock. Personally I still hold the urge to purchase stock, since more and more risky move are happening in daily basis.  
+
 ## 2018
 
 ### Realized Summary

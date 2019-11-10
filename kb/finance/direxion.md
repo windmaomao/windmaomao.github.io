@@ -42,6 +42,8 @@
 | Telecommunications| Bull | US Select  | `LTL`         |
 | Utilities| Bear | US Utilities        | `SDP`         |
 | FANG     | Bear | FANG + Alibaba etc. | `FNGD`        |
+| Insurance| Bull | US Insurance        | `IAK`         |
+
 
 ### Fixed Income
 
