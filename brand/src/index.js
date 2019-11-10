@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Book } from 'react-brandbook'
+import Style from './Style'
 
 const themes = [
   { title: 'Light', theme: { mode: 'light' } },
@@ -21,6 +22,7 @@ ReactDOM.render(
     topics={topics}
     themes={themes}
     layouts={layouts}
+    Div={Style}
   />, 
   document.getElementById('root')
 )
