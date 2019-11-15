@@ -13,8 +13,8 @@ const layouts = [
   { title: 'Left', direction: 'row' }
 ]
 const topics = [{ title: 'Home', stories: resume }]
-const title = 'QPLOT'
-const logo = <img alt="" src={'./logo.png'} width={'24px'} />
+const title = <img alt="" src={'./logo.png'} width={'24px'} />
+const logo = ''
 
 ReactDOM.render(
   <Book

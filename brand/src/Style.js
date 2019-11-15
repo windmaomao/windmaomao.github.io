@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Var, { background, foreground } from './variables'
 
 const Div = styled.div`
+  -webkit-font-smoothing: antialiased;
   font-family: ${Var.fontFamily.default};
   display: flex;
   flex-direction: ${props => props.direction};
@@ -13,7 +14,7 @@ const Div = styled.div`
     flex-wrap: wrap;
 
     .book-title {
-      font-family: ${Var.fontFamily.default};
+      font-family: ${Var.fontFamily.headline};
       font-size: 20px;
       font-weight: bold;
       letter-spacing: 0.5px;
@@ -119,8 +120,10 @@ const Div = styled.div`
       }
     }
     .story-body {
+      max-width: 40em;
       padding-top: 20px;
       padding-bottom: 80px;
+      margin: 0 auto;
       color: ${foreground};
       h4 {
         font-family: ${Var.fontFamily.headline};
@@ -140,25 +143,34 @@ const Div = styled.div`
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
-  h1 {
+  hyphens: auto;
+  h2, h3, h4, h5 {
     font-family: ${Var.fontFamily.headline};
-    font-weight: 700;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 400;
+  }
+  h2 {
+    text-align: center;
+  }
+  h3, h4, h5 {
+    font-family: ${Var.fontFamily.headline};
+  }
+  h2, h3, h4, h5 {
+    margin-top: 40px;
   }
   p {
-    text-align: justify;
     margin-top: 30px;
   }
   i {
-    font-style: normal;
     font-family: ${Var.fontFamily.headline};
   }
   blockquote {
     font-family: ${Var.fontFamily.headline};
     font-weight: 300;
-    letter-spacing: 1px;
     text-align: justify;
-    line-height: 30px;
-    margin: 40px;
+    margin: 30px;
   }
 `
 

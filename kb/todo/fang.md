@@ -5,11 +5,17 @@
 - Credit Suisse `M377930`
 - ~~Sync project, `Gpat`~~
 - ~~Fix car tire~~
-- Cover `BBBY`  `BZQ`   `SCHW` `EFZ` 
+- Cover  `FXP` `QCOM` `BBBY` `EFZ`
 - Day-3: `YANG` `LBJ` `BRZU` `EUFL` 
 - Day-2: `TMV` `RUSS` `MJ` `GASL` `TVIX` `DRV` 
 - Day-1:   `VIA`  `BIIB`
 - Day-0:  `WBA` `AAL`  `IEP` `KBH`  `RUSS` 
+- Day+1: `TZA` `ERY` `AAL` `VXX` `WBA` 
+- Day+2: `AMTD` `BBY` `HPQ` `WBA`
+- Day+3:  `RWM` `RCL` `HSIC` `GE` `FDX`
+- Day+4: `BYND` `CNC` `CSX` `DOW` `TAL`
+- Day+4: `TSM` `WBA`
+- Day+5: `TMV` `AAL` `COTY` `ECH` `ZSL`
 
 
 ### Oct
