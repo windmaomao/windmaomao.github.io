@@ -8,32 +8,36 @@ const Div = styled.div`
   flex-direction: ${props => props.direction};
   .book-nav {
     font-family: ${Var.fontFamily.light};
-    background-color: ${foreground};
-    color: ${background};
+    background-color: ${Var.color.gray2};
+    color: ${Var.color.gray7};
     display: flex;
     flex-wrap: wrap;
 
     .book-title {
       font-family: ${Var.fontFamily.headline};
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       letter-spacing: 0.5px;
       line-height: 25px;
       order: 0;
     }
 
+    .topic-list {
+      order: 1;
+    }
+
+    .theme-list {
+      order: 2;
+    }
+
     .theme-list, .topic-list {
       display: flex;
-      span {
+      > span {
         cursor: pointer;
         margin-right: 8px;
-        font-weight: 100;
         &.active, &.separator {
           font-family: ${Var.fontFamily.bold};
           font-weight: bold;
-        }
-        &.separator {
-          display: none;
         }
       } 
     }
@@ -41,14 +45,29 @@ const Div = styled.div`
       font-size: 13px;
     }
     .topic-list {
-      flex: 1 0 100%;
-      margin: 5px 0 0;
+      flex: 1 0 auto;
+      margin: 5px 0;
     }
 
     ${props => props.direction !== 'row' ? `
       justify-content: space-between;
       align-items: center;
       padding: 5px 10px;
+      .book-title {
+        margin-left: 5px;
+      }
+      .topic-list {
+        > span {
+          &.separator {
+            .text {
+              display: none;
+            }
+            .symbol {
+              opacity: 0.3;
+            }
+          }
+        }
+      }
     `: `
       flex: 0 0 150px;
       flex-direction: column;
@@ -74,7 +93,9 @@ const Div = styled.div`
             font-size: 12px;
             margin-top: 15px;
             opacity: 0.6;
-            cursor: none;
+            .symbol {
+              display: none;
+            }
           }
         }
       }
@@ -85,18 +106,20 @@ const Div = styled.div`
     flex: 1 1 auto;
     background-color: ${background};
     color: ${foreground};
-    padding: 20px;
+    padding: ${props => props.cover ? '0' : '20px'};
+    position: relative;
+    .story-next {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
     .story-head {
-      display: flex;
+      display: ${props => props.cover ? 'none' : 'flex'};
       align-items: baseline;
       justify-content: space-between;
       flex-wrap: wrap;
-      .story-title {
-        font-size: 20px;
-        font-weight: bold;
-        order: 0;
-        display: none;
-      }
+      margin-bottom: 20px;
       .story-text {
         flex: 1 0 auto;
         font-family: ${Var.fontFamily.light};
@@ -120,10 +143,7 @@ const Div = styled.div`
       }
     }
     .story-body {
-      max-width: 40em;
-      padding-top: 20px;
       padding-bottom: 80px;
-      margin: 0 auto;
       color: ${foreground};
       h4 {
         font-family: ${Var.fontFamily.headline};
@@ -140,37 +160,21 @@ const Div = styled.div`
     }    
   `}
 
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 300;
-  hyphens: auto;
-  h2, h3, h4, h5 {
-    font-family: ${Var.fontFamily.headline};
-  }
-  h1 {
-    text-align: center;
-    font-weight: 400;
-  }
-  h2 {
-    text-align: center;
-  }
-  h3, h4, h5 {
-    font-family: ${Var.fontFamily.headline};
-  }
-  h2, h3, h4, h5 {
-    margin-top: 40px;
-  }
-  p {
-    margin-top: 30px;
-  }
-  i {
-    font-family: ${Var.fontFamily.headline};
-  }
-  blockquote {
-    font-family: ${Var.fontFamily.headline};
-    font-weight: 300;
-    text-align: justify;
-    margin: 30px;
+  .book-separator {
+    flex: 1 1 auto;
+    background-color: ${background};
+    color: ${foreground};
+    padding: 20px;
+    position: relative;
+    .story-title {
+      font-family: ${Var.fontFamily.headline};
+      cursor: pointer;
+      position: absolute;
+      top: 40vh;
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+    }
   }
 `
 

@@ -1,7 +1,44 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const fontFamily = "Palatino, Times, serif"
+
+const ResumeDiv = styled.div`
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  hyphens: auto;
+  h2, h3, h4, h5 {
+    font-family: ${fontFamily};
+  }
+  h1 {
+    font-weight: 400;
+  }
+  h2 {
+    text-align: center;
+  }
+  h3, h4, h5 {
+    font-family: ${fontFamily};
+  }
+  h2, h3, h4, h5 {
+    margin-top: 40px;
+  }
+  p {
+    margin-top: 30px;
+  }
+  i {
+    font-family: ${fontFamily};
+  }
+  blockquote {
+    font-family: ${fontFamily};
+    font-weight: 300;
+    text-align: justify;
+    margin: 30px;
+  }
+`
 
 const introduction = (
-  <div>
+  <ResumeDiv>
     <h1>Senior Front-End Engineer</h1>
     <h2>Fang Jin</h2>
     <p>
@@ -30,7 +67,7 @@ const introduction = (
       <li>9 Years Reporting, charting, and visualization: D3.js, HighCharts, Matlab, Maya, Unity</li>
       <li>15 Years Strong analytical skills in math, modeling, calculation and simulation</li>
     </ul>
-  </div>
+  </ResumeDiv>
 )
 
 const background = (

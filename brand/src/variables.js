@@ -16,11 +16,12 @@ const variables = {
   },
   color: {
     black: 'black',
+    gray2: '#f5f5f5',
     gray3: '#dadada',
     gray4: '#a8a8a7',
     gray5: '#7c7c7b',
     gray6: '#575756',
-    gray7: '#333',
+    gray7: '#363636',
     white: 'white'
   },
   title: {

@@ -1,20 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Book } from 'react-brandbook'
+import { cover, resume } from './topics'
 import Style from './Style'
-import { resume } from './topics'
+import Logo from './Logo'
 
 const themes = [
   { title: 'Light', theme: { mode: 'light' } },
-  { title: 'Dark', theme: { mode: 'dark' } }
 ]
 const layouts = [
-  { title: 'Top', direction: 'column' },
   { title: 'Left', direction: 'row' }
 ]
-const topics = [{ title: 'Home', stories: resume }]
-const title = <img alt="" src={'./logo.png'} width={'24px'} />
-const logo = ''
+const title = 'QPLOT' 
+const logo = <Logo />
+const topics = [
+  { title: 'Home', stories: cover, separator: true },
+  { title: 'Resume', stories: resume },
+]
 
 ReactDOM.render(
   <Book
