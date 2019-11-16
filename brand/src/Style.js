@@ -16,11 +16,11 @@ const Div = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
-    padding: 40px;
+    padding: 0 40px;
     min-height: 100vh;
 
     .book-logo {
-      flex-basis: 100px;
+      margin-bottom: 60px;
       order: 10;
     }
 
@@ -30,6 +30,7 @@ const Div = styled.div`
       font-weight: bold;
       letter-spacing: 0.5px;
       line-height: 25px;
+      margin-top: 40px;
       order: 0;
     }
 
@@ -42,6 +43,7 @@ const Div = styled.div`
       flex-direction: column;
       flex-wrap: wrap;
       margin-top: 20px;
+      cursor: pointer;
       span {
         line-height: 22px;
         &.separator {

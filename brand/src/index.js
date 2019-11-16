@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Book } from 'react-brandbook'
-import { cover, resume } from './topics'
+import { topics } from './topics'
 import Style from './Style'
 import Logo from './Logo'
 
@@ -13,10 +13,6 @@ const layouts = [
 ]
 const title = 'QPLOT' 
 const logo = <Logo />
-const topics = [
-  { title: 'Home', stories: cover, separator: true },
-  { title: 'Service', stories: resume },
-]
 
 ReactDOM.render(
   <Book
