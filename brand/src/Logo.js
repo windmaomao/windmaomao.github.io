@@ -10,7 +10,7 @@ const LogoDiv = styled.span`
 
 const Logo = ({ text }) => (
   <LogoDiv>
-    <img alt="" src={'./logo.png'} width={'24px'} /> &nbsp;
+    <img alt="" src={'./logo.png'} width={'32px'} /> &nbsp;
     {text && 'QPLOT'}
   </LogoDiv>
 )

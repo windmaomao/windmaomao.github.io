@@ -4,15 +4,14 @@ import styled from 'styled-components'
 const fontFamily = "Palatino, Times, serif"
 
 const ResumeDiv = styled.div`
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 300;
-  hyphens: auto;
   h2, h3, h4, h5 {
     font-family: ${fontFamily};
   }
   h1 {
     font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
   }
   h2 {
     text-align: center;
@@ -21,10 +20,10 @@ const ResumeDiv = styled.div`
     font-family: ${fontFamily};
   }
   h2, h3, h4, h5 {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   p {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   i {
     font-family: ${fontFamily};
@@ -52,8 +51,8 @@ const introduction = (
     </blockquote>
     <h3>Leadership</h3>
     <ul>
-      <li>2 Years tech lead running analysis and sprints</li>
-      <li>5 Years lead contractor delivering projects</li>
+      <li>4 Years running <i>Development</i> and <i>Deployment</i></li>
+      <li>6 Years working with <i>Owners</i> and <i>BAs</i></li>
     </ul>
     <h3>Skills</h3>
     <ul>
@@ -71,8 +70,8 @@ const introduction = (
 )
 
 const background = (
-  <div>
-    <h2>Education</h2>
+  <ResumeDiv>
+    <h1>Education</h1>
     <h3>Johns Hopkins University</h3>
     <p>
       Sep 2000 - Sep 2006 <br />
@@ -83,7 +82,7 @@ const background = (
       Sep 1996 - Sep 2000 <br />
       Department of chemical engineering, Bachelor
     </p>
-    <h2>Activity</h2>
+    <h1>Activity</h1>
     <h3>RecoveryHub</h3>
     <p>
       Sep 2014 - Oct 2014 <br />
@@ -94,7 +93,7 @@ const background = (
       Sep 2007 - Dec 2008 <br />
       College math class teacher for two semesters      
     </p>
-  </div>
+  </ResumeDiv>
 )
 
 const resume = [

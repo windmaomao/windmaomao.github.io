@@ -15,7 +15,7 @@ const title = 'QPLOT'
 const logo = <Logo />
 const topics = [
   { title: 'Home', stories: cover, separator: true },
-  { title: 'Resume', stories: resume },
+  { title: 'Service', stories: resume },
 ]
 
 ReactDOM.render(
