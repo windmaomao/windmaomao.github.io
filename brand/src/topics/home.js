@@ -3,10 +3,15 @@ import SinglePage from './SinglePage'
 
 const home = [
   {
-    title: '',
-    text: <p>
-      I develop and support enterprise web frameworks, with core responsibility of <b>responsiveness</b>, <b>reusability</b> and <b>scalability</b>.
-    </p>,
+    title: 'QPLOT Web Design',
+    text: (
+      <div>
+        <p>
+          Welcome to our web design center located at North Carolina, <b>Research Triangle Area</b>. We provide web project consultation, development, deployment and maintanence for local small business owners.
+        </p>
+      </div>
+    ),
+    next: 'View Our Projects',
     body: <SinglePage />
   },
 ]

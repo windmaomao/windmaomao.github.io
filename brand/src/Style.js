@@ -21,7 +21,7 @@ const Div = styled.div`
 
     .book-logo {
       margin-bottom: 60px;
-      order: 10;
+      display: none;
     }
 
     .book-title {
