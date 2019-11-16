@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const DefaultDiv = styled.div`
@@ -6,7 +7,7 @@ const DefaultDiv = styled.div`
   max-width: 400px;
 `
 
-const FullPage = ({ story: { title, text, next, onNextClick } }) => (
+const SinglePage = ({ story: { title, text, next, onNextClick } }) => (
   <DefaultDiv>
     <img alt="" src={'./logo.png'} width={'48px'} />
     <br />
@@ -20,10 +21,4 @@ const FullPage = ({ story: { title, text, next, onNextClick } }) => (
   </DefaultDiv>
 )
 
-const background = props => props.theme.mode === 'dark' ? 'black' : 'white'
-const foreground = props => props.theme.mode === 'dark' ? 'white' : 'black'
-
-export { 
-  DefaultDiv, FullPage, 
-  background, foreground 
-}
+export default SinglePage
