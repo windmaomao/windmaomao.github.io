@@ -55,6 +55,9 @@ const Div = styled.div`
             display: none;
           }
         }
+        &.active {
+          font-weight: bold;
+        }
       }
     }
 
@@ -75,7 +78,6 @@ const Div = styled.div`
       align-items: baseline;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-bottom: 20px;
       .story-text {
         display: none;
       }

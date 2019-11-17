@@ -4,51 +4,22 @@ import styled from 'styled-components'
 const fontFamily = "Palatino, Times, serif"
 
 const ResumeDiv = styled.div`
-  h2, h3, h4, h5 {
-    font-family: ${fontFamily};
-  }
-  h1 {
-    font-weight: 400;
-    font-size: 28px;
-    text-align: center;
-    margin-top: 40px;
-  }
-  h2 {
-    text-align: center;
-  }
-  h3, h4, h5 {
-    font-family: ${fontFamily};
-  }
-  h2, h3, h4, h5 {
-    margin-top: 30px;
-  }
-  p {
-    margin-top: 20px;
-  }
-  i {
-    font-family: ${fontFamily};
-  }
-  blockquote {
-    font-family: ${fontFamily};
-    font-weight: 300;
-    text-align: justify;
-    margin: 30px;
-  }
+  font-family: ${fontFamily};
+  h1, h2, h3, h4, h5, p { margin-top: 30px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
+  h4, p, ul { font-size: 16px; }
+  img { margin: 10px 0; }
+  blockquote { margin: 30px; }
 `
 
 const introduction = (
   <ResumeDiv>
-    <h1>Senior Front-End Engineer</h1>
-    <h2>Fang Jin</h2>
     <p>
-      I develop, deploy and support enterprise web frameworks, with core responsibility of responsiveness, reusability and scalability. I prefer culture diversity, startup efficiency, and leaders with vision.
+      My daily responsibility includes working with developers, designers, business analysts and project owners s to lead the technical team starting from paper design to production server. 
     </p>
-    <p>
-      While I'm serving as a developer, my daily responsibility includes working with developers, designers, business analysts and project owners, so that I can lead technical team starting from paper design to production server. 
-    </p>
-    <blockquote>
-      "My latest accomplishment is a web framework supporting dark/light theme of branding components such as header/footer, menu, and forms. These components can be plugged into any fresh application with no more than 10 lines of code."      
-    </blockquote>
+    <img src="./images/consult.png" height="150px" alt="consult" />
     <h3>Leadership</h3>
     <ul>
       <li>4 Years running <i>Development</i> and <i>Deployment</i></li>
@@ -71,27 +42,16 @@ const introduction = (
 
 const background = (
   <ResumeDiv>
-    <h1>Education</h1>
-    <h3>Johns Hopkins University</h3>
+    {/* <h1>Education</h1> */}
+    <h4>Johns Hopkins University</h4>
     <p>
       Sep 2000 - Sep 2006 <br />
       Bio-molecular chemical engineering, M.S and Ph.D.
     </p>
-    <h3>East China University of Science and Technology</h3>
+    <h4>East China University of Science and Technology</h4>
     <p>
       Sep 1996 - Sep 2000 <br />
       Department of chemical engineering, Bachelor
-    </p>
-    <h1>Activity</h1>
-    <h3>RecoveryHub</h3>
-    <p>
-      Sep 2014 - Oct 2014 <br />
-      Volunteer for disaster and humanitarian relief      
-    </p>
-    <h3>University of California Irvine</h3>
-    <p>
-      Sep 2007 - Dec 2008 <br />
-      College math class teacher for two semesters      
     </p>
   </ResumeDiv>
 )
