@@ -1,21 +1,49 @@
 # Fang's Todo
 
-## 2019
+## 2020
 
 - Credit Suisse `M377930`
+- Go to DMV to get renewed
+- Backup icomply Zeplin
+- Sell `DSLV` Buy `TSM`
+
+### Feb
+
+- ~~Cover short position~~
+- ~~Pay for medical~~
+- ~~Cancel trip and get refund~~
+- ~~Find boa account number to reset password~~
+- ~~Todo: brandbook can't start without topics, themes, layouts~~
+- ~~Ask for Fidelity 401K to fill in the gap~~
+- ~~Check with Dependent FSA~~
+- ~~Cancel kindle unlimited~~
+
+### Jan
+
+- ~~`TMV` `CEF` `TBF`~~
+- ~~Go to oak to get receipt and take finger prints~~
+- ~~Go to oak to get receipt and take finger prints~~
+- ~~Cancel `Barron`, 1-800-544-0422~~
+- ~~Airline ticket, Apr 3-16, Delta $1561 #HNFNOE~~
+- ~~Find `cash`~~
+
+## 2019
+
+### Dec
+
+- ~~Monthly finance~~
+- ~~Change `401` contrib~~
+- ~~Pay `chase`~~
+- ~~Study petertseng repo~~
+
+### Nov
+
+~~Pay apple card!!~~
 - ~~Sync project, `Gpat`~~
 - ~~Fix car tire~~
-- Cover  `FXP` `QCOM` `BBBY` `EFZ`
-- Day-3: `YANG` `LBJ` `BRZU` `EUFL` 
-- Day-2: `TMV` `RUSS` `MJ` `GASL` `TVIX` `DRV` 
-- Day-1:   `VIA`  `BIIB`
-- Day-0:  `WBA` `AAL`  `IEP` `KBH`  `RUSS` 
-- Day+1: `TZA` `ERY` `AAL` `VXX` `WBA` 
-- Day+2: `AMTD` `BBY` `HPQ` `WBA`
-- Day+3:  `RWM` `RCL` `HSIC` `GE` `FDX`
-- Day+4: `BYND` `CNC` `CSX` `DOW` `TAL`
-- Day+4: `TSM` `WBA`
-- Day+5: `TMV` `AAL` `COTY` `ECH` `ZSL`
+- ~~(919) 846-7900 Orthodontics~~
+- ~~Cover    **`NOW` `OSK`**~~
+- ~~Cover `CNC``FXP` `EFZ`~~
 
 
 ### Oct
