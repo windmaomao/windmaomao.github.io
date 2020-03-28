@@ -5,10 +5,25 @@
 - Credit Suisse `M377930`
 - Go to DMV to get renewed
 - Backup icomply Zeplin
-- Sell `DSLV` Buy `TSM`
+- Cancel kindle after Aug 11th
+
+### Apr
+
+- 香港中资到期
+- 不存在报复性反弹，只有补偿性的消费
+- 开两回的时间4月18日
+- 
+- Buy EWV TAL, MAR, 
+
+### Mar
+
+- ~~Maggie -> Fang `1972`~~
+- ~~Refund -> Fang `5234`~~
+- :fire: Organize Project information
 
 ### Feb
 
+- ~~Book and organize Feb finance~~
 - ~~Cover short position~~
 - ~~Pay for medical~~
 - ~~Cancel trip and get refund~~
