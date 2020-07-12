@@ -58,7 +58,7 @@ Shipping Order Dashboard
 Highlights
 
 : - React: Fast development using common library for widgets and styles
-  - UI Library: Rely on large set of in-house _React_ and _Sass_ components 
+  - UI Library: Rely on large set of in-house _React_ and _Sass_ components
   - Statistics: Heavy processing of server data via _Lodash_ and _moment_ library
   - Chart: Beautiful _SVG_ chart via *D3* and *C3js* library
   - Data: `Redux` workflow of providing centralized data and actions
@@ -216,7 +216,7 @@ Report delivery and SLA notification system
 
 : 03/16/2016
 : *NodeJS* *AngularJS* *Kingslanding* {.labels}
-: Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery. 
+: Provided NodeJS backend / AngularJS UI for report delivery and SLA breach notification system for 1000 daily reports from US West and East region. I served as the lead architect and developer for data API, time critical SLA breach as well as batch email summary generation and delivery.
 
 ### DBVals Audit
 
@@ -230,7 +230,7 @@ Four-eyes-check statement audit
 
 ![DBVals Test Coverage](https://s3.amazonaws.com/qp-photo/dbVals-test-coverage.PNG)
 
-Highlights: 
+Highlights:
 
 : - Work with *Windows* environment
   - Design page layout with *Sketch*
@@ -249,28 +249,28 @@ Highlights:
 ### Others
 Small projects and proof of concept projects {.subtitle}
 
-Corporate Action UI 
+Corporate Action UI
 
 : Jan 2018
 : Prototype the calendar view
 
-Agency Security Lending 
+Agency Security Lending
 
 : Jan 2018 - Feb 2018
 : Prototype the website for dashboard and performance summary page
-: - Dashboard snapshot: 
+: - Dashboard snapshot:
   - Performance summary: Multi page
 
 Operations Management Dashboard
 
 : Feb 2016
-: Prototype custom table for dashboard 
+: Prototype custom table for dashboard
 : - Need data for each sub product by region
   - Current levels (T)
   - Trending required, ex. 30 day rolling average (30)
   - RAG statuses based on trending
 
-Entitlement Analysis 
+Entitlement Analysis
 
 : Jan 2016
 : Use mongodb dump to analysis complex relationship inside entitlement system
@@ -307,7 +307,7 @@ Knowledgebase 2
 : QPlot Knowledgebase 2
 : Sep 2018 - Oct 2018
 : *React* *Bulma* *Mobx* {.labels}
-: This is to remake the internal knowledgebase system in a maintainable fashion. The idea is to view hierachy of the library articles (Markdown) and each article can be navigated via its table of content. 
+: This is to remake the internal knowledgebase system in a maintainable fashion. The idea is to view hierachy of the library articles (Markdown) and each article can be navigated via its table of content.
 
 Highlights
 
@@ -358,11 +358,11 @@ RecoveryHub
 
 : June - Oct 2014
 : Leading role in architect and deployment
-: Voluntarily provided Drupal 7 architect and deployment for RecoveryHub, which serves as a national (and potentially global) online network whose mission is to improve the lives of disaster survivors and enable community-led recovery.  For survivors and their communities, it provides a platform through which post-disaster needs can be matched with the goods and services – the recovery resources – made available to address those needs. 
+: Voluntarily provided Drupal 7 architect and deployment for RecoveryHub, which serves as a national (and potentially global) online network whose mission is to improve the lives of disaster survivors and enable community-led recovery.  For survivors and their communities, it provides a platform through which post-disaster needs can be matched with the goods and services – the recovery resources – made available to address those needs.
 
 ![](https://s3.amazonaws.com/qp-photo/recovery-home.png)
 
-Mathnasium Scheduler 
+Mathnasium Scheduler
 
 : Jun 15th, 2014 - July 2014
 : Provided Laravel 4 architect and development for daily appointment management for a mathnasium center. Admin can setup multiple calendar where each calendar can have different daily working hours and off-days depending on your currently running program. And then customer can book/reserve appointments based on the available time slots allocated based on the calendar settings.
@@ -395,7 +395,7 @@ TEDAR
 : *Drupal* *Solr* {.labels}
 : [Test&Evaluation Data Archival Repo](https://www.sbir.gov/sbirsearch/detail/385521) will provide a repository for T&E event data, M&S event data, and other analysis event data, consisting of very large amounts of processed and raw structured and unstructured detection device data collected by T&E and M&S events and analyses of these data. Authorized users will be able to search for and access these data collections and retrieve data relevant to their business needs, such as performing engineering analyses and studies.
 
-PharmTrac 
+PharmTrac
 
 : Feb 2012 - Feb 2013
 : [PlusDelta Technologies](http://www.plusdeltatech.com/)
@@ -441,11 +441,11 @@ WebinarFunnel
 Highlights:
 
 - Amazon S3 | Videos are uploaded and hosted with Amazon S3 for streaming efficiency
-- Video Replay | Videos can be replayed at specific time using flowplayer 
-- Infusionsoft CRM | Integrated with Infusionsoft CRM API to use custom actions driving CRM 
-- Roles / Permissions | Admin, customer and regular visitors. 
+- Video Replay | Videos can be replayed at specific time using flowplayer
+- Infusionsoft CRM | Integrated with Infusionsoft CRM API to use custom actions driving CRM
+- Roles / Permissions | Admin, customer and regular visitors.
 
-DataRecoverMan.com Orders 
+DataRecoverMan.com Orders
 
 : 03/02/2011
 : DataRecoverMan
@@ -499,7 +499,7 @@ Github (aka. Knowledgebase)
 
 : 1/23/18
 : *Vue* *Markdown* *Github*
-: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. And from idea to production it takes less than one month. 
+: Started as a new workflow from working local markdown file to online viewer, this project goes very successful in becoming the dream-about personal knowledgebase system. And from idea to production it takes less than one month.
 : [Online](https://windmaomao.github.io),[Repo](https://github.com/windmaomao/windmaomao.github.io)
 : - Use `Codepen` to prototype the site and features
   - Use `Markdown` local to draft all documentations
@@ -534,7 +534,7 @@ Knowledge-base
 : 11/27/15
 : Centralize project, payment, and other knowledge-base information into more organized form
 
-Qplot Seven 
+Qplot Seven
 
 : 8/9/15
 : QPLOT website, blog, and some experiment projects
@@ -594,9 +594,9 @@ Highlights:
 - Authentication: Two-factor *SMS* enabled authentication for better security protection
 - Password Recovery: Recovery based on either username or 3 out of 6 question answers
 - Reusable Component: Modular design for both *CSS* and *Javascript* in developing UI components
-- *508* section: Disability compliance with video, and narration support with high contrast 
+- *508* section: Disability compliance with video, and narration support with high contrast
 - Multilingual Support: Three language translations made for pages, snippets, and graphics
-- Multi-tenant: Theme and content changes entirely based on access domain 
+- Multi-tenant: Theme and content changes entirely based on access domain
 - Responsive Design: Bootstrap is used for fast prototype for desktop, iPad and other devices
 - Template Design: Allow manager to modify each page content stored in file storage
 - File Management: administer language files through web interface with easy switch
@@ -611,7 +611,7 @@ Highlights:
 - HIPPA Server: HIPPA server host and deployment plan protecting health care privacy
 - Authentication: Two factor SMS enabled authentication for better security protection
 - Password Recovery: Recovery based on either username or 3 out of 6 question answers
-- 508 section: Disability compliance with video, and narration support with high contrast 
+- 508 section: Disability compliance with video, and narration support with high contrast
 - Multilingual Support: Three language translations made for pages, snippets and grphics
 - Responsive Design: Bootstrap is used for fast prototype for desktop, iPad and other devices
 - Template Design: Allow manager to modify each page content stored in file storage

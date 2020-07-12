@@ -10,7 +10,7 @@ MercuryGate's mission is to create transportation management system (TMS) soluti
 
 UI / AngularJS Architect
 
-09/16/2015 - 
+09/16/2015 -
 
 Serves *UI* and *AngularJS* architect in Market Clearing domain for 45+ banking applications. Due to their cost-effective natural as well as long term strategic maintenance advantage, *modular design and reusable component* are my essential toolsets in architecting UI element, and data services.
 
@@ -26,7 +26,7 @@ AngularJS developer and UI/UX designer
 
 05/15/2015 - 09/30/2015
 
-Provided UI mockup and *AngularJS* architect for Automated service center tool that will allow sales to setup customer environments based on their needs. My job is to work with an account manager to find out the business need. Both UI and *AngularJS* architect are drafted for both desktop and mobile audience. 
+Provided UI mockup and *AngularJS* architect for Automated service center tool that will allow sales to setup customer environments based on their needs. My job is to work with an account manager to find out the business need. Both UI and *AngularJS* architect are drafted for both desktop and mobile audience.
 
 ## TopFitPro
 
@@ -51,7 +51,7 @@ Lead AngularJS/NodeJS architect
 
 http://newstonerealty.com/
 
-Provided *AngularJS/NodeJS* architect and development of current realty website, especially in providing new front-end and backend framework to support the existing unstructured HTML content. 
+Provided *AngularJS/NodeJS* architect and development of current realty website, especially in providing new front-end and backend framework to support the existing unstructured HTML content.
 
 NewStone Realty - New Approaches. New Ideas. New Results.
 
@@ -61,7 +61,7 @@ As your Realtor® we act in your best interest through every phase of the home b
 
 Lead AngularJS / Laravel Developer
 
-10/14/2014 - 
+10/14/2014 -
 
 https://www.peopledesigns.com
 
@@ -116,7 +116,7 @@ Lead Drupal Architect
 
 http://alphamedpress.com/
 
-Redesign in *Drupal 7* architect and migration from legacy Joomla site of two flagship sites Stemcell and Oncologist integrated with iPhone/iPad app using “One Web” solution and pulling articles daily through Stanford Hirewire. The site requires **8 user roles, 22 content types, 26 custom modules and 160 admin views. They host 3000 articles, 48,000 registered users and 120,000 unique visits per month**. 
+Redesign in *Drupal 7* architect and migration from legacy Joomla site of two flagship sites Stemcell and Oncologist integrated with iPhone/iPad app using “One Web” solution and pulling articles daily through Stanford Hirewire. The site requires **8 user roles, 22 content types, 26 custom modules and 160 admin views. They host 3000 articles, 48,000 registered users and 120,000 unique visits per month**.
 
 AlphaMed Press is a premier independent publisher with three internationally peer-reviewed journals dedicated to advancing knowledge and education in their focused disciplines: The Oncologist; STEM CELLS, and STEM CELLS Translational Medicine. Founded in 1983, we have offices in Durham, NC; San Francisco, CA; and Belfast, Northern Ireland.
 
@@ -191,6 +191,3 @@ Contracting positions
 - TopFitPro - 1/2015 - 12/2015
 - Medicision - 7/2015 - 9/2015
 - Newstone Realty - 1/2015 - 2/2016
-
-
-
