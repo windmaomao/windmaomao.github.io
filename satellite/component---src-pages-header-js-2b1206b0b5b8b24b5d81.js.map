@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/header.js"],"names":["Header","props","headerText"],"mappings":"6FAAA,wEAEe,SAASA,EAAOC,GAC7B,OAAO,4BAAKA,EAAMC","file":"component---src-pages-header-js-2b1206b0b5b8b24b5d81.js","sourcesContent":["import React from \"react\"\n\nexport default function Header(props) {\n  return <h1>{props.headerText}</h1>\n}"],"sourceRoot":""}
