@@ -1,6 +1,6 @@
 # Todo
 
-> Get use to the new thing and try very hard to keep the working ones. - Fang
+> Don't get distracted by the new things from the working ones. - Fang
 
 ## Strategy
 
