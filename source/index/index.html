@@ -16,23 +16,51 @@
       align-items: center;
       text-align: center;
     }
+    .dialog {
+      width: 20rem;
+    }
     p {
       font-size: 1rem;
       margin: 2rem 0;
+      color: #eee;
+    }
+    .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+    @keyframes logo-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    a {
+      cursor: pointer;
       color: darkgrey;
+      :hover {
+        color: blue;
+      }
     }
   </style>
 </head>
 <body>
   <div class="dialog">
-    <img src="./logo.png" class="image">
+    <img src="./logo.png" class="logo">
     <p>
-      <i class="quote right icon"></i>
-      <i class="github icon"></i>
-      <i class="plus icon"></i>
-      <i class="book icon"></i>
-      <i class="calendar alternate outline icon"></i>
+      <a href="/satellite" title="Satellite">
+        <i class="quote right icon"></i>
+      </a>
+      <a href="/satellite/github" title="Github">
+        <i class="github icon"></i>
+      </a>
+      <a href="/sheet" title="Sheet">
+        <i class="plus icon"></i>
+      </a>
+      <a href="/qbook" title="My Book">
+        <i class="book icon"></i>
+      </a>
+      <a href="/scheduer2" title="Scheduler">
+        <i class="calendar alternate outline icon"></i>
+      </a>
     </p>
+    <quote>"What’s deeply connected will always remain."</quote>
   </div>
 
 </body>

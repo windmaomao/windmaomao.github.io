@@ -1,13 +1,67 @@
 <html>
 <head>
-<title>QPLOT</title>
-<meta http-equiv="refresh" content="1; URL=/satellite/index.html">
-<meta name="keywords" content="automatic redirection">
+  <title>QPLOT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="manifest.json">
+  <link rel=icon type=image/png href="logo.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" />
+  <style media="screen">
+    body {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .dialog {
+      width: 20rem;
+    }
+    p {
+      font-size: 1rem;
+      margin: 2rem 0;
+      color: #eee;
+    }
+    .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+    @keyframes logo-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    a {
+      cursor: pointer;
+      color: darkgrey;
+      :hover {
+        color: blue;
+      }
+    }
+  </style>
 </head>
 <body>
-If your browser doesn't automatically go there within a few seconds,
-you may want to go to
-<a href="/satellite/index.html">HOME</a>
-manually.
+  <div class="dialog">
+    <img src="./logo.png" class="logo">
+    <p>
+      <a href="/satellite" title="Satellite">
+        <i class="quote right icon"></i>
+      </a>
+      <a href="/satellite/github" title="Github">
+        <i class="github icon"></i>
+      </a>
+      <a href="/sheet" title="Sheet">
+        <i class="plus icon"></i>
+      </a>
+      <a href="/qbook" title="My Book">
+        <i class="book icon"></i>
+      </a>
+      <a href="/scheduer2" title="Scheduler">
+        <i class="calendar alternate outline icon"></i>
+      </a>
+    </p>
+    <quote>"What’s deeply connected will always remain."</quote>
+  </div>
+
 </body>
 </html>
