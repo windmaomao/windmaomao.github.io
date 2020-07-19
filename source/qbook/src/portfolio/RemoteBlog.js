@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
-import Blog from '../blog/Blog'
+import { Blog } from '../components'
 
 const RemoteBlog = ({ url }) => {
   const [src, setSrc] = useState('')

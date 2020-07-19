@@ -1,5 +1,5 @@
 import React from 'react'
-import Blog from './Blog'
+import { Blog } from '../components'
 import artOfWar from './md/art-of-war'
 import adventOfCode from './md/advent-of-code'
 import fortuneTelling from './md/fortune-telling'
@@ -24,7 +24,7 @@ const blogs = [
       '始计', '作战', '谋攻', '军形', '兵势', '虚实', '军争',
       '九变', '行军', '地形', '九地', '火攻', '用间', '心得'
     ].map((title, i) => ({
-      title, 
+      title,
       body: <Blog src={artOfWar[i]} />
     }))
   },
