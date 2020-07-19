@@ -1,4 +1,4 @@
-# Windmaomao knowledgebase
+# Knowledge-base
 
 ## /satellite
 
@@ -18,7 +18,7 @@ Kinder-garden math generator and answer sheet
 
 ## /scheduler and /scheduler2
 
-Mathnasium scheduling for teacher and students
+Mathnasium scheduling for teacher and students v1. and v2.
 
 ## /kb
 
