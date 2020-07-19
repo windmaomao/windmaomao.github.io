@@ -1,0 +1,4 @@
+### PlusDelta Technologies, Jun 2012 - Dec 2013
+Lead UI / Drupal Developer
+
+Joined a startup healthcare company, worked as a UI / *Drupal* developer building the flagship product that tracks medication inside hospitals like FedEx. I help draft interface design and build a medication tracking and workflow process improvement solution for hospital pharmacies that uses handheld smart *mobile* technology with an integrated web-enabled software that verifies, records and monitors every step in the process of medication preparation, dispensing, and delivery. The project took 1 year with 2000 billable hours to finish and has been deployed and used by 4 hospitals.

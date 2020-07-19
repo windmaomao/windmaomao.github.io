@@ -1,5 +1,11 @@
-RxAnte RxView
-=
+## RxAnte 
+
+### RxAnte, Sep 2014 - Mar 2015
+UI / Drupal Developer
+
+Joined a second stage healthcare startup company working as a UI / *Drupal* developer. Provided enterprise Drupal development, support and deployment for a hospital/insurance/doctor relationship web application which helps their patients to adhere with their existing medications therefore upgrade ranking star in the healthcare system. I was responsive for refining Dashboard to present data collected from doctor office and insurance company and providing model prediction display of the patient behaviors. Analyzed data for each account (multi-tenant) are sampled from 10-20 contracts with average 0.5 to 5 millions patients.
+
+### RxView
 
 [![haha](../images/rxeffect-ads.png)](https://docs.google.com/file/d/0B3kLIftcetNAaVI3b1NUcEdidmM)
 
