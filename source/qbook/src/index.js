@@ -9,7 +9,7 @@ import themes from './themes'
 
 const allTopics = [
   ...portfolio,
-  ...blog.works,
+  // ...blog.works,
   ...widget,
   ...blog.blogs
 ]
