@@ -17,7 +17,7 @@ const stories = [
   {
     title: 'Frontend', stories: [{
       title: 'Frontend Engineer',
-      body: <RemoteBlog url={`${gh}/resume/frontend.md`} />
+      body: <RemoteBlog url={`${gh}/resume/resumes/resume.md`} />
     }]
   },
   {

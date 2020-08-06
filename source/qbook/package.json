@@ -11,6 +11,7 @@
     "react-icons": "^3.9.0",
     "react-markdown": "^4.3.1",
     "react-scripts": "2.1.5",
+    "remark-frontmatter": "^2.0.0",
     "styled-components": "^4.4.1"
   },
   "scripts": {
