@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.5.6",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "markdown-it": "^8.4.2",
     "mobx": "^5.5.2",
     "mobx-react": "^5.3.6",
