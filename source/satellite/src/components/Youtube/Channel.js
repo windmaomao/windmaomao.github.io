@@ -24,12 +24,11 @@ export default ({
       sx={{
         backgroundColor: 'floralwhite',
         justifyContent: 'space-between',
-        flexWrap: 'wrap'
       }}
     >
       <Box
         sx={{
-          flex: '0 1 250px',
+          flex: '0 0 250px',
           fontSize: '0.9rem',
           padding: '2rem',
           backgroundColor: 'gold'
@@ -50,8 +49,8 @@ export default ({
       {channel && (
         <Box
           sx={{
-            flex: '1 1 250px',
-            padding: '1vw 5vw'
+            flex: '1 1 auto',
+            padding: '1vw',
           }}
         >
           <Playlist

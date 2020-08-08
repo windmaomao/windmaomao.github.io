@@ -38,12 +38,14 @@ class OAuthApi {
       })
   }
 
-  token(force) {
+  updateToken(force) {
+    if (!this.user) return Promise.resolve(null)
     return this.user.getIdToken(force)
       .then(t => {
         if (t !== this.token) {
           this.token = t
         }
+        return this.token
       })
   }
 
@@ -59,7 +61,7 @@ class OAuthApi {
         return null
       })
 
-    return this.token().then(callApi)
+    return callApi()
   }
 }
 

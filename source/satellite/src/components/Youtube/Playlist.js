@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Box, Text, Embed } from "theme-ui"
+import { Flex, Box, Text, Embed } from "theme-ui"
 
 const formatDate = str => {
   const d = new Date(str)
@@ -22,12 +22,17 @@ export default ({ api, playlistId }) => {
   }, [setVideos, api, playlistId])
 
   return (
-    <Box>
+    <Flex
+      sx={{
+        flexWrap: 'wrap',
+      }}
+    >
       {videos.map(v => (
         <Box
           key={v.id}
           sx={{
-            margin: '1rem 0',
+            flex: '0 1 320px',
+            margin: '1rem',
           }}
         >
           <small>{formatDate(v.snippet.publishedAt)}</small>
@@ -37,6 +42,6 @@ export default ({ api, playlistId }) => {
           <Embed src={`https://www.youtube.com/embed/${v.snippet.resourceId.videoId}`} />
         </Box>
       ))}
-    </Box>
+    </Flex>
   )
 }
