@@ -10,6 +10,10 @@ Static site generation with support of mdx and md
 
 Allow to navigate your own github repos and files
 
+### `/satellite/youtube`
+
+Allow to view subscribed youtube channel videos
+
 ### `/sheet`
 
 Kinder-garden math generator and answer sheet
