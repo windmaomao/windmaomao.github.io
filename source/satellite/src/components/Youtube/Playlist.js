@@ -31,7 +31,7 @@ export default ({ api, playlistId }) => {
         <Box
           key={v.id}
           sx={{
-            flex: '0 1 320px',
+            flex: '0 1 350px',
             margin: '1rem',
           }}
         >
@@ -40,6 +40,8 @@ export default ({ api, playlistId }) => {
             {v.snippet.title}
           </Text>
           <Embed src={`https://www.youtube.com/embed/${v.snippet.resourceId.videoId}`} />
+          <br />
+          <small>{v.snippet.description}</small>
         </Box>
       ))}
     </Flex>
