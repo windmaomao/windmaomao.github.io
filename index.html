@@ -1,14 +1,22 @@
 <html>
 <head>
   <title>QPLOT</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
+  <meta name="description" content="Windmaomao's personal website, including published books, blogs and apps.">
+  <meta name="keywords" content="React">
+  <meta name="author" content="Fang Jin">
+
   <link rel="manifest" href="manifest.json">
   <link rel=icon type=image/png href="logo.png">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" />
+
   <style media="screen">
     body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       display: flex;
       height: 100vh;
       flex-direction: column;
@@ -34,15 +42,29 @@
     a {
       cursor: pointer;
       color: darkgrey;
-      :hover {
-        color: blue;
-      }
+    }
+    a:hover {
+      color: #df4519;
+    }
+    i.fire {
+      color: #df4519;
+    }
+    .hosting {
+      margin-top: 8rem;
+    }
+    .hosting a {
+      vertical-align: text-bottom;
     }
   </style>
 </head>
 <body>
   <div class="dialog">
     <img src="./logo.png" class="logo">
+    <p class="feature">
+      <a href="/drh" title="A New Book">
+        <i class="fire icon"></i>Design <i>React</i> Hooks the Right Way
+      </a>
+    </p>
     <p>
       <a href="/satellite" title="Satellite">
         <i class="quote right icon"></i>
@@ -63,7 +85,12 @@
         <i class="calendar alternate outline icon"></i>
       </a>
     </p>
-    <quote>"What’s deeply connected will always remain."</quote>
+    <div class="hosting">
+      Hosted by Netlify
+      <a href="https://www.netlify.com" target="_blank">
+        <img src="https://www.netlify.com/img/press/logos/logomark.png" width="20px" />
+      </a>
+    </div>
   </div>
 
 </body>
