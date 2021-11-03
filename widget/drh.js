@@ -16,7 +16,7 @@ const BookStyle = styled.a`
   &:hover { color: #482e19; }
 `
 
-window.Book = () => {
+const Book = () => {
   return e(BookStyle, {
     href: "https://www.oreilly.com/",
     title: "Visit book site"
