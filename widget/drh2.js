@@ -1,3 +1,4 @@
+// https://codepen.io/windmaomao/pen/jOLeyXq?editors=1011
 var drh = (function () {
   'use strict';
 
@@ -18,7 +19,8 @@ var drh = (function () {
     return /*#__PURE__*/React.createElement("a", {
       style: style,
       href: "https://www.oreilly.com/",
-      title: "Visit book site"
+      title: "Visit book site",
+      target: '_blank'
     }, "Designing React Hook The Right Way");
   };
 
