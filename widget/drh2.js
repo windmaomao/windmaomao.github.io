@@ -18,7 +18,7 @@ var drh = (function () {
   var Link = function Link() {
     return /*#__PURE__*/React.createElement("a", {
       style: style,
-      href: "https://www.oreilly.com/",
+      href: "https://learning.oreilly.com/library/view/designing-react-hooks/9781803235950/",
       title: "Visit book site",
       target: '_blank'
     }, "Designing React Hook The Right Way");
