@@ -7,7 +7,12 @@ function Logo() {
   );
   return (
     <div className={classNames}>
-      Qplot
+      <span className="text-violet-500">
+        Q
+      </span>
+      <span className="text-blue-600">
+        plot
+      </span>
     </div>
   );
 }

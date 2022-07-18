@@ -4,7 +4,7 @@ import aboutImg from './about.jpg';
 
 function Introduction() {
   const classNames = cx(
-    'mt-10',
+    'mt-16',
     'grid',
     'grid-cols-1 md:grid-cols-7',
     'gap-x-8 gap-y-8',
@@ -12,8 +12,8 @@ function Introduction() {
   return (
     <Section className={classNames}>
       <div className="col-span-3 m:p-4">
-        <h1>About Me</h1>
-        <p className="mt-8">
+        <h2>About Me</h2>
+        <p className="mt-8 mr-16">
           Fang works with all sort of
           designers and engineers and is
           quite good at coding site
@@ -21,7 +21,7 @@ function Introduction() {
           making sites look nice and
           accessible these days.
         </p>
-        <p className="mt-4">
+        <p className="mt-4 mr-16">
           Off work, Fang hangs out with
           his family -wife, two kids and
           a dog. And he swims half an
@@ -30,7 +30,7 @@ function Introduction() {
           swim meets during summer time.
         </p>
       </div>
-      <div className="col-span-4">
+      <div className="col-span-4 pt-8">
         <img
           src={aboutImg}
           alt="About"

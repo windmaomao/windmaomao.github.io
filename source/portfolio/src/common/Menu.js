@@ -1,24 +1,34 @@
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
+import {
+  Link,
+  NavLink,
+} from 'react-router-dom';
 
 function Menu() {
   const classNames = cx(
     'flex',
-    'gap-x-4',
+    'gap-x-6',
     'font-heading',
     'text-sm',
   );
+
   return (
     <div className={classNames}>
       <div>
-        <Link to="/">Home</Link>
+        <NavLink exact to="/">
+          Home
+        </NavLink>
       </div>
       <div>
-        <Link to="/about-me">
+        <NavLink to="/about-me">
           About Me
-        </Link>
+        </NavLink>
       </div>
-      <div>Case Studies</div>
+      <div>
+        <NavLink to="/case-study">
+          Case Studies
+        </NavLink>
+      </div>
     </div>
   );
 }
