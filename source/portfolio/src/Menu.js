@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { Link } from 'react-router-dom';
 
 function Menu() {
   const classNames = cx(
@@ -9,8 +10,14 @@ function Menu() {
   );
   return (
     <div className={classNames}>
-      <div>Home</div>
-      <div>About Me</div>
+      <div>
+        <Link to="/">Home</Link>
+      </div>
+      <div>
+        <Link to="/about-me">
+          About Me
+        </Link>
+      </div>
       <div>Case Studies</div>
     </div>
   );
