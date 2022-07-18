@@ -4,9 +4,9 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Header from './Header';
-import Home from './Home';
-import AboutMe from './AboutMe';
+import Header from './common/Header';
+import Home from './home/Home';
+import AboutMe from './about/AboutMe';
 
 function App() {
   const classNames = cx('font-base');

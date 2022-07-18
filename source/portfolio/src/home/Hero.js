@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import Section from './Section';
+import Section from '../common/Section';
 import heroImg from './hero.jpg';
 
 function Hero() {
