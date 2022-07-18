@@ -7,6 +7,7 @@ import {
 import Header from './common/Header';
 import Home from './home/Home';
 import About from './about/About';
+import Cases from './cases/Cases';
 
 function App() {
   const classNames = cx('font-base');
@@ -18,6 +19,10 @@ function App() {
           <Route
             path="/about-me"
             element={<About />}
+          />
+          <Route
+            path="/case-studies"
+            element={<Cases />}
           />
           <Route
             path="/"

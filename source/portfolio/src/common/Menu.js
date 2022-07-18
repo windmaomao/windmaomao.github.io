@@ -35,10 +35,10 @@ function Menu() {
           About Me
         </NavLink>
       </div>
-      <div>
+      <div className="text-violet-500">
         <NavLink
-          to="/case-study"
-          className="text-violet-500"
+          to="/case-studies"
+          className={linkClassName}
         >
           Case Studies
         </NavLink>
