@@ -12,20 +12,34 @@ function Menu() {
     'text-sm',
   );
 
+  const linkClassName = ({
+    isActive,
+  }) => (isActive ? 'font-bold' : '');
+
   return (
     <div className={classNames}>
       <div>
-        <NavLink exact to="/">
+        <NavLink
+          exact="true"
+          to="/"
+          className={linkClassName}
+        >
           Home
         </NavLink>
       </div>
       <div>
-        <NavLink to="/about-me">
+        <NavLink
+          to="/about-me"
+          className={linkClassName}
+        >
           About Me
         </NavLink>
       </div>
       <div>
-        <NavLink to="/case-study">
+        <NavLink
+          to="/case-study"
+          className="text-violet-500"
+        >
           Case Studies
         </NavLink>
       </div>
