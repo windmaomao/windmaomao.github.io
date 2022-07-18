@@ -1,9 +1,13 @@
+import cx from 'classnames';
+import Header from './Header';
+import Hero from './Hero';
+
 function App() {
+  const classNames = cx('font-base');
   return (
-    <div className='App'>
-      <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-        Learn React
-      </a>
+    <div className={classNames}>
+      <Header />
+      <Hero />
     </div>
   );
 }
