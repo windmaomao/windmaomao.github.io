@@ -1,21 +1,19 @@
 import cx from 'classnames';
 import Section from './Section';
+import Logo from './Logo';
+import Menu from './Menu';
 
 function Header() {
   const classNames = cx(
     'mt-6',
-    'flex justify-between items-center',
+    'flex flex-wrap',
+    'justify-between items-center',
+    'gap-y-4',
   );
   return (
     <Section className={classNames}>
-      <div className="text-xl">
-        Qplot
-      </div>
-      <div className="flex gap-x-4 text-sm">
-        <div>Home</div>
-        <div>About Me</div>
-        <div>Case Studies</div>
-      </div>
+      <Logo />
+      <Menu />
     </Section>
   );
 }
