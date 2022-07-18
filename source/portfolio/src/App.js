@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from './common/Header';
 import Home from './home/Home';
-import AboutMe from './about/AboutMe';
+import About from './about/About';
 
 function App() {
   const classNames = cx('font-base');
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route
             path="/about-me"
-            element={<AboutMe />}
+            element={<About />}
           />
           <Route
             path="/"
