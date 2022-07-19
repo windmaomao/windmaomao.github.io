@@ -7,7 +7,6 @@ function Cases() {
 
   return (
     <Section className={classNames}>
-      <h1>Case Studies</h1>
       <Movie />
     </Section>
   );
