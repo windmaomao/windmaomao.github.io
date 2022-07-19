@@ -42,6 +42,16 @@
     @apply text-sm;
     @apply leading-normal;
   }
+  button {
+    @apply font-heading;
+    @apply text-lg;
+    @apply bg-blue-800;
+    @apply text-white;
+    @apply px-8;
+    @apply py-3;
+    @apply rounded-3xl;
+    @apply hover:bg-purple-500;
+  }
   a {
     @apply text-base;
     @apply font-light;
