@@ -2,7 +2,7 @@ import cx from 'classnames';
 import { NavLink } from 'react-router-dom';
 import Section from './Section';
 import Logo from './Logo';
-import newsletter from './newsletter.png';
+import Newsletter from './Newsletter';
 
 function Footer() {
   const classNames = cx(
@@ -56,11 +56,7 @@ function Footer() {
       </div>
       <div className="col-span-6 md:text-right flex flex-col md:items-end">
         <h5>Join My Newsletter</h5>
-        <img
-          src={newsletter}
-          alt="Newsletter"
-          className="mt-4"
-        />
+        <Newsletter />
       </div>
     </Section>
   );

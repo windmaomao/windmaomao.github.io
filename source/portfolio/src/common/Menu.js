@@ -11,7 +11,7 @@ function Menu() {
 
   const linkClassName = ({
     isActive,
-  }) => (isActive ? 'font-bold' : '');
+  }) => (isActive ? 'font-medium' : '');
 
   return (
     <div className={classNames}>
