@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import ScrollToTop from './common/ScrollToTop';
 import Header from './common/Header';
 import Home from './home/Home';
 import About from './about/About';
@@ -12,12 +13,14 @@ import Cases, {
   Swim,
 } from './cases/Cases';
 import Footer from './common/Footer';
+import Bottom from './common/Bottom';
 
 function App() {
   const classNames = cx('font-base');
   return (
     <div className={classNames}>
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route
@@ -43,6 +46,7 @@ function App() {
           />
         </Routes>
         <Footer />
+        <Bottom />
       </Router>
     </div>
   );

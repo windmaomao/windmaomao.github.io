@@ -7,7 +7,7 @@ function Footer() {
   const classNames = cx(
     'mt-20',
     'grid',
-    'grid-cols-1 md:grid-cols-12',
+    'grid-cols-6 md:grid-cols-12',
     'gap-y-8',
   );
   return (
@@ -18,42 +18,42 @@ function Footer() {
       <div className="col-span-2">
         <h5>Site</h5>
         <div className="pt-4">
-          <div>
+          <p>
             <NavLink
               exact="true"
               to="/"
             >
               Home
             </NavLink>
-          </div>
-          <div>
+          </p>
+          <p>
             <NavLink to="/about-me">
               About Me
             </NavLink>
-          </div>
-          <div>
+          </p>
+          <p>
             <NavLink to="/case-studies">
               Case Studies
             </NavLink>
-          </div>
+          </p>
         </div>
       </div>
       <div className="col-span-2">
         <h5>Cases</h5>
         <div className="pt-4">
-          <div>
+          <p>
             <NavLink to="/case-studies">
               MovieTime
             </NavLink>
-          </div>
-          <div>
+          </p>
+          <p>
             <NavLink to="/case-studies/next">
               SwimMeet
             </NavLink>
-          </div>
+          </p>
         </div>
       </div>
-      <div className="col-span-6 text-right">
+      <div className="col-span-6 md:text-right">
         <h5>Join My Newsletter</h5>
       </div>
     </Section>

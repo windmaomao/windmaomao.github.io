@@ -36,6 +36,7 @@
     @apply font-base;
     @apply text-base;
     @apply leading-normal;
+    @apply mt-2;
   }
   label {
     @apply font-heading;
@@ -56,6 +57,7 @@
   a {
     @apply text-base;
     @apply font-light;
+    @apply hover:text-purple-600;
   }
 }
 @tailwind components;
