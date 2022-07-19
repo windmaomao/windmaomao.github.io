@@ -30,6 +30,7 @@
     @apply font-medium;
     @apply text-base;
     @apply leading-normal;
+    @apply uppercase;
   }
   p {
     @apply font-base;

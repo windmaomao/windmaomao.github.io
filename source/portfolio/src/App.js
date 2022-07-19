@@ -11,6 +11,7 @@ import Cases, {
   Movie,
   Swim,
 } from './cases/Cases';
+import Footer from './common/Footer';
 
 function App() {
   const classNames = cx('font-base');
@@ -41,6 +42,7 @@ function App() {
             element={<Home />}
           />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
