@@ -5,7 +5,7 @@ import readmoreImg from './readmore.png';
 
 function Hero() {
   const classNames = cx(
-    'mt-20 py-20',
+    'mt-10 py-20',
     'flex flex-col',
     'items-center',
     'gap-y-10',

@@ -2,13 +2,14 @@ import cx from 'classnames';
 import { NavLink } from 'react-router-dom';
 import Section from './Section';
 import Logo from './Logo';
+import newsletter from './newsletter.png';
 
 function Footer() {
   const classNames = cx(
     'mt-20',
     'grid',
     'grid-cols-6 md:grid-cols-12',
-    'gap-y-8',
+    'gap-y-16',
   );
   return (
     <Section className={classNames}>
@@ -53,8 +54,13 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className="col-span-6 md:text-right">
+      <div className="col-span-6 md:text-right flex flex-col md:items-end">
         <h5>Join My Newsletter</h5>
+        <img
+          src={newsletter}
+          alt="Newsletter"
+          className="mt-4"
+        />
       </div>
     </Section>
   );
