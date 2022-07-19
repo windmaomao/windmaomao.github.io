@@ -22,7 +22,7 @@
   h4 {
     @apply font-heading;
     @apply text-xl;
-    @apply leading-normal;
+    @apply leading-loose;
     @apply font-medium;
   }
   h5 {
@@ -34,6 +34,12 @@
   p {
     @apply font-base;
     @apply text-base;
+    @apply leading-normal;
+  }
+  label {
+    @apply font-heading;
+    @apply font-thin;
+    @apply text-sm;
     @apply leading-normal;
   }
   a {

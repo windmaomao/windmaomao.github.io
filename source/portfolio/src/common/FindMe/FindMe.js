@@ -30,31 +30,73 @@ const FindMe = () => {
         <div
           className={sitesClassNames}
         >
-          <img
-            src={linkedin}
-            srcSet={`${linkedin} 1x, ${linkedin2} 2x`}
-            alt="LinkedIn"
-          />
-          <img
-            src={medium}
-            srcSet={`${medium} 1x, ${medium2} 2x`}
-            alt="Medium"
-          />
-          <img
-            src={amazon}
-            srcSet={`${amazon} 1x, ${amazon2} 2x`}
-            alt="Amazon"
-          />
-          <img
-            src={codepen}
-            srcSet={`${codepen} 1x, ${codepen2} 2x`}
-            alt="Codepen"
-          />
-          <img
-            src={stackoverflow}
-            srcSet={`${stackoverflow} 1x, ${stackoverflow2} 2x`}
-            alt="Stackoverflow"
-          />
+          <a
+            href="https://www.linkedin.com/in/windmaomao/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={linkedin}
+              srcSet={`${linkedin} 1x, ${linkedin2} 2x`}
+              alt="LinkedIn"
+              style={{
+                position: 'relative',
+                top: -2,
+              }}
+            />
+          </a>
+          <a
+            href="https://medium.com/@windmaomao"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={medium}
+              srcSet={`${medium} 1x, ${medium2} 2x`}
+              alt="Medium"
+            />
+          </a>
+          <a
+            href="https://www.amazon.com/Fang-Jin/e/B09M7FFMJP"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={amazon}
+              srcSet={`${amazon} 1x, ${amazon2} 2x`}
+              alt="Amazon"
+              style={{
+                position: 'relative',
+                top: 4,
+              }}
+            />
+          </a>
+          <a
+            href="https://codepen.io/windmaomao/pens/popular"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={codepen}
+              srcSet={`${codepen} 1x, ${codepen2} 2x`}
+              alt="Codepen"
+            />
+          </a>
+          <a
+            href="https://stackoverflow.com/users/288096/windmaomao"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={stackoverflow}
+              srcSet={`${stackoverflow} 1x, ${stackoverflow2} 2x`}
+              alt="Stackoverflow"
+              style={{
+                position: 'relative',
+                top: -8,
+              }}
+            />
+          </a>
         </div>
       </Section>
     </div>
