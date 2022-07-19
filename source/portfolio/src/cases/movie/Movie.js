@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { NavLink } from 'react-router-dom';
 import img2 from './2.jpg';
 import img3 from './3.jpg';
 import img4 from './4.jpg';
@@ -26,9 +27,11 @@ function Movie() {
 
   return (
     <div>
-      <h4 className={arrowClassNames}>
-        Next: SwimMeet
-      </h4>
+      <NavLink to="/case-studies/next">
+        <h4 className={arrowClassNames}>
+          Next: SwimMeet
+        </h4>
+      </NavLink>
       <h2>
         Case Studies
         <small> - MovieTime</small>

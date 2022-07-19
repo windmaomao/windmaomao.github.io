@@ -1,8 +1,5 @@
 import cx from 'classnames';
-import {
-  Link,
-  NavLink,
-} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Menu() {
   const classNames = cx(
