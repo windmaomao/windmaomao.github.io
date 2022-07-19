@@ -18,7 +18,7 @@ function Introduction() {
           designers and engineers and is
           quite good at coding site
           structure and logic as well as
-          making sites look nice and
+          making sites loFindMe nice and
           accessible these days.
         </p>
         <p className="mt-4 mr-16">
