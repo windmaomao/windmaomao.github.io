@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Section from '../common/Section';
 import Movie from './movie/Movie';
 import Swim from './swim/Swim';
+import Math from './math/Math';
 
 function Cases() {
   const classNames = cx('mt-16');
@@ -15,4 +16,4 @@ function Cases() {
 }
 
 export default Cases;
-export { Movie, Swim };
+export { Movie, Swim, Math };

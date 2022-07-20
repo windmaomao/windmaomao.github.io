@@ -11,6 +11,7 @@ import About from './about/About';
 import Cases, {
   Movie,
   Swim,
+  Math,
 } from './cases/Cases';
 import Footer from './common/Footer';
 import Bottom from './common/Bottom';
@@ -32,10 +33,19 @@ function App() {
             element={<Cases />}
           >
             <Route
-              path="next"
+              path="math"
+              element={<Math />}
+            />
+            <Route
+              path="swim"
               element={<Swim />}
             />
             <Route
+              path="movie"
+              element={<Movie />}
+            />
+            <Route
+              exact
               path=""
               element={<Movie />}
             />

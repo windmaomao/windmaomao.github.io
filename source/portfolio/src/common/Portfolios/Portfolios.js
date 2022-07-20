@@ -13,7 +13,7 @@ function Portfolios() {
   );
   return (
     <div className={classNames}>
-      <NavLink to="/case-studies">
+      <NavLink to="/case-studies/movie">
         <img
           src={popcorn}
           alt="MovieTime"
@@ -21,7 +21,7 @@ function Portfolios() {
           width="40px"
         />
       </NavLink>
-      <NavLink to="/case-studies/next">
+      <NavLink to="/case-studies/swim">
         <img
           src={fish}
           alt="SwimMeet"
@@ -29,7 +29,7 @@ function Portfolios() {
           width="50px"
         />
       </NavLink>
-      <NavLink to="/case-studies/next">
+      <NavLink to="/case-studies/math">
         <img
           src={monkey}
           alt="MathMonkey"
