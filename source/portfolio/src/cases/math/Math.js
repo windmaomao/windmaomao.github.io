@@ -3,12 +3,6 @@ import Portfolios from '../../common/Portfolios';
 import mathImg from './math.jpg';
 
 function Math() {
-  const chapterClassNames = cx(
-    'my-20',
-    'grid',
-    'grid-cols-1 md:grid-cols-12',
-    'gap-y-8',
-  );
   const bannerClassNames = cx(
     'mt-20',
     'grid',
@@ -22,6 +16,9 @@ function Math() {
         <Portfolios />
       </div>
       <h2>MathMonkey</h2>
+      <label>
+        Under construction ...
+      </label>
       <div className={bannerClassNames}>
         <div className="col-span-2"></div>
         <img
