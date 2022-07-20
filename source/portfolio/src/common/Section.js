@@ -1,4 +1,6 @@
 import cx from 'classnames';
+import { motion } from 'framer-motion';
+import { appearProps } from './motionProps';
 
 function Section({
   children,
@@ -11,9 +13,12 @@ function Section({
     className,
   );
   return (
-    <section className={classNames}>
+    <motion.section
+      className={classNames}
+      {...appearProps()}
+    >
       {children}
-    </section>
+    </motion.section>
   );
 }
 

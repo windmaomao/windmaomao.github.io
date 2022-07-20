@@ -1,6 +1,8 @@
 import cx from 'classnames';
+import { motion } from 'framer-motion';
 import Section from '../common/Section';
 import aboutImg from './about.jpg';
+import { appearProps } from '../common/motionProps';
 
 function Introduction() {
   const classNames = cx(
@@ -8,6 +10,7 @@ function Introduction() {
     'grid',
     'grid-cols-1 md:grid-cols-7',
     'gap-x-8 gap-y-8',
+    'min-h-max',
   );
   return (
     <Section className={classNames}>
@@ -38,12 +41,15 @@ function Introduction() {
           </button>
         </a>
       </div>
-      <div className="col-span-4 pt-8">
+      <motion.div
+        className="col-span-4 pt-8"
+        {...appearProps(0.5)}
+      >
         <img
           src={aboutImg}
           alt="About"
         />
-      </div>
+      </motion.div>
     </Section>
   );
 }
