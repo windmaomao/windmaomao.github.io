@@ -19,7 +19,7 @@ import img17 from './17.jpg';
 import img18 from './18.jpg';
 import img19 from './19.jpg';
 import img20 from './20.jpg';
-import movieImg from './movie.png';
+import movieImg from './movie.jpg';
 
 function Movie() {
   const chapterClassNames = cx(
