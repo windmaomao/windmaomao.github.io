@@ -29,6 +29,14 @@ function Introduction() {
           parents in all sorts of the
           swim meets during summer time.
         </p>
+        <a
+          href="resume.pdf"
+          target="_blank"
+        >
+          <button className="mt-8">
+            Resume
+          </button>
+        </a>
       </div>
       <div className="col-span-4 pt-8">
         <img
