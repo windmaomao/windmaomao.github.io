@@ -1,6 +1,8 @@
 import cx from 'classnames';
+import { NavLink } from 'react-router-dom';
 import Section from '../common/Section';
 import heroImg from './hero.jpg';
+import Portfolios from '../common/Portfolios';
 
 function Hero() {
   const classNames = cx(
@@ -15,17 +17,20 @@ function Hero() {
       <div className="col-span-7">
         <img src={heroImg} alt="Hero" />
       </div>
-      <div className="col-span-5 md:p-12">
+      <div className="col-span-4 md:pl-4">
         <h1>
           Build app with Confidence
         </h1>
-        <p className="mt-8">
+        <p className="mt-5">
           My name is Fang, 90% UI
           engineer and 10% UX designer.
           I build a site with precision
-          and confidence. Feel free to
-          reach out to me for proposals.
+          and confidence. Checkout the
+          case studies.
         </p>
+        <div className="mt-8">
+          <Portfolios />
+        </div>
       </div>
     </Section>
   );
