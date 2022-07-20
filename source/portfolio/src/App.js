@@ -5,6 +5,7 @@ import Header from './common/Header';
 import AppRoutes from './AppRoutes';
 import Footer from './common/Footer';
 import Bottom from './common/Bottom';
+import AppTransition from './AppTransition';
 
 function App() {
   const classNames = cx('font-base');
@@ -13,6 +14,7 @@ function App() {
       <Router basename={'portfolio'}>
         <ScrollToTop />
         <Header />
+        <AppTransition />
         <AppRoutes />
         <Footer />
         <Bottom />
