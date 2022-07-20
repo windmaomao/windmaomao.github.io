@@ -3,7 +3,7 @@ import {
   AnimatePresence,
   motion,
 } from 'framer-motion';
-import AppRoutes from './AppRoutes';
+import { cloneElement } from 'react';
 
 function AppTransition({ children }) {
   const location = useLocation();
@@ -16,9 +16,9 @@ function AppTransition({ children }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <AppRoutes
-          location={location}
-        />
+        {cloneElement(children, {
+          location,
+        })}
       </motion.div>
     </AnimatePresence>
   );
