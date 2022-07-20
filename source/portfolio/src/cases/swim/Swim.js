@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import { NavLink } from 'react-router-dom';
+import Portfolios from '../../common/Portfolios';
 import img2 from './2.jpg';
 import img3 from './3.jpg';
 import img4 from './4.jpg';
@@ -34,19 +34,12 @@ function Swim() {
     'grid-cols-12',
     'items-center',
   );
-  const arrowClassNames = cx(
-    'cursor-pointer',
-    'text-slate-300',
-    'hover:text-slate-500',
-  );
 
   return (
     <div>
-      <NavLink to="/case-studies">
-        <h4 className={arrowClassNames}>
-          Prev: MovieTime
-        </h4>
-      </NavLink>
+      <div className="float-right">
+        <Portfolios />
+      </div>
       <h2>SwimMeet</h2>
       <div className={bannerClassNames}>
         <div className="col-span-2"></div>
@@ -241,11 +234,10 @@ function Swim() {
           />
         </div>
       </div>
-      <NavLink to="/case-studies">
-        <h4 className={arrowClassNames}>
-          Prev: MovieTime
-        </h4>
-      </NavLink>
+      <div className="float-right">
+        <Portfolios />
+      </div>
+      <div className="clear-both"></div>
     </div>
   );
 }

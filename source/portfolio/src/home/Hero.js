@@ -1,5 +1,4 @@
 import cx from 'classnames';
-import { NavLink } from 'react-router-dom';
 import Section from '../common/Section';
 import heroImg from './hero.jpg';
 import Portfolios from '../common/Portfolios';
