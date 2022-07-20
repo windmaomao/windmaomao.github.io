@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { NavLink } from 'react-router-dom';
 
 function Logo() {
   const classNames = cx(
@@ -7,12 +8,14 @@ function Logo() {
   );
   return (
     <div className={classNames}>
-      <span className="text-violet-500">
-        Q
-      </span>
-      <span className="text-blue-600">
-        plot
-      </span>
+      <NavLink exact="true" to="/">
+        <span className="text-violet-500">
+          Q
+        </span>
+        <span className="text-blue-600">
+          plot
+        </span>
+      </NavLink>
     </div>
   );
 }

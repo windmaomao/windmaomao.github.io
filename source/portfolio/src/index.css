@@ -55,8 +55,6 @@
     @apply hover:bg-purple-500;
   }
   a {
-    @apply text-base;
-    @apply font-light;
     @apply hover:text-purple-600;
   }
 }

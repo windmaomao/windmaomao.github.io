@@ -19,7 +19,7 @@ function App() {
   const classNames = cx('font-base');
   return (
     <div className={classNames}>
-      <Router>
+      <Router basename={'portfolio'}>
         <ScrollToTop />
         <Header />
         <Routes>
