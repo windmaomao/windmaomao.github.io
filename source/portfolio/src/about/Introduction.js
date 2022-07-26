@@ -21,14 +21,14 @@ function Introduction() {
           designers and engineers and is
           quite good at coding site
           structure and logic as well as
-          making sites loFindMe nice and
+          making sites look nice and
           accessible these days.
         </p>
         <p className="mt-4 mr-16">
           Off work, Fang hangs out with
-          his family -wife, two kids and
-          a dog. And he swims half an
-          hour every day and meets
+          his family - his wife, two
+          kids and a dog. He swims half
+          an hour every day and meets
           parents in all sorts of the
           swim meets during summer time.
         </p>
