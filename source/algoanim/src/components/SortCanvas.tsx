@@ -2,10 +2,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './SortCanvas.module.css';
 
 interface SortCanvasProps {
+  arr: number[];
   pos: number[];
 }
 
-const SortCanvas = ({ pos }: SortCanvasProps) => {
+const SortCanvas = ({ arr, pos }: SortCanvasProps) => {
   const size = 48;
   return (
     <AnimatePresence>
@@ -32,7 +33,7 @@ const SortCanvas = ({ pos }: SortCanvasProps) => {
               borderRadius: size / 8,
             }}
           >
-            {i}
+            {arr[i]}
           </motion.div>
         ))}
       </div>

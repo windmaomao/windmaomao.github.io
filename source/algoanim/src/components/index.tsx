@@ -1,3 +1,4 @@
 import SortAnim from './SortAnim';
+import Refresh from './Refresh';
 
-export { SortAnim };
+export { SortAnim, Refresh };
