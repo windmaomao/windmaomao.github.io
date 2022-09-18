@@ -8,10 +8,10 @@ import {
 } from '../utils/selectionSort';
 
 function SortAnim() {
-  const [count, setCount] = useState(0);
-  const [arr, setArr] = useState([
+  const [original] = useState([
     30, 0, 2, 17, 22, 5, 7, 11, 69, 77, 35,
   ]);
+  const [arr, setArr] = useState(original);
   const [pos, setPos] = useState<number[]>([]);
 
   useEffect(() => {
@@ -28,13 +28,15 @@ function SortAnim() {
       clearInterval(h);
     };
   }, [arr]);
+
+  const onReload = () => {
+    setArr([...original]);
+  };
   console.log(pos);
   return (
     <>
-      <button onClick={() => setCount((c) => c + 1)}>
-        Reload
-      </button>
-      <SortCanvas key={count} arr={arr} pos={pos} />
+      <button onClick={onReload}>Reload</button>
+      <SortCanvas arr={arr} pos={pos} />
     </>
   );
 }
