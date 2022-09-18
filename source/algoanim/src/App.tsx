@@ -1,4 +1,4 @@
-import { SortCanvas } from './components';
+import { SortAnim } from './components';
 import styles from './App.module.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         element and swap it with the one in the second
         position, and continue until the array is sorted.
       </p>
-      <SortCanvas objs={[]} />
+      <SortAnim />
     </div>
   );
 }

@@ -1,3 +1,3 @@
-import SortCanvas from './SortCanvas';
+import SortAnim from './SortAnim';
 
-export { SortCanvas };
+export { SortAnim };
