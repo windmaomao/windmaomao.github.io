@@ -10,6 +10,8 @@ interface SortCanvasProps {
   size?: number;
   // outter index
   outter?: number;
+  // inner index
+  inner?: number;
 }
 
 const SortCanvas = ({
@@ -17,7 +19,13 @@ const SortCanvas = ({
   pos,
   size = 48,
   outter = -1,
+  inner = -1,
 }: SortCanvasProps) => {
+  const sorted = (v: number) => v < outter;
+  const processing = (v: number) => v === inner;
+  const elevated = (v: number) =>
+    sorted(v) || processing(v);
+
   return (
     <AnimatePresence>
       <div className={styles.canvas}>
@@ -27,8 +35,8 @@ const SortCanvas = ({
             className={styles.letter}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: v <= outter ? 1 : 0.4,
-              top: size / 2,
+              opacity: sorted(v) ? 1 : 0.4,
+              top: size / 2 + (elevated(v) ? 8 : 0),
               left: v * (size + 5),
               width: size,
               height: size,
