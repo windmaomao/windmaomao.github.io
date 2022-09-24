@@ -30,7 +30,7 @@ function SortAnim() {
       setOutter(s.i);
       setInner(s.j);
       setMarker(s.t);
-    }, 1000);
+    }, 100);
     return () => {
       clearInterval(h);
     };

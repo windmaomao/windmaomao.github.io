@@ -39,8 +39,8 @@ const SortCanvas = ({
       <div className={styles.canvas}>
         {pos.map((v, i) => (
           <motion.div
-            key={i}
-            className={styles.letter}
+            key={`object-${i}`}
+            className={styles.object}
             initial={{ opacity: 0 }}
             animate={{
               opacity: highlighted(v) ? 1 : 0.4,
@@ -61,6 +61,18 @@ const SortCanvas = ({
             {arr[i]}
           </motion.div>
         ))}
+        <motion.span
+          key={`outter`}
+          className={styles.letter}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            left: (outter + 0.5) * (size + 5),
+            top: size * 1.6,
+          }}
+        >
+          .
+        </motion.span>
       </div>
     </AnimatePresence>
   );
