@@ -14,6 +14,7 @@ function SortAnim() {
   ]);
   const [arr, setArr] = useState(original);
   const [pos, setPos] = useState<number[]>([]);
+  const [outter, setOutter] = useState(-1);
 
   useEffect(() => {
     let s: StateType = getInitialState(arr);
@@ -24,6 +25,7 @@ function SortAnim() {
       }
       s = reducer(s);
       setPos(rawObjPos(s));
+      setOutter(s.i);
     }, 100);
     return () => {
       clearInterval(h);
@@ -37,11 +39,11 @@ function SortAnim() {
   const [size, setSize] = useState(48);
 
   return (
-    <>
-      <div>
+    <div style={{ marginTop: '2rem' }}>
+      <div style={{ float: 'right' }}>
         <button onClick={onReload}>Reload</button>
       </div>
-      <div>
+      <div style={{ marginTop: '1rem' }}>
         <SliderControl
           value={size}
           set={setSize}
@@ -51,8 +53,13 @@ function SortAnim() {
           Item size
         </SliderControl>
       </div>
-      <SortCanvas arr={arr} pos={pos} size={size} />
-    </>
+      <SortCanvas
+        arr={arr}
+        pos={pos}
+        size={size}
+        outter={outter}
+      />
+    </div>
   );
 }
 
