@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import SortCanvas from './SortCanvas';
+import SliderControl from './SliderControl';
 import {
   StateType,
   getInitialState,
@@ -32,11 +33,25 @@ function SortAnim() {
   const onReload = () => {
     setArr([...original]);
   };
-  console.log(pos);
+
+  const [size, setSize] = useState(48);
+
   return (
     <>
-      <button onClick={onReload}>Reload</button>
-      <SortCanvas arr={arr} pos={pos} />
+      <div>
+        <button onClick={onReload}>Reload</button>
+      </div>
+      <div>
+        <SliderControl
+          value={size}
+          set={setSize}
+          min={10}
+          max={200}
+        >
+          Item size
+        </SliderControl>
+      </div>
+      <SortCanvas arr={arr} pos={pos} size={size} />
     </>
   );
 }

@@ -3,12 +3,19 @@ interface ValueType {
 }
 
 export interface StateType {
+  // whether the algorithm is finished
   done: boolean;
+  // original number array
   array: number[];
+  // internal object array
   raw: ValueType[];
+  // index number array
   index: number[];
+  // outter loop index
   i: number;
+  // inner loop index
   j: number;
+  // swap temp index
   t: number;
 }
 

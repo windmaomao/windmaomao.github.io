@@ -2,12 +2,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './SortCanvas.module.css';
 
 interface SortCanvasProps {
+  // original array
   arr: number[];
+  // obj pos array
   pos: number[];
+  // number display size
+  size?: number;
 }
 
-const SortCanvas = ({ arr, pos }: SortCanvasProps) => {
-  const size = 48;
+const SortCanvas = ({
+  arr,
+  pos,
+  size = 48,
+}: SortCanvasProps) => {
   return (
     <AnimatePresence>
       <div className={styles.canvas}>
