@@ -16,6 +16,7 @@ function SortAnim() {
   const [pos, setPos] = useState<number[]>([]);
   const [outter, setOutter] = useState(-1);
   const [inner, setInner] = useState(-1);
+  const [marker, setMarker] = useState(-1);
 
   useEffect(() => {
     let s: StateType = getInitialState(arr);
@@ -28,7 +29,8 @@ function SortAnim() {
       setPos(rawObjPos(s));
       setOutter(s.i);
       setInner(s.j);
-    }, 100);
+      setMarker(s.t);
+    }, 1000);
     return () => {
       clearInterval(h);
     };
@@ -61,6 +63,7 @@ function SortAnim() {
         size={size}
         outter={outter}
         inner={inner}
+        marker={marker}
       />
     </div>
   );

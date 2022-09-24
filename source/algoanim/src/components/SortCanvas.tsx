@@ -12,6 +12,8 @@ interface SortCanvasProps {
   outter?: number;
   // inner index
   inner?: number;
+  // marker index
+  marker?: number;
 }
 
 const SortCanvas = ({
@@ -20,11 +22,17 @@ const SortCanvas = ({
   size = 48,
   outter = -1,
   inner = -1,
+  marker = -1,
 }: SortCanvasProps) => {
   const sorted = (v: number) => v < outter;
+  const sorting = (v: number) => v === outter;
   const processing = (v: number) => v === inner;
+  const marked = (v: number) => v === marker;
+
   const elevated = (v: number) =>
-    sorted(v) || processing(v);
+    sorted(v) || sorting(v) || marked(v);
+  const highlighted = (v: number) =>
+    elevated(v) || processing(v);
 
   return (
     <AnimatePresence>
@@ -35,7 +43,7 @@ const SortCanvas = ({
             className={styles.letter}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: sorted(v) ? 1 : 0.4,
+              opacity: highlighted(v) ? 1 : 0.4,
               top: size / 2 + (elevated(v) ? 8 : 0),
               left: v * (size + 5),
               width: size,
