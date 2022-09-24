@@ -7,11 +7,10 @@ import {
   reducer,
   rawObjPos,
 } from '../utils/selectionSort';
+import { randNumbers } from '../utils';
 
 function SortAnim() {
-  const [original] = useState([
-    30, 0, 2, 17, 22, 5, 7, 11, 69, 77, 35,
-  ]);
+  const [original] = useState(randNumbers(8, 100));
   const [arr, setArr] = useState(original);
   const [pos, setPos] = useState<number[]>([]);
   const [outter, setOutter] = useState(-1);
