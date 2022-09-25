@@ -15,6 +15,7 @@ function SortAnim() {
   const [outter, setOutter] = useState(-1);
   const [inner, setInner] = useState(-1);
   const [marker, setMarker] = useState(-1);
+  const [slowness, setSlowness] = useState(50);
 
   useEffect(() => {
     let s: StateType = getInitialState(arr);
@@ -28,14 +29,14 @@ function SortAnim() {
       setOutter(s.i);
       setInner(s.j);
       setMarker(s.t);
-    }, 100);
+    }, slowness * 10);
     return () => {
       clearInterval(h);
     };
-  }, [arr]);
+  }, [arr, slowness]);
 
   const onReload = () => {
-    setArr(randNumbers(count, 100));
+    setArr(randNumbers(count, 400));
   };
 
   const [size, setSize] = useState(42);
@@ -57,6 +58,14 @@ function SortAnim() {
           flexDirection: 'column',
         }}
       >
+        <SliderControl
+          value={slowness}
+          set={setSlowness}
+          min={1}
+          max={100}
+        >
+          Slowness
+        </SliderControl>
         <SliderControl
           value={count}
           set={setCount}

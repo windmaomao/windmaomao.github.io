@@ -32,7 +32,7 @@ const SortCanvas = ({
   const elevated = (v: number) =>
     sorted(v) || sorting(v) || marked(v);
   const highlighted = (v: number) =>
-    elevated(v) || processing(v);
+    sorted(v) || marked(v) || processing(v);
 
   return (
     <AnimatePresence>
@@ -43,11 +43,12 @@ const SortCanvas = ({
             className={styles.object}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: highlighted(v) ? 1 : 0.4,
+              opacity: highlighted(v) ? 1 : 0.25,
               top: size * 0.5 + (elevated(v) ? 8 : 0),
               left: v * (size + 5),
               width: size,
               height: size,
+              fontWeight: processing(v) ? '700' : '400',
             }}
             exit={{ opacity: 0 }}
             whileHover={{ scale: 1.4, zIndex: 1 }}

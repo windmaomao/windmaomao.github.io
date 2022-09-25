@@ -15,12 +15,13 @@
   cursor: pointer;
   user-select: none;
   background: white;
+  color: black;
 }
 
 .progress {
   z-index: -1;
   position: absolute;
-  background: #efefef; 
+  background: #efefef;
   border-radius: 4px;
-  box-shadow: 5px 5px 5px 5px #aaa inset
+  box-shadow: 5px 5px 5px 5px #aaa inset;
 }
