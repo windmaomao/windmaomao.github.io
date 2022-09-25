@@ -34,6 +34,8 @@ const SortCanvas = ({
   const highlighted = (v: number) =>
     sorted(v) || marked(v) || processing(v);
 
+  const showProgress = false;
+
   return (
     <AnimatePresence>
       <div className={styles.canvas}>
@@ -51,6 +53,7 @@ const SortCanvas = ({
               fontWeight: processing(v) ? '700' : '400',
             }}
             exit={{ opacity: 0 }}
+            transition={{ type: 'spring' }}
             whileHover={{ scale: 1.4, zIndex: 1 }}
             whileTap={{ scale: 1.2 }}
             style={{
@@ -61,20 +64,22 @@ const SortCanvas = ({
             {arr[i]}
           </motion.div>
         ))}
-        <motion.div
-          key={`outter`}
-          className={styles.progress}
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            width: (outter + 1.1) * (size + 5),
-          }}
-          style={{
-            height: size * 1.25 + 4,
-            top: size * 0.5 + 4,
-            left: -size * 0.1,
-          }}
-        />
+        {showProgress && (
+          <motion.div
+            key={`outter`}
+            className={styles.progress}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              width: (outter + 1.1) * (size + 5),
+            }}
+            style={{
+              height: size * 1.25 + 4,
+              top: size * 0.5 + 4,
+              left: -size * 0.1,
+            }}
+          />
+        )}
       </div>
     </AnimatePresence>
   );

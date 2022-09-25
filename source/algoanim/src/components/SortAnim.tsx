@@ -35,22 +35,17 @@ function SortAnim() {
     };
   }, [arr, slowness]);
 
-  const onReload = () => {
-    setArr(randNumbers(count, 400));
-  };
-
-  const [size, setSize] = useState(42);
-
+  const [size, setSize] = useState(48);
   const [count, setCount] = useState(12);
+  const onReload = () => {
+    setArr(randNumbers(count, 120));
+  };
   useEffect(() => {
     onReload();
   }, [count]);
 
   return (
     <div style={{ marginTop: '2rem' }}>
-      <div style={{ float: 'right' }}>
-        <button onClick={onReload}>Reload</button>
-      </div>
       <div
         style={{
           marginTop: '1rem',
@@ -58,14 +53,6 @@ function SortAnim() {
           flexDirection: 'column',
         }}
       >
-        <SliderControl
-          value={slowness}
-          set={setSlowness}
-          min={1}
-          max={100}
-        >
-          Slowness
-        </SliderControl>
         <SliderControl
           value={count}
           set={setCount}
@@ -81,6 +68,14 @@ function SortAnim() {
           max={200}
         >
           Item size
+        </SliderControl>
+        <SliderControl
+          value={slowness}
+          set={setSlowness}
+          min={1}
+          max={100}
+        >
+          Slowness
         </SliderControl>
       </div>
       <SortCanvas
