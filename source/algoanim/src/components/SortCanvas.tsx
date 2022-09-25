@@ -44,13 +44,12 @@ const SortCanvas = ({
             initial={{ opacity: 0 }}
             animate={{
               opacity: highlighted(v) ? 1 : 0.4,
-              top: size / 2 + (elevated(v) ? 8 : 0),
+              top: size * 0.5 + (elevated(v) ? 8 : 0),
               left: v * (size + 5),
               width: size,
               height: size,
             }}
             exit={{ opacity: 0 }}
-            transition={{ type: 'spring' }}
             whileHover={{ scale: 1.4, zIndex: 1 }}
             whileTap={{ scale: 1.2 }}
             style={{
@@ -61,18 +60,20 @@ const SortCanvas = ({
             {arr[i]}
           </motion.div>
         ))}
-        <motion.span
+        <motion.div
           key={`outter`}
-          className={styles.letter}
+          className={styles.progress}
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            left: (outter + 0.5) * (size + 5),
-            top: size * 1.6,
+            width: (outter + 1.1) * (size + 5),
           }}
-        >
-          .
-        </motion.span>
+          style={{
+            height: size * 1.25 + 4,
+            top: size * 0.5 + 4,
+            left: -size * 0.1,
+          }}
+        />
       </div>
     </AnimatePresence>
   );

@@ -10,8 +10,7 @@ import {
 import { randNumbers } from '../utils';
 
 function SortAnim() {
-  const [original] = useState(randNumbers(8, 100));
-  const [arr, setArr] = useState(original);
+  const [arr, setArr] = useState<number[]>([]);
   const [pos, setPos] = useState<number[]>([]);
   const [outter, setOutter] = useState(-1);
   const [inner, setInner] = useState(-1);
@@ -36,17 +35,36 @@ function SortAnim() {
   }, [arr]);
 
   const onReload = () => {
-    setArr([...original]);
+    setArr(randNumbers(count, 100));
   };
 
-  const [size, setSize] = useState(48);
+  const [size, setSize] = useState(42);
+
+  const [count, setCount] = useState(12);
+  useEffect(() => {
+    onReload();
+  }, [count]);
 
   return (
     <div style={{ marginTop: '2rem' }}>
       <div style={{ float: 'right' }}>
         <button onClick={onReload}>Reload</button>
       </div>
-      <div style={{ marginTop: '1rem' }}>
+      <div
+        style={{
+          marginTop: '1rem',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <SliderControl
+          value={count}
+          set={setCount}
+          min={2}
+          max={35}
+        >
+          Item count
+        </SliderControl>
         <SliderControl
           value={size}
           set={setSize}

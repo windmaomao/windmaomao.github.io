@@ -17,6 +17,10 @@
   background: white;
 }
 
-.letter {
+.progress {
+  z-index: -1;
   position: absolute;
+  background: #efefef; 
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px 5px #aaa inset
 }
