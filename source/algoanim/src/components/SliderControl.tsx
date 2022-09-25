@@ -1,3 +1,5 @@
+import styles from './SliderControl.module.css';
+
 interface SliderControlProps {
   children: string;
   value: number;
@@ -14,7 +16,7 @@ export default function SliderControl({
   max = 200,
 }: SliderControlProps) {
   return (
-    <label>
+    <label className={styles.slider}>
       <code>{children}</code>
       <input
         value={value}

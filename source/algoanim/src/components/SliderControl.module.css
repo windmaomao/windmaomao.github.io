@@ -1,0 +1,29 @@
+.slider {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.slider input {
+  accent-color: var(--accent);
+}
+
+.slider code {
+  width: 150px;
+}
+
+.slider input[type='number'] {
+  border: 0;
+  border-bottom: 1px dotted var(--accent);
+  color: var(--accent);
+  margin-left: 10px;
+}
+
+.slider input[type='number']:focus {
+  outline: none;
+  border-bottom: 2px solid var(--accent);
+}
+
+.slider input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
