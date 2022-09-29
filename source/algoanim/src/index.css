@@ -131,16 +131,6 @@ circle {
   stroke: var(--accent);
 }
 
-ul {
-  display: flex;
-  list-style: none;
-  height: 300px;
-  overflow-x: scroll;
-  padding: 20px 0;
-  flex: 0 0 600px;
-  margin: 0 auto;
-}
-
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
@@ -155,33 +145,4 @@ ul {
 
 ::-webkit-scrollbar-corner {
   background: #fff3;
-}
-
-li {
-  flex: 0 0 200px;
-  background: var(--accent);
-  margin: 0 20px 0 0;
-}
-
-li:last-of-type {
-  margin: 0;
-}
-
-.refresh {
-  padding: 5px;
-  position: absolute;
-  border: 1px dotted var(--accent);
-  border-radius: 5px;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.refresh path {
-  fill: var(--accent);
 }

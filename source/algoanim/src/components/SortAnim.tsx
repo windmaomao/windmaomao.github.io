@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import SortCanvas from './SortCanvas';
 import SliderControl from './SliderControl';
+import Refresh from './Refresh';
 import {
   StateType,
   getInitialState,

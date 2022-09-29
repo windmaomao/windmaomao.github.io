@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import styles from './Refresh.module.css';
 
 const button = {
   rest: { scale: 1 },
@@ -17,7 +18,7 @@ interface RefreshProps {
 const Refresh = ({ onClick }: RefreshProps) => {
   return (
     <motion.div
-      className="refresh"
+      className={styles.refresh}
       onClick={onClick}
       variants={button}
       initial="rest"
