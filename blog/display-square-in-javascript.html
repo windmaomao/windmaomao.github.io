@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How to display a square in Javascript?</title>
+  <style>
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  font-family: Raleway;
+  margin: 5rem;
+}
+
+.demo-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+  </style>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css'>
+</head>
+<body>
+  <div id="question">
+    <h1>How to display a square in Javascript?</h1>
+    <h2>Problem:</h2>
+    <p>Print a square shape of size <code>n</code> using symbol <code>*</code>.</p>
+    <div class="demo-list">
+      <div class="square" data-n="5"></div>
+      <div class="square" data-n="4"></div>
+      <div class="square" data-n="3"></div>
+      <div class="square" data-n="2"></div>
+      <div class="square" data-n="1"></div>
+    </div>
+    <h2>Solution:</h2>
+    <h3>Step 1</h3>
+    <p>Start with a function named <code>square</code> that takes an input parameter <code>n</code>:</p>
+    <pre><code>
+  function square(n) { }
+    </code></pre>
+    <h3>Step 2</h3>
+    <p>Create a line composed of <code>n</code> characters:</p>
+    <pre><code>
+  function square(n) {
+    const line = new Array(n).fill('*').join('')
+    </code></pre>
+    <h3>Step 3</h3>
+    <p>Repeat the same line <code>n</code> times:</p>
+    <pre><code>
+  function square(n) {
+    const line = new Array(n).fill('*').join('')
+    const square = new Array(n).fill(line)
+    </code></pre>
+    <h3>Step 4</h3>
+    <p>In the end, join all lines to form final output:</p>
+    <pre><code>
+  function square(n) {
+    const line = new Array(n).fill('*').join('')
+    const square = new Array(n).fill(line)
+    return square.join('\n')
+  }  
+    </code></pre>
+    <h2>Try it:</h2>
+    <div class="demo-list">
+      <div class="square" data-n="16"></div>
+      <div class="square" data-n="32"></div>
+      <div class="square" data-n="64"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+hljs.highlightAll();
+
+function square(n) {
+  if (n <= 0) return;
+
+  const u = new Array(n).fill("*").join("");
+  const res = new Array(n).fill(u);
+
+  return res.join("\n");
+}
+
+const Square = ({ n }) => {
+  return /*#__PURE__*/(
+    React.createElement("div", null, /*#__PURE__*/
+    React.createElement("code", null, "n=", n), /*#__PURE__*/
+    React.createElement("pre", { style: { lineHeight: "0.52rem" } }, /*#__PURE__*/
+    React.createElement("code", null, square(n))))
+  );
+};
+
+document.querySelectorAll(".square").forEach(el => {
+  const n = parseInt(el.getAttribute("data-n")) || 1;
+  ReactDOM.render( /*#__PURE__*/React.createElement(Square, { n: n }), el);
+});
+  </script>
+</body>
+</html>
