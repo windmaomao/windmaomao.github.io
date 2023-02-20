@@ -97,5 +97,14 @@ document.querySelectorAll(".square").forEach(el => {
   ReactDOM.render( /*#__PURE__*/React.createElement(Square, { n: n }), el);
 });
   </script>
+  <div id="disqus_thread"></div>
+  <script>
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://qplot-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
 </body>
 </html>
