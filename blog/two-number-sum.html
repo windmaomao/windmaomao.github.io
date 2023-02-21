@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How to find two number's sum</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css'>
+  <style>
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  font-family: Raleway;
+  margin: 8rem 5rem;
+}
+  </style>
+</head>
+<body>
+  <div id="header">My Blogs</div>
+  <div>
+    <h1>Tow number's sum</h1>
+    <h2>Problem:</h2>
+    <p>Find two numbers in an array so that the sum equals to a number.</p>
+    <pre><code>
+  array = [2, 5, 8, 6, 7, 10, 3]
+  sum = 11
+
+  answer = [5, 6]
+    </code></pre>
+    <p>
+      For instance, the two numbers with the sum <code>11</code> are
+      <code>5</code> and <code>6</code> inside the array.
+    </p>   
+
+    <h2>Solution:</h2>
+    <h3>Step 1</h3>
+    <p>An index variable <code>i</code> is used to iterate through the array.</p>
+    <div className="box"></div>
+    <pre><code>
+function solve(arr, sum) {
+  for (let i = 0; i < arr.length; i++) {
+    ...
+  }
+}
+    </code></pre>
+    <h3>Step 2</h3>
+    <p>Create a line composed of <code>n</code> characters:</p>
+    <pre><code>
+  function square(n) {
+    const line = new Array(n).fill('*').join('')
+    </code></pre>
+    <h3>Step 3</h3>
+    <p>Repeat the same line <code>n</code> times:</p>
+    <h2>Try it:</h2>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react-is/17.0.2/umd/react-is.production.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/styled-components/5.3.0/styled-components.min.js'></script><script  src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  <script>
+hljs.highlightAll();
+  </script>
+</body>
+</html>

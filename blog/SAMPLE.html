@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Title</title>
+  <link rel=icon type=image/png href="./logo.png">
+
+  <style>
+/* Style for the blog */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  font-family: Raleway;
+  margin: 8rem 5rem;
+}
+  </style>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css'>
+</head>
+<body>
+  <div id="header">My Blogs</div>
+  <div>
+    <!-- Content for the blog -->
+    <h1>Sample content</h1>
+    <div id="hello"></div>
+    <pre><code>const a = 1;</code></pre>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react-is/17.0.2/umd/react-is.production.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/styled-components/5.3.0/styled-components.min.js'></script>
+  <script src='./scripts/header.js'></script>
+
+  <script>
+// Script for the blog
+(function() {
+  const styled = window.styled;
+  const { createElement } = React;
+
+  const HelloStyle = styled.div`
+    color: red;
+  `;
+  const Hello = () => {
+    return createElement(HelloStyle, null, 
+      createElement("div", null, "Hello World")
+    );
+  };
+
+  const el = document.getElementById("hello");
+  ReactDOM.render(createElement(Hello), el);
+})()
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src='./scripts/drh.js'></script>
+</body>
+</html>
