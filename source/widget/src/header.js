@@ -60,4 +60,5 @@ const Header = ({ children }) => {
 
 const el = document.createElement('div');
 document.body.prepend(el);
-ReactDOM.render(<Header />, el);
+const title = document.getElementsByTagName('title')[0]?.innerHTML;
+ReactDOM.render(<Header>{title}</Header>, el);
