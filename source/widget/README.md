@@ -9,6 +9,12 @@ It builds the following format:
 - UMD (browser format)
 - UMD Minified
 
+Now it's serving to build widgets into dist folder to be served for publishing CodePen widgets.
+
+```
+  yarn build
+```
+
 ## Rollup Configure
 
 ### Dependencies
