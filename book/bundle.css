@@ -1,9 +1,9 @@
 body {
   -webkit-font-smoothing: antialiased;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   font-size: 16px;
   --text-background: #fff;
@@ -124,5 +124,6 @@ img {
   main {
     padding: 0 64px;
     width: 768px;
+    margin: 0 auto;
   }
 }
