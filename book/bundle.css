@@ -1,0 +1,135 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  --text-background: #fff;
+  --text-color: #19242c;
+  --text-color-low-contrast: #b2bcc1;
+  --neutral-color: #e0e5e7;
+  --neutral-color-weak: #eff2f3;
+}
+
+summary {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--text-background);
+  color: var(--text-color);
+  height: 3rem;
+  z-index: 1;
+  border-bottom: 0.0625rem solid var(--neutral-color);
+  padding: 0 0 0.25rem 2rem;
+}
+summary p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Rubik, sans-serif;
+}
+
+main {
+  color: var(--text-color);
+  padding: 0 16px;
+}
+
+.chapter-number {
+  margin-top: 8rem;
+  font-family: Lato, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-color-low-contrast);
+}
+
+h1 {
+  font-family: Lato, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 42px;
+  margin-top: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+h2 {
+  font-family: Lato, sans-serif;
+  font-size: 120%;
+  font-weight: 700;
+  line-height: 1.333;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-family: Lato, sans-serif;
+  font-size: 110%;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 1em;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-family: Merriweather, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+p.paragraph::first-letter {
+  initial-letter: 2 1;
+  font-weight: bold;
+  margin-right: 0.2em;
+  font-family: Georgia, serif;
+}
+
+blockquote {
+  border-style: none;
+  font-style: italic;
+  margin: 1.5rem;
+  padding: 0;
+}
+
+pre {
+  font-family: "Roboto Mono", mono;
+  color: var(--text-color);
+  border-radius: initial;
+  line-height: 1.8;
+}
+pre:not(.mermaid) {
+  padding: 1rem;
+  background-color: var(--neutral-color-weak);
+}
+pre code {
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.caption {
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 0 64px;
+    width: 768px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
