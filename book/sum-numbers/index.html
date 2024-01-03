@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../bundle.css">
     <title>Sum numbers</title>
   </head>
-  <body>
+  <body id="top">
     <nav>
   <div class="navbar">
     <div class="container nav-container">
@@ -35,7 +35,7 @@
         <p>Think in Recursion</p>
         <p><img src='../images/logo.png'/></p>
       </div>
-      <div class="menu-items"><li>Sum numbers</li></div>
+      <div class="menu-items"><li><a href="/sum-numbers/">1. Sum numbers</a></li><li><a href="/recursion-limit/">2. Recursion limit</a></li><li><a href="/fib-sequence/">3. Fibonacci sequence</a></li></div>
     </div>
   </div>
 </nav>
@@ -112,50 +112,8 @@ Me &amp; Tom: &quot;Recursion?!&quot;</p>
 <p>What is the difference between each function instance, say between sum(n) and sum(n-1)? It’s subtle. At one hand, they follow the same logic from the shared function body. But on another hand, each can have slight variations due to the exact pathway a function instance take. In our sum case, sum(5) is quite similar to sum(4), but not with sum(0); because the function instance with 0 as argument will return 0 right away. You can think sum(0) as a instance boundary, when the code reaches there, it has to go back to where it was called.</p>
 <p>Since a function’s job is to run through some calculations and return the result, all function instances need to return sooner or later. Since it takes time to call and finish a function call, a function instance can be called but not yet finished. This function instance is then referred as an active instance. For example, after we call sum(5), it calls sum(4), when sum(4) is getting called, sum(5) hasn’t finished yet, thus sum(5) has to be active.</p>
 <p>Alright, we have gone through couple of the key elements of a typical recursion, the function instance. We’ll come back to it often throughout this book. For each recursion problem we encounter, we’ll design the instance logic before we write the code.</p>
-<h2>Understand the function instance</h2>
-<p>One of the challenge of learning recursion is that we are very used to the classical way of doing things using a for loop.</p>
-<pre class="javascript">function sum(n) {
-  let res = 0;
-
-  for (let i = 0; i <= n; i++) {
-    res = res + i;
-  }
-
-  return res;
-}
-</pre>
-<p>It seems pretty straightforward for us to arrive the above code and even trace through it. Let’s try it with sum(5). Right after we enter the function sum with an argument 5, a new local variable holding the result is initialized with 0, named res.</p>
-<p>And then we move to the for statement where we add another variable i to the picture. The variable i is initialized with 0 and incremented by 1 each time till it reaches 5. Inside the for statement body, at each round, it adds i to res. By the end of the loop res gets returned.</p>
-<pre class="mermaid">%%{init: {&#39;theme&#39;:&#39;forest&#39;}}%%&#10;flowchart LR&#10;    step0[&quot;&#10;      i: 0&#10;      res: 0&#10;    &quot;]&#10;    step1[&quot;&#10;      i: 1&#10;      res: 1&#10;    &quot;]&#10;    step2[&quot;&#10;      i: 2&#10;      res: 3&#10;    &quot;]&#10;    step3[&quot;&#10;      i: 3&#10;      res: 6&#10;    &quot;]&#10;    step4[&quot;&#10;      i: 4&#10;      res: 10&#10;    &quot;]&#10;    step5[&quot;&#10;      i: 5&#10;      res: 15&#10;    &quot;]&#10;&#10;&#10;    step0 --&gt; step1&#10;    step1 --&gt; step2&#10;    step2 --&gt; step3&#10;    step3 --&gt; step4&#10;    step4 --&gt; step5&#10;</pre>
-<p class="caption">Fig. sum(5) using for loop</p>
-<p>We can visualize all of above steps inside our head.</p>
-<p>Once we enter sum(5), we’ll skip if since n is not zero. We then encounter the statement sum(n-1) + n. Compiler splits the expression into half with the first half sum(n-1) and second half n. It then enters the first half sum(n-1).</p>
-<pre class="">sum(5) -> sum(4) + 5
-</pre>
-<p>You might wonder at this point, what is the compiler going to do with the second half of the expression, n? The compiler is handling sum(4), so it hasn’t arrived to the second half expression yet. Right now, its job is to call sum(4).</p>
-<pre class="">sum(4) -> sum(3) + 4
-sum(3) -> sum(2) + 3
-sum(2) -> sum(1) + 2
-sum(1) -> sum(0) + 1
-</pre>
-<p>The pattern repeats. Right after we enter instance 5, we are asked to enter 4. After we enter 4, we are asked for 3, 3 to 2, 2 to 1 until we get to 0.</p>
-<pre class="">sum(0) -> 0
-</pre>
-<p>Sum(0) is indeed a instance which returns 0. Now the question is where this return leads us? Good question, it returns to the second half of the expression sum(n-1) + n. Here we need to be a bit more specific. There are quite a few instances and each one has this expression, which instance are you referring to? It’s the sum(1). Because sum(1) is still running in the middle of evaluating sum(0) + 1. Now the whole expression can be evaluated and returned.</p>
-<pre class="">sum(1) -> 0 + 1 = 1
-</pre>
-<p>This pattern starts to repeat again, except this time backward. Right after we leave instance 0 to 1, we’re asked to finish the expression and leave 2 to 3, 3 to 4, and 4 to 5.</p>
-<pre class="">sum(2) -> 1 + 2 = 3
-sum(3) -> 3 + 3 = 6
-sum(4) -> 6 + 4 = 10
-sum(5) -> 10 + 5 = 15
-</pre>
-<p>This time sum(5) is a bit special as well. Because this is where we come from. When we return from there, we finish the whole recursive function calls. If we want to visualize what happened inside the compiler, we could get the following picture.</p>
-<pre class="mermaid">%%{init: {&#39;theme&#39;:&#39;forest&#39;}}%%&#10;flowchart LR&#10;  f5[&quot;sum(5)&quot;]&#10;  f45[&quot;sum(4)&quot;]&#10;  f35[&quot;5&quot;]&#10;  f34[&quot;sum(3)&quot;]&#10;  f24[&quot;4&quot;]&#10;  f23[&quot;sum(2)&quot;]&#10;  f13[&quot;3&quot;]&#10;  f12[&quot;sum(1)&quot;]&#10;  f02[&quot;2&quot;]&#10;  f01[&quot;sum(0)&quot;]&#10;&#10;  f5 --&gt; f45&#10;  f5 --&gt; f35&#10;  f45 --&gt; f34&#10;  f45 --&gt; f24&#10;  f34 --&gt; f23&#10;  f34 --&gt; f13&#10;  f23 --&gt; f12&#10;  f23 --&gt; f02&#10;  f12 --&gt; f01&#10;  f12 --&gt; 1&#10;</pre>
-<p class="caption">Fig. sum(5) using recursion</p>
-<p>It visits sum(5) first, and then sum(4), … goes through all nodes on the top, once sum(0) is visited, it pick up the lower branch 1, goes backward to sum(1), and then sum(2), … all the way back to sum(5) and eventually get our result 15.</p>
-<p>This is quite a journey, isn’t it? Have it occur to you this isn’t the right way to think about the recursion?</p>
 <h2>New way of looking at the recursion</h2>
+<p>One of the challenge of learning recursion is that we are very used to the classical way of doing things using a <em>for</em> loop. But with recursion, things seem to be quite wild. In my opinion, this has something to do with the way we analyze the recursion.</p>
 <p>If I tell you that you have been trained to be linear when it comes to the computer programming, what do you think? Why don’t we take it from a different angle?</p>
 <blockquote>
 <p>Tom: “We should read the sum function line by line.”<br>
@@ -190,142 +148,51 @@ Tom: “Weird! Isn’t it?”</p>
 <p>In order to study the problem effectively, we shouldn’t let it happen though.</p>
 <p>Going through the recursion only once can be very effective, since it’s independent to the problem size. Strange enough, no matter how big the size, we are looking at the same function body. This also makes the running time analysis of the recursion possible.</p>
 <h2>Running time of recursion</h2>
-<p>The running time of an algorithm provides the order of the speed of the code, and is expressed as an expression. The notation is the big O. The number n is problem dependent, can be any quantity measuring the size of the problem.</p>
-<p>The running time O isn’t a precise measurement. It can’t tell you exactly how much time your algorithm spends. You still need to run the code to find out the exact number. But it can tell you the relationship between the running time and the size. For example, O(1) means the running time is a constant independent to n. O(n) is said to be linear with n. We’ll encounter quite a few different running times in this book.</p>
-<p>What’s the running time for our sum algorithm. Let’s think about it.</p>
-<p>Fig. sum(5) using a recursion</p>
-<p>We don’t do whole lot of calculation inside each instance, so basically we just need to know how many function instances we called to figure out the running time. In our case, sum(5) -&gt; sum(4) -&gt; sum(3) -&gt; sum(2) -&gt; sum(1) -&gt; sum(0), so six times. Thus the algorithm is said to be O(n) running time, meaning the running time is linearly proportional to n. If sum(1) takes 1 microsecond, then we expect sum(5) to take about 5 microseconds. Of course 5 microseconds isn’t an accurate measurement, but we at least don’t expect to get anything more than 10 microseconds, because that’ll fall through O(n).</p>
+<p>The running time of an algorithm provides the order of the speed of the code, and is expressed as an expression. The notation is the big O. The number <code>n</code> is the size of the problem.</p>
+<p>The running time O isn’t a precise measurement. It can’t tell you exactly how much time your algorithm spends. You still need to run the code to find out the exact number. But it can tell you the relationship between the running time and the size. For example, O(1) means the running time is a constant independent to n. O(n) is said to be linear with n.</p>
+<p><img src="../images/stairs.png" alt="Running time for more terms"></p>
+<p>What’s the running time for our sum algorithm? We can figure that out by looking at the function body.</p>
+<pre class="">sum(n)
+  --> calls sum(n-1) and stores in a
+  --> adds a and n, and returns it
+</pre>
+<p>For each function call, it calls another one and stores in a temperary variable, call it <code>a</code>, and then adds <code>a</code> and <code>n</code> together. Say the time spent for <code>sum(n)</code> is <code>t|n</code>, meaning <code>t</code> at <code>n</code>.</p>
+<pre class="">t|n = t|n-1 + 1
+</pre>
+<p>Then the time spent at <code>n</code> is the time spent at <code>n-1</code> plus one. One stands for the unit time spent for the addition operation. I believe we can figure out that the time spent for <code>n</code> is actually <code>n</code> now.</p>
+<p>Imaginging you are climbing stairs, the time it takes to climb one stair is one unit time. Thus the total time spent on climbing to this stair equals to the total time spent to the previous stair plus one.</p>
+<pre class="">t|n = n = O(n)
+</pre>
+<p>Thus the running time of our algorithm is said to be <code>O(n)</code>, meaning the running time is linearly proportional to <code>n</code>. If sum(1) takes 1 microsecond, then we expect sum(5) to take about 5 microseconds. Of course 5 microseconds isn’t an accurate measurement, but we don’t expect to get sum(5) taking more than 10 microseconds, because that would break the O(n) analysis.</p>
 <blockquote>
-<p>Recursion is a way of programming an algorithm. But it’s still an algorithm which means everything you learned from computer science still applies.</p>
+<p>Recursion is one way of programming. Which means everything you learned from computer science still applies.</p>
 </blockquote>
-<p>We can take a look at some typical running time order in the following table.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">n</th>
-<th style="text-align:right">n^2</th>
-<th style="text-align:right">2^n</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:right">4</td>
-<td style="text-align:right">4</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:right">9</td>
-<td style="text-align:right">8</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:right">16</td>
-<td style="text-align:right">16</td>
-</tr>
-<tr>
-<td style="text-align:right">5</td>
-<td style="text-align:right">25</td>
-<td style="text-align:right">32</td>
-</tr>
-<tr>
-<td style="text-align:right">6</td>
-<td style="text-align:right">36</td>
-<td style="text-align:right">64</td>
-</tr>
-<tr>
-<td style="text-align:right">7</td>
-<td style="text-align:right">49</td>
-<td style="text-align:right">128</td>
-</tr>
-<tr>
-<td style="text-align:right">8</td>
-<td style="text-align:right">64</td>
-<td style="text-align:right">256</td>
-</tr>
-<tr>
-<td style="text-align:right">9</td>
-<td style="text-align:right">81</td>
-<td style="text-align:right">512</td>
-</tr>
-<tr>
-<td style="text-align:right">10</td>
-<td style="text-align:right">100</td>
-<td style="text-align:right">1024</td>
-</tr>
-</tbody>
-</table>
-<p>Plot the graph of the table.</p>
+<p>We can take a look at some typical running time order in the following graph.</p>
 <p><img src="../images/time.png" alt="Running time"></p>
 <p class="caption">Fig. Runing time order comparison</p>
-<p>From the above graph, we can see examples of running time orders. <code>O(1)</code> is an ideal one, which is a contant and extremely fast. O(log(n)), and O(n) are relatively efficient. Going to the left, O(nlogn) and O(n^2) start to be relatively more expensive. To the very left, O(2<sup>n</sup>) is an expensive algorithm and O(n!) is extremely expensive, and it explods even in small n. In general, we want to aim for more efficient algorithm design and avoid to land on very expensive one.</p>
-<h2>Work with the recursion limit</h2>
-<p>Recursion might look like it can go on forever, but in reality it can’t. When implemented in the computer, each function instance takes memory space to store variables. Thus the total number of active instances that we can support at one time has a limit. The machine either sets the maximum number of instances or the maximum memory space that we can have. For example, JavaScript sets the limit of recursive level to be around 10000 or lower.</p>
-<p>If you have already tried either sum(10000) you will be given an error message below.</p>
-<pre class="">RangeError: Maximum call stack size exceeded
-</pre>
-<p>The call stack is a technical name for storing each active function instance. When we get this error, it means there’s no more room to store another function instance</p>
-<p>This limit is a limit. So in order to run code with more recursion level, we need to find a way to walk around this problem. There are couple of options.</p>
-<h3>Live with it</h3>
-<p>The option sounds not an option. 10000 limit is not a huge number, but at least it’s a number that we can work with. Luckily lots of problems, especially the ones for educational purpose, can be solved within this limit.</p>
-<p>And your language running environment provides a way for us to change this limit temporarily if we really want to try some larger recursion levels. For JavaScript, we can play with the stack-size setting.</p>
-<pre class="">node --stack-size=900 test.js
-Maximum stack size is 12763 calls
-node --stack-size=1800 test.js
-Maximum stack size is 25563 calls
-node --stack-size=4000 test.js
-Maximum stack size is 56852 calls
-node --stack-size=8000 test.js
-Maximum stack size is 113741 calls
-</pre>
-<p>It’s not too bad. But it can be inconvenient when you study or solve problem in large scale.</p>
-<h3>Iterative setup</h3>
-<p>Luckily there’s different ways of implementing recursion. We have been using recursive function calls. The language running environment has ways to run recursion, which means there’s way to simulate the recursion in the computer. This means, we can, if we want to, implement the similar way that a language does to the recursion to run the recursion. This process is called a conversion, converting from a recursive setup to an iterative setup.</p>
-<p>For example, we could write our sum algorithm in an iterative setup.</p>
-<pre class="">function sum(n)
-{
-let res = 0;
-for (let i = 0; i <= n; i++) {
-res = res + n
-}
-return n;
-}
-</pre>
-<p>I know what you’re gonna say. It’s basically the traditional approach with a for loop. It just happens for this problem, because the problem is pretty basic. However it’s not a coincidence that they look identical though.</p>
-<p>In fact, not all recursion, after converted to an iterative setup, will look same as if you code using a non-recursion approach. To be honest, not all recursion can be converted very easily. Some are easy, and some can be really tricky to write. Because we still want to keep the recursion nature of the problem intact during the conversion. You will see some of the conversion for problems in later chapters.</p>
-<p>The good news is, with the code converted into an iterative setup, we can call sum(10000), or sum(100000), the limit is removed. The only downside of it is that the code might look a bit ugly especially when you want to look at it in the recursion way.</p>
-<h3>Haskell language</h3>
-<p>Here comes the third option.</p>
-<p>Recursion normally isn’t a language feature, it’s more like a by-product of a language. It does not get enough attention by the main stream languages usually. However, there exits language that does build on top of the recursion, such as Haskell - an advanced, purely functional programming language.</p>
-<p>It’s hard to miss this language if you are fan of recursion, because Haskell fully appreciates the power of recursion at its core. Using it to write recursion is like writing down our thoughts. Say we write the sum in recursion in Haskell.</p>
-<pre class="">sum :: Int -> Integer
-sum n = sum (n-1) + n
-sum 0 = 0
-</pre>
-<p>The syntax of Haskell function is slightly different, it calls the function without the bracket, instead it uses a space to separate the function name and its argument. Our Haskell version for sum has three lines: the first one actually is a line for the definition of the function. Haskell is a declarative, statically typed code. The second and third line are the implementation and basically look quite similar to the analysis of the recursion.</p>
-<p>Run it and see the result.</p>
-<pre class="">sum 0 == 0
-sum 1 == 1
-sum 100 == 5050
-sum 1000 == 500500
-sum 10000 == 50005000
-sum 100000 == 5000050000
-sum 1000000 == 500000500000
-sum 10000000 == 50000005000000
-</pre>
-<p>The Haskell version works with large recursion levels out of the box. And it takes only a few seconds to run. This shows the power of Haskell as well as its dedication to the recursion.</p>
-<p>BTW, by looking at the above output, have you noticed the sum carries a pattern by magnitude of 10? like 5050, 500500, 50005000, interesting.</p>
-<p>You might be like, if Haskell is that easy, why don’t we just start with Haskell, well, as I mentioned, writing in Haskell is like writing your thoughts, and sometimes it’s difficult to write down your thoughts, it takes some skill and practice. So in this book, we’ll write a Haskell version as a reference to confirm our design and check results, more to use Haskell as a helper.</p>
-<p>All in all we have couple of options dealing with the stack limit.</p>
+<p><code>O(1)</code> is an ideal one, which is a contant and extremely fast. O(log(n)), and O(n) are relatively efficient. Going to the left, O(nlogn) and O(n^2) start to be relatively more expensive. To the very left, O(2<sup>n</sup>) is an expensive algorithm and O(n!) is extremely expensive, and it explods even in small n. In general, we want to aim for more efficient algorithm design and avoid to land on very expensive one.</p>
 
     </main>
-    <a href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google">
-    Image by macrovector_official</a>
-    on Freepik <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({startOnLoad:true}));</script>
+    <footer>
+  <div>
+    <p>
+      <a
+        href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google"
+      >
+        Image by macrovector_official</a
+      >
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+
+    <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
   </body>
 </html>
