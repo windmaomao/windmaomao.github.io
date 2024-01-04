@@ -35,7 +35,7 @@
         <p>Think in Recursion</p>
         <p><img src='../images/logo.png'/></p>
       </div>
-      <div class="menu-items"><li><a href="/sum-numbers/">1. Sum numbers</a></li><li><a href="/recursion-limit/">2. Recursion limit</a></li><li><a href="/fib-sequence/">3. Fibonacci sequence</a></li></div>
+      <div class="menu-items"><li><a href="/recursion-limit/">2. Recursion limit</a></li><li><a href="/fib-sequence/">3. Fibonacci sequence</a></li><li><a href="/sum-numbers/">1. Sum numbers</a></li></div>
     </div>
   </div>
 </nav>
@@ -54,8 +54,6 @@
 <p>The debug info actually tells us what happened. Your code calls <code>sum</code>, and then calls <code>sum</code> and then calls <code>sum</code> ... Because we keep calling a function without finishing the previous functions. In the end, it reaches what's called the &quot;Maximum call stack size&quot;.</p>
 <h2>What is call stack?</h2>
 <p>The call stack, as the name refers to, is a container for calls, function calls. When you call a function, it'll create an item in the call list. Because the computer needs to keep track of how many unfinished calls currently.</p>
-<p class="caption"><img src="../images/stack.png" alt="Call stack"><br>
-Fig. Call stack</p>
 <p>A function serves two important purposes in the context of call stack, one is to allocate the memery space for this call, such as local variables including input arguments. Another one is to know where it returns to after finished. So for each newly added call, it takes several kilobtype of memory. You can think this as the overhead of calling a function. Basically if your code is made with no functions, the overhead cost is kept at minimum.</p>
 <p>Now it's making perfect sense that why we can get this error. If you keep adding calls that can't finish before issuing more calls, eventually it'll exceed some memory storage limit. Because otherwise it'll crash your computer, remember the blue screen in the old days. We don't want to get that. Instead, the system just tell us we reach the limit.</p>
 <p>There's some ambiguity about the &quot;call stack size&quot;. Most of time it actually doesn't mean the total number of active calls. Since each call's size isn't same, so the most optimal way to define the stack size is the total memory consumption so far for all the active calls. Once the storage limit for call stack is reached, the error is issued.</p>
@@ -144,6 +142,6 @@ sum 0 = 0
   </p>
 </footer>
 
-    <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+    <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({startOnLoad:true}));</script>
   </body>
 </html>
