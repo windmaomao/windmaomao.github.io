@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc." />
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation" />
+    <meta name="author" content="Fang Jin" />
+    <link rel=icon type=image/png href="../images/favi.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Climbing stairs</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/sum-numbers/"
+            >1. Sum</a
+          >
+        </li><li>
+          <a href="/call-stack/"
+            >2. Call stack</a
+          >
+        </li><li>
+          <a href="/factorial/"
+            >3. Factorial</a
+          >
+        </li><li>
+          <a href="/fib-sequence/"
+            >4. Fibonacci</a
+          >
+        </li><li>
+          <a href="/climb-stairs/"
+            >5. Climbing stairs</a
+          >
+        </li><li>
+          <a href="/bucket-fill/"
+            >6. Flood fill</a
+          >
+        </li><li>
+          <a href="/permutation/"
+            >7. Permutation</a
+          >
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">5</p>
+<h1>Climbing stairs</h1>
+<p>The recursion is complex overall. But if you look at each function instance, the logic isn't that difficult to follow. It asks you to visit another function instance, or two function instances, to get answers. In this chapter we'll continue to see this pattern, except this time the number of function instances to visit is not fixed. Based on the argument you pass in to the function instance, this number could change. Let's see in an example.</p>
+<h2>Climb stairs</h2>
+<p>There are <code>totalStairs</code> number of stairs to climb. Each time we can take up to <code>maxSteps</code> steps. For instance, we have <code>3</code> stairs to climb, and each time we can take up to <code>2</code> steps. How many different ways can we climb the stairs? Let's try.</p>
+<ul>
+<li>take <code>1</code> step, <code>1</code> step, and then <code>1</code> step, this is one way. Or</li>
+<li>take <code>1</code> step and then <code>2</code> steps, this is second way. Or</li>
+<li>take <code>2</code> steps and then <code>1</code> step, the third way.</li>
+</ul>
+<p>So for this case, we have three ways in total. The question is asking us to find out the total number of ways. How do we solve this problem?</p>
+<p>As usual, we need to think out of the box a bit, especially to look around and see whether we can find something useful to rely on. Let's work on the easy case together first.</p>
+<h3>Up to one step a time</h3>
+<p>We have <code>n</code> stairs to climb, and we can make <code>1</code> steps each time. Say we want to finish climbing with one final step, which stair we need to be on? The <code>n-1</code>th stair. Is this right?</p>
+<p>Yes. More than that, if we have known the total number of ways to climb <code>n-1</code> stairs, we actually know the total number of ways to climb <code>n</code> stairs.</p>
+<pre><code>maxSteps = 1
+numOfWays(n) = numOfWays(n-1)
+</code></pre>
+<p>There's only one way to climb from <code>n-1</code> to <code>n</code>, and by doing that we don't increase the number of ways in total.</p>
+<p>This is when <code>maxSteps</code> equals to <code>1</code>. What if the <code>maxSteps</code> equals to <code>2</code>?</p>
+<h3>Up to two steps a time</h3>
+<p>This time we can take either <code>1</code> or <code>2</code> steps a time. The above discussion still applies. If we happen to land on <code>n-1</code>th stair, we can take <code>1</code> step to finish it. And this time, there's one more variant. If we happen to land on <code>n-2</code>th stair, we can still finish climbing because we can now take <code>2</code> steps. Therefore, if we have known the total number of ways to climb <code>n-1</code> and <code>n-2</code> stairs, we can figure out the total number of ways for <code>n</code>.</p>
+<pre><code>maxSteps = 2
+numOfWays(n) = numOfWays(n-1) + numOfWays(n-2)
+</code></pre>
+<p>This is when we can take up to <code>2</code> steps each time. What if we can take up to <code>3</code> steps?</p>
+<h3>Up to three steps a time</h3>
+<p>All the above conversation still applies, except we have one more variant to cover, that is when we happen to land on <code>n-3</code>th stair, we can finish it by taking three steps. Given the total number of ways to climb <code>n-1</code>, <code>n-2</code> and <code>n-3</code> stairs, we can calculate the total number of ways for <code>n</code>.</p>
+<pre><code>maxSteps = 3
+numOfWays(n) =
+  numOfWays(n-1) + numOfWays(n-2) + numOfWays(n-3)
+</code></pre>
+<p>We can stop here, I believe we get the pattern. There're couple of variants to To reach <code>n</code>th stair. And the number of variants depends on the number of steps we can take each time.</p>
+<h2>Known at the boundary</h2>
+<p>By the previous two problems <code>sum</code> and <code>fib</code>, we have noticed, in order to write a successful recursion, we also need to know how the recursion ends. Or more accurate term, the recursion's boundary?</p>
+<p>A function instance calls another one, or multiple ones hoping they can help itself figure out the answer. In the end, at least one of the called function instances needs to know the answer before hand, because otherwise the recursion can't stop. It keep going forward but can't go back. But for the recursion algorithm to work, we need it to go back, especially when it find an answer.</p>
+<p>Ending the recursion is a figure of speech, technically the recursion doesn't end when it hits the boundary. It just can't go further or beyond, thus it goes back to where it comes from, it retracts. So be mindful of using the word &quot;end&quot; in the recursion, it's better to replace it with the word &quot;boundary&quot;. That's the more realistic picture.</p>
+<p>Ok, so what's the boundary for the climbing stairs problem?</p>
+<p>Think for a second when we reach the top of the stairs, what will happen in our recursion algorithm?</p>
+<p>In the context of calling <code>numOfWays(n)</code>, the journey starts from <code>n</code> reaching <code>n-1</code>, <code>n-2</code> asking for help. Sooner or later, it reaches <code>0</code>. This is the boundary, because at <code>0</code>, we have gone through all the helper we need and we have climbed exactly <code>n</code> stairs. And most importantly we know the answer at this boundary.</p>
+<pre><code>numOfWays(0) = 1
+</code></pre>
+<p>It equals to <code>1</code>. Because after we climb <code>n</code> stairs, we find <em>a</em> way of climbing it.</p>
+<p>There's another boundary in this problem. Depending on how we implement it, we might explicitly write it down or avoid writing it down. We'll first write it down so to make it clear.</p>
+<p>This boundary isn't obvious, because when we can only take up to one step, it's not visible. Only when can take more steps each time, we can see it. Say we have only one stair left to climb.</p>
+<pre><code>maxSteps = 2
+numOfWays(1) = numOfWays(0) + numOfWays(-1)
+</code></pre>
+<p>A strange thing happens. If we continue to follow the recursion, we end up sending a negative number to a new function instance. We can think of this as a computer issue, but honestly speaking, negative argument isn't artificial in our problem. It actually stands for an overshoot, instead of stopping at the exact <code>n</code> stairs, you overstep one more step.</p>
+<p>So in the recursion, we look for the answer for a negative stair. Maybe this is achievable, however that's not the problem asks us to solve. In the problem context, it can't be counted as one viable way.</p>
+<pre><code>numOfWays(n &lt; 0) = 0
+</code></pre>
+<p>Thus, if we want to continue the same recursion, we can write out the boundary and set the answer to be <code>0</code> for all negative argument. <em>We don't know how overstepping we can get.</em></p>
+<p>Later when we implement the code, we can see there's another version we can write so that we don't have to explicitly write out the boundary.</p>
+<p>Let me summarize the recursion for this problem.</p>
+<pre><code>numOfWays(n &lt; 0) = 0
+numOfWays(0) = 1
+numOfWays(n) = numOfWays(n-1) + numOfWays(n-2) + ...
+               -----------------v-------------------
+                      maxStep number of terms
+</code></pre>
+<p>Good, good, we can now implement it in code.</p>
+<h2>Inner and outer functions</h2>
+<p>Now we are ready to write the code. We have written couple of recursive functions, like <code>sum</code> and <code>fib</code>. They are both implemented using a single function. This time we'd like to try something slightly different. We'll use two functions, a inner and an outer function.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token constant">A</span>
+  <span class="token keyword">function</span> <span class="token function">inner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token constant">B</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This setup is quite common in modern language like <em>Javascript</em>, or any functional programming language. It has an interesting name, <em>Closure</em>. With a closure, nothing special happens to the outer function, but the inner function can access variables defined from the outer function. In our annotation marked by <code>A</code> and <code>B</code>, code in <code>B</code> can access any variable defined from <code>A</code>. <em>Caution: the other way is not possible.</em></p>
+<p>Before the closure, we have global variables. All functions can access global variables. With a closure, we add one more layer. Inner one can access outer one and both can continue access global variables. <em>The closure actually reminds me a bit of recursion as well.</em></p>
+<p>Sorry, I still haven't gotten to why the closure is useful for us. Let me show you some boilerplate code before explaining it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">totalNumOfWays</span><span class="token punctuation">(</span><span class="token parameter">maxSteps<span class="token punctuation">,</span> totalStairs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// we can access maxSteps and totalStairs here</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>totalStairs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>In the above two functions setup, the first one <code>totalNumOfWays</code> is the outer function with <code>maxSteps</code> and <code>totalStairs</code> defined as arguments that are required by the problem specification. We also sometimes call specification as interface.</p>
+<p>Inside the outer function, we have the inner function <code>numOfClimbs</code> which has <code>n</code> defined as argument. This is our recursive function, as what we did for <code>sum</code> and <code>fib</code>.</p>
+<p>Now the reason we put the recursive function inside another function is that, whenever it's called, we don't want to pass in <code>totalStairs</code> and <code>maxSteps</code> to it every time. Not because we're lazy, maybe we are, but during the entire recursion, <code>totalStairs</code> and <code>maxSteps</code> do not change. But they will change when the problem changes.</p>
+<pre><code>totalNumOfWays(2, 3)  // one problem
+totalNumOfWays(3, 10) // another problem
+</code></pre>
+<p>The benefit of the closure is the extra scope it creates with the separation of concerns in mind. With this feature, functions can have layers so we can continue write code using one function, but inside that function, we also have space to write more functions.</p>
+<p>Let's finish our algorithm with the closure setup.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">totalNumOfWays</span><span class="token punctuation">(</span><span class="token parameter">maxSteps<span class="token punctuation">,</span> totalStairs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> m <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token keyword">in</span> m<span class="token punctuation">)</span> <span class="token keyword">return</span> m<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> maxSteps<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      sum <span class="token operator">+=</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>n <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    m<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>totalStairs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Inside the outer function <code>totalNumOfWays</code>, we install a dictionary <code>m</code> at the first place. This is where we'd like to remember results for all the recursive calls. And this is what we have learned in <code>fib</code> problem, to avoid the running time as high as <code>O(2^n)</code>, we can memorize the results from past function instances. It's even so here, because we could have more than two terms within each recursion, and thus could be looking at <code>O(3^n)</code> or <code>O(4^n)</code> easily.</p>
+<p>Alright, inside the inner function <code>numOfClimbs</code>, we first implement two boundary conditions for <code>n &lt; 0</code> and <code>n = 0</code>. And then we check if the instance has been visited or not, if visited, we use the cached result right away, this is how we can get the running time back to <code>O(n)</code>.</p>
+<p>In the middle of the function <code>numOfClimbs</code>, we use a <code>for</code> loop to add all terms together. This way no matter what <code>maxSteps</code> is, we can sum all the terms to get the result. After that, just need to remember to save the result to the dictionary <code>m</code> before returning it.</p>
+<p>You might be wondering why I can define function <code>numOfClimbs</code> between <code>A</code> and <code>B</code>, is the location arbitrary?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">totalNumOfWays</span><span class="token punctuation">(</span><span class="token parameter">maxSteps<span class="token punctuation">,</span> totalStairs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> m <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token operator">...</span><span class="token constant">A</span>
+
+  <span class="token keyword">function</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span><span class="token constant">B</span>
+  <span class="token keyword">return</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>totalStairs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Let me write it in a different way.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">totalNumOfWays</span><span class="token punctuation">(</span><span class="token parameter">maxSteps<span class="token punctuation">,</span> totalStairs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> m <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token operator">...</span><span class="token constant">A</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">numOfClimbs</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span>
+  <span class="token operator">...</span><span class="token constant">B</span>
+  <span class="token keyword">return</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>totalStairs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The above is valid code, the difference is that I write the function using an arrow syntax instead of function syntax. Both versions are comparable, however the latter version helps us understand that a function is nothing more than a variable. Thus where you write it is entirely up to the logic of your algorithm.</p>
+<p>Enough said, let's run it.</p>
+<pre><code>&gt; totalNumOfWays(2, 3)
+3
+
+&gt; totalNumOfWays(3, 3)
+4
+</code></pre>
+<pre><code>&gt; totalNumOfWays(2, 10)
+89
+
+&gt; totalNumOfWays(3, 10)
+274
+
+&gt; totalNumOfWays(4, 10)
+401
+</code></pre>
+<pre><code>&gt; totalNumOfWays(2, 100)
+573147844013817200000
+
+&gt; totalNumOfWays(3, 100)
+1.803963808151009e+26
+
+&gt; totalNumOfWays(4, 100)
+1.7943803336550017e+28
+</code></pre>
+<p>The running time of this algorithm stays at O(n) attributing to the memorization technique we applied. We get the above result back fairly quick.</p>
+<h2>Spurt towards the tape</h2>
+<p>We mentioned earlier that one of the boundary case, when <code>n &lt; 0</code>, it doesn't need to be written explicitly. Instead we can avoid calling the function instance by using a condition.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">totalNumOfWays</span><span class="token punctuation">(</span><span class="token parameter">maxSteps<span class="token punctuation">,</span> totalStairs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> m <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token keyword">in</span> m<span class="token punctuation">)</span> <span class="token keyword">return</span> m<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> maxSteps<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">></span> n<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      sum <span class="token operator">+=</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>n <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    m<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>totalStairs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>We check whether <code>i</code> is greater than <code>n</code> inside <code>for</code> loop in the middle of adding terms. If the condition is met, meaning overstepping, the code continues by skipping this round of addition, since we know the value for this boundary is <code>0</code>. This small change saves small calculation and prevents us from calling the next instance of <code>numOfClimbs</code>. The running time could be slightly improved, because in a way we decreases <code>maxSteps</code> when we are getting closer to climb all stairs.</p>
+<p>There're pro and cons on writing the boundary or avoiding to call the instance.</p>
+<p>Writing it out can be easy to understand in terms of implementation of our recursion plan. The code follows the flow of the recursion, and mathematically correct. However, we have to notice that each boundary written this way is also a new function instance call, which means it'll add to the calls stack limit.</p>
+<p>Avoid to call the instance, on the contrary, uses a condition to skip the instance call by plugging the boundary value directly. Computational wise, it's relatively more efficient. But it can be looked as some sort of the code optimization since it might be different to write it out in a piece of paper.</p>
+<p>The good news is that both are valid and are equally popular. They are also interchangeable, one can be converted into another one. I'll say it's up to you which one you'd like to adopt for your situation.</p>
+<p>In our problem, avoiding to call the instance shows us another interesting fact. Pretending we don't have memorization turned on for a second, we could have an phenomena: the closer we are about to finish the stairs, the faster the algorithm runs. How so?</p>
+<p>Using the crossroad analogy, say normally we have four directions to choose at each crossroad, but when we get closer to our destination, the number of directions reduces to <code>3</code> at one crossroad; and it further reduces to <code>2</code> when we get even closer. The reduction of directions is purely because we are getting closer to the goal!</p>
+<p>Back to our problem, the closer we are to the boundary, such as <code>0</code>, the more chance we can be overstepped, such as hitting <code>-1</code> or <code>-2</code>, thus the more the recursion hit &quot;end&quot; and returns back. From the running time point of view, this means the algorithm runs from O(4^n) to O(3^n) and eventually to O(n). Of course this is when the memorization isn't turned on. The memorization we implemented does change the running time overall, making the running time stay at <code>O(n)</code> all the time.</p>
+<h2>Haskell version</h2>
+<p>Let's turn t o Haskell version to verify our result.</p>
+<pre class="language-hs"><code class="language-hs"><span class="token hvariable">totalNumOfWays</span> <span class="token operator">::</span> <span class="token constant">Int</span> <span class="token operator">-></span> <span class="token constant">Int</span> <span class="token operator">-></span> <span class="token constant">Integer</span>
+<span class="token hvariable">totalNumOfWays</span> <span class="token hvariable">maxSteps</span> <span class="token operator">=</span> <span class="token hvariable">f</span>
+        <span class="token keyword">where</span> <span class="token hvariable">f</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token builtin">map</span> <span class="token punctuation">(</span><span class="token hvariable">numOfClimbs</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token operator">..</span><span class="token punctuation">]</span> <span class="token operator">!!</span><span class="token punctuation">)</span>
+           <span class="token keyword">where</span> <span class="token hvariable">numOfClimbs</span> <span class="token number">0</span> <span class="token operator">=</span> <span class="token number">1</span>
+                 <span class="token hvariable">numOfClimbs</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token builtin">sum</span> <span class="token punctuation">[</span><span class="token hvariable">f</span> <span class="token punctuation">(</span><span class="token hvariable">n</span><span class="token operator">-</span><span class="token hvariable">i</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token hvariable">i</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token hvariable">maxSteps</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">i</span> <span class="token operator">&lt;=</span> <span class="token hvariable">n</span><span class="token punctuation">]</span></code></pre>
+<p>The code should in theory reduce to the code for <code>fib</code> when <code>maxSteps</code> equals to <code>2</code>. Because <code>maxSteps</code> is an argument, we also use the outer and inner function setup. The intention of the code is quite similar to the Javascript version, except the <code>for</code> loop is written as a list comprehension, <code>[f (n-i) | i &lt;- [1..maxSteps], i &lt;= n]</code>.</p>
+<p>Run it to see the result.</p>
+<pre><code>&gt; totalNumOfWays 2 5
+8
+
+&gt; totalNumOfWays 2 10
+89
+
+&gt; totalNumOfWays 2 100
+573147844013817084101
+
+&gt; totalNumOfWays 2 1000
+7033036771142281582183525487718
+3549770181269836358732742604905
+0871545371181969335797422494945
+6261173348775044924176599108818
+6363265450223647106012053374121
+2738673391111981393731255987676
+90091902245245323403501
+
+&gt; totalNumOfWays 3 100
+180396380815100901214157639
+
+&gt; totalNumOfWays 4 100
+17943803336550012914104102513
+</code></pre>
+<p>Notice for <code>totalNumOfWays(2,100)</code>, the Haskell version generates correct result while the Javascript version starts to lose digits.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">totalNumOfWays</span><span class="token punctuation">(</span><span class="token parameter">maxSteps<span class="token punctuation">,</span> totalStairs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> m <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">BigInt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token keyword">in</span> m<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">BigInt</span><span class="token punctuation">(</span>m<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token function">BigInt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> maxSteps<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">></span> n<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      sum <span class="token operator">+=</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>n <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    m<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">BigInt</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token function">numOfClimbs</span><span class="token punctuation">(</span>totalStairs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>If we add the <code>BigInt</code> support, we can recover the correct answer.</p>
+<pre><code>&gt; totalNumOfWays(2, 100)
+573147844013817084101n
+</code></pre>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a
+        href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google"
+      >
+        Image by macrovector_official</a
+      >
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>

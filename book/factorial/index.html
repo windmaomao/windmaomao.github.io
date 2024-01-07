@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc." />
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation" />
+    <meta name="author" content="Fang Jin" />
+    <link rel=icon type=image/png href="../images/favi.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Factorial</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/sum-numbers/"
+            >1. Sum</a
+          >
+        </li><li>
+          <a href="/call-stack/"
+            >2. Call stack</a
+          >
+        </li><li>
+          <a href="/factorial/"
+            >3. Factorial</a
+          >
+        </li><li>
+          <a href="/fib-sequence/"
+            >4. Fibonacci</a
+          >
+        </li><li>
+          <a href="/climb-stairs/"
+            >5. Climbing stairs</a
+          >
+        </li><li>
+          <a href="/bucket-fill/"
+            >6. Flood fill</a
+          >
+        </li><li>
+          <a href="/permutation/"
+            >7. Permutation</a
+          >
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">3</p>
+<h1>Factorial</h1>
+<p>In the previous chapter <code>sum</code>, we have defined what is a recursion, how to create a recursion with a recursive function, and a natural way to look at a recursion without going crazy. In this chapter, we are going to ask you to apply what we have learned and try to come up a recursion by yourself this time.</p>
+<p>The question we like to use is the factorial number.</p>
+<h2>Factorial</h2>
+<p>In mathematics, factorial <code>n! = 1 x 2 x 3 ... x n</code>. List a few of them.</p>
+<pre><code>n	n!
+0	1
+1	1
+2	2
+3	6
+4	24
+5	120
+6	720
+7	5040
+8	40320
+9	362880
+10	3628800
+11	39916800
+12	479001600
+13	6227020800
+14	87178291200
+15	1307674368000
+16	20922789888000
+17	355687428096000
+18	6402373705728000
+19	121645100408832000
+20	2432902008176640000
+...
+</code></pre>
+<p>You can see factorial Factorial can increase really quick, and grows moe quickly than exponential growth.</p>
+<p>Ok, how can we calculate it with a recursion?</p>
+<p>What we learned from <code>sum</code> is that we can come up with the answer by asking whether there's something around that can help us reach the answer. For instance, say we want to calculate <code>factorial(n) = 1*2*3*...*n</code>, and if we have known <code>factorial(n-1)</code>, can that help us reach the answer?</p>
+<pre><code>factorial(n) = factorial(n-1) * n
+</code></pre>
+<p>Yes, because <code>factorial(n-1) = 1*2*3*...(n-1)</code>, thus if it's given, we can just multiply it by <code>n</code>.</p>
+<p>That's great. But we can't let the recursive function calling itself forever, there has to be one function instance that we enter stops this behavior. We have learned this is called boundary. At the boundary, we know the result of function instance before hand. So what is the boundary for <code>factorial</code>? How about <code>1</code>?</p>
+<pre><code>factorial(1) = 1
+</code></pre>
+<p>Yes, we know <code>1! = 1</code>.</p>
+<p>Alright, now we should be able to write a code.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">factorial</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">factorial</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>That's it. Let's run it.</p>
+<pre><code>&gt; factorial(1)
+1
+
+&gt; factorial(2)
+2
+
+&gt; factorial(3)
+6
+
+&gt; factorial(4)
+24
+</code></pre>
+<p>Not bad. I'm sure we have already noticed that the main difference between <code>sum</code> and <code>factorial</code> is the operation, instead of doing plus, we perform multiplication this time. The boundary is also slightly different due to nature of the operation. Instead of <code>sum(0)=0</code>, we have <code>factorial(1)=1</code> this time. Other than these two difference, the code should look quite similar.</p>
+<h2>Running time</h2>
+<p>Once we finish an algorithm, or sometimes even before you start to write an algorithm, you can do some analysis of the running time. The reason isn't to ask you to become a math expert; but to give you some idea and gain some confidence in how performant your algorithm can be.</p>
+<p>In order to analyze the recursion running time, we can start by counting how many function instances to call to reach the answer.</p>
+<pre><code>factorial(1) = 1
+factorial(n) = factorial(n-1) * n
+</code></pre>
+<p>If we kick off the first function instance <code>factorial(n)</code>, it calls <code>factorial(n-1)</code> and then <code>n-2</code>, ... until it reaches <code>1</code>. This can be illustrated below.</p>
+<pre><code>   v
+   n
+  n-1
+  n-2
+   .
+   .
+   .
+   2
+   1
+  ---
+factorial
+</code></pre>
+<p>Bar <code>---</code> is used to indicate that it can't go any further beyond <code>1</code>. This visited sequence confirms that we will have <code>n</code> function instances visited, thus the running time is <code>O(n)</code>.</p>
+<h2>Big number</h2>
+<p>If we check the running time chapter from chapter 1, we can see <code>O(n)</code> is pretty performant algorithm. Let's try some larger number.</p>
+<pre><code>&gt; factorial(10)
+3628800
+
+&gt; factorial(20)
+2432902008176640000
+
+&gt; factorial(21)
+51090942171709440000
+
+&gt; factorial(22)
+1.1240007277776077e+21
+</code></pre>
+<p>Quickly our results for <code>factorial(n)</code> shoots pretty high when <code>n</code> increases above <code>10</code>. Moreover, we start to not be able to see all the digits, such as when <code>n=22</code>. How can we continue see all the effective digits?</p>
+<p>In Javascript, we need to go to use Big Number.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">factorial</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">BigInt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">factorial</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">BigInt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Switching to use big number is fairly straightforward. Basically we wrap each number with a <code>BigInt</code>. After that, we can rerun the code.</p>
+<pre><code>&gt; factorial(21)
+51090942171709440000n
+
+&gt; factorial(22)
+1124000727777607680000n
+
+&gt; factorial(30)
+265252859812191058636308480000000n
+</code></pre>
+<p>This time, we can see the result shows all the digits. The <code>n</code> after the number indicates it's a BigInt. Since we can go to higher <code>n</code>, let's continue for larger <code>n</code>.</p>
+<pre><code>&gt; factorial(100)
+93326215443944152681699238856266700490715968264381…
+827223758251185210916864000000000000000000000000n
+
+&gt; factorial(1000)
+40238726007709377354370243392300398571937486421071…
+000000000000000000000000000000000000000000000000n
+
+&gt; factorial(10000)
+Uncaught RangeError: Maximum call stack size exceeded
+</code></pre>
+<p>Ok, when we goes to around <code>10000</code>, we run into the call stack overflow issue. To overcome it, from the previous chapter, we learned we can either convert the code into iterative setup, or turn to Haskell.</p>
+<h2>Call stack size</h2>
+<pre><code>function factorial(n)
+{
+  let res = 1n;
+  for (let i = 1; i &lt;= n; i++) {
+    res = res * BigInt(i)
+  }
+  return res;
+}
+</code></pre>
+<p>Now we can do larger <code>n</code>.</p>
+<pre><code>&gt; factorial(10000)
+28462596809170545189064132121198688901480514017027…
+000000000000000000000000000000000000000000000000n
+</code></pre>
+<p>Haskell version</p>
+<pre class="language-hs"><code class="language-hs"><span class="token hvariable">fact</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token hvariable">fact</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token hvariable">fact</span><span class="token punctuation">(</span><span class="token hvariable">n</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token hvariable">n</span></code></pre>
+<p>Run it.</p>
+<pre><code>&gt; factorial(10000)
+28462596809170545189064132121198688901480514017027…
+000000000000000000000000000000000000000000000000n
+</code></pre>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a
+        href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google"
+      >
+        Image by macrovector_official</a
+      >
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>

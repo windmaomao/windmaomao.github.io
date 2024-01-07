@@ -48,7 +48,7 @@ main {
 }
 
 h1 {
-  font-family: Lato, sans-serif;
+  font-family: Rubik, serif;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -58,7 +58,7 @@ h1 {
 }
 
 h2 {
-  font-family: Lato, sans-serif;
+  font-family: Merriweather, serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.333;
@@ -71,20 +71,20 @@ h3 {
   font-size: 110%;
   font-weight: normal;
   font-style: italic;
-  margin-top: 1em;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
 p {
-  font-family: Merriweather, serif;
+  font-family: Lato, serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
 }
 p.paragraph::first-letter {
-  initial-letter: 2 1;
+  initial-letter: 2 2;
   font-weight: bold;
-  margin-right: 0.2em;
+  margin-right: 0.5rem;
   font-family: Georgia, serif;
 }
 
@@ -97,16 +97,16 @@ blockquote {
 
 pre {
   font-family: "Roboto Mono", mono;
-  color: var(--text-color);
+  /* color: var(--text-color); */
   border-radius: initial;
-  line-height: 1.8;
+  line-height: 1;
 }
 pre:not(.mermaid) {
   padding: 1rem;
-  background-color: var(--neutral-color-weak);
+  /* background-color: var(--neutral-color-weak); */
 }
 pre code {
-  font-size: 15px;
+  line-height: 1.1;
 }
 
 img {
@@ -120,6 +120,11 @@ img {
   margin-bottom: 0.5rem;
 }
 
+li {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
 @media (min-width: 800px) {
   main {
     padding: 0 64px;
@@ -131,6 +136,8 @@ img {
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  position: fixed;
+  background-color: var(--text-background);
 }
 
 .nav-container {

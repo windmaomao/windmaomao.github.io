@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc." />
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation" />
+    <meta name="author" content="Fang Jin" />
+    <link rel=icon type=image/png href="../images/favi.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../bundle.css" />
+    <title>Flood fill</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/sum-numbers/"
+            >1. Sum</a
+          >
+        </li><li>
+          <a href="/call-stack/"
+            >2. Call stack</a
+          >
+        </li><li>
+          <a href="/factorial/"
+            >3. Factorial</a
+          >
+        </li><li>
+          <a href="/fib-sequence/"
+            >4. Fibonacci</a
+          >
+        </li><li>
+          <a href="/climb-stairs/"
+            >5. Climbing stairs</a
+          >
+        </li><li>
+          <a href="/bucket-fill/"
+            >6. Flood fill</a
+          >
+        </li><li>
+          <a href="/permutation/"
+            >7. Permutation</a
+          >
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">6</p>
+<h1>Flood fill</h1>
+<p class="paragraph">In past few problems we solved, including <code>sum</code>, <code>fib</code> and <code>numOfWays</code>, we have seen the usage of the recursion in getting pieces of partial answer from recursive calls. And we don't get our final answer until the root call returns.</p>
+<p>Recursion is a general execution. Similar to a <em>for</em> loop, it can be quite versatile and fit into any algorithm as you think fit. One of grand theme is that, instead of getting partial answers from the call directly, the recursion can be used to build partial answers by entering the call. And we don't get our final answer until the call reaches deep deep down to wherever it thinks the answer should be. This is a one field of study, called backtracking. Let's see one example of it in this chapter, the bucket fill problem.</p>
+<h2>Bucket fill</h2>
+<p>Say we have a map with <code>m</code> rows and <code>n</code> columns in two dimensional array.</p>
+<pre><code>&gt; map[][] =
+
+#################################
+S.##....###......######.#..###.##
+#.##.##.##.....#.#......#..#.#..#
+#....##.##..#..#.#......#..#.#..#
+#..#######..#####################
+#.#########.##...###...##.....###
+#...........####.......#####....#
+#################################
+</code></pre>
+<p>Start from a location <code>S</code>, we want to find to fill all the empty space. We can't go through walls, denoted by <code>#</code>. The empty space is connected via four directions, either up, down or left and right, diagonal fill is not allowed.</p>
+<p>Let's try to figure it out using our hands then. We are at location <code>O</code> with position <code>[i, j]</code>. We have four directions to pick if all directions shows as empty spaces.</p>
+<pre><code>.......
+.. ^ ..
+.&lt; o &gt;.
+.. v ..
+.......
+</code></pre>
+<p>Except when we hit one of boundaries in the following case.</p>
+<pre><code>...#
+.#.#
+.#.o
+####
+</code></pre>
+<p>The right to our current position falls outside of our map, that will be a wrong pick. And the top and bottom to our position are walls, that will be no either. So the only viable way is to go left.</p>
+<p>We also don't want to visit the location we have visited before, since we all know that'll give us endless recursion. So imagine the left to our current position is the way we come from, then we can't go left either.</p>
+<p>Here're our boundaries of this problem written in recursion.</p>
+<pre><code>visit(i, j)
+  --&gt; if [i,j] is outside of map -&gt; return
+  --&gt; if map[i][j] == '#' -&gt; return
+  --&gt; if [i,j] has been visited -&gt; return
+</code></pre>
+<p>You might wonder at this point? What is the goal of our recursion?</p>
+<p>The goal is to find out all the empty space we can go, therefore we're doing it, except we just need to store them so that we can display the filled spaces later.</p>
+<p>Say we store them in a dictionary <code>visited</code>. It'll become clear why we choose dictionary than an array shortly after we write the code. We'll collect visited location as we move forward in the map.</p>
+<p>That's it. Let's code it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> dirs <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">// down</span>
+  <span class="token punctuation">[</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">// right</span>
+  <span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">// up</span>
+  <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">]</span>   <span class="token comment">// left</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">function</span> bucketFill <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length
+  <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> j</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    visited<span class="token punctuation">[</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> ni <span class="token operator">=</span> i <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      <span class="token keyword">let</span> nj <span class="token operator">=</span> j <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>ni <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> ni <span class="token operator">></span> m <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">||</span>
+          nj <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> nj <span class="token operator">></span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>ni<span class="token punctuation">]</span><span class="token punctuation">[</span>nj<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'#'</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">visited</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+
+      <span class="token function">visit</span><span class="token punctuation">(</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">let</span> si <span class="token operator">=</span> start<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sj <span class="token operator">=</span> start<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token function">visit</span><span class="token punctuation">(</span>si<span class="token punctuation">,</span> sj<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> visited
+<span class="token punctuation">}</span></code></pre>
+<p>First thing to notice is that the problem isn't trivial, but our code isn't long either.</p>
+<p>We continue to use two-functions setup. The outer function <code>bucketFill</code> has <code>map</code> and <code>start</code> as arguments. <code>map</code> is a two dimensional array holding the map that needs to be filled, and <code>start</code> is a two elements array holding the position where we start teh fill. We then define couple of utilities variables such as the dimension of the map, <code>m x n</code> as well as the dictionary <code>visited</code> to store all visited locations. Remember all outer variables can be accessed in the inner functions. We are doing some preparation work to make our life easier later.</p>
+<p>The inner function <code>visit</code> has <code>i</code> and <code>j</code> as arguments. Basically we want to visit a location each time. Once we enter a <code>visit</code> instance, we mark the location visited by using the dictionary.</p>
+<blockquote>
+<p>Javascript dictionary can take an object as a key. Behind the scene, just imagine the object is converted into a string.</p>
+</blockquote>
+<p>After the location is visited, a <code>for</code> loop is created to find possible new ways by iterating through four directions. For each possible direction we calculate the future position [ni, nj] with the help of utility array <code>dirs</code>. Before it goes to the future position, we make sure it doesn't fall outside of the map, it's not a wall, and it has not been visited in the past. If all conditions pass, it then take the future location as valid one and visit it right away. Otherwise, it bails out by skipping it and moving to next possible direction.</p>
+<p>Though the logic appears to be verbose when we describe it, it actually is not complicated at all, simply because this pretty much behaves like as if we solve this problem by hand. It's more like we just write down our thoughts into a computer code.</p>
+<p>Before we run the code and fill the map. Let's talk about the code pattern.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> bucketFill <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token operator">...</span><span class="token constant">A</span>
+
+  <span class="token keyword">function</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> j</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span><span class="token constant">B</span>
+  <span class="token keyword">return</span> visited
+<span class="token punctuation">}</span></code></pre>
+<p>The code might appear strange to you since the function <code>visit</code> is sandwiched by section <code>A</code> and <code>B</code>. Why do we write like that? Let me write it a bit differently.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> bucketFill <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">visit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> j</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> visited
+<span class="token punctuation">}</span></code></pre>
+<p>I define the function using a variable with the help of arrow syntax. And I deliberately deleted the section <code>A</code> and <code>B</code> and extra blank lines. What do you see?</p>
+<p>Yes, the function <code>visit</code> is nothing more than a variable or statement or whatever you call a coding element. Where you want to put it is entirely up to your coding logic. In fact, a function is an object in lots of languages now, include Javascript.</p>
+<blockquote>
+<p>Arrow function and regular function are two different ways of writing a function. They are slightly different but overall they achieve the same function definition.</p>
+</blockquote>
+<p>That’s it! I can't wait to run the code.</p>
+<h2>Paint before it dries</h2>
+<p>Here’s the output with visited area marked by <code>O</code>.</p>
+<pre><code>#################################
+oo##oooo###oooooo######.#..###.##
+#o##o##o##ooooo#o#......#..#.#..#
+#oooo##o##oo#oo#o#......#..#.#..#
+#oo#######oo#####################
+#o#########o##...###...##.....###
+#ooooooooooo####.......#####....#
+#################################
+</code></pre>
+<p>Congratulations! Please spend some time in enjoying your work.</p>
+<p>Our paint algorithm seems quite efficient as well. How so?</p>
+<p>From <code>fib</code> and <code>climb</code>, we have learned that with memorization, the algorithm can go as fast as <code>O(n)</code>, but have we implemented memorization yet?</p>
+<p>Yes, we actually did. Really? Yes, the dictionary <code>visited</code> serves two purposes in our code: one, to remember our solution along the way; two, to fullfil the memorization implementation. One stone for two birds.</p>
+<p>This means, the algorithm runs in the order of O(n). But wait a second, what is <code>n</code> here? We happen to have our own <code>n</code> defined which is the height of the map. But the height is not the correct size of our algorithm. Let's take some time to think about the size of our algorithm here.</p>
+<p>Back to a simpler case, to find out the length (or size) of the problem, we can try to visualize how it finds the boundary from the root.</p>
+<pre><code>  5   5
+  4   4,3|
+  3   3,2|
+  2   2,1|
+  1   1,0|
+  0   0|
+  -   -
+ sum  fib
+</code></pre>
+<p>Taking <code>sum</code> as an example, it goes from the root <code>5</code> all the way down to <code>0</code> where we use a bar to indicate it's a boundary. Similarly, <code>fib</code> goes from <code>5</code> to <code>0</code>, though there're side branches, but with memorization, they are also implemented as boundaries.</p>
+<p>By taking look at these two cases, we can fairly quick get an estimate, if not accurate enough, the length of the problem, which is <code>n</code>, the starting argument. Now let's turn back to our bucket fill problem.</p>
+<pre><code>-┐
+ |
+ |         ┌--&gt;
+ |         |
+ └---------┘
+</code></pre>
+<p>As long as there's a pathway which is open for visit, the tip of the recursion goes forward. Imagine there's a extremely twisted path inside the map which covers entire map, in that case, the longest length we can ever get will be <code>O(m*n)</code>. This doesn't mean we will get this length for each map, the running time analysis tries to bound the order.</p>
+<p>So now we can take a look at why this method is called backtracking.</p>
+<p>At each location [i, j], we have four choices, if we don't hit any boundary, we eventually need to go through all of them. In a way, you can call this brutal force. If this repeats consistently, without memorization, we could be facing up to <code>O(4^n)</code> running time. However practically we would never get to this bad. Since for each location we are going to visit, there's a chance it's either a wall, or visited or outside of the map. These locations are referred as boundary in the context of the recursion, because it force the code to return.</p>
+<p>In the context of the problem solving using backtracking, they are also referred as backtracks. It means, it ask the code to go back because the possibilities of going forward is eliminated due to the constraint of the problem. We could have only three directions available, or two, or one. Thus the number of possibilities can be reduced. This really helps the running time, if the possibilities is reduced to one, the running time become <code>O(n)</code> temporarily.</p>
+<p>The number of choices can even be reduced to zero! That means there's no direction to go from this location. Just give you one example.</p>
+<pre><code>ooo#
+o#o#
+o#.#
+####
+</code></pre>
+<p>If we are at <code>.</code>, when looking around, it can't go left or right or down. And it can't go up either because that's where it comes from. This is a dead end, we say. What do we do? We go back, nothing else. This also happens to the recursion. It simply make a return.</p>
+<p>Backtracks, or dead ends, is quite rewarding in the context of recursion (or backtracking). Since only then, we know the algorithm can possibly work out! Only at a backtrack, we know either we reach our goal by comparing to the problem requirement, or there's simply no valid answer beyond this point. Either way it's a win-win situation.</p>
+<blockquote>
+<p>Knowing there's no way to win can be quite cost effective in reaching your goal.</p>
+</blockquote>
+<p>A key to the success of a backtracking setup is to identify these backtracks. Without knowing them, the algorithm is comparable to a brutal force algorithm. With their discovery, it can suddenly, temporarily, or even permanently drop the computation down from <code>O(4^n)</code> to <code>O(1)</code>.</p>
+<p>In the problem of solving climbing stairs, <code>numOfWays</code> actually shows us snippet of this effect, the closer to the answer, there's a pattern emerging as, the less amount of possible opportunities. Of course, the distance here is all relative. This is just another example why finding backtracks can be so effective in solving problems.</p>
+<p>Before we move on to another topic, I want to add that, the function instance returns without carrying a value is also part of features of backtracking. Since the solution isn't returned from the call, instead it's built gradually through a collector, in our case the <code>visited</code> dictionary.</p>
+<h2>Conversion to iterative setup</h2>
+<p>Let's be honest, even we have showed that the running time of our algorithm is <code>O(m*n)</code>, what happens when <code>m*n</code> reaches <code>10000</code>? Isn't it above our call stack limit? Yes it will if it reaches. In that case, we need to convert our code into iterative setup.</p>
+<p>In general converting a recursion algorithm isn’t a common task. Because recursion is quite unique, either you find it useful to apply it or simply not use it, you don't convert it. However, here we do have decent incentive doing it, since then we don't want to be bothered by whether the length of the problem ever exceeds the call stack limit. Suppose we want to solve very large problem in the scale of a million or a trillion.</p>
+<p>Luckily for this problem, the conversion to iterative setup is straightforward. Let’s take a look how the new code look like.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> bucketFill <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length
+  <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">let</span> stack <span class="token operator">=</span> <span class="token punctuation">[</span>start<span class="token punctuation">]</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> heap<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    visited<span class="token punctuation">[</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> ni <span class="token operator">=</span> i <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      <span class="token keyword">let</span> nj <span class="token operator">=</span> j <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>ni <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> ni <span class="token operator">></span> m <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">||</span>
+          nj <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> nj <span class="token operator">></span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">visited</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>ni<span class="token punctuation">]</span><span class="token punctuation">[</span>nj<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+
+      stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> visited
+<span class="token punctuation">}</span></code></pre>
+<p>First impression the code isn't too different, and amazingly it's a bit shorter without the declaration space for a recursive function. Instead it has been replaced with a iterative process using a <code>while</code> loop.</p>
+<p>Before we enter the loop, we create an array named <code>stack</code>. We name it for a reason, because we intend to simulate the way how call stack handles the call, at least in the basic level. The <code>stack</code> carries the signature of each &quot;instance&quot;. We still call it instance here but we should know there's no function instance setup any more.</p>
+<p>The signature is the name of the instance, or the arguments of the instance, in our case, it's the location we are going to visit. If we add an element to the stack, that means we'd like to visit in the future. The stack provides us a list-like storage so that we can process the launching of instance one by one.</p>
+<p>Once we enter the loop, if the stack is not empty, we take one of the element, assign to the position <code>[i, j]</code> and go through the same process (or code) as used to be. The only difference is that, since we don't have the recursive function, when we want to skip the instance, we use <code>continue</code> instead of <code>return</code>; when we want to add a instance, we don't call it, instead we add it to the list.</p>
+<p>To kick off the loop, all we need to do is to add the first element to the list.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> stack <span class="token operator">=</span> <span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>That’s it, with the new iterative setup, rest assure that we can bucket fill a large map.</p>
+<h2>Depth first search</h2>
+<p>Ever have any doubts on this line in the iterative setup?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> heap<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Really, the recursion can be replaced by simply popping an element from an array? Well, yes or no.</p>
+<p>In short, of course, recursion can't be replaced that easily. Otherwise I wouldn't think people will use the recursion way again. To understand this better, we need to take a look how our problem visits locations.</p>
+<pre><code>                 o
+           ------|-----
+           1   2   3   4
+      -----|-----
+      11 12 13 14
+</code></pre>
+<p>In the recursion version, say at one location, there're four valid choices, all directions are good. It picks the first one, and gets into another instance, and finds four valid choices, and pick the first one and continue.</p>
+<p>This visit order, in computer science, is referred as depth first search (DFS). It means it tries to go as deep as possible before going back. The whole visiting sequence would be, for the above case, <code>[o, 1, 11, 12, 13, 14, 2, 3, 4]</code>. If you figure this out by yourself, you are really good at traversal.</p>
+<p>Let's now take a look at the iterative version. Let me remind you <code>array.pop</code> pops the element from the end of the array. Let's do it slowly.</p>
+<pre><code>0. stack = [o]
+1. stack = [1,2,3,4]
+2. stack = [1,2,3,11,12,13,14]
+3. stack = [1,2,3,11,12,13]
+4. stack = [1,2,3,11,12]
+</code></pre>
+<p>Before we enter the loop, the stack starts with one element. Inside the first iteration, it pops out one, and adds four valid elements. Same thing happens to the second iteration, it pops out the last one and adds four more. Starting next iteration, things change a bit, because there's no more valid elements to add. So every turn, one existing one gets popped out. The visit sequence is <code>[o, 4, 14, 13, 12, 11, 3, 2, 1]</code>.</p>
+<p>For a second, the visit sequences are very different.</p>
+<pre><code>o, 1, 11, 12, 13, 14, 2, 3, 4 // recursion
+o, 4, 14, 13, 12, 11, 3, 2, 1 // array.pop
+</code></pre>
+<p>However, if we spend a bit more time looking at both, you might find out at least each element is in the same location. For instance, if you look at the second element, both <code>1</code> and <code>4</code> are from the second location, and both <code>11</code> and <code>14</code> are from the third location, and etc.</p>
+<pre class="language-js"><code class="language-js">    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> k <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> k<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> ni <span class="token operator">=</span> i <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      <span class="token keyword">let</span> nj <span class="token operator">=</span> j <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token operator">...</span>
+
+      stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span></code></pre>
+<p>if we make a small change, when going through all directions, we go through the list backwards comparing to the recursion version, let's take a look the stack.</p>
+<pre><code>0. stack = [o]
+1. stack = [4,3,2,1]
+2. stack = [4,3,2,14,13,12,11]
+3. stack = [4,3,2,14,13,12]
+4. stack = [4,3,2,14,13]
+</code></pre>
+<p>With this change, the visit sequence should look identical to the recursion.</p>
+<pre><code>o, 1, 11, 12, 13, 14, 2, 3, 4 // recursion
+o, 1, 11, 12, 13, 14, 2, 3, 4 // array.pop, loop backward
+</code></pre>
+<p>Great! In the end, we make sure our two versions are doing similar things. But wait, does it really matter? No, it doesn't.</p>
+<p>Because they are all following DFS order, which is to reach the deepest location first. This can be a bit obvious if you randomize the <code>dirs</code> array, you should still get similar result. The sequence can be different, so we don't know which location gets visited first, but in the end, they all finish the problem in DFS fashion.</p>
+<h2>Breath first search</h2>
+<p>Since we already mentioned the depth first search, we probably should mention breath first search (BFS) as well, at least briefly, and see how it effects our problem.</p>
+<p>In our iterative setup, in each iteration, we pop an element from the end of the list. We also could remove it from the beginning of the list.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> bucketFill <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length
+  <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">let</span> queue <span class="token operator">=</span> <span class="token punctuation">[</span>start<span class="token punctuation">]</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>To remove element from the beginning, Javascript uses the method name <code>shift</code>. Notice, I also change the name of our list from <code>stack</code> to <code>queue</code>.</p>
+<p>A stack is a list that follows last-in-first-out (LIFO) principle; whereas a queue follows first-in-first-out (FIFO). In real life, a waiting list is basically a queue, we should be very familiar what a queue is.</p>
+<p>By switching to use a queue instead of a stack, we are asking the visit order to follow the order we visit each locations. For instance, if we add four directions to the queue, then we expect them to be processed one after another one as a group. Let's take a look at the visit sequence.</p>
+<pre><code>0. queue = [o]
+1. queue = [1,2,3,4]
+2. queue = [2,3,4,11,12,13,14]
+3. queue = [3,4,11,12,13,14]
+4. queue = [4,11,12,13,14]
+</code></pre>
+<p>If we trace that, we can see the visit sequence can be very different from the recursion one.</p>
+<pre><code>o, 1, 11, 12, 13, 14, 2, 3, 4 // recursion
+o, 1, 2, 3, 4, 11, 12, 13, 14 // queue.shift
+</code></pre>
+<p>Indeed, this time they are very different.</p>
+<p><img src="../images/traverse.png" alt="DFS vs BFS"></p>
+<p class="caption">fig. Depth first vs Breath first</p>
+<p>Depth first, as we have seen using the stack implementation, reaches as far as it can quickly; whereas Breath first, as seen using the queue implementation circles around its neighbor area before reaching out. With same computation or travel distance, the area that both covers can be drastically different.</p>
+<p>I like to joke about DFS and BFS as personalities as in person. Person with DFS have to play with something new all the time; whereas person with BFS has to play things that he's familiar with. Very distinctive behaviors. Of course no person is either DFS or BFS in real life, most of us are mixture of them.</p>
+<p>Both DFS and BFS are quite popular in problem solving, in different situation, one can play extremely better than the other.</p>
+<p>Though devil is in the detail, in our bucket fill problem, it happens it doesn't matter much which DFS or BFS you use. This is mainly due to the fact that, a) all location can only be visited once; b) our solution doesn't depend on how quickly we reach somewhere, as long as we get there, it's fine. But for other problems, we probably should be more careful at choosing one of them.</p>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a
+        href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google"
+      >
+        Image by macrovector_official</a
+      >
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>
