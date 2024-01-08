@@ -7,7 +7,8 @@
     <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
     <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
     <meta name="author" content="Fang Jin">
-    <link rel="icon" type="image/png" href="../images/favi.png">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
@@ -53,122 +54,160 @@
     <main><p class="chapter-number">1</p>
 <h1>Sum</h1>
 <blockquote>
-<p>Tom: &quot;Miss Sophia want us to sum 0 to 5&quot;<br>
-Me: &quot;Oh yeah, let's do it then. 0 + 1 = 1; 1 + 2 = 3; ...&quot;<br>
-Tom: &quot;Wait, wait, i know the sum from 0 to 4, which is 10. I remember it.&quot;<br>
+<p>Tom: &quot;Miss Sophia wants us to sum 0 to 5&quot;<br>
+Me: &quot;Oh yeah, 0 + 1 = 1; 1 + 2 = 3; ...&quot;<br>
+Tom: &quot;Wait, wait, i know the sum from 0 to 4.<br>
+I remember it's 10.&quot;<br>
 Me: &quot;Okay, in that case, the answer is 15 then!&quot;</p>
 </blockquote>
-<p>Say we want to find out the sum of a list of number from <code>0</code> to <code>n</code>. Assuming we have known the sum to the previous number <code>n-1</code> , we can start with a simple algorithm.</p>
+<p>Say we want to find out the sum of a list of number from <code>0</code> to <code>n</code>, we start to write an algorithm.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> m <span class="token operator">+</span> n<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token constant">M</span> <span class="token operator">+</span> n<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>What is <code>m</code> ?</p>
+<p>What is <code>M</code> ?</p>
 <blockquote>
-<p>Me: &quot;Did you forget something? what is m?&quot;<br>
-Tom: &quot;oh, I forgot. m equals to sum(n - 1)!&quot;<br>
+<p>Me: &quot;Did you forget something? what is M?&quot;<br>
+Tom: &quot;oh, I forgot. M is sum(n - 1)!&quot;<br>
 Me: &quot;What?&quot;<br>
 Tom: &quot;What's the matter?&quot;<br>
 Me: &quot;... Nothing.&quot;</p>
 </blockquote>
-<p>Replacing <code>m</code> with <code>sum(n-1)</code>, like someone knew <code>sum(n-1)</code> already.</p>
+<p>Replacing <code>M</code> with <code>sum(n-1)</code>, like someone knew <code>sum(n-1)</code> already.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">sum</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> n<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <blockquote>
 <p>Me: &quot;I don't really think this would work. &quot;<br>
-Tom: &quot;Why not? If I know sum(4), then I can tell you sum(5).&quot;<br>
-Me: &quot;But what is sum(4)? How could you know sum(4) first.&quot;<br>
-Tom: &quot;Well, if you can tell me what is sum(3) first.&quot;<br>
-Me: &quot;This is ridiculous; how am I supposed to tell you sum(3)?&quot;<br>
-Tom: &quot;That's true, but I think I know what is sum(0)&quot;.<br>
+Tom: &quot;If I know sum(4), I can tell you sum(5).&quot;<br>
+Me: &quot;How could I know sum(4) first.&quot;<br>
+Tom: &quot;Well, if you can tell me what is sum(3).&quot;<br>
+Me: &quot;How am I supposed to tell you sum(3)?&quot;<br>
+Tom: &quot;True, but I think I know what is sum(0)&quot;.<br>
 Me &amp; Tom: &quot;That is zero!&quot;<br>
-Tom: &quot;Ok, if we know sum(0), then I know sum(1) and ...&quot;<br>
-Me &amp; Tom: &quot;Then I know sum(5).&quot;</p>
+Tom: &quot;then I know sum(1) and ...&quot;<br>
+Me &amp; Tom: &quot;then I know sum(5).&quot;</p>
 </blockquote>
-<p>What we are missing is a case for 0, let’s add it.</p>
+<p>Adding <code>sum(0) = 0</code> that we know from the beginning.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token function">sum</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> n<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>We can’t wait to run it.</p>
+<p>Run it.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token operator">></span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
 <span class="token number">15</span></code></pre>
-<p>It's <code>15</code>, that's just great!</p>
+<p>It's <code>15</code>, just great!</p>
 <blockquote>
-<p>Me: &quot;To be honest, I didn't expect we can get the result this way.&quot;<br>
-Tom: &quot;Me either, but let's give it a name, we might make some fortune.&quot;<br>
+<p>Me: &quot;I didn't expect we can get it this far.&quot;<br>
+Tom: &quot;Me either, so what's this?&quot;<br>
 Me &amp; Tom: &quot;Recursion?!&quot;</p>
 </blockquote>
-<p>This is a recursion.</p>
-<h2>Recursion with function instance</h2>
-<p>What is the sum function?</p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> <span class="token function">sum</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> n<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>Inside the sum function, it calls the sum function. So it calls itself.</p>
-<p>It sort looks like that. There’s also an argument associated with each function call, like sum(n) and sum(n-1). If we use the argument instead, we could distinguish both sum, since the former is called n and the latter is called n-1. In fact, this is exactly how it works, both are called function instance, they are the instances of the same function sum.</p>
-<p>What is the difference between each function instance, say between sum(n) and sum(n-1)? It’s subtle. At one hand, they follow the same logic from the shared function body. But on another hand, each can have slight variations due to the exact pathway a function instance take. In our sum case, sum(5) is quite similar to sum(4), but not with sum(0); because the function instance with 0 as argument will return 0 right away. You can think sum(0) as a instance boundary, when the code reaches there, it has to go back to where it was called.</p>
-<p>Since a function’s job is to run through some calculations and return the result, all function instances need to return sooner or later. Since it takes time to call and finish a function call, a function instance can be called but not yet finished. This function instance is then referred as an active instance. For example, after we call sum(5), it calls sum(4), when sum(4) is getting called, sum(5) hasn’t finished yet, thus sum(5) has to be active.</p>
-<p>Alright, we have gone through couple of the key elements of a typical recursion, the function instance. We’ll come back to it often throughout this book. For each recursion problem we encounter, we’ll design the instance logic before we write the code.</p>
-<h2>New way of looking at the recursion</h2>
-<p>One of the challenge of learning recursion is that we are very used to the classical way of doing things using a <em>for</em> loop. But with recursion, things seem to be quite wild. In my opinion, this has something to do with the way we analyze the recursion.</p>
-<p>If I tell you that you have been trained to be linear when it comes to the computer programming, what do you think? Why don’t we take it from a different angle?</p>
-<blockquote>
-<p>Tom: “We should read the sum function line by line.”<br>
-Me: “Isn’t this what we just did, line by line?”<br>
-Tom: “No, I didn’t mean by the compiler. I mean by us.”<br>
-Me: “I’m confused, what you mean?”<br>
-Tom: “Just read it line by line and do it once.”</p>
-</blockquote>
-<p>Let’s take a look at the function once again and see if this time we can just go over once.</p>
+<p>Recursion it is.</p>
+<h2>Function instance</h2>
+<p>What is a recursion?</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token function">sum</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> n<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>Say we start at one function instance n. What does the instance do after we call it?</p>
+<p>In the code, it's a function named <code>sum</code>, inside it calls a function named <code>sum</code>. So it's a function calling itself.</p>
+<p>When a function keeps calling itself, each one that is launched is called a function instance, such as <code>sum(n)</code> and <code>sum(n-1)</code>. Each function instance can be only distinguished by the argument passed to the function, such as <code>n</code> and <code>n-1</code>. The argument essentially becomes the name of the function instance.</p>
+<p>What is the difference between each function instance, say between <code>sum(n)</code> and <code>sum(n-1)</code>? It’s subtle. They follow the same logic from the same function body. On the other hand, each instance carries slight variations due to conditional statement inside the function body. In our sum case, <code>sum(5)</code> is quite similar to <code>sum(4)</code>, but different from <code>sum(0)</code>. Since the function uses a conditional <code>if</code> statement for <code>sum(0)</code>.</p>
+<p>We call <code>sum(0)</code> instance as a boundary. When the code reaches there, it has to go back quickly to where it was called. It behaves almost as if it's not called. A instance serving as a boundary is equally as important as other instances. Without boundary, the problem is unbounded, thus un-solvable.</p>
+<p>Any function’s job is to run through some calculations and return the result. During the visit of the function instance, it maintain its active status. The total number of the active instances fluctuates and could reach any number during the running of the algorithm.</p>
+<p>The function instance and the boundary are two key elements of a recursion. We’ll come back to them often throughout this book.</p>
+<h2>Recursion the right way</h2>
+<p>One of the challenge of learning recursion is that we are very used to the classical way of doing things using a <em>for</em> loop. When it comes to the recursion, things seem to be quite unmanageable. Suddenly we seem to run out of steam in controlling things precisely in coding.</p>
+<p>I don't want to go through the recursion analysis in most of textbooks or online materials, which is time-consuming and mind-blogging. Because I don't want you to think recursion is hard, especially if you are new to this subject. First impression is important, and I don't want to leave you with bad one.</p>
+<p>I'll introduce you the right way of looking at recursion. We'll go from a natural way of how we come to the recursion at the very first place. In a sense, I want you to relax a bit and lear something new. If you happen to know the classical way, please pretend you don't know it for the first few chapter.</p>
+<blockquote>
+<p>Tom: “We should read the function line by line.”<br>
+Me: “Isn’t this what we just did?”<br>
+Tom: “No, I didn’t mean by the compiler.”<br>
+Me: “I’m confused, what you mean?”<br>
+Tom: “I mean by us.”</p>
+</blockquote>
+<p>Let’s walk through the recursive function we wrote once again. What does the function do after we call it?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">sum</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> n<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Say we start at one function instance <code>n</code>.</p>
 <pre><code>sum(n) -&gt; sum(n - 1) + n
-sum(0) -&gt; 0
 </code></pre>
-<p>It asks us to call sum(n-1). This time, we do things a bit differently. Say we rename sum(n-1) to abc(n-1) for a second. The function abc returns the sum from 0 to n-1. Then we take the number returned from abc, add n to it and return it. That’s it. This is when n is not 0.</p>
-<p>When n is 0, sum(0) returns 0 right away. That’s it.</p>
-<p>Now let’s organize our thoughts a bit. So far, do you like this new way of tracing the recursive process only once?</p>
+<p>Quickly it asks us to call <code>sum(n-1)</code> and then the result to <code>n</code>.</p>
+<pre><code>sum(n) -&gt; abc(n - 1) + n
+</code></pre>
+<p>Pretend we replace the <code>sum(n-1)</code> by <code>abc(n-1)</code> for a second. What this <code>abc</code> function does is to return us the result of <code>sum(n-1)</code>. This is the case when <code>n</code> is not <code>0</code>.</p>
+<pre><code>sum(n) -&gt; 0
+</code></pre>
+<p>When n is <code>0</code>, we return the number <code>0</code> right away.</p>
+<p>Now let’s organize our thoughts a bit.</p>
 <blockquote>
 <p>Tom: “How do you feel?”<br>
 Me: “I don’t know. Aren’t they same?”<br>
-Tom: “Have you gone through each instance?”<br>
-Me: “Not really, I felt I went through the function once. But I also felt that I did nothing.”<br>
-Tom: “Weird! Isn’t it?”</p>
+Tom: “Have you gone through every line?”<br>
+Me: “Yes, but I felt I did little.”<br>
+Tom: “Nice, isn’t it?”</p>
 </blockquote>
-<p>To be frank, I don’t really know whether this should be called the new way of looking at the recursion, because literally what we did is to go through the logic of the function body once. But why do we emphasize this way of reasoning?</p>
-<p>Couple of reasons. One as you have seen, it’s sticking to the implementation precisely. Or you can say the implementation should be sticking with the reasoning first. Two, a function can have multiple instances, but more or less it should do the same thing, therefore in theory we should just go through it once, and done with it.</p>
-<p>Anybody’s brain, no matter how hard they have it trained in the past, has a limit. For instance, when I ask you to sum 0 to 5, you can go through all cases one by one taking your time; now if I raise n to 23, you might start to hesitate to spend time digging into each cases; now if I raise it to 178. You’d give up already. Not to mention n can be 348932483. The point is that, for the same problem, we can get different response simply by changing the size of the problem.</p>
-<p>In order to study the problem effectively, we shouldn’t let it happen though.</p>
-<p>Going through the recursion only once can be very effective, since it’s independent to the problem size. Strange enough, no matter how big the size, we are looking at the same function body. This also makes the running time analysis of the recursion possible.</p>
-<h2>Running time of recursion</h2>
-<p>The running time of an algorithm provides the order of the speed of the code, and is expressed as an expression. The notation is the big O. The number <code>n</code> is the size of the problem.</p>
-<p>The running time O isn’t a precise measurement. It can’t tell you exactly how much time your algorithm spends. You still need to run the code to find out the exact number. But it can tell you the relationship between the running time and the size. For example, O(1) means the running time is a constant independent to n. O(n) is said to be linear with n.</p>
-<p><img src="../images/stairs.png" alt="Running time for more terms"></p>
-<p>What’s the running time for our sum algorithm? We can figure that out by looking at the function body.</p>
-<pre><code>sum(n)
-  --&gt; calls sum(n-1) and stores in a
-  --&gt; adds a and n, and returns it
+<p>We walk you through the logic of the code as we normally do to any piece of computer code. The thing we don't want you do is digging into each instance function. Because we believe that work is the compiler's job.</p>
+<p><strong>We don't go through the detail of each function instance, instead we take for granted what's returned from it, and move on to the next line of the code.</strong></p>
+<p>Each of us only has one brain, we just don't have enough brain power to absorb the details of all function instances at the same time.</p>
+<p>For instance, when I ask you to trace through 5 function calls, you find it inspiring and encouraging; if I raise the number to 23, you might start to find it tedious but still be proud afterwards; now if I raise it to 178, you’d give up in no time. Don't you think we should develop a more consistent way of reasoning when things scale up?</p>
+<p>Therefore this book strongly suggests we don't look at the recursion as how compiler looks at it. Instead, we approach the problem as natural as possible. And no matter how large the number is, we stay calm and focus more on the intrinsics of the problem.</p>
+<h2>Running time measurement</h2>
+<p><img src="../images/running.png" alt="Running time"></p>
+<p>In this book, we use recursion to write computer algorithm. Any algorithm book would tell you how to measure algorithm's success on the front.</p>
+<p>This is no exception here.</p>
+<p>In computer science, one of the key metric of a computer algorithm, is its running time, expressed by the notation <code>O</code>. We call it the big <code>O</code>. To name a few popular running time expressions.</p>
+<pre><code>O(n)
+O(n^2)
+O(2^n)
+O(log(n))
+O(n!)
 </code></pre>
-<p>For each function call, it calls another one and stores in a temperary variable, call it <code>a</code>, and then adds <code>a</code> and <code>n</code> together. Say the time spent for <code>sum(n)</code> is <code>t|n</code>, meaning <code>t</code> at <code>n</code>.</p>
-<pre><code>t|n = t|n-1 + 1
+<p>The number <code>n</code> corresponds to the size of the problem. Taking <code>O(n)</code> as an example, it means the running time is in linear relationship against <code>n</code>, when <code>n</code> increases, it increases the running time linearly.</p>
+<p>Notice there's no coefficient or multiple terms in any of these expressions. Because the order of running time has no interest at the difference between <code>O(n)</code>, <code>O(2n)</code>, or <code>O(n+1)</code>, because to the running time, all increase linearly with <code>n</code>. Big <code>O</code> only tracks the quickest growing order.</p>
+<p>Another way to look at the big <code>O</code> is that the unit time for each problem varies. This problem might be doing addition operation, while another problem might be doing multiplication. Even though we know multiplication is slower than addition, we don't normally pay much attention to this level of detail. Instead we want to know how many times each operation has been performed.</p>
+<p>Given couple of problems with the following order, can we figure out which one runs faster?</p>
+<pre><code>O(1)
+O(n)
+O(n^2)
 </code></pre>
-<p>Then the time spent at <code>n</code> is the time spent at <code>n-1</code> plus one. One stands for the unit time spent for the addition operation. I believe we can figure out that the time spent for <code>n</code> is actually <code>n</code> now.</p>
-<p>Imaginging you are climbing stairs, the time it takes to climb one stair is one unit time. Thus the total time spent on climbing to this stair equals to the total time spent to the previous stair plus one.</p>
-<pre><code>t|n = n = O(n)
+<p>We actually don't know. Because the order of running time does not measure the exact time. We can't be sure whether the unit time for each problem is the same. However, for the same problem, when there's one unit time, if one algorithm gives <code>O(n)</code> and another one gives <code>O(n^2)</code>, then we know the former should be more performant. Because the linear form of running time grows slower than the quadratic form of running time when the problem scales up with increasing <code>n</code>.</p>
+<p>Ok, now we know what is the big <code>O</code>, let's think about what’s the running time for the sum algorithm we wrote?</p>
+<p>Say the time spent on running each function instance the unit time, considering it basically does the addition of two numbers, we can count how many times a function instance is called.</p>
+<pre><code> start
+  ---
+   n
+  n-1
+   .
+   .
+   .
+   1
+   0
+  ---
+boundary
 </code></pre>
-<p>Thus the running time of our algorithm is said to be <code>O(n)</code>, meaning the running time is linearly proportional to <code>n</code>. If sum(1) takes 1 microsecond, then we expect sum(5) to take about 5 microseconds. Of course 5 microseconds isn’t an accurate measurement, but we don’t expect to get sum(5) taking more than 10 microseconds, because that would break the O(n) analysis.</p>
-<blockquote>
-<p>Recursion is one way of programming. Which means everything you learned from computer science still applies.</p>
-</blockquote>
-<p>We can take a look at some typical running time order in the following graph.</p>
-<p><img src="../images/time.png" alt="Running time"></p>
-<p class="caption">Fig. Runing time order comparison</p>
-<p><code>O(1)</code> is an ideal one, which is a contant and extremely fast. O(log(n)), and O(n) are relatively efficient. Going to the left, O(nlogn) and O(n^2) start to be relatively more expensive. To the very left, O(2<sup>n</sup>) is an expensive algorithm and O(n!) is extremely expensive, and it explods even in small n. In general, we want to aim for more efficient algorithm design and avoid to land on very expensive one.</p>
+<p>To know how many instances are visited, imagine we start from the first function instance <code>n</code>, and then move into <code>n-1</code>, and continues until it reaches <code>0</code> which is our boundary. It's in total <code>n+1</code> instances.</p>
+<p>Thus the running time of our algorithm is said to be <code>O(n)</code>, meaning the running time is linearly proportional to <code>n</code>. If <code>sum(1)</code> takes 1 microsecond in a real run, then we expect <code>sum(5)</code> should spend approximately around 5 microseconds. Of course 5 microseconds isn’t an accurate measurement, but we don’t expect it to take more than 10 microseconds, because that would break the <code>O(n)</code> analysis.</p>
+<h2>Run it!</h2>
+<p>We have the algorithm written, and we know how fast it runs against <code>n</code>, let's run it.</p>
+<pre><code>&gt; sum(5)
+15
+
+&gt; sum(10)
+55
+
+&gt; sum(100)
+5050
+
+&gt; sum(1000)
+500500
+</code></pre>
+<p>Great! Don't you know the sum takes shape of a pattern <code>5x5x</code> for each magnitude of <code>n</code>. Guess what is <code>sum(10000)</code>?</p>
+<pre><code>&gt; sum(1000)
+500500
+</code></pre>
+<p>Yes, it's <code>50005000</code>.</p>
 </main>
     <footer>
   <div>

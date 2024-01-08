@@ -91,8 +91,11 @@ p.paragraph::first-letter {
 blockquote {
   border-style: none;
   font-style: italic;
-  margin: 1.5rem;
+  margin: 0.5rem;
   padding: 0;
+}
+blockquote p {
+  line-height: 2;
 }
 
 pre {
@@ -109,15 +112,22 @@ pre code {
   line-height: 1.1;
 }
 
+code {
+  font-family: "Roboto Mono", mono;
+  padding-left: 2px;
+}
+
 img {
   max-width: 100%;
 }
-
 .caption {
   font-size: 15px;
   font-style: italic;
   text-align: center;
   margin-bottom: 0.5rem;
+}
+.float-left {
+  float: left;
 }
 
 li {
@@ -240,8 +250,8 @@ li {
 
 .logo {
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: -5px;
+  left: 60px;
   font-size: 1.2rem;
   color: #0e2431;
 }

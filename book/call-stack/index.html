@@ -7,7 +7,8 @@
     <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
     <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
     <meta name="author" content="Fang Jin">
-    <link rel="icon" type="image/png" href="../images/favi.png">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
@@ -52,29 +53,29 @@
 
     <main><p class="chapter-number">2</p>
 <h1>Call stack</h1>
-<p>From time to time, you might see this error in your console output. Normally this indicates that your code has a bug.</p>
-<pre><code>&gt; Maximum call stack size exceeded VM327:2
-  sum @ VM327:2
-  sum @ VM327:3
-  sum @ VM327:3
-  sum @ VM327:3
-  ...
+<p>In the previous, we have come up a recursive algorithm for <code>sum</code>. I hope you don't get annoyed by using an recursion for a basic problem. But I'll assure you <code>sum</code> is such a basic and fundamental problem in studying recursion. Before we move on to solve other problems, this chapter will turn to talk about a bug in <code>sum</code>.</p>
+<p>I'm sure you have tried to run <code>sum</code> couple of times with different <code>n</code>. Have you tried <code>sum(10000)</code>?</p>
+<pre><code>Maximum call stack size exceeded VM327:2
+ sum @ VM327:2
+ sum @ VM327:3
+ sum @ VM327:3
+ sum @ VM327:3
+ .
+ .
+ .
 </code></pre>
-<p>But what does it mean? If you drill down the error message, you will discover a lot of lines with similar messages. I thought the debug info should provide us info that helps us debug :)</p>
-<p>The debug info actually tells us what happened. Your code calls <code>sum</code>, and then calls <code>sum</code> and then calls <code>sum</code> ... Because we keep calling a function without finishing the previous functions. In the end, it reaches what's called the &quot;Maximum call stack size&quot;.</p>
+<p>If you have tried, I have to admit that I lied, <code>sum</code> code actually doesn't work for that <code>n</code> or above, because we'll see a message like above.</p>
+<p>How so? What's that message about? Why it works for <code>sum(9000)</code> but not <code>sum(10000)</code>? What's special about <code>10000</code>? Wow, I know you might have lots of questions.</p>
+<p>Drilling down the message, it shows that our code calls <code>sum</code>, and then calls <code>sum</code> and then calls <code>sum</code> ... And then it's broken. So <code>9000</code> times doesn't break it, but <code>10000</code> times break it. Hmm?!</p>
+<p>Pretty much so. Only a small correction, it's less about this exact number <code>10000</code>, but more about something called the &quot;Maximum call stack size&quot;.</p>
 <h2>What is call stack?</h2>
-<p>The call stack, as the name refers to, is a container for calls, function calls. When you call a function, it'll create an item in the call list. Because the computer needs to keep track of how many unfinished calls currently.</p>
 <p class="caption"><img src="../images/stack.png" alt="Call stack"><br>
 Fig. Call stack</p>
-<p>A function serves two important purposes in the context of call stack, one is to allocate the memery space for this call, such as local variables including input arguments. Another one is to know where it returns to after finished. So for each newly added call, it takes several kilobtype of memory. You can think this as the overhead of calling a function. Basically if your code is made with no functions, the overhead cost is kept at minimum.</p>
-<p>Now it's making perfect sense that why we can get this error. If you keep adding calls that can't finish before issuing more calls, eventually it'll exceed some memory storage limit. Because otherwise it'll crash your computer, remember the blue screen in the old days. We don't want to get that. Instead, the system just tell us we reach the limit.</p>
-<p>There's some ambiguity about the &quot;call stack size&quot;. Most of time it actually doesn't mean the total number of active calls. Since each call's size isn't same, so the most optimal way to define the stack size is the total memory consumption so far for all the active calls. Once the storage limit for call stack is reached, the error is issued.</p>
-<p>One thing for sure is that, 99% of time when you get this error, it's due to a coding bug. It's really hard to write a code that generates that many of unfinished calls. Two conditions here: one, lots of calls, like thousands of calls; two, all the calls are not finished. Thus almost the only way to meet these two conditions is, we accidently call a function inside itself, like a recursion.</p>
-<p>If it is a bug, we can fix it. But in our recursion code used in the previous chapter, our intention is the recursion. Using <code>sum</code> as an example, we want to be able to sum from <code>0</code> to <code>n</code>, where <code>n</code> can any reasonable integer <code>1,10,100,1000,10000,100000</code> number. However, due to the call stack limit, the maximum number we can go is limited. Depending your language, your machine or even your version number of the compiler, it can vary. On my laptop with <code>node</code>, it's around <code>10000</code>.</p>
-<pre><code>&gt; sum(10000)
-Maximum call stack size exceeded VM327:2
-</code></pre>
-<p>So when you increase <code>n</code> and test results, suddenly you'll hit the above error. What's the difference between <code>9999</code> and <code>10000</code>, not much in your code. It's still the same code. Except we can't add more calls.</p>
+<p>The call stack is a container for function calls. When a function is called, it'll be added to this list. This is for the computer to keep track of how many calls currently are running.</p>
+<p>When a function is invoked, the call stack needs to allocate memory for the function, such as storing the function's local variables. The call stack also need to remember where the function returns to after it finishes. Thus you can see there's an overhead of running a function inside computer.</p>
+<p>Functions call and return. The call stack runs behind the scene smoothly and transparently. However, in one extreme edge case, or you can say a buggy case, if functions are called in a faster rate than finishing rate, the computer starts to allocate more and more memory, until the point it can't allocate anymore. This is when we hit so called &quot;Maximum call stack size&quot;.</p>
+<p>Now it's making perfect sense that why we can get this error. In a recursion setup, our scheme is about calling a call by itself constantly. We keep adding calls that can't finish before issuing more calls, it's matter of time we'll exceed the memory limit. Therefore, all recursion has a possibility to hit this limit.</p>
+<p>Back to our <code>sum</code> case, it just happens that when the active function instances count approaches <code>10000</code>, it exceeds the max memory that the call stack can allocate.</p>
 <p>Bummer!</p>
 <p>In order to run code with more recursion level, we need to find a way to walk around this problem. There are couple of options.</p>
 <h2>Live with it</h2>
