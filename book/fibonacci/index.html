@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
+    <meta name="author" content="Fang Jin">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bundle.css">
+    <title>Fibonacci</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/book/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/book/sum-numbers/">1. Sum</a>
+        </li><li>
+          <a href="/book/call-stack/">2. Call stack</a>
+        </li><li>
+          <a href="/book/factorial/">3. Factorial</a>
+        </li><li>
+          <a href="/book/fibonacci/">4. Fibonacci</a>
+        </li><li>
+          <a href="/book/climb-stairs/">5. Climbing stairs</a>
+        </li><li>
+          <a href="/book/bucket-fill/">6. Flood fill</a>
+        </li><li>
+          <a href="/book/permutation/">7. Permutation</a>
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">4</p>
+<h1>Fibonacci</h1>
+<blockquote>
+<p>Recursion is hard, I'd rather use the easy way.</p>
+</blockquote>
+<p>If you have read this far, you might have noticed we wrote short codes for <code>sum</code> and <code>factorial</code>: <code>sum</code> has two lines, same as <code>factorial</code>. So the complexity of recursion is not the number of lines, on the contrary, recursion produces less code. This is the fact.</p>
+<p>The pattern of reasoning with recursion is that it keeps asking you to find help so that you can achieve your goals quicker, easier with less effort. It actually tries, at least from its perspective, want you to take shortcut. Our job is to find that shortcut following the flow of reasoning.</p>
+<p>This is what we refer as the natural thinking in this book. To reinforce this idea, we'll continue our journey, but gradually apply it to more complex problems, since I think this is where recursion really stands out. To warm up, fibonacci numbers is what we'll do in this chapter.</p>
+<h2>Fibonacci</h2>
+<p>Write an algorithm to output the fibonacci sequence, 1 1 2 3 5 8 13 …. To come up <code>n</code>th number we add the previous two numbers together.</p>
+<p>The nice thing about the fibonacci sequence is that the recursion is mentioned in the problem description.</p>
+<pre><code>fib(0) -&gt; 0
+fib(1) -&gt; 1
+fib(n) -&gt; fib(n-1) + fib(n-2)
+</code></pre>
+<p>This saves us some time to come up our plan. Let's go straight to the code.</p>
+<pre><code>function fib(n) {
+  if (n == 0) return 0
+  if (n == 1) return 1
+  return fib(n-1) + fib(n - 2)
+}
+</code></pre>
+<p>I'm proud of you!</p>
+<p>The implementation is super clean. However this problem is a bit more complex. Why? Because inside the function, it calls itself twice!</p>
+<p>What's the matter? Twice vs once vs a dozen times? What is the difference?</p>
+<h2>Power of two</h2>
+<p>Since we have the recursion defined as well as the code, let's talk about the running time.</p>
+<p class="caption"><img src="../images/crossroad.png" alt="Running time for more terms"><br>
+Fig. crossroad with two branches</p>
+<p>Say in each function instance, we call another function instance. Taking the above picture with crossroads as an analogy, when we arrive at the main trunk of road, we pick one of the two branches. When we arrive at the next crossroad, we pick one of the two branches again. Our job is to go through all branches in the end!</p>
+<p>I could show you the full picture of the recursion pathway to show you how many branches we can get. But we are using a new way looking at the recursion, let's avoid that. Instead, let's focus on the function body with a bit more patience and imagination.</p>
+<pre><code>      start
+       ---
+        n
+    n-1   n-2
+     .     .
+     .     .
+     .     .
+     2     2
+    1 0   1 0
+    ---   ---
+     boundary
+</code></pre>
+<p>We start from the function instance <code>n</code>, and it calls <code>n-1</code>.</p>
+<p>The <code>n-1</code> branch will go through the path way till it gets to the <code>2</code> where it calls <code>1</code> and <code>0</code>. It can't go further thus it can only go back. If it were <code>sum</code> or <code>factorial</code>, where we only have one branch, that will be the whole process.</p>
+<p>Because <code>fibonacci</code> calls the function instance twice, the second branch forms at <code>n-2</code>, and then it goes further similar to the previous branch until it gets to <code>2</code> where it calls <code>1</code> and <code>0</code>. Thus it goes back, this concludes the whole process.</p>
+<p>What's the running time? <code>n</code>? Definitely not! <code>2n</code>?</p>
+<p>No.</p>
+<p>Say the unit time spent on each function instance is <code>1</code>. The first crossroad takes us <code>2</code> units. What about <code>n-1</code>? How do we know how long it takes to go around? Another <code>2</code> unit. Therefore for each crossroad, we'll have two choices. How many choices do we have in total? <code>2</code> times <code>2</code>.</p>
+<p>I don't want to bore you with the math, but I think we are quite close to reach our answer. <code>2x2x...</code>, how many times do we have to do this times-two operation? <code>n</code> times!</p>
+<p>Yes, the total running time is <code>O(2^n)</code>, the power of two`. You probably are familiar with it, since this is basically the binary number calculation. Let's list a few numbers to get some idea.</p>
+<pre><code>n 2^n
+1 2
+2 4
+3 8
+4 16
+5 32
+6 64
+7 128
+8 256
+9 516
+10 1024
+11 2048
+12 4096
+13 8192
+14 16384
+15 32768
+16 65536
+17 131072
+18 262144
+19 524288
+20 1048576
+</code></pre>
+<p>It grows pretty quickly when increasing <code>n</code>, maybe not as fast as <code>n!</code>, but it's not slow for sure. So algorithm with this type of order is referred as expensive algorithm. It exceeds <code>10000</code> when <code>n</code> crosses <code>13</code>.</p>
+<h2>Remember the visited instance</h2>
+<p>Let's run the code.</p>
+<pre><code>&gt; fibonacci(1)
+1
+
+&gt; fibonacci(10)
+55
+
+&gt; fibonacci(100)
+??
+</code></pre>
+<p>What is <code>fibonacci(100)</code>? Well, it takes my computer forever to run the code. Actually your computer won't be able to give you the answer. Why?</p>
+<p>It's the power of 2.</p>
+<pre><code>1,267,650,600,228,229,401,496,703,205,376
+</code></pre>
+<p>At <code>100</code>, the number of instances that we need to create is the above number. It's too much for anything.</p>
+<p>So do we just give up? Luckily there's an optimization that can be applied to our code, making it run faster. It's all based on one observation.</p>
+<pre><code>      start
+       ---
+        n
+    n-1   n-2 |
+     .     .  |
+     .     .  | boundary
+     .     .  |
+    ---   ---
+     boundary
+</code></pre>
+<p>Let's go back to our instances outline. To find the answer of <code>n</code>, we need answer for <code>n-1</code> and <code>n-2</code>. We choose to find out the answer for <code>n-1</code> first and when it's back we should know the answer.</p>
+<p>When we are back and hop on to find out the answer for <code>n-2</code> this time, something interesting happened.</p>
+<p>The reason why we reach the answer of <code>n-1</code> is because we already know <code>n-2</code> and <code>n-3</code>. What? So we already know <code>n-2</code>?</p>
+<p>Well, yes, but we didn't keep it, we probably threw it away on our way back. But what if we keep it with us? Then we never need to visit the other branch again, because we have already visited them in the past.</p>
+<p>In that case, our problem gets simplified.</p>
+<pre><code>fib(n) = fib(n-1) + M
+</code></pre>
+<p>Since <code>fib(n-2)</code> is known, it's no more than a number. What does the above remind you? Do we use this formula in <code>sum</code>?</p>
+<pre><code>sum(n) = sum(n-1) + n
+</code></pre>
+<p>Does that mean our running time becomes <code>O(n)</code>? Yes, you are right.</p>
+<p>Let's adjust our algorithm a bit to accommodate the above idea of remembering the calculated answers.</p>
+<pre><code>let m = { 0: 0, 1: 1 }
+
+function fib(n) {
+  if (n in m) return m[n]
+
+  m[n] = fib(n-1) + fib(n - 2)
+  return m[n]
+}
+</code></pre>
+<p>In order to do that, we used a data structure called dictionary where we can have one-to-one mapping between a key and a value. In our case, the key is the name of the instance that we have visited, and value is its result returned from the call. Cool! Since at the beginning we have already known two results for <code>0</code> and <code>1</code>, we can even store these two before hand.</p>
+<p>During each call to <code>fib</code>, the first thing we do is to check whether the name is in the dictionary, if it's there, we return the value right away. If it's not there, we then go to the regular recursion. Before we return the result, we store it in the dictionary so next time when we need it, we can pull it out of our hat. That's it.</p>
+<p>This technique is called memorization, and people often call it caching as well. In this case, it reduces the running time from O(2^n) to O(n), thus making larger number possible. Let's try it with <code>100</code> this time.</p>
+<pre><code>&gt; fib(100)
+354224848179262000000
+
+&gt; fib(1000)
+4.346655768693743e+208
+</code></pre>
+<p>The difference this optimization makes is huge. Instead of looking at computation of order <code>O(2^100)</code>, we reduces to the order of <code>O(100)</code>.</p>
+<p>Memorization is quite powerful, in a way, it dynamically adds new boundaries to our problem. The more boundaries, the less travel distance it takes to reach to boundaries. Because the boundaries contain answers, that speeds up the calculation.</p>
+<blockquote>
+<p>In a way, memorization acts as a choice eliminator. If you have a good memory, you probably could try less, just because you remember you have done it.</p>
+</blockquote>
+<h2>Haskell version</h2>
+<p>Before we end this chapter, we'd like to present the haskell version.</p>
+<pre><code>fib 0 = 0
+fib 1 = 1
+fib n = fib (n-1) + fib (n-2)
+</code></pre>
+<p>The above code doesn't work for large <code>n</code> any more because of the same issue we mentioned earlier, so we need to add memorization to it.</p>
+<pre><code>fib :: Int -&gt; Integer
+fib = (map fib' [0 ..] !!)
+    where fib' 0 = 0
+          fib' 1 = 1
+          fib' n = fib (n-2) + fib (n-1)
+</code></pre>
+<p>The above code becomes a bit hard to understand. But at least we can still see the main body <code>fib'</code> that is implemented using the recursion. The part <code>map fib [0 ..] !!</code> is some magic that memorize all results with an array.</p>
+<p>Let’s run it.</p>
+<pre><code>fib 2
+&gt; 2
+
+fib 10
+&gt; 89
+
+fib 100
+&gt; 573147844013817084101
+</code></pre>
+<pre><code>fib 1000
+&gt; 70330367711422815821835254877183549
+7701812698363587327426049050871545371
+1819693357974224949456261173348775044
+9241765991088186363265450223647106012
+0533741212738673391111981393731255987
+67690091902245245323403501
+</code></pre>
+<pre><code>fib 10000
+&gt; 54438373113565281338734260993750380
+1353891845546959670262477158412085828
+6562234901708305154793896054117382267
+5978026317384359584751116241439174702
+6429591699255863341179060630480897935
+31476108466259072759367899150...total 209 digits
+</code></pre>
+<p>Yah, the 10000th fibonacci number has 209 digits, who knows.</p>
+<p>There's one thing that we notice Javascript version and Haskell version for <code>n=100</code> do not produce identical result though they are close.</p>
+<pre><code>354224848179262000000 Javascript
+354224848179261915075 Haskell
+</code></pre>
+<p>We have a guts feeling that Haskell is right, but what makes Javascript produce wrong result?</p>
+<p>Yes, because the number is too large, larger than the regular integer size. In that case to keep the effective digits, we need to switch to use big number.</p>
+<pre><code>let m = { 0: 0n, 1: 1n }
+
+function fib(n) {
+  if (n in m) return BigInt(m[n])
+
+  m[n] = fib(n-1) + fib(n - 2)
+  return BigInt(m[n])
+}
+
+fib(100)
+&gt; 354224848179261915075n
+</code></pre>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google">
+        Image by macrovector_official</a>
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async="">import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>

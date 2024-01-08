@@ -39,7 +39,7 @@
         </li><li>
           <a href="/book/factorial/">3. Factorial</a>
         </li><li>
-          <a href="/book/fib-sequence/">4. Fibonacci</a>
+          <a href="/book/fibonacci/">4. Fibonacci</a>
         </li><li>
           <a href="/book/climb-stairs/">5. Climbing stairs</a>
         </li><li>
@@ -53,10 +53,10 @@
 
     <main><p class="chapter-number">3</p>
 <h1>Factorial</h1>
-<p>In the previous chapter <code>sum</code>, we have defined what is a recursion, how to create a recursion with a recursive function, and a natural way to look at a recursion without going crazy. In this chapter, we are going to ask you to apply what we have learned and try to come up a recursion by yourself this time.</p>
-<p>The question we like to use is the factorial number.</p>
+<p>In the previous chapters, we have defined what is a recursion, how to create a recursion with a recursive function, and how to get around the issue when we have large recursion levels. In this chapter, we are going to ask you to apply what we have learned and try to come up a recursion by yourself this time.</p>
+<p>We are choosing another cliche problem, the factorial number.</p>
 <h2>Factorial</h2>
-<p>In mathematics, factorial <code>n! = 1 x 2 x 3 ... x n</code>. List a few of them.</p>
+<p>In mathematics, factorial <code>n! = 1x2x3 ... xn</code>. The following lists a few of them up to <code>20</code>.</p>
 <pre><code>n	n!
 0	1
 1	1
@@ -79,24 +79,26 @@
 18	6402373705728000
 19	121645100408832000
 20	2432902008176640000
-...
 </code></pre>
-<p>You can see factorial Factorial can increase really quick, and grows moe quickly than exponential growth.</p>
-<p>Ok, how can we calculate it with a recursion?</p>
-<p>What we learned from <code>sum</code> is that we can come up with the answer by asking whether there's something around that can help us reach the answer. For instance, say we want to calculate <code>factorial(n) = 1*2*3*...*n</code>, and if we have known <code>factorial(n-1)</code>, can that help us reach the answer?</p>
+<p>You can see from the list, the number grows pretty quickly. Ok, how can we calculate it, especially with a recursion?</p>
+<p>What we learned from <code>sum</code> is that we can come up with the answer by asking whether there's something that can help us reach the answer with less effort. For instance, say we want to calculate <code>factorial(n) = 1x2...xn</code>, and if we have known <code>factorial(n-1)</code>, can that help us save some effort?</p>
 <pre><code>factorial(n) = factorial(n-1) * n
 </code></pre>
-<p>Yes, because <code>factorial(n-1) = 1*2*3*...(n-1)</code>, thus if it's given, we can just multiply it by <code>n</code>.</p>
-<p>That's great. But we can't let the recursive function calling itself forever, there has to be one function instance that we enter stops this behavior. We have learned this is called boundary. At the boundary, we know the result of function instance before hand. So what is the boundary for <code>factorial</code>? How about <code>1</code>?</p>
+<p>Yes, because <code>factorial(n-1) = 1x2...x(n-1)</code>, thus if it's given, we can just multiply it by <code>n</code> then.</p>
+<p>That's great.</p>
+<p>How far can we go from calling <code>factorial</code> again and again? Not forever, there has to be one function instance that stops this behavior. We have learned this is called boundary. At the boundary, we know the result of function instance before hand.</p>
 <pre><code>factorial(1) = 1
 </code></pre>
-<p>Yes, we know <code>1! = 1</code>.</p>
-<p>Alright, now we should be able to write a code.</p>
+<p>Yes, we know <code>1! = 1</code>, we don't need to ask for <code>0!</code>.</p>
+<pre><code>factorial(1) = 1
+factorial(n) = factorial(n-1) * n
+</code></pre>
+<p>Putting both piece together, we should be able to write the code.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">factorial</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token function">factorial</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>That's it. Let's run it.</p>
+<p>Run it.</p>
 <pre><code>&gt; factorial(1)
 1
 
@@ -108,15 +110,24 @@
 
 &gt; factorial(4)
 24
+
+&gt; factorial(5)
+120
 </code></pre>
-<p>Not bad. I'm sure we have already noticed that the main difference between <code>sum</code> and <code>factorial</code> is the operation, instead of doing plus, we perform multiplication this time. The boundary is also slightly different due to nature of the operation. Instead of <code>sum(0)=0</code>, we have <code>factorial(1)=1</code> this time. Other than these two difference, the code should look quite similar.</p>
+<p>Feel happy?</p>
+<p>I'm sure we have already noticed that the factorial code is not too different from the sum code. They differs mostly in the operation, instead of doing plus, we perform multiplication this time. The boundary is also slightly different due to nature of the operation. Instead of <code>sum(0)=0</code>, we have <code>factorial(1)=1</code> this time.</p>
+<blockquote>
+<p>Practice is the king. No harm for writing the similar code ever and ever again, especially if you can write it faster each time.</p>
+</blockquote>
 <h2>Running time</h2>
-<p>Once we finish an algorithm, or sometimes even before you start to write an algorithm, you can do some analysis of the running time. The reason isn't to ask you to become a math expert; but to give you some idea and gain some confidence in how performant your algorithm can be.</p>
-<p>In order to analyze the recursion running time, we can start by counting how many function instances to call to reach the answer.</p>
+<p>Once we finish an algorithm, or sometimes even before you start to write an algorithm, you can do some analysis of the running time.</p>
+<p>This is not to ask you to become a math expert or anything; but to give yourself some idea and gain extra confidence in understanding how performant your algorithm is.</p>
+<p>In order to analyze the recursion's running time, we can count how many function instances gets created. Because the recursion algorithm is quite unique, as long as we know the count and unit time spent on each instance, we then can estimate the total running time by multiplying them together.</p>
+<p>We can figure this out by looking at the function body or function specification.</p>
 <pre><code>factorial(1) = 1
 factorial(n) = factorial(n-1) * n
 </code></pre>
-<p>If we kick off the first function instance <code>factorial(n)</code>, it calls <code>factorial(n-1)</code> and then <code>n-2</code>, ... until it reaches <code>1</code>. This can be illustrated below.</p>
+<p>If we kick off the first function instance <code>factorial(n)</code>, it calls <code>factorial(n-1)</code> and then <code>n-2</code>, ... until it reaches <code>1</code>. This process is illustrated below.</p>
 <pre><code>   v
    n
   n-1
@@ -129,9 +140,9 @@ factorial(n) = factorial(n-1) * n
   ---
 factorial
 </code></pre>
-<p>Bar <code>---</code> is used to indicate that it can't go any further beyond <code>1</code>. This visited sequence confirms that we will have <code>n</code> function instances visited, thus the running time is <code>O(n)</code>.</p>
+<p>Bar <code>---</code> is used to indicate that it can't go any further beyond <code>1</code>. The illustration shows us how each instance is created and the order of how each gets visited. With that, not too difficult we can figure out the total number of instance is <code>n</code>, assuming the unit time as <code>1</code>, the running time is <code>O(n)</code>.</p>
 <h2>Big number</h2>
-<p>If we check the running time chapter from chapter 1, we can see <code>O(n)</code> is pretty performant algorithm. Let's try some larger number.</p>
+<p>An algorithm with running time <code>O(n)</code> is in general performant algorithm. Let's try some larger number.</p>
 <pre><code>&gt; factorial(10)
 3628800
 
@@ -144,8 +155,8 @@ factorial
 &gt; factorial(22)
 1.1240007277776077e+21
 </code></pre>
-<p>Quickly our results for <code>factorial(n)</code> shoots pretty high when <code>n</code> increases above <code>10</code>. Moreover, we start to not be able to see all the digits, such as when <code>n=22</code>. How can we continue see all the effective digits?</p>
-<p>In Javascript, we need to go to use Big Number.</p>
+<p>Quickly our results for <code>factorial(n)</code> shoots pretty high when <code>n</code> increases above <code>10</code>. At <code>22</code>, we start to not be able to see all the effective digits, because our regular integer can't hold them all. You might wonder how can we work around the issue in case we need to study all the digits.</p>
+<p>In Javascript, we can go to use Big Number.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">factorial</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">BigInt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token function">factorial</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">BigInt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -160,7 +171,7 @@ factorial
 &gt; factorial(30)
 265252859812191058636308480000000n
 </code></pre>
-<p>This time, we can see the result shows all the digits. The <code>n</code> after the number indicates it's a BigInt. Since we can go to higher <code>n</code>, let's continue for larger <code>n</code>.</p>
+<p>This time, we can see the result shows all the digits. The <code>n</code> after the number indicates it's a BigInt. Since we can go to higher <code>n</code>, let's try larger ones.</p>
 <pre><code>&gt; factorial(100)
 93326215443944152681699238856266700490715968264381…
 827223758251185210916864000000000000000000000000n
@@ -172,8 +183,9 @@ factorial
 &gt; factorial(10000)
 Uncaught RangeError: Maximum call stack size exceeded
 </code></pre>
-<p>Ok, when we goes to around <code>10000</code>, we run into the call stack overflow issue. To overcome it, from the previous chapter, we learned we can either convert the code into iterative setup, or turn to Haskell.</p>
+<p>Ok, when we goes to around <code>10000</code>, we reach the call stack size. To overcome it, learned from the previous chapter, we we can either convert the code into iterative setup, or turn to Haskell.</p>
 <h2>Call stack size</h2>
+<p>Let's try the iterative conversion first.</p>
 <pre><code>function factorial(n)
 {
   let res = 1n;
@@ -183,12 +195,12 @@ Uncaught RangeError: Maximum call stack size exceeded
   return res;
 }
 </code></pre>
-<p>Now we can do larger <code>n</code>.</p>
+<p>With that, we can do larger <code>n</code>.</p>
 <pre><code>&gt; factorial(10000)
 28462596809170545189064132121198688901480514017027…
 000000000000000000000000000000000000000000000000n
 </code></pre>
-<p>Haskell version</p>
+<p>The Haskell version looks pretty similar as well.</p>
 <pre class="language-hs"><code class="language-hs"><span class="token hvariable">fact</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token hvariable">fact</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token hvariable">fact</span><span class="token punctuation">(</span><span class="token hvariable">n</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token hvariable">n</span></code></pre>
 <p>Run it.</p>
@@ -196,6 +208,7 @@ Uncaught RangeError: Maximum call stack size exceeded
 28462596809170545189064132121198688901480514017027…
 000000000000000000000000000000000000000000000000n
 </code></pre>
+<p>We can compare both results from Javascript and Haskell digit by digit to confirm we are getting the correct answer. Bingo!</p>
 </main>
     <footer>
   <div>

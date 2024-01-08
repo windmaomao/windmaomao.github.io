@@ -12,6 +12,7 @@ body {
   --text-color-low-contrast: #b2bcc1;
   --neutral-color: #e0e5e7;
   --neutral-color-weak: #eff2f3;
+  --color-primary: #809158;
 }
 
 summary {
@@ -87,6 +88,9 @@ p.paragraph::first-letter {
   margin-right: 0.5rem;
   font-family: Georgia, serif;
 }
+p code {
+  font-family: "Roboto Mono", mono;
+}
 
 blockquote {
   border-style: none;
@@ -114,7 +118,6 @@ pre code {
 
 code {
   font-family: "Roboto Mono", mono;
-  padding-left: 2px;
 }
 
 img {
@@ -244,8 +247,9 @@ li {
 
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
+  font-family: Rubik, sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
-  font-weight: 500;
 }
 
 .logo {

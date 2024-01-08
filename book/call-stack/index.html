@@ -39,7 +39,7 @@
         </li><li>
           <a href="/book/factorial/">3. Factorial</a>
         </li><li>
-          <a href="/book/fib-sequence/">4. Fibonacci</a>
+          <a href="/book/fibonacci/">4. Fibonacci</a>
         </li><li>
           <a href="/book/climb-stairs/">5. Climbing stairs</a>
         </li><li>
@@ -53,8 +53,8 @@
 
     <main><p class="chapter-number">2</p>
 <h1>Call stack</h1>
-<p>In the previous, we have come up a recursive algorithm for <code>sum</code>. I hope you don't get annoyed by using an recursion for a basic problem. But I'll assure you <code>sum</code> is such a basic and fundamental problem in studying recursion. Before we move on to solve other problems, this chapter will turn to talk about a bug in <code>sum</code>.</p>
-<p>I'm sure you have tried to run <code>sum</code> couple of times with different <code>n</code>. Have you tried <code>sum(10000)</code>?</p>
+<p>In the previous, we have come up a recursive algorithm for adding numbers. I hope you don't feel redundant to apply recursion to a problem this trivial. But I'll assure you <code>sum</code> is such a fundamental problem in the course of studying recursion that it can only help you understand the recursion better. Before we move on to solve other problems, this chapter will turn to a topic about a potential bug in our code.</p>
+<p>I'm sure you have tried to run <code>sum</code> for different <code>n</code>. Have you tried <code>sum(10000)</code>?</p>
 <pre><code>Maximum call stack size exceeded VM327:2
  sum @ VM327:2
  sum @ VM327:3
@@ -64,32 +64,48 @@
  .
  .
 </code></pre>
-<p>If you have tried, I have to admit that I lied, <code>sum</code> code actually doesn't work for that <code>n</code> or above, because we'll see a message like above.</p>
-<p>How so? What's that message about? Why it works for <code>sum(9000)</code> but not <code>sum(10000)</code>? What's special about <code>10000</code>? Wow, I know you might have lots of questions.</p>
-<p>Drilling down the message, it shows that our code calls <code>sum</code>, and then calls <code>sum</code> and then calls <code>sum</code> ... And then it's broken. So <code>9000</code> times doesn't break it, but <code>10000</code> times break it. Hmm?!</p>
-<p>Pretty much so. Only a small correction, it's less about this exact number <code>10000</code>, but more about something called the &quot;Maximum call stack size&quot;.</p>
+<p>If you have tried, I have to admit that I lied, <code>sum</code> code actually doesn't work for that <code>n</code> or above, because most likely you ended up a message like above.</p>
+<p>How so? What's the message about? Why it works for <code>sum(9000)</code> but not <code>sum(10000)</code>? What's so special about <code>10000</code>? Lots of questions.</p>
+<p>Drilling down the message, it shows that our code calls <code>sum</code>, and then calls <code>sum</code> and then calls <code>sum</code> ... And then, there's no then. So <code>9000</code> times didn't break it, but <code>10000</code> times broke it. Hmm?!</p>
+<p>Pretty much that is what happened. Only a minor detail, it's less about the exact number <code>10000</code>, but more about something called the &quot;Maximum call stack size&quot; from your running environment.</p>
+<blockquote>
+<p>Everyone's running environment could be different. We can differ by operation systems, nodejs runtime versions and etc.</p>
+</blockquote>
 <h2>What is call stack?</h2>
 <p class="caption"><img src="../images/stack.png" alt="Call stack"><br>
 Fig. Call stack</p>
-<p>The call stack is a container for function calls. When a function is called, it'll be added to this list. This is for the computer to keep track of how many calls currently are running.</p>
-<p>When a function is invoked, the call stack needs to allocate memory for the function, such as storing the function's local variables. The call stack also need to remember where the function returns to after it finishes. Thus you can see there's an overhead of running a function inside computer.</p>
-<p>Functions call and return. The call stack runs behind the scene smoothly and transparently. However, in one extreme edge case, or you can say a buggy case, if functions are called in a faster rate than finishing rate, the computer starts to allocate more and more memory, until the point it can't allocate anymore. This is when we hit so called &quot;Maximum call stack size&quot;.</p>
-<p>Now it's making perfect sense that why we can get this error. In a recursion setup, our scheme is about calling a call by itself constantly. We keep adding calls that can't finish before issuing more calls, it's matter of time we'll exceed the memory limit. Therefore, all recursion has a possibility to hit this limit.</p>
-<p>Back to our <code>sum</code> case, it just happens that when the active function instances count approaches <code>10000</code>, it exceeds the max memory that the call stack can allocate.</p>
+<p>The call stack is a container for function calls. When a function is called, it'll be added to this list. This is for the computer to keep track of how many calls currently are running in your language environment.</p>
+<p>When a function is invoked, the call stack needs to allocate memory for the function instance, to store local variables as well as to remember where it returns to when it finishes. Thus you can see there's an overhead of calling a function.</p>
+<p>Functions call and return. Transparent to us, the call stack runs behind the scene most of time. But sometimes when you write a bug, such as calling functions in a faster rate than finishing them, the computer has to allocate more and more memory, until the point it can't allocate anymore. This is when the &quot;Maximum call stack size&quot; is reached. The size here refers to the memory size instead of instances count.</p>
+<p>Back to our <code>sum</code> case, it calls <code>sum(n)</code> first, and then <code>n-1</code> till <code>0</code>, each time when it calls, it does not get chance to close the previous call because the previous call is waiting the new call to finish first. Thus the active function instances keep incrementing until it reaches somewhere around <code>10000</code>, it exceeds the max memory that the call stack can allocate.</p>
 <p>Bummer!</p>
-<p>In order to run code with more recursion level, we need to find a way to walk around this problem. There are couple of options.</p>
+<p>So how do we get around of this issue so that we can run <code>sum(10000)</code>? There are couple of options.</p>
 <h2>Live with it</h2>
-<p>The option sounds not an option.</p>
-<p>10000 calls is a lot of active function calls. Luckily, lots of problems can be solved within this limit.</p>
-<p>If you really really want to make more calls, there's still ways. Your language running environment provides a way for us to change this limit temporarily. For JavaScript, we can play with the stack-size setting.</p>
+<p>The option sounds like not an option.</p>
+<blockquote>
+<p>Most of us live with the call stack peacefully.</p>
+</blockquote>
+<p>10000 calls is a lot of calls. This number doesn't mean we only can call <code>10000</code> functions in our program. This number stands for that, you can't have <code>10000</code> active functions running at the same time. For instance, you can call some functions, finish some functions and then call another bunch of functions. This turns out to be the most calling pattern.</p>
+<p>If you really really want to make more calls, there's still ways. Your language sometimes open a way for us to change this limit temporarily. For JavaScript, we can play with the stack-size setting.</p>
+<p>Save <code>sum</code> function into <code>sum.js</code> file.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">sum</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> n<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Now we can run it in the terminal.</p>
 <pre><code>&gt; node --stack-size=900 sum.js
-Maximum stack size is 12763 calls
+Maximum call stack size exceeded
+
+&gt; node --stack-size=1000 sum.js
+50005000
 </code></pre>
-<p>It’s not too bad temporarily, but it can be inconvenient. Also the maximum call stack size is there for a reason; it tries to protect you from the stack overflow.</p>
-<p>Other than living with it, we have other ways addressing this issue.</p>
+<p>Using the <code>stack-size</code> flag, we can get it working. It's not convenient, not to mention it takes some trial-and-error to find out the right stack size for your problem.</p>
+<p>Luckily, other than playing with the environnement setting, we have other ways addressing this issue.</p>
 <h2>Iterative setup</h2>
-<p>Luckily there’s different ways of implementing the recursion. We have been using recursive function calls. But we can also implement the recursion with the iterative setup. Or sometimes when we finish a recursive, we convert it using an iterative setup.</p>
-<p>For example, we could write our <code>sum</code> algorithm in an iterative setup.</p>
+<p>We have been using recursive function calls. But we can also implement the recursion with the iterative setup. Or sometimes when we finish a recursive, we convert it by eliminating recursive calls.</p>
+<p>For example, we could write our <code>sum</code> algorithm in an iterative way.</p>
 <pre><code>function sum(n)
 {
   let res = 0;
@@ -99,52 +115,61 @@ Maximum stack size is 12763 calls
   return res;
 }
 </code></pre>
-<p>I know what you’re gonna say. It’s basically the classical <code>for</code> approach. Well, I admit it, but for this simple problem, it just happens that the converted version is identical to the iterative version. I can call this a coincidence, however it probably isn't an coincidence that both setups point to the same version. In the end, they suppose to do the same thing.</p>
-<p>After the conversion, maybe all recursion carries a bit assemblence to the iterative approach. But the matter of fact is that, the recursion nature is kept during the conversion, whereas the iterative approach has no recursion built in mind. And interestingly enough, not all recursion can be converted very easily. Some are easy, and some can be really tricky to write. Therefore I assure you, the iterative approach and the iterative setup for the recursion are two different things.</p>
+<p>I know what you’re gonna say. It’s basically the classical <code>for</code> approach. Well, I admit it, but for this simple problem, it just happens that the converted version is identical to the iterative version. This isn't an coincidence that they look the same. For this problem, there's only one way to go through the array iteratively.</p>
+<p>Not all recursion can be converted this easy. Some are easy, and some can be really tricky to write. And I can assure you that the converted version can look a bit different to the iterative style. Because the conversion also try hard to keep the recursive signature of the problem. We only want to get around the stack limit issue, but we still want to use the recursion approach.</p>
 <p>With the converted version, we can now call it with larger number without worrying about running into error.</p>
 <pre><code>&gt; sum(10000)
 50005000
+
 &gt; sum(100000)
 5000050000
+
 &gt; sum(1000000)
 500000500000
+
 &gt; sum(10000000)
 50000005000000
+
 &gt; sum(100000000)
 5000000050000000
+
 &gt; sum(1000000000)
 50000000006710900
 </code></pre>
 <h2>Haskell language</h2>
-<p>In terms of running recursion without hitting the limit, here comes the third option.</p>
-<p>Recursion normally isn’t a language feature, it’s more like a by-product of a language. It doesn't get enough attention by the main stream languages usually. However, there exits language that does build on top of the recursion, such as Haskell - an advanced, purely functional programming language.</p>
-<p>It’s hard to miss this language if you are fan of recursion, because Haskell fully appreciates the power of recursion at its core. Using it to write recursion is like writing down our thoughts. Say we write the sum in recursion in Haskell.</p>
+<p>There're other options. If your language doesn't work, maybe try other languages.</p>
+<p>Recursion normally isn’t a language feature, it’s more like a by-product of a language. It doesn't get enough attention by the main stream languages usually. However, there exits language that does build on top of the recursion mindset, such as Haskell.</p>
+<blockquote>
+<p>Haskell is an advanced, purely functional programming language.</p>
+</blockquote>
+<p>It’s hard to miss this language if you are fan of recursion, because Haskell fully appreciates the power of recursion at its core. Using it to write recursion is like writing down our thoughts. Say we write the <code>sum</code> in recursion in Haskell.</p>
 <pre><code>sum 0 = 0
 sum n = sum (n-1) + n
 </code></pre>
-<p>The syntax of Haskell function is slightly different, it calls the function without the bracket, instead it uses a space to separate the function name and its argument. Our Haskell version for sum has two lines, and looks quite similar to our documentation of the recursion :) Yeah, that's the code.</p>
+<p>The syntax of Haskell function can be strange to some of us initially since its argument is not wrapped within a bracket. Instead it uses a space to separate the function name and its argument.</p>
+<p>Our Haskell version has two lines, and looks quite similar to the specification than the code. Yeah, but that's the code.</p>
 <p>Run it and let's see the result.</p>
 <pre><code>&gt; sum 10000
 50005000
+
 &gt; sum 100000
 5000050000
+
 &gt; sum 1000000
 500000500000
+
 &gt; sum 10000000
 50000005000000
+
 &gt; sum 100000000
 5000000050000000
+
 &gt; sum 1000000000
 500000000500000000
 </code></pre>
-<p>The Haskell version works with large recursion levels out of the box. And it takes only a few seconds to run. This shows the power of Haskell as well as its dedication to the recursion.</p>
-<blockquote>
-<p>Have you noticed the sum carries a pattern by magnitude of 10? like 5050, 500500, 50005000, interesting.</p>
-</blockquote>
-<p>You might be like, if Haskell is that easy, why don’t we just start with Haskell, well, as I mentioned, writing in Haskell is like writing your thoughts, and sometimes it’s difficult to write down your thoughts, it takes some skill and practice. We are not teaching this skill in this book, instead we’ll use Haskell version as a reference to confirm our design and check results, more to use Haskell as a helper.</p>
-<blockquote>
-<p>Haskell also comes with a call stack limit. The reason why we don't hit it in this case is mainly because Haskell does a tail call optimiasation.</p>
-</blockquote>
+<p>The Haskell version works with large recursion levels out of the box. It only has a max call stack size, but its size is set to be relatively high by default.</p>
+<p>You might be like, if Haskell is that easy, why don’t we just start with Haskell, well, as I mentioned, writing in Haskell is like writing your thoughts, and sometimes it’s difficult to write down your thoughts, it takes some skill and practice to get there.</p>
+<p>This book isn't about teaching you how to write down your thought, maybe it is, but we’ll focus on the recursion, so we use Haskell version as a reference to confirm our design and check results, more to use Haskell as a helper. It's good to be sure we are right!</p>
 </main>
     <footer>
   <div>
