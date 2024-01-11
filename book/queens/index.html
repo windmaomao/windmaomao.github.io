@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
+    <meta name="author" content="Fang Jin">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bundle.css">
+    <title>Queens</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/book/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/book/sum/">1. Sum</a>
+        </li><li>
+          <a href="/book/callstack/">2. Call stack</a>
+        </li><li>
+          <a href="/book/factorial/">3. Factorial</a>
+        </li><li>
+          <a href="/book/fibonacci/">4. Fibonacci</a>
+        </li><li>
+          <a href="/book/stairs/">5. Stairs</a>
+        </li><li>
+          <a href="/book/fill/">6. Fill</a>
+        </li><li>
+          <a href="/book/permute/">7. Permute</a>
+        </li><li>
+          <a href="/book/queens/">8. Queens</a>
+        </li><li>
+          <a href="/book/path/">9. Path I</a>
+        </li><li>
+          <a href="/book/path2/">10. Path II</a>
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">8</p>
+<h1>Queens</h1>
+<p>In the previous chapter, we have walked you through how to come up a permutation without using loop, moreover we can get all combinations in any dimension <code>n</code>. Though termed as brutal force nature, it can be effective in solving problems in the most straightforward way.</p>
+<p>In this chapter, we will attempt a famous problem called eight queens puzzle.</p>
+<h2>Eight queens</h2>
+<pre><code>...Q....
+......Q.
+..Q.....
+.......Q
+.Q......
+....Q...
+Q.......
+.....Q..
+</code></pre>
+<p>Find all configurations that make eight queens not attach each other on a 8x8 board.</p>
+<p>If you have played chess you would know Queen is the most powerful piece on the board. At each round, she can move horizontally, vertically and diagonally at her will. The question gives us eight queens on a 8x8 board and asks us how to find all positions so that they don't attack each other. And then count how many of ways we can find.</p>
+<p>How do we start?</p>
+<p>I guess follow our heart, pick one Q first.</p>
+<pre><code>...Q....
+</code></pre>
+<p>And then how to select the second Q?</p>
+<pre><code>...Q....
+..xxx.Q.
+</code></pre>
+<p>Since we are only placing one Queen a row, we just need to worry about the horizontal and diagonal direction. All places marked by <code>x</code> is not good candidates. So we pick one out of five good ones.</p>
+<p>Let's continue by picking the third Q.</p>
+<pre><code>...Q....
+......Q.
+.xQx.xxx
+</code></pre>
+<p>This time, we have two queens on the top, so we need to be careful. We have to go through all possible moves by each of them and mark all positions that are not good. There're only three good ones this time.</p>
+<p>Let's move on to next queen.</p>
+<pre><code>...Q....
+......Q.
+..Q.....
+xxxxx.xQ
+</code></pre>
+<p>This time, there're only two good positions we can choose. Let's stop here, I'm sure you get how to play this now.</p>
+<p>How do we write a problem to solve it? Write eight loops to place eight queens and then check if that configuration is valid? Definitely one way.</p>
+<p>Wait a second, if we do that, have we just gone through how to write any number of loops in the previous chapter? Yes we did. And that code is <code>permute</code>.</p>
+<p>On the surface, there doesn't seem <code>queen</code> relates to <code>permute</code>. But indeed, if we choose to use backtracking method, the idea is quite similar.</p>
+<p>Say we run <code>permute(8)</code>, what do we get?</p>
+<pre><code>[0,1,2,3,4,5,6,7]
+[0,1,2,3,4,5,7,6]
+...
+</code></pre>
+<p>I know <code>permute(8)</code> should have <code>8! = 40320</code> arrangements, let me just list the first two as a example.</p>
+<p>The first line <code>[0,1,2,3,4,5,6,7]</code> tells us we can place the first row Q in the column <code>0</code>; and second in the column <code>1</code>, ... like below.</p>
+<pre><code>Q.......
+.Q......
+..Q.....
+...Q....
+....Q...
+.....Q..
+......Q.
+.......Q
+</code></pre>
+<p>Hey, this is not gonna work for eight queens. Yes yes. But isn't this a good starting point? Because now we can just check whether they can attack each other diagonally.</p>
+<p>Pick two queens and find whether they are in the diagonal position. Say we can code this as efficient as possible in the order of <code>O(n)</code> (n=8). The running order of our <code>queen</code> would be <code>O(nxn!) = 322560</code>. Doable for sure.</p>
+<h2>Eliminate choices early</h2>
+<p>It's a good start. But we're not following our intuition closely.</p>
+<pre><code>...Q....
+..xxx.Q.
+</code></pre>
+<p>When we choose the second queen, we end up with three dead spot (boundary). We are left with <code>5</code> candidates. If this were in the permutation problem, we should've have <code>7</code> candidates.</p>
+<pre><code>...Q....
+......Q.
+..Q.....
+.......Q
+.Q......
+....Q...
+Q.......
+xxxxxQxx
+</code></pre>
+<p>This is only the second step. If we can identify the bad moves earlier, we can reduce the function instances.</p>
+<pre><code>  8   8
+  7   5
+  6   3
+  5   2
+  4   2
+  3   1
+  2   1
+  1   1
+</code></pre>
+<p>We'll start from the permutation <code>select</code> function.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">queen</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token parameter">indexes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span>length <span class="token operator">==</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>indexes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">isDiagonal</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> indexes<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> k <span class="token operator">=</span> indexes<span class="token punctuation">.</span>length <span class="token operator">-</span> j<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> indexes<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> k<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> indexes<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-</span> k<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isDiagonal</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+      <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>indexes<span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre><code>n	n! reduced(n!)
+0	1 1
+1	1 2
+2	2 3
+3	6 6
+4	24 17
+5	120 54
+6	720 153
+7	5040 552
+8	40320 2057
+9	362880 8394
+10 3628800 35539
+11 39916800 166926
+12 479001600 856189
+13 6227020800 4674890
+14 87178291200 27358553
+15 1307674368000 171129072
+</code></pre>
+<p>always like <code>O((n-3)!)</code> to me.</p>
+<pre><code>n ways
+1 1
+2 0
+3 0
+4 2
+5 10
+6 4
+7 40
+8 92
+9 352
+10 724
+11 2680
+12 14200
+13 73712
+14 365596
+15 2279184
+</code></pre>
+<h2>Haskell</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token import-statement"><span class="token keyword">import</span> Control<span class="token punctuation">.</span>Monad</span>
+
+<span class="token hvariable">queens</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token hvariable">foldM</span> <span class="token punctuation">(</span><span class="token operator">\</span><span class="token hvariable">y</span> <span class="token hvariable">_</span> <span class="token operator">-></span> <span class="token punctuation">[</span> <span class="token hvariable">x</span> <span class="token operator">:</span> <span class="token hvariable">y</span> <span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token hvariable">n</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token hvariable">y</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token hvariable">n</span><span class="token punctuation">]</span>
+  <span class="token keyword">where</span>
+    <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token hvariable">_</span> <span class="token operator">=</span> <span class="token constant">True</span>
+    <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token punctuation">(</span><span class="token hvariable">c</span><span class="token operator">:</span><span class="token hvariable">y</span><span class="token punctuation">)</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token builtin">and</span> <span class="token punctuation">[</span> <span class="token hvariable">x</span> <span class="token operator">/=</span> <span class="token hvariable">c</span> <span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">/=</span> <span class="token hvariable">c</span> <span class="token operator">+</span> <span class="token hvariable">n</span> <span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">/=</span> <span class="token hvariable">c</span> <span class="token operator">-</span> <span class="token hvariable">n</span> <span class="token punctuation">,</span> <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token hvariable">y</span> <span class="token punctuation">(</span><span class="token hvariable">n</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google">
+        Image by macrovector_official</a>
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async="">import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>

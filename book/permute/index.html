@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
+    <meta name="author" content="Fang Jin">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bundle.css">
+    <title>Permute</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/book/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/book/sum/">1. Sum</a>
+        </li><li>
+          <a href="/book/callstack/">2. Call stack</a>
+        </li><li>
+          <a href="/book/factorial/">3. Factorial</a>
+        </li><li>
+          <a href="/book/fibonacci/">4. Fibonacci</a>
+        </li><li>
+          <a href="/book/stairs/">5. Stairs</a>
+        </li><li>
+          <a href="/book/fill/">6. Fill</a>
+        </li><li>
+          <a href="/book/permute/">7. Permute</a>
+        </li><li>
+          <a href="/book/queens/">8. Queens</a>
+        </li><li>
+          <a href="/book/path/">9. Path I</a>
+        </li><li>
+          <a href="/book/path2/">10. Path II</a>
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">7</p>
+<h1>Permute</h1>
+<p>In previous <code>fill</code> problem, we have learned what is backtracking, such a powerful methodology with recursion set at its core. While the fill reaches a location, it gets filled before asking to look around for next spot. In the end, we get to fill all the spots that we can access to.</p>
+<p>Our problems which can be solved by similar approach, more often requires more efforts in building the partial solution at each function instance. And then we need to carry the partial solution to the next function instance to continue the work. In this chapter, we'll show you this more general backtracking scheme. The problem we choose is the permutation.</p>
+<h2>Permutation</h2>
+<p>Given any array <code>arr</code>, such as <code>[4,6,9]</code>, write its all arrangement of the elements. This is the permutation. In mathematics, a permutation stands for all arrangements of its elements.</p>
+<pre><code>[4,6,9]
+[4,9,6]
+[6,4,9]
+[6,9,4]
+[9,4,6]
+[9,6,4]
+</code></pre>
+<p>If you look close to each arrangement, they differ slightly by flipping through elements. None of the elements can appear twice. For array with three elements, the total number of arrangements is <code>6</code>.</p>
+<p>How do we find out the permutation of any array?</p>
+<p>To solve this, first thing coming to our mind is using loops. Say the given array is <code>[1,2]</code> with two elements, we can write it with two loops.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> j<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// print when found</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>One loop to go over all indexes via <code>i</code>, and another loop to go over all indexes via <code>j</code>, as long as <code>i</code> and <code>j</code> doesn't overlap, we take it as one arrangement.</p>
+<p>What about an array with three elements. We can use three loops instead.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">==</span> i<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">==</span> i <span class="token operator">||</span> k <span class="token operator">==</span> j<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// print arrangement</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The code gets extended to three loops via <code>i</code>, <code>j</code> and <code>k</code>. Along the way of getting inside each loop, we make sure <code>i</code>, <code>j</code> and <code>k</code> are three distinctive indexes, that'll make our arrangement valid.</p>
+<p>Well done. Now we need to find a way to do loops on any array size, in a way that we can't assume it's <code>2</code> or <code>3</code> or any fixed number. This arrives a technical question, how do we write a function that generates arbitrary number of loops?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">permute</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> n <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// arbitrary number of loops</span>
+
+  <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Well, since I don't know how to write arbitrary number of loops. We need to find other ways.</p>
+<p>We notice the element's index, like <code>0</code>, <code>1</code>, <code>2</code> matters more than the element value <code>4</code>, <code>6</code>, <code>9</code> here. The permutation of the array elements essentially is the permutation of its indexes. From now on, for the simplicity of the code, we'll focus on the indexes.</p>
+<pre><code>[0,1,2]
+[0,2,1]
+[1,0,2]
+[1,2,0]
+[2,0,1]
+[2,1,0]
+</code></pre>
+<p>Now let's think about how to get one arrangement from the beginning. Initially we start from an empty selection, <code>[]</code>. And ask ourselves what should be the first index to select, we have choices <code>0</code>, <code>1</code> and <code>2</code>.</p>
+<pre><code>[] -&gt; pick 0
+   -&gt; pick 1
+   -&gt; pick 2
+</code></pre>
+<p>Say we pick <code>0</code>,</p>
+<pre><code>[0] -&gt; pick 1
+    -&gt; pick 2
+</code></pre>
+<p>We'd like to repeat the step we just did, except this time, we have selected one index <code>[0]</code>, and we are asking what to pick as second index, <code>1</code> or <code>2</code>. Notice <code>0</code> can't be selected anymore, since it's already in the list.</p>
+<p>Say we pick <code>1</code> this time.</p>
+<pre><code>[0,1] -&gt; pick 2
+</code></pre>
+<p>We have only one choice, we pick <code>2</code>.</p>
+<pre><code>[0,1,2] -&gt; collect it -&gt; return
+</code></pre>
+<p>Now we have collected one arrangement <code>[0,1,2]</code> since we have three indexes. Now we collect it and tore it in the arrangement list, and move back.</p>
+<p>This is a backtracking scheme. The recursion is the selection process. We keep select until we collect enough. Let's code it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">permute</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token parameter">indexes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span>length <span class="token operator">==</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>indexes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+      <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>indexes<span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Two functions setup once again. The outer function <code>permute</code> takes <code>n</code> as its argument for passing the array length. The inner function <code>select</code> is the recursive function that takes <code>indexes</code> array we have selected so far as its argument. We want to ask <code>select</code> to select one more index to append to <code>indexes</code>.</p>
+<p>Each time we visit <code>select</code>, it expands the <code>indexes</code> by <code>1</code>. Inside <code>select</code> function, the first thing we check is whether we hit the boundary of the recursion, in our case, whether we have collect enough indexes. If so, we add this arrangement to the collector array <code>res</code> and return by going back. If not, we pick a new index <code>i</code> that is not already in the current <code>indexes</code> array and then calls <code>select</code> for the next indexes selection.</p>
+<p>Notice each time we pass in an array, we use Javascript syntax <code>[...indexes]</code>. This is to make sure the array points to a new memory address, a new array.</p>
+<p>We don't want to touch or modify the <code>indexes</code> in the current function instance. When the boundary is hit, the function instance it returns to needs to maintain the same state before. In our case, <code>indexes</code> can't be modified. This is very important in backtracking or recursion.</p>
+<blockquote>
+<p>It's a good practice to keep function argument as a static local variable in each function instance. It's for your brain sanity.</p>
+</blockquote>
+<p>To kick off the recursion, we start with an empty selection <code>[]</code>. After it's done, we return all the arrangements from 'res'.</p>
+<p>Let's run it.</p>
+<pre><code>&gt; permute(1)
+[ [ 0 ] ]
+
+&gt; permute(2)
+[ [ 0, 1 ], [ 1, 0 ] ]
+
+&gt; permute(3)
+[
+  [ 0, 1, 2 ],
+  [ 0, 2, 1 ],
+  [ 1, 0, 2 ],
+  [ 1, 2, 0 ],
+  [ 2, 0, 1 ],
+  [ 2, 1, 0 ]
+] // total 6 items
+
+&gt; permute(4)
+[
+  [ 0, 1, 2, 3 ], [ 0, 1, 3, 2 ],
+  [ 0, 2, 1, 3 ], [ 0, 2, 3, 1 ],
+  [ 0, 3, 1, 2 ], [ 0, 3, 2, 1 ],
+  [ 1, 0, 2, 3 ], [ 1, 0, 3, 2 ],
+  [ 1, 2, 0, 3 ], [ 1, 2, 3, 0 ],
+  [ 1, 3, 0, 2 ], [ 1, 3, 2, 0 ],
+  [ 2, 0, 1, 3 ], [ 2, 0, 3, 1 ],
+  [ 2, 1, 0, 3 ], [ 2, 1, 3, 0 ],
+  [ 2, 3, 0, 1 ], [ 2, 3, 1, 0 ],
+  [ 3, 0, 1, 2 ], [ 3, 0, 2, 1 ],
+  [ 3, 1, 0, 2 ], [ 3, 1, 2, 0 ],
+  [ 3, 2, 0, 1 ], [ 3, 2, 1, 0 ]
+] // total 24 items
+</code></pre>
+<p>Not bad. Let's talk about the running time, shall we?</p>
+<h2>Brutal force with no loop</h2>
+<p>It seems that backtracking can be used to replace loops. This can become handy when we need variable number of loops.</p>
+<p>Taking <code>n=3</code> as a example, for the first index, we have three choices to select; move on to second index, we have two choices; move to the last index, we end with one choice. We have observed this pattern from other problems such as <code>climb</code> and <code>fill</code>, especially when we get closer to the boundary, while <code>permute</code> demonstrates this behavior for the whole time.</p>
+<p>The computation of the <code>permute</code> algorithm is <code>O(n!)</code>. We have calculated the factorial numbers in early chapter. It's one of the worst performant running times, worse than <code>O(2^n)</code>. What's really worse than <code>O(n!)</code>? Probably <code>O(n^n)</code>, which is <code>n * n * n ...</code> where we always pick one out of <code>n</code> choices.</p>
+<p>No doubt, <code>O(n!)</code> and <code>O(n^n)</code> are algorithms that run slow with large <code>n</code>. And we normally call algorithm with such characteristic as brutal force, indicating the algorithm's purpose is to find all possible choices and exhaust them one by one. Aggressive as it can sound, brutal force is such an effective general approach, especially in small to medium size problem.</p>
+<p>Remember we use three loops when we attempt this problem earlier in this chapter. That is the brutal force thinking. It comes to our mind quickly. We only can intimidated by it later due to the growing computation for larger <code>n</code>.</p>
+<p>Let's try it for larger <code>n</code> to see.</p>
+<pre><code>&gt; permute(5)
+... 120 items
+
+&gt; permute(6)
+... 720 items
+
+&gt; permute(7)
+... 5040 items
+
+&gt; permute(8)
+... 40320 items
+
+&gt; permute(9)
+... 362880 items
+
+&gt; permute(10)
+... 3628800 items
+</code></pre>
+<p>The computation is getting pretty high after <code>n</code> reaches 10. You can feel your computer start to have hard time calculating it. It's understandable because it creates function instances in the similar order <code>O(n!)</code>. The following lists the instances created for <code>n</code> up to <code>10</code>.</p>
+<pre><code>n n! instances
+0 1 1
+1 1 2
+2 2 5
+3 6 16
+4 24 65
+5 120 326
+6 720 1957
+7 5040 13700
+8 40320 109601
+9 362880 986410
+10 3628800 9864101
+</code></pre>
+<h2>Advanced memorization</h2>
+<p>So we can push permutation up to ten elements, but it's harder to push further, because the running time is <code>O(n!)</code>, one of the worst running time. Brutal force has a cost.</p>
+<p>Is there anyway we can speed it up? Back in <code>fib</code>, we manage to reduce the running time from <code>O(2^n)</code> to <code>O(n)</code>. What we relied upon is a memorization technique. Given two function instances, if the argument we take to each instance is same, we expect things out of the recursion after this point is same. The nth Fibonacci number should be always same, no matter when you call <code>fib(5)</code>, we should expect the same result.</p>
+<p>Memorization, aka caching, becomes so useful here that the second time we need <code>fib(5)</code>, we don't go through the same effort, instead we get the result in <code>O(1)</code> manner. Since after the <code>fib(5)</code> instance memorized, it becomes a boundary.</p>
+<p>Back to our current permutation. The argument of the instance is <code>indexes</code>, the selection we have made so far.</p>
+<pre><code>[0,1,2, ... ]
+[0,1,2, ... ]
+</code></pre>
+<p>If the current <code>indexes</code> are identical, we expect the permutation after this point identical.</p>
+<pre><code>[0,1,2,3,4]
+[0,1,2,4,3]
+</code></pre>
+<p>Isn't it? This is true, except one issue. Our problem will not run through two identical <code>indexes</code>. Why? Because it's a permutation setup, did we make sure each arrangement is unique? So there's no need to remember the result for the same <code>indexes</code>, damn!</p>
+<p>If you write the permutation couple of times, you will come to the realization that the following two cases are similar.</p>
+<pre><code>[0,1,2, ...]
+[0,2,1, ...]
+</code></pre>
+<p>Though the <code>indexes</code> aren't same, the arrangement after this point is identical.</p>
+<pre><code>[0,1,2,3,4]
+[0,1,2,4,3]
+
+[0,2,1,3,4]
+[0,2,1,4,3]
+</code></pre>
+<p>Interesting! However you come to this realization isn't important. We just discover a behavior that probably can be used for memorization. So if we happen to select the same set of elements, the future permutation can be predicted.</p>
+<pre><code>[0,1,2, ...]
+[0,2,1, ...]
+[1,0,2, ...]
+[1,2,0, ...]
+[2,0,1, ...]
+[2,1,0, ...]
+</code></pre>
+<p>No matter which one you select first, as long as you have selected a set of <code>0</code>, <code>1</code> and <code>2</code>, at least the number of the permutation after this index is pre-determined. Of course in this case, we already know how to calculate the total number of permutation. But pretend we don't know and we want to calculate it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">permutationCount</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token parameter">indexes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span>length <span class="token operator">==</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+      sum <span class="token operator">=</span> sum <span class="token operator">+</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>indexes<span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>We just convert our <code>permute</code> algorithm to <code>permutationCount</code> algorithm to return the total number of permutations. Instead of getting the arrangements, we get the total count instead. Because the algorithm is the same as used to be, we should expect the same amount of function instances created.</p>
+<p>Now with our new realization of memorization, let's apply to it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">permutationCount</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> m <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token parameter">indexes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> key <span class="token operator">=</span> indexes<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token keyword">in</span> m<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> m<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span>length <span class="token operator">==</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+      sum <span class="token operator">=</span> sum <span class="token operator">+</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>indexes<span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    m<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> m<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>We create <code>m</code> to hold the caching. The key to the caching has a little bit twist to it. Instead of using <code>indexes</code> directly, we first sort it, this way we can always end up with the same <code>indexes</code> for the above six <code>indexes</code>.</p>
+<pre><code>[0,1,2, ...]
+</code></pre>
+<p>Neat! Let's run it, starting from <code>n=11</code>.</p>
+<pre><code>&gt; permutationCount(11)
+39916800
+
+&gt; permutationCount(12)
+479001600
+
+&gt; permutationCount(13)
+6227020800
+</code></pre>
+<p>We can keep going till <code>20</code>. If we calculate the total instances that is created, we end up the following table.</p>
+<pre><code>n instances
+0 1
+1 2
+2 5
+3 13
+4 33
+5 81
+6 193
+7 449
+8 1025
+9 2305
+10 5121
+11 11265
+12 24577
+13 53249
+14 114689
+15 245761
+16 524289
+17 1114113
+18 2359297
+19 4980737
+20 10485761
+```
+
+The amount of calculation is reduced from `O(n!)` to something like `O((2^n*n))`. So it's not hugh reduction but at least allow us to push to `n=20` from `n=10`.
+
+In this book, we refer this type of memorization advanced one because it takes some observation to realize what to memorize, and we'll come back to this type in later chapters.
+
+## Haskell version
+
+```hs
+perm :: [a] -&gt; [[a]]
+perm [] = return []
+perm (x:xs) = (perm xs) &gt;&gt;= (ins x)
+    where
+    ins :: a -&gt; [a] -&gt; [[a]]
+    ins x [] = [[x]]
+    ins x (y:ys) = [x:y:ys] ++ ( map (y:) (ins x ys) )
+</code></pre>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google">
+        Image by macrovector_official</a>
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async="">import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>

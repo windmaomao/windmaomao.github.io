@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
+    <meta name="author" content="Fang Jin">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bundle.css">
+    <title>Path II</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/book/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/book/sum/">1. Sum</a>
+        </li><li>
+          <a href="/book/callstack/">2. Call stack</a>
+        </li><li>
+          <a href="/book/factorial/">3. Factorial</a>
+        </li><li>
+          <a href="/book/fibonacci/">4. Fibonacci</a>
+        </li><li>
+          <a href="/book/stairs/">5. Stairs</a>
+        </li><li>
+          <a href="/book/fill/">6. Fill</a>
+        </li><li>
+          <a href="/book/permute/">7. Permute</a>
+        </li><li>
+          <a href="/book/queens/">8. Queens</a>
+        </li><li>
+          <a href="/book/path/">9. Path I</a>
+        </li><li>
+          <a href="/book/path2/">10. Path II</a>
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">10</p>
+<h1>Path II</h1>
+<p>The problems we got to solve starts to get more and more interesting.</p>
+<h2>Multiple objectives</h2>
+<pre><code>▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢a  @        d  ▢
+▢▢ ▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢  e     b    c ▢
+▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+</code></pre>
+<p>In the previous section, we aim for going from one location to another in shortest distance. In this section, we'd like to go extra miles. We want to find out the shortest path when multiple objectives are given, for instances, we need to collect all objects including a, b, c, d, e, f. The order who can be collect does not matter.</p>
+<p>For a second, this problem seems quite difficult. Say we find the shortest distance from <code>@</code> to <code>d</code>, but then what do we do next? Find next closest distance from <code>d</code> to another object, ex. <code>e</code>? If this works, we would form a path collecting all objects in the order of <code>d&gt;e&gt;b&gt;c&gt;a&gt;f</code>? But that wouldn't be a shortest path.</p>
+<p>If you are not convinced, we could look at the following example.</p>
+<p>If we chase the closest object, we would end with <code>&gt;a&gt;e&gt;b&gt;c&gt;d</code>. At any time <code>a</code> isn't the closest object, so we keep go down the road until we collect all but <code>a</code>. Now when we get back to <code>a</code>, it'll be the long journey. As you might have guessed right, the shortest path is <code>&gt;d&gt;a&gt;e&gt;b&gt;c</code>.</p>
+<p>Ok, enough said that we won't get it working by looking for the closest object. But then how do we know which object we should reach next then? How about this time we admit we don't know which object is the best one.</p>
+<p>So we have <code>n</code> objects to select, and each time we pick one, and then in next step, we pick another one in the rest of the list. When there's none to select, we take a look whether this is a shortest path. Wait a second, what does first part of this narrative remind us?</p>
+<p>Permutation?</p>
+<pre><code>[a,b,c,d,e]
+[a,b,c,e,d]
+[a,b,d,c,e]
+...
+</code></pre>
+<p>Yes, instead of indexes like <code>0</code> and <code>1</code>, we have characters this time, but it shouldn't fool us. We have learned for any permutation, it gives us <code>n!</code> number of arrangements. Thus, for 5 objects, there'll be 120 paths. And for 6 objects, there'll be 720 path. Using a computer, we should be able to go over them in no time.</p>
+<p>For each path we find, we can calculate the total length of the path. The smallest length gives us the shortest path. Ok, so how do we find out the length of a path, such as <code>@&gt;a&gt;b</code>?</p>
+<h2>Length of the path</h2>
+<p>Let's do segment and then stitch them together. I believe we have already written the algorithm to find out the shortest path between two locations.</p>
+<p>Here the requirement is slight different, starting from <code>@</code>, we want to find distances between <code>@</code> and all other objects. Thus we can modify our code slightly.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> findAll <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length
+  <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">let</span> queue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">...</span>start<span class="token punctuation">]</span>
+  <span class="token keyword">let</span> dist <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token punctuation">[</span>s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    visited<span class="token punctuation">[</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+
+    <span class="token keyword">const</span> char <span class="token operator">=</span> map<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>char <span class="token operator">>=</span> <span class="token string">'a'</span> <span class="token operator">&amp;&amp;</span> char <span class="token operator">&lt;=</span> <span class="token string">'z'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      dist<span class="token punctuation">[</span>char<span class="token punctuation">]</span> <span class="token operator">=</span> s
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> ni <span class="token operator">=</span> i <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      <span class="token keyword">let</span> nj <span class="token operator">=</span> j <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>ni <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> ni <span class="token operator">></span> m <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">||</span>
+          nj <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> nj <span class="token operator">></span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">visited</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>ni<span class="token punctuation">]</span><span class="token punctuation">[</span>nj<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+
+      queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>s <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> dist
+<span class="token punctuation">}</span></code></pre>
+<p>The change we did is quite minimum. Instead of finding one distance, we are interested at distances to all objects. So the first change is to make <code>dist</code> a dictionary so that it can store each object's distance in <code>dist[obj]</code>.</p>
+<p>During the iteration, after we find each object, we don't stop the code as used to be, instead we continue the search till the end. By then we have shortest distance to all objects. In the end we return <code>dist</code> as our result.</p>
+<p>Let's run it, starting from a simpler map.</p>
+<pre><code>&gt; start = [1, 4]
+&gt; findAll(map, start)
+{
+  a: 3,
+  b: 11,
+  c: 16,
+  d: 9,
+  e: 5
+}
+</code></pre>
+<p>Ok, this is awesome. Suppose we reach <code>a</code>, how do we find out the shortest distance between <code>a</code> and <code>b</code> then?</p>
+<p>Our <code>findAll</code> algorithm is generic, we can just make <code>a</code> as our start position and re-run it.</p>
+<pre><code>&gt; a = [1, 1]
+&gt; findAll(map, a)
+{
+  a: 0,
+  b: 10,
+  c: 15,
+  d: 12,
+  e: 4
+}
+</code></pre>
+<p>This way if we can go through all object locations, we should be able to generate a dist map such as the following.</p>
+<pre class="language-js"><code class="language-js">segments <span class="token operator">=</span>
+<span class="token punctuation">{</span>
+  @<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token literal-property property">d</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token literal-property property">e</span><span class="token operator">:</span> <span class="token number">5</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token literal-property property">d</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token literal-property property">e</span><span class="token operator">:</span> <span class="token number">4</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">d</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">e</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>In case we want to know the distance between <code>a</code> and <code>b</code>, we can refer to <code>segments['a']['b']</code>. With this, we are so ready to calculate the length of a path such as <code>@&gt;a&gt;b&gt;c&gt;d&gt;e</code>.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> objects <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">pathLength</span><span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> len <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">let</span> from <span class="token operator">=</span> <span class="token string">'@'</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> path<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> to <span class="token operator">=</span> path<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    len <span class="token operator">+=</span> segments<span class="token punctuation">[</span>from<span class="token punctuation">]</span><span class="token punctuation">[</span>to<span class="token punctuation">]</span>
+    from <span class="token operator">=</span> to
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> len
+<span class="token punctuation">}</span></code></pre>
+<p>Given a path using an array such as <code>[a, b, c]</code> (excluding <code>@</code>), we can go through each consecutive pair, <code>@</code> to <code>a</code>, and then <code>a</code> to <code>b</code> and then <code>b</code> to <code>c</code>. Add all the shortest distance together is the total length of the path.</p>
+<h2>Smartest of all</h2>
+<p>Let's stitch everything together. Use permutation to find all path, calculate each path length and take the shortest one.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> objects <span class="token operator">=</span>
+<span class="token punctuation">{</span>
+  @<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Given all objects location, say we have already extracted them out.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shortestAll</span><span class="token punctuation">(</span><span class="token parameter">map<span class="token punctuation">,</span> objects</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> segments <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> objectNames <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>objects<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> n <span class="token operator">=</span> objectNames<span class="token punctuation">.</span>length
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> obj <span class="token operator">=</span> objectNames<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> location <span class="token operator">=</span> objects<span class="token punctuation">[</span><span class="token punctuation">]</span>
+    segments<span class="token punctuation">[</span>obj<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">findAll</span><span class="token punctuation">(</span>map<span class="token punctuation">,</span> location<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> arrangements <span class="token operator">=</span> <span class="token function">permute</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> shortest <span class="token operator">=</span> <span class="token number">Infinity</span>
+  <span class="token keyword">let</span> shortestPath <span class="token operator">=</span> <span class="token keyword">null</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> arrangements<span class="token punctuation">.</span>length<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> path <span class="token operator">=</span> arrangements<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">i</span> <span class="token operator">=></span> objectNames<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> len <span class="token operator">=</span> <span class="token function">pathLength</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&lt;</span> shortest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      shortest <span class="token operator">=</span> len
+      shortestPath <span class="token operator">=</span> path
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> shortestPath
+<span class="token punctuation">}</span></code></pre>
+<p>We finally get to the implementation, let's examine it a bit. The first part of the algorithm is to setup <code>segments</code> dictionary by going through each object.</p>
+<p>Then we use the code we have written for permutation to generate arrangements for size <code>n</code> where <code>n</code> is the number of the objects (excluding <code>@</code>).</p>
+<p>We go through each arrangement. Since <code>pathLength</code> function takes the path instead of arrangement where indexes are used, we first convert the arrangement into a path with all objects' name. With path resolved, we call <code>pathLength</code> to get the length. The rest of the code is to make sure we select the shortest path from the permutation.</p>
+<p>Drum rolling... The final answer for this problem is given below.</p>
+<pre><code>@ &gt; d &gt; a &gt; e &gt; b &gt; c
+</code></pre>
+<p>We can think about how expensive our algorithm is. Assuming the time to calculate the <code>segments</code> is excluded, since this info can be pre-calculated before the solver, the running order should be in the order of <code>O(n!)</code> because we call <code>permute</code>.</p>
+<p>So essentially we are doing brutal force and brutal force isn't cheap normally. From previous chapters, we know <code>O(n)</code> algorithm will have hard time when <code>n</code> gets bigger than <code>10</code>.</p>
+<h2>Memorization to the rescue</h2>
+<h2>complicated</h2>
+<pre><code>▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢    a        f ▢
+▢▢ ▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢       b       ▢
+▢ ▢▢▢▢▢ ▢▢▢  ▢▢▢▢
+▢ c         e   ▢
+▢▢▢▢▢▢▢▢ ▢▢▢▢▢▢▢▢
+▢     d   @     ▢
+▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+</code></pre>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google">
+        Image by macrovector_official</a>
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async="">import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>

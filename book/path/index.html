@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
+    <meta name="author" content="Fang Jin">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bundle.css">
+    <title>Path I</title>
+  </head>
+  <body id="top">
+    <nav>
+  <div class="navbar">
+    <div class="container nav-container">
+      <input class="checkbox" type="checkbox" name="" id="">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <p><a href="/book/">Think in Recursion</a></p>
+      </div>
+      <div class="menu-items"><li>
+          <a href="/book/sum/">1. Sum</a>
+        </li><li>
+          <a href="/book/callstack/">2. Call stack</a>
+        </li><li>
+          <a href="/book/factorial/">3. Factorial</a>
+        </li><li>
+          <a href="/book/fibonacci/">4. Fibonacci</a>
+        </li><li>
+          <a href="/book/stairs/">5. Stairs</a>
+        </li><li>
+          <a href="/book/fill/">6. Fill</a>
+        </li><li>
+          <a href="/book/permute/">7. Permute</a>
+        </li><li>
+          <a href="/book/queens/">8. Queens</a>
+        </li><li>
+          <a href="/book/path/">9. Path I</a>
+        </li><li>
+          <a href="/book/path2/">10. Path II</a>
+        </li></div>
+    </div>
+  </div>
+</nav>
+
+    <main><p class="chapter-number">9</p>
+<h1>Path I</h1>
+<p>The problems we got to solve starts to get more and more interesting.</p>
+<h2>Path finding</h2>
+<pre><code>▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢    &amp;          ▢
+▢▢ ▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢               ▢
+▢ ▢▢▢▢▢ ▢▢▢  ▢▢▢▢
+▢               ▢
+▢▢▢▢▢▢▢▢ ▢▢▢▢▢▢▢▢
+▢         @     ▢
+▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+</code></pre>
+<p>Given a map, find a shortest path from one location, such as <code>@</code>, to another location, such as <code>T</code>. If there doesn't exist a path between them, we want to know that as well. This is a common path finding problem.</p>
+<p>How do we approach this?</p>
+<p>One of the closest thing that we have done in this book is <code>fill</code> where we can find all accessible areas from a location.</p>
+<p>For a second, this does seem very close to our path finding problem. We can use the same code from <code>fill</code> problem.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> dirs <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">// down</span>
+  <span class="token punctuation">[</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">// right</span>
+  <span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">// up</span>
+  <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">]</span>   <span class="token comment">// left</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">function</span> find <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">,</span> dest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length
+  <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">let</span> dist <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+
+  <span class="token keyword">function</span> <span class="token function">visit</span><span class="token punctuation">(</span><span class="token parameter">s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dist <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> dest<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> j <span class="token operator">==</span> dest<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      dist <span class="token operator">=</span> s
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+
+    visited<span class="token punctuation">[</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> ni <span class="token operator">=</span> i <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      <span class="token keyword">let</span> nj <span class="token operator">=</span> j <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>ni <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> ni <span class="token operator">></span> m <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">||</span>
+          nj <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> nj <span class="token operator">></span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>ni<span class="token punctuation">]</span><span class="token punctuation">[</span>nj<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'#'</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">visited</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+
+      <span class="token function">visit</span><span class="token punctuation">(</span>s <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> ni<span class="token punctuation">,</span> nj<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">let</span> si <span class="token operator">=</span> start<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sj <span class="token operator">=</span> start<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token function">visit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> si<span class="token punctuation">,</span> sj<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> dist
+<span class="token punctuation">}</span></code></pre>
+<p>We first copy the code from <code>fill</code>, rename it to <code>find</code>. Our goal is slightly different this time, instead to go over the entire area, we can stop when we reach the target location.</p>
+<p>This is why we add the <code>dest</code> to the argument of <code>find</code>, and it holds the location of the dest. Upon visiting each location, if the current location is the destination, we terminates all function instances.</p>
+<p>We need to have a way to know the distance between the current location to the start location, that's where we introduce an extra argument <code>s</code> to the function instance. Each function instance's job is to visit one location that is <code>s</code> steps from the start.</p>
+<p>Essentially this is an open map. There's multiple path between two locations, thus a location isn't unique enough to tell us whether we are choosing one particular path. Adding number of steps from the start <code>s</code> is a good move. It doesn't tell us exactly the path we take, but at least it can answer the question whether we are close or far to the start therefore be able to provide us the insight whether one path is shorter than the other.</p>
+<blockquote>
+<p>If the function instance isn't unique enough, specify extra argument to make it so.</p>
+</blockquote>
+<p>Once we choose a new location to move, the number of steps from the start increments by <code>1</code>. And initially to kick off the search, the number of steps starts from <code>0</code>. Other than these changes, the code looks pretty close to <code>fill</code> version.</p>
+<p>Let's run it.</p>
+<pre><code>▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢ ┏━━&amp;          ▢
+▢▢┃▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢ ┗━━━━━━━━┓    ▢
+▢ ▢▢▢▢▢ ▢▢▢┃ ▢▢▢▢
+▢       ┏━━┛    ▢
+▢▢▢▢▢▢▢▢┃▢▢▢▢▢▢▢▢
+▢       ┗━@     ▢
+▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+</code></pre>
+<p>It found it!</p>
+<p>You might notice quickly the path isn't the shortest. The code finds a path, and stops.</p>
+<h2>Shortest one</h2>
+<p>So how do we ask it to find the shortest path? Should we need to find all paths first?</p>
+<p>Let's a good thinking. Before we attempt such brutal force, let's see if we can try something slightly different.</p>
+<p>In <code>fill</code> chapter, we use backtracking to bucket fill an area, and we also introduced two different ways of traverse. One is called DFS (depth first) that aligns with the recursion version, and another one called BFS (breath first) that is implemented via the iterative version.</p>
+<p>We explained that DFS and BFS demonstrates very different behavior. The former tries to find a path as outreach as possible while the latter tries to stay as close to the origin as possible.</p>
+<p>We know DFS behavior quite well now since that's our previous algorithm <code>path</code> is based on. Let's talk about BFS a bit more now. What's good about staying closer to the origin?</p>
+<p>Say we kick off the BFS, in order to get close to the start location, we look for locations only one step away from it. If we find the target, we are done knowing that the distance from the target to the start is <code>1</code>.</p>
+<p>If we can't find the target at distance <code>1</code>, we then go one step further to visit locations that are two steps away. If we can't find the target, we continue this process. Down the road, when we find the target at the distance <code>s</code>, we would say <code>s</code> is the shortest distance from the start to the target. Why?</p>
+<p>Because we can't find it with less steps, the target can't be reached with <code>s-1</code> steps, since we have already tried! We walk our way from one step to <code>s</code> steps gradually.</p>
+<p>Isn't this fascinating? If we can ever find our target via BFS, it'll be the shortest path we are looking for.</p>
+<p>Alright, with this realization, let's borrow the BFS version which is only available in the iterative setup.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> find <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">,</span> start<span class="token punctuation">,</span> dest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length
+  <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+  <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">let</span> queue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">...</span>start<span class="token punctuation">]</span>
+  <span class="token keyword">let</span> dist <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token punctuation">[</span>s<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> dest<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> j <span class="token operator">==</span> dest<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      dist <span class="token operator">=</span> s
+      <span class="token keyword">break</span>
+    <span class="token punctuation">}</span>
+
+    visited<span class="token punctuation">[</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> ni <span class="token operator">=</span> i <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      <span class="token keyword">let</span> nj <span class="token operator">=</span> j <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>ni <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> ni <span class="token operator">></span> m <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">||</span>
+          nj <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> nj <span class="token operator">></span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">visited</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>ni<span class="token punctuation">]</span><span class="token punctuation">[</span>nj<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">continue</span>
+
+      queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>s <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> dist
+<span class="token punctuation">}</span></code></pre>
+<p>The difference between above version and the previous version is quite subtle. Other than the iterative writing, we choose a queue structure to hold the list of next locations to visit, thus performing the BFS traversal. In any doubts, please visit <code>fill</code> algorithm in earlier chapter.</p>
+<p>Run the code and see what we get this time.</p>
+<pre><code>▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢ ┏━━&amp;          ▢
+▢▢┃▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+▢ ┗━━━━┓        ▢
+▢ ▢▢▢▢▢┃▢▢▢  ▢▢▢▢
+▢      ┗┓       ▢
+▢▢▢▢▢▢▢▢┃▢▢▢▢▢▢▢▢
+▢       ┗━@     ▢
+▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+</code></pre>
+<p>I believe this path is the shortest.</p>
+<h2>Visualize the path?</h2>
+<p>Visualize it!</p>
+</main>
+    <footer>
+  <div>
+    <p>
+      <a href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google">
+        Image by macrovector_official</a>
+      on Freepik
+    </p>
+    <p>
+      © Think in Recursion 2023 - 2024
+      <a href="https://www.linkedin.com/in/windmaomao/">F. Jin</a>
+    </p>
+  </div>
+  <p>
+    <a href="#top">Back to top</a>
+  </p>
+</footer>
+ <script type="module" async="">import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+  </body>
+</html>

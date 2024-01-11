@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     <link rel="stylesheet" href="../bundle.css">
-    <title>Climbing stairs</title>
+    <title>Stairs</title>
   </head>
   <body id="top">
     <nav>
@@ -33,26 +33,32 @@
         <p><a href="/book/">Think in Recursion</a></p>
       </div>
       <div class="menu-items"><li>
-          <a href="/book/sum-numbers/">1. Sum</a>
+          <a href="/book/sum/">1. Sum</a>
         </li><li>
-          <a href="/book/call-stack/">2. Call stack</a>
+          <a href="/book/callstack/">2. Call stack</a>
         </li><li>
           <a href="/book/factorial/">3. Factorial</a>
         </li><li>
           <a href="/book/fibonacci/">4. Fibonacci</a>
         </li><li>
-          <a href="/book/climb-stairs/">5. Climbing stairs</a>
+          <a href="/book/stairs/">5. Stairs</a>
         </li><li>
-          <a href="/book/bucket-fill/">6. Flood fill</a>
+          <a href="/book/fill/">6. Fill</a>
         </li><li>
-          <a href="/book/permutation/">7. Permutation</a>
+          <a href="/book/permute/">7. Permute</a>
+        </li><li>
+          <a href="/book/queens/">8. Queens</a>
+        </li><li>
+          <a href="/book/path/">9. Path I</a>
+        </li><li>
+          <a href="/book/path2/">10. Path II</a>
         </li></div>
     </div>
   </div>
 </nav>
 
     <main><p class="chapter-number">5</p>
-<h1>Climbing stairs</h1>
+<h1>Stairs</h1>
 <p>The recursion is complex overall. But if you look at each function instance, the logic isn't that difficult to follow. It asks you to visit another function instance, or two function instances, to get answers. In this chapter we'll continue to see this pattern, except this time the number of function instances to visit is not fixed. Based on the argument you pass in to the function instance, this number could change. Let's see in an example.</p>
 <h2>Climb stairs</h2>
 <p>There are <code>totalStairs</code> number of stairs to climb. Each time we can take up to <code>maxSteps</code> steps. For instance, we have <code>3</code> stairs to climb, and each time we can take up to <code>2</code> steps. How many different ways can we climb the stairs? Let's try.</p>

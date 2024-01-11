@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     <link rel="stylesheet" href="../bundle.css">
-    <title>Flood fill</title>
+    <title>Fill</title>
   </head>
   <body id="top">
     <nav>
@@ -33,40 +33,46 @@
         <p><a href="/book/">Think in Recursion</a></p>
       </div>
       <div class="menu-items"><li>
-          <a href="/book/sum-numbers/">1. Sum</a>
+          <a href="/book/sum/">1. Sum</a>
         </li><li>
-          <a href="/book/call-stack/">2. Call stack</a>
+          <a href="/book/callstack/">2. Call stack</a>
         </li><li>
           <a href="/book/factorial/">3. Factorial</a>
         </li><li>
           <a href="/book/fibonacci/">4. Fibonacci</a>
         </li><li>
-          <a href="/book/climb-stairs/">5. Climbing stairs</a>
+          <a href="/book/stairs/">5. Stairs</a>
         </li><li>
-          <a href="/book/bucket-fill/">6. Flood fill</a>
+          <a href="/book/fill/">6. Fill</a>
         </li><li>
-          <a href="/book/permutation/">7. Permutation</a>
+          <a href="/book/permute/">7. Permute</a>
+        </li><li>
+          <a href="/book/queens/">8. Queens</a>
+        </li><li>
+          <a href="/book/path/">9. Path I</a>
+        </li><li>
+          <a href="/book/path2/">10. Path II</a>
         </li></div>
     </div>
   </div>
 </nav>
 
     <main><p class="chapter-number">6</p>
-<h1>Flood fill</h1>
+<h1>Fill</h1>
 <p class="paragraph">In past few problems we solved, including <code>sum</code>, <code>fib</code> and <code>numOfWays</code>, we have seen the usage of the recursion in getting pieces of partial answer from recursive calls. And we don't get our final answer until the root call returns.</p>
 <p>Recursion is a general execution. Similar to a <em>for</em> loop, it can be quite versatile and fit into any algorithm as you think fit. One of grand theme is that, instead of getting partial answers from the call directly, the recursion can be used to build partial answers by entering the call. And we don't get our final answer until the call reaches deep deep down to wherever it thinks the answer should be. This is a one field of study, called backtracking. Let's see one example of it in this chapter, the bucket fill problem.</p>
 <h2>Bucket fill</h2>
 <p>Say we have a map with <code>m</code> rows and <code>n</code> columns in two dimensional array.</p>
 <pre><code>&gt; map[][] =
 
-#################################
-S.##....###......######.#..###.##
-#.##.##.##.....#.#......#..#.#..#
-#....##.##..#..#.#......#..#.#..#
-#..#######..#####################
-#.#########.##...###...##.....###
-#...........####.......#####....#
-#################################
+############################
+S.##....###......######.#..#
+#.##.##.##.....#.#......#..#
+#....##.##..#..#.#......#..#
+#..#######..################
+#.#########.##...###...##..#
+#...........####.......#####
+############################
 </code></pre>
 <p>Start from a location <code>S</code>, we want to find to fill all the empty space. We can't go through walls, denoted by <code>#</code>. The empty space is connected via four directions, either up, down or left and right, diagonal fill is not allowed.</p>
 <p>Let's try to figure it out using our hands then. We are at location <code>O</code> with position <code>[i, j]</code>. We have four directions to pick if all directions shows as empty spaces.</p>
@@ -161,14 +167,14 @@ S.##....###......######.#..###.##
 <p>That’s it! I can't wait to run the code.</p>
 <h2>Paint before it dries</h2>
 <p>Here’s the output with visited area marked by <code>O</code>.</p>
-<pre><code>#################################
-oo##oooo###oooooo######.#..###.##
-#o##o##o##ooooo#o#......#..#.#..#
-#oooo##o##oo#oo#o#......#..#.#..#
-#oo#######oo#####################
-#o#########o##...###...##.....###
-#ooooooooooo####.......#####....#
-#################################
+<pre><code>############################
+oo##oooo###oooooo######.#..#
+#o##o##o##ooooo#o#......#..#
+#oooo##o##oo#oo#o#......#..#
+#oo#######oo################
+#o#########o##...###...##..#
+#ooooooooooo####.......#####
+############################
 </code></pre>
 <p>Congratulations! Please spend some time in enjoying your work.</p>
 <p>Our paint algorithm seems quite efficient as well. How so?</p>
