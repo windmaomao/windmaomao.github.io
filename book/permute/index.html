@@ -43,7 +43,7 @@
         </li><li>
           <a href="/book/stairs/">5. Stairs</a>
         </li><li>
-          <a href="/book/fill/">6. Fill</a>
+          <a href="/book/paint/">6. Paint</a>
         </li><li>
           <a href="/book/permute/">7. Permute</a>
         </li><li>
@@ -59,10 +59,10 @@
 
     <main><p class="chapter-number">7</p>
 <h1>Permute</h1>
-<p>In previous <code>fill</code> problem, we have learned what is backtracking, such a powerful methodology with recursion set at its core. While the fill reaches a location, it gets filled before asking to look around for next spot. In the end, we get to fill all the spots that we can access to.</p>
-<p>Our problems which can be solved by similar approach, more often requires more efforts in building the partial solution at each function instance. And then we need to carry the partial solution to the next function instance to continue the work. In this chapter, we'll show you this more general backtracking scheme. The problem we choose is the permutation.</p>
+<p>In previous <code>paint</code> problem, we have learned what is backtracking, such a powerful methodology with recursion set at its core. While the fill reaches a location, it gets filled before asking to look around for next spot. In the end, we get to fill all the spots that's connected.</p>
+<p>In most of the problem that can be solved by the backtracking approach, more often it requires more efforts in building the partial solution at each function instance. And also we need to carry the partial solution to the next function instance to continue the work. In this chapter, we'll show you a more general backtracking setup. The problem we choose in this chapter is the permutation.</p>
 <h2>Permutation</h2>
-<p>Given any array <code>arr</code>, such as <code>[4,6,9]</code>, write its all arrangement of the elements. This is the permutation. In mathematics, a permutation stands for all arrangements of its elements.</p>
+<p>Given any array <code>arr</code>, such as <code>[4,6,9]</code>, write all unique arrangements using its elements.</p>
 <pre><code>[4,6,9]
 [4,9,6]
 [6,4,9]
@@ -70,8 +70,8 @@
 [9,4,6]
 [9,6,4]
 </code></pre>
-<p>If you look close to each arrangement, they differ slightly by flipping through elements. None of the elements can appear twice. For array with three elements, the total number of arrangements is <code>6</code>.</p>
-<p>How do we find out the permutation of any array?</p>
+<p>If you look close to each arrangement, they differ slightly by flipping between elements. None of the elements can appear twice. For array length of three, the total number of arrangements is <code>6</code>.</p>
+<p>How do we find out the permutation?</p>
 <p>To solve this, first thing coming to our mind is using loops. Say the given array is <code>[1,2]</code> with two elements, we can write it with two loops.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>

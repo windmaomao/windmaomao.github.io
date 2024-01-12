@@ -43,7 +43,7 @@
         </li><li>
           <a href="/book/stairs/">5. Stairs</a>
         </li><li>
-          <a href="/book/fill/">6. Fill</a>
+          <a href="/book/paint/">6. Paint</a>
         </li><li>
           <a href="/book/permute/">7. Permute</a>
         </li><li>
@@ -59,89 +59,228 @@
 
     <main><p class="chapter-number">8</p>
 <h1>Queens</h1>
-<p>In the previous chapter, we have walked you through how to come up a permutation without using loop, moreover we can get all combinations in any dimension <code>n</code>. Though termed as brutal force nature, it can be effective in solving problems in the most straightforward way.</p>
-<p>In this chapter, we will attempt a famous problem called eight queens puzzle.</p>
+<p>In the previous chapter, we have walked you through how to come up a permutation without using fixed number of loops, moreover we can get arrangements for any number of elements. This flexible and powerful setup can be quite effective in solving problems in a straightforward way.</p>
+<p>In this chapter, we will apply it to solve another famous problem called eight queens puzzle.</p>
 <h2>Eight queens</h2>
-<pre><code>...Q....
-......Q.
-..Q.....
-.......Q
-.Q......
-....Q...
-Q.......
-.....Q..
+<pre><code>...o....
+......o.
+..o.....
+.......o
+.o......
+....o...
+o.......
+.....o..
 </code></pre>
-<p>Find all configurations that make eight queens not attach each other on a 8x8 board.</p>
-<p>If you have played chess you would know Queen is the most powerful piece on the board. At each round, she can move horizontally, vertically and diagonally at her will. The question gives us eight queens on a 8x8 board and asks us how to find all positions so that they don't attack each other. And then count how many of ways we can find.</p>
-<p>How do we start?</p>
-<p>I guess follow our heart, pick one Q first.</p>
-<pre><code>...Q....
-</code></pre>
-<p>And then how to select the second Q?</p>
-<pre><code>...Q....
-..xxx.Q.
-</code></pre>
-<p>Since we are only placing one Queen a row, we just need to worry about the horizontal and diagonal direction. All places marked by <code>x</code> is not good candidates. So we pick one out of five good ones.</p>
-<p>Let's continue by picking the third Q.</p>
-<pre><code>...Q....
-......Q.
-.xQx.xxx
-</code></pre>
-<p>This time, we have two queens on the top, so we need to be careful. We have to go through all possible moves by each of them and mark all positions that are not good. There're only three good ones this time.</p>
-<p>Let's move on to next queen.</p>
-<pre><code>...Q....
-......Q.
-..Q.....
-xxxxx.xQ
-</code></pre>
-<p>This time, there're only two good positions we can choose. Let's stop here, I'm sure you get how to play this now.</p>
-<p>How do we write a problem to solve it? Write eight loops to place eight queens and then check if that configuration is valid? Definitely one way.</p>
-<p>Wait a second, if we do that, have we just gone through how to write any number of loops in the previous chapter? Yes we did. And that code is <code>permute</code>.</p>
-<p>On the surface, there doesn't seem <code>queen</code> relates to <code>permute</code>. But indeed, if we choose to use backtracking method, the idea is quite similar.</p>
-<p>Say we run <code>permute(8)</code>, what do we get?</p>
+<p>Find all configurations that eight queens can't attack each other on a 8x8 chess board.</p>
+<p>If you have played chess you would know queen is the most powerful piece on the board. She can move to any position either horizontally, vertically or diagonally at her will. So to put multiple of them these without them attacking each other is a challenge.</p>
+<p>How do we start? Use eight loops to place eight queens on the board and then check if that configuration is valid? Definitely one way. And best of all, we have already done that. The idea would be quite similar to <code>permute</code>. Say we run <code>permute(8)</code>, what do we get?</p>
 <pre><code>[0,1,2,3,4,5,6,7]
 [0,1,2,3,4,5,7,6]
 ...
 </code></pre>
-<p>I know <code>permute(8)</code> should have <code>8! = 40320</code> arrangements, let me just list the first two as a example.</p>
-<p>The first line <code>[0,1,2,3,4,5,6,7]</code> tells us we can place the first row Q in the column <code>0</code>; and second in the column <code>1</code>, ... like below.</p>
-<pre><code>Q.......
-.Q......
-..Q.....
-...Q....
-....Q...
-.....Q..
-......Q.
-.......Q
+<p>We know <code>permute(8)</code> should have <code>8! = 40320</code> arrangements, let me just list the first two as a example.</p>
+<p>The first line <code>[0,1,2,3,4,5,6,7]</code> tells us we can place a queen at the first row at the column <code>0</code>; and second in the column <code>1</code>, ... like below.</p>
+<pre><code>o.......
+.o......
+..o.....
+...o....
+....o...
+.....o..
+......o.
+.......o
 </code></pre>
-<p>Hey, this is not gonna work for eight queens. Yes yes. But isn't this a good starting point? Because now we can just check whether they can attack each other diagonally.</p>
-<p>Pick two queens and find whether they are in the diagonal position. Say we can code this as efficient as possible in the order of <code>O(n)</code> (n=8). The running order of our <code>queen</code> would be <code>O(nxn!) = 322560</code>. Doable for sure.</p>
-<h2>Eliminate choices early</h2>
-<p>It's a good start. But we're not following our intuition closely.</p>
-<pre><code>...Q....
-..xxx.Q.
+<p>This arrangement isn't a valid configuration, since any queen can attack another queen in no time. The is the arrangement we should eliminate. Thus we can eliminate all that don't work out of <code>40320</code> arrangements.</p>
+<p>In order to eliminate an arrangement, we can ask whether any two queens attack each other.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">isAttacked</span><span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> iCol<span class="token punctuation">,</span> j<span class="token punctuation">,</span> jCol</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> j<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>iCol <span class="token operator">==</span> jCol<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Given two queens at <code>[i, iCol]</code>, and <code>[j, jCol]</code>, we write the above function <code>isAttacked</code> to test against that. Horizontally, in case they are on the same row, <code>i == j</code>, we return true; and vertically, in case they are on the same col, `iCol == jCol we return true.</p>
+<p>It's a little bit tricky how to test whether they are attaching each other diagonally.</p>
+<pre><code>...o....
+........
+........
+......o.
 </code></pre>
-<p>When we choose the second queen, we end up with three dead spot (boundary). We are left with <code>5</code> candidates. If this were in the permutation problem, we should've have <code>7</code> candidates.</p>
-<pre><code>...Q....
-......Q.
-..Q.....
-.......Q
-.Q......
-....Q...
-Q.......
-xxxxxQxx
+<p>Say we have two queens in above positions with <code>i=0</code> and <code>j=3</code>. They are three rows apart, therefore to be diagonally positioned, they need to be three columns apart as well.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">isAttacked</span><span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> iCol<span class="token punctuation">,</span> j<span class="token punctuation">,</span> jCol</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> j<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>iCol <span class="token operator">==</span> jCol<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> diff <span class="token operator">=</span> j <span class="token operator">-</span> i<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>jCol <span class="token operator">=</span> iCol <span class="token operator">+</span> diff<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>jCol <span class="token operator">=</span> iCol <span class="token operator">-</span> diff<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Of course one queen can be on either side of another queen in terms of the column index. We first measure the diff between rows, <code>j - i</code> and then test against the left and the right case.</p>
+<p>Alright, now we can attempt to write the algorithm.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">queens</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> arrangements <span class="token operator">=</span> <span class="token function">permute</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> arrangements<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">indexes</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isAttacked</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> indexes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> indexes<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The code is quite concise and short. Partly because we have outsourced the main algorithm to <code>permute</code> and <code>isAttacked</code>. We also make the number of queens to be a variable, easier for the testing. Let's run it.</p>
+<pre><code>&gt; queens(2)
+[]
+
+&gt; queens(3)
+[]
+
+&gt; queens(4)
+[
+  [ 1, 3, 0, 2 ], [ 2, 0, 3, 1 ]
+]
+
 </code></pre>
-<p>This is only the second step. If we can identify the bad moves earlier, we can reduce the function instances.</p>
-<pre><code>  8   8
-  7   5
-  6   3
-  5   2
-  4   2
-  3   1
-  2   1
-  1   1
+<p>When we have less than three queens, there's no solution. For four queens we have 2. We need to find out a way to visualize <code>indexes</code> back to a picture so that we are sure it's working.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">plot</span><span class="token punctuation">(</span><span class="token parameter">indexes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> n <span class="token operator">=</span> indexes<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> empty <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> line <span class="token operator">=</span> empty<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    line<span class="token punctuation">[</span>indexes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"o"</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>line<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>We add a plot function that takes the valid configuration <code>indexes</code> and turn it into a picture with queens positions.</p>
+<pre><code>&gt; plot([1,3,0,2])
+
+.o..
+...o
+o...
+..o.
+
+&gt; plot([2,0,3,1])
+
+..o.
+o...
+...o
+.o..
 </code></pre>
-<p>We'll start from the permutation <code>select</code> function.</p>
+<p>Nice!</p>
+<p>Four queens give us two valid configurations. And five queens give us 10, and six queens give us 4.</p>
+<pre><code>&gt; queens(5)
+[... 10 items]
+
+&gt; queens(6)
+[... 4 items]
+
+.o....
+...o..
+.....o
+o.....
+..o...
+....o.
+
+..o...
+.....o
+.o....
+....o.
+o.....
+...o..
+
+</code></pre>
+<p>Quite interesting that six queens has less configurations than five queens.</p>
+<pre><code>&gt; queens(7)
+&gt; [...40 items]
+
+&gt; queens(8)
+&gt; [...92 items]
+
+.....o..
+...o....
+......o.
+o.......
+.......o
+.o......
+....o...
+..o.....
+
+......o.
+....o...
+..o.....
+o.......
+.....o..
+.......o
+.o......
+...o....
+
+</code></pre>
+<p>At seven queens we have 40 configurations and eight queens, 92 configurations. All the configurations show some kinda of staggering pattern that makes sure queens avoid each other.</p>
+<pre><code>n count
+1 1
+2 0
+3 0
+4 2
+5 10
+6 4
+7 40
+8 92
+9 352
+10 724
+</code></pre>
+<p>But as I go higher <code>n</code>, the computer starts to struggle.</p>
+<h2>Better way</h2>
+<p>We could say we have solved eight queen problems. Let's think of the running time. Since our algorithm is based on the permutation, we can find out how much time is spent on each valid permutation, which is essentially <code>arrangements.filter</code> function, a function that is <code>O(n^2)</code> in nature due to the two loops.</p>
+<p>So if we take <code>isAttack</code> function as the unit time, the total running time order for our algorithm as far is then <code>O(n^2*n!)</code>, because for each found arrangement we need to perform the <code>isAttack</code> check.</p>
+<p>We can see it's far from an efficient algorithm, since we know <code>O(n!)</code> is not fast, not to mention now we have it multiplied with anther <code>n^2</code>. So the question is, do we have better ways?</p>
+<p>Let's try again, and this time do it ourselves by picking each queen and place it on the board. Say we put it randomly on the first row.</p>
+<pre><code>...o....
+</code></pre>
+<p>Then we need to pick second queen, where can we put it? Not the first row for sure, because a queen can attack any piece horizontally.</p>
+<pre><code>...o....
+..xxx.o.
+</code></pre>
+<p>We can pick a spot on the second row then. But not any spot on the second row, because a queen can attack any piece vertically thus we can pick the spot right below the first queen. Also a queen can attack any piece diagonally, thus we can't pick two spots on the left and right to the first queen either. All spots that we can't put are marked with <code>x</code>. So we pick one spot randomly from the rest of five spots.</p>
+<p>Now we move to pick a spot on the third row.</p>
+<pre><code>
+...o....
+......o.
+.xox.xxx
+
+</code></pre>
+<p>Due to this time we have two queens on the first and the second row, there're more spots not suitable to put our third queen on the third row. There're only three spots left this time. Please spend some time and see if that's the case.</p>
+<p>When we move to place the fourth queen, the spots are reduced to two.</p>
+<pre><code>
+...o....
+......o.
+..o.....
+xxxxx.xo
+
+</code></pre>
+<p>Let's stop here, I'm sure you know how to place the rest of the queens.</p>
+<pre><code>
+...o....
+......o.
+..o.....
+.......o
+.o......
+....o...
+o.......
+xxxxxoxx
+
+</code></pre>
+<p>That's analyze what we have done. If it were done by permutation, when it picks up the second queen, it believes there're seven positions to go. But that's not the case when we do it, we see there're only five positions. Moreover when we proceed, it's also not following <code>n!</code> sequence.</p>
+<pre><code>// permutation
+x,7,6,5,4,3,2,1
+
+// cherry pick
+x,5,3,2,2,1,1,1
+</code></pre>
+<p>Depending on which position we place the first queen, we might end with different number of choices for the second queen. But just for the case we are studying here, the choices are <code>x,5,3,2,2,1,1,1</code>. If it were permutation, the choices are <code>x,7,6,5,4,3,2,1</code>. So just for this case, our real computation is <code>5*3*2*2*1=60</code> whereas the permutation is <code>7!=5040</code>. It's quite some difference there.</p>
+<p>Let's redo our algorithm, this time, let's do a backtracking borrowing the code from <code>permute</code>.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">queen</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
@@ -171,49 +310,61 @@ xxxxxQxx
   <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> res<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<pre><code>n	n! reduced(n!)
-0	1 1
-1	1 2
-2	2 3
-3	6 6
-4	24 17
-5	120 54
-6	720 153
-7	5040 552
-8	40320 2057
-9	362880 8394
-10 3628800 35539
+<p>The only line we need to change is to add <code>isDiagonal</code> check, so that we can eliminate the arrangement as soon as we find queens are attacking each other.</p>
+<p>The function <code>isDiagonal</code> is quite similar to our previous <code>isAttack</code> except we don't have to wait till we have eight queens determined before checking whether they are in attacking positions.</p>
+<p>Since we don't know how to come up the right formula to the order of running time, we will do something different, we'll just measure it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">queen</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">let</span> counter <span class="token operator">=</span> <span class="token number">0</span>
+
+  <span class="token keyword">function</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token parameter">indexes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    counter<span class="token operator">++</span>
+    <span class="token operator">...</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>indexes<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token comment">// enable or disable the following line</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isDiagonal</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+      <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>indexes<span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> counter<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>We add a counter, when it enters one function instance, we increment it and in the end we return this counter as the output. We want to display it for two versions, one without <code>isDiagonal</code> and one with it.</p>
+<pre><code>n count
+10 724
+11 2680
+12 14200
+13 73712
+</code></pre>
+<h2>Not sure</h2>
+<pre><code>n n! O(n!) O((n-k)!) n*(0.7*n)!
+2 2 5 3
+3 6 16 6
+4 24 65 17
+5 120 326 54
+6 720 1957 153
+7 5040 13700 552
+8 40320 109601 2057
+9 362880 986410 8394
+10 3628800 9864101 35539
+</code></pre>
+<p>From the above table, we run the n-queen problem from <code>2</code> to <code>10</code>, the permutation case follows the order of <code>O(n!)</code>, but the real measurement is more like <code>3*n!</code>. Whereas our backtracking version seems more performant, but we can't really be sure the order.</p>
+<p>So we shoot <code>n</code> to be a bit higher, this time I can't continue the permutation version since it's too time-consuming.</p>
+<pre><code>n O((n-k)!) (n-3)!
 11 39916800 166926
 12 479001600 856189
 13 6227020800 4674890
 14 87178291200 27358553
 15 1307674368000 171129072
 </code></pre>
-<p>always like <code>O((n-3)!)</code> to me.</p>
-<pre><code>n ways
-1 1
-2 0
-3 0
-4 2
-5 10
-6 4
-7 40
-8 92
-9 352
-10 724
-11 2680
-12 14200
-13 73712
-14 365596
-15 2279184
-</code></pre>
-<h2>Haskell</h2>
-<pre class="language-hs"><code class="language-hs"><span class="token import-statement"><span class="token keyword">import</span> Control<span class="token punctuation">.</span>Monad</span>
-
-<span class="token hvariable">queens</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token hvariable">foldM</span> <span class="token punctuation">(</span><span class="token operator">\</span><span class="token hvariable">y</span> <span class="token hvariable">_</span> <span class="token operator">-></span> <span class="token punctuation">[</span> <span class="token hvariable">x</span> <span class="token operator">:</span> <span class="token hvariable">y</span> <span class="token operator">|</span> <span class="token hvariable">x</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token hvariable">n</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token hvariable">y</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token hvariable">n</span><span class="token punctuation">]</span>
-  <span class="token keyword">where</span>
-    <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token hvariable">_</span> <span class="token operator">=</span> <span class="token constant">True</span>
-    <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token punctuation">(</span><span class="token hvariable">c</span><span class="token operator">:</span><span class="token hvariable">y</span><span class="token punctuation">)</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token builtin">and</span> <span class="token punctuation">[</span> <span class="token hvariable">x</span> <span class="token operator">/=</span> <span class="token hvariable">c</span> <span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">/=</span> <span class="token hvariable">c</span> <span class="token operator">+</span> <span class="token hvariable">n</span> <span class="token punctuation">,</span> <span class="token hvariable">x</span> <span class="token operator">/=</span> <span class="token hvariable">c</span> <span class="token operator">-</span> <span class="token hvariable">n</span> <span class="token punctuation">,</span> <span class="token hvariable">safe</span> <span class="token hvariable">x</span> <span class="token hvariable">y</span> <span class="token punctuation">(</span><span class="token hvariable">n</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre>
+<p>(0.143*n)^n</p>
+<p>The backtracking version seems still follow <code>O(n)</code>, but it follows it a bit lag. It's like as if the size of the problem had been reduced from <code>n</code> to <code>n-k</code>, where <code>k</code> is a constant increasing with <code>n</code>. When <code>n</code> is small, <code>k</code> is about <code>0</code> or <code>1</code>, and then increases to <code>2</code> and when <code>n</code> approaches <code>15</code>, <code>k</code> increases to <code>3</code>.</p>
+<p>Although we don't know the exact formula, but this behavior isn't difficult to understand. When we place the second queen, we notice there're normally on average three positions eliminated</p>
+<p>We can measure the number of the function instance it creates this time, and find out the running time is improved to approximately <code>O(n!)</code> while the real number if still a bit smaller, kinda of <code>(n-3)!</code>. Thus it's much faster than our first permutation version, which is <code>O(n^2*n!)</code></p>
+<p>Once again we see the importance of early elimination in backtracking setup.</p>
 </main>
     <footer>
   <div>

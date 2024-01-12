@@ -2,94 +2,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc." />
-    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation" />
-    <meta name="author" content="Fang Jin" />
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
-    <link rel="manifest" href="/favicon/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../bundle.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Think in Recursion book by F. Jin, covers recursion problems such as sum, fibonacci, climb stair, bucket fill, permutation and etc.">
+    <meta name="keywords" content="Recursion, Javascript, Haskell, Fibonacci, Permutation">
+    <meta name="author" content="Fang Jin">
+    <link rel="icon" type="image/x-icon" href="/book/favicon/favicon.ico">
+    <link rel="manifest" href="/book/favicon/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bundle.css">
     <title>Paint</title>
   </head>
   <body id="top">
     <nav>
   <div class="navbar">
     <div class="container nav-container">
-      <input class="checkbox" type="checkbox" name="" id="" />
+      <input class="checkbox" type="checkbox" name="" id="">
       <div class="hamburger-lines">
         <span class="line line1"></span>
         <span class="line line2"></span>
         <span class="line line3"></span>
       </div>
       <div class="logo">
-        <p><a href="/">Think in Recursion</a></p>
+        <p><a href="/book/">Think in Recursion</a></p>
       </div>
       <div class="menu-items"><li>
-          <a href="/sum/"
-            >1. Sum</a
-          >
+          <a href="/book/sum/">1. Sum</a>
         </li><li>
-          <a href="/callstack/"
-            >2. Call stack</a
-          >
+          <a href="/book/callstack/">2. Call stack</a>
         </li><li>
-          <a href="/factorial/"
-            >3. Factorial</a
-          >
+          <a href="/book/factorial/">3. Factorial</a>
         </li><li>
-          <a href="/fibonacci/"
-            >4. Fibonacci</a
-          >
+          <a href="/book/fibonacci/">4. Fibonacci</a>
         </li><li>
-          <a href="/stairs/"
-            >5. Stairs</a
-          >
+          <a href="/book/stairs/">5. Stairs</a>
         </li><li>
-          <a href="/fill/"
-            >6. Paint</a
-          >
+          <a href="/book/paint/">6. Paint</a>
         </li><li>
-          <a href="/permute/"
-            >7. Permute</a
-          >
+          <a href="/book/permute/">7. Permute</a>
         </li><li>
-          <a href="/queens/"
-            >8. Queens</a
-          >
+          <a href="/book/queens/">8. Queens</a>
         </li><li>
-          <a href="/path/"
-            >9. Path I</a
-          >
+          <a href="/book/path/">9. Path I</a>
         </li><li>
-          <a href="/path2/"
-            >10. Path II</a
-          >
+          <a href="/book/path2/">10. Path II</a>
         </li></div>
     </div>
   </div>
@@ -97,9 +59,9 @@
 
     <main><p class="chapter-number">6</p>
 <h1>Paint</h1>
-<p class="paragraph">In past chapters, we have solved problems <code>sum</code>, <code>fib</code> and <code>climb</code>, where we have seen the usage of the recursion in obtaining partial answers from recursive calls. We don't get our final answer until all the function instances returns.</p>
-<p>Recursion is a general concept. Similar to a general loop, it can be quite versatile and apply to any algorithm as you think fit. One of its application ara is that, instead of getting partial answers from the call directly, the recursion can be used to build partial solutions by entering the call. We don't get our final solution until it reaches the boundary. This type of application is called backtracking.</p>
-<p>We'll see one example of applying it in detail in this chapter, the problem we choose is a paint problem.</p>
+<p class="paragraph">So far we have solved problems <code>sum</code>, <code>fib</code> and <code>climb</code> where we have seen the usage of the recursion in obtaining partial answers from recursive calls. We don't get our final answer until all the function instances returns.</p>
+<p>Recursion is general. Similar to a loop, it can be quite versatile and applied to any algorithm as you see fit. One of its main application is called backtracking, where the recursion can build partial solutions by entering the call and get the final solution until it reaches the boundary.</p>
+<p>We'll see one example of backtracking in detail in this chapter, the problem we'll is called <code>paint</code>.</p>
 <h2>Bucket fill</h2>
 <pre><code>&gt; map[][] =
 ############################
@@ -108,23 +70,35 @@
 #....##.##..#..#.#......#..#
 #..#######..################
 #.#########.##...###...##..#
-#.@.........####..........##
+#...........####..........##
 ############################
 </code></pre>
-<p>Say we have a map with <code>m</code> rows and <code>n</code> columns in two dimensional array. Symbol <code>#</code> indicates wall. Say we want to fill this map with a color starting from the location <code>@</code>, the question is to determine which area should be painted. Basically this is the common paint brush feature in photo editing software.</p>
-<p>Let's try to figure it out using our hands first. We are at location <code>@</code> with position <code>[6, 2]</code> initially. If there's no wall nearby, we should be free to go either of the four directions. <em>Diagonal direction is not allowed in this problem.</em></p>
+<p>Say we have a map with <code>m</code> rows and <code>n</code> columns in a two-dimensional array. Symbol <code>#</code> indicates a wall. If we pick an open spot denoted by <code>.</code>, how do we find out all the other spots that are connected with it, so that we can click that spot to automatically paint the whole area. Basically this is the common paint brush feature in photo editing software.</p>
+<p>We can follow our intuition and try to solve it by hands first.</p>
+<p>Say we are at location <code>[i, j]</code>. We should be free to go either of the four directions. <em>Diagonal direction is not allowed in this problem.</em></p>
 <pre><code>.......
 .. ^ ..
 .&lt; @ &gt;.
 .. v ..
 .......
 </code></pre>
-<p>We also don't want to visit the location we have visited before. There's a reason for that. If we allow that to happen, there's a chance you could go in loops, just imaging one step you go forward and next step backward, thus we can't make sure the entire area can be visited.</p>
-<p>Thus there're two type of boundaries we need to setup for this problem: the walls and the visited.</p>
+<p>Once we land on one location, we move to another location by choosing one of the direction. The following is the example of the first four steps if we start from a location marked by <code>S</code>.</p>
+<pre><code>############################
+#.##@...###......######.#..#
+#.##@##.##.....#.#......#..#
+#..S@##.##..#..#.#......#..#
+#..#######..################
+#.#########.##...###...##..#
+#...........####..........##
+############################
+</code></pre>
+<p>As you might have assumed, there're two type of directions we don't choose. One, if it's a wall, we don't go there. We can't go through walls. So the direction to a wall is not a valid move.</p>
+<p>Two, a place we have visited before isn't a valid direction either. There's a reason for that. If we allow that to happen, there's a high probable chance we could go in circles. Just imaging one step you go forward and next step you go backward, and the code would stuck there forever. This is not how we can find a path.</p>
 <pre><code>visit(i, j)
   --&gt; walls -&gt; return
   --&gt; visited -&gt; return
 </code></pre>
+<p>Thus the two types of boundaries for this problem is the walls and the visited.</p>
 <p>In order to remember all the places we have visited along the way, we store them in a dictionary <code>visited</code>. It'll become clear why we choose dictionary than an array shortly after we write the code.</p>
 <p>Let's code it.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> dirs <span class="token operator">=</span> <span class="token punctuation">[</span>
@@ -155,19 +129,20 @@
   <span class="token function">visit</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> visited<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>First thing to notice is that our code isn't long.</p>
-<p>We use two-functions setup, outer and inner. The outer function <code>paint</code> has <code>map</code> and <code>start</code> as arguments. <code>map</code> is a two dimensional array holding the map that needs to be painted, and <code>start</code> is a two elements array holding the position where we start the fill. We then define couple of utilities variables such as the dimension of the map, <code>m x n</code> as well as the dictionary <code>visited</code> to store all visited locations. Remember all outer variables can be accessed in the inner functions.</p>
-<p>The inner function <code>visit</code> has the location as argument. Basically we want to visit this location. Once we enter the function instance, we mark it visited.</p>
+<p>The code isn't as long as you might expect.</p>
+<p>We use two-functions setup, the outer and the inner. The outer function <code>paint</code> has <code>map</code> and <code>start</code> as arguments. <code>map</code> is a two dimensional array holding the map that needs to be painted, and <code>start</code> is a two elements array holding the position where we start the fill.</p>
+<p>We then define couple of utilities variables such as the dimension of the map, <code>m</code> and <code>n</code>, as well as the dictionary to store all <code>visited</code> locations. Remember all outer variables can be accessed in the inner functions. Thus what's happened in the outer function is most time preparation work.</p>
+<p>The inner function <code>visit</code> has the location as argument. Basically we want to visit location recursively.</p>
+<p>Inside the function instance, first we mark it visited by setting the key in the dictionary <code>visited</code>. Afterwards, a loop is used to go over four directions. For each direction we calculate the new position [ni, nj] with the help of direction units array <code>dirs</code> we defined earlier.</p>
 <blockquote>
-<p>Javascript dictionary can take an object as a key. Behind the scene, the object is converted into a string.</p>
+<p>Javascript dictionary can take an object as a key. Behind the scene, the object is converted into a readable string.</p>
 </blockquote>
-<p>Inside the function instance, after the location is marked as visited, a loop is used to go over all four directions. For each possible direction we calculate its new position [ni, nj] with the help of utility array <code>dirs</code> we defined earlier.</p>
-<p>Before we visit the new position, we'd like to find out the new position isn't a wall, nor been visited. If the new position isn't a valid place to go, we skip it and move to next direction. Then the new position is visited.</p>
-<p>We kick off this recursive function <code>visit</code> starting from the start position. After the recursive process is finished, we then have <code>visited</code> all populated thus returned.</p>
+<p>Before we visit the new position, we'd like to find out whether it's a wall, or whether it has been visited. If the new position isn't a valid place to go, we skip it and move to next direction. Otherwise the new position is visited right away.</p>
+<p>We kick off the recursive inner function <code>visit</code> starting from a given position <code>start</code>. After the recursive process is finished, we then have <code>visited</code> all populated and then returned as our output.</p>
 <p>That’s it! I can't wait to run the code.</p>
 <h2>Paint before it dries</h2>
-<p>The graph or map question is normally hard to solve, because after we get the solution, sometimes we need to find a way to plot the solution to confirm whether we are right.</p>
-<p>After we get all the visited locations, we can paint them onto the map. visited area marked by <code>@</code>.</p>
+<p>The graph or map question is normally hard to solve not only because of the difficulty level. But also due to the format of the map, it'll require us to do some reading, parsing, plotting tasks that are still essential to the problem solving. Tedious as it can get, visualization is the most effective way for us to debug, test and confirm whether our algorithm at actually works.</p>
+<p>Ok, once we get all the visited locations, we can paint them onto the map using the symbol <code>@</code>.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">plot</span><span class="token punctuation">(</span><span class="token parameter">map<span class="token punctuation">,</span> visited</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
   <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -183,19 +158,21 @@
 
   <span class="token keyword">return</span> res<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>Alright, let's play with the dataset.</p>
-<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+<p>Alright, let's setup a map to run our algorithm.</p>
+<pre><code>&gt; const data = `
 ############################
 #.##....###......######.#..#
 #.##.##.##.....#.#......#..#
 #....##.##..#..#.#......#..#
 #..#######..################
 #.#########.##...###...##..#
-#.@.........####..........##
+#...........####..........##
 ############################
-</span><span class="token template-punctuation string">`</span></span>
-<span class="token operator">></span> <span class="token keyword">const</span> map <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">></span> <span class="token keyword">let</span> visited <span class="token operator">=</span> <span class="token function">paint</span><span class="token punctuation">(</span>map<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+`
+&gt; const map = data.split('\n');
+&gt; visited = paint(map, [1, 1]);
+</code></pre>
+<p>We try from the start position <code>[1,1]</code> at the top left corner first. Once we solve it, we feed the <code>visited</code> dictionary to the <code>plot</code> function.</p>
 <pre><code>&gt; plot(map, visited)
 
 ############################
@@ -207,7 +184,7 @@
 #@@@@@@@@@@@####..........##
 ############################
 </code></pre>
-<p>We can try another fill start position, such as <code>[1, 23]</code>.</p>
+<p>Wonderful! We can try paint it from another start position, such as <code>[1, 23]</code> to the right top of the map, or <code>[6, 23]</code> to the left bottom of the map.</p>
 <pre><code>&gt; visited = paint(map, [1, 23]);
 &gt; plot(map, visited)
 
@@ -233,31 +210,40 @@
 ############################
 
 </code></pre>
-<p>Our paint algorithm seems quite functioning. Let's take a look at the running time.</p>
-<p>At each location [i, j], we have four choices, if we don't hit any boundary, we eventually need to go through all of them. In a way, you can call this brutal force. If this repeats consistently, four times four times four, we face up to <code>O(4^(m*n))</code> running time.</p>
-<p>Isn't it so?</p>
-<p>Actually what really happens in our algorithm is far less. For each location we are going to visit, there's a chance it's either a wall, or visited. You might argue, the map we use in this example has narrow passages, thus we have less choices.</p>
-<p>But even for a very open area, the algorithm should run pretty fast. Let's look at it from a different angle. We have all the location that we visit has been only visited once, which means we have only created that many function instances. Since each time we spent in a function instance is a unit time, the running time should be linear to the number of the visited locations!</p>
-<p>The max number of locations we can visit on this map is the dimension of the map <code>m x n</code>, thus the running time is <code>O(m x n)</code>.</p>
+<p>They all work as expected. Feel free to try any other location. <em>Keep in mind the start location can't be a wall, nor it can be outside of the map.</em></p>
+<p>Our paint algorithm seems quite functioning. Let's talk about the running time, shall we?</p>
+<p>As usual, as it comes to the running time of a recursion problem, the starting point is to count the function instance number throughout the recursion.</p>
+<p>At each location [i, j], we have four directions to take. If this pattern repeats consistently, four times four times four, we face up to <code>O(4^(m*n))</code> running time. We have learned this way of calculating running time from previous chapters such as <code>fib</code> and <code>stairs</code>?</p>
+<p>But is that so?</p>
+<p>That is true if for each location, we always have four directions to choose. But what really happens in our algorithm is far less. Because sometimes there's a chance it's either a wall, or it has been visited. You might argue, that's because the sample map we use has narrow passages, thus we have less choices. For instance, if I'm surrounded by walls, then most likely I only have one or two direction(s) to go.</p>
+<p>That might be the reason why sometimes the algorithm can speed up, but that doesn't really answer why the algorithm on average is pretty performant. Let's look at it from a different angle. Not like <code>fib</code> and <code>stairs</code> problem, which could be abstract, the map problem has a vivid picture in front of us. If we want to know how many function instance <code>visit</code> is called, we can just count the visited position on the map directly.</p>
+<pre><code>############################
+#@##@@@@###@@@@@@######.#..#
+#@##@##@##@@@@@#@#......#..#
+#@@@@##@##@@#@@#@#......#..#
+#@@#######@@################
+#@#########@##...###...##..#
+#@@@@@@@@@@@####..........##
+############################
+</code></pre>
+<p>No matter how open or narrow the passages are, in the end, our recursion needs to go through all the location that is connected. And the number of the locations is bounded by the dimension of the map, <code>m x n</code>. Thus, if we say the time we spent in each function instance is a unit time, the running time have to be linear to the dimension of the map, <code>O(m*n)</code>!</p>
 <blockquote>
 <p>No matter initially how many directions you are free to go, in the end on average there's only one valid way per location.</p>
 </blockquote>
-<p>The boundary that make the recursion go back, the visited location here, is referred as a backtrack. The backtrack asks the code to go back because the possibilities of going forward is eliminated due to the constraint of the problem. We start from four directions in each instance, but quickly it reduces to</p>
-<p>We could have only three directions available, or two, or one. Thus the number of possibilities can be reduced to three, or two, or one, or zero.</p>
-<pre><code>@@#
-#@#
-#@#
-###
-</code></pre>
-<p>The filled position at the bottom has zero directions to go after it's visited. In the real life, we call it a dead end.</p>
-<p>Backtracks, or dead ends, is quite rewarding in the context of recursion (or backtracking). Since only then, we know the algorithm can possibly work out! Only at a backtrack, we know either we reach our goal by comparing to the problem requirement, or there's simply no valid answer beyond this point. Either way it's a win-win situation.</p>
+<p>In a way, four choices per locations is a bit illusion. From the perspective of a given position, on average you only have one valid way to go in the end. Why? Because you can't visit location that has been visited. That's the killer boundary that reduces the potential running time of <code>O(4^(m*n))</code> to <code>O(m*n)</code>.</p>
+<p>The boundary that make the recursion go back, the visited location here, is referred as a backtrack in the backtracking context. The backtrack asks the code to go back because the possibilities of going forward is eliminated due to the constraint of the problem.</p>
+<p>Backtracks, or dead ends, is quite rewarding in the context of recursion (or backtracking). Since only then, we know the algorithm can possibly work out! Only at a backtrack, we know either we reach our goal by comparing to the problem requirement, or there's simply no valid answer beyond this point. Either way it's a win for the algorithm.</p>
 <blockquote>
 <p>Knowing there's no way to win can be quite cost effective in reaching your goal.</p>
 </blockquote>
-<p>Before we move on to another topic, I want to add that, the function instance returns without carrying a value is also part of features of backtracking. Since the solution isn't returned from the call, instead it's built gradually through a collector, in our case the <code>visited</code> dictionary.</p>
+<p>Before we move on to another topic, I want to add that, notice the function instance <code>visit</code> does not return any value. The recursive function returning no value is another feature of backtracking. Since the solution isn't returned from the call, instead it's built gradually through a collector, in our case the <code>visited</code> dictionary. This is quite different from <code>sum</code>, <code>fib</code> or <code>stairs</code>.</p>
+<blockquote>
+<p>There's no strict rule whether a recursive function should return a value or not. It's mostly up to your design.</p>
+</blockquote>
 <h2>Conversion to iterative setup</h2>
 <p>We have showed that the running time of our algorithm is <code>O(m*n)</code>, does that mean when the map dimension reaches beyond <code>10000</code>, we will hit the call stack limit?</p>
-<p>Yes it will. In case we need to explore map size larger than <code>100 x 100</code>, we need to convert our code into iterative setup. Let’s take a look how the new code look like.</p>
+<p>The short answer is Yes. Because the active function instance count depends on the longest path the algorithm reaches out to form. Before it hits a dead end, all function instances need to be kept alive.</p>
+<p>In case we need to explore map size larger than <code>100 x 100</code>, we need to convert our code into an iterative setup. Let’s take a look how this can be done.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">paint</span><span class="token punctuation">(</span><span class="token parameter">map<span class="token punctuation">,</span> start</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
   <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -281,51 +267,48 @@
 
   <span class="token keyword">return</span> visited<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>First impression the code isn't too different, and amazingly it's a bit shorter without the declaration space for a recursive function. Instead it has been replaced with a iterative process using a <code>while</code> loop.</p>
-<p>Before we enter the loop, we create an array named <code>stack</code>. We name it for a reason, because we intend to simulate the way how call stack handles the call, at least in the basic level. The <code>stack</code> carries the signature of each &quot;instance&quot;. We still call it instance here but we should know there's no function instance setup any more.</p>
-<p>The signature is the name of the instance, or the arguments of the instance, in our case, it's the location we are going to visit. If we add an element to the stack, that means we'd like to visit in the future. The stack provides us a list-like storage so that we can process the launching of instance one by one.</p>
-<p>Once we enter the loop, if the stack is not empty, we take one of the element, assign to the position <code>[i, j]</code> and go through the same process (or code) as used to be. The only difference is that, since we don't have the recursive function, when we want to skip the instance, we use <code>continue</code> instead of <code>return</code>; when we want to add a instance, we don't call it, instead we add it to the list.</p>
-<p>To kick off the loop, all we need to do is to add the first element to the list.</p>
-<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> stack <span class="token operator">=</span> <span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
-<p>That’s it, with the new iterative setup, rest assure that we can bucket fill a large map. Just to make sure these two version are comparable, let's try it.</p>
-<pre><code>&gt; paint(map, [1, 1])
-
-############################
-#@##@@@@###@@@@@@######.#..#
-#@##@##@##@@@@@#@#......#..#
-#@@@@##@##@@#@@#@#......#..#
-#@@#######@@################
-#@#########@##...###...##..#
-#@@@@@@@@@@@####..........##
-############################
-</code></pre>
+<p>The code isn't too different. We also don't see the recursive function, which is replaced by a <code>while</code> loop.</p>
+<p>We create an array named <code>stack</code>, and we name it <code>stack</code> for a reason. We intend to simulate the way how call stack handles the call, at least in the basic level. The <code>stack</code> need to carry the signature of the &quot;function call instance&quot;.</p>
+<blockquote>
+<p>We still call it instance here because we know our logic is based on that and the code is converted from a function instance.</p>
+</blockquote>
+<p>In order to simulate the function call, we push the call into the stack when we intend to call it. By pushing, I mean we push the argument of the call into the stack, in our case, it's the location we are going to visit. If we add an element to the stack, that means we'd like to visit it later.</p>
+<p>&quot;Later&quot; is a subjective word here. In the recursion way, there's no later. We call it when we call it. However using a stack, we don't have that luxury, instead we prepare to call or execute it in next iteration. When it comes to next iteration, we check if the stack is empty, if not, we pop out one element and execute it. This is the key to the iterative simulator.</p>
+<blockquote>
+<p>The urgency is deferred to the next available iteration.</p>
+</blockquote>
+<p>The rest of the iterative code is copied from the recursion. After we pop an element from the stack, we run it as used to be. And when it's about to visit another position, we push it to the stack. To kick off the iteration, we also add the start position as its first element at the top of the stack.</p>
+<p>Run it so that we know the iterative version produces the same result as the recursion version, except this time we can use it to paint a large map, there won't be stack call limit to limit us.</p>
 <h2>Depth first search</h2>
-<p>Ever have any doubts on this line in the iterative setup?</p>
-<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> heap<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>Really, the recursion can be replaced by simply popping an element from an array? Well, yes or no.</p>
-<p>In short, of course, recursion can't be replaced that easily. Otherwise I wouldn't think people will use the recursion way again. To understand this better, we need to take a look how our problem visits locations.</p>
-<pre><code>                 o
+<p>Practically when it comes to paint or path finding, more often we see the above iterative setup. It's relatively more flexible and easy to write based on the recursion concept.</p>
+<p>But when you see the iterative version, have you had any doubt that a stack can be used to simulate the recursion perfectly? I did. And I especially have my curiosity set on the following line.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Really? The recursion can be replaced by simply popping an element from an array? To be convinced, we can take a look how the algorithm visits locations.</p>
+<pre><code>                 @
            ------|-----
            1   2   3   4
       -----|-----
       11 12 13 14
 </code></pre>
-<p>In the recursion version, say at one location, there're four valid choices, all directions are good. It picks the first one, and gets into another instance, and finds four valid choices, and pick the first one and continue.</p>
-<p>This visit order, in computer science, is referred as depth first search (DFS). It means it tries to go as deep as possible before going back. The whole visiting sequence would be, for the above case, <code>[o, 1, 11, 12, 13, 14, 2, 3, 4]</code>. If you figure this out by yourself, you are really good at traversal.</p>
-<p>Let's now take a look at the iterative version. Let me remind you <code>array.pop</code> pops the element from the end of the array. Let's do it slowly.</p>
-<pre><code>stack
-0. [o]
+<p>In the recursion version, say at one location, there're four valid choices, all directions are good. It picks the first one, and gets into another instance, and finds four valid choices, and pick the first one and continue. <em><code>1-4</code> could be overlapped with <code>11-14</code>, but in this section conversation, we put it aside for a second.</em></p>
+<p>This visit order, in computer science, is referred as depth first search (DFS). It means the traverse path tries to go as deep as possible before trying something else. The path would be, for this case, <code>[1,11,12,13,14,2,3,4]</code>. If you figure this out by yourself, you are really good.</p>
+<p>Let's now take a look at the iterative version. Let me remind you <code>array.pop</code> pops the element from the end of the array, same as <code>push</code>. Let's look at the stack during each iteration. Please take your time.</p>
+<pre><code>0. [@]
 1. [1,2,3,4]
 2. [1,2,3,11,12,13,14]
 3. [1,2,3,11,12,13]
 4. [1,2,3,11,12]
 </code></pre>
-<p>Before we enter the loop, the stack starts with one element. Inside the first iteration, it pops out one, and adds four valid elements. Same thing happens to the second iteration, it pops out the last one and adds four more. Starting next iteration, things change a bit, because there's no more valid elements to add. So every turn, one existing one gets popped out. The visit sequence is <code>[o, 4, 14, 13, 12, 11, 3, 2, 1]</code>.</p>
-<p>For a second, the visit sequences are very different.</p>
-<pre><code>o,1,11,12,13,14,2,3,4 // recursion
-o,4,14,13,12,11,3,2,1 // array.pop
+<p>Before we enter the loop, the stack starts with one element. Inside the first iteration, it pops out one, and adds four elements. Same thing happens to the second iteration, it pops out the last one and adds four more. Starting next iteration, things change a bit, because there's no more valid elements to add. So every turn, one existing one gets popped out. The path is <code>[4,14,13,12,11,3,2,1]</code>.</p>
+<p>For a second, comparing between the recursive and iterative version, they are different.</p>
+<pre><code>// recursion
+1,11,12,13,14,2,3,4
+
+// stack
+4,14,13,12,11,3,2,1
 </code></pre>
-<p>However, if we spend a bit more time looking at both, you might find out at least each element is in the same location. For instance, if you look at the second element, both <code>1</code> and <code>4</code> are from the second location, and both <code>11</code> and <code>14</code> are from the third location, and etc.</p>
+<p>If we spend a bit more time here, you might find out at least each element from the same parent. For instance, if you look at the second element, both <code>1</code> and <code>4</code> are from the first location, and both <code>11</code> and <code>14</code> are from the second location, and etc.</p>
+<p>We can do a small experiment by making a small change to our iterative code.</p>
 <pre class="language-js"><code class="language-js">    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> k <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> k <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> k<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">let</span> ni <span class="token operator">=</span> i <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
       <span class="token keyword">let</span> nj <span class="token operator">=</span> j <span class="token operator">+</span> dirs<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
@@ -333,22 +316,24 @@ o,4,14,13,12,11,3,2,1 // array.pop
 
       stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>ni<span class="token punctuation">,</span> nj<span class="token punctuation">]</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span></code></pre>
-<p>if we make a small change, when going through all directions, we go through the list backwards comparing to the recursion version, let's take a look the stack.</p>
-<pre><code>0. [o]
+<p>Instead of going over four directions forward, we take a backward order. Let's take a look the stack this time.</p>
+<pre><code>0. [@]
 1. [4,3,2,1]
 2. [4,3,2,14,13,12,11]
 3. [4,3,2,14,13,12]
 4. [4,3,2,14,13]
 </code></pre>
-<p>With this change, the visit sequence should look identical to the recursion.</p>
-<pre><code>o,1,11,12,13,14,2,3,4 // recursion
-o,1,11,12,13,14,2,3,4 // loop backward
+<p>The path is no different from the recursive version.</p>
+<pre><code>// recursion
+1,11,12,13,14,2,3,4
+
+// stack backward
+1,11,12,13,14,2,3,4
 </code></pre>
-<p>Great! In the end, we make sure our two versions are doing similar things. But wait, does it really matter? No, it doesn't.</p>
-<p>Because they are all following DFS order, which is to reach the deepest location first. This can be a bit obvious if you randomize the <code>dirs</code> array, you should still get similar result. The sequence can be different, so we don't know which location gets visited first, but in the end, they all finish the problem in DFS fashion.</p>
+<p>The point here is that, forward or backward, it doesn't really matter. The recursive and iterative (both forward and backward), they all follows DFS order, which is to reach the deepest location first. This can be a bit obvious if you randomize the direction helper <code>dirs</code> array, you should still get comparable result. The exact path can be different, but the nature is not.</p>
 <h2>Breath first search</h2>
-<p>Since we already mentioned the depth first search, we probably should mention breath first search (BFS) as well, at least briefly, and see how it effects our problem.</p>
-<p>In our iterative setup, in each iteration, we pop an element from the end of the list. We also could remove it from the beginning of the list.</p>
+<p>Since we already mentioned the depth first search (DFS), we probably should mention breath first search (BFS) as well, at least briefly, and see how it effects our problem.</p>
+<p>In our iterative setup, in each iteration, we pop an element from the end of the list. There exists another way of popping the element, which is from the front of the list. Essentially this makes our data structure into a queue.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">paint</span><span class="token punctuation">(</span><span class="token parameter">map<span class="token punctuation">,</span> start</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> m <span class="token operator">=</span> map<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
   <span class="token keyword">const</span> n <span class="token operator">=</span> map<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -372,35 +357,34 @@ o,1,11,12,13,14,2,3,4 // loop backward
 
   <span class="token keyword">return</span> visited<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>To remove element from the beginning, Javascript uses the method name <code>shift</code>. Notice, I also change the name of our list from <code>stack</code> to <code>queue</code>.</p>
-<p>A stack is a list that follows last-in-first-out (LIFO) principle; whereas a queue follows first-in-first-out (FIFO). In real life, a waiting list is basically a queue, we should be very familiar what a queue is.</p>
-<p>By switching to use a queue instead of a stack, we are asking the visit order to follow the order we visit each locations. For instance, if we add four directions to the queue, then we expect them to be processed one after another one as a group. Let's take a look at the visit sequence.</p>
-<pre><code>0. [o]
+<p>To remove element from the beginning, Javascript uses the method name <code>shift</code>. Accordingly I also change the name of our list from <code>stack</code> to <code>queue</code>.</p>
+<p>A stack is a list that follows last-in-first-out (LIFO) principle; whereas a queue follows first-in-first-out (FIFO). In real life, a waiting list is basically a queue, we should be very familiar with what a queue is.</p>
+<p>By switching to use a queue instead of a stack, we are asking the path to visit locations in a different order. For instance, if we add four directions to the queue, then we expect them to be processed one after another one as a group. Let's take a look at the queue in each iterations.</p>
+<pre><code>0. [@]
 1. [1,2,3,4]
 2. [2,3,4,11,12,13,14]
 3. [3,4,11,12,13,14]
 4. [4,11,12,13,14]
 </code></pre>
-<p>If we trace that, we can see the visit sequence can be very different from the recursion one.</p>
-<pre><code>o,1,11,12,13,14,2,3,4 // recursion
-o,1,2,3,4,11,12,13,14 // queue.shift
+<p>Putting the path side by side with the recursive version.</p>
+<pre><code>// recursion
+1,11,12,13,14,2,3,4
+
+// queue
+1,2,3,4,11,12,13,14
 </code></pre>
-<p>Indeed, this time they are very different.</p>
+<p>This time is also different. And indeed, this time they are very different. Because <code>2</code> is from the first location while <code>11</code> is from the second location. There's no apparent similarity between them.</p>
 <p><img src="../images/traverse.png" alt="DFS vs BFS"></p>
 <p class="caption">fig. Depth first vs Breath first</p>
-<p>Depth first, as we have seen using the stack implementation, reaches as far as it can quickly; whereas Breath first, as seen using the queue implementation circles around its neighbor area before reaching out. With same computation or travel distance, the area that both covers can be drastically different.</p>
-<p>I like to joke about DFS and BFS as personalities as in person. Person with DFS have to play with something new all the time; whereas person with BFS has to play things that he's familiar with. Very distinctive behaviors. Of course no person is either DFS or BFS in real life, most of us are mixture of them.</p>
-<p>Both DFS and BFS are quite popular in problem solving, in different situation, one can play extremely better than the other.</p>
-<p>Though devil is in the detail, in our bucket fill problem, it happens it doesn't matter much which DFS or BFS you use. This is mainly due to the fact that, a) all location can only be visited once; b) our solution doesn't depend on how quickly we reach somewhere, as long as we get there, it's fine. But for other problems, we probably should be more careful at choosing one of them.</p>
+<p>DFS, as we have seen using the stack implementation, reaches as far as it can quickly; whereas BFS, as seen using the queue implementation, circles around its neighbor area before reaching out.</p>
+<p>I like to joke about DFS and BFS as personalities as in person. Person with DFS have to play with something new all the time; whereas person with BFS has to play things that he's familiar with. Very distinctive behaviors. Of course no person is either pure DFS or pure BFS in real life, most of us are sort of mixture.</p>
+<p>Both DFS and BFS are quite popular in problem solving, in different situation, one can play extremely better than the other. In this paint problem, it doesn't matter that much which one you choose, because the end goal is to cover all the connected area, thus it's not path dependent. We will give you better description of both when we get to path finding in later chapters.</p>
 </main>
     <footer>
   <div>
     <p>
-      <a
-        href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google"
-      >
-        Image by macrovector_official</a
-      >
+      <a href="https://www.freepik.com/free-vector/brain-icons-flat_4663387.htm#query=brain&position=15&from_view=search&track=sph&uuid=c43d2599-7e99-42e3-9d6b-4cc4b554107c?log-in=google">
+        Image by macrovector_official</a>
       on Freepik
     </p>
     <p>
@@ -412,6 +396,6 @@ o,1,2,3,4,11,12,13,14 // queue.shift
     <a href="#top">Back to top</a>
   </p>
 </footer>
- <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
+ <script type="module" async="">import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
   </body>
 </html>

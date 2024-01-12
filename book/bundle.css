@@ -112,7 +112,7 @@ pre:not(.mermaid) {
   /* background-color: var(--neutral-color-weak); */
 }
 pre code {
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 code {
